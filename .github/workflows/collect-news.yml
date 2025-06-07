@@ -2,7 +2,7 @@ name: Collect AI News
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */4 * * *'  # Every 6 hours
   workflow_dispatch:
     inputs:
       sources:

@@ -43,7 +43,7 @@
   },
   "sources": {
     "arxiv_ai": {
-      "url": "https://export.arxiv.org/rss/cs.AI",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
       "type": "rss",
       "category": "Research",
       "enabled": true,
@@ -55,7 +55,7 @@
       "reliability": 0.95
     },
     "arxiv_ml": {
-      "url": "https://export.arxiv.org/rss/cs.LG",
+      "url": "https://rss.arxiv.org/rss/cs.LG",
       "type": "rss",
       "category": "Research",
       "enabled": true,
@@ -67,7 +67,7 @@
       "reliability": 0.95
     },
     "arxiv_cv": {
-      "url": "https://export.arxiv.org/rss/cs.CV",
+      "url": "https://rss.arxiv.org/rss/cs.CV",
       "type": "rss",
       "category": "Research",
       "enabled": true,
@@ -91,7 +91,7 @@
       "reliability": 0.98
     },
     "anthropic_news": {
-      "url": "https://www.anthropic.com/index/rss.xml",
+      "url": "https://www.anthropic.com/news/rss",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
@@ -103,7 +103,7 @@
       "reliability": 0.98
     },
     "google_ai_blog": {
-      "url": "https://ai.googleblog.com/feeds/posts/default",
+      "url": "https://blog.google/technology/ai/rss/",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
@@ -178,25 +178,27 @@
       "url": "https://hai.stanford.edu/news/rss.xml",
       "type": "rss",
       "category": "Research",
-      "enabled": true,
+      "enabled": false,
       "priority": 2,
       "updateFrequency": "daily",
-      "description": "Stanford HAI news",
+      "description": "Stanford HAI news (currently disabled - RSS feed may not be working)",
       "tags": ["stanford", "hai", "research", "ethics"],
       "language": "en",
-      "reliability": 0.96
+      "reliability": 0.96,
+      "note": "RSS feed appears to be empty or not working - needs verification"
     },
     "deepmind_blog": {
       "url": "https://deepmind.google/discover/blog/rss.xml",
       "type": "rss",
       "category": "Industry",
-      "enabled": true,
+      "enabled": false,
       "priority": 1,
       "updateFrequency": "weekly",
-      "description": "DeepMind research blog",
+      "description": "DeepMind research blog (currently disabled - no RSS feed available)",
       "tags": ["deepmind", "google", "alphafold", "research"],
       "language": "en",
-      "reliability": 0.97
+      "reliability": 0.97,
+      "note": "RSS feed not available - consider web scraping alternative"
     },
     "techcrunch_ai": {
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -247,7 +249,7 @@
       "reliability": 0.85
     },
     "ai_research_blog": {
-      "url": "https://ai.facebook.com/blog/rss/",
+      "url": "https://research.facebook.com/blog/rss/",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
@@ -259,13 +261,13 @@
       "reliability": 0.95
     },
     "nvidia_ai_blog": {
-      "url": "https://blogs.nvidia.com/blog/category/artificial-intelligence/feed/",
+      "url": "https://blogs.nvidia.com/feed/",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
       "priority": 2,
       "updateFrequency": "daily",
-      "description": "NVIDIA AI blog",
+      "description": "NVIDIA AI blog (full blog feed)",
       "tags": ["nvidia", "gpu", "hardware", "ai"],
       "language": "en",
       "reliability": 0.94
@@ -274,13 +276,14 @@
       "url": "https://openai.com/research/rss.xml",
       "type": "rss",
       "category": "Research",
-      "enabled": true,
+      "enabled": false,
       "priority": 1,
       "updateFrequency": "weekly",
-      "description": "OpenAI research papers",
+      "description": "OpenAI research papers (currently disabled - no RSS feed available)",
       "tags": ["openai", "research", "papers"],
       "language": "en",
-      "reliability": 0.98
+      "reliability": 0.98,
+      "note": "RSS feed not available - consider using OpenAI blog feed instead"
     },
     "ai_government_news": {
       "url": "https://www.whitehouse.gov/briefing-room/statements-releases/feed/",

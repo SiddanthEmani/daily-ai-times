@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NewsXP AI - API</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .endpoint { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        code { background: #e0e0e0; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>NewsXP AI API</h1>
+    <p>AI News Aggregation API Endpoints:</p>
+    
+    <div class="endpoint">
+        <h3>Latest News</h3>
+        <code>GET /api/latest.json</code>
+        <p>Returns the most recent AI news articles</p>
+    </div>
+    
+    <div class="endpoint">
+        <h3>Widget Data</h3>
+        <code>GET /api/widget.json</code>
+        <p>Lightweight endpoint for widgets (top 5 stories)</p>
+    </div>
+    
+    <div class="endpoint">
+        <h3>Categories</h3>
+        <code>GET /api/categories/{category}.json</code>
+        <p>Get news by category (research, industry, open-source)</p>
+    </div>
+    
+    <div class="endpoint">
+        <h3>Archives</h3>
+        <code>GET /api/archives.json</code>
+        <p>List of available archive dates</p>
+    </div>
+</body>
+</html>
