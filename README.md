@@ -6,7 +6,7 @@ AI-powered news experience platform
 
 The system follows a three-stage pipeline for processing news:
 
-![Architecture Diagram](./architecture.excalidraw)
+![Architecture Diagram](./architecture.excalidraw.svg)
 
 1. **Internet** - Source of news content
 2. **Cheerio Extract HTML** - Web scraping and content extraction
