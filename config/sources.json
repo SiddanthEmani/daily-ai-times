@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2025-06-07",
+    "defaultSettings": {
+      "timeout": 30000,
+      "retries": 3,
+      "cacheTimeout": 3600,
+      "userAgent": "NewsXP.ai/2.0 (+https://newsxp.ai)"
+    }
+  },
+  "categories": {
+    "Research": {
+      "priority": 1,
+      "color": "#4CAF50",
+      "description": "Academic research and scientific papers"
+    },
+    "Industry": {
+      "priority": 2,
+      "color": "#2196F3",
+      "description": "Industry news and company updates"
+    },
+    "Open Source": {
+      "priority": 3,
+      "color": "#FF9800",
+      "description": "Open source projects and community"
+    },
+    "Startups": {
+      "priority": 4,
+      "color": "#9C27B0",
+      "description": "Startup news and funding updates"
+    },
+    "Government": {
+      "priority": 5,
+      "color": "#607D8B",
+      "description": "Government AI initiatives and policies"
+    },
+    "Media": {
+      "priority": 6,
+      "color": "#E91E63",
+      "description": "Technology journalism and analysis"
+    }
+  },
+  "sources": {
+    "arxiv_ai": {
+      "url": "https://export.arxiv.org/rss/cs.AI",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "hourly",
+      "description": "ArXiv AI research papers",
+      "tags": ["research", "papers", "arxiv", "ai"],
+      "language": "en",
+      "reliability": 0.95
+    },
+    "arxiv_ml": {
+      "url": "https://export.arxiv.org/rss/cs.LG",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "hourly",
+      "description": "ArXiv Machine Learning papers",
+      "tags": ["research", "papers", "arxiv", "ml"],
+      "language": "en",
+      "reliability": 0.95
+    },
+    "arxiv_cv": {
+      "url": "https://export.arxiv.org/rss/cs.CV",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "hourly",
+      "description": "ArXiv Computer Vision papers",
+      "tags": ["research", "papers", "arxiv", "cv"],
+      "language": "en",
+      "reliability": 0.95
+    },
+    "openai_blog": {
+      "url": "https://openai.com/blog/rss.xml",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "OpenAI official blog",
+      "tags": ["openai", "gpt", "chatgpt", "industry"],
+      "language": "en",
+      "reliability": 0.98
+    },
+    "anthropic_news": {
+      "url": "https://www.anthropic.com/index/rss.xml",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "Anthropic news and updates",
+      "tags": ["anthropic", "claude", "safety", "industry"],
+      "language": "en",
+      "reliability": 0.98
+    },
+    "google_ai_blog": {
+      "url": "https://ai.googleblog.com/feeds/posts/default",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "Google AI research blog",
+      "tags": ["google", "gemini", "bard", "research"],
+      "language": "en",
+      "reliability": 0.97
+    },
+    "microsoft_ai_blog": {
+      "url": "https://blogs.microsoft.com/ai/feed/",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "Microsoft AI blog",
+      "tags": ["microsoft", "copilot", "azure", "industry"],
+      "language": "en",
+      "reliability": 0.96
+    },
+    "huggingface_blog": {
+      "url": "https://huggingface.co/blog/feed.xml",
+      "type": "rss",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "Hugging Face community blog",
+      "tags": ["huggingface", "transformers", "datasets", "community"],
+      "language": "en",
+      "reliability": 0.94
+    },
+    "pytorch_blog": {
+      "url": "https://pytorch.org/blog/feed.xml",
+      "type": "rss",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "PyTorch official blog",
+      "tags": ["pytorch", "meta", "framework", "ml"],
+      "language": "en",
+      "reliability": 0.93
+    },
+    "tensorflow_blog": {
+      "url": "https://blog.tensorflow.org/feeds/posts/default",
+      "type": "rss",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "TensorFlow official blog",
+      "tags": ["tensorflow", "google", "framework", "ml"],
+      "language": "en",
+      "reliability": 0.93
+    },
+    "mit_news_ai": {
+      "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "MIT AI news and research",
+      "tags": ["mit", "research", "academia", "ai"],
+      "language": "en",
+      "reliability": 0.97
+    },
+    "stanford_ai_news": {
+      "url": "https://hai.stanford.edu/news/rss.xml",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "Stanford HAI news",
+      "tags": ["stanford", "hai", "research", "ethics"],
+      "language": "en",
+      "reliability": 0.96
+    },
+    "deepmind_blog": {
+      "url": "https://deepmind.google/discover/blog/rss.xml",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "DeepMind research blog",
+      "tags": ["deepmind", "google", "alphafold", "research"],
+      "language": "en",
+      "reliability": 0.97
+    },
+    "techcrunch_ai": {
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "type": "rss",
+      "category": "Media",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "hourly",
+      "description": "TechCrunch AI coverage",
+      "tags": ["techcrunch", "news", "startups", "funding"],
+      "language": "en",
+      "reliability": 0.89
+    },
+    "ai_news_com": {
+      "url": "https://www.artificialintelligence-news.com/feed/",
+      "type": "rss",
+      "category": "Media",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "AI News specialized coverage",
+      "tags": ["ai-news", "industry", "analysis"],
+      "language": "en",
+      "reliability": 0.88
+    },
+    "venturebeat_ai": {
+      "url": "https://venturebeat.com/ai/feed/",
+      "type": "rss",
+      "category": "Media",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "VentureBeat AI coverage",
+      "tags": ["venturebeat", "enterprise", "business"],
+      "language": "en",
+      "reliability": 0.87
+    },
+    "towards_data_science": {
+      "url": "https://towardsdatascience.com/feed",
+      "type": "rss",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 3,
+      "updateFrequency": "hourly",
+      "description": "Medium's Towards Data Science",
+      "tags": ["medium", "tutorials", "community", "data-science"],
+      "language": "en",
+      "reliability": 0.85
+    },
+    "ai_research_blog": {
+      "url": "https://ai.facebook.com/blog/rss/",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Meta AI research blog",
+      "tags": ["meta", "facebook", "llama", "research"],
+      "language": "en",
+      "reliability": 0.95
+    },
+    "nvidia_ai_blog": {
+      "url": "https://blogs.nvidia.com/blog/category/artificial-intelligence/feed/",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "NVIDIA AI blog",
+      "tags": ["nvidia", "gpu", "hardware", "ai"],
+      "language": "en",
+      "reliability": 0.94
+    },
+    "openai_research": {
+      "url": "https://openai.com/research/rss.xml",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "OpenAI research papers",
+      "tags": ["openai", "research", "papers"],
+      "language": "en",
+      "reliability": 0.98
+    },
+    "ai_government_news": {
+      "url": "https://www.whitehouse.gov/briefing-room/statements-releases/feed/",
+      "type": "rss",
+      "category": "Government",
+      "enabled": false,
+      "priority": 3,
+      "updateFrequency": "daily",
+      "description": "White House AI policy updates",
+      "tags": ["whitehouse", "policy", "regulation"],
+      "language": "en",
+      "reliability": 0.99,
+      "note": "Filtered for AI-related content"
+    }
+  },
+  "quality_filters": {
+    "minimum_reliability": 0.8,
+    "exclude_keywords": ["spam", "clickbait", "advertisement"],
+    "include_keywords": ["AI", "artificial intelligence", "machine learning", "neural network", "LLM", "deep learning"],
+    "duplicate_detection": {
+      "enabled": true,
+      "similarity_threshold": 0.85
+    },
+    "content_scoring": {
+      "enabled": true,
+      "factors": ["source_reliability", "content_length", "social_signals", "freshness"]
+    }
+  },
+  "rate_limiting": {
+    "requests_per_hour": 100,
+    "concurrent_requests": 5,
+    "backoff_multiplier": 2,
+    "max_backoff": 300
+  },
+  "monitoring": {
+    "health_checks": true,
+    "error_tracking": true,
+    "performance_metrics": true,
+    "alert_thresholds": {
+      "failure_rate": 0.1,
+      "response_time": 5000
+    }
+  }
+}
