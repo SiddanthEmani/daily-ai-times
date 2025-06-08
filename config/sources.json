@@ -1,12 +1,16 @@
 {
   "metadata": {
-    "version": "2.0",
+    "version": "3.0",
     "lastUpdated": "2025-06-07",
+    "lastValidated": "2025-06-07",
+    "description": "Multi-source AI/ML news aggregation configuration with RSS, APIs, webhooks, and scraping targets",
     "defaultSettings": {
       "timeout": 30000,
       "retries": 3,
       "cacheTimeout": 3600,
-      "userAgent": "NewsXP.ai/2.0 (+https://newsxp.ai)"
+      "userAgent": "NewsXP.ai/3.0 (+https://newsxp.ai)",
+      "respectRobotsTxt": true,
+      "defaultRateLimit": 1000
     }
   },
   "categories": {
@@ -39,6 +43,16 @@
       "priority": 6,
       "color": "#E91E63",
       "description": "Technology journalism and analysis"
+    },
+    "Community": {
+      "priority": 7,
+      "color": "#009688",
+      "description": "Developer communities and forums"
+    },
+    "Academic": {
+      "priority": 8,
+      "color": "#795548",
+      "description": "University labs and research institutions"
     }
   },
   "sources": {
@@ -48,11 +62,13 @@
       "category": "Research",
       "enabled": true,
       "priority": 1,
-      "updateFrequency": "hourly",
-      "description": "ArXiv AI research papers",
+      "updateFrequency": "daily",
+      "description": "ArXiv AI research papers - Atom feed format",
       "tags": ["research", "papers", "arxiv", "ai"],
       "language": "en",
-      "reliability": 0.95
+      "reliability": 0.95,
+      "parseFormat": "atom",
+      "note": "Updates daily at midnight EST. Can combine categories with + operator"
     },
     "arxiv_ml": {
       "url": "https://rss.arxiv.org/rss/cs.LG",
@@ -60,11 +76,12 @@
       "category": "Research",
       "enabled": true,
       "priority": 1,
-      "updateFrequency": "hourly",
+      "updateFrequency": "daily",
       "description": "ArXiv Machine Learning papers",
       "tags": ["research", "papers", "arxiv", "ml"],
       "language": "en",
-      "reliability": 0.95
+      "reliability": 0.95,
+      "parseFormat": "atom"
     },
     "arxiv_cv": {
       "url": "https://rss.arxiv.org/rss/cs.CV",
@@ -72,47 +89,89 @@
       "category": "Research",
       "enabled": true,
       "priority": 2,
-      "updateFrequency": "hourly",
+      "updateFrequency": "daily",
       "description": "ArXiv Computer Vision papers",
       "tags": ["research", "papers", "arxiv", "cv"],
       "language": "en",
-      "reliability": 0.95
+      "reliability": 0.95,
+      "parseFormat": "atom"
+    },
+    "arxiv_api": {
+      "url": "http://export.arxiv.org/api/query",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "realtime",
+      "description": "ArXiv API for custom queries",
+      "tags": ["research", "papers", "arxiv", "api"],
+      "language": "en",
+      "reliability": 0.98,
+      "authentication": "none",
+      "rateLimit": {
+        "requests": 3,
+        "period": "second",
+        "delayMs": 3000
+      },
+      "queryParams": {
+        "search_query": "cat:cs.AI OR cat:cs.LG OR cat:cs.CV",
+        "sortBy": "submittedDate",
+        "sortOrder": "descending",
+        "max_results": 100
+      }
     },
     "openai_blog": {
-      "url": "https://openai.com/blog/rss.xml",
+      "url": "https://openai.com/news/rss.xml",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
       "priority": 1,
-      "updateFrequency": "daily",
-      "description": "OpenAI official blog",
+      "updateFrequency": "weekly",
+      "description": "OpenAI official news feed",
       "tags": ["openai", "gpt", "chatgpt", "industry"],
       "language": "en",
-      "reliability": 0.98
+      "reliability": 0.85,
+      "note": "Intermittent availability, implement fallback to web scraping"
     },
-    "anthropic_news": {
-      "url": "https://www.anthropic.com/news/rss",
-      "type": "rss",
+    "anthropic_web": {
+      "url": "https://www.anthropic.com/news",
+      "type": "scrape",
       "category": "Industry",
       "enabled": true,
       "priority": 1,
       "updateFrequency": "daily",
-      "description": "Anthropic news and updates",
+      "description": "Anthropic news page - web scraping",
       "tags": ["anthropic", "claude", "safety", "industry"],
       "language": "en",
-      "reliability": 0.98
+      "reliability": 0.90,
+      "scrapeConfig": {
+        "selectors": {
+          "articles": "article.news-item",
+          "title": "h2.news-title",
+          "date": "time.published-date",
+          "link": "a.read-more",
+          "excerpt": "p.excerpt"
+        },
+        "waitForSelector": "article.news-item",
+        "javascriptRequired": true,
+        "antiDetection": "moderate"
+      },
+      "rateLimit": {
+        "requests": 1,
+        "period": "5seconds"
+      }
     },
-    "google_ai_blog": {
-      "url": "https://blog.google/technology/ai/rss/",
+    "google_research_blog": {
+      "url": "https://research.google/blog/rss",
       "type": "rss",
-      "category": "Industry",
+      "category": "Research",
       "enabled": true,
       "priority": 1,
-      "updateFrequency": "daily",
-      "description": "Google AI research blog",
-      "tags": ["google", "gemini", "bard", "research"],
+      "updateFrequency": "monthly",
+      "description": "Google Research blog RSS",
+      "tags": ["google", "research", "deepmind", "ai"],
       "language": "en",
-      "reliability": 0.97
+      "reliability": 0.94
     },
     "microsoft_ai_blog": {
       "url": "https://blogs.microsoft.com/ai/feed/",
@@ -120,23 +179,29 @@
       "category": "Industry",
       "enabled": true,
       "priority": 2,
-      "updateFrequency": "daily",
+      "updateFrequency": "weekly",
       "description": "Microsoft AI blog",
       "tags": ["microsoft", "copilot", "azure", "industry"],
       "language": "en",
       "reliability": 0.96
     },
-    "huggingface_blog": {
-      "url": "https://huggingface.co/blog/feed.xml",
-      "type": "rss",
+    "huggingface_papers_api": {
+      "url": "https://huggingface.co/api/daily_papers",
+      "type": "api",
       "category": "Open Source",
       "enabled": true,
       "priority": 1,
       "updateFrequency": "daily",
-      "description": "Hugging Face community blog",
-      "tags": ["huggingface", "transformers", "datasets", "community"],
+      "description": "Hugging Face daily papers API",
+      "tags": ["huggingface", "papers", "community", "api"],
       "language": "en",
-      "reliability": 0.94
+      "reliability": 0.92,
+      "authentication": "none",
+      "responseFormat": "json",
+      "rateLimit": {
+        "requests": 60,
+        "period": "minute"
+      }
     },
     "pytorch_blog": {
       "url": "https://pytorch.org/blog/feed.xml",
@@ -162,43 +227,17 @@
       "language": "en",
       "reliability": 0.93
     },
-    "mit_news_ai": {
-      "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+    "mit_tech_review_ai": {
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/rss",
       "type": "rss",
-      "category": "Research",
+      "category": "Media",
       "enabled": true,
       "priority": 1,
       "updateFrequency": "daily",
-      "description": "MIT AI news and research",
-      "tags": ["mit", "research", "academia", "ai"],
+      "description": "MIT Technology Review AI section",
+      "tags": ["mit", "tech-review", "journalism", "ai"],
       "language": "en",
       "reliability": 0.97
-    },
-    "stanford_ai_news": {
-      "url": "https://hai.stanford.edu/news/rss.xml",
-      "type": "rss",
-      "category": "Research",
-      "enabled": false,
-      "priority": 2,
-      "updateFrequency": "daily",
-      "description": "Stanford HAI news (currently disabled - RSS feed may not be working)",
-      "tags": ["stanford", "hai", "research", "ethics"],
-      "language": "en",
-      "reliability": 0.96,
-      "note": "RSS feed appears to be empty or not working - needs verification"
-    },
-    "deepmind_blog": {
-      "url": "https://deepmind.google/discover/blog/rss.xml",
-      "type": "rss",
-      "category": "Industry",
-      "enabled": false,
-      "priority": 1,
-      "updateFrequency": "weekly",
-      "description": "DeepMind research blog (currently disabled - no RSS feed available)",
-      "tags": ["deepmind", "google", "alphafold", "research"],
-      "language": "en",
-      "reliability": 0.97,
-      "note": "RSS feed not available - consider web scraping alternative"
     },
     "techcrunch_ai": {
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
@@ -210,19 +249,7 @@
       "description": "TechCrunch AI coverage",
       "tags": ["techcrunch", "news", "startups", "funding"],
       "language": "en",
-      "reliability": 0.89
-    },
-    "ai_news_com": {
-      "url": "https://www.artificialintelligence-news.com/feed/",
-      "type": "rss",
-      "category": "Media",
-      "enabled": true,
-      "priority": 2,
-      "updateFrequency": "daily",
-      "description": "AI News specialized coverage",
-      "tags": ["ai-news", "industry", "analysis"],
-      "language": "en",
-      "reliability": 0.88
+      "reliability": 0.95
     },
     "venturebeat_ai": {
       "url": "https://venturebeat.com/ai/feed/",
@@ -246,85 +273,441 @@
       "description": "Medium's Towards Data Science",
       "tags": ["medium", "tutorials", "community", "data-science"],
       "language": "en",
-      "reliability": 0.85
+      "reliability": 0.93
     },
-    "ai_research_blog": {
-      "url": "https://research.facebook.com/blog/rss/",
-      "type": "rss",
-      "category": "Industry",
-      "enabled": true,
-      "priority": 2,
-      "updateFrequency": "weekly",
-      "description": "Meta AI research blog",
-      "tags": ["meta", "facebook", "llama", "research"],
-      "language": "en",
-      "reliability": 0.95
-    },
-    "nvidia_ai_blog": {
+    "nvidia_blog": {
       "url": "https://blogs.nvidia.com/feed/",
       "type": "rss",
       "category": "Industry",
       "enabled": true,
       "priority": 2,
       "updateFrequency": "daily",
-      "description": "NVIDIA AI blog (full blog feed)",
+      "description": "NVIDIA AI blog",
       "tags": ["nvidia", "gpu", "hardware", "ai"],
       "language": "en",
       "reliability": 0.94
     },
-    "openai_research": {
-      "url": "https://openai.com/research/rss.xml",
+    "github_openai": {
+      "url": "https://api.github.com/orgs/openai/events",
+      "type": "api",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "realtime",
+      "description": "OpenAI GitHub activity",
+      "tags": ["github", "openai", "code", "releases"],
+      "language": "en",
+      "reliability": 0.98,
+      "authentication": "token",
+      "authConfig": {
+        "headerName": "Authorization",
+        "tokenPrefix": "Bearer",
+        "envVar": "GITHUB_TOKEN"
+      },
+      "rateLimit": {
+        "requests": 5000,
+        "period": "hour"
+      }
+    },
+    "github_releases_webhook": {
+      "url": "webhook",
+      "type": "webhook",
+      "category": "Open Source",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "realtime",
+      "description": "GitHub releases webhook for AI repos",
+      "tags": ["github", "releases", "realtime", "webhook"],
+      "language": "en",
+      "reliability": 0.99,
+      "webhookConfig": {
+        "events": ["release", "push"],
+        "secret": "GITHUB_WEBHOOK_SECRET",
+        "repos": [
+          "openai/whisper",
+          "microsoft/DeepSpeed",
+          "huggingface/transformers",
+          "pytorch/pytorch",
+          "tensorflow/tensorflow"
+        ]
+      }
+    },
+    "twitter_ai_search": {
+      "url": "https://api.twitter.com/2/tweets/search/recent",
+      "type": "api",
+      "category": "Community",
+      "enabled": false,
+      "priority": 2,
+      "updateFrequency": "15minutes",
+      "description": "Twitter/X AI discussions",
+      "tags": ["twitter", "social", "realtime", "community"],
+      "language": "en",
+      "reliability": 0.85,
+      "authentication": "oauth2",
+      "authConfig": {
+        "envVars": {
+          "bearer": "TWITTER_BEARER_TOKEN"
+        }
+      },
+      "queryParams": {
+        "query": "(AI OR artificial intelligence OR machine learning) -is:retweet lang:en",
+        "max_results": 100,
+        "tweet.fields": "created_at,author_id,public_metrics"
+      },
+      "rateLimit": {
+        "requests": 450,
+        "period": "15minutes"
+      },
+      "costWarning": "$200/month for Basic tier"
+    },
+    "reddit_ml": {
+      "url": "https://oauth.reddit.com/r/MachineLearning/new.json",
+      "type": "api",
+      "category": "Community",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "hourly",
+      "description": "r/MachineLearning subreddit",
+      "tags": ["reddit", "community", "discussion", "ml"],
+      "language": "en",
+      "reliability": 0.92,
+      "authentication": "oauth2",
+      "authConfig": {
+        "clientId": "REDDIT_CLIENT_ID",
+        "clientSecret": "REDDIT_CLIENT_SECRET",
+        "userAgent": "NewsXP:v3.0"
+      },
+      "rateLimit": {
+        "requests": 100,
+        "period": "minute"
+      }
+    },
+    "youtube_api": {
+      "url": "https://www.googleapis.com/youtube/v3/search",
+      "type": "api",
+      "category": "Media",
+      "enabled": true,
+      "priority": 3,
+      "updateFrequency": "daily",
+      "description": "YouTube AI content search",
+      "tags": ["youtube", "video", "tutorials", "conferences"],
+      "language": "en",
+      "reliability": 0.90,
+      "authentication": "apikey",
+      "authConfig": {
+        "paramName": "key",
+        "envVar": "YOUTUBE_API_KEY"
+      },
+      "queryParams": {
+        "part": "snippet",
+        "q": "artificial intelligence machine learning",
+        "type": "video",
+        "order": "date",
+        "maxResults": 50
+      },
+      "quotaWarning": "100 units per search, 10k daily quota"
+    },
+    "papers_with_code_api": {
+      "url": "https://paperswithcode.com/api/v1/papers/",
+      "type": "api",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "Papers with Code API",
+      "tags": ["papers", "code", "benchmarks", "research"],
+      "language": "en",
+      "reliability": 0.93,
+      "authentication": "none",
+      "rateLimit": {
+        "requests": 1000,
+        "period": "hour"
+      }
+    },
+    "semantic_scholar_api": {
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search",
+      "type": "api",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "daily",
+      "description": "Semantic Scholar paper search",
+      "tags": ["papers", "citations", "research", "academic"],
+      "language": "en",
+      "reliability": 0.94,
+      "authentication": "apikey",
+      "authConfig": {
+        "headerName": "x-api-key",
+        "envVar": "SEMANTIC_SCHOLAR_KEY"
+      },
+      "queryParams": {
+        "query": "machine learning",
+        "fields": "title,authors,year,abstract,url",
+        "limit": 100
+      },
+      "rateLimit": {
+        "requests": 100,
+        "period": "5minutes"
+      }
+    },
+    "the_batch_newsletter": {
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "type": "scrape",
+      "category": "Media",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "The Batch by Andrew Ng",
+      "tags": ["newsletter", "andrew-ng", "deeplearning", "weekly"],
+      "language": "en",
+      "reliability": 0.95,
+      "scrapeConfig": {
+        "selectors": {
+          "articles": "div.post-content",
+          "title": "h1.post-title",
+          "date": "span.post-date",
+          "content": "div.entry-content"
+        },
+        "pagination": "a.next-page",
+        "maxPages": 5
+      }
+    },
+    "import_ai_substack": {
+      "url": "https://importai.substack.com/feed",
       "type": "rss",
+      "category": "Media",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "Import AI by Jack Clark",
+      "tags": ["newsletter", "policy", "research", "weekly"],
+      "language": "en",
+      "reliability": 0.94
+    },
+    "stanford_hai": {
+      "url": "https://hai.stanford.edu/news",
+      "type": "scrape",
+      "category": "Academic",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Stanford HAI news",
+      "tags": ["stanford", "hai", "research", "ethics"],
+      "language": "en",
+      "reliability": 0.91,
+      "scrapeConfig": {
+        "selectors": {
+          "articles": "article.news-item",
+          "title": "h3.news-title",
+          "link": "a[href*='/news/']",
+          "date": "time"
+        },
+        "respectRobotsTxt": true
+      }
+    },
+    "mit_csail": {
+      "url": "https://www.csail.mit.edu/news",
+      "type": "scrape",
+      "category": "Academic",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "3days",
+      "description": "MIT CSAIL news",
+      "tags": ["mit", "csail", "research", "academic"],
+      "language": "en",
+      "reliability": 0.90,
+      "scrapeConfig": {
+        "selectors": {
+          "articles": "div.views-row",
+          "title": "h3 a",
+          "date": "span.date-display-single",
+          "excerpt": "div.field-content p"
+        },
+        "delayMs": 2000
+      }
+    },
+    "discord_ml_communities": {
+      "url": "webhook",
+      "type": "webhook",
+      "category": "Community",
+      "enabled": true,
+      "priority": 3,
+      "updateFrequency": "realtime",
+      "description": "Discord ML community webhooks",
+      "tags": ["discord", "community", "realtime", "chat"],
+      "language": "en",
+      "reliability": 0.88,
+      "webhookConfig": {
+        "implementation": "discord_bot",
+        "channels": [
+          "huggingface",
+          "pytorch",
+          "mlops-community",
+          "ai-alignment"
+        ],
+        "filterKeywords": ["announcement", "release", "paper", "update"]
+      },
+      "rateLimit": {
+        "requests": 50,
+        "period": "second"
+      }
+    },
+    "conference_neurips": {
+      "url": "https://nips.cc/",
+      "type": "scrape",
       "category": "Research",
       "enabled": false,
       "priority": 1,
-      "updateFrequency": "weekly",
-      "description": "OpenAI research papers (currently disabled - no RSS feed available)",
-      "tags": ["openai", "research", "papers"],
+      "updateFrequency": "seasonal",
+      "description": "NeurIPS conference papers",
+      "tags": ["conference", "neurips", "papers", "research"],
       "language": "en",
-      "reliability": 0.98,
-      "note": "RSS feed not available - consider using OpenAI blog feed instead"
-    },
-    "ai_government_news": {
-      "url": "https://www.whitehouse.gov/briefing-room/statements-releases/feed/",
-      "type": "rss",
-      "category": "Government",
-      "enabled": false,
-      "priority": 3,
-      "updateFrequency": "daily",
-      "description": "White House AI policy updates",
-      "tags": ["whitehouse", "policy", "regulation"],
-      "language": "en",
-      "reliability": 0.99,
-      "note": "Filtered for AI-related content"
+      "reliability": 0.85,
+      "activePeriodsOnly": true,
+      "activePeriods": ["November", "December"],
+      "scrapeConfig": {
+        "selectors": {
+          "papers": "div.paper",
+          "title": "h4.paper-title",
+          "authors": "span.authors",
+          "abstract": "div.abstract-content"
+        },
+        "antiDetection": "high",
+        "requiresSession": true
+      }
     }
   },
-  "quality_filters": {
-    "minimum_reliability": 0.8,
-    "exclude_keywords": ["spam", "clickbait", "advertisement"],
-    "include_keywords": ["AI", "artificial intelligence", "machine learning", "neural network", "LLM", "deep learning"],
-    "duplicate_detection": {
+  "aggregation_rules": {
+    "deduplication": {
       "enabled": true,
-      "similarity_threshold": 0.85
+      "strategies": ["url", "title_similarity", "content_hash"],
+      "titleSimilarityThreshold": 0.85,
+      "contentHashAlgorithm": "sha256",
+      "crossSourceWindow": "48hours"
     },
-    "content_scoring": {
+    "quality_scoring": {
       "enabled": true,
-      "factors": ["source_reliability", "content_length", "social_signals", "freshness"]
+      "factors": {
+        "source_reliability": 0.3,
+        "content_length": 0.1,
+        "freshness": 0.2,
+        "engagement_metrics": 0.2,
+        "technical_depth": 0.2
+      },
+      "minimumScore": 0.6
+    },
+    "content_filtering": {
+      "requireKeywords": ["AI", "artificial intelligence", "machine learning", "deep learning", "neural network", "LLM", "transformer", "GPT", "diffusion"],
+      "excludeKeywords": ["crypto", "blockchain", "web3", "NFT"],
+      "minimumContentLength": 200,
+      "languageFilter": ["en"],
+      "nsfwFilter": true
     }
   },
-  "rate_limiting": {
-    "requests_per_hour": 100,
-    "concurrent_requests": 5,
-    "backoff_multiplier": 2,
-    "max_backoff": 300
+  "implementation_config": {
+    "rate_limiting": {
+      "globalRateLimit": 100,
+      "globalPeriod": "minute",
+      "perSourceLimits": true,
+      "backoffStrategy": "exponential",
+      "maxRetries": 3,
+      "initialBackoffMs": 1000
+    },
+    "caching": {
+      "enabled": true,
+      "backend": "redis",
+      "ttl": {
+        "rss": 3600,
+        "api": 1800,
+        "scrape": 7200
+      },
+      "keyPattern": "newsxp:{source}:{hash}"
+    },
+    "error_handling": {
+      "alertThreshold": 5,
+      "alertChannels": ["email", "slack"],
+      "fallbackStrategies": {
+        "rss_to_scrape": true,
+        "api_to_cache": true
+      }
+    },
+    "storage": {
+      "backend": "postgresql",
+      "schema": "newsxp",
+      "retention": {
+        "articles": "90days",
+        "metrics": "365days",
+        "logs": "30days"
+      }
+    },
+    "processing": {
+      "parallel_workers": 10,
+      "queue_backend": "celery",
+      "nlp_models": {
+        "relevance": "sentence-transformers/all-MiniLM-L6-v2",
+        "summarization": "facebook/bart-large-cnn",
+        "classification": "custom-ai-news-classifier"
+      }
+    }
   },
   "monitoring": {
-    "health_checks": true,
-    "error_tracking": true,
-    "performance_metrics": true,
-    "alert_thresholds": {
-      "failure_rate": 0.1,
-      "response_time": 5000
+    "health_checks": {
+      "enabled": true,
+      "interval": "5minutes",
+      "endpoints": {
+        "health": "/api/health",
+        "metrics": "/api/metrics",
+        "sources": "/api/sources/status"
+      }
+    },
+    "metrics": {
+      "collection": true,
+      "exporters": ["prometheus", "datadog"],
+      "custom_metrics": [
+        "articles_per_source",
+        "processing_latency",
+        "api_quota_usage",
+        "scraping_success_rate"
+      ]
+    },
+    "alerting": {
+      "providers": ["pagerduty", "slack"],
+      "rules": {
+        "source_failure": {
+          "threshold": 3,
+          "window": "1hour",
+          "severity": "warning"
+        },
+        "api_quota_exceeded": {
+          "threshold": 0.9,
+          "severity": "critical"
+        },
+        "processing_backlog": {
+          "threshold": 1000,
+          "severity": "warning"
+        }
+      }
+    }
+  },
+  "legal_compliance": {
+    "robots_txt": {
+      "respect": true,
+      "cache_duration": "24hours",
+      "user_agent": "NewsXP-Bot/3.0"
+    },
+    "attribution": {
+      "required": true,
+      "format": "Source: {source_name} - {url}",
+      "include_timestamp": true
+    },
+    "data_retention": {
+      "gdpr_compliant": true,
+      "anonymization": true,
+      "user_consent_required": false
+    },
+    "terms_of_service": {
+      "review_frequency": "quarterly",
+      "compliance_log": true
     }
   }
 }

@@ -78,13 +78,30 @@ class NewsCollector:
             
             # Collect articles
             all_articles = []
+            successful_sources = 0
+            failed_sources = 0
+            empty_sources = 0
+            source_reasons = {}  # Track reasons for empty sources
+            
             for source_id, config in sources_to_use.items():
                 try:
-                    articles = await self.collect_from_source(source_id, config)
+                    articles, reason = await self.collect_from_source(source_id, config)
                     all_articles.extend(articles)
-                    logger.info(f"Collected {len(articles)} articles from {source_id}")
+                    
+                    if len(articles) > 0:
+                        successful_sources += 1
+                        logger.info(f"Collected {len(articles)} articles from {source_id}")
+                    else:
+                        empty_sources += 1
+                        source_reasons[source_id] = reason
+                        logger.info(f"Collected 0 articles from {source_id} - {reason}")
+                        
                 except Exception as e:
+                    failed_sources += 1
                     logger.error(f"Failed to collect from {source_id}: {e}")
+            
+            # Log collection summary
+            logger.info(f"Collection summary: {successful_sources} sources with articles, {empty_sources} sources empty, {failed_sources} sources failed")
             
             # Process articles
             unique_articles = self.deduplicate(all_articles)
@@ -98,7 +115,7 @@ class NewsCollector:
             if self.session:
                 await self.session.close()
     
-    async def collect_from_source(self, source_id: str, config: Dict) -> List[Dict]:
+    async def collect_from_source(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
         """Collect articles from a single source."""
         source_type = config.get('type', 'rss').lower()
         
@@ -106,38 +123,81 @@ class NewsCollector:
             return await self.collect_rss(source_id, config)
         elif source_type == 'api':
             return await self.collect_api(source_id, config)
+        elif source_type == 'scrape':
+            logger.warning(f"Source type 'scrape' for {source_id} not implemented yet - web scraping functionality planned for future release")
+            return [], "feature not implemented (web scraping)"
+        elif source_type == 'webhook':
+            logger.warning(f"Source type 'webhook' for {source_id} not implemented yet - webhook functionality planned for future release")
+            return [], "feature not implemented (webhook)"
         else:
-            logger.error(f"Unknown source type '{source_type}' for {source_id}")
-            return []
+            logger.error(f"Unknown source type '{source_type}' for {source_id} - supported types: rss, api")
+            return [], f"unknown source type '{source_type}'"
     
-    async def collect_rss(self, source_id: str, config: Dict) -> List[Dict]:
+    async def collect_rss(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
         """Collect articles from RSS feed."""
         articles = []
+        reason = "unknown"
         
         try:
             if not self.session:
                 logger.error(f"No session available for {source_id}")
-                return []
+                return [], "no session available"
                 
             url = config['url']
             async with self.session.get(url) as response:
                 if response.status != 200:
-                    logger.error(f"HTTP {response.status} for {source_id}")
-                    return []
+                    logger.error(f"HTTP {response.status} for RSS {source_id} - {url}")
+                    return [], f"HTTP {response.status} error"
                 
                 content = await response.text()
                 feed = feedparser.parse(content)
                 
+                # Check if feed was parsed successfully
+                if hasattr(feed, 'bozo') and feed.bozo:
+                    bozo_reason = getattr(feed, 'bozo_exception', 'Unknown parsing error')
+                    logger.warning(f"RSS feed parsing issues for {source_id}: {bozo_reason}")
+                
+                # Check if feed has entries
+                if not hasattr(feed, 'entries') or len(feed.entries) == 0:
+                    update_freq = config.get('updateFrequency', 'unknown')
+                    note = config.get('note', '')
+                    
+                    if update_freq in ['daily'] and datetime.now().weekday() in [5, 6]:  # Saturday/Sunday
+                        reason = "weekend (daily updates)"
+                        logger.info(f"No articles from {source_id} - likely due to weekend (updates {update_freq}). {note}")
+                    elif update_freq in ['weekdays'] and datetime.now().weekday() in [5, 6]:
+                        reason = "weekend (weekdays only)"
+                        logger.info(f"No articles from {source_id} - weekdays only source checked on weekend")
+                    elif 'midnight' in note.lower() and datetime.now().hour < 8:
+                        reason = "early morning (updates at midnight)"
+                        logger.info(f"No articles from {source_id} - may not have updated yet (updates at midnight)")
+                    elif hasattr(feed, 'bozo') and feed.bozo:
+                        reason = "RSS parsing error"
+                        logger.warning(f"No articles available from {source_id} - feed has parsing issues")
+                    else:
+                        reason = "feed empty or unavailable"
+                        logger.warning(f"No articles available from {source_id} - feed may be empty or experiencing issues (updates {update_freq})")
+                    return [], reason
+                
                 max_articles = config.get('maxArticles', 20)
+                total_entries = len(feed.entries)
+                
                 for entry in feed.entries[:max_articles]:
                     article = self.parse_rss_entry(source_id, config, feed, entry)
                     if article:
                         articles.append(article)
+                
+                # Log detailed info about article parsing
+                if len(articles) == 0 and total_entries > 0:
+                    reason = "entries could not be parsed"
+                    logger.warning(f"RSS {source_id} had {total_entries} entries but none could be parsed into valid articles")
+                    return [], reason
                         
         except Exception as e:
             logger.error(f"RSS collection failed for {source_id}: {e}")
+            return [], f"collection error: {str(e)[:50]}"
         
-        return articles
+        return articles, "success"
     
     def parse_rss_entry(self, source_id: str, config: Dict, feed: Any, entry: Any) -> Optional[Dict]:
         """Parse RSS entry into article format."""
@@ -186,14 +246,15 @@ class NewsCollector:
             logger.error(f"Error parsing RSS entry from {source_id}: {e}")
             return None
     
-    async def collect_api(self, source_id: str, config: Dict) -> List[Dict]:
+    async def collect_api(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
         """Collect articles from API endpoint."""
         articles = []
+        reason = "unknown"
         
         try:
             if not self.session:
                 logger.error(f"No session available for {source_id}")
-                return []
+                return [], "no session available"
                 
             url = config['url']
             headers = {'Accept': 'application/json'}
@@ -201,35 +262,97 @@ class NewsCollector:
                 headers['Authorization'] = f"Bearer {config['apiKey']}"
             
             async with self.session.get(url, headers=headers) as response:
-                if response.status != 200:
-                    logger.error(f"HTTP {response.status} for API {source_id}")
-                    return []
+                if response.status == 403:
+                    logger.error(f"HTTP 403 for API {source_id} - Access forbidden. API key may be invalid or expired")
+                    return [], "HTTP 403 error - access forbidden"
+                elif response.status == 400:
+                    logger.error(f"HTTP 400 for API {source_id} - Bad request. Check API parameters or endpoint URL")
+                    return [], "HTTP 400 error - bad request"
+                elif response.status == 429:
+                    logger.error(f"HTTP 429 for API {source_id} - Rate limit exceeded. Try again later")
+                    return [], "HTTP 429 error - rate limit exceeded"
+                elif response.status != 200:
+                    logger.error(f"HTTP {response.status} for API {source_id} - {url}")
+                    return [], f"HTTP {response.status} error"
                 
-                data = await response.json()
+                # Check content type before parsing
+                content_type = response.headers.get('content-type', '').lower()
+                
+                try:
+                    if 'application/json' in content_type:
+                        data = await response.json()
+                    elif 'application/atom+xml' in content_type or 'application/xml' in content_type:
+                        # Handle XML/Atom feeds that were misconfigured as API endpoints
+                        logger.warning(f"API {source_id} returned XML/Atom content instead of JSON. Consider changing type to 'rss'")
+                        content = await response.text()
+                        feed = feedparser.parse(content)
+                        if hasattr(feed, 'entries') and len(feed.entries) > 0:
+                            logger.info(f"Successfully parsed XML content for {source_id} using RSS parser")
+                            max_articles = config.get('maxArticles', 20)
+                            for entry in feed.entries[:max_articles]:
+                                article = self.parse_rss_entry(source_id, config, feed, entry)
+                                if article:
+                                    articles.append(article)
+                            return articles, "success"
+                        else:
+                            logger.warning(f"XML content from {source_id} contained no parseable entries")
+                            return [], "XML content contained no parseable entries"
+                    else:
+                        logger.error(f"API {source_id} returned unexpected content type: {content_type}")
+                        return [], f"unexpected content type: {content_type}"
+                        
+                except Exception as parse_error:
+                    logger.error(f"Failed to parse response from API {source_id}: {parse_error}")
+                    return [], f"parse error: {str(parse_error)[:50]}"
                 
                 # Handle different API response formats
                 articles_data = data
                 if isinstance(data, dict):
-                    for key in ['articles', 'items', 'results', 'data']:
+                    for key in ['articles', 'items', 'results', 'data', 'entries']:
                         if key in data and isinstance(data[key], list):
                             articles_data = data[key]
                             break
                 
                 if not isinstance(articles_data, list):
-                    logger.error(f"Unexpected API response format for {source_id}")
-                    return []
+                    logger.error(f"Unexpected API response format for {source_id} - expected array or object with articles array")
+                    return [], "unexpected API response format"
+                
+                # Check if API returned empty results
+                if len(articles_data) == 0:
+                    update_freq = config.get('updateFrequency', 'unknown')
+                    if update_freq in ['daily'] and datetime.now().weekday() in [5, 6]:
+                        reason = "weekend (daily updates)"
+                        logger.info(f"No articles from API {source_id} - likely due to weekend (updates {update_freq})")
+                    elif update_freq in ['weekdays'] and datetime.now().weekday() in [5, 6]:
+                        reason = "weekend (weekdays only)"
+                        logger.info(f"No articles from API {source_id} - weekdays only source checked on weekend")
+                    else:
+                        reason = "API returned empty results"
+                        logger.info(f"No articles available from API {source_id} - endpoint returned empty results")
+                    return [], reason
                 
                 # Parse articles
                 max_articles = config.get('maxArticles', 20)
+                total_items = len(articles_data)
+                
                 for item in articles_data[:max_articles]:
                     article = self.parse_api_item(source_id, config, item)
                     if article:
                         articles.append(article)
+                
+                # Log detailed info about article parsing
+                if len(articles) == 0 and total_items > 0:
+                    reason = "items could not be parsed"
+                    logger.warning(f"API {source_id} returned {total_items} items but none could be parsed into valid articles")
+                    return [], reason
+                elif len(articles) > 0:
+                    reason = "success"
                         
         except Exception as e:
             logger.error(f"API collection failed for {source_id}: {e}")
+            return [], f"collection error: {str(e)[:50]}"
         
-        return articles
+        return articles, reason
     
     def parse_api_item(self, source_id: str, config: Dict, item: Dict) -> Optional[Dict]:
         """Parse API item into article format."""
