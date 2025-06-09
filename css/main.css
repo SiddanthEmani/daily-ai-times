@@ -144,8 +144,41 @@ body::before {
     align-items: center;
 }
 
+.edition-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
 .edition-name {
     font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--secondary-gray);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.social-icon:hover {
+    color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.social-icon svg {
+    width: 16px;
+    height: 16px;
 }
 
 .articles-count {
@@ -418,5 +451,16 @@ body::before {
     
     .section-title {
         font-size: 1.5rem;
+    }
+    
+    .edition-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .edition-left {
+        align-items: center;
     }
 }
