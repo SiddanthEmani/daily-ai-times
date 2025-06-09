@@ -96,30 +96,6 @@
       "reliability": 0.95,
       "parseFormat": "atom"
     },
-    "arxiv_api": {
-      "url": "http://export.arxiv.org/api/query",
-      "type": "rss",
-      "category": "Research",
-      "enabled": true,
-      "priority": 1,
-      "updateFrequency": "realtime",
-      "description": "ArXiv API for custom queries",
-      "tags": ["research", "papers", "arxiv", "api"],
-      "language": "en",
-      "reliability": 0.98,
-      "authentication": "none",
-      "rateLimit": {
-        "requests": 3,
-        "period": "second",
-        "delayMs": 3000
-      },
-      "queryParams": {
-        "search_query": "cat:cs.AI OR cat:cs.LG OR cat:cs.CV",
-        "sortBy": "submittedDate",
-        "sortOrder": "descending",
-        "max_results": 100
-      }
-    },
     "openai_blog": {
       "url": "https://openai.com/news/rss.xml",
       "type": "rss",

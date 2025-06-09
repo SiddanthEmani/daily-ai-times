@@ -3,393 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsXP.ai MCP Server</title>
-    <meta name="description" content="AI-powered news experience platform with Model Context Protocol support">
+    <title>Daily News - NewsXP AI</title>
+    <meta name="description" content="AI-curated daily news featuring the latest developments in technology, research, and industry insights.">
     
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗞️</text></svg>">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="../data/news.json" as="fetch" crossorigin>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Abril+Fatface&display=swap" rel="stylesheet">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #fff 0%, #e0e7ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-        }
-
-        /* Features Section */
-        .features {
-            background: white;
-            padding: 4rem 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .feature-card p {
-            color: #666;
-        }
-
-        /* MCP Section */
-        .mcp-section {
-            background: #1e293b;
-            color: white;
-            padding: 4rem 0;
-        }
-
-        .mcp-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .mcp-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .mcp-text p {
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .code-block {
-            background: #0f172a;
-            border-radius: 8px;
-            padding: 1.5rem;
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.9rem;
-            overflow-x: auto;
-            border: 1px solid #334155;
-        }
-
-        .code-block pre {
-            color: #e2e8f0;
-        }
-
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .mcp-content {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">🗞️ NewsXP.ai</a>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#mcp">MCP</a></li>
-                <li><a href="https://github.com/SiddanthEmani/newsxp-ai">GitHub</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="newspaper">
+        <header class="header">
+            <h1 class="masthead">Daily News</h1>
+            <div class="date-line" id="current-date">Loading...</div>
+            <div class="edition-info" id="edition-info">NewsXP AI • Loading articles...</div>
+        </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>AI-Powered News Experience</h1>
-                <p>Intelligent news processing and summarization with Model Context Protocol support. Transform how you consume and interact with news content.</p>
-                <div class="cta-buttons">
-                    <a href="https://github.com/SiddanthEmani/newsxp-ai" class="btn btn-primary">View on GitHub</a>
-                    <a href="#mcp" class="btn btn-secondary">Learn About MCP</a>
+        <main class="content">
+            <!-- Main Story -->
+            <article class="main-story" id="main-story">
+                <div class="loading">Loading main story...</div>
+            </article>
+
+            <!-- News Grid -->
+            <div class="news-grid">
+                <div class="news-column" id="news-column-1">
+                    <div class="loading">Loading news...</div>
+                </div>
+                <div class="news-column" id="news-column-2">
+                    <div class="loading">Loading news...</div>
                 </div>
             </div>
-        </section>
 
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Powerful Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🤖</div>
-                        <h3>AI-Powered Processing</h3>
-                        <p>Intelligent content extraction and summarization using advanced language models for better news consumption.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔗</div>
-                        <h3>MCP Integration</h3>
-                        <p>Built with Model Context Protocol support, enabling seamless integration with AI assistants and tools.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Smart Categorization</h3>
-                        <p>Automatically organize news into categories like industry, media, open-source, and research topics.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Real-time Updates</h3>
-                        <p>Stay current with automated news collection and processing pipeline for timely information delivery.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌐</div>
-                        <h3>API Access</h3>
-                        <p>RESTful API endpoints for easy integration with your applications and workflows.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3>Curated Content</h3>
-                        <p>AI filters and creates the best content lists, ensuring you get the most relevant and important news.</p>
-                    </div>
+            <!-- Research Papers Section -->
+            <section class="research-section">
+                <div class="section-header">
+                    <h2 class="section-title">Research Papers</h2>
+                    <p class="section-subtitle">Latest academic research and scientific publications</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="mcp" class="mcp-section">
-            <div class="container">
-                <div class="mcp-content">
-                    <div class="mcp-text">
-                        <h2>Model Context Protocol</h2>
-                        <p>NewsXP.ai implements the Model Context Protocol (MCP), enabling powerful integrations with AI assistants and development tools.</p>
-                        <p>Our MCP server provides structured access to news data, processing capabilities, and content management features through a standardized interface.</p>
-                        <a href="https://modelcontextprotocol.io" class="btn btn-primary">Learn More About MCP</a>
-                    </div>
-                    <div class="code-block">
-                        <pre>{
-  "name": "newsxp-ai-mcp-server",
-  "version": "1.0.0",
-  "capabilities": {
-    "tools": {
-      "news_processing": "Extract and process news content",
-      "content_filtering": "AI-powered content curation",
-      "category_management": "Organize news by topics",
-      "api_generation": "Create structured data endpoints"
-    }
-  },
-  "transport": "stdio",
-  "status": "ready"
-}</pre>
-                    </div>
+                <div class="research-grid" id="research-grid">
+                    <div class="loading">Loading research papers...</div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="https://github.com/SiddanthEmani/newsxp-ai">GitHub Repository</a>
-                <a href="https://modelcontextprotocol.io">Model Context Protocol</a>
-                <a href="#features">Documentation</a>
-                <a href="mailto:contact@newsxp.ai">Contact</a>
-            </div>
-            <p>&copy; 2025 NewsXP.ai. Built with ❤️ for the AI community.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.1)';
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

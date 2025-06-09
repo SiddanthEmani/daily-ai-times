@@ -12,7 +12,7 @@ import hashlib
 import re
 import time
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 
@@ -58,7 +58,7 @@ class NewsCollector:
             logger.error(f"Failed to load config: {e}")
             raise
     
-    async def collect_all(self, source_ids: Optional[List[str]] = None) -> List[Dict]:
+    async def collect_all(self, source_ids: Optional[List[str]] = None, max_age_days: int = 7) -> List[Dict]:
         """Collect articles from all or specified sources."""
         self.session = aiohttp.ClientSession(
             timeout=aiohttp.ClientTimeout(total=30),
@@ -85,7 +85,7 @@ class NewsCollector:
             
             for source_id, config in sources_to_use.items():
                 try:
-                    articles, reason = await self.collect_from_source(source_id, config)
+                    articles, reason = await self.collect_from_source(source_id, config, max_age_days)
                     all_articles.extend(articles)
                     
                     if len(articles) > 0:
@@ -102,6 +102,8 @@ class NewsCollector:
             
             # Log collection summary
             logger.info(f"Collection summary: {successful_sources} sources with articles, {empty_sources} sources empty, {failed_sources} sources failed")
+            if max_age_days > 0:
+                logger.info(f"Age filter applied: only articles newer than {max_age_days} days included")
             
             # Process articles
             unique_articles = self.deduplicate(all_articles)
@@ -115,14 +117,14 @@ class NewsCollector:
             if self.session:
                 await self.session.close()
     
-    async def collect_from_source(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
+    async def collect_from_source(self, source_id: str, config: Dict, max_age_days: int = 7) -> tuple[List[Dict], str]:
         """Collect articles from a single source."""
         source_type = config.get('type', 'rss').lower()
         
         if source_type == 'rss':
-            return await self.collect_rss(source_id, config)
+            return await self.collect_rss(source_id, config, max_age_days)
         elif source_type == 'api':
-            return await self.collect_api(source_id, config)
+            return await self.collect_api(source_id, config, max_age_days)
         elif source_type == 'scrape':
             logger.warning(f"Source type 'scrape' for {source_id} not implemented yet - web scraping functionality planned for future release")
             return [], "feature not implemented (web scraping)"
@@ -133,7 +135,7 @@ class NewsCollector:
             logger.error(f"Unknown source type '{source_type}' for {source_id} - supported types: rss, api")
             return [], f"unknown source type '{source_type}'"
     
-    async def collect_rss(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
+    async def collect_rss(self, source_id: str, config: Dict, max_age_days: int = 7) -> tuple[List[Dict], str]:
         """Collect articles from RSS feed."""
         articles = []
         reason = "unknown"
@@ -181,11 +183,19 @@ class NewsCollector:
                 
                 max_articles = config.get('maxArticles', 20)
                 total_entries = len(feed.entries)
+                articles_before_age_filter = 0
                 
                 for entry in feed.entries[:max_articles]:
-                    article = self.parse_rss_entry(source_id, config, feed, entry)
+                    # Count articles before age filtering for logging
+                    articles_before_age_filter += 1
+                    article = self.parse_rss_entry(source_id, config, feed, entry, max_age_days)
                     if article:
                         articles.append(article)
+                
+                # Log age filtering results if any articles were filtered
+                if max_age_days > 0 and articles_before_age_filter > len(articles):
+                    filtered_count = articles_before_age_filter - len(articles)
+                    logger.debug(f"RSS {source_id}: filtered {filtered_count} articles older than {max_age_days} days")
                 
                 # Log detailed info about article parsing
                 if len(articles) == 0 and total_entries > 0:
@@ -199,20 +209,36 @@ class NewsCollector:
         
         return articles, "success"
     
-    def parse_rss_entry(self, source_id: str, config: Dict, feed: Any, entry: Any) -> Optional[Dict]:
+    def parse_rss_entry(self, source_id: str, config: Dict, feed: Any, entry: Any, max_age_days: int = 7) -> Optional[Dict]:
         """Parse RSS entry into article format."""
         try:
-            # Extract basic fields
+            # Extract basic fields with more fallback options
             title = getattr(entry, 'title', '').strip()
-            url = getattr(entry, 'link', '')
+            url = getattr(entry, 'link', '') or getattr(entry, 'guid', '')
             
             # Extract and clean description
             description = ''
-            if hasattr(entry, 'summary'):
-                description = BeautifulSoup(entry.summary, 'html.parser').get_text()
-            elif hasattr(entry, 'description'):
-                description = BeautifulSoup(entry.description, 'html.parser').get_text()
+            for desc_field in ['summary', 'description', 'content', 'subtitle']:
+                if hasattr(entry, desc_field):
+                    desc_content = getattr(entry, desc_field)
+                    if desc_content:
+                        if isinstance(desc_content, list) and len(desc_content) > 0:
+                            desc_content = desc_content[0].get('value', '') if isinstance(desc_content[0], dict) else str(desc_content[0])
+                        description = BeautifulSoup(str(desc_content), 'html.parser').get_text()
+                        break
             description = description[:500].strip()
+            
+            # Debug logging for failed parsing
+            if not title:
+                available_attrs = [attr for attr in dir(entry) if not attr.startswith('_')]
+                logger.debug(f"RSS {source_id}: Entry missing title. Available attrs: {available_attrs}")
+                if logger.isEnabledFor(logging.DEBUG):
+                    # Show first few attributes with their values
+                    sample_data = {attr: getattr(entry, attr) for attr in available_attrs[:10] if hasattr(entry, attr)}
+                    logger.debug(f"RSS {source_id}: Sample entry data: {sample_data}")
+            
+            if not url:
+                logger.debug(f"RSS {source_id}: Entry missing URL. Available attrs: {[attr for attr in dir(entry) if not attr.startswith('_')]}")
             
             # Parse date
             pub_date = self.parse_date(
@@ -220,12 +246,28 @@ class NewsCollector:
                 getattr(entry, 'updated_parsed', None)
             )
             
+            # Apply age filter
+            if max_age_days > 0:
+                try:
+                    article_date = datetime.fromisoformat(pub_date.replace('Z', '+00:00'))
+                    if article_date.tzinfo is None:
+                        article_date = article_date.replace(tzinfo=timezone.utc)
+                    
+                    cutoff_date = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+                    if article_date < cutoff_date:
+                        logger.debug(f"RSS {source_id}: Entry filtered due to age: {article_date} < {cutoff_date}")
+                        return None  # Article is too old
+                except Exception:
+                    # If date parsing fails, keep the article
+                    pass
+            
             # Generate unique ID
             entry_id = getattr(entry, 'id', url) or str(hash(title))
             article_id = hashlib.md5(f"{source_id}_{entry_id}".encode()).hexdigest()
             
             # Validate required fields
             if not title or not url:
+                logger.debug(f"RSS {source_id}: Entry validation failed - title: '{title}', url: '{url}'")
                 return None
             
             return {
@@ -246,7 +288,7 @@ class NewsCollector:
             logger.error(f"Error parsing RSS entry from {source_id}: {e}")
             return None
     
-    async def collect_api(self, source_id: str, config: Dict) -> tuple[List[Dict], str]:
+    async def collect_api(self, source_id: str, config: Dict, max_age_days: int = 7) -> tuple[List[Dict], str]:
         """Collect articles from API endpoint."""
         articles = []
         reason = "unknown"
@@ -290,7 +332,7 @@ class NewsCollector:
                             logger.info(f"Successfully parsed XML content for {source_id} using RSS parser")
                             max_articles = config.get('maxArticles', 20)
                             for entry in feed.entries[:max_articles]:
-                                article = self.parse_rss_entry(source_id, config, feed, entry)
+                                article = self.parse_rss_entry(source_id, config, feed, entry, max_age_days)
                                 if article:
                                     articles.append(article)
                             return articles, "success"
@@ -334,11 +376,19 @@ class NewsCollector:
                 # Parse articles
                 max_articles = config.get('maxArticles', 20)
                 total_items = len(articles_data)
+                items_before_age_filter = 0
                 
                 for item in articles_data[:max_articles]:
-                    article = self.parse_api_item(source_id, config, item)
+                    # Count items before age filtering for logging
+                    items_before_age_filter += 1
+                    article = self.parse_api_item(source_id, config, item, max_age_days)
                     if article:
                         articles.append(article)
+                
+                # Log age filtering results if any articles were filtered
+                if max_age_days > 0 and items_before_age_filter > len(articles):
+                    filtered_count = items_before_age_filter - len(articles)
+                    logger.debug(f"API {source_id}: filtered {filtered_count} articles older than {max_age_days} days")
                 
                 # Log detailed info about article parsing
                 if len(articles) == 0 and total_items > 0:
@@ -354,13 +404,95 @@ class NewsCollector:
         
         return articles, reason
     
-    def parse_api_item(self, source_id: str, config: Dict, item: Dict) -> Optional[Dict]:
+    def parse_api_item(self, source_id: str, config: Dict, item: Dict, max_age_days: int = 7) -> Optional[Dict]:
         """Parse API item into article format."""
         try:
-            # Extract basic fields
-            title = item.get('title') or item.get('headline') or item.get('name', '')
-            url = item.get('url') or item.get('link') or item.get('permalink', '')
-            description = item.get('description') or item.get('summary') or item.get('content', '')
+            # Extract basic fields with more fallback options
+            title = (item.get('title') or item.get('headline') or item.get('name') or 
+                    item.get('display_name') or item.get('full_name') or '')
+            
+            # Special handling for GitHub API
+            if not title and source_id == 'github_openai':
+                if item.get('type') == 'PushEvent':
+                    commits = item.get('payload', {}).get('commits', [])
+                    if commits:
+                        title = f"New commits to {item.get('repo', {}).get('name', 'repository')}: {commits[0].get('message', '')[:100]}"
+                elif item.get('type') == 'ReleaseEvent':
+                    release = item.get('payload', {}).get('release', {})
+                    title = f"Release: {release.get('name', release.get('tag_name', 'New Release'))}"
+                elif item.get('type'):
+                    title = f"{item['type']} in {item.get('repo', {}).get('name', 'repository')}"
+            
+            url = (item.get('url') or item.get('link') or item.get('permalink') or 
+                  item.get('html_url') or item.get('web_url') or 
+                  item.get('url_abs') or item.get('url_pdf') or '')
+            
+            # Special handling for different API formats
+            if not url and 'paper' in item:
+                if isinstance(item['paper'], dict):
+                    # HuggingFace papers API format
+                    paper_id = item['paper'].get('id')
+                    if paper_id:
+                        url = f"https://arxiv.org/abs/{paper_id}"
+                        logger.debug(f"API {source_id}: Constructed ArXiv URL from paper ID: {url}")
+                    else:
+                        paper_url = item['paper'].get('url') or item['paper'].get('link')
+                        if paper_url:
+                            url = paper_url
+                elif isinstance(item['paper'], str) and item['paper'].startswith('http'):
+                    url = item['paper']
+            
+            # Papers with Code API format
+            if not url and 'arxiv_id' in item and item['arxiv_id']:
+                url = f"https://arxiv.org/abs/{item['arxiv_id']}"
+                logger.debug(f"API {source_id}: Constructed ArXiv URL from arxiv_id: {url}")
+            
+            # GitHub API format - construct URLs from repository info
+            if not url and source_id == 'github_openai':
+                repo_name = item.get('repo', {}).get('name', '')
+                if repo_name:
+                    if item.get('type') == 'PushEvent':
+                        url = f"https://github.com/{repo_name}/commits"
+                    elif item.get('type') == 'ReleaseEvent':
+                        url = f"https://github.com/{repo_name}/releases"
+                    elif item.get('type') == 'CreateEvent':
+                        url = f"https://github.com/{repo_name}"
+                    elif item.get('type') == 'IssuesEvent':
+                        issue_num = item.get('payload', {}).get('issue', {}).get('number')
+                        url = f"https://github.com/{repo_name}/issues/{issue_num}" if issue_num else f"https://github.com/{repo_name}/issues"
+                    elif item.get('type') == 'PullRequestEvent':
+                        pr_num = item.get('payload', {}).get('pull_request', {}).get('number')
+                        url = f"https://github.com/{repo_name}/pull/{pr_num}" if pr_num else f"https://github.com/{repo_name}/pulls"
+                    else:
+                        # Default to repository URL for other event types
+                        url = f"https://github.com/{repo_name}"
+                elif 'html_url' in item:
+                    url = item['html_url']
+            
+            description = (item.get('description') or item.get('summary') or 
+                          item.get('content') or item.get('body') or 
+                          item.get('excerpt') or '')
+            
+            # Special handling for GitHub API
+            if not description and source_id == 'github_openai':
+                if item.get('type') == 'PushEvent':
+                    commits = item.get('payload', {}).get('commits', [])
+                    if commits:
+                        description = '\n'.join([f"• {commit.get('message', '')}" for commit in commits[:3]])
+                elif item.get('type') == 'ReleaseEvent':
+                    release = item.get('payload', {}).get('release', {})
+                    description = release.get('body', release.get('notes', ''))
+                elif 'payload' in item:
+                    description = str(item['payload'])[:200]
+            
+            # Debug logging for failed parsing
+            if not title:
+                logger.debug(f"API {source_id}: Item missing title. Available keys: {list(item.keys())}")
+                if logger.isEnabledFor(logging.DEBUG):
+                    logger.debug(f"API {source_id}: Sample item data: {json.dumps(item, indent=2)[:500]}")
+            
+            if not url:
+                logger.debug(f"API {source_id}: Item missing URL after all extraction attempts. Available keys: {list(item.keys())}")
             
             # Clean HTML from description
             if isinstance(description, dict):
@@ -368,9 +500,9 @@ class NewsCollector:
             if description:
                 description = BeautifulSoup(description, 'html.parser').get_text()[:500].strip()
             
-            # Parse date
+            # Parse date with more options
             pub_date = datetime.now(timezone.utc).isoformat()
-            for date_field in ['published', 'date', 'publishedAt', 'created_at']:
+            for date_field in ['published', 'date', 'publishedAt', 'created_at', 'updated_at', 'submission_date']:
                 if date_field in item and item[date_field]:
                     try:
                         pub_date = date_parser.parse(str(item[date_field])).isoformat()
@@ -378,12 +510,36 @@ class NewsCollector:
                     except:
                         continue
             
+            # Special date handling for different APIs
+            if pub_date == datetime.now(timezone.utc).isoformat():  # No date found yet
+                if source_id == 'github_openai' and 'created_at' in item:
+                    try:
+                        pub_date = date_parser.parse(item['created_at']).isoformat()
+                    except:
+                        pass
+            
+            # Apply age filter
+            if max_age_days > 0:
+                try:
+                    article_date = datetime.fromisoformat(pub_date.replace('Z', '+00:00'))
+                    if article_date.tzinfo is None:
+                        article_date = article_date.replace(tzinfo=timezone.utc)
+                    
+                    cutoff_date = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+                    if article_date < cutoff_date:
+                        logger.debug(f"API {source_id}: Item filtered due to age: {article_date} < {cutoff_date}")
+                        return None  # Article is too old
+                except Exception:
+                    # If date parsing fails, keep the article
+                    pass
+            
             # Generate unique ID
             item_id = item.get('id', item.get('guid', url))
             article_id = hashlib.md5(f"{source_id}_{item_id}".encode()).hexdigest()
             
             # Validate required fields
             if not title or not url:
+                logger.debug(f"API {source_id}: Item validation failed - title: '{title}', url: '{url}'")
                 return None
             
             return {
@@ -493,8 +649,9 @@ async def main():
     parser.add_argument('--output', default='data/news.json', help='Output file path')
     parser.add_argument('--archive', action='store_true', help='Save to daily archive')
     parser.add_argument('--config', default='config/sources.json', help='Sources config file')
-    parser.add_argument('--max-articles', type=int, default=100, help='Max articles to save')
+    parser.add_argument('--max-articles', type=int, default=1000, help='Max articles to save')
     parser.add_argument('--min-score', type=float, default=0, help='Min score threshold')
+    parser.add_argument('--max-age-days', type=int, default=7, help='Max age of articles in days (default: 7)')
     parser.add_argument('--verbose', '-v', action='store_true', help='Verbose logging')
     
     args = parser.parse_args()
@@ -515,7 +672,7 @@ async def main():
         start_time = time.time()
         logger.info("Starting news collection...")
         
-        articles = await collector.collect_all(sources)
+        articles = await collector.collect_all(sources, max_age_days=args.max_age_days)
         
         collection_time = time.time() - start_time
         logger.info(f"Collection completed in {collection_time:.2f} seconds")
@@ -529,7 +686,10 @@ async def main():
         if len(articles) > args.max_articles:
             articles = articles[:args.max_articles]
             logger.info(f"Limited to top {args.max_articles} articles")
-        
+
+        # Sort articles by latest date
+        articles = sorted(articles, key=lambda x: x.get('published_date', ''), reverse=True)
+
         # Prepare output
         output_data = {
             'generated_at': datetime.now(timezone.utc).isoformat(),
