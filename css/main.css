@@ -103,6 +103,23 @@ body::before {
     position: relative;
 }
 
+.how-it-works-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.85rem;
+    color: var(--secondary-gray);
+    text-decoration: none;
+    font-style: italic;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.how-it-works-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 .masthead {
     font: 900 4rem/1 var(--font-masthead);
     letter-spacing: 3px;
@@ -122,6 +139,17 @@ body::before {
     font-size: 0.9rem;
     color: var(--secondary-gray);
     font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edition-name {
+    font-weight: 600;
+}
+
+.articles-count {
+    font-weight: normal;
 }
 
 /* Content Layout */
@@ -367,6 +395,14 @@ body::before {
     
     .newspaper {
         padding: 20px 15px;
+    }
+    
+    .how-it-works-link {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 0.8rem;
     }
 }
 

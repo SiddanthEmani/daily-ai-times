@@ -112,7 +112,7 @@ export class NewsApp {
             DOMUtils.setElementContent('current-date', formattedDate);
             
             // Update edition info
-            const editionInfo = `Ramana Siddanth Emani • ${totalArticles} articles featured`;
+            const editionInfo = `<span class="edition-name">Ramana Siddanth Emani</span><span class="articles-count">${totalArticles} articles featured</span>`;
             DOMUtils.setElementContent('edition-info', editionInfo);
             
         } catch (error) {

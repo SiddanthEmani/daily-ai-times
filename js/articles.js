@@ -11,6 +11,10 @@ export class ArticleRenderer {
                 <h2 class="main-headline">${TextUtils.sanitizeText(article.title)}</h2>
                 <div class="decorative-line"></div>
                 <p class="main-description">${TextUtils.sanitizeText(article.description)}</p>
+                <div class="source">
+                    <span>Source: ${TextUtils.sanitizeText(article.source)}</span>
+                    <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
+                </div>
             `;
         } else {
             return `
