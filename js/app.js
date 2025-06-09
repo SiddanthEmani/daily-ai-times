@@ -63,7 +63,7 @@ export class NewsApp {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
-            const response = await fetch('../data/news.json', {
+            const response = await fetch('data/news.json', {
                 signal: controller.signal
             });
             

@@ -56,7 +56,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        git add data/ api/
+        git add data/ api/ css/ js/ *.html *.js
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
@@ -69,5 +69,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./api
+        publish_dir: .
         cname: newsxp-ai.yourdomain.com  # Optional custom domain
