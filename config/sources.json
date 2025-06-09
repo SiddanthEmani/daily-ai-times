@@ -263,51 +263,6 @@
       "language": "en",
       "reliability": 0.94
     },
-    "github_openai": {
-      "url": "https://api.github.com/orgs/openai/events",
-      "type": "api",
-      "category": "Open Source",
-      "enabled": true,
-      "priority": 1,
-      "updateFrequency": "realtime",
-      "description": "OpenAI GitHub activity",
-      "tags": ["github", "openai", "code", "releases"],
-      "language": "en",
-      "reliability": 0.98,
-      "authentication": "token",
-      "authConfig": {
-        "headerName": "Authorization",
-        "tokenPrefix": "Bearer",
-        "envVar": "GITHUB_TOKEN"
-      },
-      "rateLimit": {
-        "requests": 5000,
-        "period": "hour"
-      }
-    },
-    "github_releases_webhook": {
-      "url": "webhook",
-      "type": "webhook",
-      "category": "Open Source",
-      "enabled": true,
-      "priority": 1,
-      "updateFrequency": "realtime",
-      "description": "GitHub releases webhook for AI repos",
-      "tags": ["github", "releases", "realtime", "webhook"],
-      "language": "en",
-      "reliability": 0.99,
-      "webhookConfig": {
-        "events": ["release", "push"],
-        "secret": "GITHUB_WEBHOOK_SECRET",
-        "repos": [
-          "openai/whisper",
-          "microsoft/DeepSpeed",
-          "huggingface/transformers",
-          "pytorch/pytorch",
-          "tensorflow/tensorflow"
-        ]
-      }
-    },
     "twitter_ai_search": {
       "url": "https://api.twitter.com/2/tweets/search/recent",
       "type": "api",
