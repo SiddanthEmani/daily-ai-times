@@ -109,30 +109,44 @@ jobs:
         echo "Preparing deployment directory..."
         mkdir -p deploy_temp
         
-        # Copy frontend files
+        # Copy frontend files (excluding backend symlink)
         echo "Copying frontend files..."
-        cp -r src/frontend/* deploy_temp/
+        find src/frontend -maxdepth 1 -type f -exec cp {} deploy_temp/ \;
+        cp -r src/frontend/assets deploy_temp/ 2>/dev/null || true
+        cp -r src/frontend/components deploy_temp/ 2>/dev/null || true
+        cp -r src/frontend/styles deploy_temp/ 2>/dev/null || true
+        cp -r src/frontend/utils deploy_temp/ 2>/dev/null || true
         
-        # Remove the backend symlink to avoid conflicts
-        rm -f deploy_temp/backend
-        
-        # Add .nojekyll file to ensure GitHub Pages doesn't process with Jekyll
+        # Ensure .nojekyll file exists to disable Jekyll processing
         touch deploy_temp/.nojekyll
         
-        # Copy only the necessary API files for the frontend
+        # Copy API files for the frontend
         echo "Copying API files..."
         mkdir -p deploy_temp/api
         cp src/backend/api/*.json deploy_temp/api/ 2>/dev/null || true
+        cp src/backend/api/*.html deploy_temp/api/ 2>/dev/null || true
+        
+        # Copy category files
+        if [ -d "src/backend/api/categories" ]; then
+          cp -r src/backend/api/categories deploy_temp/api/ 2>/dev/null || true
+        fi
         
         # Verify deployment structure
         echo "Deployment directory structure:"
-        find deploy_temp -type f | head -20
+        find deploy_temp -type f | head -30
         
-        # Verify index.html exists
+        # Verify critical files exist
         if [ -f "deploy_temp/index.html" ]; then
           echo "✅ index.html found in deployment directory"
         else
           echo "❌ index.html NOT found in deployment directory"
+          exit 1
+        fi
+        
+        if [ -f "deploy_temp/.nojekyll" ]; then
+          echo "✅ .nojekyll file found in deployment directory"
+        else
+          echo "❌ .nojekyll file NOT found in deployment directory"
           exit 1
         fi
 
@@ -145,6 +159,9 @@ jobs:
         enable_jekyll: false
         allow_empty_commit: true
         force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Deploy NewsXP AI: ${{ github.sha }}'
         # cname: newsxp-ai.yourdomain.com  # Uncomment and update with your actual domain
     
     - name: Workflow Summary
@@ -172,3 +189,7 @@ jobs:
         else
           echo "ℹ️ **Changes:** No new data to commit" >> $GITHUB_STEP_SUMMARY
         fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "🌐 **Deployment:** Site deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY
+        echo "📄 **Note:** Make sure GitHub Pages is configured to use the 'gh-pages' branch" >> $GITHUB_STEP_SUMMARY
