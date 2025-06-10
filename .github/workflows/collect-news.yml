@@ -104,25 +104,47 @@ jobs:
         fi
     
     - name: Prepare deployment directory
-      if: success() && (steps.commit.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch')
+      if: success()
       run: |
+        echo "Preparing deployment directory..."
         mkdir -p deploy_temp
+        
+        # Copy frontend files
+        echo "Copying frontend files..."
         cp -r src/frontend/* deploy_temp/
+        
         # Remove the backend symlink to avoid conflicts
         rm -f deploy_temp/backend
+        
+        # Add .nojekyll file to ensure GitHub Pages doesn't process with Jekyll
+        touch deploy_temp/.nojekyll
+        
         # Copy only the necessary API files for the frontend
+        echo "Copying API files..."
         mkdir -p deploy_temp/api
         cp src/backend/api/*.json deploy_temp/api/ 2>/dev/null || true
-        ls -la deploy_temp/
+        
+        # Verify deployment structure
+        echo "Deployment directory structure:"
+        find deploy_temp -type f | head -20
+        
+        # Verify index.html exists
+        if [ -f "deploy_temp/index.html" ]; then
+          echo "✅ index.html found in deployment directory"
+        else
+          echo "❌ index.html NOT found in deployment directory"
+          exit 1
+        fi
 
     - name: Deploy to GitHub Pages
-      if: success() && (steps.commit.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch')
+      if: success()
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: deploy_temp
         enable_jekyll: false
-        allow_empty_commit: false
+        allow_empty_commit: true
+        force_orphan: true
         # cname: newsxp-ai.yourdomain.com  # Uncomment and update with your actual domain
     
     - name: Workflow Summary
