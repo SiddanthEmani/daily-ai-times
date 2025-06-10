@@ -150,6 +150,20 @@ jobs:
           exit 1
         fi
 
+    - name: Debug deployment directory
+      if: success()
+      run: |
+        echo "=== Final deployment directory structure ==="
+        find deploy_temp -type f | sort
+        echo ""
+        echo "=== Checking for any unwanted files ==="
+        if [ -f "deploy_temp/README.md" ]; then
+          echo "❌ README.md found in deploy_temp - this should not be there!"
+          rm -f deploy_temp/README.md
+        fi
+        echo "=== Contents of index.html (first 10 lines) ==="
+        head -10 deploy_temp/index.html || echo "No index.html found!"
+
     - name: Deploy to GitHub Pages
       if: success()
       uses: peaceiris/actions-gh-pages@v4
@@ -157,8 +171,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: deploy_temp
         enable_jekyll: false
-        allow_empty_commit: true
+        allow_empty_commit: false
         force_orphan: true
+        keep_files: false
         user_name: 'github-actions[bot]'
         user_email: '41898282+github-actions[bot]@users.noreply.github.com'
         commit_message: 'Deploy NewsXP AI: ${{ github.sha }}'
