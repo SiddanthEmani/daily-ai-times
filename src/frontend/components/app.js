@@ -1,6 +1,6 @@
-import { DateUtils, ArticleUtils, DOMUtils } from './utils.js';
+import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
 import { ArticleRenderer, ArticleHandler } from './articles.js';
-import { PerformanceMonitor, CacheManager, Analytics } from './performance.js';
+import { PerformanceMonitor, CacheManager, Analytics } from '../utils/performance.js';
 
 // Main news application class
 export class NewsApp {
@@ -63,7 +63,7 @@ export class NewsApp {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
-            const response = await fetch('data/news.json', {
+            const response = await fetch('backend/data/news.json', {
                 signal: controller.signal
             });
             

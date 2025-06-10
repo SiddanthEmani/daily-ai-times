@@ -42,7 +42,7 @@ AI_KEYWORDS = {
 
 
 class NewsCollector:
-    def __init__(self, sources_file='config/sources.json'):
+    def __init__(self, sources_file='../../shared/config/sources.json'):
         self.sources_file = sources_file
         self.session = None
         self.load_config()
@@ -648,16 +648,20 @@ async def main():
     parser.add_argument('--sources', help='Comma-separated list of source IDs')
     parser.add_argument('--output', default='data/news.json', help='Output file path')
     parser.add_argument('--archive', action='store_true', help='Save to daily archive')
-    parser.add_argument('--config', default='config/sources.json', help='Sources config file')
+    parser.add_argument('--config', default='../../shared/config/sources.json', help='Sources config file')
     parser.add_argument('--max-articles', type=int, default=1000, help='Max articles to save')
     parser.add_argument('--min-score', type=float, default=0, help='Min score threshold')
     parser.add_argument('--max-age-days', type=int, default=7, help='Max age of articles in days (default: 7)')
+    parser.add_argument('--force-refresh', action='store_true', help='Force refresh (enables verbose logging)')
     parser.add_argument('--verbose', '-v', action='store_true', help='Verbose logging')
     
     args = parser.parse_args()
     
-    if args.verbose:
+    # Enable verbose logging if force_refresh is used
+    if args.verbose or getattr(args, 'force_refresh', False):
         logging.getLogger().setLevel(logging.DEBUG)
+        if getattr(args, 'force_refresh', False):
+            logger.info("Force refresh enabled - using verbose logging")
     
     try:
         # Initialize collector
@@ -709,7 +713,9 @@ async def main():
         
         # Save archive if requested
         if args.archive:
-            archive_dir = Path('data/archive')
+            # Create archive directory relative to the output file
+            output_parent = output_path.parent
+            archive_dir = output_parent / 'archive'
             archive_dir.mkdir(parents=True, exist_ok=True)
             
             daily_archive = archive_dir / f"{datetime.now().strftime('%Y-%m-%d')}.json"

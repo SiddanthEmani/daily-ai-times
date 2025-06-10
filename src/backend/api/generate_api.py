@@ -6,15 +6,14 @@ from datetime import datetime
 
 def generate_api_files():
     # Read latest news
-    with open('data/news.json', 'r') as f:
+    with open('src/backend/data/news.json', 'r') as f:
         news_data = json.load(f)
     
     # Ensure API directory exists
-    api_dir = Path('api')
-    api_dir.mkdir(exist_ok=True)
+    api_dir = Path('src/backend/api')
     
     # Copy latest to API directory
-    shutil.copy('data/news.json', 'api/latest.json')
+    shutil.copy('src/backend/data/news.json', api_dir / 'latest.json')
     
     # Create category files
     categories_dir = api_dir / 'categories'
@@ -46,7 +45,7 @@ def generate_api_files():
         json.dump(widget_data, f, indent=2)
     
     # Create archive index
-    archive_dir = Path('data/archive')
+    archive_dir = Path('src/backend/data/archive')
     if archive_dir.exists():
         archives = sorted([f.stem for f in archive_dir.glob('*.json')])
         with open(api_dir / 'archives.json', 'w') as f:

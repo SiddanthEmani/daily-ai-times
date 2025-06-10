@@ -3,13 +3,17 @@ import { Agent } from 'http';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
+// Load environment variables from .env file
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const rootDir = join(__dirname, '..', '..', '..');
+dotenv.config({ path: join(rootDir, '.env') });
 
 // Load sources configuration
 let sourcesConfig = null;
 try {
-  const sourcesPath = join(__dirname, '..', 'config', 'sources.json');
+  const sourcesPath = join(__dirname, '..', '..', 'shared', 'config', 'sources.json');
   sourcesConfig = JSON.parse(readFileSync(sourcesPath, 'utf8'));
 } catch (error) {
   console.warn('Could not load sources.json configuration:', error.message);

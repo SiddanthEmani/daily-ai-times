@@ -1,0 +1,42 @@
+{
+  "name": "newsxp-ai",
+  "version": "1.0.0",
+  "description": "AI-curated daily news aggregation platform",
+  "main": "src/frontend/index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000 --directory src/frontend",
+    "collect": "cd src/backend/collectors && python collect_news.py",
+    "generate-api": "cd src/backend/api && python generate_api.py",
+    "build": "npm run collect && npm run generate-api",
+    "start": "npm run build && npm run dev",
+    "mcp-server": "cd src/services/mcp-server && npm start",
+    "install-backend": "cd src/backend && pip install -r requirements.txt",
+    "install-mcp": "cd src/services/mcp-server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiddanthEmani/newsxp-ai.git"
+  },
+  "keywords": [
+    "news",
+    "ai",
+    "aggregation",
+    "rss",
+    "automation"
+  ],
+  "author": "Siddanth Emani",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  },
+  "optionalDependencies": {
+    "typescript": "^4.9.0",
+    "@types/node": "^18.0.0"
+  }
+}

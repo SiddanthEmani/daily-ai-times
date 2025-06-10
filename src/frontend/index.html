@@ -6,15 +6,18 @@
     <title>Daily News - NewsXP AI</title>
     <meta name="description" content="AI-curated daily news featuring the latest developments in technology, research, and industry insights.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <!-- Preload critical resources -->
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="preload" href="data/news.json" as="fetch" crossorigin>
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="backend/data/news.json" as="fetch" crossorigin>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Abril+Fatface&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="newspaper">
@@ -22,7 +25,9 @@
             <a href="https://github.com/SiddanthEmani/newsxp-ai" target="_blank" rel="noopener noreferrer" class="how-it-works-link">
                 How was this news generated?
             </a>
-            <h1 class="masthead">Daily News</h1>
+            <h1 class="masthead">
+                Daily <img src="assets/images/logo.png" alt="NewsXP AI Logo" class="logo-icon"> News
+            </h1>
             <div class="date-line" id="current-date">Loading...</div>
             <div class="edition-info" id="edition-info">NewsXP AI • Loading articles...</div>
         </header>
@@ -57,6 +62,6 @@
     </div>
 
     <!-- Scripts -->
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="components/app.js"></script>
 </body>
 </html>

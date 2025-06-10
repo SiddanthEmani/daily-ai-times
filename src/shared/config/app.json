@@ -1,0 +1,42 @@
+{
+  "development": {
+    "server": {
+      "port": 8000,
+      "host": "localhost",
+      "static_directory": "src/frontend"
+    },
+    "collection": {
+      "interval_minutes": 30,
+      "sources_config": "src/shared/config/sources.json",
+      "output_path": "src/backend/data/news.json"
+    },
+    "api": {
+      "output_directory": "src/backend/api",
+      "enable_cors": true
+    },
+    "logging": {
+      "level": "INFO",
+      "file": "news_collection.log"
+    }
+  },
+  "production": {
+    "server": {
+      "port": 80,
+      "host": "0.0.0.0",
+      "static_directory": "dist"
+    },
+    "collection": {
+      "interval_minutes": 60,
+      "sources_config": "src/shared/config/sources.json",
+      "output_path": "src/backend/data/news.json"
+    },
+    "api": {
+      "output_directory": "src/backend/api",
+      "enable_cors": false
+    },
+    "logging": {
+      "level": "WARNING",
+      "file": "/var/log/newsxp-ai.log"
+    }
+  }
+}

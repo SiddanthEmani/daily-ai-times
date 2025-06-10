@@ -126,6 +126,16 @@ body::before {
     text-transform: uppercase;
     margin-bottom: 10px;
     color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    height: 3.5rem;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
 }
 
 .date-line {

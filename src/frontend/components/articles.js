@@ -1,5 +1,5 @@
-import { DateUtils, TextUtils, DOMUtils } from './utils.js';
-import { Analytics } from './performance.js';
+import { DateUtils, TextUtils, DOMUtils } from '../utils/utils.js';
+import { Analytics } from '../utils/performance.js';
 
 // Article rendering and interaction handling
 export class ArticleRenderer {

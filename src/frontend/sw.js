@@ -3,11 +3,11 @@ const CACHE_NAME = 'newsxp-ai-v1';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
-    '/css/main.css',
-    '/js/app.js',
-    '/js/utils.js',
-    '/js/articles.js',
-    '/js/performance.js'
+    '/styles/main.css',
+    '/components/app.js',
+    '/utils/utils.js',
+    '/components/articles.js',
+    '/utils/performance.js'
 ];
 
 // Install event - cache static assets

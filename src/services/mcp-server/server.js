@@ -1,5 +1,9 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import {
+  CallToolRequestSchema,
+  ListToolsRequestSchema,
+} from '@modelcontextprotocol/sdk/types.js';
 import { config, validateEnvironment, createErrorResponse, getSourceCategories } from './config.js';
 import { toolDefinitions, toolImplementations } from './tools.js';
 
@@ -24,13 +28,13 @@ const server = new Server(
   }
 );
 
-// Tool list handler - streamlined
-server.setRequestHandler('tools/list', async () => ({
+// Tool list handler
+server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: toolDefinitions
 }));
 
 // Tool call handler with enhanced error handling and logging
-server.setRequestHandler('tools/call', async (request) => {
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
   const startTime = Date.now();
 
