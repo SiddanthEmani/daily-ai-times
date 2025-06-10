@@ -103,12 +103,24 @@ jobs:
           echo "✅ Successfully committed and pushed changes"
         fi
     
+    - name: Prepare deployment directory
+      if: success() && (steps.commit.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch')
+      run: |
+        mkdir -p deploy_temp
+        cp -r src/frontend/* deploy_temp/
+        # Remove the backend symlink to avoid conflicts
+        rm -f deploy_temp/backend
+        # Copy only the necessary API files for the frontend
+        mkdir -p deploy_temp/api
+        cp src/backend/api/*.json deploy_temp/api/ 2>/dev/null || true
+        ls -la deploy_temp/
+
     - name: Deploy to GitHub Pages
       if: success() && (steps.commit.outputs.has_changes == 'true' || github.event_name == 'workflow_dispatch')
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: src/frontend
+        publish_dir: deploy_temp
         enable_jekyll: false
         allow_empty_commit: false
         # cname: newsxp-ai.yourdomain.com  # Uncomment and update with your actual domain
