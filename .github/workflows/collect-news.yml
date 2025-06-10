@@ -32,6 +32,9 @@ jobs:
       PYTHONUNBUFFERED: 1
       PYTHONIOENCODING: utf-8
     
+    outputs:
+      has_changes: ${{ steps.commit.outputs.has_changes }}
+      
     steps:
     - uses: actions/checkout@v4
       with:
@@ -117,9 +120,6 @@ jobs:
         cp -r src/frontend/styles deploy_temp/ 2>/dev/null || true
         cp -r src/frontend/utils deploy_temp/ 2>/dev/null || true
         
-        # Ensure .nojekyll file exists to disable Jekyll processing
-        touch deploy_temp/.nojekyll
-        
         # Copy API files for the frontend
         echo "Copying API files..."
         mkdir -p deploy_temp/api
@@ -142,13 +142,6 @@ jobs:
           echo "❌ index.html NOT found in deployment directory"
           exit 1
         fi
-        
-        if [ -f "deploy_temp/.nojekyll" ]; then
-          echo "✅ .nojekyll file found in deployment directory"
-        else
-          echo "❌ .nojekyll file NOT found in deployment directory"
-          exit 1
-        fi
 
     - name: Debug deployment directory
       if: success()
@@ -164,20 +157,23 @@ jobs:
         echo "=== Contents of index.html (first 10 lines) ==="
         head -10 deploy_temp/index.html || echo "No index.html found!"
 
-    - name: Deploy to GitHub Pages
-      if: success()
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: deploy_temp
-        enable_jekyll: false
-        allow_empty_commit: false
-        force_orphan: true
-        keep_files: false
-        user_name: 'github-actions[bot]'
-        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
-        commit_message: 'Deploy NewsXP AI: ${{ github.sha }}'
-        # cname: newsxp-ai.yourdomain.com  # Uncomment and update with your actual domain
+        path: deploy_temp
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: collect
+    if: success()
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
     
     - name: Workflow Summary
       if: always()
@@ -189,17 +185,7 @@ jobs:
         echo "**Force Refresh:** ${{ github.event.inputs.force_refresh || 'false' }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         
-        if [ "${{ steps.collect.outcome }}" = "success" ]; then
-          echo "✅ **Data Collection:** Success" >> $GITHUB_STEP_SUMMARY
-          if [ -f "src/backend/data/news.json" ]; then
-            ARTICLE_COUNT=$(jq '.count // 0' src/backend/data/news.json)
-            echo "📊 **Articles Collected:** $ARTICLE_COUNT" >> $GITHUB_STEP_SUMMARY
-          fi
-        else
-          echo "❌ **Data Collection:** Failed" >> $GITHUB_STEP_SUMMARY
-        fi
-        
-        if [ "${{ steps.commit.outputs.has_changes }}" = "true" ]; then
+        if [ "${{ needs.collect.outputs.has_changes }}" = "true" ]; then
           echo "✅ **Changes:** Committed and deployed" >> $GITHUB_STEP_SUMMARY
         else
           echo "ℹ️ **Changes:** No new data to commit" >> $GITHUB_STEP_SUMMARY
@@ -207,4 +193,4 @@ jobs:
         
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "🌐 **Deployment:** Site deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY
-        echo "📄 **Note:** Make sure GitHub Pages is configured to use the 'gh-pages' branch" >> $GITHUB_STEP_SUMMARY
+        echo "📄 **Note:** Make sure GitHub Pages is configured to use 'GitHub Actions' as the source" >> $GITHUB_STEP_SUMMARY
