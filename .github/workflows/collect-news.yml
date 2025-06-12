@@ -120,6 +120,16 @@ jobs:
         cp -r src/frontend/styles deploy_temp/ 2>/dev/null || true
         cp -r src/frontend/utils deploy_temp/ 2>/dev/null || true
         
+        # Inject Google Analytics if secret is available
+        if [ -f "deploy_temp/index.html" ] && [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
+          echo "Injecting Google Analytics..."
+          chmod +x scripts/inject-analytics.sh
+          ./scripts/inject-analytics.sh deploy_temp/index.html "${{ secrets.GOOGLE_ANALYTICS_ID }}"
+        else
+          echo "Removing Google Analytics placeholder..."
+          sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html 2>/dev/null || true
+        fi
+        
         # Copy API files for the frontend
         echo "Copying API files..."
         mkdir -p deploy_temp/api
