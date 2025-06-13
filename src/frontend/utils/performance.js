@@ -150,10 +150,8 @@ export class CacheManager {
     static async register() {
         if ('serviceWorker' in navigator) {
             try {
-                // Determine the correct path for the service worker
-                const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
-                const swPath = `${basePath}/sw.js`;
-                const registration = await navigator.serviceWorker.register(swPath);
+                // Use relative path - let the browser resolve it correctly
+                const registration = await navigator.serviceWorker.register('./sw.js');
                 console.log('✅ Service Worker registered:', registration.scope);
                 
                 // Listen for updates
@@ -286,7 +284,14 @@ export class LazyLoader {
             document.querySelectorAll('img[data-src]').forEach(img => {
                 img.src = img.dataset.src;
                 img.classList.remove('lazy');
+                img.classList.add('loaded');
             });
+            
+            document.querySelectorAll('[data-lazy-content]').forEach(el => {
+                el.classList.add('visible');
+            });
+            
+            return null;
         }
     }
 }

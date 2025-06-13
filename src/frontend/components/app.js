@@ -35,13 +35,19 @@ export class NewsApp {
             
             // Register service worker for caching (don't fail if it doesn't work)
             try {
-                if (typeof CacheManager !== 'undefined') {
-                    await CacheManager.register();
+                if (typeof CacheManager !== 'undefined' && CacheManager.register) {
+                    const registration = await CacheManager.register();
+                    if (registration) {
+                        console.log('✅ Service Worker registered successfully');
+                    } else {
+                        console.log('ℹ️ Service Worker not supported or failed to register');
+                    }
                 } else {
                     console.warn('CacheManager not available, skipping service worker registration');
                 }
             } catch (swError) {
                 console.warn('Service Worker registration failed, continuing without it:', swError);
+                // Continue without service worker - the app should still work
             }
             
             // Preload critical resources
@@ -94,12 +100,10 @@ export class NewsApp {
     }
 
     async preloadCriticalResources() {
-        // Determine the correct base path
-        const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
-        
+        // Use relative paths - let the browser resolve them correctly
         const criticalUrls = [
-            `${basePath}/api/latest.json`,
-            `${basePath}/api/widget.json`
+            './api/latest.json',
+            './api/widget.json'
         ];
         
         // Add dynamic preload links for API resources
@@ -145,9 +149,8 @@ export class NewsApp {
         this.performance.mark('news_load_start');
         
         try {
-            // Determine the correct API path
-            const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
-            const apiUrl = `${basePath}/api/latest.json`;
+            // Use relative path for API
+            const apiUrl = './api/latest.json';
             
             // Fetch news data with timeout
             const controller = new AbortController();
@@ -301,10 +304,27 @@ export class NewsApp {
 }
 
 // Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    const app = new NewsApp();
-    app.initialize();
-    
-    // Make app available globally for debugging
-    window.newsApp = app;
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const app = new NewsApp();
+        await app.initialize();
+        
+        // Make app available globally for debugging
+        window.newsApp = app;
+        console.log('✅ NewsXP AI app initialized successfully');
+    } catch (error) {
+        console.error('Failed to initialize news app:', error);
+        
+        // Show a basic error message to the user
+        const errorMessage = 'Failed to load the news application. Please refresh the page to try again.';
+        document.body.innerHTML = `
+            <div style="padding: 20px; text-align: center; color: #333;">
+                <h1>NewsXP AI</h1>
+                <p style="color: #d32f2f;">${errorMessage}</p>
+                <button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; cursor: pointer;">
+                    Refresh Page
+                </button>
+            </div>
+        `;
+    }
 });

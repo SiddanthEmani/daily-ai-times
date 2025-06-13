@@ -1,30 +1,27 @@
-// Service Worker for NewsXP AI - Enhanced Version
+// Service Worker for NewsXP AI - Simplified Version
 const CACHE_NAME = 'newsxp-ai-v2';
 const DATA_CACHE = 'newsxp-data-v1';
 
-// Determine the base path for GitHub Pages vs local development
-const BASE_PATH = self.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
-
-// Static assets to cache
+// Static assets to cache - using relative paths
 const STATIC_ASSETS = [
-    `${BASE_PATH}/`,
-    `${BASE_PATH}/index.html`,
-    `${BASE_PATH}/styles/main.css`,
-    `${BASE_PATH}/components/app.js`,
-    `${BASE_PATH}/utils/utils.js`,
-    `${BASE_PATH}/components/articles.js`,
-    `${BASE_PATH}/utils/performance.js`,
-    `${BASE_PATH}/utils/dom-helpers.js`,
-    `${BASE_PATH}/utils/state-management.js`,
-    `${BASE_PATH}/assets/images/logo.png`,
-    `${BASE_PATH}/favicon.ico`
+    './',
+    './index.html',
+    './styles/main.css',
+    './components/app.js',
+    './utils/utils.js',
+    './components/articles.js',
+    './utils/performance.js',
+    './utils/dom-helpers.js',
+    './utils/state-management.js',
+    './assets/images/logo.png',
+    './favicon.ico'
 ];
 
 // API endpoints to cache with different strategies
 const API_ENDPOINTS = [
-    `${BASE_PATH}/api/latest.json`,
-    `${BASE_PATH}/api/widget.json`,
-    `${BASE_PATH}/api/archives.json`
+    './api/latest.json',
+    './api/widget.json',
+    './api/archives.json'
 ];
 
 // Cache duration for different types of content (in milliseconds)

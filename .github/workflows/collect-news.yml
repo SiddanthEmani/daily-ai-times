@@ -57,14 +57,14 @@ jobs:
       uses: actions/cache@v4
       with:
         path: /var/cache/apt
-        key: apt-cache-${{ runner.os }}-${{ hashFiles('**/collect-news.yml') }}
+        key: apt-cache-${{ runner.os }}
         restore-keys: |
           apt-cache-${{ runner.os }}-
 
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y jq rsync
+        sudo apt-get install -y jq
     
     - name: Install Python dependencies
       run: |
@@ -122,46 +122,32 @@ jobs:
           echo "has_changes=true" >> $GITHUB_OUTPUT
           echo "✅ Successfully committed and pushed changes"
         fi
-    
-    - name: Cache deployment structure
-      uses: actions/cache@v4
-      with:
-        path: |
-          src/frontend
-          src/backend/api
-        key: deployment-files-${{ hashFiles('src/frontend/**', 'src/backend/api/**', 'scripts/inject-analytics.sh') }}
-        restore-keys: |
-          deployment-files-
 
     - name: Prepare deployment directory
       if: success()
       run: |
         echo "Preparing deployment directory..."
         
-        # Create deployment directory and copy files efficiently
+        # Create deployment directory and copy files
         mkdir -p deploy_temp/api
         
-        # Use rsync for efficient file copying with optimized options
+        # Copy frontend files
         echo "Copying frontend files..."
-        rsync -a --delete --exclude='*.md' --exclude='*.log' --exclude='README*' src/frontend/ deploy_temp/ || {
-          echo "❌ Failed to copy frontend files"
-          exit 1
-        }
+        cp -r src/frontend/* deploy_temp/
         
+        # Copy API files
         echo "Copying API files..."
-        rsync -a --delete src/backend/api/ deploy_temp/api/ || {
-          echo "❌ Failed to copy API files" 
-          exit 1
-        }
+        cp -r src/backend/api/* deploy_temp/api/
         
-        # Handle Google Analytics injection efficiently
+        # Handle Google Analytics injection
         if [ -f "deploy_temp/index.html" ]; then
           if [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
             echo "Injecting Google Analytics..."
             if [ -x "scripts/inject-analytics.sh" ]; then
               ./scripts/inject-analytics.sh deploy_temp/index.html "${{ secrets.GOOGLE_ANALYTICS_ID }}"
             else
-              echo "⚠️ Analytics injection script not executable, skipping..."
+              echo "Removing Google Analytics placeholder..."
+              sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html
             fi
           else
             echo "Removing Google Analytics placeholder..."
@@ -173,19 +159,12 @@ jobs:
           exit 1
         fi
         
-        # Efficient file counting and verification
-        file_count=$(find deploy_temp -type f | wc -l)
-        api_count=$(find deploy_temp/api -name "*.json" 2>/dev/null | wc -l)
-        
-        echo "📊 Deployment Summary:"
-        echo "  - Total files: $file_count"
-        echo "  - API files: $api_count"
         echo "✅ Deployment directory prepared successfully"
 
     - name: Validate deployment (Debug on Failure)
       if: success()
       run: |
-        # Quick validation - only show detailed info if there are issues
+        # Quick validation
         if [ ! -f "deploy_temp/index.html" ]; then
           echo "❌ Critical: index.html missing!"
           echo "=== Deployment directory structure ==="
@@ -193,10 +172,6 @@ jobs:
           exit 1
         fi
         
-        # Clean up any unwanted files
-        find deploy_temp -name "README*.md" -delete 2>/dev/null || true
-        
-        # Quick summary for successful deployments
         file_count=$(find deploy_temp -type f | wc -l)
         echo "✅ Deployment validated: $file_count files ready"
         
@@ -204,8 +179,6 @@ jobs:
         if [ "${{ github.event.inputs.debug }}" = "true" ]; then
           echo "=== Detailed deployment structure (debug mode) ==="
           find deploy_temp -type f | sort
-          echo "=== Contents of index.html (first 10 lines) ==="
-          head -10 deploy_temp/index.html
         fi
 
     - name: Upload Pages artifact
@@ -245,5 +218,4 @@ jobs:
         
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "🌐 **Deployment:** Site deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY
-        echo "⚡ **Performance:** Used caching and rsync for efficient deployment" >> $GITHUB_STEP_SUMMARY
         echo "📄 **Note:** Make sure GitHub Pages is configured to use 'GitHub Actions' as the source" >> $GITHUB_STEP_SUMMARY
