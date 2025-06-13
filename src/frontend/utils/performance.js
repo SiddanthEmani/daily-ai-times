@@ -84,9 +84,18 @@ export class PerformanceMonitor {
     }
 
     initWebVitalsObserver() {
+        // Check if PerformanceObserver is supported
+        if (!('PerformanceObserver' in window)) {
+            console.log('PerformanceObserver not supported');
+            return;
+        }
+
         // Observe Long Tasks (performance bottlenecks)
-        if ('PerformanceObserver' in window) {
-            try {
+        try {
+            // Check if longtask is supported
+            const supportedEntryTypes = PerformanceObserver.supportedEntryTypes || [];
+            
+            if (supportedEntryTypes.includes('longtask')) {
                 const longTaskObserver = new PerformanceObserver((list) => {
                     list.getEntries().forEach((entry) => {
                         if (entry.duration > 50) {
@@ -100,12 +109,18 @@ export class PerformanceMonitor {
                 });
                 longTaskObserver.observe({ entryTypes: ['longtask'] });
                 this.observers.set('longtask', longTaskObserver);
-            } catch (e) {
-                console.log('Long task observer not available');
+            } else {
+                console.log('Long task observation not supported');
             }
+        } catch (e) {
+            console.log('Long task observer failed to initialize:', e.message);
+        }
 
-            // Observe Layout Shifts
-            try {
+        // Observe Layout Shifts
+        try {
+            const supportedEntryTypes = PerformanceObserver.supportedEntryTypes || [];
+            
+            if (supportedEntryTypes.includes('layout-shift')) {
                 const clsObserver = new PerformanceObserver((list) => {
                     list.getEntries().forEach((entry) => {
                         if (entry.value > 0.1) {
@@ -116,9 +131,11 @@ export class PerformanceMonitor {
                 });
                 clsObserver.observe({ entryTypes: ['layout-shift'] });
                 this.observers.set('layout-shift', clsObserver);
-            } catch (e) {
-                console.log('Layout shift observer not available');
+            } else {
+                console.log('Layout shift observation not supported');
             }
+        } catch (e) {
+            console.log('Layout shift observer failed to initialize:', e.message);
         }
     }
 
@@ -133,7 +150,9 @@ export class CacheManager {
     static async register() {
         if ('serviceWorker' in navigator) {
             try {
-                const registration = await navigator.serviceWorker.register('/sw.js');
+                // Determine the correct path for the service worker
+                const swPath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai/sw.js' : '/sw.js';
+                const registration = await navigator.serviceWorker.register(swPath);
                 console.log('✅ Service Worker registered:', registration.scope);
                 
                 // Listen for updates
@@ -150,9 +169,12 @@ export class CacheManager {
                 return registration;
             } catch (error) {
                 console.error('❌ Service Worker registration failed:', error);
+                // Don't throw the error, just log it and continue
+                return null;
             }
         } else {
             console.log('ℹ️ Service Worker not supported');
+            return null;
         }
     }
 

@@ -2,26 +2,29 @@
 const CACHE_NAME = 'newsxp-ai-v2';
 const DATA_CACHE = 'newsxp-data-v1';
 
+// Determine the base path for GitHub Pages vs local development
+const BASE_PATH = self.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
+
 // Static assets to cache
 const STATIC_ASSETS = [
-    '/',
-    '/index.html',
-    '/styles/main.css',
-    '/components/app.js',
-    '/utils/utils.js',
-    '/components/articles.js',
-    '/utils/performance.js',
-    '/utils/dom-helpers.js',
-    '/utils/state-management.js',
-    '/assets/images/logo.png',
-    '/favicon.ico'
+    `${BASE_PATH}/`,
+    `${BASE_PATH}/index.html`,
+    `${BASE_PATH}/styles/main.css`,
+    `${BASE_PATH}/components/app.js`,
+    `${BASE_PATH}/utils/utils.js`,
+    `${BASE_PATH}/components/articles.js`,
+    `${BASE_PATH}/utils/performance.js`,
+    `${BASE_PATH}/utils/dom-helpers.js`,
+    `${BASE_PATH}/utils/state-management.js`,
+    `${BASE_PATH}/assets/images/logo.png`,
+    `${BASE_PATH}/favicon.ico`
 ];
 
 // API endpoints to cache with different strategies
 const API_ENDPOINTS = [
-    '/api/latest.json',
-    '/api/widget.json',
-    '/api/archives.json'
+    `${BASE_PATH}/api/latest.json`,
+    `${BASE_PATH}/api/widget.json`,
+    `${BASE_PATH}/api/archives.json`
 ];
 
 // Cache duration for different types of content (in milliseconds)
@@ -212,9 +215,9 @@ self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(response => {
                 return response || fetch(event.request).catch(() => {
-                    // Fallback for HTML pages when offline
+        // Fallback for HTML pages when offline
                     if (event.request.headers.get('accept').includes('text/html')) {
-                        return caches.match('/index.html');
+                        return caches.match(`${BASE_PATH}/index.html`);
                     }
                     return new Response('Offline', { status: 503 });
                 });
@@ -230,9 +233,9 @@ self.addEventListener('sync', event => {
         event.waitUntil(
             // Retry failed requests or prefetch important data
             caches.open(DATA_CACHE).then(cache => {
-                return fetch('/api/latest.json').then(response => {
+                return fetch(`${BASE_PATH}/api/latest.json`).then(response => {
                     if (response.ok) {
-                        return cache.put('/api/latest.json', addCacheTimestamp(response));
+                        return cache.put(`${BASE_PATH}/api/latest.json`, addCacheTimestamp(response));
                     }
                 });
             }).catch(error => {
@@ -300,7 +303,7 @@ self.addEventListener('fetch', event => {
             .catch(() => {
                 // Return offline page for navigation requests
                 if (event.request.mode === 'navigate') {
-                    return caches.match('/index.html');
+                    return caches.match(`${BASE_PATH}/index.html`);
                 }
             })
     );

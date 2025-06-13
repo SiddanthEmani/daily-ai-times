@@ -1,6 +1,6 @@
 import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
 import { ArticleRenderer, ArticleHandler } from './articles.js';
-import { PerformanceMonitor, CacheManager, Analytics } from '../utils/performance.js';
+import { PerformanceMonitor, CacheManager, Analytics, LazyLoader } from '../utils/performance.js';
 
 // Main news application class
 export class NewsApp {
@@ -17,8 +17,12 @@ export class NewsApp {
             // Initialize analytics
             Analytics.init();
             
-            // Register service worker for caching
-            await CacheManager.register();
+            // Register service worker for caching (don't fail if it doesn't work)
+            try {
+                await CacheManager.register();
+            } catch (swError) {
+                console.warn('Service Worker registration failed, continuing without it:', swError);
+            }
             
             // Preload critical resources
             await this.preloadCriticalResources();
@@ -27,10 +31,18 @@ export class NewsApp {
             this.showLoadingStates();
             
             // Initialize article handlers
-            ArticleHandler.initializeTooltips();
+            try {
+                ArticleHandler.initializeTooltips();
+            } catch (handlerError) {
+                console.warn('Article handler initialization failed:', handlerError);
+            }
             
             // Initialize lazy loading
-            LazyLoader.init();
+            try {
+                LazyLoader.init();
+            } catch (lazyError) {
+                console.warn('Lazy loader initialization failed:', lazyError);
+            }
             
             // Load news data
             await this.loadNews();
@@ -49,14 +61,21 @@ export class NewsApp {
     }
 
     async preloadCriticalResources() {
+        // Determine the correct base path
+        const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
+        
         const criticalUrls = [
-            'api/latest.json',
-            'api/widget.json'
+            `${basePath}/api/latest.json`,
+            `${basePath}/api/widget.json`
         ];
         
-        // Use service worker to preload URLs
+        // Use service worker to preload URLs if available
         if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-            await CacheManager.preloadUrls(criticalUrls);
+            try {
+                await CacheManager.preloadUrls(criticalUrls);
+            } catch (error) {
+                console.warn('Failed to preload resources via service worker:', error);
+            }
         }
     }
 
@@ -81,11 +100,15 @@ export class NewsApp {
         this.performance.mark('news_load_start');
         
         try {
+            // Determine the correct API path
+            const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
+            const apiUrl = `${basePath}/api/latest.json`;
+            
             // Fetch news data with timeout
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
-            const response = await fetch('api/latest.json', {
+            const response = await fetch(apiUrl, {
                 signal: controller.signal
             });
             
