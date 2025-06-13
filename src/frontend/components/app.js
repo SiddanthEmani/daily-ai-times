@@ -14,14 +14,23 @@ export class NewsApp {
         try {
             this.performance.mark('app_init_start');
             
+            // Initialize analytics
+            Analytics.init();
+            
             // Register service worker for caching
             await CacheManager.register();
+            
+            // Preload critical resources
+            await this.preloadCriticalResources();
             
             // Show loading states
             this.showLoadingStates();
             
             // Initialize article handlers
             ArticleHandler.initializeTooltips();
+            
+            // Initialize lazy loading
+            LazyLoader.init();
             
             // Load news data
             await this.loadNews();
@@ -34,7 +43,20 @@ export class NewsApp {
             
         } catch (error) {
             console.error('Failed to initialize news app:', error);
+            Analytics.trackError(error, { context: 'app_initialization' });
             this.showErrorStates();
+        }
+    }
+
+    async preloadCriticalResources() {
+        const criticalUrls = [
+            'api/latest.json',
+            'api/widget.json'
+        ];
+        
+        // Use service worker to preload URLs
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+            await CacheManager.preloadUrls(criticalUrls);
         }
     }
 
@@ -158,29 +180,47 @@ export class NewsApp {
 
     handleLoadError(error) {
         let errorMessage = 'Unable to load news';
+        let errorCode = 'UNKNOWN_ERROR';
         
         if (error.name === 'AbortError') {
             errorMessage = 'Request timed out. Please try again.';
+            errorCode = 'TIMEOUT_ERROR';
         } else if (error.message.includes('HTTP error')) {
             errorMessage = 'News service temporarily unavailable';
+            errorCode = 'HTTP_ERROR';
         } else if (!navigator.onLine) {
             errorMessage = 'No internet connection detected';
+            errorCode = 'OFFLINE_ERROR';
+        } else if (error.message.includes('Failed to fetch')) {
+            errorMessage = 'Network connection issue';
+            errorCode = 'NETWORK_ERROR';
         }
+
+        // Track the error
+        Analytics.trackError(error, { 
+            context: 'news_loading',
+            error_code: errorCode 
+        });
 
         // Show fallback content in main story
         const fallbackHTML = `
-            <div class="category-tag">Error</div>
+            <div class="category-tag error">Error</div>
             <h2 class="main-headline">Unable to Load News</h2>
             <div class="decorative-line"></div>
             <p class="main-description">
                 ${errorMessage}. Please try refreshing the page or check back later.
             </p>
+            <div class="error-actions">
+                <button onclick="window.newsApp.refresh()" class="retry-button">
+                    Try Again
+                </button>
+            </div>
         `;
         
         DOMUtils.setElementContent('main-story', fallbackHTML);
-        DOMUtils.showError('news-column-1');
-        DOMUtils.showError('news-column-2');
-        DOMUtils.showError('research-grid');
+        DOMUtils.showError('news-column-1', errorMessage);
+        DOMUtils.showError('news-column-2', errorMessage);
+        DOMUtils.showError('research-grid', errorMessage);
     }
 
     // Public method to refresh news

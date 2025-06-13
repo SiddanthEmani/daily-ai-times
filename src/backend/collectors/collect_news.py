@@ -6,6 +6,8 @@ A streamlined news collector for AI-related content from RSS feeds and APIs.
 """
 
 import asyncio
+import aiohttp
+import feedparser
 import json
 import logging
 import hashlib
@@ -13,24 +15,42 @@ import re
 import time
 import argparse
 from datetime import datetime, timezone, timedelta
-from pathlib import Path
 from typing import Dict, List, Optional, Any
-
-import aiohttp
-import feedparser
+from pathlib import Path
 from bs4 import BeautifulSoup
 from dateutil import parser as date_parser
+import concurrent.futures
+from functools import lru_cache
 
-# Simple logging setup
+# Enhanced logging setup with performance tracking
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('news_collection.log', encoding='utf-8')
-    ]
+    format='%(asctime)s [%(levelname)s] %(name)s: %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger(__name__)
+
+# Performance monitoring
+class PerformanceTracker:
+    def __init__(self):
+        self.metrics = {}
+        self.start_time = time.time()
+    
+    def mark(self, event_name):
+        self.metrics[event_name] = time.time() - self.start_time
+    
+    def get_metrics(self):
+        return self.metrics
+
+# Connection pool configuration for better performance
+CONNECTOR_CONFIG = {
+    'limit': 100,          # Total connection pool size  
+    'limit_per_host': 30,  # Per-host connection limit
+    'ttl_dns_cache': 300,  # DNS cache TTL in seconds
+    'use_dns_cache': True,
+    'keepalive_timeout': 30,
+    'enable_cleanup_closed': True
+}
 
 # Simplified AI keywords for scoring
 AI_KEYWORDS = {
@@ -62,7 +82,8 @@ class NewsCollector:
         """Collect articles from all or specified sources."""
         self.session = aiohttp.ClientSession(
             timeout=aiohttp.ClientTimeout(total=30),
-            headers={'User-Agent': 'NewsXP.ai/2.0 (+https://newsxp.ai)'}
+            headers={'User-Agent': 'NewsXP.ai/2.0 (+https://newsxp.ai)'},
+            connector=aiohttp.TCPConnector(**CONNECTOR_CONFIG)
         )
         
         try:

@@ -4,6 +4,14 @@
     "lastUpdated": "2025-06-07",
     "lastValidated": "2025-06-07",
     "description": "Multi-source AI/ML news aggregation configuration with RSS, APIs, webhooks, and scraping targets",
+    "legalCompliance": {
+      "publicDistribution": true,
+      "nonCommercialUse": true,
+      "respectCopyright": true,
+      "fairUseOnly": true,
+      "maxExcerptLength": 150,
+      "attributionRequired": true
+    },
     "defaultSettings": {
       "timeout": 30000,
       "retries": 3,
@@ -207,25 +215,27 @@
       "url": "https://www.technologyreview.com/topic/artificial-intelligence/rss",
       "type": "rss",
       "category": "Media",
-      "enabled": true,
+      "enabled": false,
       "priority": 1,
       "updateFrequency": "daily",
-      "description": "MIT Technology Review AI section",
+      "description": "MIT Technology Review AI section - DISABLED: Commercial content redistribution risk",
       "tags": ["mit", "tech-review", "journalism", "ai"],
       "language": "en",
-      "reliability": 0.97
+      "reliability": 0.97,
+      "legalNote": "Disabled for public distribution due to copyright concerns"
     },
     "techcrunch_ai": {
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
       "type": "rss",
       "category": "Media",
-      "enabled": true,
+      "enabled": false,
       "priority": 2,
       "updateFrequency": "hourly",
-      "description": "TechCrunch AI coverage",
+      "description": "TechCrunch AI coverage - DISABLED: Commercial redistribution prohibited",
       "tags": ["techcrunch", "news", "startups", "funding"],
       "language": "en",
-      "reliability": 0.95
+      "reliability": 0.95,
+      "legalNote": "Disabled for public distribution due to TechCrunch ToS restrictions"
     },
     "venturebeat_ai": {
       "url": "https://venturebeat.com/ai/feed/",
@@ -506,139 +516,305 @@
         "antiDetection": "high",
         "requiresSession": true
       }
-    }
-  },
-  "aggregation_rules": {
-    "deduplication": {
+    },
+    "nist_ai_news": {
+      "url": "https://www.nist.gov/news-events/news/rss.xml",
+      "type": "rss",
+      "category": "Government",
       "enabled": true,
-      "strategies": ["url", "title_similarity", "content_hash"],
-      "titleSimilarityThreshold": 0.85,
-      "contentHashAlgorithm": "sha256",
-      "crossSourceWindow": "48hours"
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "NIST AI and technology news",
+      "tags": ["nist", "government", "standards", "ai", "technology"],
+      "language": "en",
+      "reliability": 0.98,
+      "legalNote": "US Government publication - public domain"
     },
-    "quality_scoring": {
+    "nsf_ai_news": {
+      "url": "https://www.nsf.gov/rss/rss_news.xml",
+      "type": "rss",
+      "category": "Government",
       "enabled": true,
-      "factors": {
-        "source_reliability": 0.3,
-        "content_length": 0.1,
-        "freshness": 0.2,
-        "engagement_metrics": 0.2,
-        "technical_depth": 0.2
-      },
-      "minimumScore": 0.6
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "National Science Foundation AI research news",
+      "tags": ["nsf", "government", "research", "ai", "science"],
+      "language": "en",
+      "reliability": 0.98,
+      "legalNote": "US Government publication - public domain"
     },
-    "content_filtering": {
-      "requireKeywords": ["AI", "artificial intelligence", "machine learning", "deep learning", "neural network", "LLM", "transformer", "GPT", "diffusion"],
-      "excludeKeywords": ["crypto", "blockchain", "web3", "NFT"],
-      "minimumContentLength": 200,
-      "languageFilter": ["en"],
-      "nsfwFilter": true
-    }
-  },
-  "implementation_config": {
-    "rate_limiting": {
-      "globalRateLimit": 100,
-      "globalPeriod": "minute",
-      "perSourceLimits": true,
-      "backoffStrategy": "exponential",
-      "maxRetries": 3,
-      "initialBackoffMs": 1000
-    },
-    "caching": {
+    "nih_ai_news": {
+      "url": "https://www.nih.gov/news-releases/feed.xml",
+      "type": "rss",
+      "category": "Government",
       "enabled": true,
-      "backend": "redis",
-      "ttl": {
-        "rss": 3600,
-        "api": 1800,
-        "scrape": 7200
-      },
-      "keyPattern": "newsxp:{source}:{hash}"
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "NIH medical AI research news",
+      "tags": ["nih", "government", "medical", "ai", "health"],
+      "language": "en",
+      "reliability": 0.98,
+      "legalNote": "US Government publication - public domain"
     },
-    "error_handling": {
-      "alertThreshold": 5,
-      "alertChannels": ["email", "slack"],
-      "fallbackStrategies": {
-        "rss_to_scrape": true,
-        "api_to_cache": true
-      }
-    },
-    "storage": {
-      "backend": "postgresql",
-      "schema": "newsxp",
-      "retention": {
-        "articles": "90days",
-        "metrics": "365days",
-        "logs": "30days"
-      }
-    },
-    "processing": {
-      "parallel_workers": 10,
-      "queue_backend": "celery",
-      "nlp_models": {
-        "relevance": "sentence-transformers/all-MiniLM-L6-v2",
-        "summarization": "facebook/bart-large-cnn",
-        "classification": "custom-ai-news-classifier"
-      }
-    }
-  },
-  "monitoring": {
-    "health_checks": {
+    "whitehouse_ai": {
+      "url": "https://www.whitehouse.gov/feed/",
+      "type": "rss",
+      "category": "Government",
       "enabled": true,
-      "interval": "5minutes",
-      "endpoints": {
-        "health": "/api/health",
-        "metrics": "/api/metrics",
-        "sources": "/api/sources/status"
-      }
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "White House AI policy announcements",
+      "tags": ["whitehouse", "government", "policy", "ai", "executive"],
+      "language": "en",
+      "reliability": 0.97,
+      "legalNote": "US Government publication - public domain"
     },
-    "metrics": {
-      "collection": true,
-      "exporters": ["prometheus", "datadog"],
-      "custom_metrics": [
-        "articles_per_source",
-        "processing_latency",
-        "api_quota_usage",
-        "scraping_success_rate"
-      ]
+    "cisa_cybersecurity": {
+      "url": "https://www.cisa.gov/news/rss.xml",
+      "type": "rss",
+      "category": "Government",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "CISA cybersecurity and AI security news",
+      "tags": ["cisa", "government", "cybersecurity", "ai", "security"],
+      "language": "en",
+      "reliability": 0.98,
+      "legalNote": "US Government publication - public domain"
     },
-    "alerting": {
-      "providers": ["pagerduty", "slack"],
-      "rules": {
-        "source_failure": {
-          "threshold": 3,
-          "window": "1hour",
-          "severity": "warning"
-        },
-        "api_quota_exceeded": {
-          "threshold": 0.9,
-          "severity": "critical"
-        },
-        "processing_backlog": {
-          "threshold": 1000,
-          "severity": "warning"
-        }
-      }
-    }
-  },
-  "legal_compliance": {
-    "robots_txt": {
-      "respect": true,
-      "cache_duration": "24hours",
-      "user_agent": "NewsXP-Bot/3.0"
+    "uk_dsit_ai": {
+      "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom",
+      "type": "rss",
+      "category": "Government",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "UK Department for Science, Innovation & Technology",
+      "tags": ["uk", "government", "innovation", "ai", "technology"],
+      "language": "en",
+      "reliability": 0.96,
+      "legalNote": "UK Government publication - Open Government License"
     },
-    "attribution": {
-      "required": true,
-      "format": "Source: {source_name} - {url}",
-      "include_timestamp": true
+    "eu_digital_strategy": {
+      "url": "https://digital-strategy.ec.europa.eu/en/news/rss.xml",
+      "type": "rss",
+      "category": "Government",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "European Commission digital strategy and AI policy",
+      "tags": ["eu", "government", "digital", "ai", "policy"],
+      "language": "en",
+      "reliability": 0.96,
+      "legalNote": "EU publication - reuse allowed with attribution"
     },
-    "data_retention": {
-      "gdpr_compliant": true,
-      "anonymization": true,
-      "user_consent_required": false
+    "doe_energy_ai": {
+      "url": "https://www.energy.gov/rss/articles.xml",
+      "type": "rss",
+      "category": "Government",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Department of Energy AI and technology research",
+      "tags": ["doe", "government", "energy", "ai", "research"],
+      "language": "en",
+      "reliability": 0.97,
+      "legalNote": "US Government publication - public domain"
     },
-    "terms_of_service": {
-      "review_frequency": "quarterly",
-      "compliance_log": true
+    "nature_machine_learning": {
+      "url": "https://www.nature.com/subjects/machine-learning.rss",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "Nature Machine Learning research papers",
+      "tags": ["nature", "research", "ml", "papers", "academic"],
+      "language": "en",
+      "reliability": 0.99,
+      "legalNote": "Academic research papers - abstracts fair use"
+    },
+    "science_ai": {
+      "url": "https://www.science.org/rss/news/artificial-intelligence",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "Science Magazine AI research news",
+      "tags": ["science", "research", "ai", "papers", "academic"],
+      "language": "en",
+      "reliability": 0.99,
+      "legalNote": "Academic research abstracts - fair use"
+    },
+    "carnegie_mellon_ai": {
+      "url": "https://www.cs.cmu.edu/news/rss.xml",
+      "type": "rss",
+      "category": "Academic",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Carnegie Mellon University AI research",
+      "tags": ["cmu", "university", "research", "ai", "computer-science"],
+      "language": "en",
+      "reliability": 0.94,
+      "legalNote": "University research news - educational fair use"
+    },
+    "berkeley_ai": {
+      "url": "https://news.berkeley.edu/topic/artificial-intelligence/feed/",
+      "type": "rss",
+      "category": "Academic",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "UC Berkeley AI research news",
+      "tags": ["berkeley", "university", "research", "ai", "academic"],
+      "language": "en",
+      "reliability": 0.94,
+      "legalNote": "University research news - educational fair use"
+    },
+    "deepmind_research": {
+      "url": "https://www.deepmind.com/blog/rss.xml",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "DeepMind AI research blog",
+      "tags": ["deepmind", "google", "research", "ai", "ml"],
+      "language": "en",
+      "reliability": 0.95,
+      "legalNote": "Corporate research blog - check ToS"
+    },
+    "openai_research": {
+      "url": "https://openai.com/research/rss.xml",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "OpenAI research publications",
+      "tags": ["openai", "research", "ai", "papers", "gpt"],
+      "language": "en",
+      "reliability": 0.94,
+      "legalNote": "Research publications - check licensing"
+    },
+    "ai_stanford": {
+      "url": "https://hai.stanford.edu/news/feed",
+      "type": "rss",
+      "category": "Academic",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "weekly",
+      "description": "Stanford Human-Centered AI Institute",
+      "tags": ["stanford", "hai", "research", "ai", "academic"],
+      "language": "en",
+      "reliability": 0.96,
+      "legalNote": "University research - educational fair use"
+    },
+    "acm_ai_news": {
+      "url": "https://cacm.acm.org/feed/",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "ACM Communications AI articles",
+      "tags": ["acm", "research", "ai", "computer-science", "academic"],
+      "language": "en",
+      "reliability": 0.95,
+      "legalNote": "Academic organization - abstracts fair use"
+    },
+    "ieee_ai": {
+      "url": "https://spectrum.ieee.org/topic/artificial-intelligence/rss",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "IEEE Spectrum AI coverage",
+      "tags": ["ieee", "research", "ai", "engineering", "academic"],
+      "language": "en",
+      "reliability": 0.94,
+      "legalNote": "Professional organization - check terms"
+    },
+    "arxiv_cs_ai_new": {
+      "url": "https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CV+cs.CL",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 1,
+      "updateFrequency": "daily",
+      "description": "ArXiv AI papers - comprehensive feed",
+      "tags": ["arxiv", "research", "papers", "ai", "ml", "cv", "nlp"],
+      "language": "en",
+      "reliability": 0.98,
+      "legalNote": "Open access research - public domain"
+    },
+    "neurips_announcements": {
+      "url": "https://nips.cc/feed.xml",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "monthly",
+      "description": "NeurIPS conference announcements",
+      "tags": ["neurips", "conference", "research", "ai", "ml"],
+      "language": "en",
+      "reliability": 0.93,
+      "legalNote": "Academic conference - fair use"
+    },
+    "icml_news": {
+      "url": "https://icml.cc/feed.xml",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "seasonal",
+      "description": "ICML conference updates",
+      "tags": ["icml", "conference", "research", "ai", "ml"],
+      "language": "en",
+      "reliability": 0.92,
+      "legalNote": "Academic conference - fair use"
+    },
+    "allen_ai_institute": {
+      "url": "https://allenai.org/news/feed.xml",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Allen Institute for AI research",
+      "tags": ["allen-ai", "research", "nlp", "ai", "institute"],
+      "language": "en",
+      "reliability": 0.94,
+      "legalNote": "Research institute - check terms"
+    },
+    "partnership_ai": {
+      "url": "https://www.partnershiponai.org/news/feed/",
+      "type": "rss",
+      "category": "Industry",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "monthly",
+      "description": "Partnership on AI collaborative research",
+      "tags": ["partnership-ai", "collaboration", "ethics", "ai", "industry"],
+      "language": "en",
+      "reliability": 0.91,
+      "legalNote": "Non-profit organization - check terms"
+    },
+    "ai2_blog": {
+      "url": "https://blog.allenai.org/feed",
+      "type": "rss",
+      "category": "Research",
+      "enabled": true,
+      "priority": 2,
+      "updateFrequency": "weekly",
+      "description": "Allen Institute for AI blog",
+      "tags": ["ai2", "research", "nlp", "ai", "blog"],
+      "language": "en",
+      "reliability": 0.93,
+      "legalNote": "Research institute blog - check terms"
     }
   }
 }

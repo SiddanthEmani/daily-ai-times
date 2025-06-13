@@ -1,39 +1,158 @@
-// Performance and analytics utilities
+// Performance and analytics utilities - Enhanced Version
 export class PerformanceMonitor {
     constructor() {
         this.metrics = {};
-        this.startTime = Date.now();
+        this.startTime = performance.now();
+        this.observers = new Map();
+        this.initWebVitalsObserver();
     }
 
     mark(name) {
-        this.metrics[name] = Date.now() - this.startTime;
+        this.metrics[name] = performance.now() - this.startTime;
+        
+        // Use Performance API for more accurate measurements
+        if (performance.mark) {
+            performance.mark(`newsxp-${name}`);
+        }
+    }
+
+    measure(name, startMark, endMark) {
+        if (performance.measure && performance.mark) {
+            try {
+                performance.measure(`newsxp-${name}`, `newsxp-${startMark}`, `newsxp-${endMark}`);
+            } catch (e) {
+                console.warn('Performance measurement failed:', e);
+            }
+        }
     }
 
     report() {
-        console.log('Performance Metrics:', this.metrics);
-        return this.metrics;
+        const metrics = {
+            ...this.metrics,
+            navigationTiming: this.getNavigationTiming(),
+            resourceTiming: this.getResourceTiming(),
+            memoryUsage: this.getMemoryUsage()
+        };
+        
+        console.group('📊 Performance Metrics');
+        console.table(this.metrics);
+        console.log('Navigation Timing:', metrics.navigationTiming);
+        console.log('Memory Usage:', metrics.memoryUsage);
+        console.groupEnd();
+        
+        return metrics;
     }
 
-    // Monitor Core Web Vitals
-    observeWebVitals() {
-        if ('web-vital' in window) {
-            // This would integrate with a real web vitals library
-            console.log('Web Vitals monitoring enabled');
+    getNavigationTiming() {
+        if (!performance.timing) return null;
+        
+        const timing = performance.timing;
+        return {
+            dns: timing.domainLookupEnd - timing.domainLookupStart,
+            tcp: timing.connectEnd - timing.connectStart,
+            request: timing.responseStart - timing.requestStart,
+            response: timing.responseEnd - timing.responseStart,
+            domParsing: timing.domContentLoadedEventStart - timing.responseEnd,
+            domReady: timing.domContentLoadedEventEnd - timing.navigationStart,
+            pageLoad: timing.loadEventEnd - timing.navigationStart
+        };
+    }
+
+    getResourceTiming() {
+        if (!performance.getEntriesByType) return null;
+        
+        const resources = performance.getEntriesByType('resource');
+        const apiRequests = resources.filter(r => r.name.includes('/api/'));
+        
+        return {
+            totalResources: resources.length,
+            apiRequests: apiRequests.length,
+            averageApiTime: apiRequests.length > 0 
+                ? apiRequests.reduce((sum, r) => sum + r.duration, 0) / apiRequests.length 
+                : 0
+        };
+    }
+
+    getMemoryUsage() {
+        if (!performance.memory) return null;
+        
+        return {
+            used: Math.round(performance.memory.usedJSHeapSize / 1024 / 1024),
+            total: Math.round(performance.memory.totalJSHeapSize / 1024 / 1024),
+            limit: Math.round(performance.memory.jsHeapSizeLimit / 1024 / 1024)
+        };
+    }
+
+    initWebVitalsObserver() {
+        // Observe Long Tasks (performance bottlenecks)
+        if ('PerformanceObserver' in window) {
+            try {
+                const longTaskObserver = new PerformanceObserver((list) => {
+                    list.getEntries().forEach((entry) => {
+                        if (entry.duration > 50) {
+                            console.warn(`Long task detected: ${entry.duration}ms`);
+                            Analytics.trackEvent('long_task', {
+                                duration: entry.duration,
+                                startTime: entry.startTime
+                            });
+                        }
+                    });
+                });
+                longTaskObserver.observe({ entryTypes: ['longtask'] });
+                this.observers.set('longtask', longTaskObserver);
+            } catch (e) {
+                console.log('Long task observer not available');
+            }
+
+            // Observe Layout Shifts
+            try {
+                const clsObserver = new PerformanceObserver((list) => {
+                    list.getEntries().forEach((entry) => {
+                        if (entry.value > 0.1) {
+                            console.warn(`Layout shift detected: ${entry.value}`);
+                            Analytics.trackEvent('layout_shift', { value: entry.value });
+                        }
+                    });
+                });
+                clsObserver.observe({ entryTypes: ['layout-shift'] });
+                this.observers.set('layout-shift', clsObserver);
+            } catch (e) {
+                console.log('Layout shift observer not available');
+            }
         }
+    }
+
+    disconnect() {
+        this.observers.forEach(observer => observer.disconnect());
+        this.observers.clear();
     }
 }
 
-// Service Worker registration for caching
+// Enhanced Service Worker and Cache Manager
 export class CacheManager {
     static async register() {
         if ('serviceWorker' in navigator) {
             try {
                 const registration = await navigator.serviceWorker.register('/sw.js');
-                console.log('Service Worker registered:', registration);
+                console.log('✅ Service Worker registered:', registration.scope);
+                
+                // Listen for updates
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                            console.log('🔄 New service worker available');
+                            this.showUpdateNotification();
+                        }
+                    });
+                });
+                
                 return registration;
             } catch (error) {
-                console.log('Service Worker registration failed:', error);
+                console.error('❌ Service Worker registration failed:', error);
             }
+        } else {
+            console.log('ℹ️ Service Worker not supported');
         }
     }
 
@@ -42,9 +161,47 @@ export class CacheManager {
             navigator.serviceWorker.controller.postMessage({ type: 'SKIP_WAITING' });
         }
     }
+
+    static async preloadUrls(urls) {
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({
+                type: 'CACHE_URLS',
+                urls: urls
+            });
+        }
+    }
+
+    static showUpdateNotification() {
+        // Simple update notification
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            z-index: 10000;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: pointer;
+        `;
+        notification.textContent = '🔄 Update available - Click to refresh';
+        notification.onclick = () => window.location.reload();
+        
+        document.body.appendChild(notification);
+        
+        // Auto-remove after 10 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 10000);
+    }
 }
 
-// Image lazy loading
+// Enhanced Lazy Loading with Intersection Observer
 export class LazyLoader {
     static init() {
         if ('IntersectionObserver' in window) {
@@ -52,40 +209,185 @@ export class LazyLoader {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
+                        const src = img.dataset.src;
+                        
+                        if (src) {
+                            // Create a new image to preload
+                            const newImg = new Image();
+                            newImg.onload = () => {
+                                img.src = src;
+                                img.classList.remove('lazy');
+                                img.classList.add('loaded');
+                            };
+                            newImg.onerror = () => {
+                                img.classList.add('error');
+                                console.warn('Failed to load image:', src);
+                            };
+                            newImg.src = src;
+                            
+                            observer.unobserve(img);
+                        }
                     }
                 });
+            }, {
+                rootMargin: '50px', // Start loading 50px before the image is visible
+                threshold: 0.1
             });
 
+            // Observe all lazy images
             document.querySelectorAll('img[data-src]').forEach(img => {
+                img.classList.add('lazy');
                 imageObserver.observe(img);
+            });
+            
+            // Content lazy loading for articles
+            const contentObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        Analytics.trackEvent('content_viewed', {
+                            element: entry.target.tagName.toLowerCase(),
+                            id: entry.target.id
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('[data-lazy-content]').forEach(el => {
+                contentObserver.observe(el);
+            });
+
+            return { imageObserver, contentObserver };
+        } else {
+            // Fallback for browsers without Intersection Observer
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
             });
         }
     }
 }
 
-// Analytics helper
+// Enhanced Analytics with better error handling and batching
 export class Analytics {
-    static trackEvent(eventName, properties = {}) {
-        // This would integrate with your analytics service
-        console.log('Event tracked:', eventName, properties);
+    static eventQueue = [];
+    static batchTimeout = null;
+    static isInitialized = false;
+
+    static init() {
+        this.isInitialized = true;
         
-        // Example: Google Analytics 4
+        // Track page performance
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                this.trackPagePerformance();
+            }, 1000);
+        });
+
+        // Track errors
+        window.addEventListener('error', (event) => {
+            this.trackEvent('javascript_error', {
+                message: event.message,
+                filename: event.filename,
+                line: event.lineno,
+                column: event.colno
+            });
+        });
+
+        // Track unhandled promise rejections
+        window.addEventListener('unhandledrejection', (event) => {
+            this.trackEvent('promise_rejection', {
+                reason: event.reason?.toString() || 'Unknown error'
+            });
+        });
+    }
+
+    static trackEvent(eventName, properties = {}) {
+        if (!this.isInitialized) {
+            this.init();
+        }
+
+        const event = {
+            name: eventName,
+            properties: {
+                ...properties,
+                timestamp: Date.now(),
+                url: window.location.href,
+                userAgent: navigator.userAgent.substring(0, 100) // Truncate for privacy
+            }
+        };
+
+        // Add to queue for batching
+        this.eventQueue.push(event);
+        
+        // Batch events to reduce requests
+        if (this.batchTimeout) {
+            clearTimeout(this.batchTimeout);
+        }
+        
+        this.batchTimeout = setTimeout(() => {
+            this.flushEvents();
+        }, 1000);
+
+        // Also log to console in development
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes('127.0.0.1')) {
+            console.log('📊 Analytics Event:', eventName, properties);
+        }
+
+        // Send to Google Analytics if available
         if (typeof gtag !== 'undefined') {
             gtag('event', eventName, properties);
         }
     }
 
+    static flushEvents() {
+        if (this.eventQueue.length === 0) return;
+
+        // Here you would send batched events to your analytics service
+        console.log('📊 Flushing analytics events:', this.eventQueue.length);
+        
+        // Clear the queue
+        this.eventQueue = [];
+        this.batchTimeout = null;
+    }
+
     static trackPageView(page) {
-        this.trackEvent('page_view', { page });
+        this.trackEvent('page_view', { 
+            page,
+            referrer: document.referrer,
+            loadTime: performance.timing ? 
+                performance.timing.loadEventEnd - performance.timing.navigationStart : null
+        });
     }
 
     static trackArticleClick(articleTitle, articleUrl) {
         this.trackEvent('article_click', {
-            article_title: articleTitle,
-            article_url: articleUrl
+            article_title: articleTitle.substring(0, 100), // Truncate for data limits
+            article_url: articleUrl,
+            click_time: Date.now()
+        });
+    }
+
+    static trackPagePerformance() {
+        if (!performance.timing) return;
+
+        const timing = performance.timing;
+        const loadTime = timing.loadEventEnd - timing.navigationStart;
+        const domContentLoaded = timing.domContentLoadedEventEnd - timing.navigationStart;
+
+        this.trackEvent('page_performance', {
+            load_time: loadTime,
+            dom_content_loaded: domContentLoaded,
+            first_paint: performance.getEntriesByName('first-paint')[0]?.startTime || null,
+            first_contentful_paint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || null
+        });
+    }
+
+    static trackError(error, context = {}) {
+        this.trackEvent('application_error', {
+            message: error.message,
+            stack: error.stack?.substring(0, 500), // Truncate stack trace
+            context: JSON.stringify(context).substring(0, 200)
         });
     }
 }

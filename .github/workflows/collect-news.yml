@@ -14,6 +14,11 @@ on:
         required: false
         type: boolean
         default: false
+      debug:
+        description: 'Enable debug mode (show detailed deployment structure)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,10 +53,18 @@ jobs:
         cache: 'pip'
         cache-dependency-path: 'src/backend/requirements.txt'
     
+    - name: Cache system dependencies
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt
+        key: apt-cache-${{ runner.os }}-${{ hashFiles('**/collect-news.yml') }}
+        restore-keys: |
+          apt-cache-${{ runner.os }}-
+
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y jq
+        sudo apt-get install -y jq rsync
     
     - name: Install Python dependencies
       run: |
@@ -77,15 +90,19 @@ jobs:
       if: steps.collect.outcome == 'success'
       run: |
         echo "Checking generated files..."
-        ls -la src/backend/data/
-        ls -la src/backend/api/
+        
+        # Efficient verification with single commands
         if [ -f "src/backend/data/news.json" ]; then
-          echo "✅ News data file exists"
-          echo "Articles count: $(jq '.count // 0' src/backend/data/news.json)"
+          article_count=$(jq '.count // 0' src/backend/data/news.json)
+          echo "✅ News data file exists ($article_count articles)"
         else
           echo "❌ News data file missing"
           exit 1
         fi
+        
+        # Quick check for API files
+        api_files=$(find src/backend/api -name "*.json" | wc -l)
+        echo "✅ API files generated: $api_files JSON files"
     
     - name: Commit changes
       id: commit
@@ -106,66 +123,90 @@ jobs:
           echo "✅ Successfully committed and pushed changes"
         fi
     
+    - name: Cache deployment structure
+      uses: actions/cache@v4
+      with:
+        path: |
+          src/frontend
+          src/backend/api
+        key: deployment-files-${{ hashFiles('src/frontend/**', 'src/backend/api/**', 'scripts/inject-analytics.sh') }}
+        restore-keys: |
+          deployment-files-
+
     - name: Prepare deployment directory
       if: success()
       run: |
         echo "Preparing deployment directory..."
-        mkdir -p deploy_temp
         
-        # Copy frontend files (excluding backend symlink)
-        echo "Copying frontend files..."
-        find src/frontend -maxdepth 1 -type f -exec cp {} deploy_temp/ \;
-        cp -r src/frontend/assets deploy_temp/ 2>/dev/null || true
-        cp -r src/frontend/components deploy_temp/ 2>/dev/null || true
-        cp -r src/frontend/styles deploy_temp/ 2>/dev/null || true
-        cp -r src/frontend/utils deploy_temp/ 2>/dev/null || true
-        
-        # Inject Google Analytics if secret is available
-        if [ -f "deploy_temp/index.html" ] && [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
-          echo "Injecting Google Analytics..."
-          chmod +x scripts/inject-analytics.sh
-          ./scripts/inject-analytics.sh deploy_temp/index.html "${{ secrets.GOOGLE_ANALYTICS_ID }}"
-        else
-          echo "Removing Google Analytics placeholder..."
-          sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html 2>/dev/null || true
-        fi
-        
-        # Copy API files for the frontend
-        echo "Copying API files..."
+        # Create deployment directory and copy files efficiently
         mkdir -p deploy_temp/api
-        cp src/backend/api/*.json deploy_temp/api/ 2>/dev/null || true
-        cp src/backend/api/*.html deploy_temp/api/ 2>/dev/null || true
         
-        # Copy category files
-        if [ -d "src/backend/api/categories" ]; then
-          cp -r src/backend/api/categories deploy_temp/api/ 2>/dev/null || true
-        fi
+        # Use rsync for efficient file copying with optimized options
+        echo "Copying frontend files..."
+        rsync -a --delete --exclude='*.md' --exclude='*.log' --exclude='README*' src/frontend/ deploy_temp/ || {
+          echo "❌ Failed to copy frontend files"
+          exit 1
+        }
         
-        # Verify deployment structure
-        echo "Deployment directory structure:"
-        find deploy_temp -type f | head -30
+        echo "Copying API files..."
+        rsync -a --delete src/backend/api/ deploy_temp/api/ || {
+          echo "❌ Failed to copy API files" 
+          exit 1
+        }
         
-        # Verify critical files exist
+        # Handle Google Analytics injection efficiently
         if [ -f "deploy_temp/index.html" ]; then
-          echo "✅ index.html found in deployment directory"
+          if [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
+            echo "Injecting Google Analytics..."
+            if [ -x "scripts/inject-analytics.sh" ]; then
+              ./scripts/inject-analytics.sh deploy_temp/index.html "${{ secrets.GOOGLE_ANALYTICS_ID }}"
+            else
+              echo "⚠️ Analytics injection script not executable, skipping..."
+            fi
+          else
+            echo "Removing Google Analytics placeholder..."
+            sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html
+          fi
+          echo "✅ index.html processed successfully"
         else
           echo "❌ index.html NOT found in deployment directory"
           exit 1
         fi
+        
+        # Efficient file counting and verification
+        file_count=$(find deploy_temp -type f | wc -l)
+        api_count=$(find deploy_temp/api -name "*.json" 2>/dev/null | wc -l)
+        
+        echo "📊 Deployment Summary:"
+        echo "  - Total files: $file_count"
+        echo "  - API files: $api_count"
+        echo "✅ Deployment directory prepared successfully"
 
-    - name: Debug deployment directory
+    - name: Validate deployment (Debug on Failure)
       if: success()
       run: |
-        echo "=== Final deployment directory structure ==="
-        find deploy_temp -type f | sort
-        echo ""
-        echo "=== Checking for any unwanted files ==="
-        if [ -f "deploy_temp/README.md" ]; then
-          echo "❌ README.md found in deploy_temp - this should not be there!"
-          rm -f deploy_temp/README.md
+        # Quick validation - only show detailed info if there are issues
+        if [ ! -f "deploy_temp/index.html" ]; then
+          echo "❌ Critical: index.html missing!"
+          echo "=== Deployment directory structure ==="
+          find deploy_temp -type f | sort
+          exit 1
         fi
-        echo "=== Contents of index.html (first 10 lines) ==="
-        head -10 deploy_temp/index.html || echo "No index.html found!"
+        
+        # Clean up any unwanted files
+        find deploy_temp -name "README*.md" -delete 2>/dev/null || true
+        
+        # Quick summary for successful deployments
+        file_count=$(find deploy_temp -type f | wc -l)
+        echo "✅ Deployment validated: $file_count files ready"
+        
+        # Only show detailed structure if DEBUG is enabled via workflow dispatch
+        if [ "${{ github.event.inputs.debug }}" = "true" ]; then
+          echo "=== Detailed deployment structure (debug mode) ==="
+          find deploy_temp -type f | sort
+          echo "=== Contents of index.html (first 10 lines) ==="
+          head -10 deploy_temp/index.html
+        fi
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
@@ -193,6 +234,7 @@ jobs:
         echo "**Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
         echo "**Sources:** ${{ github.event.inputs.sources || 'all' }}" >> $GITHUB_STEP_SUMMARY
         echo "**Force Refresh:** ${{ github.event.inputs.force_refresh || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Debug Mode:** ${{ github.event.inputs.debug || 'false' }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         
         if [ "${{ needs.collect.outputs.has_changes }}" = "true" ]; then
@@ -203,4 +245,5 @@ jobs:
         
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "🌐 **Deployment:** Site deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY
+        echo "⚡ **Performance:** Used caching and rsync for efficient deployment" >> $GITHUB_STEP_SUMMARY
         echo "📄 **Note:** Make sure GitHub Pages is configured to use 'GitHub Actions' as the source" >> $GITHUB_STEP_SUMMARY
