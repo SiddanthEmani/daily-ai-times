@@ -137,13 +137,37 @@ export class ArticleHandler {
             z-index: 1000;
             pointer-events: none;
             white-space: nowrap;
+            visibility: hidden;
         `;
         
         document.body.appendChild(tooltip);
         
+        // Get element and tooltip dimensions
         const rect = element.getBoundingClientRect();
-        tooltip.style.left = rect.left + 'px';
-        tooltip.style.top = (rect.top - tooltip.offsetHeight - 5) + 'px';
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate initial position (above the element)
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        let top = rect.top - tooltipRect.height - 5;
+        
+        // Adjust horizontal position if tooltip goes off-screen
+        if (left < 5) {
+            left = 5;
+        } else if (left + tooltipRect.width > viewportWidth - 5) {
+            left = viewportWidth - tooltipRect.width - 5;
+        }
+        
+        // If tooltip goes above viewport, position it below the element
+        if (top < 5) {
+            top = rect.bottom + 5;
+        }
+        
+        // Apply final position and make visible
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+        tooltip.style.visibility = 'visible';
     }
 
     static hideTooltip() {

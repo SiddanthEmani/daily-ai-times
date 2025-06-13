@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "python -m http.server 8000 --directory src/frontend",
     "collect": "cd src/backend/collectors && python collect_news.py",
-    "generate-api": "cd src/backend/api && python generate_api.py",
+    "generate-api": "python src/backend/api/generate_api.py && cp -r src/backend/api/*.json src/frontend/api/ && cp -r src/backend/api/categories src/frontend/api/ 2>/dev/null || true",
     "build": "npm run collect && npm run generate-api",
     "start": "npm run build && npm run dev",
     "mcp-server": "cd src/services/mcp-server && npm start",
