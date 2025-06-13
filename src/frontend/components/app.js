@@ -7,7 +7,15 @@ export class NewsApp {
     constructor() {
         this.newsData = null;
         this.isLoading = false;
-        this.performance = new PerformanceMonitor();
+        try {
+            this.performance = new PerformanceMonitor();
+        } catch (error) {
+            console.warn('PerformanceMonitor not available:', error);
+            this.performance = {
+                mark: () => {},
+                report: () => {}
+            };
+        }
     }
 
     async initialize() {
@@ -15,11 +23,23 @@ export class NewsApp {
             this.performance.mark('app_init_start');
             
             // Initialize analytics
-            Analytics.init();
+            try {
+                if (typeof Analytics !== 'undefined') {
+                    Analytics.init();
+                } else {
+                    console.warn('Analytics not available, skipping analytics initialization');
+                }
+            } catch (analyticsError) {
+                console.warn('Analytics initialization failed:', analyticsError);
+            }
             
             // Register service worker for caching (don't fail if it doesn't work)
             try {
-                await CacheManager.register();
+                if (typeof CacheManager !== 'undefined') {
+                    await CacheManager.register();
+                } else {
+                    console.warn('CacheManager not available, skipping service worker registration');
+                }
             } catch (swError) {
                 console.warn('Service Worker registration failed, continuing without it:', swError);
             }
@@ -32,14 +52,22 @@ export class NewsApp {
             
             // Initialize article handlers
             try {
-                ArticleHandler.initializeTooltips();
+                if (typeof ArticleHandler !== 'undefined') {
+                    ArticleHandler.initializeTooltips();
+                } else {
+                    console.warn('ArticleHandler not available, skipping tooltip initialization');
+                }
             } catch (handlerError) {
                 console.warn('Article handler initialization failed:', handlerError);
             }
             
             // Initialize lazy loading
             try {
-                LazyLoader.init();
+                if (typeof LazyLoader !== 'undefined') {
+                    LazyLoader.init();
+                } else {
+                    console.warn('LazyLoader not available, skipping lazy loading initialization');
+                }
             } catch (lazyError) {
                 console.warn('Lazy loader initialization failed:', lazyError);
             }
@@ -51,11 +79,16 @@ export class NewsApp {
             this.performance.report();
             
             // Track page view
-            Analytics.trackPageView('home');
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackPageView('home');
+            }
             
         } catch (error) {
             console.error('Failed to initialize news app:', error);
-            Analytics.trackError(error, { context: 'app_initialization' });
+            // Only track error if Analytics is available
+            if (typeof Analytics !== 'undefined') {
+                Analytics.trackError(error, { context: 'app_initialization' });
+            }
             this.showErrorStates();
         }
     }
@@ -69,10 +102,22 @@ export class NewsApp {
             `${basePath}/api/widget.json`
         ];
         
+        // Add dynamic preload links for API resources
+        criticalUrls.forEach(url => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = url;
+            link.as = 'fetch';
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+        });
+        
         // Use service worker to preload URLs if available
         if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
             try {
-                await CacheManager.preloadUrls(criticalUrls);
+                if (typeof CacheManager !== 'undefined') {
+                    await CacheManager.preloadUrls(criticalUrls);
+                }
             } catch (error) {
                 console.warn('Failed to preload resources via service worker:', error);
             }
@@ -220,10 +265,12 @@ export class NewsApp {
         }
 
         // Track the error
-        Analytics.trackError(error, { 
-            context: 'news_loading',
-            error_code: errorCode 
-        });
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackError(error, { 
+                context: 'news_loading',
+                error_code: errorCode 
+            });
+        }
 
         // Show fallback content in main story
         const fallbackHTML = `

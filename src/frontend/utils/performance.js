@@ -109,11 +109,11 @@ export class PerformanceMonitor {
                 });
                 longTaskObserver.observe({ entryTypes: ['longtask'] });
                 this.observers.set('longtask', longTaskObserver);
-            } else {
-                console.log('Long task observation not supported');
             }
+            // Removed console.log for unsupported entry types to reduce noise
         } catch (e) {
-            console.log('Long task observer failed to initialize:', e.message);
+            // Silently fail for unsupported performance observers
+            console.debug('Long task observer initialization skipped:', e.message);
         }
 
         // Observe Layout Shifts
@@ -131,11 +131,11 @@ export class PerformanceMonitor {
                 });
                 clsObserver.observe({ entryTypes: ['layout-shift'] });
                 this.observers.set('layout-shift', clsObserver);
-            } else {
-                console.log('Layout shift observation not supported');
             }
+            // Removed console.log for unsupported entry types to reduce noise
         } catch (e) {
-            console.log('Layout shift observer failed to initialize:', e.message);
+            // Silently fail for unsupported performance observers
+            console.debug('Layout shift observer initialization skipped:', e.message);
         }
     }
 
@@ -151,7 +151,8 @@ export class CacheManager {
         if ('serviceWorker' in navigator) {
             try {
                 // Determine the correct path for the service worker
-                const swPath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai/sw.js' : '/sw.js';
+                const basePath = window.location.pathname.includes('/newsxp-ai/') ? '/newsxp-ai' : '';
+                const swPath = `${basePath}/sw.js`;
                 const registration = await navigator.serviceWorker.register(swPath);
                 console.log('✅ Service Worker registered:', registration.scope);
                 
@@ -366,7 +367,10 @@ export class Analytics {
         if (this.eventQueue.length === 0) return;
 
         // Here you would send batched events to your analytics service
-        console.log('📊 Flushing analytics events:', this.eventQueue.length);
+        // Only log in development mode to reduce console noise in production
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes('127.0.0.1')) {
+            console.log('📊 Flushing analytics events:', this.eventQueue.length);
+        }
         
         // Clear the queue
         this.eventQueue = [];
