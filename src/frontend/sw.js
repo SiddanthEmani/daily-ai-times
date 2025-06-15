@@ -1,6 +1,6 @@
-// Service Worker for NewsXP AI - Simplified Version
-const CACHE_NAME = 'newsxp-ai-v2';
-const DATA_CACHE = 'newsxp-data-v1';
+// Service Worker for NewsXP AI - No-Cache Version
+const CACHE_NAME = 'newsxp-ai-v3';
+const DATA_CACHE = 'newsxp-data-v2';
 
 // Static assets to cache - using relative paths
 const STATIC_ASSETS = [
@@ -17,11 +17,15 @@ const STATIC_ASSETS = [
     './favicon.ico'
 ];
 
+// API endpoints to never cache (always fetch fresh)
+const NEVER_CACHE_ENDPOINTS = [
+    './api/latest.json',
+    './api/widget.json'
+];
+
 // API endpoints to cache with different strategies
 const API_ENDPOINTS = [
-    './api/latest.json',
-    './api/widget.json',
-    './api/archives.json'
+    './api/archives.json' // Only cache archives, not latest news
 ];
 
 // Cache duration for different types of content (in milliseconds)
@@ -191,9 +195,29 @@ self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
     const pathname = url.pathname;
     
-    // Determine caching strategy based on request type
-    if (API_ENDPOINTS.some(endpoint => pathname.includes(endpoint))) {
-        // API endpoints: Network-first with short cache
+    // Never cache fresh news endpoints - always fetch from network
+    if (NEVER_CACHE_ENDPOINTS.some(endpoint => pathname.includes(endpoint.replace('./', '/')))) {
+        event.respondWith(
+            fetch(event.request, {
+                cache: 'no-store',
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
+            }).catch(() => {
+                // Only provide fallback if completely offline
+                return new Response(JSON.stringify({
+                    error: 'Fresh news data temporarily unavailable',
+                    offline: true,
+                    timestamp: new Date().toISOString()
+                }), {
+                    status: 503,
+                    headers: { 'Content-Type': 'application/json' }
+                });
+            })
+        );
+    } else if (API_ENDPOINTS.some(endpoint => pathname.includes(endpoint))) {
+        // Other API endpoints: Network-first with short cache
         event.respondWith(
             networkFirstStrategy(event.request, DATA_CACHE, CACHE_DURATIONS.api)
         );
@@ -228,11 +252,11 @@ self.addEventListener('sync', event => {
     if (event.tag === 'background-sync') {
         console.log('Background sync triggered');
         event.waitUntil(
-            // Retry failed requests or prefetch important data
+            // Only sync non-news data to avoid serving stale news
             caches.open(DATA_CACHE).then(cache => {
-                return fetch(`${BASE_PATH}/api/latest.json`).then(response => {
+                return fetch(`${BASE_PATH}/api/archives.json`).then(response => {
                     if (response.ok) {
-                        return cache.put(`${BASE_PATH}/api/latest.json`, addCacheTimestamp(response));
+                        return cache.put(`${BASE_PATH}/api/archives.json`, addCacheTimestamp(response));
                     }
                 });
             }).catch(error => {

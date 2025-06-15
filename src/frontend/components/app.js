@@ -100,10 +100,11 @@ export class NewsApp {
     }
 
     async preloadCriticalResources() {
-        // Use relative paths - let the browser resolve them correctly
+        // Use relative paths with cache-busting parameters for fresh news data
+        const timestamp = Date.now();
         const criticalUrls = [
-            './api/latest.json',
-            './api/widget.json'
+            `./api/latest.json?t=${timestamp}`,
+            `./api/widget.json?t=${timestamp}`
         ];
         
         // Add dynamic preload links for API resources
@@ -116,16 +117,8 @@ export class NewsApp {
             document.head.appendChild(link);
         });
         
-        // Use service worker to preload URLs if available
-        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-            try {
-                if (typeof CacheManager !== 'undefined') {
-                    await CacheManager.preloadUrls(criticalUrls);
-                }
-            } catch (error) {
-                console.warn('Failed to preload resources via service worker:', error);
-            }
-        }
+        // Don't use service worker for preloading news data to avoid stale content
+        // Service worker should only cache static assets, not dynamic news data
     }
 
     showLoadingStates() {
@@ -149,15 +142,21 @@ export class NewsApp {
         this.performance.mark('news_load_start');
         
         try {
-            // Use relative path for API
-            const apiUrl = './api/latest.json';
+            // Use relative path for API with cache-busting parameter
+            const timestamp = Date.now();
+            const apiUrl = `./api/latest.json?t=${timestamp}`;
             
-            // Fetch news data with timeout
+            // Fetch news data with timeout and no-cache headers
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
             const response = await fetch(apiUrl, {
-                signal: controller.signal
+                signal: controller.signal,
+                cache: 'no-store', // Prevent browser caching
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
             });
             
             clearTimeout(timeoutId);
@@ -221,7 +220,7 @@ export class NewsApp {
                         </a>
                     </div>
                 </div>
-                <span class="articles-count">${totalArticles} articles featured<br>Updated every 4 hrs</span>`;
+                <span class="articles-count">${totalArticles} articles featured<br>Last refreshed: ${new Date().toLocaleTimeString()}</span>`;
             DOMUtils.setElementContent('edition-info', editionInfo);
             
         } catch (error) {
@@ -311,7 +310,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Make app available globally for debugging
         window.newsApp = app;
+        
+        // Add keyboard shortcut for refreshing news (Ctrl/Cmd + Shift + R)
+        document.addEventListener('keydown', (event) => {
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
+                event.preventDefault();
+                console.log('🔄 Refreshing news via keyboard shortcut');
+                app.refresh();
+            }
+        });
+        
         console.log('✅ NewsXP AI app initialized successfully');
+        console.log('💡 Press Ctrl/Cmd + Shift + R to refresh news content');
     } catch (error) {
         console.error('Failed to initialize news app:', error);
         
