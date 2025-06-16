@@ -1,6 +1,6 @@
 {
   "category": "Open Source",
-  "count": 38,
+  "count": 37,
   "articles": [
     {
       "id": "0982c8bdf5f0c9191bd5ac8f4ecf7bf5",
@@ -11,7 +11,7 @@
       "url": "https://towardsdatascience.com/stop-building-ai-platforms/",
       "description": "When small and medium companies achieve success in building Data and ML platforms, building AI platforms is now profoundly challenging\nThe post Stop Building AI Platforms appeared first on Towards Data Science.",
       "published_date": "2025-06-14T01:26:49+00:00",
-      "collected_at": "2025-06-16T12:35:41.085825+00:00",
+      "collected_at": "2025-06-16T16:21:38.027628+00:00",
       "author": "Ming Gao",
       "source_priority": 3,
       "score": 92
@@ -25,7 +25,7 @@
       "url": "https://towardsdatascience.com/what-if-i-had-ai-in-2018-rent-the-runway-fulfillment-center-optimization/",
       "description": "An LLM in 2018 would not have trivialized a complex project, although it could have enhanced the final solution\nThe post What If I had AI in 2018: Rent the Runway Fulfillment Center Optimization appeared first on Towards Data Science.",
       "published_date": "2025-06-13T23:03:03+00:00",
-      "collected_at": "2025-06-16T12:35:41.086061+00:00",
+      "collected_at": "2025-06-16T16:21:38.027835+00:00",
       "author": "Hugo Ducruc",
       "source_priority": 3,
       "score": 100
@@ -39,10 +39,10 @@
       "url": "https://towardsdatascience.com/ai-is-not-a-black-box/",
       "description": "Compared to the opacity around human intelligence, AI is more transparent in some very tangible ways.\nThe post AI Is Not a Black Box (Relatively Speaking) appeared first on Towards Data Science.",
       "published_date": "2025-06-13T20:02:51+00:00",
-      "collected_at": "2025-06-16T12:35:41.086267+00:00",
+      "collected_at": "2025-06-16T16:21:38.028034+00:00",
       "author": "Piotr (Peter) Mardziel",
       "source_priority": 3,
-      "score": 92
+      "score": 91
     },
     {
       "id": "a47ee4e7d65a00ac2f3bffd11bc261a4",
@@ -53,10 +53,10 @@
       "url": "https://towardsdatascience.com/how-ai-agents-talk-to-each-other/",
       "description": "Minimize chaos and maintain inter-agent harmony in your projects\nThe post How AI Agents “Talk” to Each Other appeared first on Towards Data Science.",
       "published_date": "2025-06-13T19:21:14+00:00",
-      "collected_at": "2025-06-16T12:35:41.086482+00:00",
+      "collected_at": "2025-06-16T16:21:38.028264+00:00",
       "author": "TDS Editors",
       "source_priority": 3,
-      "score": 92
+      "score": 91
     },
     {
       "id": "60c1fe34ea4d768996bae1b32a454c16",
@@ -67,7 +67,7 @@
       "url": "https://pytorch.org/blog/paretoq-scaling-laws-in-extremely-low-bit-llm-quantization/",
       "description": "The field of large language models is shifting toward lower-precision computation. This shift necessitates a rethinking of scaling laws to account for the effects of quantization on resulting quantized model...",
       "published_date": "2025-06-13T18:43:38+00:00",
-      "collected_at": "2025-06-16T12:35:39.867972+00:00",
+      "collected_at": "2025-06-16T16:21:36.926661+00:00",
       "author": "Zechun Liu, Changsheng Zhao, Hanxian Huang, Sijia Chen, Jing Zhang, Andrew Or, Jiawei Zhao, Scott Roy, Lisa Jin, Yunyang Xiong, Yangyang Shi, Lin Xiao, Yuandong Tian, Bilge Soran, Raghuraman Krishnamoorthi, Tijmen Blankevoort, Vikas Chandra (Meta)",
       "source_priority": 2,
       "score": 100
@@ -81,38 +81,24 @@
       "url": "https://arxiv.org/abs/2506.11997",
       "description": "Modern recurrent architectures, such as xLSTM and Mamba, have recently\nchallenged the Transformer in language modeling. However, their structure\nconstrains their applicability to sequences only or requires processing\nmulti-dimensional data structures, such as images or molecular graphs, in a\npre-defined sequential order. In contrast, Multi-Dimensional RNNs (MDRNNs) are\nwell suited for data with a higher level structure, like 2D grids, trees, and\ndirected acyclic graphs (DAGs). In this work, we e",
       "published_date": "2025-06-13T13:51:37+00:00",
-      "collected_at": "2025-06-16T12:35:39.626692+00:00",
+      "collected_at": "2025-06-16T16:21:36.701134+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
     },
     {
-      "id": "1e2a637ab937a98baee3fd421c9fda04",
+      "id": "2d3cddce787253763a4695c6489d7659",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "LiveCodeBench Pro: How Do Olympiad Medalists Judge LLMs in Competitive\n  Programming?",
-      "url": "https://arxiv.org/abs/2506.11928",
-      "description": "Recent reports claim that large language models (LLMs) now outperform elite\nhumans in competitive programming. Drawing on knowledge from a group of\nmedalists in international algorithmic contests, we revisit this claim,\nexamining how LLMs differ from human experts and where limitations still\nremain. We introduce LiveCodeBench Pro, a benchmark composed of problems from\nCodeforces, ICPC, and IOI that are continuously updated to reduce the\nlikelihood of data contamination. A team of Olympiad medali",
-      "published_date": "2025-06-13T12:29:09+00:00",
-      "collected_at": "2025-06-16T12:35:39.628221+00:00",
+      "title": "Feedback Friction: LLMs Struggle to Fully Incorporate External Feedback",
+      "url": "https://arxiv.org/abs/2506.11930",
+      "description": "Recent studies have shown LLMs possess some ability to improve their\nresponses when given external feedback. However, it remains unclear how\neffectively and thoroughly these models can incorporate extrinsic feedback. In\nan ideal scenario, if LLMs receive near-perfect and complete feedback, we would\nexpect them to fully integrate the feedback and change their incorrect answers\nto correct ones. In this paper, we systematically investigate LLMs' ability to\nincorporate feedback by designing a contro",
+      "published_date": "2025-06-13T12:31:51+00:00",
+      "collected_at": "2025-06-16T16:21:36.697560+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
-    },
-    {
-      "id": "f83d2d03929ed304ad621188fd92badb",
-      "source_id": "huggingface_papers_api",
-      "source": "huggingface_papers_api",
-      "category": "Open Source",
-      "title": "Aligned Novel View Image and Geometry Synthesis via Cross-modal\n  Attention Instillation",
-      "url": "https://arxiv.org/abs/2506.11924",
-      "description": "We introduce a diffusion-based framework that performs aligned novel view\nimage and geometry generation via a warping-and-inpainting methodology. Unlike\nprior methods that require dense posed images or pose-embedded generative\nmodels limited to in-domain views, our method leverages off-the-shelf geometry\npredictors to predict partial geometries viewed from reference images, and\nformulates novel-view synthesis as an inpainting task for both image and\ngeometry. To ensure accurate alignment between",
-      "published_date": "2025-06-13T12:19:00+00:00",
-      "collected_at": "2025-06-16T12:35:39.628010+00:00",
-      "author": "",
-      "source_priority": 1,
-      "score": 92
     },
     {
       "id": "2bc36fea24ce57b97bde42f9f92e8999",
@@ -123,24 +109,24 @@
       "url": "https://arxiv.org/abs/2506.11886",
       "description": "Large Language Models struggle with memory demands from the growing Key-Value\n(KV) cache as context lengths increase. Existing compression methods homogenize\nhead dimensions or rely on attention-guided token pruning, often sacrificing\naccuracy or introducing computational overhead. We propose FourierAttention, a\ntraining-free framework that exploits the heterogeneous roles of transformer\nhead dimensions: lower dimensions prioritize local context, while upper ones\ncapture long-range dependencies.",
       "published_date": "2025-06-13T11:35:54+00:00",
-      "collected_at": "2025-06-16T12:35:39.625417+00:00",
+      "collected_at": "2025-06-16T16:21:36.699879+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
     },
     {
-      "id": "85dd50814b69eeedfb2af4b46749edd6",
+      "id": "fc4184291f4efae8468150031f9f269f",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "Configurable Preference Tuning with Rubric-Guided Synthetic Data",
-      "url": "https://arxiv.org/abs/2506.11702",
-      "description": "Models of human feedback for AI alignment, such as those underpinning Direct\nPreference Optimization (DPO), often bake in a singular, static set of\npreferences, limiting adaptability. This paper challenges the assumption of\nmonolithic preferences by introducing Configurable Preference Tuning (CPT), a\nnovel framework for endowing language models with the ability to dynamically\nadjust their behavior based on explicit, human-interpretable directives. CPT\nleverages synthetically generated preference",
-      "published_date": "2025-06-13T08:17:38+00:00",
-      "collected_at": "2025-06-16T12:35:39.628427+00:00",
+      "title": "Med-PRM: Medical Reasoning Models with Stepwise, Guideline-verified\n  Process Rewards",
+      "url": "https://arxiv.org/abs/2506.11474",
+      "description": "Large language models have shown promise in clinical decision making, but\ncurrent approaches struggle to localize and correct errors at specific steps of\nthe reasoning process. This limitation is critical in medicine, where\nidentifying and addressing reasoning errors is essential for accurate diagnosis\nand effective patient care. We introduce Med-PRM, a process reward modeling\nframework that leverages retrieval-augmented generation to verify each\nreasoning step against established medical knowle",
+      "published_date": "2025-06-13T01:36:30+00:00",
+      "collected_at": "2025-06-16T16:21:36.697847+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 92
+      "score": 91
     },
     {
       "id": "2d83a9cb9a328057c618264033ae1dbe",
@@ -151,10 +137,10 @@
       "url": "https://towardsdatascience.com/connecting-the-dots-for-better-movie-recommendations/",
       "description": "Connecting the Dots for Better Movie Recommendations: Lightweight graph RAG on Rotten Tomatoes movie reviews\nThe post Connecting the Dots for Better Movie Recommendations appeared first on Towards Data Science.",
       "published_date": "2025-06-13T00:27:55+00:00",
-      "collected_at": "2025-06-16T12:35:41.086677+00:00",
+      "collected_at": "2025-06-16T16:21:38.028457+00:00",
       "author": "Brian Godsey",
       "source_priority": 3,
-      "score": 91
+      "score": 90
     },
     {
       "id": "04bff2841ad31c6f572d7fe153ed41d4",
@@ -165,7 +151,7 @@
       "url": "https://towardsdatascience.com/agentic-ai-103-building-multi-agent-teams/",
       "description": "Build multi-agent teams that can automate tasks and enhance productivity.\nThe post Agentic AI 103: Building Multi-Agent Teams appeared first on Towards Data Science.",
       "published_date": "2025-06-12T19:34:10+00:00",
-      "collected_at": "2025-06-16T12:35:41.086885+00:00",
+      "collected_at": "2025-06-16T16:21:38.028645+00:00",
       "author": "Gustavo Santos",
       "source_priority": 3,
       "score": 90
@@ -179,7 +165,7 @@
       "url": "https://towardsdatascience.com/boost-your-llm-outputdesign-smarter-prompts-real-tricks-from-an-ai-engineers-toolbox/",
       "description": "Not just what you ask, but how you ask it. Practical techniques for prompt engineering that deliver\nThe post Design Smarter Prompts and Boost Your LLM Output: Real Tricks from an AI Engineer’s Toolbox appeared first on Towards Data Science.",
       "published_date": "2025-06-12T18:54:58+00:00",
-      "collected_at": "2025-06-16T12:35:41.087094+00:00",
+      "collected_at": "2025-06-16T16:21:38.028843+00:00",
       "author": "Ugo Pradère",
       "source_priority": 3,
       "score": 100
@@ -193,21 +179,21 @@
       "url": "https://towardsdatascience.com/user-authorisation-in-streamlit-with-oidc-and-google/",
       "description": "Log in to a Streamlit app with a Google email account\nThe post User Authorisation in Streamlit With OIDC and Google appeared first on Towards Data Science.",
       "published_date": "2025-06-12T16:54:07+00:00",
-      "collected_at": "2025-06-16T12:35:41.087290+00:00",
+      "collected_at": "2025-06-16T16:21:38.029037+00:00",
       "author": "Thomas Reid",
       "source_priority": 3,
       "score": 90
     },
     {
-      "id": "5eecf2cbb485a5309aec56421af3e134",
+      "id": "bd7f35486aa629bb62427fe49c2effec",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "NoLoCo: No-all-reduce Low Communication Training Method for Large Models",
-      "url": "https://arxiv.org/abs/2506.10911",
-      "description": "Training large language models is generally done via optimization methods on\nclusters containing tens of thousands of accelerators, communicating over a\nhigh-bandwidth interconnect. Scaling up these clusters is expensive and can\nbecome impractical, imposing limits on the size of models that can be trained.\nSeveral recent studies have proposed training methods that are less\ncommunication intensive, avoiding the need for a highly connected compute\ncluster. These state-of-the-art low communication",
-      "published_date": "2025-06-12T13:23:23+00:00",
-      "collected_at": "2025-06-16T12:35:39.629094+00:00",
+      "title": "Learning a Continue-Thinking Token for Enhanced Test-Time Scaling",
+      "url": "https://arxiv.org/abs/2506.11274",
+      "description": "Test-time scaling has emerged as an effective approach for improving language\nmodel performance by utilizing additional compute at inference time. Recent\nstudies have shown that overriding end-of-thinking tokens (e.g., replacing\n\"\" with \"Wait\") can extend reasoning steps and improve accuracy. In\nthis work, we explore whether a dedicated continue-thinking token can be\nlearned to trigger extended reasoning. We augment a distilled version of\nDeepSeek-R1 with a single learned \"<|continue-thinking|>\"",
+      "published_date": "2025-06-12T16:28:54+00:00",
+      "collected_at": "2025-06-16T16:21:36.699009+00:00",
       "author": "",
       "source_priority": 1,
       "score": 91
@@ -221,7 +207,7 @@
       "url": "https://arxiv.org/abs/2506.10892",
       "description": "Uniform-state discrete diffusion models hold the promise of fast text\ngeneration due to their inherent ability to self-correct. However, they are\ntypically outperformed by autoregressive models and masked diffusion models. In\nthis work, we narrow this performance gap by leveraging a key insight:\nUniform-state diffusion processes naturally emerge from an underlying Gaussian\ndiffusion. Our method, Duo, transfers powerful techniques from Gaussian\ndiffusion to improve both training and sampling. Fir",
       "published_date": "2025-06-12T12:55:35+00:00",
-      "collected_at": "2025-06-16T12:35:39.627570+00:00",
+      "collected_at": "2025-06-16T16:21:36.702057+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -235,10 +221,10 @@
       "url": "https://towardsdatascience.com/proportional-odds-model-for-ordinal-logistic-regression/",
       "description": "Understanding and Implementing Brant’s Tests in Ordinal Logistic Regression with Python\nThe post Exploring the Proportional Odds Model for Ordinal Logistic Regression appeared first on Towards Data Science.",
       "published_date": "2025-06-12T05:45:56+00:00",
-      "collected_at": "2025-06-16T12:35:41.087489+00:00",
+      "collected_at": "2025-06-16T16:21:38.029251+00:00",
       "author": "JUNIOR JUMBONG",
       "source_priority": 3,
-      "score": 90
+      "score": 89
     },
     {
       "id": "9063e838e64e6d653b3129520f884b40",
@@ -249,9 +235,23 @@
       "url": "https://towardsdatascience.com/can-ai-truly-develop-a-memory-that-adapts-like-ours/",
       "description": "Exploring Titans: A new architecture equipping LLMs with human-inspired memory that learns and updates itself during test-time.\nThe post Can AI Truly Develop a Memory That Adapts Like Ours? appeared first on Towards Data Science.",
       "published_date": "2025-06-12T05:32:11+00:00",
-      "collected_at": "2025-06-16T12:35:41.087682+00:00",
+      "collected_at": "2025-06-16T16:21:38.029444+00:00",
       "author": "Moulik Gupta",
       "source_priority": 3,
+      "score": 100
+    },
+    {
+      "id": "c61c90cc051615c1d6d0c30f5fda157d",
+      "source_id": "huggingface_papers_api",
+      "source": "huggingface_papers_api",
+      "category": "Open Source",
+      "title": "Mirage-1: Augmenting and Updating GUI Agent with Hierarchical Multimodal\n  Skills",
+      "url": "https://arxiv.org/abs/2506.10387",
+      "description": "Recent efforts to leverage the Multi-modal Large Language Model (MLLM) as GUI\nagents have yielded promising outcomes. However, these agents still struggle\nwith long-horizon tasks in online environments, primarily due to insufficient\nknowledge and the inherent gap between offline and online domains. In this\npaper, inspired by how humans generalize knowledge in open-ended environments,\nwe propose a Hierarchical Multimodal Skills (HMS) module to tackle the issue of\ninsufficient knowledge. It progre",
+      "published_date": "2025-06-12T02:21:19+00:00",
+      "collected_at": "2025-06-16T16:21:36.697268+00:00",
+      "author": "",
+      "source_priority": 1,
       "score": 100
     },
     {
@@ -263,7 +263,7 @@
       "url": "https://towardsdatascience.com/model-context-protocol-mcp-tutorial-build-your-first-mcp-server-in-6-steps/",
       "description": "A beginner-friendly tutorial of MCP architecture, with the focus on MCP server components and applications, guiding through the process of building a custom MCP server that enables code-to-diagram.\nThe post Model Context Protocol (MCP) Tutorial: Build Your First MCP Server in 6 Steps appeared first on Towards Data Science.",
       "published_date": "2025-06-11T19:40:45+00:00",
-      "collected_at": "2025-06-16T12:35:41.087895+00:00",
+      "collected_at": "2025-06-16T16:21:38.029631+00:00",
       "author": "Destin Gong",
       "source_priority": 3,
       "score": 89
@@ -277,7 +277,7 @@
       "url": "https://towardsdatascience.com/mobile-app-development-with-python/",
       "description": "Build iOS & Android Apps with Kivy\nThe post Mobile App Development with Python appeared first on Towards Data Science.",
       "published_date": "2025-06-11T16:55:03+00:00",
-      "collected_at": "2025-06-16T12:35:41.114506+00:00",
+      "collected_at": "2025-06-16T16:21:38.052845+00:00",
       "author": "Mauro Di Pietro",
       "source_priority": 3,
       "score": 89
@@ -291,10 +291,24 @@
       "url": "https://arxiv.org/abs/2506.10128",
       "description": "Reinforcement learning (RL) has shown great effectiveness for fine-tuning\nlarge language models (LLMs) using tasks that are challenging yet easily\nverifiable, such as math reasoning or code generation. However, extending this\nsuccess to visual perception in vision-language models (VLMs) has been impeded\nby the scarcity of vision-centric tasks that are simultaneously challenging and\nunambiguously verifiable. To this end, we introduce ViCrit (Visual Caption\nHallucination Critic), an RL proxy task",
       "published_date": "2025-06-11T15:16:54+00:00",
-      "collected_at": "2025-06-16T12:35:39.625671+00:00",
+      "collected_at": "2025-06-16T16:21:36.700134+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
+    },
+    {
+      "id": "35ef885155ae2cee9fea74879bb7c153",
+      "source_id": "huggingface_papers_api",
+      "source": "huggingface_papers_api",
+      "category": "Open Source",
+      "title": "LoRA-Edit: Controllable First-Frame-Guided Video Editing via Mask-Aware\n  LoRA Fine-Tuning",
+      "url": "https://arxiv.org/abs/2506.10082",
+      "description": "Video editing using diffusion models has achieved remarkable results in\ngenerating high-quality edits for videos. However, current methods often rely\non large-scale pretraining, limiting flexibility for specific edits.\nFirst-frame-guided editing provides control over the first frame, but lacks\nflexibility over subsequent frames. To address this, we propose a mask-based\nLoRA (Low-Rank Adaptation) tuning method that adapts pretrained Image-to-Video\n(I2V) models for flexible video editing. Our appr",
+      "published_date": "2025-06-11T14:03:55+00:00",
+      "collected_at": "2025-06-16T16:21:36.698733+00:00",
+      "author": "",
+      "source_priority": 1,
+      "score": 90
     },
     {
       "id": "638244793fd762f1066db0c657c68eae",
@@ -305,24 +319,10 @@
       "url": "https://arxiv.org/abs/2506.09600",
       "description": "Task-oriented LLM-based agents are increasingly used in domains with strict\npolicies, such as refund eligibility or cancellation rules. The challenge lies\nin ensuring that the agent consistently adheres to these rules and policies,\nappropriately refusing any request that would violate them, while still\nmaintaining a helpful and natural interaction. This calls for the development\nof tailored design and evaluation methodologies to ensure agent resilience\nagainst malicious user behavior. We propose",
       "published_date": "2025-06-11T06:59:47+00:00",
-      "collected_at": "2025-06-16T12:35:39.626930+00:00",
+      "collected_at": "2025-06-16T16:21:36.701379+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
-    },
-    {
-      "id": "0c4dda26d1acfe33fca94a4779f56f0d",
-      "source_id": "huggingface_papers_api",
-      "source": "huggingface_papers_api",
-      "category": "Open Source",
-      "title": "A High-Quality Dataset and Reliable Evaluation for Interleaved\n  Image-Text Generation",
-      "url": "https://arxiv.org/abs/2506.09427",
-      "description": "Recent advancements in Large Multimodal Models (LMMs) have significantly\nimproved multimodal understanding and generation. However, these models still\nstruggle to generate tightly interleaved image-text outputs, primarily due to\nthe limited scale, quality and instructional richness of current training\ndatasets. To address this, we introduce InterSyn, a large-scale multimodal\ndataset constructed using our Self-Evaluation with Iterative Refinement (SEIR)\nmethod. InterSyn features multi-turn, instr",
-      "published_date": "2025-06-11T02:21:20+00:00",
-      "collected_at": "2025-06-16T12:35:39.628637+00:00",
-      "author": "",
-      "source_priority": 1,
-      "score": 97
     },
     {
       "id": "8647cd9cdb434e35eec9fb9d5d10b3c7",
@@ -333,7 +333,7 @@
       "url": "https://towardsdatascience.com/audio-spectrogram-transformers-beyond-the-lab/",
       "description": "A recipe for building a portable soundscape monitoring app with AudioMoth, Raspberry Pi, and a decent dose of deep learning.\nThe post Audio Spectrogram Transformers Beyond the Lab appeared first on Towards Data Science.",
       "published_date": "2025-06-10T23:47:29+00:00",
-      "collected_at": "2025-06-16T12:35:41.114734+00:00",
+      "collected_at": "2025-06-16T16:21:38.053078+00:00",
       "author": "Maciej Adamiak",
       "source_priority": 3,
       "score": 100
@@ -347,7 +347,7 @@
       "url": "https://towardsdatascience.com/automate-models-training-an-mlops-pipeline-with-tekton-and-buildpacks/",
       "description": "A step-by-step guide to containerizing and orchestrating an ML training workflow without the Dockerfile headache, using a lightweight GPT-2 example.\nThe post Automate Models Training: An MLOps Pipeline with Tekton and Buildpacks appeared first on Towards Data Science.",
       "published_date": "2025-06-10T23:37:18+00:00",
-      "collected_at": "2025-06-16T12:35:41.114988+00:00",
+      "collected_at": "2025-06-16T16:21:38.053319+00:00",
       "author": "Sylvain Kalache",
       "source_priority": 3,
       "score": 98
@@ -361,7 +361,7 @@
       "url": "https://towardsdatascience.com/10000x-faster-bayesian-inference-multi-gpu-svi-vs-traditional-mcmc/",
       "description": "Using GPU acceleration to speed up Bayesian Inference from months to minutes... \nThe post 10,000x Faster Bayesian Inference: Multi-GPU SVI vs. Traditional MCMC appeared first on Towards Data Science.",
       "published_date": "2025-06-10T23:29:05+00:00",
-      "collected_at": "2025-06-16T12:35:41.115203+00:00",
+      "collected_at": "2025-06-16T16:21:38.053515+00:00",
       "author": "Derek Tran",
       "source_priority": 3,
       "score": 88
@@ -375,24 +375,10 @@
       "url": "https://arxiv.org/abs/2506.09366",
       "description": "Humanoid robots hold significant potential in accomplishing daily tasks\nacross diverse environments thanks to their flexibility and human-like\nmorphology. Recent works have made significant progress in humanoid whole-body\ncontrol and loco-manipulation leveraging optimal control or reinforcement\nlearning. However, these methods require tedious task-specific tuning for each\ntask to achieve satisfactory behaviors, limiting their versatility and\nscalability to diverse tasks in daily scenarios. To th",
       "published_date": "2025-06-10T23:24:26+00:00",
-      "collected_at": "2025-06-16T12:35:39.627783+00:00",
+      "collected_at": "2025-06-16T16:21:36.702309+00:00",
       "author": "",
       "source_priority": 1,
       "score": 99
-    },
-    {
-      "id": "285b09747cd48262d9f5110a5e759c54",
-      "source_id": "huggingface_papers_api",
-      "source": "huggingface_papers_api",
-      "category": "Open Source",
-      "title": "Comment on The Illusion of Thinking: Understanding the Strengths and\n  Limitations of Reasoning Models via the Lens of Problem Complexity",
-      "url": "https://arxiv.org/abs/2506.09250",
-      "description": "Shojaee et al. (2025) report that Large Reasoning Models (LRMs) exhibit\n\"accuracy collapse\" on planning puzzles beyond certain complexity thresholds.\nWe demonstrate that their findings primarily reflect experimental design\nlimitations rather than fundamental reasoning failures. Our analysis reveals\nthree critical issues: (1) Tower of Hanoi experiments systematically exceed\nmodel output token limits at reported failure points, with models explicitly\nacknowledging these constraints in their output",
-      "published_date": "2025-06-10T17:16:53+00:00",
-      "collected_at": "2025-06-16T12:35:39.628851+00:00",
-      "author": "",
-      "source_priority": 1,
-      "score": 89
     },
     {
       "id": "50915c04bf618d568192a3eb44ce6fec",
@@ -403,7 +389,7 @@
       "url": "https://towardsdatascience.com/applications-of-density-estimation-to-legal-theory/",
       "description": "A brief analysis using density estimation to compare the two-verdict and three-verdict systems.\nThe post Applications of Density Estimation to Legal Theory appeared first on Towards Data Science.",
       "published_date": "2025-06-10T16:36:24+00:00",
-      "collected_at": "2025-06-16T12:35:41.115580+00:00",
+      "collected_at": "2025-06-16T16:21:38.053899+00:00",
       "author": "Jimin Kang",
       "source_priority": 3,
       "score": 88
@@ -417,10 +403,10 @@
       "url": "https://arxiv.org/abs/2506.11130",
       "description": "We propose a self-refining framework that enhances ASR performance with only\nunlabeled datasets. The process starts with an existing ASR model generating\npseudo-labels on unannotated speech, which are then used to train a\nhigh-fidelity text-to-speech (TTS) system. Then, synthesized speech text pairs\nare bootstrapped into the original ASR system, completing the closed-loop\nself-improvement cycle. We demonstrated the effectiveness of the framework on\nTaiwanese Mandarin speech. Leveraging 6,000 hou",
       "published_date": "2025-06-10T13:30:32+00:00",
-      "collected_at": "2025-06-16T12:35:39.626189+00:00",
+      "collected_at": "2025-06-16T16:21:36.700612+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 99
+      "score": 98
     },
     {
       "id": "7ec68a04cfff48ece3d783c738c69006",
@@ -431,7 +417,7 @@
       "url": "https://arxiv.org/abs/2506.08989",
       "description": "Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective\nfor training large language models (LLMs) on complex reasoning tasks, such as\nmathematical problem solving. A prerequisite for the scalability of RLVR is a\nhigh-quality problem set with precise and verifiable answers. However, the\nscarcity of well-crafted human-labeled math problems and limited-verification\nanswers in existing distillation-oriented synthetic datasets limit their\neffectiveness in RL. Additionally, most pro",
       "published_date": "2025-06-10T13:02:00+00:00",
-      "collected_at": "2025-06-16T12:35:39.625146+00:00",
+      "collected_at": "2025-06-16T16:21:36.699646+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -445,10 +431,10 @@
       "url": "https://arxiv.org/abs/2506.08915",
       "description": "We introduce an attention-based method that uses learned binary attention\nmasks to ensure that only attended image regions influence the prediction.\nContext can strongly affect object perception, sometimes leading to biased\nrepresentations, particularly when objects appear in out-of-distribution\nbackgrounds. At the same time, many image-level object-centric tasks require\nidentifying relevant regions, often requiring context. To address this\nconundrum, we propose a two-stage framework: stage 1 pr",
       "published_date": "2025-06-10T11:41:22+00:00",
-      "collected_at": "2025-06-16T12:35:39.625920+00:00",
+      "collected_at": "2025-06-16T16:21:36.700385+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 99
+      "score": 98
     },
     {
       "id": "2cba20a73aaee2108868ab012d464b99",
@@ -459,7 +445,7 @@
       "url": "https://towardsdatascience.com/mastering-sql-window-functions/",
       "description": "Understand how to use Window Functions to perform calculations without losing details\nThe post Mastering SQL Window Functions appeared first on Towards Data Science.",
       "published_date": "2025-06-10T05:36:15+00:00",
-      "collected_at": "2025-06-16T12:35:41.115782+00:00",
+      "collected_at": "2025-06-16T16:21:38.054091+00:00",
       "author": "Eugenia Anello",
       "source_priority": 3,
       "score": 87
@@ -473,7 +459,7 @@
       "url": "https://towardsdatascience.com/exploratory-data-analysis-gamma-spectroscopy-in-python/",
       "description": "Let’s observe the matter on the atomic level\nThe post Exploratory Data Analysis: Gamma Spectroscopy in Python appeared first on Towards Data Science.",
       "published_date": "2025-06-10T05:27:05+00:00",
-      "collected_at": "2025-06-16T12:35:41.116004+00:00",
+      "collected_at": "2025-06-16T16:21:38.054306+00:00",
       "author": "Dmitrii Eliuseev",
       "source_priority": 3,
       "score": 87
@@ -487,7 +473,7 @@
       "url": "https://arxiv.org/abs/2506.08592",
       "description": "This work focuses on an observed limitation of text encoders: embeddings may\nnot be able to recognize fine-grained entities or events within the semantics,\nresulting in failed dense retrieval on even simple cases. To examine such\nbehaviors, we first introduce a new evaluation dataset in Chinese, named\nCapRetrieval, whose passages are image captions, and queries are phrases\ninquiring entities or events in various forms. Zero-shot evaluation suggests\nthat encoders may fail on these fine-grained ma",
       "published_date": "2025-06-10T05:00:33+00:00",
-      "collected_at": "2025-06-16T12:35:39.627143+00:00",
+      "collected_at": "2025-06-16T16:21:36.701600+00:00",
       "author": "",
       "source_priority": 1,
       "score": 88
@@ -501,7 +487,7 @@
       "url": "https://towardsdatascience.com/a-birds-eye-view-of-linear-algebra-measure-of-a-map-determinants/",
       "description": "We roll up our sleeves and start to deal with matrices\nThe post A Bird’s-Eye View of Linear Algebra: Measure of a Map — Determinants appeared first on Towards Data Science.",
       "published_date": "2025-06-10T05:00:27+00:00",
-      "collected_at": "2025-06-16T12:35:41.116200+00:00",
+      "collected_at": "2025-06-16T16:21:38.054504+00:00",
       "author": "Rohit Pandey",
       "source_priority": 3,
       "score": 87
@@ -515,7 +501,7 @@
       "url": "https://arxiv.org/abs/2506.08477",
       "description": "Detecting harmful memes is essential for maintaining the integrity of online\nenvironments. However, current approaches often struggle with resource\nefficiency, flexibility, or explainability, limiting their practical deployment\nin content moderation systems. To address these challenges, we introduce\nU-CoT+, a novel framework for harmful meme detection. Instead of relying solely\non prompting or fine-tuning multimodal models, we first develop a high-fidelity\nmeme-to-text pipeline that converts vis",
       "published_date": "2025-06-10T02:10:45+00:00",
-      "collected_at": "2025-06-16T12:35:39.627360+00:00",
+      "collected_at": "2025-06-16T16:21:36.701832+00:00",
       "author": "",
       "source_priority": 1,
       "score": 96
@@ -529,11 +515,11 @@
       "url": "https://towardsdatascience.com/how-to-transition-from-data-analyst-to-data-scientist/",
       "description": "Playbook on how data analysts can become data scientists\nThe post How to Transition From Data Analyst to Data Scientist appeared first on Towards Data Science.",
       "published_date": "2025-06-09T23:09:55+00:00",
-      "collected_at": "2025-06-16T12:35:41.116390+00:00",
+      "collected_at": "2025-06-16T16:21:38.054691+00:00",
       "author": "Egor Howell",
       "source_priority": 3,
       "score": 87
     }
   ],
-  "updated": "2025-06-16T12:36:21.604732"
+  "updated": "2025-06-16T16:22:16.056761"
 }
