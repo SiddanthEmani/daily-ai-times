@@ -11,7 +11,7 @@
       "url": "https://towardsdatascience.com/abstract-classes-a-software-engineering-concept-data-scientists-must-know-to-succeed/",
       "description": "Simple concepts that differentiate a professional from amateurs.\nThe post Abstract Classes: A Software Engineering Concept Data Scientists Must Know To Succeed appeared first on Towards Data Science.",
       "published_date": "2025-06-17T22:45:07+00:00",
-      "collected_at": "2025-06-18T04:26:08.304009+00:00",
+      "collected_at": "2025-06-18T08:23:06.512024+00:00",
       "author": "Benjamin Lee",
       "source_priority": 3,
       "score": 95
@@ -25,7 +25,7 @@
       "url": "https://towardsdatascience.com/llava-on-a-budget-multimodal-ai-with-limited-resources/",
       "description": "Let's get started with multimodality\nThe post LLaVA on a Budget: Multimodal AI with Limited Resources appeared first on Towards Data Science.",
       "published_date": "2025-06-17T18:06:11+00:00",
-      "collected_at": "2025-06-18T04:26:08.304243+00:00",
+      "collected_at": "2025-06-18T08:23:06.512253+00:00",
       "author": "Marcello Politi",
       "source_priority": 3,
       "score": 100
@@ -39,7 +39,7 @@
       "url": "https://towardsdatascience.com/apply-sphinxs-functionality-to-create-documentation-for-your-next-data-science-project/",
       "description": "Three cases to use the Sphinx tool as a pro\nThe post Apply Sphinx’s Functionality to Create Documentation for Your Next Data Science Project appeared first on Towards Data Science.",
       "published_date": "2025-06-17T17:55:42+00:00",
-      "collected_at": "2025-06-18T04:26:08.304451+00:00",
+      "collected_at": "2025-06-18T08:23:06.512458+00:00",
       "author": "Radmila Mandzhieva",
       "source_priority": 3,
       "score": 95
@@ -53,7 +53,7 @@
       "url": "https://pytorch.org/blog/deepnvme-affordable-i-o-scaling-for-deep-learning-applications/",
       "description": "Introduction We introduced DeepNVMe in summer 2024 as a suite of optimizations for tackling I/O bottlenecks in Deep Learning (DL). DeepNVMe delivers significant speedups for I/O bound DL workloads by leveraging storage...",
       "published_date": "2025-06-17T16:54:32+00:00",
-      "collected_at": "2025-06-18T04:26:07.150142+00:00",
+      "collected_at": "2025-06-18T08:22:58.315754+00:00",
       "author": "Joe Mayer, Logan Adams, Olatunji Ruwase",
       "source_priority": 2,
       "score": 100
@@ -67,10 +67,10 @@
       "url": "https://arxiv.org/abs/2506.14758",
       "description": "Balancing exploration and exploitation is a central goal in reinforcement\nlearning (RL). Despite recent advances in enhancing language model (LM)\nreasoning, most methods lean toward exploitation, and increasingly encounter\nperformance plateaus. In this work, we revisit entropy -- a signal of\nexploration in RL -- and examine its relationship to exploratory reasoning in\nLMs. Through empirical analysis, we uncover strong positive correlations\nbetween high-entropy regions and three types of explorat",
       "published_date": "2025-06-17T13:54:03+00:00",
-      "collected_at": "2025-06-18T04:26:06.799250+00:00",
+      "collected_at": "2025-06-18T08:22:58.071673+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 96
+      "score": 95
     },
     {
       "id": "f914b50d3359c7a556b5ad3717a216c2",
@@ -81,10 +81,24 @@
       "url": "https://arxiv.org/abs/2506.14755",
       "description": "Large Reasoning Models (LRMs) have achieved remarkable success, yet they\noften suffer from producing unnecessary and verbose reasoning chains. We\nidentify a core aspect of this issue as \"invalid thinking\" -- models tend to\nrepeatedly double-check their work after having derived the correct answer. To\naddress this specific inefficiency, we move beyond the general principles of\nEfficacy and Efficiency to propose two new, fine-grained principles: Brevity,\nwhich advocates for eliminating redundancy,",
       "published_date": "2025-06-17T13:50:16+00:00",
-      "collected_at": "2025-06-18T04:26:06.801599+00:00",
+      "collected_at": "2025-06-18T08:22:58.073918+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 96
+      "score": 95
+    },
+    {
+      "id": "b11c46691f29eefcb7e4cd645736a551",
+      "source_id": "huggingface_papers_api",
+      "source": "huggingface_papers_api",
+      "category": "Open Source",
+      "title": "Ring-lite: Scalable Reasoning via C3PO-Stabilized Reinforcement Learning\n  for LLMs",
+      "url": "https://arxiv.org/abs/2506.14731",
+      "description": "We present Ring-lite, a Mixture-of-Experts (MoE)-based large language model\noptimized via reinforcement learning (RL) to achieve efficient and robust\nreasoning capabilities. Built upon the publicly available Ling-lite model, a\n16.8 billion parameter model with 2.75 billion activated parameters, our\napproach matches the performance of state-of-the-art (SOTA) small-scale\nreasoning models on challenging benchmarks (e.g., AIME, LiveCodeBench,\nGPQA-Diamond) while activating only one-third of the para",
+      "published_date": "2025-06-17T13:12:34+00:00",
+      "collected_at": "2025-06-18T08:22:58.070838+00:00",
+      "author": "",
+      "source_priority": 1,
+      "score": 100
     },
     {
       "id": "a51439b8f425ecd774ce46835ce68945",
@@ -95,7 +109,7 @@
       "url": "https://arxiv.org/abs/2506.14702",
       "description": "One of the most profound challenges of modern machine learning is performing\nwell on the long-tail of rare and underrepresented features. Large\ngeneral-purpose models are trained for many tasks, but work best on\nhigh-frequency use cases. After training, it is hard to adapt a model to\nperform well on specific use cases underrepresented in the training corpus.\nRelying on prompt engineering or few-shot examples to maximize the output\nquality on a particular test case can be frustrating, as models c",
       "published_date": "2025-06-17T12:40:42+00:00",
-      "collected_at": "2025-06-18T04:26:06.798616+00:00",
+      "collected_at": "2025-06-18T08:22:58.071110+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -109,7 +123,7 @@
       "url": "https://arxiv.org/abs/2506.14606",
       "description": "The hardware ecosystem is rapidly evolving, with increasing interest in\ntranslating low-level programs across different instruction set architectures\n(ISAs) in a quick, flexible, and correct way to enhance the portability and\nlongevity of existing code. A particularly challenging class of this\ntranspilation problem is translating between complex- (CISC) and reduced-\n(RISC) hardware architectures, due to fundamental differences in instruction\ncomplexity, memory models, and execution paradigms. In",
       "published_date": "2025-06-17T11:06:54+00:00",
-      "collected_at": "2025-06-18T04:26:06.802321+00:00",
+      "collected_at": "2025-06-18T08:22:58.074633+00:00",
       "author": "",
       "source_priority": 1,
       "score": 95
@@ -123,24 +137,10 @@
       "url": "https://arxiv.org/abs/2506.14603",
       "description": "Diffusion- and flow-based models have emerged as state-of-the-art generative\nmodeling approaches, but they require many sampling steps. Consistency models\ncan distill these models into efficient one-step generators; however, unlike\nflow- and diffusion-based methods, their performance inevitably degrades when\nincreasing the number of steps, which we show both analytically and\nempirically. Flow maps generalize these approaches by connecting any two noise\nlevels in a single step and remain effectiv",
       "published_date": "2025-06-17T11:06:07+00:00",
-      "collected_at": "2025-06-18T04:26:06.802083+00:00",
+      "collected_at": "2025-06-18T08:22:58.074403+00:00",
       "author": "",
       "source_priority": 1,
       "score": 95
-    },
-    {
-      "id": "d176ca2c42aabddc12273edc5aff9371",
-      "source_id": "huggingface_papers_api",
-      "source": "huggingface_papers_api",
-      "category": "Open Source",
-      "title": "LongLLaDA: Unlocking Long Context Capabilities in Diffusion LLMs",
-      "url": "https://arxiv.org/abs/2506.14429",
-      "description": "Large Language Diffusion Models, or diffusion LLMs, have emerged as a\nsignificant focus in NLP research, with substantial effort directed toward\nunderstanding their scalability and downstream task performance. However, their\nlong-context capabilities remain unexplored, lacking systematic analysis or\nmethods for context extension. In this work, we present the first systematic\ninvestigation comparing the long-context performance of diffusion LLMs and\ntraditional auto-regressive LLMs. We first iden",
-      "published_date": "2025-06-17T07:45:37+00:00",
-      "collected_at": "2025-06-18T04:26:06.802642+00:00",
-      "author": "",
-      "source_priority": 1,
-      "score": 100
     },
     {
       "id": "b148d646bfb135a6466ca6f9950f0689",
@@ -151,7 +151,7 @@
       "url": "https://towardsdatascience.com/grad-cam-from-scratch-with-pytorch-hooks/",
       "description": "A hands-on look at an explainable AI (XAI) technique that helps reveal why a convolutional neural network (CNN) made a particular decision\nThe post Grad-CAM from Scratch with PyTorch Hooks appeared first on Towards Data Science.",
       "published_date": "2025-06-17T05:52:18+00:00",
-      "collected_at": "2025-06-18T04:26:08.304652+00:00",
+      "collected_at": "2025-06-18T08:23:06.512660+00:00",
       "author": "Conor O'Sullivan",
       "source_priority": 3,
       "score": 100
@@ -165,7 +165,7 @@
       "url": "https://arxiv.org/abs/2506.14245",
       "description": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a\npromising paradigm for advancing the reasoning capabilities of Large Language\nModels (LLMs). However, a critical paradox clouds its efficacy: RLVR-tuned\nmodels often underperform their base models on the Pass@K metric for\nsolution-finding, leading to the hypothesis that RLVR merely re-weights\nexisting reasoning paths at the cost of reasoning diversity. In this work, we\nresolve this contradiction by identifying the source of t",
       "published_date": "2025-06-17T03:06:56+00:00",
-      "collected_at": "2025-06-18T04:26:06.801367+00:00",
+      "collected_at": "2025-06-18T08:22:58.073692+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -179,7 +179,7 @@
       "url": "https://arxiv.org/abs/2506.14234",
       "description": "Despite impressive progress on complex reasoning, current large language\nmodels (LLMs) typically operate in isolation - treating each problem as an\nindependent attempt, without accumulating or integrating experiential\nknowledge. In contrast, expert problem solvers - such as Olympiad or\nprogramming contest teams - leverage a rich tapestry of experiences: absorbing\nmentorship from coaches, developing intuition from past problems, leveraging\nknowledge of tool usage and library functionality, adapti",
       "published_date": "2025-06-17T02:47:19+00:00",
-      "collected_at": "2025-06-18T04:26:06.800288+00:00",
+      "collected_at": "2025-06-18T08:22:58.072713+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -193,7 +193,7 @@
       "url": "https://towardsdatascience.com/a-practical-starters-guide-to-causal-structure-learning-with-bayesian-methods-in-python/",
       "description": "Learn Causal Structures and make inferences with Bayesian Methods: Python Tutorial\nThe post A Practical Starters’ Guide to Causal Structure Learning with Bayesian Methods in Python appeared first on Towards Data Science.",
       "published_date": "2025-06-17T00:45:46+00:00",
-      "collected_at": "2025-06-18T04:26:08.304856+00:00",
+      "collected_at": "2025-06-18T08:23:06.512860+00:00",
       "author": "Erdogan Taskesen",
       "source_priority": 3,
       "score": 94
@@ -207,7 +207,7 @@
       "url": "https://towardsdatascience.com/lets-analyze-openais-claims-about-chatgpt-energy-use/",
       "description": "ChatGPT uses an average of 0.34 Wh per query, according to a blog post by Sam Altman. Does that figure hold up?\nThe post Let’s Analyze OpenAI’s Claims About ChatGPT Energy Use appeared first on Towards Data Science.",
       "published_date": "2025-06-16T19:31:58+00:00",
-      "collected_at": "2025-06-18T04:26:08.305073+00:00",
+      "collected_at": "2025-06-18T08:23:06.513056+00:00",
       "author": "Kasper Groes Albin Ludvigsen",
       "source_priority": 3,
       "score": 100
@@ -221,7 +221,7 @@
       "url": "https://towardsdatascience.com/regularisation-a-deep-dive-into-theory-implementation-and-practical-insights/",
       "description": "A detailed guide on controlling overfitting and increasing the stability of your models.\nThe post Regularisation: A Deep Dive into Theory, Implementation, and Practical Insights appeared first on Towards Data Science.",
       "published_date": "2025-06-16T19:16:38+00:00",
-      "collected_at": "2025-06-18T04:26:08.305275+00:00",
+      "collected_at": "2025-06-18T08:23:06.513270+00:00",
       "author": "Sourav Mohile",
       "source_priority": 3,
       "score": 93
@@ -235,7 +235,7 @@
       "url": "https://towardsdatascience.com/build-and-ai-agent-to-explore-your-data-catalog-with-natural-language/",
       "description": "Leverage LLMs to query your Databricks Data Catalog\nThe post Build an AI Agent to Explore Your Data Catalog with Natural Language appeared first on Towards Data Science.",
       "published_date": "2025-06-16T17:37:42+00:00",
-      "collected_at": "2025-06-18T04:26:08.305471+00:00",
+      "collected_at": "2025-06-18T08:23:06.513461+00:00",
       "author": "Fabiana Clemente",
       "source_priority": 3,
       "score": 100
@@ -249,7 +249,7 @@
       "url": "https://towardsdatascience.com/i-won-10000-in-a-machine-learning-competition-heres-my-complete-strategy/",
       "description": "Complete guide to feature selection, threshold optimization, and neural network architecture for ML competitions\nThe post I Won $10,000 in a Machine Learning Competition — Here’s My Complete Strategy appeared first on Towards Data Science.",
       "published_date": "2025-06-16T17:12:24+00:00",
-      "collected_at": "2025-06-18T04:26:08.305671+00:00",
+      "collected_at": "2025-06-18T08:23:06.513657+00:00",
       "author": "Claudia Ng",
       "source_priority": 3,
       "score": 100
@@ -263,38 +263,38 @@
       "url": "https://towardsdatascience.com/agents-apis-and-the-next-layer-of-the-internet/",
       "description": "Part I: Shipping Containers for Thought Every so often a simple idea rewires everything. The shipping container didn’t just optimise logistics; it flattened the globe, collapsed time zones, and rewrote the economics of trade. In its geometric austerity was a quiet revolution: standardisation. Similarly, HTML and HTTP didn’t invent information exchange — any more than […]\nThe post Agents, APIs, and the Next Layer of the Internet appeared first on Towards Data Science.",
       "published_date": "2025-06-16T17:06:00+00:00",
-      "collected_at": "2025-06-18T04:26:08.305880+00:00",
+      "collected_at": "2025-06-18T08:23:06.513862+00:00",
       "author": "Cooper Doyle",
       "source_priority": 3,
       "score": 93
     },
     {
-      "id": "a25b62f942f9fc6ae3310ee34a541e47",
+      "id": "173db796bf0f919992e56e5a4c54b256",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "Taming Polysemanticity in LLMs: Provable Feature Recovery via Sparse\n  Autoencoders",
-      "url": "https://arxiv.org/abs/2506.14002",
-      "description": "We study the challenge of achieving theoretically grounded feature recovery\nusing Sparse Autoencoders (SAEs) for the interpretation of Large Language\nModels. Existing SAE training algorithms often lack rigorous mathematical\nguarantees and suffer from practical limitations such as hyperparameter\nsensitivity and instability. To address these issues, we first propose a novel\nstatistical framework for the feature recovery problem, which includes a new\nnotion of feature identifiability by modeling po",
-      "published_date": "2025-06-16T16:58:05+00:00",
-      "collected_at": "2025-06-18T04:26:06.803140+00:00",
+      "title": "Alignment Quality Index (AQI) : Beyond Refusals: AQI as an Intrinsic\n  Alignment Diagnostic via Latent Geometry, Cluster Divergence, and Layer wise\n  Pooled Representations",
+      "url": "https://arxiv.org/abs/2506.13901",
+      "description": "Alignment is no longer a luxury, it is a necessity. As large language models\n(LLMs) enter high-stakes domains like education, healthcare, governance, and\nlaw, their behavior must reliably reflect human-aligned values and safety\nconstraints. Yet current evaluations rely heavily on behavioral proxies such as\nrefusal rates, G-Eval scores, and toxicity classifiers, all of which have\ncritical blind spots. Aligned models are often vulnerable to jailbreaking,\nstochasticity of generation, and alignment",
+      "published_date": "2025-06-16T14:22:28+00:00",
+      "collected_at": "2025-06-18T08:22:58.070295+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
     },
     {
-      "id": "a44c7216f31e99479ba93f66b025e242",
+      "id": "ab115f1edd481956f071444f4baf50fc",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "Stream-Omni: Simultaneous Multimodal Interactions with Large\n  Language-Vision-Speech Model",
-      "url": "https://arxiv.org/abs/2506.13642",
-      "description": "The emergence of GPT-4o-like large multimodal models (LMMs) has raised the\nexploration of integrating text, vision, and speech modalities to support more\nflexible multimodal interaction. Existing LMMs typically concatenate\nrepresentation of modalities along the sequence dimension and feed them into a\nlarge language model (LLM) backbone. While sequence-dimension concatenation is\nstraightforward for modality integration, it often relies heavily on\nlarge-scale data to learn modality alignments. In",
-      "published_date": "2025-06-16T12:06:45+00:00",
-      "collected_at": "2025-06-18T04:26:06.802881+00:00",
+      "title": "xbench: Tracking Agents Productivity Scaling with Profession-Aligned\n  Real-World Evaluations",
+      "url": "https://arxiv.org/abs/2506.13651",
+      "description": "We introduce xbench, a dynamic, profession-aligned evaluation suite designed\nto bridge the gap between AI agent capabilities and real-world productivity.\nWhile existing benchmarks often focus on isolated technical skills, they may\nnot accurately reflect the economic value agents deliver in professional\nsettings. To address this, xbench targets commercially significant domains with\nevaluation tasks defined by industry professionals. Our framework creates\nmetrics that strongly correlate with produ",
+      "published_date": "2025-06-16T12:16:14+00:00",
+      "collected_at": "2025-06-18T08:22:58.069723+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 100
+      "score": 94
     },
     {
       "id": "70202bdbc9803f98ce8fa06198a2a852",
@@ -305,7 +305,7 @@
       "url": "https://arxiv.org/abs/2506.13599",
       "description": "Human mobility simulation plays a crucial role in various real-world\napplications. Recently, to address the limitations of traditional data-driven\napproaches, researchers have explored leveraging the commonsense knowledge and\nreasoning capabilities of large language models (LLMs) to accelerate human\nmobility simulation. However, these methods suffer from several critical\nshortcomings, including inadequate modeling of urban spaces and poor\nintegration with both individual mobility patterns and co",
       "published_date": "2025-06-16T11:24:07+00:00",
-      "collected_at": "2025-06-18T04:26:06.801132+00:00",
+      "collected_at": "2025-06-18T08:22:58.073466+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -319,7 +319,7 @@
       "url": "https://arxiv.org/abs/2506.13387",
       "description": "This work presents a generalizable framework to transfer relative depth to\nmetric depth. Current monocular depth estimation methods are mainly divided\ninto metric depth estimation (MMDE) and relative depth estimation (MRDE). MMDEs\nestimate depth in metric scale but are often limited to a specific domain.\nMRDEs generalize well across different domains, but with uncertain scales which\nhinders downstream applications. To this end, we aim to build up a framework to\nsolve scale uncertainty and transf",
       "published_date": "2025-06-16T07:50:00+00:00",
-      "collected_at": "2025-06-18T04:26:06.801832+00:00",
+      "collected_at": "2025-06-18T08:22:58.074173+00:00",
       "author": "",
       "source_priority": 1,
       "score": 94
@@ -333,24 +333,24 @@
       "url": "https://arxiv.org/abs/2506.13363",
       "description": "Visual Information Extraction (VIE) converts unstructured document images\ninto structured formats like JSON, critical for medical applications such as\nreport analysis and online consultations. Traditional methods rely on OCR and\nlanguage models, while end-to-end multimodal models offer direct JSON\ngeneration. However, domain-specific schemas and high annotation costs limit\ntheir effectiveness in medical VIE. We base our approach on the Reinforcement\nLearning with Verifiable Rewards (RLVR) framew",
       "published_date": "2025-06-16T07:10:25+00:00",
-      "collected_at": "2025-06-18T04:26:06.799525+00:00",
+      "collected_at": "2025-06-18T08:22:58.071910+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
     },
     {
-      "id": "5505de3305e167a9da28b730c7f516cf",
+      "id": "fc14198e20d0ee239eca712f77cdba82",
       "source_id": "huggingface_papers_api",
       "source": "huggingface_papers_api",
       "category": "Open Source",
-      "title": "Personalizable Long-Context Symbolic Music Infilling with MIDI-RWKV",
-      "url": "https://arxiv.org/abs/2506.13001",
-      "description": "Existing work in automatic music generation has primarily focused on\nend-to-end systems that produce complete compositions or continuations.\nHowever, because musical composition is typically an iterative process, such\nsystems make it difficult to engage in the back-and-forth between human and\nmachine that is essential to computer-assisted creativity. In this study, we\naddress the task of personalizable, multi-track, long-context, and controllable\nsymbolic music infilling to enhance the process o",
-      "published_date": "2025-06-15T20:04:01+00:00",
-      "collected_at": "2025-06-18T04:26:06.803616+00:00",
+      "title": "Scaling Test-time Compute for LLM Agents",
+      "url": "https://arxiv.org/abs/2506.12928",
+      "description": "Scaling test time compute has shown remarkable success in improving the\nreasoning abilities of large language models (LLMs). In this work, we conduct\nthe first systematic exploration of applying test-time scaling methods to\nlanguage agents and investigate the extent to which it improves their\neffectiveness. Specifically, we explore different test-time scaling strategies,\nincluding: (1) parallel sampling algorithms; (2) sequential revision\nstrategies; (3) verifiers and merging methods; (4)strateg",
+      "published_date": "2025-06-15T13:59:47+00:00",
+      "collected_at": "2025-06-18T08:22:58.069989+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 93
+      "score": 100
     },
     {
       "id": "94803975b1e3d70ef4f159b05b7e02bb",
@@ -361,10 +361,10 @@
       "url": "https://arxiv.org/abs/2506.12860",
       "description": "Recent advancements in Long Chain-of-Thought (CoT) reasoning models have\nimproved performance on complex tasks, but they suffer from overthinking, which\ngenerates redundant reasoning steps, especially for simple questions. This\npaper revisits the reasoning patterns of Long and Short CoT models, observing\nthat the Short CoT patterns offer concise reasoning efficiently, while the Long\nCoT patterns excel in challenging scenarios where the Short CoT patterns\nstruggle. To enable models to leverage bo",
       "published_date": "2025-06-15T10:21:28+00:00",
-      "collected_at": "2025-06-18T04:26:06.800013+00:00",
+      "collected_at": "2025-06-18T08:22:58.072473+00:00",
       "author": "",
       "source_priority": 1,
-      "score": 93
+      "score": 92
     },
     {
       "id": "0982c8bdf5f0c9191bd5ac8f4ecf7bf5",
@@ -375,7 +375,7 @@
       "url": "https://towardsdatascience.com/stop-building-ai-platforms/",
       "description": "When small and medium companies achieve success in building Data and ML platforms, building AI platforms is now profoundly challenging\nThe post Stop Building AI Platforms appeared first on Towards Data Science.",
       "published_date": "2025-06-14T01:26:49+00:00",
-      "collected_at": "2025-06-18T04:26:08.306093+00:00",
+      "collected_at": "2025-06-18T08:23:06.514050+00:00",
       "author": "Ming Gao",
       "source_priority": 3,
       "score": 90
@@ -389,7 +389,7 @@
       "url": "https://towardsdatascience.com/what-if-i-had-ai-in-2018-rent-the-runway-fulfillment-center-optimization/",
       "description": "An LLM in 2018 would not have trivialized a complex project, although it could have enhanced the final solution\nThe post What If I had AI in 2018: Rent the Runway Fulfillment Center Optimization appeared first on Towards Data Science.",
       "published_date": "2025-06-13T23:03:03+00:00",
-      "collected_at": "2025-06-18T04:26:08.306287+00:00",
+      "collected_at": "2025-06-18T08:23:06.514261+00:00",
       "author": "Hugo Ducruc",
       "source_priority": 3,
       "score": 100
@@ -403,10 +403,10 @@
       "url": "https://towardsdatascience.com/ai-is-not-a-black-box/",
       "description": "Compared to the opacity around human intelligence, AI is more transparent in some very tangible ways.\nThe post AI Is Not a Black Box (Relatively Speaking) appeared first on Towards Data Science.",
       "published_date": "2025-06-13T20:02:51+00:00",
-      "collected_at": "2025-06-18T04:26:08.306477+00:00",
+      "collected_at": "2025-06-18T08:23:06.514448+00:00",
       "author": "Piotr (Peter) Mardziel",
       "source_priority": 3,
-      "score": 90
+      "score": 89
     },
     {
       "id": "da48babf6400c894a0193e3dbc61ab80",
@@ -417,7 +417,7 @@
       "url": "https://arxiv.org/abs/2506.12278",
       "description": "We introduce TestCase-Eval, a new benchmark for systematic evaluation of LLMs\nin test-case generation. TestCase-Eval includes 500 algorithm problems and\n100,000 human-crafted solutions from the Codeforces platform. It focuses on two\npivotal tasks: (1) Fault Coverage, which measures how well LLM-generated test\nsets probe diverse input scenarios and cover a wide range of potential failure\nmodes. (2) Fault Exposure, which evaluates whether LLMs can craft a tailored\ntest input that reveals a specifi",
       "published_date": "2025-06-13T19:56:17+00:00",
-      "collected_at": "2025-06-18T04:26:06.799769+00:00",
+      "collected_at": "2025-06-18T08:22:58.072238+00:00",
       "author": "",
       "source_priority": 1,
       "score": 100
@@ -431,7 +431,7 @@
       "url": "https://towardsdatascience.com/how-ai-agents-talk-to-each-other/",
       "description": "Minimize chaos and maintain inter-agent harmony in your projects\nThe post How AI Agents “Talk” to Each Other appeared first on Towards Data Science.",
       "published_date": "2025-06-13T19:21:14+00:00",
-      "collected_at": "2025-06-18T04:26:08.306679+00:00",
+      "collected_at": "2025-06-18T08:23:06.514648+00:00",
       "author": "TDS Editors",
       "source_priority": 3,
       "score": 89
@@ -445,24 +445,10 @@
       "url": "https://pytorch.org/blog/paretoq-scaling-laws-in-extremely-low-bit-llm-quantization/",
       "description": "The field of large language models is shifting toward lower-precision computation. This shift necessitates a rethinking of scaling laws to account for the effects of quantization on resulting quantized model...",
       "published_date": "2025-06-13T18:43:38+00:00",
-      "collected_at": "2025-06-18T04:26:07.150224+00:00",
+      "collected_at": "2025-06-18T08:22:58.315833+00:00",
       "author": "Zechun Liu, Changsheng Zhao, Hanxian Huang, Sijia Chen, Jing Zhang, Andrew Or, Jiawei Zhao, Scott Roy, Lisa Jin, Yunyang Xiong, Yangyang Shi, Lin Xiao, Yuandong Tian, Bilge Soran, Raghuraman Krishnamoorthi, Tijmen Blankevoort, Vikas Chandra (Meta)",
       "source_priority": 2,
       "score": 100
-    },
-    {
-      "id": "de53afe0d7b6e3d8cb634e1f07fce22c",
-      "source_id": "huggingface_papers_api",
-      "source": "huggingface_papers_api",
-      "category": "Open Source",
-      "title": "Infini-gram mini: Exact n-gram Search at the Internet Scale with\n  FM-Index",
-      "url": "https://arxiv.org/abs/2506.12229",
-      "description": "Language models are trained mainly on massive text data from the Internet,\nand it becomes increasingly important to understand this data source.\nExact-match search engines enable searching in large text corpora -- counting\nstring appearances and retrieving the enclosing documents -- yet the high\nstorage overhead hinders their application on Internet-scale data. We present\nInfini-gram mini, an efficient and scalable system that can make petabyte-level\ntext corpora searchable. Based on the FM-inde",
-      "published_date": "2025-06-13T17:13:57+00:00",
-      "collected_at": "2025-06-18T04:26:06.803387+00:00",
-      "author": "",
-      "source_priority": 1,
-      "score": 90
     },
     {
       "id": "2d83a9cb9a328057c618264033ae1dbe",
@@ -473,10 +459,10 @@
       "url": "https://towardsdatascience.com/connecting-the-dots-for-better-movie-recommendations/",
       "description": "Connecting the Dots for Better Movie Recommendations: Lightweight graph RAG on Rotten Tomatoes movie reviews\nThe post Connecting the Dots for Better Movie Recommendations appeared first on Towards Data Science.",
       "published_date": "2025-06-13T00:27:55+00:00",
-      "collected_at": "2025-06-18T04:26:08.306869+00:00",
+      "collected_at": "2025-06-18T08:23:06.514836+00:00",
       "author": "Brian Godsey",
       "source_priority": 3,
-      "score": 89
+      "score": 88
     },
     {
       "id": "04bff2841ad31c6f572d7fe153ed41d4",
@@ -487,7 +473,7 @@
       "url": "https://towardsdatascience.com/agentic-ai-103-building-multi-agent-teams/",
       "description": "Build multi-agent teams that can automate tasks and enhance productivity.\nThe post Agentic AI 103: Building Multi-Agent Teams appeared first on Towards Data Science.",
       "published_date": "2025-06-12T19:34:10+00:00",
-      "collected_at": "2025-06-18T04:26:08.307078+00:00",
+      "collected_at": "2025-06-18T08:23:06.515020+00:00",
       "author": "Gustavo Santos",
       "source_priority": 3,
       "score": 88
@@ -501,7 +487,7 @@
       "url": "https://towardsdatascience.com/boost-your-llm-outputdesign-smarter-prompts-real-tricks-from-an-ai-engineers-toolbox/",
       "description": "Not just what you ask, but how you ask it. Practical techniques for prompt engineering that deliver\nThe post Design Smarter Prompts and Boost Your LLM Output: Real Tricks from an AI Engineer’s Toolbox appeared first on Towards Data Science.",
       "published_date": "2025-06-12T18:54:58+00:00",
-      "collected_at": "2025-06-18T04:26:08.307279+00:00",
+      "collected_at": "2025-06-18T08:23:06.515231+00:00",
       "author": "Ugo Pradère",
       "source_priority": 3,
       "score": 100
@@ -515,7 +501,7 @@
       "url": "https://towardsdatascience.com/user-authorisation-in-streamlit-with-oidc-and-google/",
       "description": "Log in to a Streamlit app with a Google email account\nThe post User Authorisation in Streamlit With OIDC and Google appeared first on Towards Data Science.",
       "published_date": "2025-06-12T16:54:07+00:00",
-      "collected_at": "2025-06-18T04:26:08.307607+00:00",
+      "collected_at": "2025-06-18T08:23:06.515560+00:00",
       "author": "Thomas Reid",
       "source_priority": 3,
       "score": 88
@@ -529,10 +515,10 @@
       "url": "https://towardsdatascience.com/proportional-odds-model-for-ordinal-logistic-regression/",
       "description": "Understanding and Implementing Brant’s Tests in Ordinal Logistic Regression with Python\nThe post Exploring the Proportional Odds Model for Ordinal Logistic Regression appeared first on Towards Data Science.",
       "published_date": "2025-06-12T05:45:56+00:00",
-      "collected_at": "2025-06-18T04:26:08.307806+00:00",
+      "collected_at": "2025-06-18T08:23:06.515758+00:00",
       "author": "JUNIOR JUMBONG",
       "source_priority": 3,
-      "score": 88
+      "score": 87
     },
     {
       "id": "9063e838e64e6d653b3129520f884b40",
@@ -543,10 +529,10 @@
       "url": "https://towardsdatascience.com/can-ai-truly-develop-a-memory-that-adapts-like-ours/",
       "description": "Exploring Titans: A new architecture equipping LLMs with human-inspired memory that learns and updates itself during test-time.\nThe post Can AI Truly Develop a Memory That Adapts Like Ours? appeared first on Towards Data Science.",
       "published_date": "2025-06-12T05:32:11+00:00",
-      "collected_at": "2025-06-18T04:26:08.307999+00:00",
+      "collected_at": "2025-06-18T08:23:06.515951+00:00",
       "author": "Moulik Gupta",
       "source_priority": 3,
-      "score": 100
+      "score": 99
     },
     {
       "id": "612ada9a61f7af0ede18110b0d037d2a",
@@ -557,11 +543,25 @@
       "url": "https://arxiv.org/abs/2506.10100",
       "description": "Vision-Language-Action (VLA) models, particularly diffusion-based\narchitectures, demonstrate transformative potential for embodied intelligence\nbut are severely hampered by high computational and memory demands stemming\nfrom extensive inherent and inference-time redundancies. While existing\nacceleration efforts often target isolated inefficiencies, such piecemeal\nsolutions typically fail to holistically address the varied computational and\nmemory bottlenecks across the entire VLA pipeline, there",
       "published_date": "2025-06-11T14:34:57+00:00",
-      "collected_at": "2025-06-18T04:26:06.800569+00:00",
+      "collected_at": "2025-06-18T08:22:58.072942+00:00",
       "author": "",
       "source_priority": 1,
       "score": 88
+    },
+    {
+      "id": "b9419eb91795e64d6842497aa8b47da4",
+      "source_id": "huggingface_papers_api",
+      "source": "huggingface_papers_api",
+      "category": "Open Source",
+      "title": "CRITICTOOL: Evaluating Self-Critique Capabilities of Large Language\n  Models in Tool-Calling Error Scenarios",
+      "url": "https://arxiv.org/abs/2506.13977",
+      "description": "The ability of large language models (LLMs) to utilize external tools has\nenabled them to tackle an increasingly diverse range of tasks. However, as the\ntasks become more complex and long-horizon, the intricate tool utilization\nprocess may trigger various unexpected errors. Therefore, how to effectively\nhandle such errors, including identifying, diagnosing, and recovering from\nthem, has emerged as a key research direction for advancing tool learning. In\nthis work, we first extensively analyze th",
+      "published_date": "2025-06-11T13:59:18+00:00",
+      "collected_at": "2025-06-18T08:22:58.070572+00:00",
+      "author": "",
+      "source_priority": 1,
+      "score": 100
     }
   ],
-  "updated": "2025-06-18T04:26:49.329459"
+  "updated": "2025-06-18T08:23:51.691955"
 }
