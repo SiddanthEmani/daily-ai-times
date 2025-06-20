@@ -417,8 +417,12 @@ src/backend/api/*.hash
 src/backend/api/categories/
 src/backend/api/index.html
 
-# Frontend API files (copied from backend for local dev)
-src/frontend/api/
+# Frontend API files - Allow processed news data to be committed
+# (these are needed for deployment and contain public news content)
+# But exclude any sensitive usage/tracking files
+src/frontend/api/*usage*
+src/frontend/api/*tracking*
+src/frontend/api/*analytics*
 
 # ================== Private Usage Reports ==================
 # Usage logs and reports - Available to owner only via GitHub Actions artifacts

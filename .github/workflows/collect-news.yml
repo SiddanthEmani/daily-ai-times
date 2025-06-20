@@ -38,14 +38,103 @@ env:
 
 jobs:
   # ================================================================
-  # JOB 1: COMPLETE BACKEND PIPELINE - Fresh News Every 4 Hours
+  # JOB 1: NEWS COLLECTION - Collect Raw Articles
   # ================================================================
-  collect-and-process:
-    name: 🤖 Fresh News Pipeline - Collect & Process Latest Articles
+  collect-news:
+    name: 📰 Collect Raw News Articles
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     concurrency:
       group: news-collection
+      cancel-in-progress: false
+    
+    outputs:
+      has_articles: ${{ steps.collect.outputs.has_articles }}
+      article_count: ${{ steps.collect.outputs.article_count }}
+      
+    steps:
+    - name: 📦 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: 🐍 Set up Python environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+        cache-dependency-path: src/backend/requirements.txt
+    
+    - name: 📚 Install dependencies
+      run: |
+        sudo apt-get update -qq && sudo apt-get install -y jq curl
+        pip install --upgrade pip
+        pip install -r src/backend/requirements.txt
+    
+    - name: � Collect raw news articles
+      id: collect
+      run: |
+        echo "🚀 Starting news collection cycle..."
+        max_attempts=3
+        attempt=1
+        
+        while [ $attempt -le $max_attempts ]; do
+          echo "📊 Collection attempt $attempt/$max_attempts"
+          
+          # Create test output directory for pipeline artifacts
+          mkdir -p test_output
+          
+          # Run the news collection with proper output path
+          if python src/backend/collectors/collect_news.py --output test_output/collected_articles.json --verbose; then
+            echo "✅ News collection successful"
+            
+            if [ -f "test_output/collected_articles.json" ]; then
+              # Create backend data directory structure
+              mkdir -p src/backend/data
+              cp test_output/collected_articles.json src/backend/data/news.json
+              
+              # Count collected articles
+              article_count=$(jq '.articles | length // 0' test_output/collected_articles.json)
+              echo "has_articles=true" >> $GITHUB_OUTPUT
+              echo "article_count=$article_count" >> $GITHUB_OUTPUT
+              echo "✅ Collected $article_count raw articles for processing"
+            else
+              echo "❌ Collection completed but missing results"
+              exit 1
+            fi
+            break
+          else
+            echo "❌ Collection attempt $attempt failed"
+            if [ $attempt -eq $max_attempts ]; then
+              echo "🚨 All collection attempts failed"
+              exit 1
+            fi
+            sleep 30
+            ((attempt++))
+          fi
+        done
+    
+    - name: 📤 Upload collected articles
+      uses: actions/upload-artifact@v4
+      with:
+        name: collected-articles
+        path: |
+          test_output/collected_articles.json
+          src/backend/data/news.json
+        retention-days: 1
+
+  # ================================================================
+  # JOB 2: GROQ AI PROCESSING - Process Articles with AI
+  # ================================================================
+  groq-processing:
+    name: 🤖 Groq AI Processing Pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: collect-news
+    if: success() && needs.collect-news.outputs.has_articles == 'true'
+    concurrency:
+      group: groq-processing
       cancel-in-progress: false
     
     outputs:
@@ -73,82 +162,69 @@ jobs:
         pip install --upgrade pip
         pip install -r src/backend/requirements.txt
     
-    - name: 🔄 Run complete backend pipeline
-      id: collect
+    - name: 📥 Download collected articles
+      uses: actions/download-artifact@v4
+      with:
+        name: collected-articles
+        path: ./
+    
+    - name: 🤖 Run Groq AI processing pipeline
+      id: process
       env:
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       run: |
-        echo "🚀 Starting fresh news collection cycle (runs every 4 hours)..."
-        echo "📰 Previous articles will be overwritten with latest content"
+        echo "🚀 Starting Groq AI processing pipeline..."
+        echo "📊 Processing ${{ needs.collect-news.outputs.article_count }} collected articles"
         max_attempts=3
         attempt=1
         
         while [ $attempt -le $max_attempts ]; do
-          echo "📊 Pipeline attempt $attempt/$max_attempts"
-          
-          # Create test output directory for pipeline artifacts
-          mkdir -p test_output
+          echo "🤖 Groq processing attempt $attempt/$max_attempts"
           
           # Clear any existing API files to ensure fresh content
           rm -f src/backend/api/latest.json src/frontend/api/latest.json
           echo "🧹 Cleared previous API files for fresh content"
           
-          # Create a minimal .env.local for the test script (production compatibility)
+          # Create a minimal .env.local for the orchestrator
           echo "GROQ_API_KEY=$GROQ_API_KEY" > .env.local
           
-          # Run the complete pipeline using test_backend.py logic
-          if python scripts/test_backend.py; then
-            echo "✅ Backend pipeline successful"
+          # Run the Groq processing orchestrator with collected articles
+          if python src/backend/processors/orchestrator.py test_output/collected_articles.json; then
+            echo "✅ Groq processing pipeline successful"
             
             # Clean up the temporary .env file
             rm -f .env.local
             
-            # Copy results to expected locations for workflow
-            if [ -f "test_output/processed_articles.json" ]; then
-              # Create backend data directory structure
-              mkdir -p src/backend/data
+            # Verify the orchestrator generated the expected outputs
+            if [ -f "src/backend/api/latest.json" ] && [ -f "src/frontend/api/latest.json" ]; then
+              echo "✅ Fresh AI-processed API endpoints generated"
               
-              # Extract and save the raw collection data if available
-              if [ -f "test_output/collected_articles.json" ]; then
-                cp test_output/collected_articles.json src/backend/data/news.json
-                echo "✅ Raw collection data saved"
-              fi
+              # Verify timestamp is recent (within last hour)
+              generated_time=$(jq -r '.generated_at' src/frontend/api/latest.json)
+              echo "📅 Content generated at: $generated_time"
               
-              # The orchestrator should have already saved to API directories
-              # but let's ensure they exist
-              if [ -f "src/backend/api/latest.json" ] && [ -f "src/frontend/api/latest.json" ]; then
-                echo "✅ Fresh API endpoints generated by orchestrator"
-                
-                # Verify timestamp is recent (within last hour)
-                generated_time=$(jq -r '.generated_at' src/frontend/api/latest.json)
-                echo "📅 Content generated at: $generated_time"
-              else
-                echo "⚠️ API endpoints missing, pipeline may have issues"
-              fi
-              
-              echo "✅ Complete pipeline artifacts ready"
+              echo "✅ Groq processing pipeline artifacts ready"
             else
-              echo "❌ Pipeline completed but missing processed results"
-              exit 1
+              echo "⚠️ API endpoints missing, Groq pipeline may have issues"
             fi
             break
           else
-            echo "❌ Pipeline attempt $attempt failed"
+            echo "❌ Groq processing attempt $attempt failed"
             # Clean up on failure too
             rm -f .env.local
             if [ $attempt -eq $max_attempts ]; then
-              echo "🚨 All pipeline attempts failed"
+              echo "🚨 All Groq processing attempts failed"
               exit 1
             fi
-            sleep 30
+            sleep 60  # Longer sleep for Groq rate limits
             ((attempt++))
           fi
         done
     
-    - name: 🔍 Validate fresh pipeline results
+    - name: 🔍 Validate Groq processing results
       id: verify
       run: |
-        echo "🔍 Validating fresh pipeline results..."
+        echo "🔍 Validating Groq processing results..."
         
         # Check for processed articles (main output)
         if [ ! -f "src/frontend/api/latest.json" ]; then
@@ -182,19 +258,19 @@ jobs:
         
         echo "article_count=$article_count" >> $GITHUB_OUTPUT
         echo "pipeline_version=$pipeline_version" >> $GITHUB_OUTPUT
-        echo "✅ Fresh Pipeline Results Validated:"
-        echo "   - Articles: $article_count (fresh content)"
+        echo "✅ Groq Processing Results Validated:"
+        echo "   - Articles: $article_count (AI-processed content)"
         echo "   - Generated: $generated_at"
         echo "   - Pipeline: $pipeline_version"
         echo "   - Processing Time: ${processing_time}s"
         
         if [ "$article_count" -lt 1 ]; then
-          echo "⚠️ Warning: No fresh articles were processed through the pipeline"
+          echo "⚠️ Warning: No articles were processed through Groq pipeline"
         else
-          echo "🎉 Successfully processed $article_count fresh articles for users"
+          echo "🎉 Successfully processed $article_count articles with Groq AI"
         fi
     
-    - name: 💾 Commit fresh news updates
+    - name: 💾 Commit AI-processed content
       id: commit
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -214,33 +290,33 @@ jobs:
           if [ -f "src/frontend/api/latest.json" ]; then
             article_count=$(jq '.articles | length // 0' src/frontend/api/latest.json)
             pipeline_version=$(jq -r '.pipeline_info.version // "unknown"' src/frontend/api/latest.json)
-            commit_msg="🔄 Fresh News Update: $article_count articles ($pipeline_version) - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            commit_msg="🤖 Groq AI Update: $article_count articles ($pipeline_version) - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           else
-            commit_msg="🔄 Fresh News Update - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            commit_msg="🤖 Groq AI Update - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           fi
           
           git commit -m "$commit_msg"
           git push
           
           echo "has_changes=true" >> $GITHUB_OUTPUT
-          echo "✅ Fresh news content committed and pushed"
+          echo "✅ AI-processed content committed and pushed"
           echo "🌐 Users will see updated articles on next site visit"
         fi
     
-    - name: 📤 Upload backend artifacts (Public Data)
+    - name: 📤 Upload processed articles (Public Data)
       uses: actions/upload-artifact@v4
       with:
-        name: backend-data
+        name: processed-articles
         path: |
           src/backend/data/
           src/backend/api/
           src/frontend/api/
         retention-days: 7
 
-    - name: 🔒 Upload private usage reports (Owner Only)
+    - name: 🔒 Upload Groq usage reports (Owner Only)
       uses: actions/upload-artifact@v4
       with:
-        name: private-usage-reports
+        name: groq-usage-reports
         path: |
           test_output/groq_api_usage.json
           test_output/groq_usage_summary.txt
@@ -248,14 +324,14 @@ jobs:
         retention-days: 30
 
   # ================================================================
-  # JOB 2: FRONTEND DEPLOYMENT - Deploy Fresh Content to Users
+  # JOB 3: FRONTEND DEPLOYMENT - Deploy Fresh Content to Users
   # ================================================================
   deploy-frontend:
     name: 🌐 Deploy Fresh News Content to GitHub Pages
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: collect-and-process
-    if: success() && (needs.collect-and-process.outputs.has_changes == 'true' || github.event.inputs.force_refresh == 'true' || github.event_name == 'workflow_dispatch')
+    needs: groq-processing
+    if: success() && (needs.groq-processing.outputs.has_changes == 'true' || github.event.inputs.force_refresh == 'true' || github.event_name == 'workflow_dispatch')
     
     environment:
       name: github-pages
@@ -267,11 +343,11 @@ jobs:
       with:
         ref: ${{ github.ref }}
         
-    - name: 📥 Download backend artifacts
+    - name: 📥 Download processed articles
       uses: actions/download-artifact@v4
       with:
-        name: backend-data
-        path: backend-artifacts/
+        name: processed-articles
+        path: processed-artifacts/
         
     - name: 🏗️ Prepare fresh content for deployment
       run: |
@@ -285,11 +361,11 @@ jobs:
         echo "📋 Copying frontend assets with fresh news API..."
         cp -r src/frontend/* site/
         
-        # Copy API data from backend artifacts (ensures fresh content availability)
-        echo "🔄 Integrating fresh API data..."
+        # Copy API data from processed artifacts (ensures fresh content availability)
+        echo "🔄 Integrating AI-processed API data..."
         mkdir -p site/api
-        if [ -d "backend-artifacts" ]; then
-          cp -r backend-artifacts/* site/api/ 2>/dev/null || true
+        if [ -d "processed-artifacts" ]; then
+          cp -r processed-artifacts/* site/api/ 2>/dev/null || true
         fi
         
         # Handle Google Analytics injection
@@ -352,21 +428,21 @@ jobs:
         timeout: 600000
 
   # ================================================================
-  # JOB 3: WORKFLOW SUMMARY & MONITORING
+  # JOB 4: WORKFLOW SUMMARY & MONITORING
   # ================================================================
   summary:
     name: 📊 Workflow Summary
     runs-on: ubuntu-latest
-    needs: [collect-and-process, deploy-frontend]
+    needs: [collect-news, groq-processing, deploy-frontend]
     if: always()
     
     steps:
     - name: 📋 Generate workflow summary
       run: |
-        echo "# 📰 NewsXP AI - Fresh News Every 4 Hours" >> $GITHUB_STEP_SUMMARY
+        echo "# 📰 NewsXP AI - Multi-Stage AI News Pipeline" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "🔄 **Automatic Refresh Cycle**: This workflow runs every 4 hours to ensure users always see the latest AI news." >> $GITHUB_STEP_SUMMARY
-        echo "📱 **User Experience**: Previous articles are overwritten with fresh content each cycle." >> $GITHUB_STEP_SUMMARY
+        echo "🔄 **Multi-Stage Architecture**: This workflow separates news collection from AI processing for better reliability." >> $GITHUB_STEP_SUMMARY
+        echo "📱 **User Experience**: Fresh AI-processed content delivered to users." >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "## 🔧 Configuration" >> $GITHUB_STEP_SUMMARY
         echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
@@ -375,44 +451,61 @@ jobs:
         echo "- **Debug Mode:** ${{ github.event.inputs.debug || 'false' }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         
-        echo "## 🤖 Fresh News Pipeline Results" >> $GITHUB_STEP_SUMMARY
-        if [ "${{ needs.collect-and-process.result }}" = "success" ]; then
-          if [ "${{ needs.collect-and-process.outputs.has_changes }}" = "true" ]; then
-            echo "✅ **Fresh Content Generated:** ${{ needs.collect-and-process.outputs.article_count }} new articles processed" >> $GITHUB_STEP_SUMMARY
-            echo "✅ **Pipeline Version:** ${{ needs.collect-and-process.outputs.pipeline_version || '4-stage-optimized' }}" >> $GITHUB_STEP_SUMMARY
-            echo "🔄 **Content Status:** Previous articles overwritten with latest news" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "ℹ️ **Fresh Content:** No new articles to process this cycle" >> $GITHUB_STEP_SUMMARY
-          fi
+        echo "## 📊 Pipeline Results" >> $GITHUB_STEP_SUMMARY
+        
+        # Collection Results
+        if [ "${{ needs.collect-news.result }}" = "success" ]; then
+          echo "✅ **News Collection:** ${{ needs.collect-news.outputs.article_count }} raw articles collected" >> $GITHUB_STEP_SUMMARY
         else
-          echo "❌ **Fresh Content Generation:** Failed - check pipeline logs" >> $GITHUB_STEP_SUMMARY
+          echo "❌ **News Collection:** Failed - check collection logs" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # Groq Processing Results
+        if [ "${{ needs.groq-processing.result }}" = "success" ]; then
+          if [ "${{ needs.groq-processing.outputs.has_changes }}" = "true" ]; then
+            echo "✅ **Groq AI Processing:** ${{ needs.groq-processing.outputs.article_count }} articles processed" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Pipeline Version:** ${{ needs.groq-processing.outputs.pipeline_version || '4-stage-optimized' }}" >> $GITHUB_STEP_SUMMARY
+            echo "🤖 **AI Status:** Articles enhanced with AI curation and analysis" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ **Groq Processing:** No new processed articles this cycle" >> $GITHUB_STEP_SUMMARY
+          fi
+        elif [ "${{ needs.groq-processing.result }}" = "skipped" ]; then
+          echo "⏭️ **Groq Processing:** Skipped (no articles collected)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Groq Processing:** Failed - check AI pipeline logs" >> $GITHUB_STEP_SUMMARY
         fi
         echo "" >> $GITHUB_STEP_SUMMARY
         
         echo "## 🌐 User Content Deployment" >> $GITHUB_STEP_SUMMARY
         if [ "${{ needs.deploy-frontend.result }}" = "success" ]; then
-          echo "✅ **Fresh Content Deployed:** Successfully updated GitHub Pages" >> $GITHUB_STEP_SUMMARY
-          echo "🔗 **User Access:** Latest articles available immediately" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Content Deployed:** Successfully updated GitHub Pages" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **User Access:** Latest AI-processed articles available immediately" >> $GITHUB_STEP_SUMMARY
           echo "📱 **Refresh Behavior:** Users see new content on page refresh/revisit" >> $GITHUB_STEP_SUMMARY
         elif [ "${{ needs.deploy-frontend.result }}" = "skipped" ]; then
-          echo "⏭️ **Deployment:** Skipped (no fresh content or disabled)" >> $GITHUB_STEP_SUMMARY
+          echo "⏭️ **Deployment:** Skipped (no processed content or disabled)" >> $GITHUB_STEP_SUMMARY
         else
           echo "❌ **Deployment:** Failed - users may see stale content" >> $GITHUB_STEP_SUMMARY
         fi
         echo "" >> $GITHUB_STEP_SUMMARY
         
-        echo "## 📊 Architecture Overview" >> $GITHUB_STEP_SUMMARY
-        echo "This workflow implements a **serverless AI-powered fresh news architecture**:" >> $GITHUB_STEP_SUMMARY
-        echo "1. **4-Hour Refresh Cycle** - Automatic fresh content every 4 hours" >> $GITHUB_STEP_SUMMARY
-        echo "2. **Content Overwriting** - Previous articles replaced with latest news" >> $GITHUB_STEP_SUMMARY
-        echo "3. **GitHub Actions** - Serverless backend with 4-stage AI pipeline" >> $GITHUB_STEP_SUMMARY
-        echo "4. **GitHub Pages** - Static hosting with real-time latest.json API" >> $GITHUB_STEP_SUMMARY
-        echo "5. **Groq AI Processing** - Multi-model pipeline for content curation" >> $GITHUB_STEP_SUMMARY
-        echo "6. **User Experience** - Fresh content on every page visit/refresh" >> $GITHUB_STEP_SUMMARY
+        echo "## 🏗️ Multi-Stage Architecture" >> $GITHUB_STEP_SUMMARY
+        echo "This workflow implements a **3-job pipeline architecture**:" >> $GITHUB_STEP_SUMMARY
+        echo "1. **📰 News Collection** - Gather raw articles from sources" >> $GITHUB_STEP_SUMMARY
+        echo "2. **🤖 Groq AI Processing** - Multi-stage AI pipeline for content curation" >> $GITHUB_STEP_SUMMARY
+        echo "3. **🌐 Frontend Deployment** - Deploy processed content to GitHub Pages" >> $GITHUB_STEP_SUMMARY
+        echo "4. **📊 Monitoring** - Track pipeline health and performance" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Benefits of Separation:**" >> $GITHUB_STEP_SUMMARY
+        echo "- Independent scaling of collection vs processing" >> $GITHUB_STEP_SUMMARY
+        echo "- Better error isolation and debugging" >> $GITHUB_STEP_SUMMARY
+        echo "- Separate Groq API rate limiting and monitoring" >> $GITHUB_STEP_SUMMARY
+        echo "- Artifact-based data flow between stages" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         
-        if [ "${{ needs.collect-and-process.result }}" != "success" ] || [ "${{ needs.deploy-frontend.result }}" = "failure" ]; then
+        if [ "${{ needs.collect-news.result }}" != "success" ] || [ "${{ needs.groq-processing.result }}" = "failure" ] || [ "${{ needs.deploy-frontend.result }}" = "failure" ]; then
           echo "## 🚨 Troubleshooting" >> $GITHUB_STEP_SUMMARY
           echo "Check individual job logs for detailed error information." >> $GITHUB_STEP_SUMMARY
-          echo "Ensure GitHub Pages is configured to use 'GitHub Actions' as source." >> $GITHUB_STEP_SUMMARY
+          echo "- News collection issues: Check source connectivity" >> $GITHUB_STEP_SUMMARY
+          echo "- Groq processing issues: Check API key and rate limits" >> $GITHUB_STEP_SUMMARY
+          echo "- Deployment issues: Ensure GitHub Pages is configured properly" >> $GITHUB_STEP_SUMMARY
         fi
