@@ -1,42 +1,75 @@
 {
   "name": "newsxp-ai",
-  "version": "1.0.0",
-  "description": "AI-curated daily news aggregation platform",
+  "version": "2.0.0",
+  "description": "🚀 Serverless AI-curated daily news aggregation platform powered by GitHub Actions + Pages",
   "main": "src/frontend/index.html",
+  "homepage": "https://siddanthemani.github.io/newsxp-ai",
   "scripts": {
     "dev": "python -m http.server 8000 --directory src/frontend",
     "collect": "cd src/backend/collectors && python collect_news.py",
-    "generate-api": "python src/backend/api/generate_api.py && cp -r src/backend/api/*.json src/frontend/api/ && cp -r src/backend/api/categories src/frontend/api/ 2>/dev/null || true",
+    "generate-api": "python src/backend/api/generate_api.py",
     "build": "npm run collect && npm run generate-api",
     "start": "npm run build && npm run dev",
-    "mcp-server": "cd src/services/mcp-server && npm start",
+    "monitor": "python serverless/monitor.py --url https://siddanthemani.github.io/newsxp-ai",
+    "monitor-json": "python serverless/monitor.py --url https://siddanthemani.github.io/newsxp-ai --json",
+    "health": "npm run monitor",
+    "deploy": "echo 'Deployment is automatic via GitHub Actions. Push to main branch or manually trigger workflow.'",
     "install-backend": "cd src/backend && pip install -r requirements.txt",
-    "install-mcp": "cd src/services/mcp-server && npm install"
+    "workflow-status": "gh run list --workflow=collect-news.yml --limit=5",
+    "workflow-logs": "gh run view --log",
+    "trigger-workflow": "gh workflow run collect-news.yml",
+    "debug-workflow": "gh workflow run collect-news.yml -f debug=true",
+    "test": "./scripts/test_architecture.sh",
+    "test-full": "./scripts/test_architecture.sh -t full",
+    "test-dry-run": "./scripts/test_architecture.sh -t dry-run",
+    "test-quick": "./scripts/test_architecture.sh -t quick",
+    "test-local": "python scripts/test_local_architecture.py"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/SiddanthEmani/newsxp-ai.git"
   },
   "keywords": [
+    "serverless",
     "news",
     "ai",
-    "aggregation",
+    "aggregation", 
+    "github-actions",
+    "github-pages",
+    "automation",
     "rss",
-    "automation"
+    "static-site",
+    "cdn"
   ],
   "author": "Siddanth Emani",
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0",
-    "python": ">=3.8.0"
+    "python": ">=3.11.0"
+  },
+  "architecture": {
+    "type": "serverless",
+    "backend": "github-actions",
+    "frontend": "github-pages",
+    "api": "static-json",
+    "cdn": "cloudflare",
+    "cost": "$0/month"
   },
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "concurrently": "^7.6.0",
-    "nodemon": "^2.0.20"
+    "http-server": "^14.1.1"
   },
   "optionalDependencies": {
     "typescript": "^4.9.0",
     "@types/node": "^18.0.0"
+  },
+  "serverless": {
+    "provider": "github",
+    "runtime": "python3.11",
+    "schedule": "rate(4 hours)",
+    "memory": "default",
+    "timeout": "15m",
+    "environment": {
+      "PYTHONUNBUFFERED": "1"
+    }
   }
 }

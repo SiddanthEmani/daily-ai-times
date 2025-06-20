@@ -193,7 +193,7 @@ export class CacheManager {
     }
 
     static showUpdateNotification() {
-        // Simple update notification
+        // Simple update notification - removed click-to-refresh functionality
         const notification = document.createElement('div');
         notification.style.cssText = `
             position: fixed;
@@ -206,10 +206,8 @@ export class CacheManager {
             z-index: 10000;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            cursor: pointer;
         `;
-        notification.textContent = '🔄 Update available - Click to refresh';
-        notification.onclick = () => window.location.reload();
+        notification.textContent = '🔄 Update available';
         
         document.body.appendChild(notification);
         

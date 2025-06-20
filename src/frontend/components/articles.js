@@ -66,16 +66,21 @@ export class ArticleRenderer {
         column1.innerHTML = '';
         column2.innerHTML = '';
         
-        // Distribute articles between columns
+        // Distribute articles between columns for better balance
+        // Put more articles in each column to accommodate up to 24 articles
         articles.forEach((article, index) => {
             const articleHTML = this.createArticleHTML(article);
             
+            // Alternate between columns for even distribution
             if (index % 2 === 0) {
                 column1.innerHTML += articleHTML;
             } else {
                 column2.innerHTML += articleHTML;
             }
         });
+        
+        // Show article count for debugging if needed
+        console.log(`Rendered ${articles.length} articles in news grid`);
     }
 
     static renderResearchGrid(articles) {

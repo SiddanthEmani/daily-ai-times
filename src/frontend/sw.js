@@ -1,8 +1,8 @@
-// Service Worker for NewsXP AI - No-Cache Version
-const CACHE_NAME = 'newsxp-ai-v3';
-const DATA_CACHE = 'newsxp-data-v2';
+// Service Worker for NewsXP AI - Serverless Edition
+const CACHE_NAME = 'newsxp-serverless-v1';
+const DATA_CACHE = 'newsxp-data-v1';
 
-// Static assets to cache - using relative paths
+// Static assets to cache - optimized for serverless
 const STATIC_ASSETS = [
     './',
     './index.html',
@@ -17,15 +17,15 @@ const STATIC_ASSETS = [
     './favicon.ico'
 ];
 
-// API endpoints to never cache (always fetch fresh)
+// API endpoints - never cache fresh news (serverless updates every 4h)
 const NEVER_CACHE_ENDPOINTS = [
     './api/latest.json',
     './api/widget.json'
 ];
 
-// API endpoints to cache with different strategies
-const API_ENDPOINTS = [
-    './api/archives.json' // Only cache archives, not latest news
+// API endpoints with longer cache tolerance
+const CACHE_FRIENDLY_ENDPOINTS = [
+    './api/archives.json' // Historical data changes less frequently
 ];
 
 // Cache duration for different types of content (in milliseconds)

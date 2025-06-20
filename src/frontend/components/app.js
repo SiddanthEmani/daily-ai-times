@@ -144,7 +144,7 @@ export class NewsApp {
         try {
             // Use relative path for API with cache-busting parameter
             const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}`;
+            const apiUrl = `./api/latest.json?t=${timestamp}`;  // Use latest endpoint
             
             // Fetch news data with timeout and no-cache headers
             const controller = new AbortController();
@@ -185,18 +185,21 @@ export class NewsApp {
             throw new Error('Invalid news data format');
         }
 
-        // Filter and categorize articles
-        const qualityArticles = this.newsData.articles.filter(ArticleUtils.isQualityArticle);
-        const { researchArticles, regularArticles } = ArticleUtils.categorizeArticles(qualityArticles);
+        // All articles are already filtered to top 25, no need for additional quality filtering
+        const allArticles = this.newsData.articles;
+        const { researchArticles, regularArticles } = ArticleUtils.categorizeArticles(allArticles);
 
-        // Update header
-        this.updateHeader(regularArticles.length + researchArticles.length);
+        // Update header with filtering info
+        this.updateHeader(allArticles.length, this.newsData.filter_type);
 
-        // Render content
+        // Render collection summary if available
+        this.renderCollectionSummary(this.newsData.collection_summary);
+
+        // Render content with all 25 articles
         this.renderContent(regularArticles, researchArticles);
     }
 
-    updateHeader(totalArticles) {
+    updateHeader(totalArticles, filterType = 'keyword_based') {
         try {
             // Update date
             const generatedDate = new Date(this.newsData.generated_at);
@@ -220,11 +223,47 @@ export class NewsApp {
                         </a>
                     </div>
                 </div>
-                <span class="articles-count">${totalArticles} articles featured<br>Last refreshed: ${new Date().toLocaleTimeString()}</span>`;
+                <div class="edition-right">
+                    <span class="articles-count">${totalArticles} featured articles</span>
+                    <br>
+                    <span class="last-updated">Last updated: ${DateUtils.formatLastUpdated(generatedDate)}</span>
+                </div>`;
+                
             DOMUtils.setElementContent('edition-info', editionInfo);
             
         } catch (error) {
             console.error('Error updating header:', error);
+        }
+    }
+
+    renderCollectionSummary(summaryData) {
+        const summarySection = document.getElementById('collection-summary');
+        const summaryContent = document.getElementById('summary-content');
+        
+        if (!summarySection || !summaryContent) return;
+        
+        if (summaryData && summaryData.summary) {
+            // Show and populate the summary section
+            summarySection.style.display = 'block';
+            
+            let summaryHtml = `<p class="summary-text">${summaryData.summary}</p>`;
+            
+            // Add key themes if available
+            if (summaryData.key_themes && summaryData.key_themes.length > 0) {
+                summaryHtml += `
+                    <div class="summary-themes">
+                        <div class="themes-title">Key Themes:</div>
+                        <div class="theme-tags">
+                            ${summaryData.key_themes.map(theme => `<span class="theme-tag">${theme}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            summaryContent.innerHTML = summaryHtml;
+        } else {
+            // Hide the summary section if no summary available
+            summarySection.style.display = 'none';
         }
     }
 
@@ -235,12 +274,14 @@ export class NewsApp {
                 ArticleRenderer.renderMainStory(regularArticles[0]);
             }
             
-            // Render news grid (remaining articles)
-            const gridArticles = regularArticles.slice(1, 15);
+            // Render remaining articles in news grid (up to 24 more articles)
+            const gridArticles = regularArticles.slice(1, 25);
             ArticleRenderer.renderNewsGrid(gridArticles);
             
-            // Render research papers
-            ArticleRenderer.renderResearchGrid(researchArticles);
+            // Render research papers separately if any
+            if (researchArticles.length > 0) {
+                ArticleRenderer.renderResearchGrid(researchArticles);
+            }
             
         } catch (error) {
             console.error('Error rendering content:', error);
@@ -253,7 +294,7 @@ export class NewsApp {
         let errorCode = 'UNKNOWN_ERROR';
         
         if (error.name === 'AbortError') {
-            errorMessage = 'Request timed out. Please try again.';
+            errorMessage = 'Request timed out. Please check back later.';
             errorCode = 'TIMEOUT_ERROR';
         } else if (error.message.includes('HTTP error')) {
             errorMessage = 'News service temporarily unavailable';
@@ -280,25 +321,14 @@ export class NewsApp {
             <h2 class="main-headline">Unable to Load News</h2>
             <div class="decorative-line"></div>
             <p class="main-description">
-                ${errorMessage}. Please try refreshing the page or check back later.
+                ${errorMessage}. Please check back later.
             </p>
-            <div class="error-actions">
-                <button onclick="window.newsApp.refresh()" class="retry-button">
-                    Try Again
-                </button>
-            </div>
         `;
         
         DOMUtils.setElementContent('main-story', fallbackHTML);
         DOMUtils.showError('news-column-1', errorMessage);
         DOMUtils.showError('news-column-2', errorMessage);
         DOMUtils.showError('research-grid', errorMessage);
-    }
-
-    // Public method to refresh news
-    async refresh() {
-        this.showLoadingStates();
-        await this.loadNews();
     }
 }
 
@@ -311,29 +341,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Make app available globally for debugging
         window.newsApp = app;
         
-        // Add keyboard shortcut for refreshing news (Ctrl/Cmd + Shift + R)
-        document.addEventListener('keydown', (event) => {
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-                event.preventDefault();
-                console.log('🔄 Refreshing news via keyboard shortcut');
-                app.refresh();
-            }
-        });
-        
         console.log('✅ NewsXP AI app initialized successfully');
-        console.log('💡 Press Ctrl/Cmd + Shift + R to refresh news content');
     } catch (error) {
         console.error('Failed to initialize news app:', error);
         
         // Show a basic error message to the user
-        const errorMessage = 'Failed to load the news application. Please refresh the page to try again.';
+        const errorMessage = 'Failed to load the news application. Please check back later.';
         document.body.innerHTML = `
             <div style="padding: 20px; text-align: center; color: #333;">
                 <h1>NewsXP AI</h1>
                 <p style="color: #d32f2f;">${errorMessage}</p>
-                <button onclick="window.location.reload()" style="padding: 10px 20px; margin-top: 10px; cursor: pointer;">
-                    Refresh Page
-                </button>
             </div>
         `;
     }

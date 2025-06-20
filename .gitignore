@@ -102,7 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+.env.*
 .venv
 env/
 venv/
@@ -419,3 +419,51 @@ src/backend/api/index.html
 
 # Frontend API files (copied from backend for local dev)
 src/frontend/api/
+
+# ================== Private Usage Reports ==================
+# Usage logs and reports - Available to owner only via GitHub Actions artifacts
+# These contain sensitive API usage data and should not be committed to public repo
+test_output/
+logs/
+*.usage.json
+*_usage_*.txt
+*_usage_*.json
+groq_api_usage.json
+cost_estimates.json
+groq_usage_summary.txt
+pipeline_reports/
+usage_reports/
+
+# ================== Build & Generated Files ==================
+# Node.js build outputs
+dist/
+build/
+.next/
+out/
+
+# Generated documentation
+docs/build/
+docs/_build/
+
+# MCP Server build files
+src/services/mcp-server/dist/
+src/services/mcp-server/build/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE and Editor files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Deployment artifacts
+deploy/
+deployment/

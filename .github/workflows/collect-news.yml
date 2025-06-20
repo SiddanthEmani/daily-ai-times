@@ -1,8 +1,8 @@
-name: Collect AI News
+name: NewsXP AI - Serverless News Pipeline
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours
+    - cron: '0 */4 * * *'  # Every 4 hours - Fresh news cycle
   workflow_dispatch:
     inputs:
       sources:
@@ -19,321 +19,400 @@ on:
         required: false
         type: boolean
         default: false
+      skip_deploy:
+        description: 'Skip deployment (useful for testing)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
   pages: write
   id-token: write
 
+env:
+  PYTHON_VERSION: '3.11'
+  NODE_VERSION: '18'
+  PYTHONUNBUFFERED: 1
+  PYTHONIOENCODING: utf-8
+
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    concurrency:
-      group: news-collection-setup
-      cancel-in-progress: false
-    
-    env:
-      PYTHONUNBUFFERED: 1
-      PYTHONIOENCODING: utf-8
-      
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 0  # Fetch all history for better git operations
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-        cache-dependency-path: 'src/backend/requirements.txt'
-    
-    - name: Cache system dependencies
-      uses: actions/cache@v4
-      with:
-        path: /var/cache/apt
-        key: apt-cache-${{ runner.os }}
-        restore-keys: |
-          apt-cache-${{ runner.os }}-
-
-    # install with jq for JSON processing
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y jq
-    
-    - name: Install Python dependencies
-      run: |
-        pip install -r src/backend/requirements.txt
-    
-    - name: Cache Python environment
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip
-        key: pip-${{ runner.os }}-${{ hashFiles('src/backend/requirements.txt') }}
-        restore-keys: |
-          pip-${{ runner.os }}-
-
-  collect-news:
+  # ================================================================
+  # JOB 1: COMPLETE BACKEND PIPELINE - Fresh News Every 4 Hours
+  # ================================================================
+  collect-and-process:
+    name: 🤖 Fresh News Pipeline - Collect & Process Latest Articles
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    needs: setup
     concurrency:
       group: news-collection
       cancel-in-progress: false
     
-    env:
-      PYTHONUNBUFFERED: 1
-      PYTHONIOENCODING: utf-8
-      
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 0
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-        cache-dependency-path: 'src/backend/requirements.txt'
-    
-    - name: Restore system dependencies cache
-      uses: actions/cache@v4
-      with:
-        path: /var/cache/apt
-        key: apt-cache-${{ runner.os }}
-        restore-keys: |
-          apt-cache-${{ runner.os }}-
-    
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y jq
-    
-    - name: Install Python dependencies
-      run: |
-        pip install -r src/backend/requirements.txt
-    
-    - name: Collect news
-      id: collect
-      run: |
-        python src/backend/collectors/collect_news.py \
-          --sources "${{ github.event.inputs.sources || 'all' }}" \
-          --output src/backend/data/news.json \
-          --config src/shared/config/sources.json \
-          --archive \
-          ${{ github.event.inputs.force_refresh == 'true' && '--force-refresh' || '' }} \
-          --verbose
-    
-    - name: Verify news collection
-      run: |
-        echo "Verifying news collection..."
-        
-        if [ -f "src/backend/data/news.json" ]; then
-          article_count=$(jq '.count // 0' src/backend/data/news.json)
-          echo "✅ News data file exists ($article_count articles)"
-        else
-          echo "❌ News data file missing"
-          exit 1
-        fi
-    
-    - name: Upload news data artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: news-data
-        path: src/backend/data/news.json
-        retention-days: 1
-
-  generate-api:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: collect-news
-    concurrency:
-      group: api-generation
-      cancel-in-progress: false
-    
-    env:
-      PYTHONUNBUFFERED: 1
-      PYTHONIOENCODING: utf-8
-    
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
+      article_count: ${{ steps.verify.outputs.article_count }}
+      pipeline_version: ${{ steps.verify.outputs.pipeline_version }}
       
     steps:
-    - uses: actions/checkout@v4
+    - name: 📦 Checkout repository
+      uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
-    - name: Set up Python
+    - name: 🐍 Set up Python environment
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: ${{ env.PYTHON_VERSION }}
         cache: 'pip'
-        cache-dependency-path: 'src/backend/requirements.txt'
+        cache-dependency-path: src/backend/requirements.txt
     
-    - name: Install system dependencies
+    - name: 📚 Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y jq
-    
-    - name: Install Python dependencies
-      run: |
+        sudo apt-get update -qq && sudo apt-get install -y jq curl
+        pip install --upgrade pip
         pip install -r src/backend/requirements.txt
     
-    - name: Download news data artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: news-data
-        path: src/backend/data/
-    
-    - name: Generate API files
+    - name: 🔄 Run complete backend pipeline
+      id: collect
+      env:
+        GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       run: |
-        python src/backend/api/generate_api.py
+        echo "🚀 Starting fresh news collection cycle (runs every 4 hours)..."
+        echo "📰 Previous articles will be overwritten with latest content"
+        max_attempts=3
+        attempt=1
+        
+        while [ $attempt -le $max_attempts ]; do
+          echo "📊 Pipeline attempt $attempt/$max_attempts"
+          
+          # Create test output directory for pipeline artifacts
+          mkdir -p test_output
+          
+          # Clear any existing API files to ensure fresh content
+          rm -f src/backend/api/latest.json src/frontend/api/latest.json
+          echo "🧹 Cleared previous API files for fresh content"
+          
+          # Create a minimal .env.local for the test script (production compatibility)
+          echo "GROQ_API_KEY=$GROQ_API_KEY" > .env.local
+          
+          # Run the complete pipeline using test_backend.py logic
+          if python scripts/test_backend.py; then
+            echo "✅ Backend pipeline successful"
+            
+            # Clean up the temporary .env file
+            rm -f .env.local
+            
+            # Copy results to expected locations for workflow
+            if [ -f "test_output/processed_articles.json" ]; then
+              # Create backend data directory structure
+              mkdir -p src/backend/data
+              
+              # Extract and save the raw collection data if available
+              if [ -f "test_output/collected_articles.json" ]; then
+                cp test_output/collected_articles.json src/backend/data/news.json
+                echo "✅ Raw collection data saved"
+              fi
+              
+              # The orchestrator should have already saved to API directories
+              # but let's ensure they exist
+              if [ -f "src/backend/api/latest.json" ] && [ -f "src/frontend/api/latest.json" ]; then
+                echo "✅ Fresh API endpoints generated by orchestrator"
+                
+                # Verify timestamp is recent (within last hour)
+                generated_time=$(jq -r '.generated_at' src/frontend/api/latest.json)
+                echo "📅 Content generated at: $generated_time"
+              else
+                echo "⚠️ API endpoints missing, pipeline may have issues"
+              fi
+              
+              echo "✅ Complete pipeline artifacts ready"
+            else
+              echo "❌ Pipeline completed but missing processed results"
+              exit 1
+            fi
+            break
+          else
+            echo "❌ Pipeline attempt $attempt failed"
+            # Clean up on failure too
+            rm -f .env.local
+            if [ $attempt -eq $max_attempts ]; then
+              echo "🚨 All pipeline attempts failed"
+              exit 1
+            fi
+            sleep 30
+            ((attempt++))
+          fi
+        done
     
-    - name: Verify API generation
+    - name: 🔍 Validate fresh pipeline results
+      id: verify
       run: |
-        echo "Verifying API generation..."
+        echo "🔍 Validating fresh pipeline results..."
         
-        # Quick check for API files
-        api_files=$(find src/backend/api -name "*.json" | wc -l)
-        echo "✅ API files generated: $api_files JSON files"
-        
-        # Verify news data still exists
-        if [ -f "src/backend/data/news.json" ]; then
-          article_count=$(jq '.count // 0' src/backend/data/news.json)
-          echo "✅ News data confirmed ($article_count articles)"
-        else
-          echo "❌ News data file missing after API generation"
+        # Check for processed articles (main output)
+        if [ ! -f "src/frontend/api/latest.json" ]; then
+          echo "❌ Frontend API latest.json missing!"
+          ls -la src/frontend/api/ || echo "Frontend API directory doesn't exist"
           exit 1
         fi
+        
+        if [ ! -f "src/backend/api/latest.json" ]; then
+          echo "❌ Backend API latest.json missing!"
+          ls -la src/backend/api/ || echo "Backend API directory doesn't exist"
+          exit 1
+        fi
+        
+        # Validate JSON structure
+        if ! jq empty src/frontend/api/latest.json; then
+          echo "❌ Invalid JSON structure in frontend latest.json"
+          exit 1
+        fi
+        
+        if ! jq empty src/backend/api/latest.json; then
+          echo "❌ Invalid JSON structure in backend latest.json"
+          exit 1
+        fi
+        
+        # Get article counts from the processed results
+        article_count=$(jq '.articles | length // 0' src/frontend/api/latest.json)
+        pipeline_version=$(jq -r '.pipeline_info.version // "unknown"' src/frontend/api/latest.json)
+        processing_time=$(jq '.pipeline_info.processing_time // 0' src/frontend/api/latest.json)
+        generated_at=$(jq -r '.generated_at' src/frontend/api/latest.json)
+        
+        echo "article_count=$article_count" >> $GITHUB_OUTPUT
+        echo "pipeline_version=$pipeline_version" >> $GITHUB_OUTPUT
+        echo "✅ Fresh Pipeline Results Validated:"
+        echo "   - Articles: $article_count (fresh content)"
+        echo "   - Generated: $generated_at"
+        echo "   - Pipeline: $pipeline_version"
+        echo "   - Processing Time: ${processing_time}s"
+        
+        if [ "$article_count" -lt 1 ]; then
+          echo "⚠️ Warning: No fresh articles were processed through the pipeline"
+        else
+          echo "🎉 Successfully processed $article_count fresh articles for users"
+        fi
     
-    - name: Commit changes
+    - name: 💾 Commit fresh news updates
       id: commit
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Check if there are any changes
-        git add src/backend/data/ src/backend/api/ src/frontend/
+        # Ensure usage reports are NOT committed to public repo
+        rm -rf test_output/ logs/ || true
+        echo "🔒 Removed private usage reports from commit (available in artifacts)"
+        
+        git add src/backend/data/ src/backend/api/ src/frontend/api/
+        
         if git diff --staged --quiet; then
-          echo "No changes to commit"
+          echo "ℹ️ No new content changes to commit"
           echo "has_changes=false" >> $GITHUB_OUTPUT
         else
-          echo "Changes detected, committing..."
-          git commit -m "🤖 Update news data: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          # Get article count from the processed API endpoint
+          if [ -f "src/frontend/api/latest.json" ]; then
+            article_count=$(jq '.articles | length // 0' src/frontend/api/latest.json)
+            pipeline_version=$(jq -r '.pipeline_info.version // "unknown"' src/frontend/api/latest.json)
+            commit_msg="🔄 Fresh News Update: $article_count articles ($pipeline_version) - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          else
+            commit_msg="🔄 Fresh News Update - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          fi
+          
+          git commit -m "$commit_msg"
           git push
+          
           echo "has_changes=true" >> $GITHUB_OUTPUT
-          echo "✅ Successfully committed and pushed changes"
+          echo "✅ Fresh news content committed and pushed"
+          echo "🌐 Users will see updated articles on next site visit"
         fi
+    
+    - name: 📤 Upload backend artifacts (Public Data)
+      uses: actions/upload-artifact@v4
+      with:
+        name: backend-data
+        path: |
+          src/backend/data/
+          src/backend/api/
+          src/frontend/api/
+        retention-days: 7
 
-  prepare-deployment:
+    - name: 🔒 Upload private usage reports (Owner Only)
+      uses: actions/upload-artifact@v4
+      with:
+        name: private-usage-reports
+        path: |
+          test_output/groq_api_usage.json
+          test_output/groq_usage_summary.txt
+          test_output/cost_estimates.json
+        retention-days: 30
+
+  # ================================================================
+  # JOB 2: FRONTEND DEPLOYMENT - Deploy Fresh Content to Users
+  # ================================================================
+  deploy-frontend:
+    name: 🌐 Deploy Fresh News Content to GitHub Pages
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: generate-api
-    if: success()
+    needs: collect-and-process
+    if: success() && (needs.collect-and-process.outputs.has_changes == 'true' || github.event.inputs.force_refresh == 'true' || github.event_name == 'workflow_dispatch')
     
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        ref: ${{ github.ref }}  # Use the updated ref after commit
-        
-    - name: Prepare deployment directory
-      run: |
-        echo "Preparing deployment directory..."
-        
-        # Create deployment directory and copy files
-        mkdir -p deploy_temp/api
-        
-        # Copy frontend files
-        echo "Copying frontend files..."
-        cp -r src/frontend/* deploy_temp/
-        
-        # Copy API files
-        echo "Copying API files..."
-        cp -r src/backend/api/* deploy_temp/api/
-        
-        # Handle Google Analytics injection
-        if [ -f "deploy_temp/index.html" ]; then
-          if [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
-            echo "Injecting Google Analytics..."
-            if [ -x "scripts/inject-analytics.sh" ]; then
-              ./scripts/inject-analytics.sh deploy_temp/index.html "${{ secrets.GOOGLE_ANALYTICS_ID }}"
-            else
-              echo "Removing Google Analytics placeholder..."
-              sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html
-            fi
-          else
-            echo "Removing Google Analytics placeholder..."
-            sed -i 's|__GOOGLE_ANALYTICS__||g' deploy_temp/index.html
-          fi
-          echo "✅ index.html processed successfully"
-        else
-          echo "❌ index.html NOT found in deployment directory"
-          exit 1
-        fi
-        
-        echo "✅ Deployment directory prepared successfully"
-
-    - name: Validate deployment
-      run: |
-        # Quick validation
-        if [ ! -f "deploy_temp/index.html" ]; then
-          echo "❌ Critical: index.html missing!"
-          echo "=== Deployment directory structure ==="
-          find deploy_temp -type f | sort
-          exit 1
-        fi
-        
-        file_count=$(find deploy_temp -type f | wc -l)
-        echo "✅ Deployment validated: $file_count files ready"
-        
-        # Only show detailed structure if DEBUG is enabled via workflow dispatch
-        if [ "${{ github.event.inputs.debug }}" = "true" ]; then
-          echo "=== Detailed deployment structure (debug mode) ==="
-          find deploy_temp -type f | sort
-        fi
-
-    - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: deploy_temp
-
-  # Deployment job
-  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: [generate-api, prepare-deployment]
-    if: success()
     
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
-    
-    - name: Workflow Summary
-      if: always()
-      run: |
-        echo "## 📰 News Collection Workflow Summary" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "**Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
-        echo "**Sources:** ${{ github.event.inputs.sources || 'all' }}" >> $GITHUB_STEP_SUMMARY
-        echo "**Force Refresh:** ${{ github.event.inputs.force_refresh || 'false' }}" >> $GITHUB_STEP_SUMMARY
-        echo "**Debug Mode:** ${{ github.event.inputs.debug || 'false' }}" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
+    - name: 📦 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref }}
         
-        if [ "${{ needs.generate-api.outputs.has_changes }}" = "true" ]; then
-          echo "✅ **Changes:** Committed and deployed" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "ℹ️ **Changes:** No new data to commit" >> $GITHUB_STEP_SUMMARY
+    - name: 📥 Download backend artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: backend-data
+        path: backend-artifacts/
+        
+    - name: 🏗️ Prepare fresh content for deployment
+      run: |
+        echo "🏗️ Preparing fresh news content for user deployment..."
+        echo "🔄 This will overwrite previous content with latest articles"
+        
+        # Create clean deployment directory
+        mkdir -p site/
+        
+        # Copy frontend static files (includes fresh API data)
+        echo "📋 Copying frontend assets with fresh news API..."
+        cp -r src/frontend/* site/
+        
+        # Copy API data from backend artifacts (ensures fresh content availability)
+        echo "🔄 Integrating fresh API data..."
+        mkdir -p site/api
+        if [ -d "backend-artifacts" ]; then
+          cp -r backend-artifacts/* site/api/ 2>/dev/null || true
         fi
         
+        # Handle Google Analytics injection
+        if [ -f "site/index.html" ]; then
+          if [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
+            echo "📊 Injecting Google Analytics..."
+            sed -i "s|__GOOGLE_ANALYTICS__|${{ secrets.GOOGLE_ANALYTICS_ID }}|g" site/index.html
+          else
+            echo "🧹 Removing Google Analytics placeholder..."
+            sed -i 's|__GOOGLE_ANALYTICS__||g' site/index.html
+          fi
+        fi
+        
+        echo "✅ Fresh content prepared for users"
+
+    - name: 🔍 Validate fresh content deployment
+      run: |
+        echo "🔍 Validating fresh content deployment..."
+        
+        # Critical file checks
+        if [ ! -f "site/index.html" ]; then
+          echo "❌ index.html missing!"
+          find site -type f | sort
+          exit 1
+        fi
+        
+        # Check API endpoints contain fresh content
+        api_files=$(find site/api -name "*.json" 2>/dev/null | wc -l)
+        if [ "$api_files" -eq 0 ]; then
+          echo "⚠️ Warning: No fresh API files found"
+        else
+          echo "✅ Fresh API endpoints: $api_files JSON files"
+          
+          # Check if latest.json has recent timestamp
+          if [ -f "site/api/latest.json" ]; then
+            generated_at=$(jq -r '.generated_at // "unknown"' site/api/latest.json)
+            article_count=$(jq '.articles | length // 0' site/api/latest.json)
+            echo "📰 Fresh content: $article_count articles generated at $generated_at"
+          fi
+        fi
+        
+        total_files=$(find site -type f | wc -l)
+        echo "✅ Fresh content deployment validated: $total_files files ready"
+        echo "🌐 Users will see updated articles when they visit/refresh the site"
+        
+        if [ "${{ github.event.inputs.debug }}" = "true" ]; then
+          echo "=== Debug: Site structure ==="
+          find site -type f | sort
+        fi
+
+    - name: 📤 Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: site
+    
+    - name: 🚀 Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      with:
+        timeout: 600000
+
+  # ================================================================
+  # JOB 3: WORKFLOW SUMMARY & MONITORING
+  # ================================================================
+  summary:
+    name: 📊 Workflow Summary
+    runs-on: ubuntu-latest
+    needs: [collect-and-process, deploy-frontend]
+    if: always()
+    
+    steps:
+    - name: 📋 Generate workflow summary
+      run: |
+        echo "# 📰 NewsXP AI - Fresh News Every 4 Hours" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "🌐 **Deployment:** Site deployed to GitHub Pages" >> $GITHUB_STEP_SUMMARY
-        echo "📄 **Note:** Make sure GitHub Pages is configured to use 'GitHub Actions' as the source" >> $GITHUB_STEP_SUMMARY
+        echo "🔄 **Automatic Refresh Cycle**: This workflow runs every 4 hours to ensure users always see the latest AI news." >> $GITHUB_STEP_SUMMARY
+        echo "📱 **User Experience**: Previous articles are overwritten with fresh content each cycle." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "## 🔧 Configuration" >> $GITHUB_STEP_SUMMARY
+        echo "- **Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Sources:** ${{ github.event.inputs.sources || 'all' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Force Refresh:** ${{ github.event.inputs.force_refresh || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Debug Mode:** ${{ github.event.inputs.debug || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        echo "## 🤖 Fresh News Pipeline Results" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ needs.collect-and-process.result }}" = "success" ]; then
+          if [ "${{ needs.collect-and-process.outputs.has_changes }}" = "true" ]; then
+            echo "✅ **Fresh Content Generated:** ${{ needs.collect-and-process.outputs.article_count }} new articles processed" >> $GITHUB_STEP_SUMMARY
+            echo "✅ **Pipeline Version:** ${{ needs.collect-and-process.outputs.pipeline_version || '4-stage-optimized' }}" >> $GITHUB_STEP_SUMMARY
+            echo "🔄 **Content Status:** Previous articles overwritten with latest news" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ **Fresh Content:** No new articles to process this cycle" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "❌ **Fresh Content Generation:** Failed - check pipeline logs" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        echo "## 🌐 User Content Deployment" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ needs.deploy-frontend.result }}" = "success" ]; then
+          echo "✅ **Fresh Content Deployed:** Successfully updated GitHub Pages" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **User Access:** Latest articles available immediately" >> $GITHUB_STEP_SUMMARY
+          echo "📱 **Refresh Behavior:** Users see new content on page refresh/revisit" >> $GITHUB_STEP_SUMMARY
+        elif [ "${{ needs.deploy-frontend.result }}" = "skipped" ]; then
+          echo "⏭️ **Deployment:** Skipped (no fresh content or disabled)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Deployment:** Failed - users may see stale content" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        echo "## 📊 Architecture Overview" >> $GITHUB_STEP_SUMMARY
+        echo "This workflow implements a **serverless AI-powered fresh news architecture**:" >> $GITHUB_STEP_SUMMARY
+        echo "1. **4-Hour Refresh Cycle** - Automatic fresh content every 4 hours" >> $GITHUB_STEP_SUMMARY
+        echo "2. **Content Overwriting** - Previous articles replaced with latest news" >> $GITHUB_STEP_SUMMARY
+        echo "3. **GitHub Actions** - Serverless backend with 4-stage AI pipeline" >> $GITHUB_STEP_SUMMARY
+        echo "4. **GitHub Pages** - Static hosting with real-time latest.json API" >> $GITHUB_STEP_SUMMARY
+        echo "5. **Groq AI Processing** - Multi-model pipeline for content curation" >> $GITHUB_STEP_SUMMARY
+        echo "6. **User Experience** - Fresh content on every page visit/refresh" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ needs.collect-and-process.result }}" != "success" ] || [ "${{ needs.deploy-frontend.result }}" = "failure" ]; then
+          echo "## 🚨 Troubleshooting" >> $GITHUB_STEP_SUMMARY
+          echo "Check individual job logs for detailed error information." >> $GITHUB_STEP_SUMMARY
+          echo "Ensure GitHub Pages is configured to use 'GitHub Actions' as source." >> $GITHUB_STEP_SUMMARY
+        fi

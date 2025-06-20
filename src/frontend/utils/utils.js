@@ -36,6 +36,33 @@ export class DateUtils {
     static compareDates(dateA, dateB) {
         return new Date(dateB) - new Date(dateA); // Newest first
     }
+
+    static formatLastUpdated(dateString) {
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffTime = Math.abs(now - date);
+        const diffMinutes = Math.floor(diffTime / (1000 * 60));
+        const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffMinutes < 1) {
+            return 'just now';
+        } else if (diffMinutes < 60) {
+            return `${diffMinutes} minute${diffMinutes === 1 ? '' : 's'} ago`;
+        } else if (diffHours < 24) {
+            return `${diffHours} hour${diffHours === 1 ? '' : 's'} ago`;
+        } else if (diffDays < 7) {
+            return `${diffDays} day${diffDays === 1 ? '' : 's'} ago`;
+        } else {
+            // For older dates, show the actual date
+            const options = { 
+                month: 'short', 
+                day: 'numeric',
+                year: date.getFullYear() !== now.getFullYear() ? 'numeric' : undefined
+            };
+            return date.toLocaleDateString('en-US', options);
+        }
+    }
 }
 
 // Text manipulation utilities
