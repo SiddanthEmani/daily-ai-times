@@ -19,15 +19,29 @@ import asyncio
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
 import time
+from pathlib import Path
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+    ]
+)
+
+logger = logging.getLogger(__name__)
 
 # Import deduplication utilities
 try:
     from .deduplication_utils import ArticleDeduplicator
 except ImportError:
-    # Fallback if import fails
-    ArticleDeduplicator = None
-
-logger = logging.getLogger(__name__)
+    try:
+        # Fallback for standalone execution
+        from deduplication_utils import ArticleDeduplicator
+    except ImportError:
+        # Final fallback if import fails
+        ArticleDeduplicator = None
 
 class NewsOrchestrator:
     def __init__(self, api_key: Optional[str] = None):
@@ -48,7 +62,6 @@ class NewsOrchestrator:
         self.Stage4FinalAgent = None
         
         try:
-            import sys
             sys.path.append(os.path.dirname(__file__))
             
             # Load new 4-stage agents
@@ -67,16 +80,15 @@ class NewsOrchestrator:
         except ImportError as e:
             logger.warning(f"AI agents not available: {e}")
             self.groq_available = False
+        except Exception as e:
+            logger.error(f"Error loading AI agents: {e}")
+            self.groq_available = False
             
         # Load pipeline configuration from app.json
         self.pipeline_config = self._load_pipeline_config()
     
     def _load_pipeline_config(self):
         """Load pipeline configuration from app.json."""
-        import json
-        import os
-        from pathlib import Path
-        
         try:
             # Get the project root directory
             current_dir = Path(__file__).parent
@@ -148,7 +160,17 @@ class NewsOrchestrator:
             return articles
             
         original_count = len(articles)
-        deduplicated = self.deduplicator.deduplicate_articles(articles, strategy=strategy) #type: ignore
+        if self.deduplicator:
+            deduplicated = self.deduplicator.deduplicate_articles(articles, strategy=strategy)
+        else:
+            # Simple fallback deduplication by URL
+            deduplicated = []
+            seen_urls = set()
+            for article in articles:
+                url = article.get('url', '')
+                if url and url not in seen_urls:
+                    seen_urls.add(url)
+                    deduplicated.append(article)
         
         if len(deduplicated) < original_count:
             removed_count = original_count - len(deduplicated)
@@ -240,7 +262,7 @@ class NewsOrchestrator:
                 pipeline_result['pipeline_stages']['stage1_bulk_filter'] = {
                     'model': stage1_result['model'],
                     'input_count': stage1_result['input_count'],
-                    'output_count': len(current_articles),  # Use cleaned count
+                    'output_count': len(current_articles),
                     'pass_rate': len(current_articles) / stage1_result['input_count'] if stage1_result['input_count'] > 0 else 0,
                     'target_pass_rate': stage1_result['target_pass_rate'],
                     'requests_made': stage1_result['requests_made'],
@@ -279,7 +301,7 @@ class NewsOrchestrator:
                 pipeline_result['pipeline_stages']['stage2_compound'] = {
                     'model': stage2_result['model'],
                     'input_count': stage2_result['input_count'],
-                    'output_count': len(current_articles),  # Use cleaned count
+                    'output_count': len(current_articles),
                     'pass_rate': len(current_articles) / stage2_result['input_count'] if stage2_result['input_count'] > 0 else 0,
                     'target_pass_rate': stage2_result['target_pass_rate'],
                     'requests_made': stage2_result['requests_made'],
@@ -329,7 +351,7 @@ class NewsOrchestrator:
                 pipeline_result['pipeline_stages']['stage3_expert'] = {
                     'model': stage3_result['model'],
                     'input_count': stage3_result['input_count'],
-                    'output_count': len(current_articles),  # Use cleaned count
+                    'output_count': len(current_articles),
                     'pass_rate': len(current_articles) / stage3_result['input_count'] if stage3_result['input_count'] > 0 else 0,
                     'target_pass_rate': stage3_result['target_pass_rate'],
                     'requests_made': stage3_result['requests_made'],
@@ -380,7 +402,7 @@ class NewsOrchestrator:
                 pipeline_result['pipeline_stages']['stage4_final'] = {
                     'model': stage4_result['model'],
                     'input_count': stage4_result['input_count'],
-                    'output_count': len(current_articles),  # Use cleaned count
+                    'output_count': len(current_articles),
                     'target_count': target_count,
                     'requests_made': stage4_result['requests_made'],
                     'successful_evaluations': stage4_result['successful_evaluations'],
@@ -466,7 +488,6 @@ class NewsOrchestrator:
         
         # Recent articles bonus
         try:
-            from datetime import datetime
             from dateutil import parser as date_parser
             pub_date = date_parser.parse(article.get('published_date', ''))
             hours_old = (datetime.now(timezone.utc) - pub_date).total_seconds() / 3600
@@ -554,8 +575,6 @@ class NewsOrchestrator:
             bool: Success status
         """
         try:
-            from pathlib import Path
-            
             project_path = Path(project_root)
             api_data = self.format_for_api(pipeline_result)
             
@@ -565,7 +584,7 @@ class NewsOrchestrator:
             backend_latest_path = backend_api_dir / "latest.json"
             
             with open(backend_latest_path, "w") as f:
-                json.dump(api_data, f, indent=2)
+                json.dump(api_data, f, indent=2, ensure_ascii=False)
             logger.info(f"✓ Saved processed articles to {backend_latest_path}")
             
             # Save to frontend API directory (for GitHub Pages)
@@ -574,7 +593,7 @@ class NewsOrchestrator:
             frontend_latest_path = frontend_api_dir / "latest.json"
             
             with open(frontend_latest_path, "w") as f:
-                json.dump(api_data, f, indent=2)
+                json.dump(api_data, f, indent=2, ensure_ascii=False)
             logger.info(f"✓ Saved processed articles to {frontend_latest_path}")
             
             return True
@@ -710,6 +729,25 @@ async def main():
     summary = orchestrator.get_pipeline_summary(pipeline_result)
     print(f"\nPipeline Summary:")
     print(json.dumps(summary, indent=2))
+    
+    # Save results to API directories for web consumption
+    project_root = Path(__file__).parent.parent.parent.parent
+    success = orchestrator.save_to_api_directories(pipeline_result, str(project_root))
+    
+    if success:
+        print("✅ Results saved to API directories")
+    else:
+        print("❌ Failed to save results to API directories")
+        
+    # Also save to test_output for workflow artifacts
+    test_output_dir = project_root / "test_output"
+    test_output_dir.mkdir(exist_ok=True)
+    
+    # Save processed articles
+    processed_file = test_output_dir / "processed_articles.json"
+    with open(processed_file, 'w') as f:
+        json.dump(pipeline_result, f, indent=2, ensure_ascii=False)
+    print(f"✅ Saved full pipeline result to {processed_file}")
 
 
 if __name__ == "__main__":

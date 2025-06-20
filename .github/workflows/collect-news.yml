@@ -161,6 +161,8 @@ jobs:
         sudo apt-get update -qq && sudo apt-get install -y jq curl
         pip install --upgrade pip
         pip install -r src/backend/requirements.txt
+        # Ensure dateutil is available for orchestrator
+        pip install python-dateutil
     
     - name: 📥 Download collected articles
       uses: actions/download-artifact@v4
@@ -185,15 +187,13 @@ jobs:
           rm -f src/backend/api/latest.json src/frontend/api/latest.json
           echo "🧹 Cleared previous API files for fresh content"
           
-          # Create a minimal .env.local for the orchestrator
-          echo "GROQ_API_KEY=$GROQ_API_KEY" > .env.local
+          # Ensure API directories exist
+          mkdir -p src/backend/api src/frontend/api
           
           # Run the Groq processing orchestrator with collected articles
-          if python src/backend/processors/orchestrator.py test_output/collected_articles.json; then
+          # Pass environment variable directly instead of .env.local
+          if timeout 18m env GROQ_API_KEY="$GROQ_API_KEY" python src/backend/processors/orchestrator.py test_output/collected_articles.json; then
             echo "✅ Groq processing pipeline successful"
-            
-            # Clean up the temporary .env file
-            rm -f .env.local
             
             # Verify the orchestrator generated the expected outputs
             if [ -f "src/backend/api/latest.json" ] && [ -f "src/frontend/api/latest.json" ]; then
@@ -206,12 +206,12 @@ jobs:
               echo "✅ Groq processing pipeline artifacts ready"
             else
               echo "⚠️ API endpoints missing, Groq pipeline may have issues"
+              ls -la src/backend/api/ || echo "Backend API directory doesn't exist"
+              ls -la src/frontend/api/ || echo "Frontend API directory doesn't exist"
             fi
             break
           else
             echo "❌ Groq processing attempt $attempt failed"
-            # Clean up on failure too
-            rm -f .env.local
             if [ $attempt -eq $max_attempts ]; then
               echo "🚨 All Groq processing attempts failed"
               exit 1
@@ -230,23 +230,31 @@ jobs:
         if [ ! -f "src/frontend/api/latest.json" ]; then
           echo "❌ Frontend API latest.json missing!"
           ls -la src/frontend/api/ || echo "Frontend API directory doesn't exist"
+          echo "Contents of src/frontend/:"
+          ls -la src/frontend/ || echo "Frontend directory doesn't exist"
           exit 1
         fi
         
         if [ ! -f "src/backend/api/latest.json" ]; then
           echo "❌ Backend API latest.json missing!"
           ls -la src/backend/api/ || echo "Backend API directory doesn't exist"
+          echo "Contents of src/backend/:"
+          ls -la src/backend/ || echo "Backend directory doesn't exist"
           exit 1
         fi
         
         # Validate JSON structure
         if ! jq empty src/frontend/api/latest.json; then
           echo "❌ Invalid JSON structure in frontend latest.json"
+          echo "Content preview:"
+          head -20 src/frontend/api/latest.json || echo "Cannot read file"
           exit 1
         fi
         
         if ! jq empty src/backend/api/latest.json; then
           echo "❌ Invalid JSON structure in backend latest.json"
+          echo "Content preview:"
+          head -20 src/backend/api/latest.json || echo "Cannot read file"
           exit 1
         fi
         
@@ -266,6 +274,7 @@ jobs:
         
         if [ "$article_count" -lt 1 ]; then
           echo "⚠️ Warning: No articles were processed through Groq pipeline"
+          echo "This may be expected if no articles passed the AI filters or if AI processing was skipped"
         else
           echo "🎉 Successfully processed $article_count articles with Groq AI"
         fi
@@ -365,7 +374,13 @@ jobs:
         echo "🔄 Integrating AI-processed API data..."
         mkdir -p site/api
         if [ -d "processed-artifacts" ]; then
-          cp -r processed-artifacts/* site/api/ 2>/dev/null || true
+          # Copy API data from the correct structure
+          if [ -d "processed-artifacts/src/frontend/api" ]; then
+            cp -r processed-artifacts/src/frontend/api/* site/api/ 2>/dev/null || true
+          fi
+          if [ -d "processed-artifacts/src/backend/api" ]; then
+            cp -r processed-artifacts/src/backend/api/* site/api/ 2>/dev/null || true
+          fi
         fi
         
         # Handle Google Analytics injection
