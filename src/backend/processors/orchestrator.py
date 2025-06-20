@@ -16,6 +16,7 @@ import sys
 import json
 import logging
 import asyncio
+import hashlib
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
 import time
@@ -40,7 +41,6 @@ except ImportError:
         # Fallback for standalone execution
         from deduplication_utils import ArticleDeduplicator
     except ImportError:
-        # Final fallback if import fails
         ArticleDeduplicator = None
 
 class NewsOrchestrator:
@@ -186,14 +186,43 @@ class NewsOrchestrator:
         # Remove articles that are incomplete or invalid
         valid_articles = []
         for article in articles:
-            # Check if article has minimum required fields
-            if (article.get('title') and 
-                article.get('url') and 
-                article.get('description') and
-                len(str(article.get('title', ''))) > 5):
+            # Ensure article is a dictionary and not None
+            if not isinstance(article, dict):
+                logger.debug(f"{stage_name}: Removed non-dict article: {type(article)}")
+                continue
+            
+            # Check if article has minimum required fields with proper validation
+            title = article.get('title', '').strip()
+            url = article.get('url', '').strip()
+            description = article.get('description', '').strip()
+            
+            # Validate required fields
+            if (title and len(title) > 5 and 
+                url and len(url) > 10 and 
+                description and len(description) > 10):
+                
+                # Ensure all required fields are properly formatted strings
+                article['title'] = str(title)
+                article['url'] = str(url)
+                article['description'] = str(description)
+                
+                # Ensure ID exists
+                if not article.get('id'):
+                    article['id'] = hashlib.md5(f"{url}{title}".encode()).hexdigest()
+                
+                # Ensure basic metadata exists
+                if not article.get('source'):
+                    article['source'] = 'Unknown'
+                if not article.get('category'):
+                    article['category'] = 'Other'
+                if not article.get('published_date'):
+                    article['published_date'] = datetime.now(timezone.utc).isoformat()
+                if not article.get('collected_at'):
+                    article['collected_at'] = datetime.now(timezone.utc).isoformat()
+                
                 valid_articles.append(article)
             else:
-                logger.debug(f"{stage_name}: Removed invalid article: {article.get('title', 'NO_TITLE')}")
+                logger.debug(f"{stage_name}: Removed invalid article - Title: '{title[:50]}...', URL: '{url[:50]}...', Desc length: {len(description)}")
         
         removed_count = len(articles) - len(valid_articles)
         if removed_count > 0:
@@ -438,6 +467,9 @@ class NewsOrchestrator:
             # Ensure proper category distribution (10 research + 15 regular = 25 total)
             current_articles = self._ensure_category_distribution(current_articles, target_count)
             
+            # Final comprehensive validation before returning results
+            current_articles = self._final_article_validation(current_articles)
+            
             # Final results
             pipeline_result['articles'] = current_articles
             pipeline_result['output_count'] = len(current_articles)
@@ -538,11 +570,31 @@ class NewsOrchestrator:
         """
         articles = pipeline_result.get('articles', [])
         
+        # Clean and validate articles before formatting for API
+        cleaned_articles = []
+        for article in articles:
+            if isinstance(article, dict) and article.get('title') and article.get('url'):
+                # Create a clean copy of the article
+                clean_article = {}
+                for key, value in article.items():
+                    # Ensure all values are JSON serializable
+                    try:
+                        json.dumps(value)  # Test if value is serializable
+                        clean_article[key] = value
+                    except (TypeError, ValueError) as e:
+                        logger.warning(f"Skipping non-serializable field '{key}' in article '{article.get('title', 'UNKNOWN')}': {e}")
+                        # Convert to string as fallback
+                        clean_article[key] = str(value) if value is not None else ""
+                
+                cleaned_articles.append(clean_article)
+            else:
+                logger.warning(f"Skipping invalid article in API formatting: {article}")
+        
         return {
             "generated_at": pipeline_result.get('generated_at', datetime.now(timezone.utc).isoformat()),
             "collection_time_seconds": pipeline_result.get('processing_time', 0),
-            "count": len(articles),
-            "articles": articles,
+            "count": len(cleaned_articles),
+            "articles": cleaned_articles,
             "pipeline_info": {
                 "version": pipeline_result.get('pipeline_version', '4-stage-optimized'),
                 "input_count": pipeline_result.get('input_count', 0),
@@ -559,6 +611,7 @@ class NewsOrchestrator:
                         "skipped": stage_data.get('skipped', False)
                     }
                     for stage_name, stage_data in pipeline_result.get('pipeline_stages', {}).items()
+                    if isinstance(stage_data, dict)
                 }
             }
         }
@@ -578,23 +631,38 @@ class NewsOrchestrator:
             project_path = Path(project_root)
             api_data = self.format_for_api(pipeline_result)
             
+            # Validate the API data before saving
+            try:
+                json.dumps(api_data)  # Test if data is serializable
+            except (TypeError, ValueError) as e:
+                logger.error(f"API data is not JSON serializable: {e}")
+                return False
+            
             # Save to backend API directory
             backend_api_dir = project_path / "src" / "backend" / "api"
             backend_api_dir.mkdir(parents=True, exist_ok=True)
             backend_latest_path = backend_api_dir / "latest.json"
             
-            with open(backend_latest_path, "w") as f:
-                json.dump(api_data, f, indent=2, ensure_ascii=False)
-            logger.info(f"✓ Saved processed articles to {backend_latest_path}")
+            try:
+                with open(backend_latest_path, "w", encoding='utf-8') as f:
+                    json.dump(api_data, f, indent=2, ensure_ascii=False, sort_keys=True)
+                logger.info(f"✓ Saved processed articles to {backend_latest_path}")
+            except Exception as e:
+                logger.error(f"Failed to save to backend API directory: {e}")
+                return False
             
             # Save to frontend API directory (for GitHub Pages)
             frontend_api_dir = project_path / "src" / "frontend" / "api"
             frontend_api_dir.mkdir(parents=True, exist_ok=True)
             frontend_latest_path = frontend_api_dir / "latest.json"
             
-            with open(frontend_latest_path, "w") as f:
-                json.dump(api_data, f, indent=2, ensure_ascii=False)
-            logger.info(f"✓ Saved processed articles to {frontend_latest_path}")
+            try:
+                with open(frontend_latest_path, "w", encoding='utf-8') as f:
+                    json.dump(api_data, f, indent=2, ensure_ascii=False, sort_keys=True)
+                logger.info(f"✓ Saved processed articles to {frontend_latest_path}")
+            except Exception as e:
+                logger.error(f"Failed to save to frontend API directory: {e}")
+                return False
             
             return True
             
@@ -696,6 +764,82 @@ class NewsOrchestrator:
         
         return final_articles[:target_count]
 
+    def _final_article_validation(self, articles: List[Dict]) -> List[Dict]:
+        """
+        Perform final comprehensive validation on articles before output.
+        
+        This ensures all articles have complete data and are JSON serializable.
+        """
+        if not articles:
+            return articles
+        
+        validated_articles = []
+        
+        for i, article in enumerate(articles):
+            try:
+                # Ensure article is a proper dictionary
+                if not isinstance(article, dict):
+                    logger.warning(f"Final validation: Article {i} is not a dictionary, skipping")
+                    continue
+                
+                # Required fields validation
+                required_fields = ['id', 'title', 'url', 'description', 'source', 'category']
+                missing_fields = [field for field in required_fields if not article.get(field)]
+                
+                if missing_fields:
+                    logger.warning(f"Final validation: Article '{article.get('title', 'UNKNOWN')}' missing fields: {missing_fields}")
+                    # Try to fix missing fields
+                    if not article.get('id'):
+                        article['id'] = hashlib.md5(f"{article.get('url', '')}{article.get('title', '')}".encode()).hexdigest()
+                    if not article.get('source'):
+                        article['source'] = 'Unknown'
+                    if not article.get('category'):
+                        article['category'] = 'Other'
+                    
+                    # Check again after fixes
+                    missing_fields = [field for field in required_fields if not article.get(field)]
+                    if missing_fields:
+                        logger.warning(f"Final validation: Still missing critical fields {missing_fields}, skipping article")
+                        continue
+                
+                # Test JSON serializability
+                try:
+                    json.dumps(article)
+                except (TypeError, ValueError) as e:
+                    logger.warning(f"Final validation: Article '{article.get('title', 'UNKNOWN')}' is not JSON serializable: {e}")
+                    # Try to fix by converting problematic values to strings
+                    fixed_article = {}
+                    for key, value in article.items():
+                        try:
+                            json.dumps(value)
+                            fixed_article[key] = value
+                        except (TypeError, ValueError):
+                            fixed_article[key] = str(value) if value is not None else ""
+                    article = fixed_article
+                
+                # Ensure consistent data types for key fields
+                article['title'] = str(article.get('title', ''))
+                article['url'] = str(article.get('url', ''))
+                article['description'] = str(article.get('description', ''))
+                article['source'] = str(article.get('source', ''))
+                article['category'] = str(article.get('category', ''))
+                
+                # Add processed timestamp if not present
+                if not article.get('processed_at'):
+                    article['processed_at'] = datetime.now(timezone.utc).isoformat()
+                
+                validated_articles.append(article)
+                
+            except Exception as e:
+                logger.error(f"Final validation: Error processing article {i}: {e}")
+                continue
+        
+        removed_count = len(articles) - len(validated_articles)
+        if removed_count > 0:
+            logger.info(f"Final validation: {len(articles)} -> {len(validated_articles)} articles ({removed_count} articles removed)")
+        
+        return validated_articles
+
 async def main():
     """Main entry point for the orchestrator."""
     
@@ -745,9 +889,28 @@ async def main():
     
     # Save processed articles
     processed_file = test_output_dir / "processed_articles.json"
-    with open(processed_file, 'w') as f:
-        json.dump(pipeline_result, f, indent=2, ensure_ascii=False)
-    print(f"✅ Saved full pipeline result to {processed_file}")
+    try:
+        with open(processed_file, 'w', encoding='utf-8') as f:
+            json.dump(pipeline_result, f, indent=2, ensure_ascii=False, sort_keys=True)
+        print(f"✅ Saved full pipeline result to {processed_file}")
+    except Exception as e:
+        print(f"❌ Failed to save pipeline result: {e}")
+        # Try to save a simplified version
+        try:
+            simplified_result = {
+                'input_count': pipeline_result.get('input_count', 0),
+                'output_count': pipeline_result.get('output_count', 0),
+                'processing_time': pipeline_result.get('processing_time', 0),
+                'pipeline_version': pipeline_result.get('pipeline_version', 'unknown'),
+                'generated_at': pipeline_result.get('generated_at', datetime.now(timezone.utc).isoformat()),
+                'error': 'Simplified save due to serialization issues',
+                'articles_count': len(pipeline_result.get('articles', []))
+            }
+            with open(processed_file, 'w', encoding='utf-8') as f:
+                json.dump(simplified_result, f, indent=2, ensure_ascii=False)
+            print(f"⚠️ Saved simplified pipeline result to {processed_file}")
+        except Exception as e2:
+            print(f"❌ Failed to save even simplified result: {e2}")
 
 
 if __name__ == "__main__":
