@@ -33,21 +33,20 @@ export class NewsApp {
                 console.warn('Analytics initialization failed:', analyticsError);
             }
             
-            // Register service worker for caching (don't fail if it doesn't work)
+            // DISABLED: Service worker registration to prevent caching
+            // Service workers can cache API responses which prevents fresh content
+            
+            // Unregister any existing service workers to prevent caching
             try {
-                if (typeof CacheManager !== 'undefined' && CacheManager.register) {
-                    const registration = await CacheManager.register();
-                    if (registration) {
-                        console.log('✅ Service Worker registered successfully');
-                    } else {
-                        console.log('ℹ️ Service Worker not supported or failed to register');
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    for (let registration of registrations) {
+                        await registration.unregister();
+                        console.log('Unregistered existing service worker');
                     }
-                } else {
-                    console.warn('CacheManager not available, skipping service worker registration');
                 }
             } catch (swError) {
-                console.warn('Service Worker registration failed, continuing without it:', swError);
-                // Continue without service worker - the app should still work
+                console.warn('Failed to unregister service workers:', swError);
             }
             
             // Preload critical resources
@@ -100,24 +99,13 @@ export class NewsApp {
     }
 
     async preloadCriticalResources() {
-        // Use relative paths with cache-busting parameters for fresh news data
-        const timestamp = Date.now();
-        const criticalUrls = [
-            `./api/latest.json?t=${timestamp}`,
-            `./api/widget.json?t=${timestamp}`
-        ];
+        // DISABLED: Preloading API resources to prevent caching
+        // Preloading can cause browsers to cache API responses
+        // Only preload static assets, never dynamic news data
         
-        // Add dynamic preload links for API resources
-        criticalUrls.forEach(url => {
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.href = url;
-            link.as = 'fetch';
-            link.crossOrigin = 'anonymous';
-            document.head.appendChild(link);
-        });
+        console.log('Skipping API preloading to ensure fresh content');
         
-        // Don't use service worker for preloading news data to avoid stale content
+        // Don't preload API data - fetch fresh each time
         // Service worker should only cache static assets, not dynamic news data
     }
 
@@ -142,11 +130,12 @@ export class NewsApp {
         this.performance.mark('news_load_start');
         
         try {
-            // Use relative path for API with cache-busting parameter
+            // Use relative path for API with cache-busting parameter and timestamp
             const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}`;  // Use latest endpoint
+            const randomSuffix = Math.random().toString(36).substring(7);
+            const apiUrl = `./api/latest.json?t=${timestamp}&r=${randomSuffix}`;  // Double cache busting
             
-            // Fetch news data with timeout and no-cache headers
+            // Fetch news data with timeout and aggressive no-cache headers
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
@@ -154,8 +143,11 @@ export class NewsApp {
                 signal: controller.signal,
                 cache: 'no-store', // Prevent browser caching
                 headers: {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache'
+                    'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+                    'Pragma': 'no-cache',
+                    'Expires': '0',
+                    'If-Modified-Since': 'Mon, 26 Jul 1997 05:00:00 GMT', // Force fresh request
+                    'If-None-Match': '*' // Disable ETag caching
                 }
             });
             
@@ -187,7 +179,7 @@ export class NewsApp {
 
         // All articles are already filtered to top 25, no need for additional quality filtering
         const allArticles = this.newsData.articles;
-        const { researchArticles, regularArticles } = ArticleUtils.categorizeArticles(allArticles);
+        const { headlineArticles, researchArticles, regularArticles } = ArticleUtils.categorizeArticles(allArticles);
 
         // Update header with filtering info
         this.updateHeader(allArticles.length, this.newsData.filter_type);
@@ -195,8 +187,8 @@ export class NewsApp {
         // Render collection summary if available
         this.renderCollectionSummary(this.newsData.collection_summary);
 
-        // Render content with all 25 articles
-        this.renderContent(regularArticles, researchArticles);
+        // **FIX**: Render content with proper headline distinction
+        this.renderContent(headlineArticles, regularArticles, researchArticles);
     }
 
     updateHeader(totalArticles, filterType = 'keyword_based') {
@@ -267,21 +259,27 @@ export class NewsApp {
         }
     }
 
-    renderContent(regularArticles, researchArticles) {
+    renderContent(headlineArticles, regularArticles, researchArticles) {
         try {
-            // Render main story
-            if (regularArticles.length > 0) {
-                ArticleRenderer.renderMainStory(regularArticles[0]);
+            // Render designated headline as main story
+            if (headlineArticles.length > 0) {
+                console.log('Rendering headline as main story:', headlineArticles[0].title);
+                ArticleRenderer.renderMainStory(headlineArticles[0]);
+            } else {
+                console.error('No headline article found in API response');
+                throw new Error('No headline article available');
             }
             
-            // Render remaining articles in news grid (up to 24 more articles)
-            const gridArticles = regularArticles.slice(1, 25);
-            ArticleRenderer.renderNewsGrid(gridArticles);
+            // Render regular articles in news grid
+            ArticleRenderer.renderNewsGrid(regularArticles);
             
-            // Render research papers separately if any
+            // Render research papers separately
             if (researchArticles.length > 0) {
                 ArticleRenderer.renderResearchGrid(researchArticles);
             }
+            
+            // Log the final article distribution for debugging
+            console.log(`Article distribution: ${headlineArticles.length} headline, ${regularArticles.length} regular articles, ${researchArticles.length} research papers`);
             
         } catch (error) {
             console.error('Error rendering content:', error);

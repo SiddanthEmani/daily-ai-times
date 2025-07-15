@@ -118,20 +118,11 @@ export class ArticleUtils {
     }
 
     static categorizeArticles(articles) {
-        const researchArticles = articles
-            .filter(article => article.category === 'Research')
-            .sort((a, b) => {
-                // Sort by published date (newest first), then by priority
-                const dateA = new Date(a.published_date);
-                const dateB = new Date(b.published_date);
-                const dateDiff = dateB - dateA;
-                if (dateDiff !== 0) return dateDiff;
-                return this.getArticlePriority(b) - this.getArticlePriority(a);
-            })
-            .slice(0, 10);
+        // Use article_type metadata to properly categorize articles
         
-        const regularArticles = articles
-            .filter(article => article.category !== 'Research')
+        // Find the headline article (should be exactly 1)
+        const headlineArticles = articles
+            .filter(article => article.article_type === 'headline')
             .sort((a, b) => {
                 // Sort by published date (newest first), then by priority
                 const dateA = new Date(a.published_date);
@@ -139,10 +130,37 @@ export class ArticleUtils {
                 const dateDiff = dateB - dateA;
                 if (dateDiff !== 0) return dateDiff;
                 return this.getArticlePriority(b) - this.getArticlePriority(a);
-            })
-            .slice(0, 15);
-
-        return { researchArticles, regularArticles };
+            });
+        
+        // Get research papers
+        const researchArticles = articles
+            .filter(article => article.article_type === 'research')
+            .sort((a, b) => {
+                // Sort by published date (newest first), then by priority
+                const dateA = new Date(a.published_date);
+                const dateB = new Date(b.published_date);
+                const dateDiff = dateB - dateA;
+                if (dateDiff !== 0) return dateDiff;
+                return this.getArticlePriority(b) - this.getArticlePriority(a);
+            });
+        
+        // Get regular articles
+        const regularArticles = articles
+            .filter(article => article.article_type === 'article')
+            .sort((a, b) => {
+                // Sort by published date (newest first), then by priority
+                const dateA = new Date(a.published_date);
+                const dateB = new Date(b.published_date);
+                const dateDiff = dateB - dateA;
+                if (dateDiff !== 0) return dateDiff;
+                return this.getArticlePriority(b) - this.getArticlePriority(a);
+            });
+        
+        return {
+            headlineArticles,
+            researchArticles,
+            regularArticles
+        };
     }
 }
 

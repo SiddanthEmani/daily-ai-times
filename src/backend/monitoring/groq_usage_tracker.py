@@ -231,13 +231,16 @@ class GroqUsageTracker:
         
         primary_model = max(models_used.items(), key=lambda x: x[1])[0] if models_used else 'unknown'
         
-        # Model-specific limits (from groq-limits.md)
+        # Model-specific limits (from groq-limits.md - updated July 2025)
         model_limits = {
             'gemma2-9b-it': {'rpm': 30, 'tpm': 15000, 'daily_tokens': 500000},
             'llama3-8b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
             'llama-3.1-8b-instant': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
             'llama3-70b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
+            'llama-3.3-70b-versatile': {'rpm': 30, 'tpm': 12000, 'daily_tokens': 100000},
             'deepseek-r1-distill-llama-70b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
+            'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
+            'mistral-saba-24b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
         }
         
         limits = model_limits.get(primary_model, {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000})

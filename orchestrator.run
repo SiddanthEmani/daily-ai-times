@@ -1,0 +1,51 @@
+#!/bin/bash
+# Shell wrapper for the NewsXP.ai orchestrator
+# Usage: ./orchestrator.run [options]
+# Options:
+#   --help            Show this help message
+
+# Get the directory of this script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Function to show help
+show_help() {
+    echo "NewsXP.ai Orchestrator - AI News Processing Pipeline"
+    echo ""
+    echo "Usage: ./orchestrator.run [options]"
+    echo ""
+    echo "Options:"
+    echo "  --help            Show this help message"
+    echo ""
+    echo "Environment Variables:"
+    echo "  GROQ_API_KEY      Required: Groq API key for AI processing"
+    echo "                    Can be set in .env.local file or as environment variable"
+    echo ""
+    echo "Examples:"
+    echo "  ./orchestrator.run                # Run complete pipeline with API generation"
+}
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --help|-h)
+            show_help
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Use --help for usage information"
+            exit 1
+            ;;
+    esac
+done
+
+# Set up environment and run
+cd "$DIR"
+export PYTHONPATH="$DIR/src"
+
+echo "🚀 Starting NewsXP.ai Orchestrator..."
+echo "📂 Working directory: $DIR"
+echo "🐍 Python path: $PYTHONPATH"
+
+# Run the orchestrator
+python3 src/backend/orchestrator.py

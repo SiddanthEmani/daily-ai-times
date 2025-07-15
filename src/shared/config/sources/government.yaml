@@ -1,0 +1,36 @@
+sources:
+  nist_ai_news:
+    url: https://www.nist.gov/news-events/news/rss.xml
+    type: rss
+    category: Government
+    enabled: true
+    description: NIST AI and technology news
+    legal_note: US Government publication - public domain
+  nih_ai_news:
+    url: https://www.nih.gov/news-releases/feed.xml
+    type: rss
+    category: Government
+    enabled: true
+    description: NIH medical AI research news
+    legal_note: US Government publication - public domain
+  darpa_ai_research:
+    url: https://www.darpa.mil/rss.xml
+    type: rss
+    category: Government
+    enabled: true
+    description: DARPA AI Research - Defense Advanced Research Projects Agency
+    legal_note: Public domain
+  uk_dsit_ai:
+    url: https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom
+    type: rss
+    category: Government
+    enabled: true
+    description: UK Department for Science, Innovation & Technology
+    legal_note: UK Government publication - Open Government License
+  uk_gov_ai_blog:
+    url: https://rtau.blog.gov.uk/category/artificial-intelligence/feed/
+    type: rss
+    category: Government
+    enabled: true
+    description: UK Government AI Blog - Responsible Technology Adoption Unit
+    legal_note: Open Government License

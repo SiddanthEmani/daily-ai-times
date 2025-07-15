@@ -1,0 +1,251 @@
+version: "4.0"
+description: "NewsXP.ai Swarm Intelligence Configuration - Production Ready"
+last_updated: "2025-01-20"
+
+agents:
+  bulk_intelligence_swarm:
+    description: "High-volume parallel processing with specialized expertise"
+    architecture: distributed_network
+    agents:
+      llama-3.1-8b-instant:
+        daily_limit: 14400
+        tokens_per_minute: 6000
+        tokens_per_day: 500000
+        specialization: content_quality_analysis
+        batch_size: 12
+        consensus_weight: 0.35
+        fallback_agents:
+          - gemma2-9b-it
+          - llama3-8b-8192
+        expertise_domains:
+          - content_assessment
+          - quality_scoring
+      gemma2-9b-it:
+        daily_limit: 14400
+        tokens_per_minute: 15000
+        tokens_per_day: 500000
+        specialization: relevance_scoring
+        batch_size: 20
+        consensus_weight: 0.35
+        fallback_agents:
+          - llama-3.1-8b-instant
+          - llama3-8b-8192
+        expertise_domains:
+          - relevance_analysis
+          - topic_matching
+      llama3-8b-8192:
+        daily_limit: 14400
+        tokens_per_minute: 6000
+        tokens_per_day: 500000
+        specialization: category_classification
+        batch_size: 12
+        consensus_weight: 0.30
+        fallback_agents:
+          - llama-3.1-8b-instant
+          - gemma2-9b-it
+        expertise_domains:
+          - categorization
+          - topic_classification
+
+  deep_intelligence_swarm:
+    description: "Complex reasoning and collaborative analysis with enhanced capabilities"
+    architecture: hierarchical_teams
+    agents:
+      meta-llama/llama-4-scout-17b-16e-instruct:
+        daily_limit: 1000
+        tokens_per_minute: 30000
+        tokens_per_day: unlimited
+        requests_per_minute: 30
+        specialization: comprehensive_fact_analysis
+        focus_areas:
+          - fact_verification
+          - credibility_assessment
+          - technical_analysis
+        batch_size: 12
+        consensus_weight: 0.35
+        analysis_depth: comprehensive
+        enable_fact_checking: true
+        enable_bias_detection: true
+        enable_impact_analysis: true
+        enable_credibility_scoring: true
+        temperature: 0.3
+        max_tokens: 4000
+        fallback_agents:
+          - llama-3.3-70b-versatile
+      llama-3.3-70b-versatile:
+        daily_limit: 1000
+        tokens_per_minute: 12000
+        tokens_per_day: 100000
+        requests_per_minute: 30
+        specialization: bias_detection_and_impact_analysis
+        focus_areas:
+          - bias_detection
+          - impact_analysis
+          - narrative_framing
+        batch_size: 10
+        consensus_weight: 0.35
+        analysis_depth: comprehensive
+        enable_fact_checking: true
+        enable_bias_detection: true
+        enable_impact_analysis: true
+        enable_credibility_scoring: true
+        temperature: 0.3
+        max_tokens: 4000
+        fallback_agents:
+          - meta-llama/llama-4-scout-17b-16e-instruct
+
+
+  consensus_orchestration_swarm:
+    description: "Multi-agent democratic decision-making with expert validation"
+    architecture: agent_supervisor
+    agents:
+      meta-llama/llama-4-maverick-17b:
+        daily_limit: 1000
+        tokens_per_minute: 12000
+        tokens_per_day: unlimited
+        role: consensus_coordinator
+        specialization: conflict_resolution
+        consensus_algorithms:
+          - weighted_voting
+          - semantic_clustering
+          - expertise_ranking
+      llama-3.3-70b-versatile:
+        daily_limit: 1000
+        tokens_per_minute: 12000
+        tokens_per_day: 100000
+        role: expert_validator
+        specialization: final_quality_assurance
+        validation_criteria:
+          - factual_accuracy
+          - source_credibility
+          - impact_assessment
+
+final_consensus:
+  description: "Multi-layer consensus combining initial consensus with deep intelligence analysis"
+  enabled: true
+  consensus_method: weighted_combination
+  weights:
+    deep_intelligence_weight: 0.6
+    initial_consensus_weight: 0.4
+  thresholds:
+    min_deep_intelligence_confidence: 0.4
+    min_combined_score: 0.4
+    veto_threshold: 0.3
+  quality_gates:
+    enabled: true
+    min_fact_check_confidence: 0.4  # Lowered from 0.6 to match min_deep_intelligence_confidence
+    max_bias_tolerance: 0.7
+    min_credibility_score: 0.5
+  algorithms:
+    weighted_combination:
+      enabled: true
+      description: "Combines initial consensus and deep intelligence scores with configurable weights"
+    unanimous_accept:
+      enabled: false
+      description: "Requires unanimous acceptance from both initial consensus and all deep intelligence agents"
+    veto_based:
+      enabled: false
+      description: "Allows high-confidence deep intelligence agents to veto initial consensus decisions"
+
+processing:
+  workflows:
+    swarm_batch_processing:
+      enabled: true
+      pattern: langgraph_network
+      phases:
+        - name: bulk_intelligence_phase
+          agents:
+            - bulk_intelligence_swarm
+          parallel: true
+          timeout: 300
+          retry_limit: 3
+        - name: deep_intelligence_phase
+          agents:
+            - deep_intelligence_swarm
+          parallel: true
+          timeout: 600
+          retry_limit: 2
+        - name: consensus_orchestration_phase
+          agents:
+            - consensus_orchestration_swarm
+          parallel: false
+          timeout: 180
+          retry_limit: 1
+
+  batch_processing:
+    enabled: true
+    max_batch_size: 100
+    min_batch_size: 10
+    auto_scaling: true
+    load_balancing: round_robin
+    large_scale_threshold: 200
+    inter_agent_delay: 45
+    enable_concurrent_processing: true
+
+  fault_tolerance:
+    enabled: true
+    max_retries: 3
+    backoff_strategy: exponential
+    circuit_breaker:
+      failure_threshold: 5
+      recovery_timeout: 300
+
+consensus:
+  algorithms:
+    weighted_voting:
+      enabled: true
+      weight_calculation: expertise_based
+      minimum_votes: 2
+      consensus_threshold: 0.6
+    semantic_clustering:
+      enabled: true
+      similarity_threshold: 0.75
+      min_cluster_size: 2
+    expertise_ranking:
+      enabled: true
+      domain_weights:
+        academic_research: 0.3
+        technical_innovation: 0.25
+        market_trends: 0.2
+        societal_impact: 0.15
+        content_quality: 0.1
+
+  validation:
+    required_agreement: 0.7
+    conflict_resolution: expert_arbitration
+    quality_gates:
+      min_confidence: 0.3
+      max_uncertainty: 0.2
+
+quota_management:
+  rate_limiting:
+    strategy: token_bucket
+    replenishment_rate: continuous
+    burst_capacity: 1.2
+
+  monitoring:
+    quota_warning_threshold: 0.8
+    quota_critical_threshold: 0.9
+    usage_tracking: true
+    predictive_scaling: true
+
+  fallback_strategies:
+    quota_exhaustion: agent_substitution
+    rate_limit_exceeded: exponential_backoff
+    service_unavailable: circuit_breaker
+
+observability:
+  metrics:
+    enabled: true
+    collection_interval: 60
+    retention_days: 30
+
+  logging:
+    level: INFO
+    structured: true
+    include_performance: true
+
+  alerting:
+    quota_alerts: true
+    performance_alerts: true
+    error_alerts: true

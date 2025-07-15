@@ -1,0 +1,283 @@
+mode: dev
+
+server:
+  port: 8000
+  host: localhost
+  static_directory: src/frontend
+
+collection:
+  interval_minutes: 240
+  sources_file: src/shared/config/sources
+  sources_format: yaml_modular
+  max_articles_to_collect: 1000
+  max_age_days: 14
+  deduplication:
+    strategy: enhanced
+    cache_size: 128
+
+
+pipeline:
+  version: swarm-intelligence-v1.0
+  target_articles_count: 25
+  swarm:
+    enable_bulk_intelligence: true
+    enable_deep_analysis: true
+    consensus_threshold: 0.7
+    max_processing_time_minutes: 15
+    enable_error_recovery: true
+    bulk_intelligence_models:
+      - llama-3.1-8b-instant
+      - gemma2-9b-it
+      - llama3-8b-8192
+    deep_intelligence_models:
+      - meta-llama/llama-4-scout-17b-16e-instruct
+      - llama-3.3-70b-versatile
+    consensus_model: meta-llama/llama-4-maverick-17b-128e-instruct
+  legacy_fallback:
+    enabled: true
+    stage1:
+      model: meta-llama/llama-4-scout-17b-16e-instruct
+      target_pass_rate: 0.65
+      time_budget_minutes: 15
+      batch_size: 5
+      max_requests_per_cycle: 25
+      input_multiplier: 20
+      api:
+        base_url: https://api.groq.com/openai/v1
+        timeout_seconds: 45
+        temperature: 0.2
+        top_p: 0.9
+        max_tokens_per_article: 50
+      rate_limits:
+        requests_per_minute: 30
+        tokens_per_minute: 30000
+        safety_margin: 0.9
+      retry:
+        max_attempts: 5
+        base_delay_seconds: 2.0
+        backoff_multiplier: 2
+      processing:
+        pause_between_batches_seconds: 0.5
+        title_max_length: 100
+        description_max_length: 200
+    stage2:
+      model: gemma2-9b-it
+      target_pass_rate: 0.30
+      time_budget_minutes: 8
+      max_requests_per_cycle: 25
+      batch_size: 10
+    stage3:
+      model: llama-3.1-8b-instant
+      target_pass_rate: 0.35
+      time_budget_minutes: 10
+      max_requests_per_cycle: 15
+      batch_size: 4
+    stage4:
+      model: meta-llama/llama-4-maverick-17b-128e-instruct
+      final_count: 25
+      time_budget_minutes: 20
+      max_requests_per_cycle: 25
+
+api:
+  output_directory: src/backend/api
+  enable_cors: true
+
+collectors:
+  field_mappings:
+    title_fields:
+      - title
+      - headline
+      - name
+      - display_name
+      - full_name
+    url_fields:
+      - url
+      - link
+      - permalink
+      - html_url
+      - web_url
+      - url_abs
+      - url_pdf
+      - guid
+    description_fields:
+      - summary
+      - description
+      - content
+      - subtitle
+      - body
+      - excerpt
+    date_fields:
+      - published
+      - date
+      - publishedAt
+      - created_at
+      - updated_at
+      - submission_date
+    author_fields:
+      - author
+      - creator
+      - author_name
+      - contributor
+    id_fields:
+      - id
+      - guid
+      - uuid
+      - identifier
+
+  processing:
+    max_articles_per_source: 20
+    max_title_truncate_length: 100
+    max_description_truncate_length: 500
+    default_source_priority: 5
+    error_message_max_length: 50
+
+  batch_processing:
+    default_batch_size: 10
+    max_concurrent_sources: 30
+    collection_timeout_seconds: 30
+    pause_between_batches_seconds: 0.5
+
+  http_handling:
+    success_status_codes:
+      - 200
+    client_error_codes:
+      404: "HTTP 404 - URL not found"
+      403: "HTTP 403 - Access forbidden"
+      410: "HTTP 410 - Resource gone"
+      429: "HTTP 429 - Rate limit exceeded"
+      401: "HTTP 401 - Unauthorized access"
+    server_error_codes:
+      500: "HTTP 500 - Internal server error"
+      502: "HTTP 502 - Bad gateway"
+      503: "HTTP 503 - Service unavailable"
+      504: "HTTP 504 - Gateway timeout"
+    retry_on_codes:
+      - 429
+      - 500
+      - 502
+      - 503
+      - 504
+    max_retries: 3
+    retry_base_delay: 1.0
+    retry_backoff_multiplier: 2.0
+
+  quality_filters:
+    min_title_length: 5
+    min_description_length: 10
+    max_title_length: 200
+    max_description_length: 1000
+    required_fields:
+      - id
+      - title
+      - url
+      - description
+    url_validation_enabled: true
+    content_deduplication_enabled: true
+
+  special_source_handling:
+    github:
+      commit_title_template: "New commits to {repo}: {message}"
+      commit_message_max_length: 100
+      max_commits_per_repo: 5
+      api_endpoints:
+        commits: "/repos/{owner}/{repo}/commits"
+        releases: "/repos/{owner}/{repo}/releases"
+        issues: "/repos/{owner}/{repo}/issues"
+    reddit:
+      post_title_template: "{title}"
+      comment_title_template: "Comment on: {parent_title}"
+      max_comment_depth: 3
+      min_score_threshold: 5
+    hacker_news:
+      story_title_template: "{title}"
+      comment_title_template: "HN Comment: {title}"
+      min_score_threshold: 10
+      story_types:
+        - story
+        - job
+        - poll
+
+  rss_parsing:
+    feedparser_options:
+      sanitize_html: true
+      resolve_uris: true
+      request_headers:
+        User-Agent: "NewsXP-AI/1.0 (News Aggregator)"
+    entry_limits:
+      max_entries_per_feed: 50
+      skip_older_than_days: 30
+
+  api_parsing:
+    default_headers:
+      User-Agent: "NewsXP-AI/1.0 (News Aggregator)"
+      Accept: "application/json, application/xml, text/xml, */*"
+      Accept-Encoding: "gzip, deflate"
+    response_format_detection:
+      json_indicators:
+        - application/json
+        - text/json
+      xml_indicators:
+        - application/xml
+        - text/xml
+        - application/rss+xml
+      html_indicators:
+        - text/html
+
+  content_extraction:
+    html_cleaning:
+      strip_tags: true
+      decode_entities: true
+      normalize_whitespace: true
+      max_consecutive_newlines: 2
+    text_normalization:
+      trim_whitespace: true
+      collapse_spaces: true
+      remove_empty_lines: true
+      max_line_length: null
+
+  error_handling:
+    log_levels:
+      connection_error: warning
+      timeout_error: warning
+      parse_error: error
+      validation_error: info
+      rate_limit_error: warning
+    failure_tracking:
+      track_failure_reasons: true
+      max_failure_history: 100
+      failure_pattern_detection: true
+
+  performance:
+    connection_pool:
+      max_connections: 100
+      max_connections_per_host: 30
+      dns_cache_ttl: 300
+      keepalive_timeout: 30
+      enable_cleanup_closed: true
+    memory_management:
+      max_cache_size_mb: 128
+      garbage_collection_interval: 1000
+      clear_cache_on_completion: true
+
+  monitoring:
+    collect_metrics: true
+    metrics_to_track:
+      - total_articles_collected
+      - successful_sources
+      - failed_sources
+      - empty_sources
+      - processing_time
+      - articles_per_source
+      - error_rates
+      - response_times
+    performance_thresholds:
+      max_processing_time_seconds: 300
+      min_success_rate: 0.7
+      max_error_rate: 0.3
+
+testing:
+  output_directory: test_output
+
+logging:
+  level: INFO
+  file: news_collection.log
