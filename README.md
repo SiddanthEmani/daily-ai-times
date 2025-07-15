@@ -1,6 +1,6 @@
 # NewsXP AI
 
-Serverless AI-powered news aggregation platform with automated content curation and 4-stage processing pipeline.
+Modern serverless AI-powered news aggregation platform with advanced multi-agent swarm intelligence and consensus-driven content curation.
 
 ## Live Demo
 
@@ -25,10 +25,14 @@ Serverless AI-powered news aggregation platform with automated content curation 
 ```
 
 ### Backend Pipeline (Every 4 Hours)
-1. **Data Collection** - Fetch from 30+ configured news sources
-2. **4-Stage AI Processing** - Groq LLM filtering, deduplication, and categorization
-3. **API Generation** - Create static JSON endpoints for frontend consumption
-4. **Deployment** - Automatic push to GitHub Pages
+1. **Collection** - Intelligent gathering from 30+ configured news sources
+2. **Bulk Intelligence Swarm** - Multi-agent parallel processing with specialized AI models
+3. **Initial Consensus** - Advanced consensus algorithms for content filtering
+4. **Deep Intelligence Analysis** - Sophisticated fact-checking, bias detection, and impact analysis
+5. **Final Consensus** - Weighted combination of initial and deep intelligence results
+6. **Content Classification** - Automatic categorization into headlines, articles, and research papers
+7. **API Generation** - Dynamic creation of optimized JSON endpoints
+8. **Deployment** - Seamless push to GitHub Pages with validation
 
 ### Frontend Features
 - **Responsive Design** - Newspaper-style layout optimized for all devices
@@ -58,7 +62,10 @@ cd newsxp-ai
 pip install -r src/backend/requirements.txt
 
 # Test the complete pipeline locally
-python scripts/test_backend.py
+./orchestrator.run
+
+# Or run with Python directly
+python src/backend/orchestrator.py
 ```
 
 ### For Contributors
@@ -72,48 +79,66 @@ python scripts/test_backend.py
 
 ## Features
 
-- **AI-Curated Content** - Multi-stage Groq LLM filtering and scoring
-- **Multiple Sources** - Research papers, industry news, open-source updates
-- **Smart Categorization** - Automatic content classification by topic
-- **Fresh Content** - Updates every 4 hours automatically
-- **Performance Monitoring** - Built-in analytics and pipeline health checks
-- **Deduplication** - Advanced content deduplication and cleanup
+### 🤖 Advanced AI Processing
+- **Multi-Agent Swarm Intelligence** - Distributed processing with specialized AI models
+- **Consensus Algorithms** - Advanced voting and confidence-based filtering
+- **Deep Intelligence Analysis** - Fact-checking, bias detection, and credibility scoring
+- **Adaptive Batch Processing** - Dynamic optimization for model rate limits
+
+### 📰 Content Management
+- **Smart Classification** - Automatic sorting into headlines, articles, and research papers
+- **Multi-Source Integration** - Research papers, industry news, open-source updates
+- **Advanced Deduplication** - Intelligent content cleanup and similarity detection
+- **Quality Gates** - Multi-tier confidence scoring and validation
+
+### ⚡ Performance & Reliability
+- **Fresh Content** - Updates every 4 hours with modern orchestrator
+- **Robust Error Handling** - Built-in timeouts, retries, and graceful degradation
+- **Performance Monitoring** - Detailed pipeline metrics and usage tracking
+- **Serverless Architecture** - Zero infrastructure management with GitHub Actions
 
 ## Development Commands
 
 | Command | Description |
 |---------|-------------|
-| `python scripts/test_backend.py` | Run complete pipeline test locally |
-| `npm run dev` | Start development server |
-| `npm run build` | Build production assets |
-| `npm run mcp-server` | Start MCP server |
+| `./orchestrator.run` | Run complete AI processing pipeline locally |
+| `python src/backend/orchestrator.py` | Run orchestrator directly with Python |
+| `npm run mcp-server` | Start MCP server for development tools |
+| Manual triggers via GitHub Actions | Test pipeline with custom parameters |
 
 ## Pipeline Configuration
 
-The 4-stage processing pipeline can be configured via:
+The modern AI pipeline is configured via YAML files in `src/shared/config/`:
 
-**Sources**: `src/shared/config/sources.json` - Configure news sources and RSS feeds  
-**Settings**: `src/shared/config/app.json` - Pipeline parameters and processing limits
+**Sources**: `sources/*.yaml` - Individual source configurations for each category  
+**Application**: `app.yaml` - General pipeline parameters and collection limits  
+**AI Swarm**: `swarm.yaml` - Multi-agent configuration, consensus rules, and model settings
 
-### Pipeline Settings
-- **Collection**: Max articles to collect (default: 2988)
-- **Target Output**: Final article count (default: 25)
-- **Stage 1**: Bulk filtering with 60% target pass rate
-- **Stages 2-4**: Compound, expert, and final agents for content refinement
+### AI Swarm Configuration
+- **Bulk Intelligence Agents** - Multiple specialized models for parallel processing
+- **Deep Intelligence Agents** - Advanced analysis models with enhanced capabilities
+- **Consensus Engine** - Voting algorithms and confidence thresholds
+- **Final Consensus** - Weighted combination rules and quality gates
+- **Rate Limiting** - Intelligent model-specific TPM management and batching
 
 ## Workflow Automation
 
-The GitHub Actions workflow (`collect-news.yml`) runs every 4 hours and includes:
+The GitHub Actions workflow (`collect-news.yml`) runs every 4 hours with modern serverless architecture:
 
-1. **Fresh News Pipeline** - Complete backend processing with retry logic
-2. **Content Deployment** - Automatic deployment to GitHub Pages
-3. **Monitoring & Reports** - Usage tracking and performance analytics
+### Automated Processing
+1. **AI News Processing Pipeline** - Single orchestrator handles complete workflow
+2. **Multi-Agent Swarm Intelligence** - Distributed AI processing with consensus algorithms  
+3. **Automatic API Generation** - Dynamic creation of frontend-ready JSON endpoints
+4. **GitHub Pages Deployment** - Seamless content delivery with validation
+5. **Pipeline Monitoring** - Detailed metrics, usage tracking, and performance analytics
 
-Manual triggers available with options for:
-- Custom source selection
-- Force refresh
-- Debug mode
-- Skip deployment (testing)
+### Manual Triggers
+Available via GitHub Actions interface with advanced options:
+- **Source Selection** - Choose specific sources or process all
+- **Force Refresh** - Override caching and force complete refresh
+- **Debug Mode** - Enable detailed deployment structure logging
+- **Skip Deployment** - Run processing without deploying (useful for testing)
+- **Pipeline Metrics** - Real-time processing statistics and agent performance
 
 ## License
 
