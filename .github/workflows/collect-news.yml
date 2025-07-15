@@ -84,12 +84,15 @@ jobs:
         # Ensure required directories exist
         mkdir -p src/backend/api src/frontend/api test_output
         
+        # Ensure orchestrator script is executable
+        chmod +x ./orchestrator.run
+        
         # Run the new orchestrator with proper timeout and error handling
-        if timeout 40m ./orchestrator.run --generate-api; then
+        if timeout 40m ./orchestrator.run; then
           echo "✅ AI processing pipeline completed successfully"
           
           # Validate outputs exist
-          if [ -f "src/frontend/api/latest.json" ] && [ -f "test_output/orchestrator_results_"*.json ]; then
+          if [ -f "src/frontend/api/latest.json" ] && ls test_output/orchestrator_results_*.json >/dev/null 2>&1; then
             # Extract pipeline metrics
             article_count=$(jq '.articles | length // 0' src/frontend/api/latest.json)
             pipeline_version=$(jq -r '.pipeline_info.version // "unknown"' src/frontend/api/latest.json)
