@@ -24,6 +24,10 @@ try:
     from .collectors.collectors import NewsCollector
     from ..shared.config.config_loader import ConfigLoader, get_swarm_config
     from ..shared.utils.logging_config import log_warning, log_error, log_step
+    from google import genai
+    from google.genai import types
+    import base64
+    import wave
 except ImportError:
     from backend.processors.bulk_agent import BulkFilteringAgent
     from backend.processors.consensus_engine import ConsensusEngine
@@ -32,6 +36,10 @@ except ImportError:
     from backend.collectors.collectors import NewsCollector
     from shared.config.config_loader import ConfigLoader, get_swarm_config
     from shared.utils.logging_config import log_warning, log_error, log_step
+    from google import genai
+    from google.genai import types
+    import base64
+    import wave
 
 logger = logging.getLogger(__name__)
 
@@ -663,6 +671,7 @@ class NewsProcessingPipeline:
         api_saved = self._save_api_files(classified_content, pipeline_info, processing_duration)
         if api_saved:
             logger.info("✅ API files generated successfully for frontend deployment")
+            self.generate_audio()
         else:
             log_warning(logger, "⚠️ Failed to generate API files - frontend may not update")
         
@@ -1009,6 +1018,156 @@ class NewsProcessingPipeline:
         
         logger.info(f"✅ Normalized {len(normalized_articles)} articles for frontend compatibility with type metadata")
         return normalized_articles
+
+    def generate_audio(self):
+        """Generate podcast audio using Gemini 2.5 TTS with correct format."""
+        # Check if GEMINI_API_KEY is available
+        gemini_api_key = os.getenv('GEMINI_API_KEY')
+        if not gemini_api_key:
+            logger.info("ℹ️ GEMINI_API_KEY not available - skipping audio generation")
+            logger.info("   💡 For local development: Set GEMINI_API_KEY in .env.local")
+            logger.info("   🚀 Audio generation works automatically in GitHub Actions")
+            return
+        
+        def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
+            """Create a proper WAV file with correct headers."""
+            with wave.open(filename, "wb") as wf:
+                wf.setnchannels(channels)
+                wf.setsampwidth(sample_width)
+                wf.setframerate(rate)
+                wf.writeframes(pcm)
+        
+        try:
+            # Read the latest articles
+            with open('src/backend/api/latest.json', 'r') as f:
+                data = json.load(f)
+            
+            # Extract content from articles, limiting to avoid token limits
+            articles = data.get('articles', [])
+            if not articles:
+                logger.warning("No articles found for audio generation")
+                return
+            
+            # Create rich content for TTS (use top 5 articles with full content for 2.5 Pro's 250k TPM)
+            story_summaries = []
+            for i, article in enumerate(articles[:5]):
+                title = article.get('title', '')
+                description = article.get('description', article.get('content', ''))[:500]  # More content for richer script
+                source = article.get('source', '')
+                category = article.get('category', '')
+                story_summaries.append(f"Story {i+1}: {title}\nSource: {source} | Category: {category}\nSummary: {description}")
+            
+            content_text = '\n\n'.join(story_summaries)
+            
+            # Create Gemini client using API key only
+            client = genai.Client(api_key=gemini_api_key)
+            
+            # Generate podcast script (optimized for TTS model's 10k TPM limit)
+            script_prompt = f"""Create a concise 2-3 minute news podcast script with two speakers alternating. 
+            Format as dialogue between Jane and Joe alternating speakers. Keep it engaging but brief.
+            
+            Structure:
+            Jane: Welcome to today's AI news update. I'm Jane with the latest developments.
+            Joe: And I'm Joe. Let's dive into today's top stories.
+            
+            Cover 3 key stories, alternating speakers:
+            - Each speaker gets 1-2 sentences per story
+            - Keep explanations clear and concise
+            - Make transitions smooth
+            
+            End with:
+            Jane: That's today's AI update.
+            Joe: Thanks for listening. See you next time.
+            
+            Keep the total script under 200 words to fit TTS model's 10k TPM limit.
+            Focus on the most important stories and key insights.
+            
+            Content to cover:
+            {content_text}"""
+            
+            script_response = client.models.generate_content(
+                model='gemini-2.5-pro',
+                contents=script_prompt
+            )
+            
+            if not script_response or not hasattr(script_response, 'text'):
+                raise ValueError("Invalid script response from Gemini")
+                
+            script = script_response.text
+            logger.info("✅ Podcast script generated successfully")
+            logger.debug(f"Generated script preview: {script[:1000]}...")
+            
+            # Format the script for TTS with correct prompt format
+            tts_prompt = f"""TTS the following conversation between Jane and Joe:
+{script}"""
+            
+            # Generate TTS audio from script using correct format
+            tts_response = client.models.generate_content(
+                model='gemini-2.5-flash-preview-tts',
+                contents=tts_prompt,
+                config=types.GenerateContentConfig(
+                    response_modalities=["AUDIO"],
+                    speech_config=types.SpeechConfig(
+                        multi_speaker_voice_config=types.MultiSpeakerVoiceConfig(
+                            speaker_voice_configs=[
+                                types.SpeakerVoiceConfig(
+                                    speaker='Jane',
+                                    voice_config=types.VoiceConfig(
+                                        prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                            voice_name='Kore'
+                                        )
+                                    )
+                                ),
+                                types.SpeakerVoiceConfig(
+                                    speaker='Joe',
+                                    voice_config=types.VoiceConfig(
+                                        prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                            voice_name='Puck'
+                                        )
+                                    )
+                                ),
+                            ]
+                        )
+                    )
+                )
+            )
+            
+            # Extract PCM data from response
+            if not tts_response or not tts_response.candidates:
+                raise ValueError("No TTS response received")
+            
+            candidate = tts_response.candidates[0]
+            if not candidate.content or not candidate.content.parts:
+                raise ValueError("No audio content in TTS response")
+            
+            audio_part = candidate.content.parts[0]
+            if not hasattr(audio_part, 'inline_data') or not audio_part.inline_data.data:
+                raise ValueError("No inline audio data in TTS response")
+            
+            # Get the PCM data (base64 decode the response data)
+            pcm_data = audio_part.inline_data.data
+            
+            # Ensure audio directory exists
+            audio_dir = Path('src/frontend/assets/audio')
+            audio_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Save as proper WAV file using wave module
+            audio_file = audio_dir / 'latest-podcast.wav'
+            wave_file(str(audio_file), pcm_data)
+            
+            # Verify file was created and has reasonable size
+            if not audio_file.exists():
+                raise ValueError("Audio file was not created")
+            
+            file_size = audio_file.stat().st_size
+            if file_size < 1000:
+                raise ValueError(f"Generated audio file too small: {file_size} bytes")
+            
+            logger.info(f"✅ Podcast audio generated successfully: {audio_file} ({file_size:,} bytes)")
+            
+        except Exception as e:
+            log_error(logger, f"Failed to generate podcast audio: {e}")
+            logger.debug(f"TTS generation error details: {traceback.format_exc()}")
 
 
 async def main():

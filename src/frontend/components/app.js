@@ -215,13 +215,14 @@ export class NewsApp {
                         </a>
                     </div>
                 </div>
+                <div class="audio-player"><audio controls src="assets/audio/latest-podcast.wav" title="Latest News Podcast"></audio></div>
                 <div class="edition-right">
                     <span class="articles-count">${totalArticles} featured articles</span>
                     <br>
                     <span class="last-updated">Last updated: ${DateUtils.formatLastUpdated(generatedDate)}</span>
                 </div>`;
                 
-            DOMUtils.setElementContent('edition-info', editionInfo);
+            DOMUtils.setElementContent('edition-text', editionInfo);
             
         } catch (error) {
             console.error('Error updating header:', error);
