@@ -1,16 +1,16 @@
 {
-  "updated": "2025-07-15T15:34:48.606092+00:00",
+  "updated": "2025-07-15T16:51:31.712139+00:00",
   "top_stories": [
     {
-      "article_id": "88423b1365ff2b42a083fef96573d989",
-      "title": "How the low-vision community embraced AI smart glasses",
+      "article_id": "bf2e16fffeb4afb064ad7de9b5917762",
+      "title": "Form’s Smart Swim 2 goggles add heart rate tracking",
       "source": "the_verge",
-      "url": "https://www.theverge.com/the-vergecast/701018/ray-ban-meta-smart-glasses-be-my-eyes-ceo-accessibility-tech",
-      "published_date": "2025-07-15T18:00:00+00:00",
+      "url": "https://www.theverge.com/news/707287/form-smart-swim-2-goggles-heart-rate-compass",
+      "published_date": "2025-07-15T14:03:35+00:00",
       "category": "Media",
-      "description": "It's easy to scoff at AI and ask, \"Who is actually asking for this?\" You might also think that smart glasses \"aren't worth it yet.\" But to the blind and low-vision community, the Ray-Ban Meta smart glasses and their AI features have been an absolute life-altering game-changer. And we need to talk about it. On […]",
-      "author": "Victoria Song",
-      "content": "It's easy to scoff at AI and ask, \"Who is actually asking for this?\" You might also think that smart glasses \"aren't worth it yet.\" But to the blind and low-vision community, the Ray-Ban Meta smart glasses and their AI features have been an absolute life-altering game-changer. And we need to talk about it. On […]",
+      "description": "Nearly six years after introducing its original smart swim googles, Form has announced an upgraded version called the Smart Swim 2. The goggles carry forward the same features as the original, including a built-in 72 x 40-pixel display showing a swimmer’s various performance metrics. However, they’re now smaller and lighter, and while battery life is […]",
+      "author": "Andrew Liszewski",
+      "content": "Nearly six years after introducing its original smart swim googles, Form has announced an upgraded version called the Smart Swim 2. The goggles carry forward the same features as the original, including a built-in 72 x 40-pixel display showing a swimmer’s various performance metrics. However, they’re now smaller and lighter, and while battery life is […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -44,31 +44,93 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.92,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.592155+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.693508+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.592156+00:00"
+        "timestamp": "2025-07-15T16:51:31.693510+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "15296642ae1534e26a13977e63431814",
+      "title": "Working with 400,000 teachers to shape the future of AI in schools",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/aft",
+      "published_date": "2025-07-08T07:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
+      "author": "",
+      "content": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.674956+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.674959+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "4249da30955962eca5f989114670a5dd",
       "title": "How Rapid7 automates vulnerability risk scores with ML pipelines using Amazon SageMaker AI",
       "source": "aws_ml_blog",
       "url": "https://aws.amazon.com/blogs/machine-learning/how-rapid7-automates-vulnerability-risk-scores-with-ml-pipelines-using-amazon-sagemaker-ai/",
-      "published_date": "2025-07-14T21:55:56+00:00",
+      "published_date": "2025-07-14T16:55:56+00:00",
       "category": "Industry",
       "description": "In this post, we share how Rapid7 implemented end-to-end automation for the training, validation, and deployment of ML models that predict CVSS vectors. Rapid7 customers have the information they need to accurately understand their risk and prioritize remediation measures.",
       "author": "Jimmy Cancilla",
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555835+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675404+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,150 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555837+00:00"
+        "timestamp": "2025-07-15T16:51:31.675406+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0ff74f362e7d887448e55385cab4db45",
-      "title": "The three-layer AI strategy for supply chains",
-      "source": "datarobot_blog",
-      "url": "https://www.datarobot.com/blog/ai-strategy-supply-chains/",
-      "published_date": "2025-07-10T18:15:00+00:00",
-      "category": "Industry",
-      "description": "AI adoption in supply chains isn’t about chasing trends. Learn the strategic framework that’s helping leaders build real, lasting impact. Read the full post. The post The three-layer AI strategy for supply chains appeared first on DataRobot.",
-      "author": "Vika Smilansky",
-      "content": "AI adoption in supply chains isn’t about chasing trends. Learn the strategic framework that’s helping leaders build real, lasting impact. Read the full post. The post The three-layer AI strategy for supply chains appeared first on DataRobot.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.556526+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.556527+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c02d1c194c34964ddd7ff02bb27b6b27",
-      "title": "AI is Killing the 5-Year IT Project",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/ai-is-killing-the-5-year-it-project/",
-      "published_date": "2025-07-15T14:31:58+00:00",
-      "category": "Industry",
-      "description": "The kind of projects that once defined the IT industry are “fading”. The post AI is Killing the 5-Year IT Project appeared first on Analytics India Magazine.",
-      "author": "Ankush Das",
-      "content": "The kind of projects that once defined the IT industry are “fading”. The post AI is Killing the 5-Year IT Project appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.558234+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.558236+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "40ab58c7cea700fd2b37799bceaf2fab",
-      "title": "Accelerate generative AI inference with NVIDIA Dynamo and Amazon EKS",
+      "article_id": "91b1198e618a2a988a6993809e3a6e58",
+      "title": "Fraud detection empowered by federated learning with the Flower framework on Amazon SageMaker AI",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-generative-ai-inference-with-nvidia-dynamo-and-amazon-eks/",
-      "published_date": "2025-07-15T18:03:32+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fraud-detection-empowered-by-federated-learning-with-the-flower-framework-on-amazon-sagemaker-ai/",
+      "published_date": "2025-07-11T16:03:51+00:00",
       "category": "Industry",
-      "description": "This post introduces NVIDIA Dynamo and explains how to set it up on Amazon EKS for automated scaling and streamlined Kubernetes operations. We provide a hands-on walkthrough, which uses the NVIDIA Dynamo blueprint on the AI on EKS GitHub repo by AWS Labs to provision the infrastructure, configure monitoring, and install the NVIDIA Dynamo operator.",
-      "author": "Baladithya Balamurugan",
-      "content": "This post introduces NVIDIA Dynamo and explains how to set it up on Amazon EKS for automated scaling and streamlined Kubernetes operations. We provide a hands-on walkthrough, which uses the NVIDIA Dynamo blueprint on the AI on EKS GitHub repo by AWS Labs to provision the infrastructure, configure monitoring, and install the NVIDIA Dynamo operator.",
+      "description": "In this post, we explore how SageMaker and federated learning help financial institutions build scalable, privacy-first fraud detection systems.",
+      "author": "Ray Wang",
+      "content": "In this post, we explore how SageMaker and federated learning help financial institutions build scalable, privacy-first fraud detection systems.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555742+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675809+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555744+00:00"
+        "timestamp": "2025-07-15T16:51:31.675811+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d9b7c49a2ac808c789f75b18ca2a93a1",
+      "title": "Upcoming Livestream: Techniques for Building High-Performance RAG Applications",
+      "source": "nvidia_developer",
+      "url": "https://www.addevent.com/event/Ah26137584",
+      "published_date": "2025-07-14T17:00:00+00:00",
+      "category": "Industry",
+      "description": "Discover leaderboard-winning RAG techniques, integration strategies, and deployment best practices.",
+      "author": "Nicola Sessions",
+      "content": "Discover leaderboard-winning RAG techniques, integration strategies, and deployment best practices.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.678235+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.678238+00:00"
       },
       "article_type": "article"
     }

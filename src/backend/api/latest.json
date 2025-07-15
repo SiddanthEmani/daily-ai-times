@@ -1,16 +1,16 @@
 {
-  "generated_at": "2025-07-15T15:34:48.601122+00:00",
+  "generated_at": "2025-07-15T16:51:31.707672+00:00",
   "articles": [
     {
-      "article_id": "88423b1365ff2b42a083fef96573d989",
-      "title": "How the low-vision community embraced AI smart glasses",
+      "article_id": "bf2e16fffeb4afb064ad7de9b5917762",
+      "title": "Form’s Smart Swim 2 goggles add heart rate tracking",
       "source": "the_verge",
-      "url": "https://www.theverge.com/the-vergecast/701018/ray-ban-meta-smart-glasses-be-my-eyes-ceo-accessibility-tech",
-      "published_date": "2025-07-15T18:00:00+00:00",
+      "url": "https://www.theverge.com/news/707287/form-smart-swim-2-goggles-heart-rate-compass",
+      "published_date": "2025-07-15T14:03:35+00:00",
       "category": "Media",
-      "description": "It's easy to scoff at AI and ask, \"Who is actually asking for this?\" You might also think that smart glasses \"aren't worth it yet.\" But to the blind and low-vision community, the Ray-Ban Meta smart glasses and their AI features have been an absolute life-altering game-changer. And we need to talk about it. On […]",
-      "author": "Victoria Song",
-      "content": "It's easy to scoff at AI and ask, \"Who is actually asking for this?\" You might also think that smart glasses \"aren't worth it yet.\" But to the blind and low-vision community, the Ray-Ban Meta smart glasses and their AI features have been an absolute life-altering game-changer. And we need to talk about it. On […]",
+      "description": "Nearly six years after introducing its original smart swim googles, Form has announced an upgraded version called the Smart Swim 2. The goggles carry forward the same features as the original, including a built-in 72 x 40-pixel display showing a swimmer’s various performance metrics. However, they’re now smaller and lighter, and while battery life is […]",
+      "author": "Andrew Liszewski",
+      "content": "Nearly six years after introducing its original smart swim googles, Form has announced an upgraded version called the Smart Swim 2. The goggles carry forward the same features as the original, including a built-in 72 x 40-pixel display showing a swimmer’s various performance metrics. However, they’re now smaller and lighter, and while battery life is […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -44,31 +44,93 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.92,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.592155+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.693508+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.592156+00:00"
+        "timestamp": "2025-07-15T16:51:31.693510+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "15296642ae1534e26a13977e63431814",
+      "title": "Working with 400,000 teachers to shape the future of AI in schools",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/aft",
+      "published_date": "2025-07-08T07:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
+      "author": "",
+      "content": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.674956+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.674959+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "4249da30955962eca5f989114670a5dd",
       "title": "How Rapid7 automates vulnerability risk scores with ML pipelines using Amazon SageMaker AI",
       "source": "aws_ml_blog",
       "url": "https://aws.amazon.com/blogs/machine-learning/how-rapid7-automates-vulnerability-risk-scores-with-ml-pipelines-using-amazon-sagemaker-ai/",
-      "published_date": "2025-07-14T21:55:56+00:00",
+      "published_date": "2025-07-14T16:55:56+00:00",
       "category": "Industry",
       "description": "In this post, we share how Rapid7 implemented end-to-end automation for the training, validation, and deployment of ML models that predict CVSS vectors. Rapid7 customers have the information they need to accurately understand their risk and prioritize remediation measures.",
       "author": "Jimmy Cancilla",
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555835+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675404+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,20 +183,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555837+00:00"
+        "timestamp": "2025-07-15T16:51:31.675406+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0ff74f362e7d887448e55385cab4db45",
-      "title": "The three-layer AI strategy for supply chains",
-      "source": "datarobot_blog",
-      "url": "https://www.datarobot.com/blog/ai-strategy-supply-chains/",
-      "published_date": "2025-07-10T18:15:00+00:00",
+      "article_id": "91b1198e618a2a988a6993809e3a6e58",
+      "title": "Fraud detection empowered by federated learning with the Flower framework on Amazon SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fraud-detection-empowered-by-federated-learning-with-the-flower-framework-on-amazon-sagemaker-ai/",
+      "published_date": "2025-07-11T16:03:51+00:00",
       "category": "Industry",
-      "description": "AI adoption in supply chains isn’t about chasing trends. Learn the strategic framework that’s helping leaders build real, lasting impact. Read the full post. The post The three-layer AI strategy for supply chains appeared first on DataRobot.",
-      "author": "Vika Smilansky",
-      "content": "AI adoption in supply chains isn’t about chasing trends. Learn the strategic framework that’s helping leaders build real, lasting impact. Read the full post. The post The three-layer AI strategy for supply chains appeared first on DataRobot.",
+      "description": "In this post, we explore how SageMaker and federated learning help financial institutions build scalable, privacy-first fraud detection systems.",
+      "author": "Ray Wang",
+      "content": "In this post, we explore how SageMaker and federated learning help financial institutions build scalable, privacy-first fraud detection systems.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -172,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.556526+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675809+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,20 +245,144 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.556527+00:00"
+        "timestamp": "2025-07-15T16:51:31.675811+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c02d1c194c34964ddd7ff02bb27b6b27",
-      "title": "AI is Killing the 5-Year IT Project",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/ai-is-killing-the-5-year-it-project/",
-      "published_date": "2025-07-15T14:31:58+00:00",
+      "article_id": "d9b7c49a2ac808c789f75b18ca2a93a1",
+      "title": "Upcoming Livestream: Techniques for Building High-Performance RAG Applications",
+      "source": "nvidia_developer",
+      "url": "https://www.addevent.com/event/Ah26137584",
+      "published_date": "2025-07-14T17:00:00+00:00",
       "category": "Industry",
-      "description": "The kind of projects that once defined the IT industry are “fading”. The post AI is Killing the 5-Year IT Project appeared first on Analytics India Magazine.",
-      "author": "Ankush Das",
-      "content": "The kind of projects that once defined the IT industry are “fading”. The post AI is Killing the 5-Year IT Project appeared first on Analytics India Magazine.",
+      "description": "Discover leaderboard-winning RAG techniques, integration strategies, and deployment best practices.",
+      "author": "Nicola Sessions",
+      "content": "Discover leaderboard-winning RAG techniques, integration strategies, and deployment best practices.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.678235+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.678238+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "8b3c11038de6fef5b9d2446d9dca1db7",
+      "title": "New Video: Build Self-Improving AI Agents with the NVIDIA Data Flywheel Blueprint",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/new-video-build-self-improving-ai-agents-with-the-nvidia-data-flywheel-blueprint/",
+      "published_date": "2025-07-03T18:41:57+00:00",
+      "category": "Industry",
+      "description": "AI agents powered by large language models are transforming enterprise workflows, but high inference costs and latency can limit their scalability and user...",
+      "author": "Sylendran Arunagiri",
+      "content": "AI agents powered by large language models are transforming enterprise workflows, but high inference costs and latency can limit their scalability and user...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.678990+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.678993+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "367068b0f27b0522f455523ab21e3dc2",
+      "title": "AWS Enters the Vibe Coding Market with Kiro AI",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/aws-enters-the-vibe-coding-market-with-kiro-ai/",
+      "published_date": "2025-07-14T14:08:40+00:00",
+      "category": "Industry",
+      "description": "Kiro is positioned as an agentic IDE, an environment where AI agents collaborate throughout the software development lifecycle, not just at the prototyping stage. The post AWS Enters the Vibe Coding Market with Kiro AI appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "Kiro is positioned as an agentic IDE, an environment where AI agents collaborate throughout the software development lifecycle, not just at the prototyping stage. The post AWS Enters the Vibe Coding Market with Kiro AI appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -234,7 +420,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.558234+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.680148+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,7 +431,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.558236+00:00"
+        "timestamp": "2025-07-15T16:51:31.680151+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "8a17eb3f8a8b877854a9d200d676173c",
+      "title": "Paradoxes in Credit Risk II: The Through-the-Door Problem",
+      "source": "r_bloggers",
+      "url": "https://www.r-bloggers.com/2025/07/paradoxes-in-credit-risk-ii-the-through-the-door-problem/",
+      "published_date": "2025-07-10T00:00:00+00:00",
+      "category": "Open Source",
+      "description": "In this post, I want to describe one of the most important aspects of credit risk modelling and explain how it also comes up in many other fields. Previous posts in this series: Paradoxes in Credit Risk I: Simpson’s Paradox What is the through-the-do... Continue reading: Paradoxes in Credit Risk II: The Through-the-Door Problem",
+      "author": "datascienceconfidential - r",
+      "content": "In this post, I want to describe one of the most important aspects of credit risk modelling and explain how it also comes up in many other fields. Previous posts in this series: Paradoxes in Credit Risk I: Simpson’s Paradox What is the through-the-do... Continue reading: Paradoxes in Credit Risk II: The Through-the-Door Problem",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.695738+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.695741+00:00"
       },
       "article_type": "article"
     },
@@ -254,7 +502,7 @@
       "title": "Accelerate generative AI inference with NVIDIA Dynamo and Amazon EKS",
       "source": "aws_ml_blog",
       "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-generative-ai-inference-with-nvidia-dynamo-and-amazon-eks/",
-      "published_date": "2025-07-15T18:03:32+00:00",
+      "published_date": "2025-07-15T13:03:32+00:00",
       "category": "Industry",
       "description": "This post introduces NVIDIA Dynamo and explains how to set it up on Amazon EKS for automated scaling and streamlined Kubernetes operations. We provide a hands-on walkthrough, which uses the NVIDIA Dynamo blueprint on the AI on EKS GitHub repo by AWS Labs to provision the infrastructure, configure monitoring, and install the NVIDIA Dynamo operator.",
       "author": "Baladithya Balamurugan",
@@ -296,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555742+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675267+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +555,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555744+00:00"
+        "timestamp": "2025-07-15T16:51:31.675270+00:00"
       },
       "article_type": "article"
     },
@@ -316,7 +564,7 @@
       "title": "Intelligent document processing at scale with generative AI and Amazon Bedrock Data Automation",
       "source": "aws_ml_blog",
       "url": "https://aws.amazon.com/blogs/machine-learning/intelligent-document-processing-at-scale-with-generative-ai-and-amazon-bedrock-data-automation/",
-      "published_date": "2025-07-11T21:49:04+00:00",
+      "published_date": "2025-07-11T16:49:04+00:00",
       "category": "Industry",
       "description": "This post presents an end-to-end IDP application powered by Amazon Bedrock Data Automation and other AWS services. It provides a reusable AWS infrastructure as code (IaC) that deploys an IDP pipeline and provides an intuitive UI for transforming documents into structured tables at scale. The application only requires the user to provide the input documents (such as contracts or emails) and a list of attributes to be extracted. It then performs IDP with generative AI.",
       "author": "Nikita Kozodoi",
@@ -355,96 +603,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555961+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675586+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555963+00:00"
+        "timestamp": "2025-07-15T16:51:31.675589+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "68d7c13f4dd83da9bf3f5965481cc561",
-      "title": "Implement user-level access control for multi-tenant ML platforms on Amazon SageMaker AI",
+      "article_id": "de1fe14756c6e8cde18ae2db7a89bee3",
+      "title": "New capabilities in Amazon SageMaker AI continue to transform how organizations develop AI models",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/implement-user-level-access-control-for-multi-tenant-ml-platforms-on-amazon-sagemaker-ai/",
-      "published_date": "2025-07-11T21:17:51+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/new-capabilities-in-amazon-sagemaker-ai-continue-to-transform-how-organizations-develop-ai-models/",
+      "published_date": "2025-07-10T19:08:49+00:00",
       "category": "Industry",
-      "description": "In this post, we discuss permission management strategies, focusing on attribute-based access control (ABAC) patterns that enable granular user access control while minimizing the proliferation of AWS Identity and Access Management (IAM) roles. We also share proven best practices that help organizations maintain security and compliance without sacrificing operational efficiency in their ML workflows.",
-      "author": "Durga Sury",
-      "content": "In this post, we discuss permission management strategies, focusing on attribute-based access control (ABAC) patterns that enable granular user access control while minimizing the proliferation of AWS Identity and Access Management (IAM) roles. We also share proven best practices that help organizations maintain security and compliance without sacrificing operational efficiency in their ML workflows.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.556050+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.556053+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "77405bc8dbc203f4b0908895bed4ccdc",
-      "title": "Accelerate AI Model Orchestration with NVIDIA Run:ai on AWS",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/accelerate-ai-model-orchestration-with-nvidia-runai-on-aws/",
-      "published_date": "2025-07-15T18:23:59+00:00",
-      "category": "Industry",
-      "description": "When it comes to developing and deploying advanced AI models, access to scalable, efficient GPU infrastructure is critical. But managing this infrastructure...",
-      "author": "Omri Geller",
-      "content": "When it comes to developing and deploying advanced AI models, access to scalable, efficient GPU infrastructure is critical. But managing this infrastructure...",
+      "description": "In this post, we share some of the new innovations in SageMaker AI that can accelerate how you build and train AI models. These innovations include new observability capabilities in SageMaker HyperPod, the ability to deploy JumpStart models on HyperPod, remote connections to SageMaker AI from local development environments, and fully managed MLflow 3.0.",
+      "author": "Ankur Mehrotra",
+      "content": "In this post, we share some of the new innovations in SageMaker AI that can accelerate how you build and train AI models. These innovations include new observability capabilities in SageMaker HyperPod, the ability to deploy JumpStart models on HyperPod, remote connections to SageMaker AI from local development environments, and fully managed MLflow 3.0.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -482,7 +668,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.557056+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.675942+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,20 +679,82 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.557057+00:00"
+        "timestamp": "2025-07-15T16:51:31.675944+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1a426bc90c282c2f595b76c28dcbd567",
-      "title": "Beyond Code: How Cashfree Is Turning Developers into AI-Powered Builders",
+      "article_id": "0f5a401050a25de0e69c5542e58aeb24",
+      "title": "NVIDIA cuQuantum Adds Dynamics Gradients, DMRG, and Simulation Speedup",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuquantum-adds-dynamic-gradients-dmrg-and-simulation-speedup/",
+      "published_date": "2025-07-07T19:00:00+00:00",
+      "category": "Industry",
+      "description": "NVIDIA cuQuantum is an SDK of optimized libraries and tools that accelerate quantum computing emulations at both the circuit and device level by orders of...",
+      "author": "Tom Lubowe",
+      "content": "NVIDIA cuQuantum is an SDK of optimized libraries and tools that accelerate quantum computing emulations at both the circuit and device level by orders of...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.678808+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.678811+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5dbd1478e0845306fdc12bc3803fe6ad",
+      "title": "Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn",
       "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/beyond-code-how-cashfree-is-turning-developers-into-ai-powered-builders/",
-      "published_date": "2025-07-14T18:50:29+00:00",
+      "url": "https://analyticsindiamag.com/ai-news-updates/pentagon-awards-openai-anthropic-xai-contracts-worth-200-mn/",
+      "published_date": "2025-07-15T09:55:03+00:00",
       "category": "Industry",
-      "description": "With MCP and AI at the core, Cashfree’s 200-member tech team is building multilingual, next-gen fintech products. The post Beyond Code: How Cashfree Is Turning Developers into AI-Powered Builders appeared first on Analytics India Magazine.",
-      "author": "Merin Susan John",
-      "content": "With MCP and AI at the core, Cashfree’s 200-member tech team is building multilingual, next-gen fintech products. The post Beyond Code: How Cashfree Is Turning Developers into AI-Powered Builders appeared first on Analytics India Magazine.",
+      "description": "The US defence department has awarded the companies contracts to enhance its integration of AI technologies for government missions. The post Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn appeared first on Analytics India Magazine.",
+      "author": "Smruthi Nadig",
+      "content": "The US defence department has awarded the companies contracts to enhance its integration of AI technologies for government missions. The post Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -540,84 +788,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.558482+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.679742+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.558484+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ce6b4a82f4588b8714153b9ebbf5f968",
-      "title": "SpaceX drops $2B into Musk’s xAI",
-      "source": "dataconomy",
-      "url": "https://dataconomy.com/2025/07/14/spacex-drops-2b-into-musks-xai/",
-      "published_date": "2025-07-14T15:32:40+00:00",
-      "category": "Industry",
-      "description": "SpaceX, a company led by Elon Musk, has reportedly agreed to invest $2 billion in xAI, another of Musk’s ventures. This investment, confirmed by a Wall Street Journal report citing investors close to SpaceX, forms part of a larger $5 billion equity raise for xAI, previously announced by Morgan Stanley at the end of June. […]",
-      "author": "Emre Çıtak",
-      "content": "SpaceX, a company led by Elon Musk, has reportedly agreed to invest $2 billion in xAI, another of Musk’s ventures. This investment, confirmed by a Wall Street Journal report citing investors close to SpaceX, forms part of a larger $5 billion equity raise for xAI, previously announced by Morgan Stanley at the end of June. […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.558638+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.558640+00:00"
+        "timestamp": "2025-07-15T16:51:31.679744+00:00"
       },
       "article_type": "article"
     },
@@ -626,7 +812,7 @@
       "title": "This is the biggest change to Android and Chrome in a decade",
       "source": "dataconomy",
       "url": "https://dataconomy.com/2025/07/14/this-is-the-biggest-change-to-android-and-chrome-in-a-decade/",
-      "published_date": "2025-07-14T14:52:08+00:00",
+      "published_date": "2025-07-14T09:52:08+00:00",
       "category": "Industry",
       "description": "Google has officially confirmed that it is in the process of merging Chrome OS with Android. This marks the first time the company has publicly acknowledged what had previously only been reported as internal plans. Sameer Samat, President of the Android ecosystem at Google, casually revealed the news in a conversation with a TechRadar journalist. […]",
       "author": "Emre Çıtak",
@@ -668,7 +854,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.558817+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.680617+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -679,20 +865,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.558818+00:00"
+        "timestamp": "2025-07-15T16:51:31.680620+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f70b317d9852227c584038c93bab1bb6",
-      "title": "Tencent Hunyuan3D-PolyGen: A model for ‘art-grade’ 3D assets",
-      "source": "ai_news",
-      "url": "https://www.artificialintelligence-news.com/news/tencent-hunyuan3d-polygen-a-model-for-art-grade-3d-assets/",
-      "published_date": "2025-07-07T19:55:38+00:00",
-      "category": "Media",
-      "description": "Tencent has released a model that could be quite literally game-changing for how developers create 3D assets. The new Hunyuan3D-PolyGen model is Tencent’s first attempt at delivering what they’re calling “art-grade” 3D generation, specifically built for the professionals who craft the digital worlds we play in. Creating high-quality 3D assets has always been a bottleneck […] The post Tencent Hunyuan3D-PolyGen: A model for ‘art-grade’ 3D assets appeared first on AI News.",
-      "author": "Ryan Daws",
-      "content": "Tencent has released a model that could be quite literally game-changing for how developers create 3D assets. The new Hunyuan3D-PolyGen model is Tencent’s first attempt at delivering what they’re calling “art-grade” 3D generation, specifically built for the professionals who craft the digital worlds we play in. Creating high-quality 3D assets has always been a bottleneck […] The post Tencent Hunyuan3D-PolyGen: A model for ‘art-grade’ 3D assets appeared first on AI News.",
+      "article_id": "0bb5665dbaa2d22beb237aac55901072",
+      "title": "AWS is getting an AI agent marketplace",
+      "source": "dataconomy",
+      "url": "https://dataconomy.com/2025/07/11/aws-is-getting-an-ai-agent-marketplace/",
+      "published_date": "2025-07-11T10:15:43+00:00",
+      "category": "Industry",
+      "description": "According to TechCrunch, Amazon Web Services (AWS) is launching an AI agent marketplace next week, with Anthropic confirmed as one of its partners. This development will be officially announced at the AWS Summit in New York City on July 15, according to individuals familiar with the plans. AWS and Anthropic did not provide comments regarding […]",
+      "author": "Aytun Çelebi",
+      "content": "According to TechCrunch, Amazon Web Services (AWS) is launching an AI agent marketplace next week, with Anthropic confirmed as one of its partners. This development will be officially announced at the AWS Summit in New York City on July 15, according to individuals familiar with the plans. AWS and Anthropic did not provide comments regarding […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -727,220 +913,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.560188+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.560189+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "bd2fb7e406c1a00385d9fcd58ea0748a",
-      "title": "I found 5 AI content detectors that can correctly identify AI text 100% of the time",
-      "source": "zdnet_ai",
-      "url": "https://www.zdnet.com/article/i-found-5-ai-content-detectors-that-can-correctly-identify-ai-text-100-of-the-time/",
-      "published_date": "2025-07-14T22:28:00+00:00",
-      "category": "Media",
-      "description": "I've been testing AI content detectors for two years now. They're getting more and more reliable. These are the ones you can count on.",
-      "author": "",
-      "content": "I've been testing AI content detectors for two years now. They're getting more and more reliable. These are the ones you can count on.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.560403+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.560405+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9279df489fdcdd26209798c8004dbc89",
-      "title": "How agentic AI is transforming the very foundations of business strategy",
-      "source": "zdnet_ai",
-      "url": "https://www.zdnet.com/article/how-agentic-ai-is-transforming-the-very-foundations-of-business-strategy/",
-      "published_date": "2025-07-13T18:00:13+00:00",
-      "category": "Media",
-      "description": "PwC's AI chief explains how forward-thinking leaders are preparing their people and processes for this unprecedented transformation.",
-      "author": "",
-      "content": "PwC's AI chief explains how forward-thinking leaders are preparing their people and processes for this unprecedented transformation.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.560520+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.560522+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b996b57a97ab540483027dc0c5df6bb0",
-      "title": "Computer Scientists Figure Out How To Prove Lies",
-      "source": "quanta_magazine",
-      "url": "https://www.quantamagazine.org/computer-scientists-figure-out-how-to-prove-lies-20250709/",
-      "published_date": "2025-07-09T19:22:18+00:00",
-      "category": "Media",
-      "description": "An attack on a fundamental proof technique reveals a glaring security issue for blockchains and other digital encryption schemes. The post Computer Scientists Figure Out How To Prove Lies first appeared on Quanta Magazine",
-      "author": "Erica Klarreich",
-      "content": "An attack on a fundamental proof technique reveals a glaring security issue for blockchains and other digital encryption schemes. The post Computer Scientists Figure Out How To Prove Lies first appeared on Quanta Magazine",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.589063+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.680925+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.589065+00:00"
+        "timestamp": "2025-07-15T16:51:31.680928+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c7ce68ec72ba3348601f8a63a78e85a2",
-      "title": "Carnegie Mellon University at ICML 2025",
-      "source": "cmu_ml_blog",
-      "url": "https://blog.ml.cmu.edu/2025/07/08/carnegie-mellon-university-at-icml-2025/",
-      "published_date": "2025-07-08T23:57:50+00:00",
-      "category": "Open Source",
-      "description": "CMU researchers are presenting 127 papers at the Forty-Second International Conference on Machine Learning (ICML 2025), held from July 13th-19th at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are working on: Here are our most frequent collaborator institutions: Table of Contents Oral Papers Spotlight Papers Poster Papers Accountability, Transparency, And Interpretability Active Learning And Interactive Learning Applications Causality Chemistry,...",
-      "author": "Keegan Harris",
-      "content": "CMU researchers are presenting 127 papers at the Forty-Second International Conference on Machine Learning (ICML 2025), held from July 13th-19th at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are working on: Here are our most frequent collaborator institutions: Table of Contents Oral Papers Spotlight Papers Poster Papers Accountability, Transparency, And Interpretability Active Learning And Interactive Learning Applications Causality Chemistry,...",
+      "article_id": "c505bd8f016905528e494c4302f7050e",
+      "title": "DARPA to announce AI Cyber Challenge winners, bring new experience to DEF CON 33",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2025/ai-cyber-challenge-winners-def-con-33",
+      "published_date": "2025-07-08T17:36:37+00:00",
+      "category": "Government",
+      "description": "Teams are competing for $8.5 million in Final Competition prize money, including the first-place grand prize of $4 million.",
+      "author": "outreach@darpa.mil",
+      "content": "Teams are competing for $8.5 million in Final Competition prize money, including the first-place grand prize of $4 million.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -975,41 +975,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.592576+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.674180+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.592578+00:00"
+        "timestamp": "2025-07-15T16:51:31.674184+00:00"
       },
       "article_type": "research"
     },
     {
-      "article_id": "53b22f1592f5ba7ac7c353948b441f85",
-      "title": "Strong filters, bold impact: COFFEE filters advance solution to spectrum congestion",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2025/coffee-solution-spectrum-congestion",
-      "published_date": "2025-07-07T19:37:52+00:00",
-      "category": "Government",
-      "description": "COFFEE is advancing compact RF filters that enable military and commercial systems to share crowded spectrum without interference.",
-      "author": "outreach@darpa.mil",
-      "content": "COFFEE is advancing compact RF filters that enable military and commercial systems to share crowded spectrum without interference.",
+      "article_id": "521a01f2c70f6a835a54be66dd72038e",
+      "title": "Anthropic's Claude dives into financial analysis. Here's what's new",
+      "source": "zdnet_ai",
+      "url": "https://www.zdnet.com/article/anthropics-claude-dives-into-financial-analysis-heres-whats-new/",
+      "published_date": "2025-07-15T11:00:17+00:00",
+      "category": "Media",
+      "description": "Claude can now help with portfolio management, investment decisions, and more.",
+      "author": "",
+      "content": "Claude can now help with portfolio management, investment decisions, and more.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.8
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1037,40 +1037,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.554893+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.682545+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.554895+00:00"
+        "timestamp": "2025-07-15T16:51:31.682547+00:00"
       },
       "article_type": "research"
     },
     {
-      "article_id": "d42364047113eb823fe414a5c6826ff0",
-      "title": "Introducing Deep Research in Azure AI Foundry Agent Service",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/",
-      "published_date": "2025-07-07T22:00:00+00:00",
-      "category": "Industry",
-      "description": "Announcing the public preview of Deep Research in Azure AI Foundry—an API and SDK-based offering of OpenAI’s advanced agentic research capability. The post Introducing Deep Research in Azure AI Foundry Agent Service appeared first on Microsoft Azure Blog.",
-      "author": "Yina Arenas",
-      "content": "Announcing the public preview of Deep Research in Azure AI Foundry—an API and SDK-based offering of OpenAI’s advanced agentic research capability. The post Introducing Deep Research in Azure AI Foundry Agent Service appeared first on Microsoft Azure Blog.",
+      "article_id": "5f17e9f575c0b6bc8b16aba1916e0932",
+      "title": "Thermodynamic Computing Becomes Cool",
+      "source": "acm_ai_news",
+      "url": "https://cacm.acm.org/news/thermodynamic-computing-becomes-cool/",
+      "published_date": "2025-07-14T15:50:03+00:00",
+      "category": "Research",
+      "description": "Exploring a path to more energy efficient, sustainable computing.",
+      "author": "Samuel Greengard",
+      "content": "Exploring a path to more energy efficient, sustainable computing.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.87,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1102,7 +1102,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.555568+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.685087+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1113,7 +1113,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.555570+00:00"
+        "timestamp": "2025-07-15T16:51:31.685090+00:00"
       },
       "article_type": "research"
     },
@@ -1122,7 +1122,7 @@
       "title": "The Future of Professional Ethics in Computing",
       "source": "acm_ai_news",
       "url": "https://cacm.acm.org/opinion/the-future-of-professional-ethics-in-computing/",
-      "published_date": "2025-07-09T20:19:53+00:00",
+      "published_date": "2025-07-09T15:19:53+00:00",
       "category": "Research",
       "description": "Computing professionals should use their privileges and insights to help societies navigate questions about digital technologies that traditional ethical theories find difficult to answer.",
       "author": "Susan Winter",
@@ -1130,9 +1130,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.6,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1160,35 +1160,283 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.562750+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.685233+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.562751+00:00"
+        "timestamp": "2025-07-15T16:51:31.685236+00:00"
       },
       "article_type": "research"
     },
     {
-      "article_id": "7882c227e1b2a8e5e479192c2cd06d10",
-      "title": "Think Clearly: Improving Reasoning via Redundant Token Pruning",
+      "article_id": "c7ce68ec72ba3348601f8a63a78e85a2",
+      "title": "Carnegie Mellon University at ICML 2025",
+      "source": "cmu_ml_blog",
+      "url": "https://blog.ml.cmu.edu/2025/07/08/carnegie-mellon-university-at-icml-2025/",
+      "published_date": "2025-07-08T18:57:50+00:00",
+      "category": "Open Source",
+      "description": "CMU researchers are presenting 127 papers at the Forty-Second International Conference on Machine Learning (ICML 2025), held from July 13th-19th at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are working on: Here are our most frequent collaborator institutions: Table of Contents Oral Papers Spotlight Papers Poster Papers Accountability, Transparency, And Interpretability Active Learning And Interactive Learning Applications Causality Chemistry,...",
+      "author": "Keegan Harris",
+      "content": "CMU researchers are presenting 127 papers at the Forty-Second International Conference on Machine Learning (ICML 2025), held from July 13th-19th at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are working on: Here are our most frequent collaborator institutions: Table of Contents Oral Papers Spotlight Papers Poster Papers Accountability, Transparency, And Interpretability Active Learning And Interactive Learning Applications Causality Chemistry,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.694228+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.694231+00:00"
+      },
+      "article_type": "research"
+    },
+    {
+      "article_id": "1206e5c764594f0cc308419865962078",
+      "title": "Domain-Adaptive Diagnosis of Lewy Body Disease with Transferability Aware Transformer",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2507.08806",
-      "published_date": "2025-07-15T09:00:00+00:00",
+      "url": "https://arxiv.org/abs/2507.08839",
+      "published_date": "2025-07-15T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2507.08806v1 Announce Type: new Abstract: Recent large language models have shown promising capabilities in long-form reasoning, following structured chains of thought before arriving at a final answer. However, we observe that these reasoning paths tend to include substantial redundancy; analyzing attention patterns reveals that attention scores are widely scattered, particularly incorrect answers exhibit greater attention sparsity. In this paper, we demonstrate that deliberately...",
-      "author": "Daewon Choi, Jimin Lee, Jihoon Tack, Woomin Song, Saket Dingliwal, Sai Muralidhar Jayanthi, Bhavana Ganesh, Jinwoo Shin, Aram Galstyan, Sravan Babu Bodapati",
-      "content": "arXiv:2507.08806v1 Announce Type: new Abstract: Recent large language models have shown promising capabilities in long-form reasoning, following structured chains of thought before arriving at a final answer. However, we observe that these reasoning paths tend to include substantial redundancy; analyzing attention patterns reveals that attention scores are widely scattered, particularly incorrect answers exhibit greater attention sparsity. In this paper, we demonstrate that deliberately...",
+      "description": "arXiv:2507.08839v1 Announce Type: new Abstract: Lewy Body Disease (LBD) is a common yet understudied form of dementia that imposes a significant burden on public health. It shares clinical similarities with Alzheimer's disease (AD), as both progress through stages of normal cognition, mild cognitive impairment, and dementia. A major obstacle in LBD diagnosis is data scarcity, which limits the effectiveness of deep learning. In contrast, AD datasets are more abundant, offering potential for...",
+      "author": "Xiaowei Yu, Jing Zhang, Tong Chen, Yan Zhuang, Minheng Chen, Chao Cao, Yanjun Lyu, Lu Zhang, Li Su, Tianming Liu, Dajiang Zhu",
+      "content": "arXiv:2507.08839v1 Announce Type: new Abstract: Lewy Body Disease (LBD) is a common yet understudied form of dementia that imposes a significant burden on public health. It shares clinical similarities with Alzheimer's disease (AD), as both progress through stages of normal cognition, mild cognitive impairment, and dementia. A major obstacle in LBD diagnosis is data scarcity, which limits the effectiveness of deep learning. In contrast, AD datasets are more abundant, offering potential for...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.697050+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.697052+00:00"
+      },
+      "article_type": "research"
+    },
+    {
+      "article_id": "bc8c25afe2cc90a7c0b1974b9bc8d06a",
+      "title": "Spatial ModernBERT: Spatial-Aware Transformer for Table and Key-Value Extraction in Financial Documents at Scale",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2507.08865",
+      "published_date": "2025-07-15T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2507.08865v1 Announce Type: new Abstract: Extracting tables and key-value pairs from financial documents is essential for business workflows such as auditing, data analytics, and automated invoice processing. In this work, we introduce Spatial ModernBERT-a transformer-based model augmented with spatial embeddings-to accurately detect and extract tabular data and key-value fields from complex financial documents. We cast the extraction task as token classification across three heads: (1)...",
+      "author": "Javis AI Team, Amrendra Singh, Maulik Shah, Dharshan Sampath",
+      "content": "arXiv:2507.08865v1 Announce Type: new Abstract: Extracting tables and key-value pairs from financial documents is essential for business workflows such as auditing, data analytics, and automated invoice processing. In this work, we introduce Spatial ModernBERT-a transformer-based model augmented with spatial embeddings-to accurately detect and extract tabular data and key-value fields from complex financial documents. We cast the extraction task as token classification across three heads: (1)...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.697861+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.697864+00:00"
+      },
+      "article_type": "research"
+    },
+    {
+      "article_id": "c13ec316a3ed4fb3b0cbcf105e37a652",
+      "title": "Introducing the NASA Onboard Artificial Intelligence Research (OnAIR) platform: an interview with Evana Gizzi",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/07/03/introducing-the-nasa-onboard-artificial-intelligence-research-onair-platform-an-interview-with-evana-gizzi/",
+      "published_date": "2025-07-03T10:11:47+00:00",
+      "category": "Open Source",
+      "description": "Evana Gizzi at the Microsoft Global Hackathon. Image credit: Microsoft. The Thirty-Seventh Annual Conference on Innovative Applications of Artificial Intelligence (IAAI 2025), which took place alongside AAAI 2025, serves as a showcase for successful applications and novel uses of AI. One such application is the Onboard Artificial Intelligence Research (OnAIR) platform, introduced by Evana Gizzi […]",
+      "author": "Lucy Smith",
+      "content": "Evana Gizzi at the Microsoft Global Hackathon. Image credit: Microsoft. The Thirty-Seventh Annual Conference on Innovative Applications of Artificial Intelligence (IAAI 2025), which took place alongside AAAI 2025, serves as a showcase for successful applications and novel uses of AI. One such application is the Onboard Artificial Intelligence Research (OnAIR) platform, introduced by Evana Gizzi […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-15T16:51:31.694142+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-15T16:51:31.694145+00:00"
+      },
+      "article_type": "research"
+    },
+    {
+      "article_id": "9c23ebf4d0cbc31b47b149e66dd95cdc",
+      "title": "Tech to protect images against AI scrapers can be beaten, researchers show",
+      "source": "the_register",
+      "url": "https://go.theregister.com/feed/www.theregister.com/2025/07/11/defenses_against_ai_scrapers_beaten/",
+      "published_date": "2025-07-11T20:10:41+00:00",
+      "category": "Media",
+      "description": "Data poisoning, meet data detox ai-pocalypse Computer scientists say they've devised a way to remove image-based protection mechanisms developed to protect artists from unwanted use of their work for AI training.…",
+      "author": "Thomas Claburn",
+      "content": "Data poisoning, meet data detox ai-pocalypse Computer scientists say they've devised a way to remove image-based protection mechanisms developed to protect artists from unwanted use of their work for AI training.…",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
@@ -1226,7 +1474,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.594428+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.693022+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1237,82 +1485,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.594430+00:00"
+        "timestamp": "2025-07-15T16:51:31.693025+00:00"
       },
       "article_type": "research"
     },
     {
-      "article_id": "d9b1f7ec5989ecf033da64c19e3132a6",
-      "title": "Representation learning with a transformer by contrastive learning for money laundering detection",
+      "article_id": "d85754eb95b4da1611598a25529e760c",
+      "title": "Assuring the Safety of Reinforcement Learning Components: AMLAS-RL",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2507.08835",
-      "published_date": "2025-07-15T09:00:00+00:00",
+      "url": "https://arxiv.org/abs/2507.08848",
+      "published_date": "2025-07-15T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2507.08835v1 Announce Type: new Abstract: The present work tackles the money laundering detection problem. A new procedure is introduced which exploits structured time series of both qualitative and quantitative data by means of a transformer neural network. The first step of this procedure aims at learning representations of time series through contrastive learning (without any labels). The second step leverages these representations to generate a money laundering scoring of all...",
-      "author": "Harold Gu\\'eneau (SAMM), Alain Celisse (LPP, MODAL), Pascal Delange",
-      "content": "arXiv:2507.08835v1 Announce Type: new Abstract: The present work tackles the money laundering detection problem. A new procedure is introduced which exploits structured time series of both qualitative and quantitative data by means of a transformer neural network. The first step of this procedure aims at learning representations of time series through contrastive learning (without any labels). The second step leverages these representations to generate a money laundering scoring of all...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.594591+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.594592+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "cc7e9546ec5f34d1ba58f9c202001d19",
-      "title": "LoRA Is Slower Than You Think",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2507.08833",
-      "published_date": "2025-07-15T09:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2507.08833v1 Announce Type: new Abstract: Low-Rank Adaptation (LoRA) is one of the most widely used techniques for fine-tuning large language models (LLMs). By introducing a small number of trainable low-rank weight matrices, LoRA substantially reduces the number of parameters that need to be updated, offering significant advantages in memory consumption and computational efficiency compared to full fine-tuning. However, we observed that LoRA does not consistently provide speed...",
-      "author": "Seokmin Ko",
-      "content": "arXiv:2507.08833v1 Announce Type: new Abstract: Low-Rank Adaptation (LoRA) is one of the most widely used techniques for fine-tuning large language models (LLMs). By introducing a small number of trainable low-rank weight matrices, LoRA substantially reduces the number of parameters that need to be updated, offering significant advantages in memory consumption and computational efficiency compared to full fine-tuning. However, we observed that LoRA does not consistently provide speed...",
+      "description": "arXiv:2507.08848v1 Announce Type: new Abstract: The rapid advancement of machine learning (ML) has led to its increasing integration into cyber-physical systems (CPS) across diverse domains. While CPS offer powerful capabilities, incorporating ML components introduces significant safety and assurance challenges. Among ML techniques, reinforcement learning (RL) is particularly suited for CPS due to its capacity to handle complex, dynamic environments where explicit models of interaction between...",
+      "author": "Calum Corrie Imrie, Ioannis Stefanakos, Sepeedeh Shahbeigi, Richard Hawkins, Simon Burton",
+      "content": "arXiv:2507.08848v1 Announce Type: new Abstract: The rapid advancement of machine learning (ML) has led to its increasing integration into cyber-physical systems (CPS) across diverse domains. While CPS offer powerful capabilities, incorporating ML components introduces significant safety and assurance challenges. Among ML techniques, reinforcement learning (RL) is particularly suited for CPS due to its capacity to handle complex, dynamic environments where explicit models of interaction between...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -1346,208 +1532,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.82,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.594540+00:00"
+        "consensus_timestamp": "2025-07-15T16:51:31.697682+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-15T15:34:48.594541+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "c505bd8f016905528e494c4302f7050e",
-      "title": "DARPA to announce AI Cyber Challenge winners, bring new experience to DEF CON 33",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2025/ai-cyber-challenge-winners-def-con-33",
-      "published_date": "2025-07-08T22:36:37+00:00",
-      "category": "Government",
-      "description": "Teams are competing for $8.5 million in Final Competition prize money, including the first-place grand prize of $4 million.",
-      "author": "outreach@darpa.mil",
-      "content": "Teams are competing for $8.5 million in Final Competition prize money, including the first-place grand prize of $4 million.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.554931+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.554933+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "9ad622ff9c4db095a6f0f7619271259d",
-      "title": "Scientists reportedly hiding AI text prompts in academic papers to receive positive peer reviews",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2025/jul/14/scientists-reportedly-hiding-ai-text-prompts-in-academic-papers-to-receive-positive-peer-reviews",
-      "published_date": "2025-07-14T08:14:27+00:00",
-      "category": "Media",
-      "description": "Research papers found carrying hidden white text giving instructions not to highlight negatives as concern grows over use of large language models for peer reviewAcademics are reportedly hiding prompts in preprint papers for artificial intelligence tools, encouraging them to give positive reviews.Nikkei reported on 1 July it had reviewed research papers from 14 academic institutions in eight countries, including Japan, South Korea, China, Singapore and two in the United States. Continue...",
-      "author": "Josh Taylor Technology reporter",
-      "content": "Research papers found carrying hidden white text giving instructions not to highlight negatives as concern grows over use of large language models for peer reviewAcademics are reportedly hiding prompts in preprint papers for artificial intelligence tools, encouraging them to give positive reviews.Nikkei reported on 1 July it had reviewed research papers from 14 academic institutions in eight countries, including Japan, South Korea, China, Singapore and two in the United States. Continue...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.590910+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.590911+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "77e470203148cef023fff8735ee57813",
-      "title": "ChatGPT advises women to ask for lower salaries, study finds",
-      "source": "neural_thenextweb",
-      "url": "https://thenextweb.com/news/chatgpt-advises-women-to-ask-for-lower-salaries-finds-new-study",
-      "published_date": "2025-07-11T17:33:25+00:00",
-      "category": "Media",
-      "description": "New research has found that large language models (LLMs) such as ChatGPT consistently advise women to ask for lower salaries than men, even when both have identical qualifications. The study was co-authored by Ivan Yamshchikov, a professor of AI and robotics at the Technical University of Würzburg-Schweinfurt (THWS) in Germany. Yamshchikov, who is also the founder of Pleias, a French–German startup building ethically trained language models for regulated industries, worked with his team to test...",
-      "author": "Siôn Geschwindt",
-      "content": "New research has found that large language models (LLMs) such as ChatGPT consistently advise women to ask for lower salaries than men, even when both have identical qualifications. The study was co-authored by Ivan Yamshchikov, a professor of AI and robotics at the Technical University of Würzburg-Schweinfurt (THWS) in Germany. Yamshchikov, who is also the founder of Pleias, a French–German startup building ethically trained language models for regulated industries, worked with his team to test...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-15T15:34:48.591335+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-15T15:34:48.591337+00:00"
+        "timestamp": "2025-07-15T16:51:31.697685+00:00"
       },
       "article_type": "research"
     }
@@ -1555,7 +1555,7 @@
   "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 349.5085060596466,
+    "processing_time": 323.5593650341034,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1573,11 +1573,11 @@
       "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 539,
+      "total_processed": 505,
       "candidates": {
-        "headlines": 24,
-        "articles": 440,
-        "research_papers": 75
+        "headlines": 29,
+        "articles": 402,
+        "research_papers": 74
       },
       "selected": {
         "headlines": 1,
