@@ -129,8 +129,8 @@ jobs:
         rm -rf test_output/groq_* logs/ || true
         echo "🔒 Removed private usage reports from commit (available in artifacts)"
         
-        # Add API files and processed data
-        git add src/backend/api/ src/frontend/api/
+        # Add API files, processed data, and generated audio
+        git add src/backend/api/ src/frontend/api/ src/frontend/assets/audio/
         
         if git diff --staged --quiet; then
           echo "ℹ️ No new content changes to commit"
@@ -155,6 +155,7 @@ jobs:
         path: |
           src/backend/api/
           src/frontend/api/
+          src/frontend/assets/audio/
           test_output/orchestrator_results_*.json
         retention-days: 7
 
@@ -206,13 +207,18 @@ jobs:
         echo "📋 Copying frontend assets..."
         cp -r src/frontend/* site/
         
-        # Integrate fresh API content
-        echo "🔄 Integrating fresh API content..."
+        # Integrate fresh API content and audio
+        echo "🔄 Integrating fresh API content and audio..."
         if [ -d "processed-content/src/frontend/api" ]; then
           cp -r processed-content/src/frontend/api/* site/api/ 2>/dev/null || true
         fi
         if [ -d "processed-content/src/backend/api" ]; then
           cp -r processed-content/src/backend/api/* site/api/ 2>/dev/null || true
+        fi
+        if [ -d "processed-content/src/frontend/assets/audio" ]; then
+          echo "🎵 Copying fresh audio content..."
+          mkdir -p site/assets/audio/
+          cp -r processed-content/src/frontend/assets/audio/* site/assets/audio/ 2>/dev/null || true
         fi
         
         # Configure analytics if available
@@ -245,6 +251,14 @@ jobs:
           echo "✅ Fresh content: $article_count articles (generated: $generated_at)"
         else
           echo "⚠️ No latest.json found - checking for fallback content"
+        fi
+        
+        # Validate audio content
+        if [ -f "site/assets/audio/latest-podcast.wav" ]; then
+          audio_size=$(stat -c%s "site/assets/audio/latest-podcast.wav" 2>/dev/null || echo "0")
+          echo "✅ Fresh audio: latest-podcast.wav (${audio_size} bytes)"
+        else
+          echo "⚠️ No fresh audio found - users may hear old podcast"
         fi
         
         total_files=$(find site -type f | wc -l)
