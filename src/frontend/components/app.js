@@ -123,10 +123,13 @@ export class NewsApp {
             
             clearTimeout(timeoutId);
             
-            if (!response.ok) {
+            // Handle 304 (Not Modified) as success - just means content hasn't changed
+            if (!response.ok && response.status !== 304) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
+            // For 304, try to get JSON anyway (some servers still return content)
+            // If it fails, we'll catch it in the outer try-catch
             this.newsData = await response.json();
             this.performance.mark('news_fetch_complete');
             
