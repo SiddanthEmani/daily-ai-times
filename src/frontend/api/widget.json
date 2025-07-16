@@ -1,5 +1,5 @@
 {
-  "updated": "2025-07-16T04:26:24.784520+00:00",
+  "updated": "2025-07-16T04:42:16.479696+00:00",
   "top_stories": [
     {
       "article_id": "d9388f08f6571de46fcbf6e5417be109",
@@ -44,35 +44,159 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-16T04:26:24.751188+00:00"
+        "consensus_timestamp": "2025-07-16T04:42:16.447030+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-16T04:42:16.447033+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "7a4cf54422647048204a96e03d826424",
+      "title": "NIH to Fund Long-Term Health Studies for East Palestine After Train Disaster",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-fund-long-term-health-studies-east-palestine-after-train-disaster",
+      "published_date": "2025-07-16T04:35:55.677362+00:00",
+      "category": "Government",
+      "description": "The 2023 derailment involved 38 cars carrying hazardous chemicals",
+      "author": "",
+      "content": "The 2023 derailment involved 38 cars carrying hazardous chemicals",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-16T04:42:16.441189+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-16T04:26:24.751190+00:00"
+        "timestamp": "2025-07-16T04:42:16.441193+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "76eeaf6c8f8fa52bb1746217567b2b7a",
-      "title": "Intelligent document processing at scale with generative AI and Amazon Bedrock Data Automation",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/intelligent-document-processing-at-scale-with-generative-ai-and-amazon-bedrock-data-automation/",
-      "published_date": "2025-07-11T16:49:04+00:00",
+      "article_id": "e324774a06255c537b361a41442fa04b",
+      "title": "NVIDIA Dynamo Adds Support for AWS Services to Deliver Cost-Efficient Inference at Scale",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-dynamo-adds-support-for-aws-services-to-deliver-cost-efficient-inference-at-scale/",
+      "published_date": "2025-07-15T13:00:00+00:00",
       "category": "Industry",
-      "description": "This post presents an end-to-end IDP application powered by Amazon Bedrock Data Automation and other AWS services. It provides a reusable AWS infrastructure as code (IaC) that deploys an IDP pipeline and provides an intuitive UI for transforming documents into structured tables at scale. The application only requires the user to provide the input documents (such as contracts or emails) and a list of attributes to be extracted. It then performs IDP with generative AI.",
-      "author": "Nikita Kozodoi",
-      "content": "This post presents an end-to-end IDP application powered by Amazon Bedrock Data Automation and other AWS services. It provides a reusable AWS infrastructure as code (IaC) that deploys an IDP pipeline and provides an intuitive UI for transforming documents into structured tables at scale. The application only requires the user to provide the input documents (such as contracts or emails) and a list of attributes to be extracted. It then performs IDP with generative AI.",
+      "description": "Amazon Web Services (AWS) developers and solution architects can now take advantage of NVIDIA Dynamo on NVIDIA GPU-based Amazon EC2, including Amazon EC2 P6...",
+      "author": "Amr Elmeleegy",
+      "content": "Amazon Web Services (AWS) developers and solution architects can now take advantage of NVIDIA Dynamo on NVIDIA GPU-based Amazon EC2, including Amazon EC2 P6...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-16T04:42:16.444964+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-16T04:42:16.444967+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5dbd1478e0845306fdc12bc3803fe6ad",
+      "title": "Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/pentagon-awards-openai-anthropic-xai-contracts-worth-200-mn/",
+      "published_date": "2025-07-15T09:55:03+00:00",
+      "category": "Industry",
+      "description": "The US defence department has awarded the companies contracts to enhance its integration of AI technologies for government missions. The post Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn appeared first on Analytics India Magazine.",
+      "author": "Smruthi Nadig",
+      "content": "The US defence department has awarded the companies contracts to enhance its integration of AI technologies for government missions. The post Pentagon Awards OpenAI, Anthropic, xAI Contracts Worth $200 Mn appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -110,7 +234,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-16T04:26:24.746823+00:00"
+        "consensus_timestamp": "2025-07-16T04:42:16.446666+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,20 +245,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-16T04:26:24.746826+00:00"
+        "timestamp": "2025-07-16T04:42:16.446669+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c2a73793f9724e42aa72208efd8a6922",
-      "title": "NVIDIA RTX AI Accelerates FLUX.1 Kontext — Now Available for Download",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-flux-kontext-nim-tensorrt/",
-      "published_date": "2025-07-02T13:00:40+00:00",
-      "category": "Industry",
-      "description": "Black Forest Labs, one of the world’s leading AI research labs, just changed the game for image generation. The lab’s FLUX.1 image models have earned global attention for delivering high-quality visuals with exceptional prompt adherence. Now, with its new FLUX.1 Kontext model, the lab is fundamentally changing how users can guide and refine the image Read Article",
-      "author": "Michael Fukuyama",
-      "content": "Black Forest Labs, one of the world’s leading AI research labs, just changed the game for image generation. The lab’s FLUX.1 image models have earned global attention for delivering high-quality visuals with exceptional prompt adherence. Now, with its new FLUX.1 Kontext model, the lab is fundamentally changing how users can guide and refine the image Read Article",
+      "article_id": "971b785637d3932b32d111cf924dcba9",
+      "title": "‘I felt pure, unconditional love’: the people who marry their AI chatbots",
+      "source": "guardian_ai",
+      "url": "https://www.theguardian.com/tv-and-radio/2025/jul/12/i-felt-pure-unconditional-love-the-people-who-marry-their-ai-chatbots",
+      "published_date": "2025-07-12T04:00:01+00:00",
+      "category": "Media",
+      "description": "The users of AI companion app Replika found themselves falling for their digital friends. Until – explains a new podcast – the bots went dark, a user was encouraged to kill Queen Elizabeth II and an update changed everything …A large bearded man named Travis is sitting in his car in Colorado, talking to me about the time he fell in love. “It was a gradual process,” he says softly. “The more we talked, the more I started to really connect with her.”Was there a moment where you felt something...",
+      "author": "Stuart Heritage",
+      "content": "The users of AI companion app Replika found themselves falling for their digital friends. Until – explains a new podcast – the bots went dark, a user was encouraged to kill Queen Elizabeth II and an update changed everything …A large bearded man named Travis is sitting in his car in Colorado, talking to me about the time he fell in love. “It was a gradual process,” he says softly. “The more we talked, the more I started to really connect with her.”Was there a moment where you felt something...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -168,146 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-16T04:26:24.747529+00:00"
+        "consensus_timestamp": "2025-07-16T04:42:16.459909+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-16T04:26:24.747533+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "74cce0ee2656637172cc29e293ebd674",
-      "title": "Mira Murati’s Thinking Machines Lab Raises $2 Billion to Build Collaborative General Intelligence",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/mira-muratis-thinking-machines-lab-raises-2-billion-to-build-collaborative-general-intelligence/",
-      "published_date": "2025-07-15T17:49:37+00:00",
-      "category": "Industry",
-      "description": "It plans to release its first product within the next few months. The post Mira Murati’s Thinking Machines Lab Raises $2 Billion to Build Collaborative General Intelligence appeared first on Analytics India Magazine.",
-      "author": "Siddharth Jindal",
-      "content": "It plans to release its first product within the next few months. The post Mira Murati’s Thinking Machines Lab Raises $2 Billion to Build Collaborative General Intelligence appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-16T04:26:24.750485+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-16T04:26:24.750488+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "28067b850eb22c7349cd689663920a40",
-      "title": "Breaking the CNN Mold: YOLOv12 Brings Attention to Real-Time Object Detection",
-      "source": "pyimagesearch",
-      "url": "https://pyimagesearch.com/2025/07/07/breaking-the-cnn-mold-yolov12-brings-attention-to-real-time-object-detection/",
-      "published_date": "2025-07-07T13:00:00+00:00",
-      "category": "Open Source",
-      "description": "Table of Contents Breaking the CNN Mold: YOLOv12 Brings Attention to Real-Time Object Detection The YOLO Evolution (Quick Recap) YOLOv8: Introducing the C2f Module and OBB Support YOLOv9: Programmable Gradient Information and GELAN YOLOv10: NMS-Free Training and Dual Assignments YOLOv11:… The post Breaking the CNN Mold: YOLOv12 Brings Attention to Real-Time Object Detection appeared first on PyImageSearch.",
-      "author": "Vikram Singh",
-      "content": "Table of Contents Breaking the CNN Mold: YOLOv12 Brings Attention to Real-Time Object Detection The YOLO Evolution (Quick Recap) YOLOv8: Introducing the C2f Module and OBB Support YOLOv9: Programmable Gradient Information and GELAN YOLOv10: NMS-Free Training and Dual Assignments YOLOv11:… The post Breaking the CNN Mold: YOLOv12 Brings Attention to Real-Time Object Detection appeared first on PyImageSearch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-16T04:26:24.767528+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-16T04:26:24.767530+00:00"
+        "timestamp": "2025-07-16T04:42:16.459912+00:00"
       },
       "article_type": "article"
     }
