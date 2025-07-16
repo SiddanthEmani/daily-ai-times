@@ -36,8 +36,8 @@ export const config = {
     requestTimeout: 30000
   },
   cache: {
-    defaultTTL: 300000, // 5 minutes
-    maxSize: 100
+    defaultTTL: 0, // Disabled - no caching
+    maxSize: 0     // Disabled - no cache storage
   },
   rateLimit: {
     github: { requests: 5000, window: 3600000 }, // 5000/hour
@@ -84,7 +84,7 @@ class Cache {
   }
 
   has(key) {
-    return this.data.has(key);
+    return false; // Always return false to disable caching
   }
 
   delete(key) {

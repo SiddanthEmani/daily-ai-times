@@ -6,10 +6,12 @@
     <title>Top 25 AI News - NewsXP AI</title>
     <meta name="description" content="Top 25 AI-curated news articles featuring the latest developments in artificial intelligence, machine learning, and technology research.">
     
-    <!-- Prevent caching of news content -->
+    <!-- Prevent caching of all content -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="Thu, 01 Jan 1970 00:00:00 GMT">
+    <meta http-equiv="If-Modified-Since" content="Thu, 01 Jan 1970 00:00:00 GMT">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -41,7 +43,7 @@
                 How was this news generated?
             </a>
             <h1 class="masthead">
-               Daily AI <img src="assets/images/logo.png" alt="NewsXP AI Logo" class="logo-icon"> TIMES
+               Daily AI <img id="logo-icon" src="assets/images/logo.png" alt="NewsXP AI Logo" class="logo-icon"> TIMES
             </h1>
             <div class="date-line" id="current-date">Loading...</div>
             <div class="edition-info" id="edition-info">
