@@ -1,6 +1,6 @@
 import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
 import { ArticleRenderer, ArticleHandler } from './articles.js';
-import { PerformanceMonitor, CacheManager, Analytics, LazyLoader } from '../utils/performance.js';
+import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
 
 // Main news application class
 export class NewsApp {
@@ -33,24 +33,7 @@ export class NewsApp {
                 console.warn('Analytics initialization failed:', analyticsError);
             }
             
-            // DISABLED: Service worker registration to prevent caching
-            // Service workers can cache API responses which prevents fresh content
-            
-            // Unregister any existing service workers to prevent caching
-            try {
-                if ('serviceWorker' in navigator) {
-                    const registrations = await navigator.serviceWorker.getRegistrations();
-                    for (let registration of registrations) {
-                        await registration.unregister();
-                        console.log('Unregistered existing service worker');
-                    }
-                }
-            } catch (swError) {
-                console.warn('Failed to unregister service workers:', swError);
-            }
-            
-            // Preload critical resources
-            await this.preloadCriticalResources();
+            // No service worker registration - no caching
             
             // Show loading states
             this.showLoadingStates();
@@ -98,16 +81,7 @@ export class NewsApp {
         }
     }
 
-    async preloadCriticalResources() {
-        // DISABLED: Preloading API resources to prevent caching
-        // Preloading can cause browsers to cache API responses
-        // Only preload static assets, never dynamic news data
-        
-        console.log('Skipping API preloading to ensure fresh content');
-        
-        // Don't preload API data - fetch fresh each time
-        // Service worker should only cache static assets, not dynamic news data
-    }
+
 
     showLoadingStates() {
         DOMUtils.showLoading('main-story');
@@ -129,25 +103,21 @@ export class NewsApp {
         this.isLoading = true;
         this.performance.mark('news_load_start');
         
-        try {
-            // Use relative path for API with cache-busting parameter and timestamp
+                try {
+            // Simple fetch with cache-busting timestamp - no complex caching logic
             const timestamp = Date.now();
-            const randomSuffix = Math.random().toString(36).substring(7);
-            const apiUrl = `./api/latest.json?t=${timestamp}&r=${randomSuffix}`;  // Double cache busting
+            const apiUrl = `./api/latest.json?t=${timestamp}`;
             
-            // Fetch news data with timeout and aggressive no-cache headers
+            // Fetch news data with timeout and no-cache headers
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
             const response = await fetch(apiUrl, {
                 signal: controller.signal,
-                cache: 'no-store', // Prevent browser caching
+                cache: 'no-store',
                 headers: {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
-                    'Pragma': 'no-cache',
-                    'Expires': '0',
-                    'If-Modified-Since': 'Mon, 26 Jul 1997 05:00:00 GMT', // Force fresh request
-                    'If-None-Match': '*' // Disable ETag caching
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
                 }
             });
             
