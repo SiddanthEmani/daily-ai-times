@@ -488,118 +488,11 @@ body::before {
     font-style: italic;
 }
 
-/* Audio Player - Vintage Newspaper Style */
+/* Audio Player Container */
 .audio-player {
     text-align: center;
     margin: 0;
     flex-shrink: 0;
-}
-
-audio {
-    width: 350px;
-    height: 40px;
-    background: linear-gradient(145deg, #f8f5f0 0%, #ebe6db 50%, #f0ede5 100%);
-    border: 2px solid var(--primary-dark);
-    border-radius: 0;
-    outline: none;
-    filter: sepia(20%) contrast(1.1);
-    box-shadow: 
-        inset 0 1px 0 rgba(255,255,255,0.7),
-        inset 0 -1px 0 rgba(0,0,0,0.1),
-        0 2px 4px rgba(0,0,0,0.15);
-}
-
-/* Webkit browsers (Chrome, Safari, Edge) */
-audio::-webkit-media-controls-panel {
-    background: linear-gradient(145deg, #f8f5f0 0%, #ebe6db 50%, #f0ede5 100%);
-    border: 1px solid rgba(44, 44, 44, 0.2);
-    border-radius: 0;
-}
-
-audio::-webkit-media-controls-play-button {
-    background: radial-gradient(circle, var(--primary-dark) 30%, #1a1a1a 70%);
-    border: 2px solid var(--primary-dark);
-    border-radius: 0;
-    margin: 0 6px;
-    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
-}
-
-audio::-webkit-media-controls-play-button:hover {
-    background: radial-gradient(circle, #1a1a1a 30%, var(--primary-dark) 70%);
-}
-
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    font-family: var(--font-masthead);
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: var(--primary-dark);
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
-}
-
-audio::-webkit-media-controls-timeline-container {
-    margin: 0 8px;
-}
-
-audio::-webkit-media-controls-timeline {
-    background: linear-gradient(to bottom, #ccc 0%, #999 50%, #bbb 100%);
-    border: 1px solid var(--primary-dark);
-    border-radius: 0;
-    height: 6px;
-    margin: 0;
-}
-
-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
-    background: radial-gradient(circle, var(--primary-dark) 30%, #1a1a1a 70%);
-    border: 2px solid var(--primary-dark);
-    border-radius: 0;
-    width: 16px;
-    height: 16px;
-    margin-top: -5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-}
-
-audio::-webkit-media-controls-volume-slider-container {
-    margin: 0 4px;
-}
-
-audio::-webkit-media-controls-volume-slider {
-    background: linear-gradient(to bottom, #ccc 0%, #999 50%, #bbb 100%);
-    border: 1px solid var(--primary-dark);
-    border-radius: 0;
-    height: 4px;
-}
-
-audio::-webkit-media-controls-volume-slider::-webkit-slider-thumb {
-    background: var(--primary-dark);
-    border: 1px solid var(--primary-dark);
-    border-radius: 0;
-    width: 12px;
-    height: 12px;
-}
-
-audio::-webkit-media-controls-mute-button {
-    background: var(--primary-dark);
-    border: 1px solid var(--primary-dark);
-    border-radius: 0;
-    margin: 0 4px;
-}
-
-/* Firefox audio controls */
-audio::-moz-range-track {
-    background: linear-gradient(to bottom, #ccc 0%, #999 50%, #bbb 100%);
-    border: 1px solid var(--primary-dark);
-    border-radius: 0;
-    height: 6px;
-}
-
-audio::-moz-range-thumb {
-    background: var(--primary-dark);
-    border: 2px solid var(--primary-dark);
-    border-radius: 0;
-    width: 16px;
-    height: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 /* Responsive Design */

@@ -1,6 +1,7 @@
 import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
 import { ArticleRenderer, ArticleHandler } from './articles.js';
 import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
+import { CustomAudioPlayer } from './custom-audio-player.js';
 
 // Main news application class
 export class NewsApp {
@@ -267,7 +268,7 @@ export class NewsApp {
             const formattedDate = DateUtils.formatHeaderDate(generatedDate);
             DOMUtils.setElementContent('current-date', formattedDate);
             
-            // Update edition info with cache-busting for audio
+            // Update edition info with custom audio player
             const audioTimestamp = Date.now();
             const editionInfo = `
                 <div class="edition-left">
@@ -285,7 +286,7 @@ export class NewsApp {
                         </a>
                     </div>
                 </div>
-                <div class="audio-player"><audio controls src="assets/audio/latest-podcast.wav?t=${audioTimestamp}" title="Latest News Podcast"></audio></div>
+                <div class="audio-player" id="custom-audio-container"></div>
                 <div class="edition-right">
                     <span class="articles-count">${totalArticles} featured articles</span>
                     <br>
@@ -293,6 +294,14 @@ export class NewsApp {
                 </div>`;
                 
             DOMUtils.setElementContent('edition-text', editionInfo);
+            
+            // Initialize custom audio player
+            setTimeout(() => {
+                const audioContainer = document.getElementById('custom-audio-container');
+                if (audioContainer) {
+                    new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${audioTimestamp}`, audioContainer);
+                }
+            }, 100);
             
         } catch (error) {
             console.error('Error updating header:', error);
