@@ -3,6 +3,7 @@
 # Usage: ./orchestrator.run [options]
 # Options:
 #   --help            Show this help message
+#   --sources         Comma-separated list of source categories (e.g., government,industry)
 
 # Get the directory of this script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -15,14 +16,38 @@ show_help() {
     echo ""
     echo "Options:"
     echo "  --help            Show this help message"
+    echo "  --sources CATS    Comma-separated list of source categories to process"
+    echo ""
+    
+    # Try to get available categories dynamically
+    cd "$DIR"
+    export PYTHONPATH="$DIR/src"
+    CATEGORIES=$(python3 -c "
+try:
+    import sys
+    sys.path.insert(0, 'src')
+    from backend.collectors.collectors import NewsCollector
+    collector = NewsCollector()
+    categories = collector.get_available_categories()
+    print(', '.join(categories) if categories else 'government, industry, media, open_source, research, telugu')
+except:
+    print('government, industry, media, open_source, research, telugu')
+" 2>/dev/null)
+    
+    echo "Available source categories: $CATEGORIES"
     echo ""
     echo "Environment Variables:"
     echo "  GROQ_API_KEY      Required: Groq API key for AI processing"
     echo "                    Can be set in .env.local file or as environment variable"
     echo ""
     echo "Examples:"
-    echo "  ./orchestrator.run                # Run complete pipeline with API generation"
+    echo "  ./orchestrator.run                                    # Process all sources"
+    echo "  ./orchestrator.run --sources government,industry     # Process only government and industry sources"
+    echo "  ./orchestrator.run --sources research               # Process only research sources"
 }
+
+# Initialize variables
+PYTHON_ARGS=""
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -30,6 +55,17 @@ while [[ $# -gt 0 ]]; do
         --help|-h)
             show_help
             exit 0
+            ;;
+        --sources)
+            if [[ -n "$2" && "$2" != --* ]]; then
+                PYTHON_ARGS="$PYTHON_ARGS --sources $2"
+                shift # past argument
+                shift # past value
+            else
+                echo "Error: --sources requires a value"
+                echo "Use --help for usage information"
+                exit 1
+            fi
             ;;
         *)
             echo "Unknown option: $1"
@@ -47,5 +83,9 @@ echo "🚀 Starting NewsXP.ai Orchestrator..."
 echo "📂 Working directory: $DIR"
 echo "🐍 Python path: $PYTHONPATH"
 
-# Run the orchestrator
-python3 src/backend/orchestrator.py
+if [[ -n "$PYTHON_ARGS" ]]; then
+    echo "🔧 Arguments: $PYTHON_ARGS"
+fi
+
+# Run the orchestrator with any provided arguments
+python3 src/backend/orchestrator.py $PYTHON_ARGS

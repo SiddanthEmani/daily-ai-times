@@ -234,6 +234,88 @@ class NewsCollector:
         self.stats = CollectionStats()
         logger.info(f"NewsCollector initialized with {len(self.sources)} sources")
     
+    def get_sources_by_categories(self, categories: List[str]) -> Dict[str, Dict[str, Any]]:
+        """
+        Get sources filtered by categories using the SourcesLoader.
+        
+        Args:
+            categories: List of category names (e.g., ['government', 'industry'])
+            
+        Returns:
+            Dictionary of sources that match the categories
+        """
+        try:
+            # Import sources loader
+            import sys
+            from pathlib import Path
+            
+            # Add src directory to path if not already there
+            src_dir = Path(__file__).parent.parent.parent
+            if str(src_dir) not in sys.path:
+                sys.path.insert(0, str(src_dir))
+                
+            from shared.config.sources_loader import get_sources_loader
+            
+            loader = get_sources_loader()
+            
+            # Get available categories and normalize case
+            available_categories = loader.get_categories()
+            normalized_available = {cat.lower(): cat for cat in available_categories}
+            
+            # Find matching categories (case-insensitive)
+            matched_categories = []
+            for requested_cat in categories:
+                normalized_requested = requested_cat.lower().strip()
+                if normalized_requested in normalized_available:
+                    matched_categories.append(normalized_available[normalized_requested])
+                else:
+                    logger.warning(f"Category '{requested_cat}' not found. Available: {available_categories}")
+            
+            if not matched_categories:
+                logger.error(f"No valid categories found from: {categories}")
+                logger.info(f"Available categories: {available_categories}")
+                return {}
+            
+            # Collect sources from matching categories using existing loader methods
+            filtered_sources = {}
+            for category in matched_categories:
+                category_sources = loader.get_sources_by_category(category)
+                filtered_sources.update(category_sources)
+                logger.info(f"Category '{category}': {len(category_sources)} sources loaded")
+            
+            logger.info(f"Total {len(filtered_sources)} sources selected from categories: {matched_categories}")
+            return filtered_sources
+            
+        except Exception as e:
+            logger.error(f"Failed to load sources by categories: {e}")
+            return {}
+    
+    def get_available_categories(self) -> List[str]:
+        """
+        Get list of available source categories.
+        
+        Returns:
+            List of available category names
+        """
+        try:
+            # Import sources loader
+            import sys
+            from pathlib import Path
+            
+            # Add src directory to path if not already there
+            src_dir = Path(__file__).parent.parent.parent
+            if str(src_dir) not in sys.path:
+                sys.path.insert(0, str(src_dir))
+                
+            from shared.config.sources_loader import get_sources_loader
+            
+            loader = get_sources_loader()
+            return loader.get_categories()
+            
+        except Exception as e:
+            logger.error(f"Failed to get available categories: {e}")
+            return []
+    
     async def collect_all_with_progress(self, 
                                       source_ids: Optional[List[str]] = None, 
                                       max_age_days: Optional[int] = None, 

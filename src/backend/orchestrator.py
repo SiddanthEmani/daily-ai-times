@@ -4,7 +4,7 @@ News Processing Pipeline Orchestrator for NewsXP.ai
 Orchestrates: Collection → Swarm Scoring → Consensus Filtering
 """
 
-import os, json, logging, asyncio, time, sys, traceback, random
+import os, json, logging, asyncio, time, sys, traceback, random, argparse
 from contextlib import contextmanager
 from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime, timezone
@@ -591,23 +591,30 @@ class NewsProcessingPipeline:
         
         return realistic_timeout
     
-    async def process_news_pipeline(self, num_articles: Optional[int] = None) -> Dict[str, Any]:
+    async def process_news_pipeline(self, num_articles: Optional[int] = None, source_ids: Optional[List[str]] = None) -> Dict[str, Any]:
         """Run the complete news processing pipeline."""
         articles_count = num_articles or self.default_max_articles
         
-        # Step 1: Collect articles
-        logger.info(f"Step 1: Collecting articles from sources (max: {articles_count})")
+        # Step 1: Collect articles (with optional source filtering)
+        if source_ids:
+            logger.info(f"Step 1: Collecting articles from {len(source_ids)} filtered sources (max: {articles_count})")
+            total_sources = len(source_ids)
+        else:
+            logger.info(f"Step 1: Collecting articles from all sources (max: {articles_count})")
+            total_sources = len(self.news_collector.sources)
         
-        with self._create_progress_bar(f"[green]Collecting from {len(self.news_collector.sources)} sources", 
-                                     len(self.news_collector.sources), transient=True) as collection_progress:
-            collection_task = collection_progress.add_task(f"[green]Collecting articles", total=len(self.news_collector.sources))
+        with self._create_progress_bar(f"[green]Collecting from {total_sources} sources", 
+                                     total_sources, transient=True) as collection_progress:
+            collection_task = collection_progress.add_task(f"[green]Collecting articles", total=total_sources)
             
             def update_collection_progress(completed_sources: int, total_sources_count: int):
                 collection_progress.update(collection_task, completed=completed_sources,
                                          description=f"[green]Collecting articles ({completed_sources}/{total_sources_count} sources)")
             
             collected_articles = await self.news_collector.collect_all_with_progress(
-                max_articles=articles_count, progress_callback=update_collection_progress)
+                source_ids=source_ids,
+                max_articles=articles_count, 
+                progress_callback=update_collection_progress)
             
         if not collected_articles:
             raise ValueError("No articles collected. Check source configuration and connectivity.")
@@ -618,6 +625,7 @@ class NewsProcessingPipeline:
         collection_data = {
             'timestamp': self._get_current_timestamp(),
             'total_articles': len(collected_articles),
+            'source_filter': source_ids,
             'articles': collected_articles
         }
         self._save_json_file(collection_data, f"collected_articles_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
@@ -1170,6 +1178,24 @@ class NewsProcessingPipeline:
             logger.debug(f"TTS generation error details: {traceback.format_exc()}")
 
 
+def parse_sources_argument(sources_arg: str) -> List[str]:
+    """
+    Parse the --sources argument into a list of category names.
+    
+    Args:
+        sources_arg: Comma-separated string of category names
+        
+    Returns:
+        List of category names
+    """
+    if not sources_arg:
+        return []
+    
+    # Split by comma and clean up whitespace
+    categories = [cat.strip() for cat in sources_arg.split(',') if cat.strip()]
+    return categories
+
+
 async def main():
     """Main function to run the news processing pipeline from command line."""
     try:
@@ -1180,19 +1206,60 @@ async def main():
     setup_logging(level="DEBUG", quiet_mode=False, show_progress=True)
     logger = create_progress_logger(__name__)
     
+    # Initialize pipeline to get available categories
+    log_step(logger, "Initializing News Processing Pipeline")
+    pipeline = NewsProcessingPipeline()
+    available_categories = pipeline.news_collector.get_available_categories()
+    categories_str = ', '.join(available_categories) if available_categories else 'Loading...'
+    
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(
+        description="NewsXP.ai Processing Pipeline",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=f"""
+Examples:
+  python orchestrator.py                                    # Process all sources
+  python orchestrator.py --sources government,industry     # Process only government and industry sources
+  python orchestrator.py --sources research               # Process only research sources
+  
+Available source categories: {categories_str}
+        """)
+    
+    parser.add_argument(
+        '--sources',
+        type=str,
+        help='Comma-separated list of source categories to process (e.g., government,industry)',
+        metavar='CATEGORIES'
+    )
+    
+    args = parser.parse_args()
+    
     try:
-        log_step(logger, "Initializing News Processing Pipeline")
-        pipeline = NewsProcessingPipeline()
+        
+        # Handle source filtering
+        source_ids_to_use = None
+        if args.sources:
+            categories = parse_sources_argument(args.sources)
+            if categories:
+                filtered_sources = pipeline.news_collector.get_sources_by_categories(categories)
+                if not filtered_sources:
+                    logger.error("No valid sources found for the specified categories")
+                    return 1
+                source_ids_to_use = list(filtered_sources.keys())
+                logger.info(f"Using sources from categories: {', '.join(categories)}")
+            else:
+                logger.error("Invalid sources argument provided")
+                return 1
         
         pipeline_info = pipeline.get_pipeline_info()
-        source_count = len(pipeline.news_collector.sources)
+        source_count = len(source_ids_to_use) if source_ids_to_use else len(pipeline.news_collector.sources)
         total_agents = pipeline_info['agents']['bulk_agents'] + pipeline_info['agents']['deep_intelligence_agents']
         
         logger.info(f"Pipeline ready: {total_agents} agents, {source_count} sources")
         
         log_step(logger, "Starting Pipeline Processing")
         start_time = time.time()
-        classified_content = await pipeline.process_news_pipeline()
+        classified_content = await pipeline.process_news_pipeline(source_ids=source_ids_to_use)
         duration = time.time() - start_time
         
         await _save_and_display_results(pipeline, classified_content, duration, logger)

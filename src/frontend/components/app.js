@@ -9,6 +9,7 @@ export class NewsApp {
         this.newsData = null;
         this.isLoading = false;
         this.appVersion = '2024.1.0'; // Increment this when you want to force cache refresh
+        this.currentRoute = this.detectRoute();
         try {
             this.performance = new PerformanceMonitor();
         } catch (error) {
@@ -18,6 +19,30 @@ export class NewsApp {
                 report: () => {}
             };
         }
+    }
+
+    detectRoute() {
+        const path = window.location.pathname;
+        if (path.includes('/telugu')) {
+            return 'telugu';
+        }
+        return 'default';
+    }
+
+    getApiEndpoint() {
+        switch (this.currentRoute) {
+            case 'telugu':
+                return './api/telugu.json';
+            default:
+                return './api/latest.json';
+        }
+    }
+
+    navigateToRoute(route) {
+        const newPath = route === 'telugu' ? '/telugu' : '/';
+        window.history.pushState({}, '', newPath);
+        this.currentRoute = this.detectRoute();
+        this.loadNews();
     }
 
     async initialize() {
@@ -76,8 +101,14 @@ export class NewsApp {
             
             // Track page view
             if (typeof Analytics !== 'undefined') {
-                Analytics.trackPageView('home');
+                Analytics.trackPageView(this.currentRoute === 'telugu' ? 'telugu' : 'home');
             }
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                this.currentRoute = this.detectRoute();
+                this.loadNews();
+            });
             
         } catch (error) {
             console.error('Failed to initialize news app:', error);
@@ -199,7 +230,7 @@ export class NewsApp {
                 try {
             // Simple fetch with cache-busting timestamp - no complex caching logic
             const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}&v=${this.appVersion}`;
+            const apiUrl = `${this.getApiEndpoint()}?t=${timestamp}&v=${this.appVersion}`;
             
             // Fetch news data with timeout and no-cache headers
             const controller = new AbortController();
@@ -254,9 +285,6 @@ export class NewsApp {
         // Update header with filtering info
         this.updateHeader(allArticles.length, this.newsData.filter_type);
 
-        // Render collection summary if available
-        this.renderCollectionSummary(this.newsData.collection_summary);
-
         // **FIX**: Render content with proper headline distinction
         this.renderContent(headlineArticles, regularArticles, researchArticles);
     }
@@ -276,7 +304,7 @@ export class NewsApp {
                     <div class="social-icons">
                         <a href="https://github.com/SiddanthEmani" target="_blank" rel="noopener noreferrer" class="social-icon">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.30 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                         <a href="https://linkedin.com/in/siddanth-emani" target="_blank" rel="noopener noreferrer" class="social-icon">
@@ -308,61 +336,52 @@ export class NewsApp {
         }
     }
 
-    renderCollectionSummary(summaryData) {
-        const summarySection = document.getElementById('collection-summary');
-        const summaryContent = document.getElementById('summary-content');
-        
-        if (!summarySection || !summaryContent) return;
-        
-        if (summaryData && summaryData.summary) {
-            // Show and populate the summary section
-            summarySection.style.display = 'block';
-            
-            let summaryHtml = `<p class="summary-text">${summaryData.summary}</p>`;
-            
-            // Add key themes if available
-            if (summaryData.key_themes && summaryData.key_themes.length > 0) {
-                summaryHtml += `
-                    <div class="summary-themes">
-                        <div class="themes-title">Key Themes:</div>
-                        <div class="theme-tags">
-                            ${summaryData.key_themes.map(theme => `<span class="theme-tag">${theme}</span>`).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-            
-            summaryContent.innerHTML = summaryHtml;
-        } else {
-            // Hide the summary section if no summary available
-            summarySection.style.display = 'none';
-        }
-    }
+
 
     renderContent(headlineArticles, regularArticles, researchArticles) {
         try {
             // Render designated headline as main story
             if (headlineArticles.length > 0) {
                 console.log('Rendering headline as main story:', headlineArticles[0].title);
-                ArticleRenderer.renderMainStory(headlineArticles[0]);
+                try {
+                    ArticleRenderer.renderMainStory(headlineArticles[0]);
+                } catch (error) {
+                    console.error('Error rendering main story:', error);
+                    DOMUtils.showError('main-story', 'Unable to load main story');
+                }
             } else {
                 console.error('No headline article found in API response');
-                throw new Error('No headline article available');
+                // Only show error for main story, don't stop other content from loading
+                DOMUtils.showError('main-story', 'No headline article available');
             }
             
-            // Render regular articles in news grid
-            ArticleRenderer.renderNewsGrid(regularArticles);
+            // Render regular articles in news grid - continue regardless of headline status
+            try {
+                ArticleRenderer.renderNewsGrid(regularArticles);
+            } catch (error) {
+                console.error('Error rendering news grid:', error);
+                DOMUtils.showError('news-column-1', 'Unable to load news');
+                DOMUtils.showError('news-column-2', 'Unable to load news');
+            }
             
-            // Render research papers separately
-            if (researchArticles.length > 0) {
-                ArticleRenderer.renderResearchGrid(researchArticles);
+            // Render research papers separately - continue regardless of other sections
+            try {
+                if (researchArticles.length > 0) {
+                    ArticleRenderer.renderResearchGrid(researchArticles);
+                } else {
+                    DOMUtils.showError('research-grid', 'No research papers available');
+                }
+            } catch (error) {
+                console.error('Error rendering research papers:', error);
+                DOMUtils.showError('research-grid', 'Unable to load research papers');
             }
             
             // Log the final article distribution for debugging
             console.log(`Article distribution: ${headlineArticles.length} headline, ${regularArticles.length} regular articles, ${researchArticles.length} research papers`);
             
         } catch (error) {
-            console.error('Error rendering content:', error);
+            console.error('Error in renderContent:', error);
+            // Fallback: only show error states if everything fails
             this.showErrorStates();
         }
     }

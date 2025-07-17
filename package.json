@@ -5,7 +5,7 @@
   "main": "src/frontend/index.html",
   "homepage": "https://siddanthemani.github.io/newsxp-ai",
   "scripts": {
-    "dev": "python -m http.server 8000 --directory src/frontend",
+    "dev": "npx serve src/frontend -p 8000 -s",
     "collect": "cd src/backend/collectors && python collect_news.py",
     "generate-api": "python src/backend/api/generate_api.py",
     "build": "npm run collect && npm run generate-api",
@@ -56,7 +56,7 @@
     "cost": "$0/month"
   },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "serve": "^14.2.1"
   },
   "optionalDependencies": {
     "typescript": "^4.9.0",
