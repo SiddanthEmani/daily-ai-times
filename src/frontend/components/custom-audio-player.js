@@ -171,13 +171,30 @@ export class CustomAudioPlayer {
                     letter-spacing: 1px;
                 }
                 .audio-progress {
-                    height: 10px;
+                    height: 14px;
                     margin: 0 8px;
+                    /* Add padding for easier touch interaction */
+                    padding: 6px 0;
+                    cursor: pointer;
                 }
                 .audio-progress-thumb {
-                    width: 10px;
-                    height: 20px;
-                    top: -7px;
+                    width: 20px;
+                    height: 24px;
+                    top: -11px;
+                    /* Larger touch target for mobile */
+                    min-width: 44px;
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .audio-progress-thumb::after {
+                    content: '';
+                    width: 20px;
+                    height: 24px;
+                    background: var(--paper-bg, #faf8f3);
+                    border: 1px solid var(--primary-dark, #2c2c2c);
+                    border-radius: 3px;
                 }
             }
         `;
@@ -244,16 +261,46 @@ export class CustomAudioPlayer {
         // Play/Pause
         this.elements.playBtn.addEventListener('click', () => this.togglePlay());
         
-        // Progress bar
+        // Progress bar - click/tap support
         this.elements.progress.addEventListener('click', (e) => this.seek(e));
+        this.elements.progress.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            this.seek(e.touches[0]);
+        });
         
-        // Progress thumb drag
+        // Progress thumb drag - mouse and touch support
         let isDragging = false;
-        this.elements.progressThumb.addEventListener('mousedown', () => isDragging = true);
+        
+        // Mouse events
+        this.elements.progressThumb.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            isDragging = true;
+        });
+        
         document.addEventListener('mousemove', (e) => {
             if (isDragging) this.seek(e);
         });
-        document.addEventListener('mouseup', () => isDragging = false);
+        
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+        
+        // Touch events
+        this.elements.progressThumb.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            isDragging = true;
+        });
+        
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                this.seek(e.touches[0]);
+            }
+        }, { passive: false });
+        
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+        });
         
         // Keyboard controls
         document.addEventListener('keydown', (e) => {
