@@ -1,10 +1,11 @@
-import { DateUtils, TextUtils, DOMUtils } from '../utils/utils.js';
+import { DateUtils, TextUtils, DOMUtils, SourceUtils } from '../utils/utils.js';
 import { Analytics } from '../utils/performance.js';
 
 // Article rendering and interaction handling
 export class ArticleRenderer {
     static createArticleHTML(article, isMainStory = false) {
         const dateInfo = DateUtils.formatDate(article.published_date);
+        const sourceInfo = SourceUtils.formatSource(article.source);
         
         if (isMainStory) {
             return `
@@ -12,7 +13,7 @@ export class ArticleRenderer {
                 <div class="decorative-line"></div>
                 <p class="main-description">${TextUtils.sanitizeText(article.description)}</p>
                 <div class="source">
-                    <span>Source: ${TextUtils.sanitizeText(article.source)}</span>
+                    <span class="source-formatted">${sourceInfo.formatted}</span>
                     <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
                 </div>
             `;
@@ -22,7 +23,7 @@ export class ArticleRenderer {
                     <h3 class="headline">${TextUtils.sanitizeText(TextUtils.truncateText(article.title, 80))}</h3>
                     <p class="description">${TextUtils.sanitizeText(TextUtils.truncateText(article.description, 200))}</p>
                     <div class="source">
-                        <span>Source: ${TextUtils.sanitizeText(article.source)}</span>
+                        <span class="source-formatted">${sourceInfo.formatted}</span>
                         <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
                     </div>
                 </article>
@@ -32,14 +33,15 @@ export class ArticleRenderer {
 
     static createResearchArticleHTML(article) {
         const dateInfo = DateUtils.formatDate(article.published_date);
+        const sourceInfo = SourceUtils.formatSource(article.source);
         
         return `
-            <article class="research-article" data-url="${article.url}" onclick="ArticleHandler.handleClick(this, '${article.url}')">
-                <h3 class="research-headline">${TextUtils.sanitizeText(TextUtils.truncateText(article.title, 120))}</h3>
-                ${article.author ? `<p class="research-author">By: ${TextUtils.sanitizeText(article.author)}</p>` : ''}
-                <p class="research-description">${TextUtils.sanitizeText(TextUtils.truncateText(article.description, 300))}</p>
-                <div class="research-source">
-                    <span>Source: ${TextUtils.sanitizeText(article.source)}</span>
+            <article class="article" data-url="${article.url}" onclick="ArticleHandler.handleClick(this, '${article.url}')">
+                <h3 class="headline">${TextUtils.sanitizeText(TextUtils.truncateText(article.title, 80))}</h3>
+                ${article.author ? `<p class="byline">By: ${TextUtils.sanitizeText(article.author)}</p>` : ''}
+                <p class="description">${TextUtils.sanitizeText(TextUtils.truncateText(article.description, 200))}</p>
+                <div class="source">
+                    <span class="source-formatted">${sourceInfo.formatted}</span>
                     <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
                 </div>
             </article>
@@ -84,15 +86,29 @@ export class ArticleRenderer {
     }
 
     static renderResearchGrid(articles) {
-        const researchGrid = document.getElementById('research-grid');
-        if (!researchGrid) return;
-
-        researchGrid.innerHTML = '';
+        const column1 = document.getElementById('research-column-1');
+        const column2 = document.getElementById('research-column-2');
         
-        articles.forEach(article => {
+        if (!column1 || !column2) return;
+
+        // Clear existing content
+        column1.innerHTML = '';
+        column2.innerHTML = '';
+        
+        // Distribute research articles between columns for better balance
+        articles.forEach((article, index) => {
             const researchHTML = this.createResearchArticleHTML(article);
-            researchGrid.innerHTML += researchHTML;
+            
+            // Alternate between columns for even distribution
+            if (index % 2 === 0) {
+                column1.innerHTML += researchHTML;
+            } else {
+                column2.innerHTML += researchHTML;
+            }
         });
+        
+        // Show research article count for debugging
+        console.log(`Rendered ${articles.length} research articles in research grid`);
     }
 }
 

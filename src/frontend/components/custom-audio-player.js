@@ -7,6 +7,7 @@ export class CustomAudioPlayer {
         this.currentTime = 0;
         this.duration = 0;
         this.volume = 0.7;
+        this.hasStartedPlaying = false;
         
         this.init();
     }
@@ -29,31 +30,43 @@ export class CustomAudioPlayer {
                 align-items: center;
                 justify-content: center;
                 background: var(--paper-bg, #faf8f3);
-                border: 1px solid var(--border-gray, #ddd);
-                padding: 12px 16px;
+                border: 2px solid var(--primary-dark, #2c2c2c);
+                padding: 16px 20px;
                 font-family: var(--font-masthead, 'Times New Roman', serif);
-                gap: 16px;
-                min-height: 48px;
-                min-width: 320px;
+                gap: 12px;
+                min-height: 60px;
+                min-width: 380px;
                 position: relative;
+                border-radius: 6px;
+            }
+            
+
+            
+            .audio-label {
+                font-weight: bold;
+                font-size: 0.85rem;
+                color: var(--primary-dark, #2c2c2c);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-family: var(--font-masthead, 'Times New Roman', serif);
             }
             
             
             
             .audio-btn {
-                width: 32px;
-                height: 32px;
-                border: 1px solid var(--primary-dark, #2c2c2c);
+                width: 44px;
+                height: 44px;
+                border: 2px solid var(--primary-dark, #2c2c2c);
                 background: var(--paper-bg, #faf8f3);
                 color: var(--primary-dark, #2c2c2c);
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: bold;
-                transition: all 0.2s ease;
-                border-radius: 50%;
+                transition: all 0.15s ease;
+                border-radius: 6px;
             }
             
             .audio-btn:hover {
@@ -63,33 +76,39 @@ export class CustomAudioPlayer {
             .audio-btn:active {
                 background: var(--light-gray, #888);
                 color: white;
+                transform: translateY(1px);
             }
             
             .audio-progress {
                 flex: 1;
-                height: 6px;
+                height: 12px;
                 background: var(--border-gray, #ddd);
-                border: 1px solid var(--primary-dark, #2c2c2c);
+                border: 1px solid var(--secondary-gray, #666);
+                border-radius: 6px;
                 position: relative;
                 cursor: pointer;
-                margin: 0 8px;
+                margin: 0 12px;
+                display: flex;
             }
+            
+
             
             .audio-progress-fill {
                 height: 100%;
                 background: var(--primary-dark, #2c2c2c);
                 width: 0%;
                 transition: width 0.2s ease;
+                border-radius: 4px;
             }
             
             .audio-progress-thumb {
                 position: absolute;
-                top: -6px;
-                width: 18px;
-                height: 18px;
+                top: -10px;
+                width: 16px;
+                height: 28px;
                 background: var(--paper-bg, #faf8f3);
                 border: 2px solid var(--primary-dark, #2c2c2c);
-                border-radius: 50%;
+                border-radius: 3px;
                 transform: translateX(-50%);
                 cursor: pointer;
                 transition: all 0.2s ease;
@@ -97,19 +116,25 @@ export class CustomAudioPlayer {
             }
             
             .audio-progress-thumb:hover {
-                transform: translateX(-50%) scale(1.1);
+                transform: translateX(-50%) scale(1.05);
+                background: var(--border-gray, #ddd);
             }
             
             .audio-time-display {
                 display: flex;
                 align-items: center;
                 gap: 4px;
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: 600;
                 color: var(--primary-dark, #2c2c2c);
                 font-variant-numeric: tabular-nums;
-                min-width: 75px;
+                min-width: 85px;
                 white-space: nowrap;
+                background: var(--paper-bg, #faf8f3);
+                padding: 6px 10px;
+                border-radius: 4px;
+                border: 1px solid var(--secondary-gray, #666);
+                font-family: var(--font-masthead, 'Times New Roman', serif);
             }
             
             .audio-time {
@@ -119,22 +144,41 @@ export class CustomAudioPlayer {
 
             
             .audio-loading {
-                color: var(--primary-dark, #2c2c2c);
+                color: var(--secondary-gray, #666);
                 font-size: 12px;
                 font-style: italic;
             }
             
             @media (max-width: 480px) {
                 .custom-audio-player {
-                    min-width: 280px;
+                    min-width: 300px;
                     gap: 8px;
-                    padding: 10px 12px;
+                    padding: 12px 16px;
+                    min-height: 50px;
                 }
                 .audio-time-display { 
                     font-size: 10px; 
                     min-width: 65px;
+                    padding: 3px 5px;
                 }
-                .audio-btn { width: 28px; height: 28px; font-size: 12px; }
+                .audio-btn { 
+                    width: 36px; 
+                    height: 36px; 
+                    font-size: 14px; 
+                }
+                .audio-label { 
+                    font-size: 0.7rem; 
+                    letter-spacing: 1px;
+                }
+                .audio-progress {
+                    height: 10px;
+                    margin: 0 8px;
+                }
+                .audio-progress-thumb {
+                    width: 10px;
+                    height: 20px;
+                    top: -7px;
+                }
             }
         `;
         document.head.appendChild(style);
@@ -144,11 +188,12 @@ export class CustomAudioPlayer {
         this.container.innerHTML = `
             <div class="custom-audio-player">
                 <button class="audio-btn" id="playBtn" aria-label="Play/Pause">▶</button>
-                <div class="audio-progress" id="progress">
+                <span class="audio-label">PLAY ME</span>
+                <div class="audio-progress" id="progress" style="display: none;">
                     <div class="audio-progress-fill" id="progressFill"></div>
                     <div class="audio-progress-thumb" id="progressThumb"></div>
                 </div>
-                <div class="audio-time-display">
+                <div class="audio-time-display" id="timeDisplay" style="display: none;">
                     <span class="audio-time" id="currentTime">0:00</span>
                     <span>/</span>
                     <span class="audio-time" id="duration">0:00</span>
@@ -158,9 +203,11 @@ export class CustomAudioPlayer {
         
         this.elements = {
             playBtn: this.container.querySelector('#playBtn'),
+            audioLabel: this.container.querySelector('.audio-label'),
             progress: this.container.querySelector('#progress'),
             progressFill: this.container.querySelector('#progressFill'),
             progressThumb: this.container.querySelector('#progressThumb'),
+            timeDisplay: this.container.querySelector('#timeDisplay'),
             currentTime: this.container.querySelector('#currentTime'),
             duration: this.container.querySelector('#duration')
         };
@@ -224,8 +271,15 @@ export class CustomAudioPlayer {
             this.audio.pause();
             this.elements.playBtn.textContent = '▶';
         } else {
+            // Show controls and hide label on first play
+            if (!this.hasStartedPlaying) {
+                this.elements.progress.style.display = 'flex';
+                this.elements.timeDisplay.style.display = 'flex';
+                this.elements.audioLabel.style.display = 'none';
+                this.hasStartedPlaying = true;
+            }
             this.audio.play();
-            this.elements.playBtn.textContent = '⏸';
+            this.elements.playBtn.textContent = '■';
         }
         this.isPlaying = !this.isPlaying;
     }
@@ -258,7 +312,7 @@ export class CustomAudioPlayer {
     }
     
     // Public API
-    play() { this.audio.play(); this.isPlaying = true; this.elements.playBtn.textContent = '⏸'; }
+    play() { this.audio.play(); this.isPlaying = true; this.elements.playBtn.textContent = '■'; }
     pause() { this.audio.pause(); this.isPlaying = false; this.elements.playBtn.textContent = '▶'; }
     setSource(src) { this.audio.src = src; }
     destroy() { this.audio.pause(); this.audio.src = ''; this.container.innerHTML = ''; }

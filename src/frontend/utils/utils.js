@@ -3,14 +3,39 @@ export class DateUtils {
     static formatDate(dateString) {
         const date = new Date(dateString);
         const now = new Date();
-        const diffTime = Math.abs(now - date);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         
+        // Check if date is valid
+        if (isNaN(date.getTime())) {
+            console.warn('Invalid date string:', dateString);
+            return { relative: 'unknown date', tooltip: 'Invalid date' };
+        }
+        
+        // Calculate difference in milliseconds
+        const diffTime = now.getTime() - date.getTime();
+        
+        // Calculate days difference more accurately
+        const msPerDay = 1000 * 60 * 60 * 24;
+        const diffDays = Math.floor(diffTime / msPerDay);
+        
+        // Format the full date for tooltip
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const formattedDate = date.toLocaleDateString('en-US', options);
         
+        // Handle future dates
+        if (diffTime < 0) {
+            const futureDays = Math.floor(Math.abs(diffTime) / msPerDay);
+            if (futureDays === 0) {
+                return { relative: 'NEW', tooltip: formattedDate };
+            } else if (futureDays === 1) {
+                return { relative: 'tomorrow', tooltip: formattedDate };
+            } else {
+                return { relative: `in ${futureDays} days`, tooltip: formattedDate };
+            }
+        }
+        
+        // Handle same day (today)
         if (diffDays === 0) {
-            return { relative: 'today', tooltip: formattedDate };
+            return { relative: 'NEW', tooltip: formattedDate };
         } else if (diffDays === 1) {
             return { relative: '1 day ago', tooltip: formattedDate };
         } else {
@@ -75,6 +100,62 @@ export class TextUtils {
     static sanitizeText(text) {
         if (!text) return '';
         return text.replace(/[<>]/g, '');
+    }
+}
+
+// Source formatting and icon utilities
+export class SourceUtils {
+    // Single retro newspaper-style icon for all sources
+    static RETRO_ICON = '◆';
+    
+    static sourceMapping = {
+        'the_verge': 'The Verge',
+        'techcrunch_ai': 'TechCrunch', 
+        'google_research_blog': 'Google Research',
+        'nvidia_blog': 'NVIDIA Blog',
+        'nvidia_developer': 'NVIDIA Developer',
+        'openai_blog': 'OpenAI',
+        'aws_ml_blog': 'AWS ML Blog',
+        'azure_ai_blog': 'Azure AI Blog',
+        'towards_ai': 'Towards AI',
+        'towards_data_science': 'Towards Data Science',
+        'mit_ai_news': 'MIT AI News',
+        'ieee_spectrum_ai': 'IEEE Spectrum',
+        'acm_ai_news': 'ACM News',
+        'guardian_ai': 'The Guardian',
+        'nist_ai_news': 'NIST AI News',
+        'analytics_india_magazine': 'Analytics India Magazine',
+        'the_decoder': 'The Decoder',
+        'elastic_blog': 'Elastic Blog',
+        'dataconomy': 'Dataconomy',
+        'siliconangle_ai': 'SiliconANGLE',
+        'ai_news': 'AI News',
+        'tech_xplore': 'Tech Xplore',
+        'pytorch_blog': 'PyTorch Blog',
+        'huggingface_papers_api': 'Hugging Face Papers'
+    };
+
+    static formatSource(sourceKey) {
+        const sourceName = this.sourceMapping[sourceKey];
+        if (sourceName) {
+            return {
+                name: sourceName,
+                icon: this.RETRO_ICON,
+                formatted: `${this.RETRO_ICON} ${sourceName}`
+            };
+        }
+        
+        // Fallback for unknown sources - convert snake_case to Title Case
+        const fallbackName = sourceKey
+            .split('_')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+        
+        return {
+            name: fallbackName,
+            icon: this.RETRO_ICON,
+            formatted: `${this.RETRO_ICON} ${fallbackName}`
+        };
     }
 }
 
