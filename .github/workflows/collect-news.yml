@@ -224,11 +224,14 @@ jobs:
         # Configure analytics if available
         if [ -f "site/index.html" ]; then
           if [ -n "${{ secrets.GOOGLE_ANALYTICS_ID }}" ]; then
-            echo "📊 Configuring Google Analytics..."
+            echo "📊 Configuring Google Analytics with ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}"
             sed -i "s|__GOOGLE_ANALYTICS__|${{ secrets.GOOGLE_ANALYTICS_ID }}|g" site/index.html
+            echo "✅ Google Analytics configured successfully"
           else
-            echo "🧹 Removing analytics placeholder..."
-            sed -i 's|__GOOGLE_ANALYTICS__||g' site/index.html
+            echo "⚠️ GOOGLE_ANALYTICS_ID secret not set - Google Analytics will be disabled"
+            # Remove the entire Google Analytics block when no ID is provided
+            sed -i '/<!-- __GOOGLE_ANALYTICS__ -->/,/<!-- __GOOGLE_ANALYTICS__ -->/d' site/index.html
+            echo "🧹 Google Analytics block removed (no secret configured)"
           fi
         fi
         

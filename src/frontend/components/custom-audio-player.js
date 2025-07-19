@@ -30,7 +30,7 @@ export class CustomAudioPlayer {
                 align-items: center;
                 justify-content: center;
                 background: var(--paper-bg, #faf8f3);
-                border: 2px solid var(--primary-dark, #2c2c2c);
+                border: 1px solid var(--primary-dark, #2c2c2c);
                 padding: 16px 20px;
                 font-family: var(--font-masthead, 'Times New Roman', serif);
                 gap: 12px;
@@ -56,7 +56,7 @@ export class CustomAudioPlayer {
             .audio-btn {
                 width: 44px;
                 height: 44px;
-                border: 2px solid var(--primary-dark, #2c2c2c);
+                border: 1px solid var(--primary-dark, #2c2c2c);
                 background: var(--paper-bg, #faf8f3);
                 color: var(--primary-dark, #2c2c2c);
                 cursor: pointer;
@@ -66,7 +66,7 @@ export class CustomAudioPlayer {
                 font-size: 16px;
                 font-weight: bold;
                 transition: all 0.15s ease;
-                border-radius: 6px;
+                border-radius: 50%;
             }
             
             .audio-btn:hover {
@@ -107,7 +107,7 @@ export class CustomAudioPlayer {
                 width: 16px;
                 height: 28px;
                 background: var(--paper-bg, #faf8f3);
-                border: 2px solid var(--primary-dark, #2c2c2c);
+                border: 1px solid var(--primary-dark, #2c2c2c);
                 border-radius: 3px;
                 transform: translateX(-50%);
                 cursor: pointer;

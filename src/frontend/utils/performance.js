@@ -290,6 +290,9 @@ export class Analytics {
         // Send to Google Analytics if available
         if (typeof gtag !== 'undefined') {
             gtag('event', eventName, properties);
+        } else if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
+            // Only warn about missing gtag in production environments
+            console.warn('Google Analytics (gtag) not available - check if GA script loaded correctly');
         }
     }
 

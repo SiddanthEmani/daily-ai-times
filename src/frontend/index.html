@@ -25,7 +25,31 @@
     <link rel="stylesheet" href="styles/main.css">
     
     <!-- Google tag (gtag.js) - Will be injected during build -->
-    <!-- __GOOGLE_ANALYTICS__ placeholder for production deployment -->
+    <!-- __GOOGLE_ANALYTICS__ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=__GOOGLE_ANALYTICS__"></script>
+    <script>
+        // Only load Google Analytics if the placeholder has been replaced with an actual ID
+        if ('__GOOGLE_ANALYTICS__' && '__GOOGLE_ANALYTICS__'.startsWith('G-')) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '__GOOGLE_ANALYTICS__', {
+                page_title: 'Top 25 AI News - NewsXP AI',
+                page_location: window.location.href,
+                send_page_view: true,
+                custom_map: {'custom_parameter_1': 'ai_news_site'}
+            });
+            
+            // Track initial page view
+            gtag('event', 'page_view', {
+                page_title: 'NewsXP AI - Daily AI News',
+                page_location: window.location.href
+            });
+        } else {
+            console.log('Google Analytics not configured - placeholder not replaced');
+        }
+    </script>
+    <!-- __GOOGLE_ANALYTICS__ -->
     
     <!-- Microsoft Clarity tracking script -->
     <script type="text/javascript">
