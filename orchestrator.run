@@ -1,51 +1,55 @@
 #!/bin/bash
-# Shell wrapper for the NewsXP.ai orchestrator
-# Usage: ./orchestrator.run [options]
-# Options:
-#   --help            Show this help message
+# Shell wrapper for the Daily AI Times orchestrator
 
-# Get the directory of this script
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# Function to show help
-show_help() {
-    echo "NewsXP.ai Orchestrator - AI News Processing Pipeline"
-    echo ""
-    echo "Usage: ./orchestrator.run [options]"
-    echo ""
-    echo "Options:"
-    echo "  --help            Show this help message"
-    echo ""
-    echo "Environment Variables:"
-    echo "  GROQ_API_KEY      Required: Groq API key for AI processing"
-    echo "                    Can be set in .env.local file or as environment variable"
-    echo ""
-    echo "Examples:"
-    echo "  ./orchestrator.run                # Run complete pipeline with API generation"
-}
+# Change to the script directory (project root)
+cd "$SCRIPT_DIR"
 
-# Parse arguments
-while [[ $# -gt 0 ]]; do
-    case $1 in
-        --help|-h)
-            show_help
-            exit 0
-            ;;
-        *)
-            echo "Unknown option: $1"
-            echo "Use --help for usage information"
-            exit 1
-            ;;
-    esac
-done
+# Provide helpful information
+echo "Daily AI Times Orchestrator - AI News Processing Pipeline"
+echo "========================================================"
+echo ""
+echo "🔍 Project Directory: $SCRIPT_DIR"
+echo "🐍 Python Version: $(python3 --version 2>/dev/null || echo 'Python not found')"
+echo "📁 Backend Directory: src/backend"
+echo ""
 
-# Set up environment and run
-cd "$DIR"
-export PYTHONPATH="$DIR/src"
+# Check if we're in the right directory
+if [ ! -f "src/backend/orchestrator.py" ]; then
+    echo "❌ Error: orchestrator.py not found in src/backend/"
+    echo "   Make sure you're running this from the project root directory"
+    echo "   Current directory: $(pwd)"
+    exit 1
+fi
 
-echo "🚀 Starting NewsXP.ai Orchestrator..."
-echo "📂 Working directory: $DIR"
-echo "🐍 Python path: $PYTHONPATH"
+# Check if Python is available
+if ! command -v python3 &> /dev/null; then
+    echo "❌ Error: Python 3 is not installed or not in PATH"
+    echo "   Please install Python 3.11 or higher"
+    exit 1
+fi
+
+# Check if dependencies are installed
+if [ ! -f "src/backend/requirements.txt" ]; then
+    echo "❌ Error: requirements.txt not found"
+    exit 1
+fi
+
+# Install dependencies if needed
+echo "📦 Checking Python dependencies..."
+cd src/backend
+python3 -m pip install -r requirements.txt --quiet
+
+# Return to project root
+cd "$SCRIPT_DIR"
+
+# Add some spacing for better readability
+echo ""
+echo "🚀 Starting Daily AI Times Orchestrator..."
+echo "   Processing news sources and generating content..."
+echo ""
 
 # Run the orchestrator
-python3 src/backend/orchestrator.py
+exec python3 src/backend/orchestrator.py "$@"

@@ -1,10 +1,10 @@
-# NewsXP AI
+# Daily AI Times
 
 Modern serverless AI-powered news aggregation platform with advanced multi-agent swarm intelligence and consensus-driven content curation.
 
 ## Live Demo
 
-**Production Site**: [https://siddanthemani.github.io/newsxp-ai](https://siddanthemani.github.io/newsxp-ai)
+**Production Site**: [https://siddanthemani.github.io/daily-ai-times](https://siddanthemani.github.io/daily-ai-times)
 
 ## Architecture
 
@@ -55,8 +55,8 @@ Visit the live site - no installation required.
 ### For Developers
 
 ```bash
-git clone https://github.com/SiddanthEmani/newsxp-ai.git
-cd newsxp-ai
+git clone https://github.com/SiddanthEmani/daily-ai-times.git
+cd daily-ai-times
 
 # Install Python dependencies
 pip install -r src/backend/requirements.txt

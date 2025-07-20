@@ -1,17 +1,17 @@
 {
-  "name": "newsxp-ai",
+  "name": "daily-ai-times",
   "version": "2.0.0",
-  "description": "🚀 Serverless AI-curated daily news aggregation platform powered by GitHub Actions + Pages",
+  "description": "🚀 Serverless AI-curated daily news aggregation platform - Daily AI Times powered by GitHub Actions + Pages",
   "main": "src/frontend/index.html",
-  "homepage": "https://siddanthemani.github.io/newsxp-ai",
+  "homepage": "https://siddanthemani.github.io/daily-ai-times",
   "scripts": {
     "dev": "python -m http.server 8000 --directory src/frontend",
     "collect": "cd src/backend/collectors && python collect_news.py",
     "generate-api": "python src/backend/api/generate_api.py",
     "build": "npm run collect && npm run generate-api",
     "start": "npm run build && npm run dev",
-    "monitor": "python serverless/monitor.py --url https://siddanthemani.github.io/newsxp-ai",
-    "monitor-json": "python serverless/monitor.py --url https://siddanthemani.github.io/newsxp-ai --json",
+    "monitor": "python serverless/monitor.py --url https://siddanthemani.github.io/daily-ai-times",
+    "monitor-json": "python serverless/monitor.py --url https://siddanthemani.github.io/daily-ai-times --json",
     "health": "npm run monitor",
     "deploy": "echo 'Deployment is automatic via GitHub Actions. Push to main branch or manually trigger workflow.'",
     "install-backend": "cd src/backend && pip install -r requirements.txt",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SiddanthEmani/newsxp-ai.git"
+    "url": "https://github.com/SiddanthEmani/daily-ai-times.git"
   },
   "keywords": [
     "serverless",

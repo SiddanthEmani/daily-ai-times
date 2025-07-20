@@ -129,7 +129,7 @@ body::before {
 .date-line {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     letter-spacing: 1px;
 }
 
@@ -496,6 +496,16 @@ body::before {
     width: 100%;
 }
 
+/* Mobile separator line after last research paper in first column */
+.research-column .article:last-child::after {
+    content: '';
+    display: none;
+    height: 2px;
+    background: var(--border-gray);
+    margin: 20px 0;
+    width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .masthead { 
@@ -509,7 +519,7 @@ body::before {
     
     .news-grid { 
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 0px;
     }
     
     .news-column:first-child {
@@ -519,7 +529,7 @@ body::before {
     
     .research-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 0px;
     }
     
     .research-column:first-child {
@@ -527,9 +537,27 @@ body::before {
         padding-right: 0;
     }
     
+    .research-section {
+        margin-top: 0;
+    }
+    
     /* Show separator line after 7th article in mobile */
     .news-column .article:nth-child(7)::after {
         display: block;
+    }
+    
+    /* Remove margin bottom for last article in first column */
+    .news-column:first-child .article:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Show separator line after last research paper in first column and remove margin */
+    .research-column:first-child .article:last-child::after {
+        display: block;
+    }
+    
+    .research-column:first-child .article:last-child {
+        margin-bottom: 0;
     }
     
     .newspaper {
@@ -579,13 +607,25 @@ body::before {
         gap: 12px;
     }
     
+    .edition-info {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 0 15px;
+    }
+    
     .edition-left {
         align-items: center;
         text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
     
     .edition-right {
         align-items: center;
         text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
 }

@@ -1,4 +1,4 @@
-// Type definitions for NewsXP AI project
+// Type definitions for Daily AI Times project
 
 export interface Article {
   id: string;

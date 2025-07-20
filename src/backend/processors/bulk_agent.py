@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bulk Filtering Agent for NewsXP.ai Swarm Intelligence System
+Bulk Filtering Agent for Daily AI Times Swarm Intelligence System
 Enhanced with Multi-Dimensional Scoring System (Phase 1.1)
 
 MAJOR IMPROVEMENTS in this version:

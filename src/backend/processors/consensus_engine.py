@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Consensus Engine for NewsXP.ai Swarm Intelligence System
+Consensus Engine for Daily AI Times Swarm Intelligence System
 
 Implements consensus algorithms for combining multiple agent decisions.
 Enhanced with Multi-Dimensional Scoring System (Phase 1.1):

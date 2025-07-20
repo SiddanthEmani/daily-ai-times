@@ -97,6 +97,12 @@ export class CustomAudioPlayer {
                 letter-spacing: 2px;
                 text-transform: uppercase;
                 font-family: var(--font-masthead, 'Times New Roman', serif);
+                cursor: pointer;
+                transition: color 0.2s ease;
+            }
+            
+            .audio-label:hover {
+                color: var(--secondary-gray, #666);
             }
             
             
@@ -200,7 +206,7 @@ export class CustomAudioPlayer {
             /* Sticky positioning for audio player */
             .sticky-audio-player {
                 position: fixed !important;
-                bottom: 20px;
+                bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1000;
@@ -262,7 +268,7 @@ export class CustomAudioPlayer {
                 }
                 
                 .sticky-audio-player {
-                    bottom: 10px;
+                    bottom: 60px;
                     max-width: calc(100vw - 20px);
                 }
                 
@@ -341,6 +347,9 @@ export class CustomAudioPlayer {
     setupControlEvents() {
         // Play/Pause
         this.elements.playBtn.addEventListener('click', () => this.togglePlay());
+        
+        // Audio label click to play
+        this.elements.audioLabel.addEventListener('click', () => this.togglePlay());
         
         // Progress bar - click/tap support
         this.elements.progress.addEventListener('click', (e) => this.seek(e));

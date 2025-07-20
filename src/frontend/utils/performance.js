@@ -12,14 +12,14 @@ export class PerformanceMonitor {
         
         // Use Performance API for more accurate measurements
         if (performance.mark) {
-            performance.mark(`newsxp-${name}`);
+            performance.mark(`daily_ai_times-${name}`);
         }
     }
 
     measure(name, startMark, endMark) {
         if (performance.measure && performance.mark) {
             try {
-                performance.measure(`newsxp-${name}`, `newsxp-${startMark}`, `newsxp-${endMark}`);
+                performance.measure(`daily_ai_times-${name}`, `daily_ai_times-${startMark}`, `daily_ai_times-${endMark}`);
             } catch (e) {
                 console.warn('Performance measurement failed:', e);
             }

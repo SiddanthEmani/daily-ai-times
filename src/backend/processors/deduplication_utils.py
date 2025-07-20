@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Enhanced Deduplication Utilities
+Deduplication Utilities
 
-Shared utilities for deduplicating articles across the NewsXP.ai pipeline.
+Shared utilities for deduplicating articles across the Daily AI Times pipeline.
 Provides more robust deduplication than simple title+URL matching.
 """
 

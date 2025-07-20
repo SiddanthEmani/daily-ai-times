@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-News Processing Pipeline Orchestrator for NewsXP.ai
+News Processing Pipeline Orchestrator for Daily AI Times
 Orchestrates: Collection → Swarm Scoring → Consensus Filtering
 """
 

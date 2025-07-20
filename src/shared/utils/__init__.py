@@ -1,1 +1,1 @@
-# Shared utilities for NewsXP.ai
+# Shared utilities for Daily AI Times

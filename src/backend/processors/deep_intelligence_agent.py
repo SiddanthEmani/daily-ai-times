@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Deep Intelligence Agent for NewsXP.ai
+Deep Intelligence Agent for Daily AI Times
 Provides sophisticated analysis after initial consensus filtering.
 """
 

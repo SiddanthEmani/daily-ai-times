@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Logging configuration using Rich library for NewsXP.ai
+Logging configuration using Rich library for Daily AI Times
 """
 
 import logging

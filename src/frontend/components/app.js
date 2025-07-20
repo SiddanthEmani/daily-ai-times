@@ -145,8 +145,8 @@ export class NewsApp {
 
     checkVersionAndRefresh() {
         try {
-            const storedVersion = localStorage.getItem('newsxp_app_version');
-            const lastRefreshTime = localStorage.getItem('newsxp_last_refresh');
+            const storedVersion = localStorage.getItem('daily_ai_times_app_version');
+            const lastRefreshTime = localStorage.getItem('daily_ai_times_last_refresh');
             const currentTime = Date.now();
             
             // Force refresh if:
@@ -162,8 +162,8 @@ export class NewsApp {
                 console.log('🔄 Forcing cache refresh for fresh content...');
                 
                 // Store current version and refresh time
-                localStorage.setItem('newsxp_app_version', this.appVersion);
-                localStorage.setItem('newsxp_last_refresh', currentTime.toString());
+                localStorage.setItem('daily_ai_times_app_version', this.appVersion);
+                localStorage.setItem('daily_ai_times_last_refresh', currentTime.toString());
                 
                 // Only force refresh if this isn't the first load after a refresh
                 // (prevent infinite refresh loop)
@@ -274,7 +274,7 @@ export class NewsApp {
             const audioTimestamp = Date.now();
             const editionInfo = `
                 <div class="edition-left">
-                    <a href="https://github.com/SiddanthEmani/newsxp-ai" target="_blank" rel="noopener noreferrer" class="how-it-works-link">
+                    <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer" class="how-it-works-link">
                         How was this news generated?
                     </a>
                     <span class="articles-count">${totalArticles} featured articles</span>
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Make app available globally for debugging
         window.newsApp = app;
         
-        console.log('✅ NewsXP AI app initialized successfully');
+        console.log('✅ Daily AI Times app initialized successfully');
     } catch (error) {
         console.error('Failed to initialize news app:', error);
         
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const errorMessage = 'Failed to load the news application. Please check back later.';
         document.body.innerHTML = `
             <div style="padding: 20px; text-align: center; color: #333;">
-                <h1>NewsXP AI</h1>
+                <h1>Daily AI Times</h1>
                 <p style="color: #d32f2f;">${errorMessage}</p>
             </div>
         `;

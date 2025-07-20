@@ -2,7 +2,7 @@
 """
 Groq API Usage Tracker
 
-Tracks and reports Groq API usage for NewsXP.ai pipeline testing.
+Tracks and reports Groq API usage for Daily AI Times pipeline testing.
 Compatible with both direct aiohttp calls and Groq Python SDK.
 """
 

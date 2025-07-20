@@ -23,13 +23,13 @@ try {
 export const config = {
   github: {
     owner: process.env.GITHUB_OWNER,
-    repo: 'newsxp-ai',
+    repo: 'daily-ai-times',
     token: process.env.GITHUB_TOKEN,
     workflowId: 'collect-news.yml',
     apiVersion: '2022-11-28'
   },
   server: {
-    name: 'newsxp-ai-mcp',
+    name: 'daily-ai-times-mcp',
     version: '1.0.0',
     maxPollingAttempts: 30,
     pollingInterval: 2000,
@@ -158,7 +158,7 @@ export async function httpGet(url, options = {}) {
       agent: httpAgent,
       signal: controller.signal,
       headers: {
-        'User-Agent': 'NewsXP-AI MCP Server/1.0',
+        'User-Agent': 'Daily AI Times MCP Server/1.0',
         ...options.headers
       },
       ...options

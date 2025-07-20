@@ -1,4 +1,4 @@
-name: NewsXP AI - Modern Serverless News Pipeline
+name: Daily AI Times - Modern Serverless News Pipeline
 
 on:
   schedule:
@@ -295,7 +295,7 @@ jobs:
     steps:
     - name: 📋 Generate pipeline summary
       run: |
-        echo "# 🤖 NewsXP AI - Modern AI Processing Pipeline" >> $GITHUB_STEP_SUMMARY
+        echo "# 🤖 Daily AI Times - Modern AI Processing Pipeline" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "🚀 **Modern Architecture**: Single orchestrator handles collection → AI processing → API generation" >> $GITHUB_STEP_SUMMARY
         echo "⚡ **Performance**: Advanced multi-agent AI processing with consensus algorithms" >> $GITHUB_STEP_SUMMARY

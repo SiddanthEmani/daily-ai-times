@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Multi-Dimensional Scoring System for NewsXP.ai
+Multi-Dimensional Scoring System for Daily AI Times
 
 Defines the data structures and utilities for the enhanced multi-dimensional
 scoring system that replaces binary ACCEPT/REJECT decisions.

@@ -202,14 +202,14 @@ collectors:
       sanitize_html: true
       resolve_uris: true
       request_headers:
-        User-Agent: "NewsXP-AI/1.0 (News Aggregator)"
+        User-Agent: "Daily AI Times/1.0 (News Aggregator)"
     entry_limits:
       max_entries_per_feed: 50
       skip_older_than_days: 30
 
   api_parsing:
     default_headers:
-      User-Agent: "NewsXP-AI/1.0 (News Aggregator)"
+      User-Agent: "Daily AI Times/1.0 (News Aggregator)"
       Accept: "application/json, application/xml, text/xml, */*"
       Accept-Encoding: "gzip, deflate"
     response_format_detection:

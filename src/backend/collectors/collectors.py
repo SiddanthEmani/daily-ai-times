@@ -309,7 +309,7 @@ class NewsCollector:
         self.session = aiohttp.ClientSession(
             connector=connector,
             timeout=timeout,
-            headers={'User-Agent': 'NewsXP.ai/3.0 RSS Reader (+https://newsxp.ai)'}
+            headers={'User-Agent': 'Daily AI Times/3.0 RSS Reader (+https://daily-ai-times.ai)'}
         )
     
     async def _cleanup_session(self):

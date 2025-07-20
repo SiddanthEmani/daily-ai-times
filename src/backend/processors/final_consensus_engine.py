@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Final Consensus Engine for NewsXP.ai
+Final Consensus Engine for Daily AI Times
 Combines initial consensus results with deep intelligence analysis.
 """
 
