@@ -1,17 +1,19 @@
 sources:
+  # Phase 2: Government policy and announcements (not academic research papers)
   nist_ai_news:
     url: https://www.nist.gov/news-events/news/rss.xml
     type: rss
     category: Government
     enabled: true
-    description: NIST AI and technology news
+    description: NIST AI and technology policy news
     legal_note: US Government publication - public domain
+  
   nih_ai_news:
     url: https://www.nih.gov/news-releases/feed.xml
     type: rss
     category: Government
     enabled: true
-    description: NIH medical AI research news
+    description: NIH medical AI policy and funding announcements
     legal_note: US Government publication - public domain
   darpa_ai_research:
     url: https://www.darpa.mil/rss.xml

@@ -25,19 +25,67 @@ export class CustomAudioPlayer {
         const style = document.createElement('style');
         style.id = 'custom-audio-player-styles';
         style.textContent = `
+            .audio-player-container {
+                background: var(--paper-bg, #faf8f3);
+                border: 1px solid var(--border-gray, #ddd);
+                border-radius: 12px;
+                min-width: 380px;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .audio-nav-tabs {
+                display: flex;
+                background: var(--paper-bg, #faf8f3);
+                border-radius: 12px 12px 0 0;
+                padding: 8px;
+                gap: 4px;
+                border-bottom: 1px solid var(--border-gray, #ddd);
+            }
+            
+            .audio-nav-tab {
+                flex: 1;
+                padding: 12px 16px;
+                text-align: center;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                font-size: 0.9rem;
+                font-weight: 500;
+                cursor: pointer;
+                background: transparent;
+                color: var(--secondary-gray, #666);
+                transition: all 0.3s ease;
+                border: none;
+                border-radius: 8px;
+                position: relative;
+            }
+            
+
+            
+            .audio-nav-tab:hover {
+                background: rgba(44, 44, 44, 0.05);
+                color: var(--primary-dark, #2c2c2c);
+                transform: translateY(-1px);
+            }
+            
+            .audio-nav-tab.active {
+                background: var(--primary-dark, #2c2c2c);
+                color: white;
+                box-shadow: 0 2px 8px rgba(44, 44, 44, 0.2);
+            }
+            
+
+            
             .custom-audio-player {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: var(--paper-bg, #faf8f3);
-                border: 1px solid var(--primary-dark, #2c2c2c);
                 padding: 16px 20px;
                 font-family: var(--font-masthead, 'Times New Roman', serif);
                 gap: 12px;
                 min-height: 60px;
-                min-width: 380px;
                 position: relative;
-                border-radius: 6px;
+                border-radius: 0 0 12px 12px;
+                background: var(--paper-bg, #faf8f3);
             }
             
 
@@ -149,9 +197,32 @@ export class CustomAudioPlayer {
                 font-style: italic;
             }
             
+            /* Sticky positioning for audio player */
+            .sticky-audio-player {
+                position: fixed !important;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+                max-width: calc(100vw - 40px);
+            }
+            
+            /* Smooth transition when becoming sticky */
+            .audio-player-container {
+                transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
+            
+            .audio-player-container.sticky-transition {
+                transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
+            
             @media (max-width: 480px) {
-                .custom-audio-player {
+                .audio-player-container {
                     min-width: 300px;
+                }
+                
+                .custom-audio-player {
                     gap: 8px;
                     padding: 12px 16px;
                     min-height: 50px;
@@ -171,30 +242,32 @@ export class CustomAudioPlayer {
                     letter-spacing: 1px;
                 }
                 .audio-progress {
-                    height: 14px;
+                    height: 12px;
                     margin: 0 8px;
-                    /* Add padding for easier touch interaction */
-                    padding: 6px 0;
                     cursor: pointer;
                 }
                 .audio-progress-thumb {
-                    width: 20px;
-                    height: 24px;
-                    top: -11px;
-                    /* Larger touch target for mobile */
-                    min-width: 44px;
-                    min-height: 44px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    width: 16px;
+                    height: 28px;
+                    top: -10px;
                 }
-                .audio-progress-thumb::after {
-                    content: '';
-                    width: 20px;
-                    height: 24px;
-                    background: var(--paper-bg, #faf8f3);
-                    border: 1px solid var(--primary-dark, #2c2c2c);
-                    border-radius: 3px;
+                .audio-nav-tabs {
+                    padding: 6px;
+                    gap: 3px;
+                }
+                
+                .audio-nav-tab {
+                    font-size: 0.8rem;
+                    padding: 10px 12px;
+                }
+                
+                .sticky-audio-player {
+                    bottom: 10px;
+                    max-width: calc(100vw - 20px);
+                }
+                
+                .audio-player-container.sticky-transition {
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
                 }
             }
         `;
@@ -203,22 +276,29 @@ export class CustomAudioPlayer {
     
     createPlayer() {
         this.container.innerHTML = `
-            <div class="custom-audio-player">
-                <button class="audio-btn" id="playBtn" aria-label="Play/Pause">▶</button>
-                <span class="audio-label">PLAY ME</span>
-                <div class="audio-progress" id="progress" style="display: none;">
-                    <div class="audio-progress-fill" id="progressFill"></div>
-                    <div class="audio-progress-thumb" id="progressThumb"></div>
+            <div class="audio-player-container">
+                <div class="audio-nav-tabs">
+                    <button class="audio-nav-tab active" data-target="headlines">Headlines</button>
+                    <button class="audio-nav-tab" data-target="research">Research Papers</button>
                 </div>
-                <div class="audio-time-display" id="timeDisplay" style="display: none;">
-                    <span class="audio-time" id="currentTime">0:00</span>
-                    <span>/</span>
-                    <span class="audio-time" id="duration">0:00</span>
+                <div class="custom-audio-player">
+                    <button class="audio-btn" id="playBtn" aria-label="Play/Pause">▶</button>
+                    <span class="audio-label">PLAY ME</span>
+                    <div class="audio-progress" id="progress" style="display: none;">
+                        <div class="audio-progress-fill" id="progressFill"></div>
+                        <div class="audio-progress-thumb" id="progressThumb"></div>
+                    </div>
+                    <div class="audio-time-display" id="timeDisplay" style="display: none;">
+                        <span class="audio-time" id="currentTime">0:00</span>
+                        <span>/</span>
+                        <span class="audio-time" id="duration">0:00</span>
+                    </div>
                 </div>
             </div>
         `;
         
         this.elements = {
+            container: this.container.querySelector('.audio-player-container'),
             playBtn: this.container.querySelector('#playBtn'),
             audioLabel: this.container.querySelector('.audio-label'),
             progress: this.container.querySelector('#progress'),
@@ -226,7 +306,8 @@ export class CustomAudioPlayer {
             progressThumb: this.container.querySelector('#progressThumb'),
             timeDisplay: this.container.querySelector('#timeDisplay'),
             currentTime: this.container.querySelector('#currentTime'),
-            duration: this.container.querySelector('#duration')
+            duration: this.container.querySelector('#duration'),
+            navTabs: this.container.querySelectorAll('.audio-nav-tab')
         };
     }
     
@@ -311,6 +392,25 @@ export class CustomAudioPlayer {
                 }
             }
         });
+        
+        // Navigation tabs
+        this.elements.navTabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                const target = tab.dataset.target;
+                
+                // Set active tab
+                this.setActiveTab(target);
+                
+                // Scroll to target section
+                this.scrollToSection(target);
+            });
+        });
+        
+        // Sticky audio player on scroll
+        this.setupStickyBehavior();
+        
+        // Auto-switch active tab based on scroll position
+        this.setupScrollActiveTab();
     }
     
     togglePlay() {
@@ -358,9 +458,139 @@ export class CustomAudioPlayer {
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
     
+    scrollToSection(target) {
+        let sectionElement;
+        if (target === 'headlines') {
+            sectionElement = document.querySelector('.news-grid');
+        } else if (target === 'research') {
+            sectionElement = document.querySelector('.research-section');
+        }
+        
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    }
+    
+    setupStickyBehavior() {
+        let isSticky = false;
+        let isTransitioning = false;
+        const originalRect = this.container.getBoundingClientRect();
+        const originalTop = originalRect.top + window.scrollY;
+        
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const shouldBeSticky = currentScrollY > originalTop + 100; // Add some buffer
+            
+            if (shouldBeSticky && !isSticky && !isTransitioning) {
+                isTransitioning = true;
+                
+                // Add transition class for smooth animation
+                this.elements.container.classList.add('sticky-transition');
+                
+                // Small delay to ensure transition class is applied
+                requestAnimationFrame(() => {
+                    this.elements.container.classList.add('sticky-audio-player');
+                    isSticky = true;
+                    
+                    // Clean up transition class after animation
+                    setTimeout(() => {
+                        this.elements.container.classList.remove('sticky-transition');
+                        isTransitioning = false;
+                    }, 400);
+                });
+                
+            } else if (!shouldBeSticky && isSticky && !isTransitioning) {
+                isTransitioning = true;
+                
+                // Add transition class for smooth animation
+                this.elements.container.classList.add('sticky-transition');
+                
+                requestAnimationFrame(() => {
+                    this.elements.container.classList.remove('sticky-audio-player');
+                    isSticky = false;
+                    
+                    // Clean up transition class after animation
+                    setTimeout(() => {
+                        this.elements.container.classList.remove('sticky-transition');
+                        isTransitioning = false;
+                    }, 400);
+                });
+            }
+        };
+        
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Store the function reference for cleanup
+        this.scrollHandler = handleScroll;
+    }
+    
+    setupScrollActiveTab() {
+        // Get the sections we want to observe
+        const headlinesSection = document.querySelector('.news-grid');
+        const researchSection = document.querySelector('.research-section');
+        
+        if (!headlinesSection || !researchSection) return;
+        
+        // Create intersection observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px', // Trigger when section is 20% from top
+            threshold: 0
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let targetTab;
+                    
+                    if (entry.target.classList.contains('news-grid')) {
+                        targetTab = 'headlines';
+                    } else if (entry.target.classList.contains('research-section')) {
+                        targetTab = 'research';
+                    }
+                    
+                    if (targetTab) {
+                        this.setActiveTab(targetTab);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe the sections
+        observer.observe(headlinesSection);
+        observer.observe(researchSection);
+        
+        // Store observer for cleanup
+        this.sectionObserver = observer;
+    }
+    
+    setActiveTab(target) {
+        // Remove active class from all tabs
+        this.elements.navTabs.forEach(tab => tab.classList.remove('active'));
+        
+        // Add active class to target tab
+        const targetTab = Array.from(this.elements.navTabs).find(tab => tab.dataset.target === target);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
+    }
+    
     // Public API
     play() { this.audio.play(); this.isPlaying = true; this.elements.playBtn.textContent = '■'; }
     pause() { this.audio.pause(); this.isPlaying = false; this.elements.playBtn.textContent = '▶'; }
     setSource(src) { this.audio.src = src; }
-    destroy() { this.audio.pause(); this.audio.src = ''; this.container.innerHTML = ''; }
+    destroy() { 
+        this.audio.pause(); 
+        this.audio.src = ''; 
+        if (this.scrollHandler) {
+            window.removeEventListener('scroll', this.scrollHandler);
+        }
+        if (this.sectionObserver) {
+            this.sectionObserver.disconnect();
+        }
+        this.container.innerHTML = ''; 
+    }
 } 

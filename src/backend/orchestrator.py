@@ -767,27 +767,187 @@ class NewsProcessingPipeline:
                 (is_major_source or has_breaking_keywords) and
                 impact_score > 0.6)
 
-    def _is_research_paper(self, article: Dict[str, Any]) -> bool:
-        """Identify research papers and academic content."""
+    def _is_scientific_paper(self, article: Dict[str, Any]) -> bool:
+        """
+        Identify genuine scientific research papers vs news about research.
+        Phase 1: Enhanced detection with multi-tier validation.
+        """
         source = article.get('source', '').lower()
         title = article.get('title', '').lower()
         category = article.get('category', '').lower()
         url = article.get('url', '').lower()
+        description = article.get('description', '').lower()
+        content = article.get('content', '').lower()
+        author = article.get('author', '').lower()
         
-        # Research source indicators
-        research_sources = ['arxiv', 'research', 'academic', 'scholar', 'mit', 'stanford', 'university']
-        research_keywords = ['study', 'research', 'paper', 'analysis', 'methodology', 'experiment', 'survey']
-        research_urls = ['arxiv.org', 'research.', 'papers.', '.edu/', 'scholar.']
+        # Tier 1: Explicit scientific publication sources (highest confidence)
+        scientific_sources = [
+            'arxiv', 'nature', 'science', 'jair', 'distill', 'acm_ai_news',
+            'nature_machine_learning', 'science_ai', 'distill_pub'
+        ]
         
-        # Check if it's from a research source
-        is_research_source = (any(rs in source for rs in research_sources) or
-                             category == 'research' or
-                             any(ru in url for ru in research_urls))
+        # Tier 2: Academic domains and URLs (high confidence)
+        academic_urls = [
+            'arxiv.org', 'nature.com', 'science.org', 'jair.org', 'distill.pub',
+            'acm.org', 'ieee.org', 'aaai.org', 'papers.nips.cc', 'aclweb.org'
+        ]
         
-        # Check for research keywords in title
-        has_research_keywords = any(kw in title for kw in research_keywords)
+        # Tier 3: Scientific paper structure indicators
+        paper_structure_indicators = [
+            'abstract:', 'doi:', 'methodology', 'experimental', 'conclusion',
+            'references', 'bibliography', 'volume', 'issue', 'pages'
+        ]
         
-        return is_research_source or has_research_keywords
+        # Tier 4: Academic writing patterns
+        academic_patterns = [
+            'et al.', 'university', 'laboratory', 'institute', 'department',
+            'faculty', 'professor', 'phd', 'ph.d.'
+        ]
+        
+        # EXCLUSIONS: Filter out news/blog content about research
+        news_exclusions = [
+            'announces', 'launches', 'releases', 'introduces', 'unveils',
+            'reports', 'says', 'claims', 'according to', 'breaking',
+            'techcrunch', 'blog', 'news', 'press release', 'company'
+        ]
+        
+        # Corporate research blogs (not academic papers)
+        corporate_sources = [
+            'google_research_blog', 'deepmind_research', 'amazon_science',
+            'google_ai_blog', 'microsoft_ai_blog', 'openai_blog', 'marktechpost'
+        ]
+        
+        # Government announcements (not research papers)
+        government_sources = [
+            'nih_ai_news', 'nist_ai_news', 'darpa_ai_research'
+        ]
+        
+        # Industry/media sources (not academic)
+        industry_media_sources = [
+            'techcrunch_ai', 'venturebeat', 'wired', 'the_verge'
+        ]
+        
+        # Apply exclusions first
+        if (source in corporate_sources or 
+            source in government_sources or 
+            source in industry_media_sources or
+            any(exclusion in title or exclusion in description for exclusion in news_exclusions)):
+            return False
+        
+        # Check for explicit scientific sources
+        if source in scientific_sources or category.lower() == 'research':
+            return self._validate_paper_structure(article)
+        
+        # Check for academic URLs
+        if any(academic_url in url for academic_url in academic_urls):
+            return self._validate_paper_structure(article)
+        
+        # Check for scientific paper structure
+        structure_score = sum(1 for indicator in paper_structure_indicators 
+                            if indicator in description or indicator in content)
+        
+        # Check for academic patterns
+        academic_score = sum(1 for pattern in academic_patterns 
+                           if pattern in author or pattern in description)
+        
+        # Require strong evidence for classification as research paper
+        # This prevents news articles about research from being classified as papers
+        return (structure_score >= 2 and academic_score >= 1) or structure_score >= 3
+    
+    def _validate_paper_structure(self, article: Dict[str, Any]) -> bool:
+        """
+        Phase 3: Validate academic paper structure and quality.
+        Enhanced validation for articles from research sources.
+        """
+        title = article.get('title', '').lower()
+        description = article.get('description', '').lower()
+        content = article.get('content', '').lower()
+        url = article.get('url', '').lower()
+        author = article.get('author', '').lower()
+        
+        # DOI validation (strong indicator)
+        has_doi = ('doi:' in description or 'doi:' in content or 
+                  'doi.org/' in url or '/doi/' in url)
+        
+        # Journal/conference metadata
+        has_publication_metadata = any(indicator in description or indicator in content for indicator in [
+            'volume', 'issue', 'pages', 'published in', 'journal of', 
+            'proceedings of', 'conference on', 'symposium on'
+        ])
+        
+        # Academic structure
+        has_academic_structure = any(structure in description or structure in content for structure in [
+            'abstract', 'introduction', 'methodology', 'results', 
+            'conclusion', 'references', 'bibliography'
+        ])
+        
+        # Author credentials (multiple authors, institutional affiliations)
+        has_academic_authors = (
+            'et al.' in author or 
+            len(author.split(',')) > 1 or  # Multiple authors
+            any(institution in author for institution in ['university', 'institute', 'laboratory'])
+        )
+        
+        # Exclude obvious news articles even from research sources
+        news_indicators = [
+            'announces', 'launches', 'reports', 'according to', 'breaking',
+            'company', 'startup', 'funding', 'investment', 'ipo'
+        ]
+        
+        has_news_indicators = any(indicator in title or indicator in description 
+                                for indicator in news_indicators)
+        
+        if has_news_indicators:
+            return False
+        
+        # Scoring system for paper validation
+        score = 0
+        score += 3 if has_doi else 0
+        score += 2 if has_publication_metadata else 0
+        score += 2 if has_academic_structure else 0
+        score += 1 if has_academic_authors else 0
+        
+        # Require minimum score for validation
+        return score >= 3
+    
+    def _get_research_quality_score(self, article: Dict[str, Any]) -> float:
+        """
+        Calculate research paper quality score for ranking.
+        Phase 3: Quality validation component.
+        """
+        if not self._is_scientific_paper(article):
+            return 0.0
+        
+        source = article.get('source', '').lower()
+        url = article.get('url', '').lower()
+        description = article.get('description', '').lower()
+        
+        # Tier-based scoring
+        score = 0.5  # Base score for validated research paper
+        
+        # Top-tier journals and conferences
+        if any(top_source in source for top_source in ['nature', 'science', 'arxiv']):
+            score += 0.3
+        elif any(good_source in source for good_source in ['jair', 'acm', 'ieee']):
+            score += 0.2
+        
+        # Quality indicators
+        if 'doi:' in description or 'doi.org/' in url:
+            score += 0.1
+        
+        if any(quality_indicator in description for quality_indicator in [
+            'peer-reviewed', 'impact factor', 'cited by'
+        ]):
+            score += 0.1
+        
+        return min(score, 1.0)
+
+    def _is_research_paper(self, article: Dict[str, Any]) -> bool:
+        """
+        Legacy method wrapper for backward compatibility.
+        Phase 4: Updated to use new scientific paper detection.
+        """
+        return self._is_scientific_paper(article)
 
     def _calculate_composite_score(self, article: Dict[str, Any]) -> float:
         """Calculate composite quality score for ranking articles."""
@@ -806,28 +966,86 @@ class NewsProcessingPipeline:
                 relevance_score * 0.1)
 
     def _classify_articles(self, articles: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
-        """Classify articles into headlines, regular articles, and research papers."""
+        """
+        Classify articles into headlines, regular articles, and research papers.
+        Phase 4: Enhanced with scientific paper validation and logging.
+        """
         headlines = []
         regular_articles = []
         research_papers = []
         
+        # Counters for classification tracking
+        classification_stats = {
+            'total': len(articles),
+            'headlines': 0,
+            'research_papers': 0,
+            'regular_articles': 0,
+            'research_rejected': 0,  # Articles that looked like research but were rejected
+        }
+        
         for article in articles:
+            source = article.get('source', '')
+            title = article.get('title', '')
+            
             if self._is_headline_candidate(article):
                 headlines.append(article)
-            elif self._is_research_paper(article):
+                classification_stats['headlines'] += 1
+                logger.debug(f"Classified as HEADLINE: {title[:60]}... (source: {source})")
+            
+            elif self._is_scientific_paper(article):
                 research_papers.append(article)
+                classification_stats['research_papers'] += 1
+                
+                # Log research paper details for monitoring
+                quality_score = self._get_research_quality_score(article)
+                logger.info(f"Classified as RESEARCH (quality: {quality_score:.2f}): {title[:60]}... (source: {source})")
+                
+                # Add quality score to article for ranking
+                article['research_quality_score'] = quality_score
+                
             else:
                 regular_articles.append(article)
+                classification_stats['regular_articles'] += 1
+                
+                # Check if this looked like research but was rejected
+                source_lower = source.lower()
+                title_lower = title.lower()
+                if ('research' in source_lower or 'research' in title_lower or 
+                    article.get('category', '').lower() == 'research'):
+                    classification_stats['research_rejected'] += 1
+                    logger.debug(f"Research-like but REJECTED: {title[:60]}... (source: {source})")
+        
+        # Log classification summary
+        logger.info(f"Article classification complete:")
+        logger.info(f"  Headlines: {classification_stats['headlines']}")
+        logger.info(f"  Research papers: {classification_stats['research_papers']}")
+        logger.info(f"  Regular articles: {classification_stats['regular_articles']}")
+        logger.info(f"  Research-like rejected: {classification_stats['research_rejected']}")
         
         return headlines, regular_articles, research_papers
 
     def _select_best_articles(self, articles: List[Dict[str, Any]], count: int) -> List[Dict[str, Any]]:
-        """Select the best articles based on composite scoring."""
+        """
+        Select the best articles based on composite scoring.
+        Phase 3: Enhanced with research quality scoring.
+        """
         if not articles:
             return []
         
-        # Sort by composite score (highest first)
-        sorted_articles = sorted(articles, key=self._calculate_composite_score, reverse=True)
+        def get_article_score(article):
+            """Calculate score with research quality enhancement."""
+            base_score = self._calculate_composite_score(article)
+            
+            # Enhance research papers with quality scoring
+            if self._is_scientific_paper(article):
+                research_quality = self._get_research_quality_score(article)
+                # Boost research papers with high quality scores
+                return base_score * 0.7 + research_quality * 0.3
+            
+            return base_score
+        
+        # Sort by enhanced composite score (highest first)
+        sorted_articles = sorted(articles, key=get_article_score, reverse=True)
         return sorted_articles[:count]
 
     def classify_and_allocate_content(self, final_articles: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -843,9 +1061,25 @@ class NewsProcessingPipeline:
         selected_articles = self._select_best_articles(regular_articles, 14)
         selected_research = self._select_best_articles(research_papers, 10)
         
+        # Phase 4: Enhanced logging with quality metrics
         logger.info(f"Content classification: {len(headlines)} headline candidates → {len(selected_headline)} selected")
         logger.info(f"Content classification: {len(regular_articles)} article candidates → {len(selected_articles)} selected")
         logger.info(f"Content classification: {len(research_papers)} research candidates → {len(selected_research)} selected")
+        
+        # Log research paper quality distribution
+        if research_papers:
+            quality_scores = [article.get('research_quality_score', 0.0) for article in research_papers]
+            avg_quality = sum(quality_scores) / len(quality_scores)
+            high_quality_count = sum(1 for score in quality_scores if score >= 0.7)
+            logger.info(f"Research quality: avg={avg_quality:.2f}, high-quality={high_quality_count}/{len(research_papers)}")
+        
+        # Log selected research paper sources for validation
+        if selected_research:
+            research_sources = {}
+            for paper in selected_research:
+                source = paper.get('source', 'unknown')
+                research_sources[source] = research_sources.get(source, 0) + 1
+            logger.info(f"Selected research sources: {dict(research_sources)}")
         
         return {
             'headline': selected_headline,
@@ -976,10 +1210,11 @@ class NewsProcessingPipeline:
             if article_id in article_type_map:
                 normalized_article['article_type'] = article_type_map[article_id]
             else:
-                # Fallback: try to determine type from category
-                category = normalized_article.get('category', '').lower()
-                if category == 'research':
+                # Phase 4: Enhanced fallback using scientific paper detection
+                if self._is_scientific_paper(normalized_article):
                     normalized_article['article_type'] = 'research'
+                elif self._is_headline_candidate(normalized_article):
+                    normalized_article['article_type'] = 'headline'
                 else:
                     normalized_article['article_type'] = 'article'  # Default to regular article
             

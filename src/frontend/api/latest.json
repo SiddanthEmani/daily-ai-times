@@ -1,12 +1,12 @@
 {
-  "generated_at": "2025-07-19T20:31:33.361942+00:00",
+  "generated_at": "2025-07-20T01:16:50.859378+00:00",
   "articles": [
     {
       "article_id": "af9ed0d02b5c28fe2949e47fa11202d0",
       "title": "How to design an actually good flash flood alert system",
       "source": "the_verge",
       "url": "https://www.theverge.com/science/709362/flash-flood-warning-system-experts-texas-sirens-blue-alert",
-      "published_date": "2025-07-19T12:00:00+00:00",
+      "published_date": "2025-07-19T17:00:00+00:00",
       "category": "Media",
       "description": "Flash floods have wrought more havoc in the US this week, from the Northeast to the Midwest, just weeks after swollen rivers took more than 130 lives across central Texas earlier this month. Frustrations have grown in the aftermath of that catastrophe over why more wasn't done to warn people in advance. Local officials face […]",
       "author": "Justine Calma",
@@ -14,9 +14,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -24,15 +24,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,899 +44,31 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.349139+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.803543+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.349142+00:00"
+        "timestamp": "2025-07-20T01:16:50.803545+00:00"
       },
       "article_type": "headline"
-    },
-    {
-      "article_id": "29c25a5c9443f7b59292598f38da606e",
-      "title": "Optimizing for Low-Latency Communication in Inference Workloads with JAX and XLA",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/optimizing-for-low-latency-communication-in-inference-workloads-with-jax-and-xla/",
-      "published_date": "2025-07-18T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Running inference with large language models (LLMs) in production requires meeting stringent latency constraints. A critical stage in the process is LLM decode,...",
-      "author": "Jaya Shankar",
-      "content": "Running inference with large language models (LLMs) in production requires meeting stringent latency constraints. A critical stage in the process is LLM decode,...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.331853+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.331856+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f5ad96ca042c2577d7103cc134aa07b3",
-      "title": "Driving AI-Powered Robotics Development with NVIDIA Isaac for Healthcare",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/driving-ai-powered-robotics-development-with-nvidia-isaac-for-healthcare/",
-      "published_date": "2025-07-17T06:00:00+00:00",
-      "category": "Industry",
-      "description": "By 2030, the World Health Organization projects a global shortage of over 15 million healthcare workers, including surgeons, radiologists, and nurses. In the...",
-      "author": "Ansley Dunn",
-      "content": "By 2030, the World Health Organization projects a global shortage of over 15 million healthcare workers, including surgeons, radiologists, and nurses. In the...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.332172+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.332175+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c233114bec9e1448a3688a8d0e397e96",
-      "title": "This cargo ship is turning its CO2 emissions into green cement",
-      "source": "neural_thenextweb",
-      "url": "https://thenextweb.com/news/cargo-ship-turning-co2-into-cement",
-      "published_date": "2025-07-16T09:00:02+00:00",
-      "category": "Media",
-      "description": "A giant cargo ship is set to trap carbon from its exhaust and turn it into cement for use in onshore construction. The technology, developed by UK startup Seabound, is billed as the world’s first commercial carbon capture system for boats. It will be installed on the UBC Cork, a cement carrier owned by Germany’s Hartmann Group. “These are the systems we intend to scale across hundreds, and eventually thousands, of vessels,” Alisha Frediksson, Seabound’s CEO and co-founder, told TNW. “We’re...",
-      "author": "Siôn Geschwindt",
-      "content": "A giant cargo ship is set to trap carbon from its exhaust and turn it into cement for use in onshore construction. The technology, developed by UK startup Seabound, is billed as the world’s first commercial carbon capture system for boats. It will be installed on the UBC Cork, a cement carrier owned by Germany’s Hartmann Group. “These are the systems we intend to scale across hundreds, and eventually thousands, of vessels,” Alisha Frediksson, Seabound’s CEO and co-founder, told TNW. “We’re...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.347877+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.347880+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "8c669cfcf070bd31b1225b09bfe86f3a",
-      "title": "Elastic and Tencent Cloud AI search technology make Dunhuang Digital Scripture Cave accessible to everyone",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-tencent-cloud-ai-search-dunhuang-digital-scripture-cave",
-      "published_date": "2025-07-14T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Ancient books in the Dunhuang Digital Scripture Cave have now become accessible to everyone online. The Dunhuang Research Institute officially released the Digital Scripture Cave database, including more than 9,900 volumes of Dunhuang documents and more than 60,700 images that contain Buddhist scriptures, legal codes, contracts, silk paintings, and more.With the help of Elastic and Tencent Cloud AI search and large language model (LLM) technology, traditional Chinese and rare characters in...",
-      "author": "Yuki Jiang",
-      "content": "Ancient books in the Dunhuang Digital Scripture Cave have now become accessible to everyone online. The Dunhuang Research Institute officially released the Digital Scripture Cave database, including more than 9,900 volumes of Dunhuang documents and more than 60,700 images that contain Buddhist scriptures, legal codes, contracts, silk paintings, and more.With the help of Elastic and Tencent Cloud AI search and large language model (LLM) technology, traditional Chinese and rare characters in...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.350106+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.350108+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "55a917f2f4912437e2df7b96dcf592a7",
-      "title": "Nested Forecasting: Analyzing the Relationship Between the Dollar and Stock Market Trends",
-      "source": "r_bloggers",
-      "url": "https://www.r-bloggers.com/2025/07/nested-forecasting-analyzing-the-relationship-between-the-dollar-and-stock-market-trends/",
-      "published_date": "2025-07-14T09:42:16+00:00",
-      "category": "Open Source",
-      "description": "The prevailing opinion is that because countries are exporting more goods to the US than it exports to them, resulting in a trade deficit. In return for their exports, these countries receive US dollars, which they often use to purchase US government bonds and stocks. Over time, this process contributes ... Continue reading: Nested Forecasting: Analyzing the Relationship Between the Dollar and Stock Market Trends",
-      "author": "Selcuk Disci",
-      "content": "The prevailing opinion is that because countries are exporting more goods to the US than it exports to them, resulting in a trade deficit. In return for their exports, these countries receive US dollars, which they often use to purchase US government bonds and stocks. Over time, this process contributes ... Continue reading: Nested Forecasting: Analyzing the Relationship Between the Dollar and Stock Market Trends",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.351050+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.351052+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f411ae0a3ac3ce2f2f1b874e6fe3c957",
-      "title": "NIST Ion Clock Sets New Record for Most Accurate Clock in the World",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2025/07/nist-ion-clock-sets-new-record-most-accurate-clock-world",
-      "published_date": "2025-07-14T12:00:00+00:00",
-      "category": "Government",
-      "description": "This new result contributes to the international effort to define the second with a much greater level of accuracy than before, enabling new scientific and technological advances.",
-      "author": "Sarah Henderson",
-      "content": "This new result contributes to the international effort to define the second with a much greater level of accuracy than before, enabling new scientific and technological advances.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.327480+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.327485+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "15296642ae1534e26a13977e63431814",
-      "title": "Working with 400,000 teachers to shape the future of AI in schools",
-      "source": "openai_blog",
-      "url": "https://openai.com/global-affairs/aft",
-      "published_date": "2025-07-08T07:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
-      "author": "",
-      "content": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.329204+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.329207+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a1694d7ed7e445d2d98061f0a661521b",
-      "title": "Build real-time travel recommendations using AI agents on Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-real-time-travel-recommendations-using-ai-agents-on-amazon-bedrock/",
-      "published_date": "2025-07-18T16:18:32+00:00",
-      "category": "Industry",
-      "description": "In this post, we show how to build a generative AI solution using Amazon Bedrock that creates bespoke holiday packages by combining customer profiles and preferences with real-time pricing data. We demonstrate how to use Amazon Bedrock Knowledge Bases for travel information, Amazon Bedrock Agents for real-time flight details, and Amazon OpenSearch Serverless for efficient package search and retrieval.",
-      "author": "Vishnu Vardhini",
-      "content": "In this post, we show how to build a generative AI solution using Amazon Bedrock that creates bespoke holiday packages by combining customer profiles and preferences with real-time pricing data. We demonstrate how to use Amazon Bedrock Knowledge Bases for travel information, Amazon Bedrock Agents for real-time flight details, and Amazon OpenSearch Serverless for efficient package search and retrieval.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.329458+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.329466+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "027a458a9af5cf72213f3f83ed89b85a",
-      "title": "Building cost-effective RAG applications with Amazon Bedrock Knowledge Bases and Amazon S3 Vectors",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-cost-effective-rag-applications-with-amazon-bedrock-knowledge-bases-and-amazon-s3-vectors/",
-      "published_date": "2025-07-17T22:09:04+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how to integrate Amazon S3 Vectors with Amazon Bedrock Knowledge Bases for RAG applications. You'll learn a practical approach to scale your knowledge bases to handle millions of documents while maintaining retrieval quality and using S3 Vectors cost-effective storage.",
-      "author": "Vaibhav Sabharwal",
-      "content": "In this post, we demonstrate how to integrate Amazon S3 Vectors with Amazon Bedrock Knowledge Bases for RAG applications. You'll learn a practical approach to scale your knowledge bases to handle millions of documents while maintaining retrieval quality and using S3 Vectors cost-effective storage.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.329658+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.329661+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "04d05480c3b778ec9224d246ab0d0bec",
-      "title": "How PayU built a secure enterprise AI assistant using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-payu-built-a-secure-enterprise-ai-assistant-using-amazon-bedrock/",
-      "published_date": "2025-07-15T21:54:53+00:00",
-      "category": "Industry",
-      "description": "PayU offers a full-stack digital financial services system that serves the financial needs of merchants, banks, and consumers through technology. In this post, we explain how we equipped the PayU team with an enterprise AI solution and democratized AI access using Amazon Bedrock, without compromising on data residency requirements.",
-      "author": "Deepesh Dhapola",
-      "content": "PayU offers a full-stack digital financial services system that serves the financial needs of merchants, banks, and consumers through technology. In this post, we explain how we equipped the PayU team with an enterprise AI solution and democratized AI access using Amazon Bedrock, without compromising on data residency requirements.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.330065+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.330068+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2f0db36b19331fc9ce41528e1068ca42",
-      "title": "Compare AI video models",
-      "source": "replicate_blog",
-      "url": "https://replicate.com/blog/compare-ai-video-models",
-      "published_date": "2025-07-07T00:00:00+00:00",
-      "category": "Industry",
-      "description": "It's hard keeping up with every new video model. In this post we'll help you pick the best one for your needs.",
-      "author": "",
-      "content": "It's hard keeping up with every new video model. In this post we'll help you pick the best one for your needs.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.331763+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.331766+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f1937fe68b1b740caddcea549a52c6a9",
-      "title": "Feature Engineering at Scale: Optimizing ML Models in Semiconductor Manufacturing with NVIDIA CUDA‑X Data Science",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/feature-engineering-at-scale-optimizing-ml-models-in-semiconductor-manufacturing-with-nvidia-cuda%e2%80%91x-data-science/",
-      "published_date": "2025-07-17T16:04:06+00:00",
-      "category": "Industry",
-      "description": "In our previous post, we introduced the setup of predictive modeling in chip manufacturing and operations, highlighting common challenges such as imbalanced...",
-      "author": "Divyansh Jain",
-      "content": "In our previous post, we introduced the setup of predictive modeling in chip manufacturing and operations, highlighting common challenges such as imbalanced...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.332036+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.332038+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "8525ec5b84b7c47e2d2a20269d8ad69c",
-      "title": "DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/dazn-opens-indias-first-sports-tech-gcc-in-hyderabad-plans-to-hire-3000-by-2026/",
-      "published_date": "2025-07-19T15:31:17+00:00",
-      "category": "Industry",
-      "description": "The new centre will serve as DAZN’s largest global hub and is expected to create around 3,000 jobs by the end of 2026. The post DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026 appeared first on Analytics India Magazine.",
-      "author": "Shalini Mondal",
-      "content": "The new centre will serve as DAZN’s largest global hub and is expected to create around 3,000 jobs by the end of 2026. The post DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026 appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.333462+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.333465+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "636fe24efdd382e7325c5f054c0f9bdc",
-      "title": "Perplexity AI Valued at $18 Bn After Latest Funding Deal",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/perplexity-ai-valued-at-18-bn-after-latest-funding-deal/",
-      "published_date": "2025-07-18T09:32:12+00:00",
-      "category": "Industry",
-      "description": "Perplexity AI has raised $100 million in a funding deal that values the company at $18 billion. The post Perplexity AI Valued at $18 Bn After Latest Funding Deal appeared first on Analytics India Magazine.",
-      "author": "Smruthi Nadig",
-      "content": "Perplexity AI has raised $100 million in a funding deal that values the company at $18 billion. The post Perplexity AI Valued at $18 Bn After Latest Funding Deal appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.333745+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.333748+00:00"
-      },
-      "article_type": "article"
     },
     {
       "article_id": "d8ca7eebc11877f89ac9dd1cbf1a9687",
       "title": "Measuring heart rate with consumer ultra-wideband radar",
       "source": "google_research_blog",
       "url": "https://research.google/blog/measuring-heart-rate-with-consumer-ultra-wideband-radar/",
-      "published_date": "2025-07-17T19:00:00+00:00",
+      "published_date": "2025-07-18T00:00:00+00:00",
       "category": "Industry",
       "description": "Hardware & Architecture",
       "author": "",
@@ -978,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.332743+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.792225+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -989,20 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.332746+00:00"
+        "timestamp": "2025-07-20T01:16:50.792227+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "efb62c13542d52dd3f46991487a57511",
-      "title": "Study: Sensome Tech Enables Real-Time Cancer Monitoring",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/study-sensome-tech-enables-real-time-cancer-monitoring/",
-      "published_date": "2025-07-18T17:45:00+00:00",
-      "category": "Industry",
-      "description": "Paper Published in Science Advances Unveils Results of Multi-Year Collaboration between Sensome, École Polytechnique and French National Center for Scientific Research (CNRS) Sensome, the pioneer of microsensing technology for real-time, in situ tissue analysis, today announced publication of a study in Science Advances unveiling an innovative methodology using its technology to non-invasively monitor cell... The post Study: Sensome Tech Enables Real-Time Cancer Monitoring first appeared on...",
-      "author": "Business Wire",
-      "content": "Paper Published in Science Advances Unveils Results of Multi-Year Collaboration between Sensome, École Polytechnique and French National Center for Scientific Research (CNRS) Sensome, the pioneer of microsensing technology for real-time, in situ tissue analysis, today announced publication of a study in Science Advances unveiling an innovative methodology using its technology to non-invasively monitor cell... The post Study: Sensome Tech Enables Real-Time Cancer Monitoring first appeared on...",
+      "article_id": "78baca70d5bcd773397397c7d4f6287c",
+      "title": "NIH researchers identify brain circuits responsible for visual acuity",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-identify-brain-circuits-responsible-visual-acuity",
+      "published_date": "2025-07-20T01:10:06.733187+00:00",
+      "category": "Government",
+      "description": "Studies demonstrate the effect of retinal injury on visual processing pathways, providing insights for the development of vision restoration therapies.",
+      "author": "",
+      "content": "Studies demonstrate the effect of retinal injury on visual processing pathways, providing insights for the development of vision restoration therapies.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
@@ -1036,35 +168,97 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.332921+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.788944+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.332924+00:00"
+        "timestamp": "2025-07-20T01:16:50.788946+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "53b22f1592f5ba7ac7c353948b441f85",
-      "title": "Strong filters, bold impact: COFFEE filters advance solution to spectrum congestion",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2025/coffee-solution-spectrum-congestion",
-      "published_date": "2025-07-07T14:37:52+00:00",
+      "article_id": "ed8afaa9ddc9c7b3a56d41496e924886",
+      "title": "NIH scientists test in an animal model a surgical technique to improve cell therapy for dry AMD",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-scientists-test-animal-model-surgical-technique-improve-cell-therapy-dry-amd",
+      "published_date": "2025-07-20T01:10:06.733299+00:00",
       "category": "Government",
-      "description": "COFFEE is advancing compact RF filters that enable military and commercial systems to share crowded spectrum without interference.",
-      "author": "outreach@darpa.mil",
-      "content": "COFFEE is advancing compact RF filters that enable military and commercial systems to share crowded spectrum without interference.",
+      "description": "The technique may enable higher doses and combinations of cell therapies.",
+      "author": "",
+      "content": "The technique may enable higher doses and combinations of cell therapies.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.789028+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.789030+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "15296642ae1534e26a13977e63431814",
+      "title": "Working with 400,000 teachers to shape the future of AI in schools",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/aft",
+      "published_date": "2025-07-08T12:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
+      "author": "",
+      "content": "OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -1102,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.328040+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.790183+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1113,20 +307,268 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.328043+00:00"
+        "timestamp": "2025-07-20T01:16:50.790185+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "965eb34fc4a991bda6193616aa4b8d05",
-      "title": "OpenAI Introduces ChatGPT Agent: From Research to Real-World Automation",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2025/07/18/openai-introduces-chatgpt-agent-from-research-to-real-world-automation/",
-      "published_date": "2025-07-18T08:00:52+00:00",
+      "article_id": "465c4fdfb653f8212e84ef9e193889b1",
+      "title": "Mid-2025 AI Update: What’s Actually Working in Enterprise",
+      "source": "gradient_flow",
+      "url": "https://gradientflow.com/mid-2025-ai-update-whats-actually-working-in-enterprise/",
+      "published_date": "2025-07-09T18:29:01+00:00",
+      "category": "Open Source",
+      "description": "As we cross the midpoint of 2025, the conversation around AI is shifting from potential to practice. While the race to build the next frontier model dominates headlines, the more critical story is one of diffusion—how this technology is actually being woven into the fabric of business. As I recently noted, China is accelerating thisContinue reading \"Mid-2025 AI Update: What’s Actually Working in Enterprise\" The post Mid-2025 AI Update: What’s Actually Working in Enterprise appeared first on...",
+      "author": "Ben Lorica",
+      "content": "As we cross the midpoint of 2025, the conversation around AI is shifting from potential to practice. While the race to build the next frontier model dominates headlines, the more critical story is one of diffusion—how this technology is actually being woven into the fabric of business. As I recently noted, China is accelerating thisContinue reading \"Mid-2025 AI Update: What’s Actually Working in Enterprise\" The post Mid-2025 AI Update: What’s Actually Working in Enterprise appeared first on...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.805189+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.805191+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "47fdcc998fd8fd232e553a344861e217",
+      "title": "From Model to Meaning: How to use the marginaleffects R package to interpret results from statistical or machine learning models workshop",
+      "source": "r_bloggers",
+      "url": "https://www.r-bloggers.com/2025/07/from-model-to-meaning-how-to-use-the-marginaleffects-r-package-to-interpret-results-from-statistical-or-machine-learning-models-workshop/",
+      "published_date": "2025-07-14T18:33:02+00:00",
+      "category": "Open Source",
+      "description": "Join our workshop on From Model to Meaning: How to use the marginaleffects R package to interpret results from statistical or machine learning models, which is a part of our workshops for Ukraine series! Here’s some more info: Title: From Model to Meaning: How to use the marginaleffects R ... Continue reading: From Model to Meaning: How to use the marginaleffects R package to interpret results from statistical or machine learning models workshop",
+      "author": "Dariia Mykhailyshyna",
+      "content": "Join our workshop on From Model to Meaning: How to use the marginaleffects R package to interpret results from statistical or machine learning models, which is a part of our workshops for Ukraine series! Here’s some more info: Title: From Model to Meaning: How to use the marginaleffects R ... Continue reading: From Model to Meaning: How to use the marginaleffects R package to interpret results from statistical or machine learning models workshop",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.805644+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.805645+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "fdecd51fd4938faf2b339dfb2d5094f6",
+      "title": "data.table is a NumFOCUS project!",
+      "source": "r_bloggers",
+      "url": "https://www.r-bloggers.com/2025/07/data-table-is-a-numfocus-project/",
+      "published_date": "2025-07-10T12:00:00+00:00",
+      "category": "Open Source",
+      "description": "We are SO excited to announce some massive news for the data.table community: data.table is now a NumFOCUS Sponsored Project!!! For those who aren’t familiar, NumFOCUS is an incredible nonprofit organization that supports open source projects.... Continue reading: data.table is a NumFOCUS project!",
+      "author": "Community Team",
+      "content": "We are SO excited to announce some massive news for the data.table community: data.table is now a NumFOCUS Sponsored Project!!! For those who aren’t familiar, NumFOCUS is an incredible nonprofit organization that supports open source projects.... Continue reading: data.table is a NumFOCUS project!",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.805875+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.805876+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f411ae0a3ac3ce2f2f1b874e6fe3c957",
+      "title": "NIST Ion Clock Sets New Record for Most Accurate Clock in the World",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2025/07/nist-ion-clock-sets-new-record-most-accurate-clock-world",
+      "published_date": "2025-07-14T17:00:00+00:00",
+      "category": "Government",
+      "description": "This new result contributes to the international effort to define the second with a much greater level of accuracy than before, enabling new scientific and technological advances.",
+      "author": "Sarah Henderson",
+      "content": "This new result contributes to the international effort to define the second with a much greater level of accuracy than before, enabling new scientific and technological advances.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.788743+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.788745+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e62851563073664c3bc7745cd843e4f4",
+      "title": "How we optimized FLUX.1 Kontext [dev]",
+      "source": "replicate_blog",
+      "url": "https://replicate.com/blog/flux-kontext-optimization",
+      "published_date": "2025-07-15T21:00:00+00:00",
       "category": "Industry",
-      "description": "On July 17, 2025, OpenAI launched ChatGPT Agent, transforming ChatGPT from a conversational assistant into a unified AI agent capable of autonomously executing complex, multi‑step tasks—from web browsing to code execution—on a virtual computer environment. Bridging Previous Capabilities ChatGPT Agent builds on two earlier tools: Individually, both had limitations: Operator could interface but couldn’t perform in‑depth analysis; Deep Research […] The post OpenAI Introduces ChatGPT Agent: From...",
-      "author": "Michal Sutter",
-      "content": "On July 17, 2025, OpenAI launched ChatGPT Agent, transforming ChatGPT from a conversational assistant into a unified AI agent capable of autonomously executing complex, multi‑step tasks—from web browsing to code execution—on a virtual computer environment. Bridging Previous Capabilities ChatGPT Agent builds on two earlier tools: Individually, both had limitations: Operator could interface but couldn’t perform in‑depth analysis; Deep Research […] The post OpenAI Introduces ChatGPT Agent: From...",
+      "description": "A deep-dive into the Taylor Seer optimization technique",
+      "author": "",
+      "content": "A deep-dive into the Taylor Seer optimization technique",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -1161,40 +603,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.92,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.335150+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.791619+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.752,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.335153+00:00"
+        "timestamp": "2025-07-20T01:16:50.791621+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "050335419d8caac73bef19dd879d2286",
-      "title": "Two-dimensional indium selenide wafers for integrated electronics",
-      "source": "science_ai",
-      "url": "https://www.science.org/doi/abs/10.1126/science.adu3803?af=R",
-      "published_date": "2025-07-17T06:00:04+00:00",
-      "category": "Research",
-      "description": "Science, Volume 389, Issue 6757, Page 299-302, July 2025.",
-      "author": "Biao Qin, Jianfeng Jiang, Lu Wang, Quanlin Guo, Chenxi Zhang, Lin Xu, Xing Ni, Peng Yin, Lian-Mao Peng, Enge Wang, Feng Ding, Chenguang Qiu, Can Liu, Kaihui Liu",
-      "content": "Science, Volume 389, Issue 6757, Page 299-302, July 2025.",
+      "article_id": "7255de590056662b1e98bfe2b1afd0ca",
+      "title": "CUTLASS 3.x: Orthogonal, Reusable, and Composable Abstractions for GEMM Kernel Design",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/cutlass-3-x-orthogonal-reusable-and-composable-abstractions-for-gemm-kernel-design/",
+      "published_date": "2025-07-16T20:45:00+00:00",
+      "category": "Industry",
+      "description": "GEMM optimization on GPUs is a modular problem. Performant implementations need to specify hyperparameters such as tile shapes, math and copy instructions, and...",
+      "author": "Cris Cecka",
+      "content": "GEMM optimization on GPUs is a modular problem. Performant implementations need to specify hyperparameters such as tile shapes, math and copy instructions, and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.83,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1226,7 +668,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.340029+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.791925+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1237,26 +679,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.340031+00:00"
+        "timestamp": "2025-07-20T01:16:50.791927+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "a336384a3427ee20b191d89e6ea80dce",
-      "title": "Accenture scales video analysis with Amazon Nova and Amazon Bedrock Agents",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accenture-scales-video-analysis-with-amazon-nova-and-amazon-bedrock-agents/",
-      "published_date": "2025-07-16T22:32:42+00:00",
+      "article_id": "8525ec5b84b7c47e2d2a20269d8ad69c",
+      "title": "DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/dazn-opens-indias-first-sports-tech-gcc-in-hyderabad-plans-to-hire-3000-by-2026/",
+      "published_date": "2025-07-19T20:31:17+00:00",
       "category": "Industry",
-      "description": "This post was written with Ilan Geller, Kamal Mannar, Debasmita Ghosh, and Nakul Aggarwal of Accenture. Video highlights offer a powerful way to boost audience engagement and extend content value for content publishers. These short, high-impact clips capture key moments that drive viewer retention, amplify reach across social media, reinforce brand identity, and open new […]",
-      "author": "Ilan Geller",
-      "content": "This post was written with Ilan Geller, Kamal Mannar, Debasmita Ghosh, and Nakul Aggarwal of Accenture. Video highlights offer a powerful way to boost audience engagement and extend content value for content publishers. These short, high-impact clips capture key moments that drive viewer retention, amplify reach across social media, reinforce brand identity, and open new […]",
+      "description": "The new centre will serve as DAZN’s largest global hub and is expected to create around 3,000 jobs by the end of 2026. The post DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026 appeared first on Analytics India Magazine.",
+      "author": "Shalini Mondal",
+      "content": "The new centre will serve as DAZN’s largest global hub and is expected to create around 3,000 jobs by the end of 2026. The post DAZN Opens India’s First Sports-Tech GCC in Hyderabad, Plans to Hire 3,000 by 2026 appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.6,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1284,221 +726,221 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.329837+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.329840+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "c4d4b8fca00eea5f46aeff4d4df0e00a",
-      "title": "Microsoft researchers studied which professions are most affected by generative AI",
-      "source": "the_decoder",
-      "url": "https://the-decoder.com/microsoft-study-shows-these-professions-are-most-affected-by-generative-ai/",
-      "published_date": "2025-07-19T08:44:07+00:00",
-      "category": "Media",
-      "description": "A new Microsoft Research study finds that knowledge work, communication, and sales jobs are among the professions most likely to be affected by generative AI. The article Microsoft researchers studied which professions are most affected by generative AI appeared first on THE DECODER.",
-      "author": "Matthias Bastian",
-      "content": "A new Microsoft Research study finds that knowledge work, communication, and sales jobs are among the professions most likely to be affected by generative AI. The article Microsoft researchers studied which professions are most affected by generative AI appeared first on THE DECODER.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.346413+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.346416+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "9ad622ff9c4db095a6f0f7619271259d",
-      "title": "Scientists reportedly hiding AI text prompts in academic papers to receive positive peer reviews",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2025/jul/14/scientists-reportedly-hiding-ai-text-prompts-in-academic-papers-to-receive-positive-peer-reviews",
-      "published_date": "2025-07-14T03:14:27+00:00",
-      "category": "Media",
-      "description": "Research papers found carrying hidden white text giving instructions not to highlight negatives as concern grows over use of large language models for peer reviewAcademics are reportedly hiding prompts in preprint papers for artificial intelligence tools, encouraging them to give positive reviews.Nikkei reported on 1 July it had reviewed research papers from 14 academic institutions in eight countries, including Japan, South Korea, China, Singapore and two in the United States. Continue...",
-      "author": "Josh Taylor Technology reporter",
-      "content": "Research papers found carrying hidden white text giving instructions not to highlight negatives as concern grows over use of large language models for peer reviewAcademics are reportedly hiding prompts in preprint papers for artificial intelligence tools, encouraging them to give positive reviews.Nikkei reported on 1 July it had reviewed research papers from 14 academic institutions in eight countries, including Japan, South Korea, China, Singapore and two in the United States. Continue...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.347461+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-07-19T20:31:33.347464+00:00"
-      },
-      "article_type": "research"
-    },
-    {
-      "article_id": "d42364047113eb823fe414a5c6826ff0",
-      "title": "Introducing Deep Research in Azure AI Foundry Agent Service",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/",
-      "published_date": "2025-07-07T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Announcing the public preview of Deep Research in Azure AI Foundry—an API and SDK-based offering of OpenAI’s advanced agentic research capability. The post Introducing Deep Research in Azure AI Foundry Agent Service appeared first on Microsoft Azure Blog.",
-      "author": "Yina Arenas",
-      "content": "Announcing the public preview of Deep Research in Azure AI Foundry—an API and SDK-based offering of OpenAI’s advanced agentic research capability. The post Introducing Deep Research in Azure AI Foundry Agent Service appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.8,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.329343+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.792676+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.329346+00:00"
+        "timestamp": "2025-07-20T01:16:50.792678+00:00"
       },
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "309597969245ab0ce241f93d1d97b883",
-      "title": "NIST Releases Trove of Genetic Data to Spur Cancer Research",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2025/07/nist-releases-trove-genetic-data-spur-cancer-research",
-      "published_date": "2025-07-16T12:00:00+00:00",
-      "category": "Government",
-      "description": "NIST and collaborating institutions have released extensive data about the genome of pancreatic cancer cells.",
-      "author": "Sarah Henderson",
-      "content": "NIST and collaborating institutions have released extensive data about the genome of pancreatic cancer cells.",
+      "article_id": "8edaccffb6e6692b45aad4ced547f32f",
+      "title": "GPU Secrets for Scalable AI Performance",
+      "source": "ieee_spectrum_ai",
+      "url": "https://content.knowledgehub.wiley.com/unlock-the-full-potential-of-ai-with-optimized-inference-infrastructure/",
+      "published_date": "2025-07-16T23:45:55+00:00",
+      "category": "Media",
+      "description": "AI is transforming industries – but only if your infrastructure can deliver the speed, efficiency, and scalability your use cases demand. How do you ensure your systems meet the unique challenges of AI workloads?In this essential ebook, you’ll discover how to:Right-size infrastructure for chatbots, summarization, and AI agentsCut costs + boost speed with dynamic batching and KV cachingScale seamlessly using parallelism and KubernetesFuture-proof with NVIDIA tech – GPUs, Triton Server, and...",
+      "author": "Pny Technologies",
+      "content": "AI is transforming industries – but only if your infrastructure can deliver the speed, efficiency, and scalability your use cases demand. How do you ensure your systems meet the unique challenges of AI workloads?In this essential ebook, you’ll discover how to:Right-size infrastructure for chatbots, summarization, and AI agentsCut costs + boost speed with dynamic batching and KV cachingScale seamlessly using parallelism and KubernetesFuture-proof with NVIDIA tech – GPUs, Triton Server, and...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.796345+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.796347+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "64fc70cb8d31c7068ea0051fd80b9c50",
+      "title": "LWiAI Podcast #216 - Grok 4, Project Rainier, Kimi K2",
+      "source": "last_week_ai",
+      "url": "https://lastweekin.ai/p/lwiai-podcast-216-grok-4-project",
+      "published_date": "2025-07-14T19:36:16+00:00",
+      "category": "Media",
+      "description": "Elon Musk's xAI launches Grok 4 alongside a $300 monthly subscription, Amazon built a massive AI supercluster for Anthropic called Project Rainier, and more!",
+      "author": "Last Week in AI",
+      "content": "Elon Musk's xAI launches Grok 4 alongside a $300 monthly subscription, Amazon built a massive AI supercluster for Anthropic called Project Rainier, and more!",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.799296+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.799298+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6c635d35c31955828505cfcf691e3d2e",
+      "title": "Last Week in AI #315 - Grok 4, Windsurf->Google, Comet",
+      "source": "last_week_ai",
+      "url": "https://lastweekin.ai/p/last-week-in-ai-315-grok-4-windsurf",
+      "published_date": "2025-07-12T23:33:00+00:00",
+      "category": "Media",
+      "description": "Elon Musk’s xAI launches Grok 4 alongside a $300 monthly subscription, OpenAI’s Windsurf deal is off — and Windsurf’s CEO is going to Google, Replit Launches New Feature for its Agent",
+      "author": "Last Week in AI",
+      "content": "Elon Musk’s xAI launches Grok 4 alongside a $300 monthly subscription, OpenAI’s Windsurf deal is off — and Windsurf’s CEO is going to Google, Replit Launches New Feature for its Agent",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.799324+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.799326+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f79e7b14c8a6588d2c68a5160a4c25f1",
+      "title": "Global earthquake detection and warning using Android phones",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.ads4779?af=R",
+      "published_date": "2025-07-17T11:00:04+00:00",
+      "category": "Research",
+      "description": "Science, Volume 389, Issue 6757, Page 254-259, July 2025.",
+      "author": "Richard M. Allen, Alexei Barski, Micah Berman, Robert Bosch, Youngmin Cho, Xia Summer Jiang, Yun-Ling Lee, Steve Malkos, S. Mostafa Mousavi, Patrick Robertson, Boone Spooner, Marc Stogaitis, Nivetha Thiruverahan, Greg Wimpey",
+      "content": "Science, Volume 389, Issue 6757, Page 254-259, July 2025.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -1532,30 +974,220 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-07-19T20:31:33.327309+00:00"
+        "consensus_timestamp": "2025-07-20T01:16:50.806369+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.806371+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "050335419d8caac73bef19dd879d2286",
+      "title": "Two-dimensional indium selenide wafers for integrated electronics",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.adu3803?af=R",
+      "published_date": "2025-07-17T11:00:04+00:00",
+      "category": "Research",
+      "description": "Science, Volume 389, Issue 6757, Page 299-302, July 2025.",
+      "author": "Biao Qin, Jianfeng Jiang, Lu Wang, Quanlin Guo, Chenxi Zhang, Lin Xu, Xing Ni, Peng Yin, Lian-Mao Peng, Enge Wang, Feng Ding, Chenguang Qiu, Can Liu, Kaihui Liu",
+      "content": "Science, Volume 389, Issue 6757, Page 299-302, July 2025.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.6,
+        "quality_score": 0.8,
+        "novelty_score": 0.5,
+        "impact_score": 0.8,
+        "overall_score": 0.665,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.806315+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.806316+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "ba0f1b17282997f7c5a6977c45214501",
+      "title": "Dome-celled aerogels with ultrahigh-temperature superelasticity over 2273 K",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.adw5777?af=R",
+      "published_date": "2025-07-17T11:00:04+00:00",
+      "category": "Research",
+      "description": "Science, Volume 389, Issue 6757, Page 290-294, July 2025.",
+      "author": "Kai Pang, Yuxing Xia, Xiaoting Liu, Wenhao Tong, Xiaotong Li, Chenyang Li, Wenbo Zhao, Yan Chen, Huasong Qin, Wenzhang Fang, Li Peng, Yilun Liu, Weiwei Gao, Zhen Xu, Yingjun Liu, Chao Gao",
+      "content": "Science, Volume 389, Issue 6757, Page 290-294, July 2025.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.5,
+        "quality_score": 0.8,
+        "novelty_score": 0.4,
+        "impact_score": 0.7,
+        "overall_score": 0.59,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.806342+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-07-20T01:16:50.806344+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "4d37b04a2100d33e5cc08f1a7aee90ee",
+      "title": "A new age of molecular chirality",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.adn0905?af=R",
+      "published_date": "2025-07-17T11:00:04+00:00",
+      "category": "Research",
+      "description": "Science, Volume 389, Issue 6757, Page 232-233, July 2025.",
+      "author": "Olga Smirnova",
+      "content": "Science, Volume 389, Issue 6757, Page 232-233, July 2025.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.4,
+        "quality_score": 0.8,
+        "novelty_score": 0.5,
+        "impact_score": 0.4,
+        "overall_score": 0.525,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.7,
+        "confidence": 0.8,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-07-20T01:16:50.806401+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.62,
         "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-07-19T20:31:33.327323+00:00"
+        "timestamp": "2025-07-20T01:16:50.806403+00:00"
       },
+      "research_quality_score": 0.8,
       "article_type": "research"
     }
   ],
-  "count": 25,
+  "count": 19,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 719.2612941265106,
+    "processing_time": 343.13690066337585,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1570,19 +1202,19 @@
     "content_breakdown": {
       "headline": 1,
       "articles": 14,
-      "research_papers": 10
+      "research_papers": 4
     },
     "classification_metadata": {
-      "total_processed": 512,
+      "total_processed": 526,
       "candidates": {
-        "headlines": 23,
-        "articles": 423,
-        "research_papers": 66
+        "headlines": 24,
+        "articles": 498,
+        "research_papers": 4
       },
       "selected": {
         "headlines": 1,
         "articles": 14,
-        "research_papers": 10
+        "research_papers": 4
       }
     }
   }

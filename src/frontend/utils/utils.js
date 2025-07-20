@@ -94,6 +94,27 @@ export class DateUtils {
 export class TextUtils {
     static truncateText(text, maxLength) {
         if (!text || text.length <= maxLength) return text;
+        
+        // Find the last complete sentence within maxLength
+        const truncated = text.substring(0, maxLength);
+        const lastSentenceEnd = Math.max(
+            truncated.lastIndexOf('.'),
+            truncated.lastIndexOf('!'),
+            truncated.lastIndexOf('?')
+        );
+        
+        // If we found a sentence ending, use it
+        if (lastSentenceEnd > text.length * 0.3) { // At least 30% of original length
+            return text.substring(0, lastSentenceEnd + 1).trim();
+        }
+        
+        // Otherwise, find the last complete word
+        const lastSpace = truncated.lastIndexOf(' ');
+        if (lastSpace > text.length * 0.3) {
+            return text.substring(0, lastSpace).trim() + '...';
+        }
+        
+        // Fallback to original behavior
         return text.substring(0, maxLength).trim() + '...';
     }
 
@@ -105,8 +126,8 @@ export class TextUtils {
 
 // Source formatting and icon utilities
 export class SourceUtils {
-    // Single retro newspaper-style icon for all sources
-    static RETRO_ICON = '◆';
+    // Replace icon with text prefix
+    static SOURCE_PREFIX = 'Source : ';
     
     static sourceMapping = {
         'the_verge': 'The Verge',
@@ -140,8 +161,8 @@ export class SourceUtils {
         if (sourceName) {
             return {
                 name: sourceName,
-                icon: this.RETRO_ICON,
-                formatted: `${this.RETRO_ICON} ${sourceName}`
+                prefix: this.SOURCE_PREFIX,
+                formatted: `${this.SOURCE_PREFIX}${sourceName}`
             };
         }
         
@@ -153,8 +174,8 @@ export class SourceUtils {
         
         return {
             name: fallbackName,
-            icon: this.RETRO_ICON,
-            formatted: `${this.RETRO_ICON} ${fallbackName}`
+            prefix: this.SOURCE_PREFIX,
+            formatted: `${this.SOURCE_PREFIX}${fallbackName}`
         };
     }
 }

@@ -74,31 +74,38 @@ sources:
     category: Startups
     enabled: true
     description: Sequoia Capital insights on AI and technology
+  # Phase 2: Corporate research blogs (Industry, not academic papers)
   google_research_blog:
     url: https://research.google/blog/rss
     type: rss
     category: Industry
     enabled: true
-    description: Google Research blog RSS
+    description: Google Research blog RSS - Corporate AI developments
+    legal_note: Corporate content - not peer-reviewed academic papers
+  
   deepmind_research:
     url: https://www.deepmind.com/blog/rss.xml
     type: rss
     category: Industry
     enabled: true
-    description: DeepMind research publications and announcements
+    description: DeepMind research announcements - Corporate AI blog
+    legal_note: Corporate content - not peer-reviewed academic papers
+  
   amazon_science:
     url: https://www.amazon.science/index.rss
     type: rss
     category: Industry
     enabled: true
-    description: Amazon Science homepage - Latest AI and ML research from Amazon
-    legal_note: Public research content
+    description: Amazon Science homepage - Corporate AI and ML developments
+    legal_note: Corporate research content - not peer-reviewed papers
+  
   google_ai_blog:
     url: http://googleaiblog.blogspot.com/atom.xml
     type: rss
     category: Industry
     enabled: true
-    description: Google AI Blog - Official Google AI research and developments
+    description: Google AI Blog - Corporate AI research and developments
+    legal_note: Corporate content - not peer-reviewed academic papers
   anaconda_blog:
     url: https://www.anaconda.com/blog/feed
     type: rss

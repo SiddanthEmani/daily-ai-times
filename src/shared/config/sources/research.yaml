@@ -1,8 +1,77 @@
 sources:
+  # Phase 2: Consolidated scientific publication sources
   arxiv:
     url: https://rss.arxiv.org/rss/cs.AI+cs.LG+cs.CV+cs.CL
     type: rss
     category: Research
     enabled: true
     description: ArXiv AI papers - comprehensive feed
+    legal_note: Open access research - public domain
+  
+  # Top-tier scientific journals
+  nature_machine_learning:
+    url: https://www.nature.com/subjects/machine-learning.rss
+    type: rss
+    category: Research
+    enabled: true
+    description: Nature Machine Learning research papers
+    legal_note: Academic research papers - abstracts fair use
+  
+  science_ai:
+    url: https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science
+    type: rss
+    category: Research
+    enabled: true
+    description: Science Magazine research feed (general science including AI)
+    legal_note: Academic research abstracts - fair use
+  
+  # AI research journals and conferences
+  jair_journal:
+    url: https://www.jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss2
+    type: rss
+    category: Research
+    enabled: true
+    description: Journal of AI Research (JAIR) - top-tier AI research
+    legal_note: CC BY License
+  
+  acm_ai_news:
+    url: https://cacm.acm.org/feed/
+    type: rss
+    category: Research
+    enabled: true
+    description: ACM Communications AI articles
+    legal_note: Academic organization - abstracts fair use
+  
+  ai_magazine_aaai:
+    url: https://aaai.org/news/feed/
+    type: rss
+    category: Research
+    enabled: true
+    description: AAAI AI Magazine
+    legal_note: Open Access CC licensing
+  
+  # Visual ML research explanations
+  distill_pub:
+    url: https://distill.pub/rss.xml
+    type: rss
+    category: Research
+    enabled: true
+    description: Distill - Visual ML research explanations
+    legal_note: Open access academic content
+  
+  # Additional research feeds for comprehensive coverage
+  arxiv_cs_lg:
+    url: https://rss.arxiv.org/rss/cs.LG
+    type: rss
+    category: Research
+    enabled: true
+    description: ArXiv Machine Learning papers
+    legal_note: Open access research - public domain
+  
+  arxiv_stat_ml:
+    url: https://rss.arxiv.org/rss/stat.ML
+    type: rss
+    category: Research
+    enabled: true
+    description: ArXiv Statistics - Machine Learning papers
     legal_note: Open access research - public domain
