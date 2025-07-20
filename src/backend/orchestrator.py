@@ -16,30 +16,25 @@ from dotenv import load_dotenv
 load_dotenv('.env.local')
 load_dotenv()
 
-try:
-    from .processors.bulk_agent import BulkFilteringAgent
-    from .processors.consensus_engine import ConsensusEngine
-    from .processors.deep_intelligence_agent import DeepIntelligenceAgent
-    from .processors.final_consensus_engine import FinalConsensusEngine
-    from .collectors.collectors import NewsCollector
-    from ..shared.config.config_loader import ConfigLoader, get_swarm_config
-    from ..shared.utils.logging_config import log_warning, log_error, log_step
-    from google import genai
-    from google.genai import types
-    import base64
-    import wave
-except ImportError:
-    from backend.processors.bulk_agent import BulkFilteringAgent
-    from backend.processors.consensus_engine import ConsensusEngine
-    from backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
-    from backend.processors.final_consensus_engine import FinalConsensusEngine
-    from backend.collectors.collectors import NewsCollector
-    from shared.config.config_loader import ConfigLoader, get_swarm_config
-    from shared.utils.logging_config import log_warning, log_error, log_step
-    from google import genai
-    from google.genai import types
-    import base64
-    import wave
+# Add the project root to Python path to enable proper imports
+import sys
+from pathlib import Path
+project_root = Path(__file__).parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Import modules using the proper src.* paths
+from src.backend.processors.bulk_agent import BulkFilteringAgent
+from src.backend.processors.consensus_engine import ConsensusEngine
+from src.backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
+from src.backend.processors.final_consensus_engine import FinalConsensusEngine
+from src.backend.collectors.collectors import NewsCollector
+from src.shared.config.config_loader import ConfigLoader, get_swarm_config
+from src.shared.utils.logging_config import log_warning, log_error, log_step
+from google import genai
+from google.genai import types
+import base64
+import wave
 
 logger = logging.getLogger(__name__)
 
@@ -1407,10 +1402,7 @@ class NewsProcessingPipeline:
 
 async def main():
     """Main function to run the news processing pipeline from command line."""
-    try:
-        from ..shared.utils.logging_config import setup_logging, create_progress_logger, log_step, log_error
-    except ImportError:
-        from shared.utils.logging_config import setup_logging, create_progress_logger, log_step, log_error
+    from src.shared.utils.logging_config import setup_logging, create_progress_logger, log_step, log_error
     
     setup_logging(level="DEBUG", quiet_mode=False, show_progress=True)
     logger = create_progress_logger(__name__)
