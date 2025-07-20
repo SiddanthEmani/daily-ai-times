@@ -145,7 +145,3 @@ Available via GitHub Actions interface with advanced options:
 ## License
 
 MIT License
-
-## License
-
-MIT License
