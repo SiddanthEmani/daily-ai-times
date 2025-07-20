@@ -6,6 +6,8 @@ Modern serverless AI-powered news aggregation platform with advanced multi-agent
 
 **Production Site**: [https://siddanthemani.github.io/daily-ai-times](https://siddanthemani.github.io/daily-ai-times)
 
+![Demo](./src/frontend/assets/images/demo.png)
+
 ## Architecture
 
 ![Architecture Diagram](./docs/diagrams/Architecture.excalidraw.svg)
