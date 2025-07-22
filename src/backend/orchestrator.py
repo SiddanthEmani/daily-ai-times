@@ -214,51 +214,8 @@ class NewsProcessingPipeline:
     
 
 
-    async def _process_bulk_agent(self, agent_name: str, assigned_articles: List[Dict[str, Any]], 
-                                 agent_index: int, task_id, progress) -> List[Tuple[Dict[str, Any], bool, float]]:
-        """Process articles with a bulk agent."""
-        if not assigned_articles:
-            return []
-        
-        agent = self.agents[agent_name]
-        try:
-            async with agent:
-                if agent_index > 0:
-                    await asyncio.sleep(agent_index * 1.0)
-                
-                all_results = []
-                processed_count = total_accepted = total_rejected = 0
-                effective_batch_size = agent.adaptive_batch_size
-                
-                for i in range(0, len(assigned_articles), effective_batch_size):
-                    batch = assigned_articles[i:i + effective_batch_size]
-                    batch_results = await agent.process_batch(batch)
-                    all_results.extend(batch_results)
-                    processed_count += len(batch)
-                    
-                    batch_accepted = sum(1 for _, accepted, _ in batch_results if accepted)
-                    total_accepted += batch_accepted
-                    total_rejected += len(batch_results) - batch_accepted
-                    
-                    progress.update(task_id, completed=processed_count,
-                                  description=f"[cyan]{agent_name} ({total_accepted}, {total_rejected}, {processed_count}) - {len(assigned_articles)} articles")
-                    
-                    if i + effective_batch_size < len(assigned_articles):
-                        base_delay = 3.0 if agent.model_name == 'gemma2-9b-it' else (
-                            2.0 if agent.tokens_per_minute_limit <= 6000 else 2.5)
-                        await asyncio.sleep(base_delay + random.uniform(0, base_delay * 0.1))
-                
-                progress.update(task_id, completed=len(assigned_articles),
-                              description=f"[green]{agent_name} ✓ ({total_accepted}, {total_rejected}, {len(assigned_articles)}) - completed")
-                return all_results
-                
-        except Exception as e:
-            progress.update(task_id, completed=len(assigned_articles),
-                          description=f"[red]{agent_name} ✗ (error: {type(e).__name__}) - {len(assigned_articles)} articles")
-            return [(article, False, 0.1) for article in assigned_articles]
-
-    async def _score_articles_with_swarm(self, articles: List[Dict[str, Any]]) -> Dict[str, List[Tuple[Dict[str, Any], bool, float]]]:
-        """Score articles using the bulk intelligence swarm with distributed processing."""
+    async def _process_articles_with_bulk_intelligence(self, articles: List[Dict[str, Any]]) -> Dict[str, List[Tuple[Dict[str, Any], bool, float]]]:
+        """Score articles using the bulk intelligence swarm with TPM-based distribution."""
         if not articles:
             return {}
         
@@ -275,15 +232,63 @@ class NewsProcessingPipeline:
                 
                 progress.refresh()
                 
+                # Create async tasks for each agent - let each agent handle its own batch processing
+                async def process_agent_articles(agent_name: str, assigned_articles: List[Dict[str, Any]], 
+                                               agent_index: int, task_id) -> List[Tuple[Dict[str, Any], bool, float]]:
+                    """Process articles with a bulk agent using the agent's optimized batch processing."""
+                    if not assigned_articles:
+                        return []
+                    
+                    agent = self.agents[agent_name]
+                    try:
+                        async with agent:
+                            # Stagger agent starts to avoid simultaneous API calls
+                            if agent_index > 0:
+                                await asyncio.sleep(agent_index * 1.0)
+                            
+                            # Process in batches for progress updates, but let agent handle rate limiting
+                            all_results = []
+                            processed_count = total_accepted = total_rejected = 0
+                            effective_batch_size = agent.adaptive_batch_size
+                            
+                            for i in range(0, len(assigned_articles), effective_batch_size):
+                                batch = assigned_articles[i:i + effective_batch_size]
+                                # Agent handles all rate limiting internally in process_batch()
+                                batch_results = await agent.process_batch(batch)
+                                all_results.extend(batch_results)
+                                processed_count += len(batch)
+                                
+                                # Update progress per batch
+                                batch_accepted = sum(1 for _, accepted, _ in batch_results if accepted)
+                                total_accepted += batch_accepted
+                                total_rejected += len(batch_results) - batch_accepted
+                                
+                                progress.update(task_id, completed=processed_count,
+                                              description=f"[cyan]{agent_name} ({total_accepted}, {total_rejected}, {processed_count}) - {len(assigned_articles)} articles")
+                                
+                                # No manual delays - agent handles inter-batch timing in process_batch()
+                            
+                            # Final progress update
+                            progress.update(task_id, completed=len(assigned_articles),
+                                          description=f"[green]{agent_name} ✓ ({total_accepted}, {total_rejected}, {len(assigned_articles)}) - completed")
+                            return all_results
+                            
+                    except Exception as e:
+                        progress.update(task_id, completed=len(assigned_articles),
+                                      description=f"[red]{agent_name} ✗ (error: {type(e).__name__}) - {len(assigned_articles)} articles")
+                        return [(article, False, 0.1) for article in assigned_articles]
+                
+                # Create and run all agent tasks
                 tasks = []
                 for i, (agent_name, assigned_articles) in enumerate(agent_article_assignments.items()):
                     task_id = agent_tasks[agent_name]
-                    task = asyncio.create_task(self._process_bulk_agent(agent_name, assigned_articles, i, task_id, progress))
+                    task = asyncio.create_task(process_agent_articles(agent_name, assigned_articles, i, task_id))
                     tasks.append((agent_name, task))
                 
                 await asyncio.sleep(0.1)
                 results = await asyncio.gather(*[task for _, task in tasks], return_exceptions=True)
                 
+                # Process results
                 agent_results = {}
                 for i, ((agent_name, _), result) in enumerate(zip(tasks, results)):
                     if isinstance(result, Exception):
@@ -294,7 +299,7 @@ class NewsProcessingPipeline:
         
         total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values())
         total_processed = sum(len(results) for results in agent_results.values())
-        logger.info(f"Distributed bulk intelligence complete: {total_accepted}/{total_processed} articles processed")
+        logger.info(f"Distributed bulk intelligence complete: {total_processed} articles processed, {total_accepted} accepted")
         
         self._save_bulk_agent_results(agent_results, articles)
         return agent_results
@@ -619,7 +624,7 @@ class NewsProcessingPipeline:
         
         # Step 2: Bulk intelligence scoring
         start_time = time.time()
-        agent_results = await self._score_articles_with_swarm(collected_articles)
+        agent_results = await self._process_articles_with_bulk_intelligence(collected_articles)
         
         # Step 3: Initial consensus
         consensus_results = self.consensus_engine.apply_consensus(agent_results)
@@ -690,8 +695,10 @@ class NewsProcessingPipeline:
     
     def _save_bulk_agent_results(self, agent_results: Dict[str, List[Tuple[Dict[str, Any], bool, float]]], 
                                 original_articles: List[Dict[str, Any]]) -> None:
-        """Save bulk agent stage results."""
+        """Save bulk agent stage results with processed articles and decisions."""
         summary_stats = {}
+        processed_articles_by_agent = {}
+        
         for agent_name, results in agent_results.items():
             accepted_count = sum(1 for _, accepted, _ in results if accepted)
             summary_stats[agent_name] = {
@@ -699,15 +706,50 @@ class NewsProcessingPipeline:
                 'accepted_articles': accepted_count,
                 'acceptance_rate': (accepted_count / len(results) * 100) if results else 0.0
             }
+            
+            # Save processed articles with decisions and scores
+            processed_articles_by_agent[agent_name] = []
+            for article, accepted, confidence in results:
+                article_result = {
+                    'article_id': self._get_article_id(article),
+                    'title': article.get('title', '')[:100],  # Truncate for readability
+                    'source': article.get('source', ''),
+                    'category': article.get('category', ''),
+                    'published_date': article.get('published_date', ''),
+                    'decision': accepted,
+                    'confidence': confidence,
+                    'multi_dimensional_score': article.get('multi_dimensional_score', {}),
+                    'url': article.get('url', '')
+                }
+                processed_articles_by_agent[agent_name].append(article_result)
         
         bulk_agent_output = {
             'timestamp': self._get_current_timestamp(),
             'stage': 'bulk_agent_processing',
             'processing_info': {
                 'total_agents': len(agent_results),
-                'total_articles_processed': len(original_articles)
+                'total_articles_processed': len(original_articles),
+                'total_decisions': sum(len(results) for results in agent_results.values()),
+                'overall_acceptance_rate': (
+                    sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values()) /
+                    sum(len(results) for results in agent_results.values()) * 100
+                ) if agent_results else 0.0
             },
-            'summary_statistics': summary_stats
+            'summary_statistics': summary_stats,
+            'processed_articles_by_agent': processed_articles_by_agent,
+            'agent_processing_details': {
+                agent_name: {
+                    'articles_assigned': len(results),
+                    'accepted': sum(1 for _, accepted, _ in results if accepted),
+                    'rejected': sum(1 for _, accepted, _ in results if not accepted),
+                    'avg_confidence': sum(confidence for _, _, confidence in results) / len(results) if results else 0.0,
+                    'confidence_range': {
+                        'min': min(confidence for _, _, confidence in results) if results else 0.0,
+                        'max': max(confidence for _, _, confidence in results) if results else 0.0
+                    }
+                }
+                for agent_name, results in agent_results.items()
+            }
         }
         
         filename = f"bulk_agent_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
