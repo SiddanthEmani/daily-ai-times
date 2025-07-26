@@ -11,6 +11,9 @@ import yaml
 logger = logging.getLogger(__name__)
 load_dotenv('.env.local')
 
+# Import sources loader
+from .sources_loader import get_sources_loader
+
 class ConfigLoader:
     """Unified configuration loader for YAML files."""
     
@@ -101,29 +104,14 @@ def get_swarm_config() -> Dict[str, Any]:
 
 # Convenience functions for sources (keeping existing functionality)
 def load_sources_config() -> Dict[str, Any]:
-    """Load sources configuration (YAML format)."""
+    """Load sources configuration (YAML format, single file)."""
     try:
-        # Use YAML modular format
-        from .sources_loader import get_sources_loader
         loader = get_sources_loader()
         return {
             "sources": loader.get_sources(),
             "metadata": loader.get_metadata(),
-            "format": "yaml_modular"
+            "format": "yaml_single"
         }
-    except ImportError:
-        logger.error("Sources loader not available")
+    except Exception as e:
+        logger.error(f"Sources loader not available: {e}")
         return {"sources": {}, "format": "none"}
-
-def get_sources_by_category(category: str) -> Dict[str, Any]:
-    """Get sources for a specific category."""
-    try:
-        from .sources_loader import get_sources_loader
-        return get_sources_loader().get_sources_by_category(category)
-    except ImportError:
-        # Fallback to loading all and filtering
-        config = load_sources_config()
-        sources = config.get("sources", {})
-        if isinstance(sources, dict) and "sources" in sources:
-            sources = sources["sources"]
-        return {k: v for k, v in sources.items() if v.get("category") == category}

@@ -28,7 +28,7 @@ from src.backend.processors.bulk_agent import BulkFilteringAgent
 from src.backend.processors.consensus_engine import ConsensusEngine
 from src.backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
 from src.backend.processors.final_consensus_engine import FinalConsensusEngine
-from src.backend.collectors.collectors import NewsCollector
+from src.backend.collectors.collectors import NewsCollector, ArticleProcessor
 from src.shared.config.config_loader import ConfigLoader, get_swarm_config
 from src.shared.utils.logging_config import log_warning, log_error, log_step
 from google import genai
@@ -90,7 +90,7 @@ def suppress_logging():
             logging.getLogger(logger_name).setLevel(original_level)
 
 class NewsProcessingPipeline:
-    """Orchestrates the complete news processing pipeline."""
+    """Orchestrates the complete news processing pipeline. Sources are loaded from a single sources.yaml file."""
     
     @staticmethod
     def _get_current_timestamp() -> str:
@@ -595,8 +595,11 @@ class NewsProcessingPipeline:
         """Run the complete news processing pipeline."""
         articles_count = num_articles or self.default_max_articles
         
-        # Step 1: Collect articles
+        # Step 1: Collect articles with progress bar
         logger.info(f"Step 1: Collecting articles from sources (max: {articles_count})")
+        
+        # Initialize collection stats tracking
+        collection_start_time = time.time()
         
         with self._create_progress_bar(f"[green]Collecting from {len(self.news_collector.sources)} sources", 
                                      len(self.news_collector.sources), transient=True) as collection_progress:
@@ -606,29 +609,95 @@ class NewsProcessingPipeline:
                 collection_progress.update(collection_task, completed=completed_sources,
                                          description=f"[green]Collecting articles ({completed_sources}/{total_sources_count} sources)")
             
-            collected_articles = await self.news_collector.collect_all_with_progress(
+            collected_articles = await self.news_collector.collect_all(
                 max_articles=articles_count, progress_callback=update_collection_progress)
-            
+        
         if not collected_articles:
             raise ValueError("No articles collected. Check source configuration and connectivity.")
         
-        logger.info(f"Collected {len(collected_articles)} articles")
+        # Deduplicate and filter articles (after collection progress bar is done)
+        processor = ArticleProcessor(self.news_collector.config)
+        processed_articles = processor.process(collected_articles)
+        
+        # Calculate collection stats
+        collection_end_time = time.time()
+        collection_duration = collection_end_time - collection_start_time
+        
+        # Get detailed collection stats from the collector
+        collector_stats = self.news_collector.batch_collector.get_stats() if hasattr(self.news_collector, 'batch_collector') and self.news_collector.batch_collector else {}
+        
+        # Process articles by category and source for stats
+        category_distribution = {}
+        source_breakdown = {}
+        sources_with_articles = set()
+        
+        for article in processed_articles:
+            # Category distribution
+            category = article.get('category', 'Unknown')
+            category_distribution[category] = category_distribution.get(category, 0) + 1
+            
+            # Source breakdown
+            source = article.get('source', 'Unknown')
+            sources_with_articles.add(source)
+            if source not in source_breakdown:
+                source_breakdown[source] = {'count': 0, 'status': 'success'}
+            source_breakdown[source]['count'] += 1
+        
+        # Calculate accurate source statistics
+        total_sources = len(self.news_collector.sources)
+        successful_sources = len(sources_with_articles)
+        failed_sources = collector_stats.get('failed', 0)
+        empty_sources = total_sources - successful_sources - failed_sources
+        
+        # Create comprehensive collection stats
+        collection_stats = {
+            'generated_at': self._get_current_timestamp(),
+            'collection_stats': {
+                'total_articles': len(processed_articles),
+                'total_sources': total_sources,
+                'successful_sources': successful_sources,
+                'failed_sources': failed_sources,
+                'empty_sources': empty_sources,
+                'processing_time': round(collection_duration, 2),
+                'success_rate': round((successful_sources / total_sources) * 100, 1) if total_sources > 0 else 0,
+                'category_distribution': category_distribution,
+                'source_breakdown': source_breakdown,
+                'failure_details': collector_stats.get('failure_reasons', {}),
+                'collection_config': {
+                    'max_articles': articles_count,
+                    'max_age_days': getattr(self.news_collector, 'max_age_days', 7),
+                    'total_configured_sources': total_sources
+                }
+            }
+        }
+        
+        logger.info(f"Collected {len(processed_articles)} articles from {collection_stats['collection_stats']['successful_sources']}/{len(self.news_collector.sources)} sources")
         
         # Save collected articles
         collection_data = {
             'timestamp': self._get_current_timestamp(),
-            'total_articles': len(collected_articles),
-            'articles': collected_articles
+            'total_articles': len(processed_articles),
+            'articles': processed_articles
         }
         self._save_json_file(collection_data, f"collected_articles_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
         
         # Step 2: Bulk intelligence scoring
         start_time = time.time()
-        agent_results = await self._process_articles_with_bulk_intelligence(collected_articles)
+        agent_results = await self._process_articles_with_bulk_intelligence(processed_articles)
+        
+        # Calculate bulk stage stats
+        bulk_stats = self._calculate_bulk_stage_stats(agent_results)
         
         # Step 3: Initial consensus
         consensus_results = self.consensus_engine.apply_consensus(agent_results)
         logger.info(f"Initial consensus: {len(consensus_results)} decisions processed")
+        
+        # Calculate consensus stage stats
+        consensus_stats = self.consensus_engine.get_consensus_stats(agent_results, consensus_results)
+        
+        # Save early stats for frontend (in case pipeline is interrupted)
+        self._save_collection_stats(collection_stats, bulk_stats, consensus_stats, {}, {})
+        logger.info("📊 Pipeline stats saved (collection + bulk + consensus stages)")
         
         # Step 4: Filter by confidence for deep intelligence
         consensus_filtered_articles = self.consensus_engine.filter_by_confidence(
@@ -646,6 +715,9 @@ class NewsProcessingPipeline:
             logger.error(f"Deep intelligence processing timed out after {deep_intelligence_timeout/60:.1f} minutes")
             deep_intelligence_results = {}
         
+        # Calculate deep intelligence stage stats
+        deep_intelligence_stats = self._calculate_deep_intelligence_stats(deep_intelligence_results, consensus_filtered_articles)
+        
         # Step 6: Final consensus
         final_consensus_results = self.final_consensus_engine.apply_final_consensus(
             [(article, True, article.get('consensus_confidence', 0.5)) for article in consensus_filtered_articles],
@@ -653,6 +725,9 @@ class NewsProcessingPipeline:
         
         accepted_in_final = sum(1 for _, accept, _ in final_consensus_results if accept)
         logger.info(f"Final consensus: {accepted_in_final} articles accepted")
+        
+        # Calculate final consensus stage stats
+        final_consensus_stats = self.final_consensus_engine.get_final_consensus_stats(final_consensus_results)
         
         # Step 7: Extract final articles
         final_articles = [article for article, accept, _ in final_consensus_results if accept]
@@ -662,11 +737,17 @@ class NewsProcessingPipeline:
         
         processing_duration = time.time() - start_time
         logger.info(f"Pipeline complete: {len(final_articles)} articles processed in {processing_duration:.1f}s")
-        logger.info(f"Classified content: {len(classified_content['headline'])} headline, "
-                   f"{len(classified_content['articles'])} articles, "
-                   f"{len(classified_content['research_papers'])} research papers")
         
-        # Step 9: Generate API files for frontend consumption
+        # Log categorized content distribution
+        categories = classified_content.get('categories', {})
+        total_categorized = sum(len(articles) for articles in categories.values())
+        category_summary = ', '.join([f"{len(articles)} {category}" for category, articles in categories.items()])
+        logger.info(f"Categorized content: {total_categorized} articles ({category_summary})")
+        
+        # Step 9: Save comprehensive stats for frontend consumption
+        self._save_collection_stats(collection_stats, bulk_stats, consensus_stats, deep_intelligence_stats, final_consensus_stats)
+        
+        # Step 10: Generate API files for frontend consumption
         pipeline_info = self.get_pipeline_info()
         api_saved = self._save_api_files(classified_content, pipeline_info, processing_duration)
         if api_saved:
@@ -1085,60 +1166,207 @@ class NewsProcessingPipeline:
         sorted_articles = sorted(articles, key=get_article_score, reverse=True)
         return sorted_articles[:count]
 
+    def _categorize_articles_by_content(self, articles: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Categorize articles by content category using probability distributions.
+        Returns a dictionary with categories as keys and lists of articles as values.
+        """
+        categories = {
+            'ai': [],
+            'entertainment': [],
+            'sports': [],
+            'health': []
+        }
+        
+        for article in articles:
+            # Get category probabilities from different sources
+            category_probs = self._get_article_category_probabilities(article)
+            
+            # Assign article to category with highest probability
+            best_category = max(category_probs.items(), key=lambda x: x[1])[0]
+            
+            # Add category information to article
+            article['assigned_category'] = best_category
+            article['category_probabilities'] = category_probs
+            article['category_confidence'] = category_probs[best_category]
+            
+            categories[best_category].append(article)
+        
+        # Log categorization results
+        for category, article_list in categories.items():
+            if article_list:
+                avg_confidence = sum(a.get('category_confidence', 0) for a in article_list) / len(article_list)
+                logger.info(f"Category {category.upper()}: {len(article_list)} articles (avg confidence: {avg_confidence:.2f})")
+            else:
+                logger.warning(f"Category {category.upper()}: No articles assigned")
+        
+        return categories
+
+    def _get_article_category_probabilities(self, article: Dict[str, Any]) -> Dict[str, float]:
+        """
+        Extract and combine category probabilities from different agent analyses.
+        """
+        # Default probabilities (AI-focused pipeline)
+        default_probs = {'ai': 0.7, 'entertainment': 0.1, 'sports': 0.1, 'health': 0.1}
+        
+        # Get probabilities from bulk agent (multi-dimensional score)
+        bulk_probs = None
+        md_score = article.get('multi_dimensional_score', {})
+        if isinstance(md_score, dict) and 'category_probabilities' in md_score:
+            bulk_probs = md_score['category_probabilities']
+        
+        # Get probabilities from consensus engine
+        consensus_probs = None
+        consensus_score = article.get('consensus_multi_dimensional_score', {})
+        if isinstance(consensus_score, dict) and 'category_probabilities' in consensus_score:
+            consensus_probs = consensus_score['category_probabilities']
+        
+        # Get probabilities from deep intelligence agent
+        deep_probs = None
+        deep_analysis = article.get('deep_intelligence_analysis', {})
+        if isinstance(deep_analysis, dict):
+            synthesis = deep_analysis.get('synthesis', {})
+            if isinstance(synthesis, dict) and 'category_probabilities' in synthesis:
+                deep_probs = synthesis['category_probabilities']
+        
+        # Combine probabilities with weighted average
+        # Deep intelligence gets highest weight, then consensus, then bulk
+        combined_probs = default_probs.copy()
+        
+        weights = []
+        prob_sources = []
+        
+        if bulk_probs and isinstance(bulk_probs, dict):
+            weights.append(0.3)
+            prob_sources.append(bulk_probs)
+        
+        if consensus_probs and isinstance(consensus_probs, dict):
+            weights.append(0.4)
+            prob_sources.append(consensus_probs)
+        
+        if deep_probs and isinstance(deep_probs, dict):
+            weights.append(0.6)
+            prob_sources.append(deep_probs)
+        
+        if prob_sources:
+            # Normalize weights
+            total_weight = sum(weights)
+            normalized_weights = [w / total_weight for w in weights]
+            
+            # Calculate weighted average
+            for category in combined_probs.keys():
+                weighted_sum = 0.0
+                for i, probs in enumerate(prob_sources):
+                    prob_value = probs.get(category, 0.25)  # Default if category missing
+                    weighted_sum += prob_value * normalized_weights[i]
+                combined_probs[category] = weighted_sum
+            
+            # Normalize to sum to 1.0
+            total = sum(combined_probs.values())
+            if total > 0:
+                for category in combined_probs:
+                    combined_probs[category] = combined_probs[category] / total
+        
+        return combined_probs
+
+    def _normalize_articles_for_category(self, articles: List[Dict[str, Any]], category: str) -> List[Dict[str, Any]]:
+        """
+        Normalize articles for a specific category with category-specific metadata.
+        """
+        normalized_articles = []
+        
+        for article in articles:
+            # Start with base normalization
+            normalized_article = self._normalize_single_article(article)
+            
+            # Add category-specific metadata
+            normalized_article['category'] = category.upper()
+            normalized_article['assigned_category'] = category
+            normalized_article['category_confidence'] = article.get('category_confidence', 0.5)
+            normalized_article['category_probabilities'] = article.get('category_probabilities', {})
+            
+            normalized_articles.append(normalized_article)
+        
+        return normalized_articles
+
+    def _normalize_single_article(self, article: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize a single article for frontend compatibility.
+        """
+        # Create a copy to avoid modifying original
+        normalized_article = article.copy()
+        
+        # Ensure article_id exists
+        if not normalized_article.get('article_id') and normalized_article.get('id'):
+            normalized_article['article_id'] = normalized_article['id']
+        elif not normalized_article.get('article_id'):
+            # Generate a simple ID from title/URL hash if missing
+            import hashlib
+            title = normalized_article.get('title', '')
+            url = normalized_article.get('url', '')
+            id_source = f"{title}_{url}"
+            normalized_article['article_id'] = hashlib.md5(id_source.encode()).hexdigest()[:8]
+        
+        # Ensure description field exists
+        if not normalized_article.get('description'):
+            content = normalized_article.get('content', '')
+            if content:
+                normalized_article['description'] = content[:500] + ('...' if len(content) > 500 else '')
+            else:
+                normalized_article['description'] = normalized_article.get('title', 'No description available')
+        
+        # Ensure category field exists (will be overridden in _normalize_articles_for_category)
+        if not normalized_article.get('category'):
+            normalized_article['category'] = normalized_article.get('assigned_category', 'AI').upper()
+        
+        # Ensure author field exists
+        if not normalized_article.get('author'):
+            normalized_article['author'] = ''
+        
+        return normalized_article
+
     def classify_and_allocate_content(self, final_articles: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
-        Post-process final articles into structured content types.
-        Target: 1 headline + 14 articles + 10 research papers
+        Post-process final articles into category-based structure.
+        Target: Best articles for each category (AI, Entertainment, Sports, Health)
         """
-        # Step 1: Classify articles by type
-        headlines, regular_articles, research_papers = self._classify_articles(final_articles)
+        # Step 1: Categorize articles by content category
+        categorized_articles = self._categorize_articles_by_content(final_articles)
         
-        # Step 2: Select best of each type
-        selected_headline = self._select_best_articles(headlines, 1)
-        selected_articles = self._select_best_articles(regular_articles, 14)
-        selected_research = self._select_best_articles(research_papers, 10)
+        # Step 2: Select best articles for each category
+        category_results = {}
+        total_selected = 0
         
-        # Phase 4: Enhanced logging with quality metrics
-        logger.info(f"Content classification: {len(headlines)} headline candidates → {len(selected_headline)} selected")
-        logger.info(f"Content classification: {len(regular_articles)} article candidates → {len(selected_articles)} selected")
-        logger.info(f"Content classification: {len(research_papers)} research candidates → {len(selected_research)} selected")
+        for category, articles in categorized_articles.items():
+            # Select top articles for this category (target ~8-12 per category)
+            target_count = min(12, max(5, len(articles) // 2))  # Adaptive based on available articles
+            selected = self._select_best_articles(articles, target_count)
+            category_results[category] = selected
+            total_selected += len(selected)
+            
+            logger.info(f"Category {category.upper()}: {len(articles)} candidates → {len(selected)} selected")
         
-        # Log research paper quality distribution
-        if research_papers:
-            quality_scores = [article.get('research_quality_score', 0.0) for article in research_papers]
-            avg_quality = sum(quality_scores) / len(quality_scores)
-            high_quality_count = sum(1 for score in quality_scores if score >= 0.7)
-            logger.info(f"Research quality: avg={avg_quality:.2f}, high-quality={high_quality_count}/{len(research_papers)}")
+        # Create category distribution stats
+        category_distribution = {
+            category: len(articles) for category, articles in category_results.items()
+        }
         
-        # Log selected research paper sources for validation
-        if selected_research:
-            research_sources = {}
-            for paper in selected_research:
-                source = paper.get('source', 'unknown')
-                research_sources[source] = research_sources.get(source, 0) + 1
-            logger.info(f"Selected research sources: {dict(research_sources)}")
+        logger.info(f"Total categorized content: {total_selected} articles across {len(category_results)} categories")
+        logger.info(f"Category distribution: {category_distribution}")
         
         return {
-            'headline': selected_headline,
-            'articles': selected_articles,
-            'research_papers': selected_research,
+            'categories': category_results,
             'classification_metadata': {
                 'total_processed': len(final_articles),
-                'candidates': {
-                    'headlines': len(headlines),
-                    'articles': len(regular_articles),
-                    'research_papers': len(research_papers)
-                },
-                'selected': {
-                    'headlines': len(selected_headline),
-                    'articles': len(selected_articles),
-                    'research_papers': len(selected_research)
-                }
+                'total_selected': total_selected,
+                'category_distribution': category_distribution,
+                'categories_available': list(categorized_articles.keys()),
+                'processing_method': 'category_based'
             }
         }
 
     def _save_api_files(self, classified_content: Dict[str, Any], pipeline_info: Dict[str, Any], processing_time: float) -> bool:
-        """Save API files for frontend consumption in required directories."""
+        """Save category-based API files for frontend consumption."""
         try:
             project_root = Path(__file__).parent.parent.parent
             
@@ -1148,31 +1376,63 @@ class NewsProcessingPipeline:
             backend_api_dir.mkdir(parents=True, exist_ok=True)
             frontend_api_dir.mkdir(parents=True, exist_ok=True)
             
-            # Extract all articles for main API
+            # Create categories subdirectory
+            categories_dir = frontend_api_dir / "categories"
+            categories_dir.mkdir(exist_ok=True)
+            
+            # Get categorized articles
+            categories = classified_content.get('categories', {})
+            
+            # Save individual category files
+            saved_files = []
+            for category, articles in categories.items():
+                if articles:  # Only create files for categories with articles
+                    # Normalize articles for this category
+                    normalized_articles = self._normalize_articles_for_category(articles, category)
+                    
+                    # Create category API response
+                    category_response = {
+                        'generated_at': self._get_current_timestamp(),
+                        'category': category,
+                        'articles': normalized_articles,
+                        'count': len(normalized_articles),
+                        'pipeline_info': {
+                            'version': pipeline_info.get('pipeline_version', '4.0_category_based'),
+                            'processing_time': processing_time,
+                            'category_focus': category
+                        }
+                    }
+                    
+                    # Save category file
+                    category_file = categories_dir / f"{category}.json"
+                    with open(category_file, 'w', encoding='utf-8') as f:
+                        json.dump(category_response, f, indent=2, ensure_ascii=False)
+                    saved_files.append(category_file)
+                    
+                    logger.info(f"✅ Saved {category} category: {len(normalized_articles)} articles")
+            
+            # Extract all articles for main API (aggregate all categories)
             all_articles = []
-            all_articles.extend(classified_content.get('headline', []))
-            all_articles.extend(classified_content.get('articles', []))
-            all_articles.extend(classified_content.get('research_papers', []))
+            for articles in categories.values():
+                all_articles.extend(articles)
             
             # **FIX**: Normalize articles for frontend compatibility
             normalized_articles = self._normalize_articles_for_frontend(all_articles, classified_content)
             
-            # Create main API response
+            # Create main API response (aggregate view)
             api_response = {
                 'generated_at': self._get_current_timestamp(),
                 'articles': normalized_articles,
                 'count': len(normalized_articles),
                 'pipeline_info': {
-                    'version': pipeline_info.get('pipeline_version', '3.0_with_deep_intelligence'),
+                    'version': pipeline_info.get('pipeline_version', '4.0_category_based'),
                     'processing_time': processing_time,
                     'components': pipeline_info.get('components', []),
                     'agents': pipeline_info.get('agents', {}),
-                    'content_breakdown': {
-                        'headline': len(classified_content.get('headline', [])),
-                        'articles': len(classified_content.get('articles', [])),
-                        'research_papers': len(classified_content.get('research_papers', []))
-                    },
-                    'classification_metadata': classified_content.get('classification_metadata', {})
+                    'category_breakdown': classified_content.get('classification_metadata', {}).get('category_distribution', {}),
+                    'classification_metadata': classified_content.get('classification_metadata', {}),
+                    'available_categories': list(categories.keys()),
+                    'processing_method': 'category_based'
                 }
             }
             
@@ -1211,84 +1471,23 @@ class NewsProcessingPipeline:
 
     def _normalize_articles_for_frontend(self, articles: List[Dict[str, Any]], classified_content: Dict[str, Any]) -> List[Dict[str, Any]]:
         """
-        Normalize articles for frontend compatibility.
-        Ensures all required fields exist and are in the expected format.
-        **FIX**: Now adds article type metadata to preserve classification.
+        Normalize articles for frontend compatibility with category-based structure.
         """
         normalized_articles = []
         
-        # Create lookup for article types based on original classification
-        headline_articles = {article.get('article_id', ''): 'headline' for article in classified_content.get('headline', [])}
-        regular_articles = {article.get('article_id', ''): 'article' for article in classified_content.get('articles', [])}
-        research_articles = {article.get('article_id', ''): 'research' for article in classified_content.get('research_papers', [])}
-        
-        # Combine all article type mappings
-        article_type_map = {**headline_articles, **regular_articles, **research_articles}
-        
         for article in articles:
-            # Create a copy to avoid modifying original
-            normalized_article = article.copy()
+            # Use the single article normalization method
+            normalized_article = self._normalize_single_article(article)
             
-            # **FIX**: Ensure required frontend fields exist
-            
-            # 1. Ensure article_id exists (use 'id' as fallback, generate if missing)
-            if not normalized_article.get('article_id') and normalized_article.get('id'):
-                normalized_article['article_id'] = normalized_article['id']
-            elif not normalized_article.get('article_id'):
-                # Generate a simple ID from title/URL hash if missing
-                import hashlib
-                title = normalized_article.get('title', '')
-                url = normalized_article.get('url', '')
-                id_source = f"{title}_{url}"
-                normalized_article['article_id'] = hashlib.md5(id_source.encode()).hexdigest()[:8]
-            
-            # **FIX**: Add article type metadata for frontend classification
-            article_id = normalized_article.get('article_id', '')
-            if article_id in article_type_map:
-                normalized_article['article_type'] = article_type_map[article_id]
-            else:
-                # Phase 4: Enhanced fallback using scientific paper detection
-                if self._is_scientific_paper(normalized_article):
-                    normalized_article['article_type'] = 'research'
-                elif self._is_headline_candidate(normalized_article):
-                    normalized_article['article_type'] = 'headline'
-                else:
-                    normalized_article['article_type'] = 'article'  # Default to regular article
-            
-            # 2. Ensure description field exists (critical for frontend rendering)
-            if not normalized_article.get('description'):
-                # Use content field as fallback
-                content = normalized_article.get('content', '')
-                if content:
-                    # Truncate content to reasonable description length
-                    normalized_article['description'] = content[:500] + ('...' if len(content) > 500 else '')
-                else:
-                    normalized_article['description'] = normalized_article.get('title', 'No description available')
-            
-            # 3. Ensure category field exists (critical for article categorization)
-            if not normalized_article.get('category'):
-                # Try to infer category from source or default to Media
-                source = normalized_article.get('source', '').lower()
-                if 'arxiv' in source or 'research' in source:
-                    normalized_article['category'] = 'Research'
-                else:
-                    normalized_article['category'] = 'Media'
-            
-            # 4. Ensure author field exists (optional but expected for research articles)
-            if not normalized_article.get('author'):
-                normalized_article['author'] = ''
-            
-            # 5. Validate and log missing critical fields
-            required_fields = ['title', 'url', 'source', 'published_date', 'description', 'category']
-            missing_fields = [field for field in required_fields if not normalized_article.get(field)]
-            
-            if missing_fields:
-                logger.warning(f"Article missing required fields {missing_fields}: {normalized_article.get('title', 'Unknown')[:50]}")
-                # Continue processing but log the issue
+            # Add category metadata if available
+            if article.get('assigned_category'):
+                normalized_article['assigned_category'] = article['assigned_category']
+                normalized_article['category_confidence'] = article.get('category_confidence', 0.5)
+                normalized_article['category_probabilities'] = article.get('category_probabilities', {})
             
             normalized_articles.append(normalized_article)
         
-        logger.info(f"✅ Normalized {len(normalized_articles)} articles for frontend compatibility with type metadata")
+        logger.info(f"✅ Normalized {len(normalized_articles)} articles for frontend compatibility")
         return normalized_articles
 
     def generate_audio(self):
@@ -1440,6 +1639,125 @@ class NewsProcessingPipeline:
         except Exception as e:
             log_error(logger, f"Failed to generate podcast audio: {e}")
             logger.debug(f"TTS generation error details: {traceback.format_exc()}")
+
+    def _save_collection_stats(self, collection_stats: Dict[str, Any], bulk_stats: Optional[Dict[str, Any]] = None, consensus_stats: Optional[Dict[str, Any]] = None, deep_intelligence_stats: Optional[Dict[str, Any]] = None, final_consensus_stats: Optional[Dict[str, Any]] = None) -> None:
+        """Save comprehensive pipeline statistics to a JSON file."""
+        try:
+            project_root = Path(__file__).parent.parent.parent
+            
+            # Create the comprehensive stats structure
+            comprehensive_stats = {
+                'generated_at': collection_stats['generated_at'],
+                'collection_stats': {
+                    'total_articles': collection_stats['collection_stats']['total_articles'],
+                    'total_sources': collection_stats['collection_stats']['total_sources'],
+                    'successful_sources': collection_stats['collection_stats']['successful_sources'],
+                    'failed_sources': collection_stats['collection_stats']['failed_sources'],
+                    'empty_sources': collection_stats['collection_stats']['empty_sources'],
+                    'processing_time': collection_stats['collection_stats']['processing_time'],
+                    'success_rate': collection_stats['collection_stats']['success_rate'],
+                    'category_distribution': collection_stats['collection_stats']['category_distribution'],
+                    'failure_details': collection_stats['collection_stats'].get('failure_details', {}),
+                    'collection_config': collection_stats['collection_stats']['collection_config']
+                }
+            }
+            
+            # Add bulk stage stats if available
+            if bulk_stats:
+                comprehensive_stats['bulk_stage_stats'] = bulk_stats
+            
+            # Add consensus stage stats if available
+            if consensus_stats:
+                comprehensive_stats['consensus_stage_stats'] = consensus_stats
+            
+            # Add deep intelligence stage stats if available
+            if deep_intelligence_stats:
+                comprehensive_stats['deep_intelligence_stage_stats'] = deep_intelligence_stats
+            
+            # Add final consensus stage stats if available
+            if final_consensus_stats:
+                comprehensive_stats['final_consensus_stage_stats'] = final_consensus_stats
+            
+            # Save to test_output for archival
+            output_dir = project_root / "scripts" / "test_output"
+            output_dir.mkdir(parents=True, exist_ok=True)
+            filename = f"comprehensive_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            with open(output_dir / filename, 'w', encoding='utf-8') as f:
+                json.dump(comprehensive_stats, f, indent=2, ensure_ascii=False)
+            
+            # Save to frontend API as stats.json for immediate access
+            frontend_api_dir = project_root / "src" / "frontend" / "api"
+            frontend_api_dir.mkdir(parents=True, exist_ok=True)
+            with open(frontend_api_dir / "stats.json", 'w', encoding='utf-8') as f:
+                json.dump(comprehensive_stats, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"Comprehensive statistics saved to: {output_dir / filename} and {frontend_api_dir / 'stats.json'}")
+        except Exception as e:
+            log_error(logger, f"Failed to save comprehensive statistics: {e}")
+
+    def _calculate_bulk_stage_stats(self, agent_results: Dict[str, List[Tuple[Dict[str, Any], bool, float]]]) -> Dict[str, Any]:
+        """Calculate comprehensive bulk stage statistics."""
+        if not agent_results:
+            return {}
+        
+        total_articles = sum(len(results) for results in agent_results.values())
+        total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values())
+        
+        agent_stats = {}
+        for agent_name, results in agent_results.items():
+            accepted_count = sum(1 for _, accepted, _ in results if accepted)
+            agent_stats[agent_name] = {
+                'total_processed': len(results),
+                'accepted': accepted_count,
+                'acceptance_rate': round((accepted_count / len(results) * 100), 1) if results else 0.0
+            }
+        
+        return {
+            'total_agents': len(agent_results),
+            'total_articles_processed': total_articles,
+            'total_accepted': total_accepted,
+            'overall_acceptance_rate': round((total_accepted / total_articles * 100), 1) if total_articles > 0 else 0.0,
+            'agents': agent_stats
+        }
+
+    def _calculate_deep_intelligence_stats(self, deep_intelligence_results: Dict[str, List[Tuple[Dict[str, Any], bool, float]]], input_articles: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Calculate comprehensive deep intelligence stage statistics."""
+        if not deep_intelligence_results:
+            return {
+                'enabled': self.enable_deep_intelligence,
+                'total_agents': len(self.deep_intelligence_agents) if self.enable_deep_intelligence else 0,
+                'total_articles_processed': 0,
+                'total_accepted': 0,
+                'overall_acceptance_rate': 0.0,
+                'agents': {}
+            }
+        
+        total_articles = sum(len(results) for results in deep_intelligence_results.values())
+        total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in deep_intelligence_results.values())
+        
+        agent_stats = {}
+        for agent_name, results in deep_intelligence_results.items():
+            accepted_count = sum(1 for _, accepted, _ in results if accepted)
+            confidences = [conf for _, _, conf in results if conf > 0]
+            avg_confidence = sum(confidences) / len(confidences) if confidences else 0.0
+            
+            agent_stats[agent_name] = {
+                'total_processed': len(results),
+                'accepted': accepted_count,
+                'acceptance_rate': round((accepted_count / len(results) * 100), 1) if results else 0.0,
+                'average_confidence': round(avg_confidence, 2)
+            }
+        
+        return {
+            'enabled': self.enable_deep_intelligence,
+            'total_agents': len(deep_intelligence_results),
+            'input_articles': len(input_articles),
+            'total_articles_processed': total_articles,
+            'total_accepted': total_accepted,
+            'overall_acceptance_rate': round((total_accepted / total_articles * 100), 1) if total_articles > 0 else 0.0,
+            'coverage_rate': round((total_articles / len(input_articles) * 100), 1) if input_articles else 0.0,
+            'agents': agent_stats
+        }
 
 
 async def main():

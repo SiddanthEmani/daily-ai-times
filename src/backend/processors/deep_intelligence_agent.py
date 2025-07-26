@@ -220,13 +220,20 @@ Content: {article.get('content', article.get('description', 'N/A'))[:1000]}
 
 CONSENSUS: Overall={consensus_score.get('overall_score', 0.0):.2f}, Confidence={initial_confidence:.2f}
 
-ANALYSIS (3 key areas):
+ANALYSIS (4 key areas):
 1. CREDIBILITY: Source reputation, factual accuracy, potential misinformation
 2. BIAS & IMPACT: Political/cultural bias, societal implications, narrative framing  
 3. VALUE: Reader utility, insights provided, content quality
+4. CATEGORY CLASSIFICATION: Probability distribution across content categories
+
+CATEGORY CLASSIFICATION: Provide probability distributions for these categories (must sum to 1.0):
+- AI: Artificial intelligence, machine learning, neural networks, AI companies, LLMs, AI research
+- ENTERTAINMENT: Movies, gaming, streaming, social media, content creation, digital entertainment
+- SPORTS: Sports technology, esports, fitness tech, sports analytics, athlete performance tech
+- HEALTH: Medical technology, healthtech, biotech, mental health apps, medical AI, health devices
 
 GUIDELINES:
-- ACCEPT: Valid AI/tech content (DEFAULT for pre-filtered)
+- ACCEPT: Valid content across any category (DEFAULT for pre-filtered)
 - CONDITIONAL: Good content needing minor improvements
 - REJECT: Only serious credibility/relevance issues
 
@@ -240,7 +247,13 @@ JSON Response:
   "confidence": 0.8,
   "recommendation": "ACCEPT",
   "key_insights": ["insight"],
-  "risk_factors": ["risk"]
+  "risk_factors": ["risk"],
+  "category_probabilities": {{
+    "ai": 0.8,
+    "entertainment": 0.1,
+    "sports": 0.05,
+    "health": 0.05
+  }}
 }}
 
 Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless serious issues."""
@@ -438,14 +451,19 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
             required_fields = [
                 'fact_check_confidence', 'bias_score', 'credibility_score',
                 'impact_potential', 'overall_score', 'confidence',
-                'recommendation', 'key_insights', 'risk_factors'
+                'recommendation', 'key_insights', 'risk_factors', 'category_probabilities'
             ]
             
             for field in required_fields:
                 if field not in parsed:
                     logger.warning(f"Missing field '{field}' in response from {self.model_name}")
-                    parsed[field] = 0.5 if field.endswith('_score') or field == 'confidence' else 'CONDITIONAL'
-                    if field in ['key_insights', 'risk_factors']:
+                    if field == 'category_probabilities':
+                        parsed[field] = {'ai': 0.7, 'entertainment': 0.1, 'sports': 0.1, 'health': 0.1}
+                    elif field.endswith('_score') or field == 'confidence':
+                        parsed[field] = 0.5
+                    elif field == 'recommendation':
+                        parsed[field] = 'CONDITIONAL'
+                    elif field in ['key_insights', 'risk_factors']:
                         parsed[field] = []
             
             # Validate numeric fields
@@ -456,6 +474,31 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
                     parsed[field] = max(0.0, min(1.0, value))  # Clamp to [0,1]
                 except (ValueError, TypeError):
                     parsed[field] = 0.5
+            
+            # Validate category probabilities
+            if 'category_probabilities' in parsed:
+                categories = parsed['category_probabilities']
+                if not isinstance(categories, dict):
+                    parsed['category_probabilities'] = {'ai': 0.7, 'entertainment': 0.1, 'sports': 0.1, 'health': 0.1}
+                else:
+                    # Normalize category probabilities
+                    required_categories = ['ai', 'entertainment', 'sports', 'health']
+                    for cat in required_categories:
+                        if cat not in categories:
+                            categories[cat] = 0.25
+                    # Clamp values to [0,1]
+                    for cat in categories:
+                        try:
+                            categories[cat] = max(0.0, min(1.0, float(categories[cat])))
+                        except (ValueError, TypeError):
+                            categories[cat] = 0.25
+                    # Normalize to sum to 1.0
+                    total = sum(categories.values())
+                    if total > 0:
+                        for cat in categories:
+                            categories[cat] = categories[cat] / total
+                    else:
+                        parsed['category_probabilities'] = {'ai': 0.7, 'entertainment': 0.1, 'sports': 0.1, 'health': 0.1}
             
             # Validate recommendation
             if parsed.get('recommendation') not in ['ACCEPT', 'REJECT', 'CONDITIONAL']:
@@ -489,7 +532,8 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
                     "recommendation": parsed["recommendation"],
                     "key_insights": parsed.get("key_insights", []),
                     "risk_factors": parsed.get("risk_factors", []),
-                    "enhancement_suggestions": parsed.get("enhancement_suggestions", [])
+                    "enhancement_suggestions": parsed.get("enhancement_suggestions", []),
+                    "category_probabilities": parsed.get("category_probabilities", {"ai": 0.7, "entertainment": 0.1, "sports": 0.1, "health": 0.1})
                 }
             }
         }

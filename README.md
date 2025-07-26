@@ -142,6 +142,63 @@ Available via GitHub Actions interface with advanced options:
 - **Skip Deployment** - Run processing without deploying (useful for testing)
 - **Pipeline Metrics** - Real-time processing statistics and agent performance
 
+## Legal Compliance & Fair Use
+
+### What This Service Does
+Daily AI Times is an AI-powered news discovery and recommendation platform that:
+- **Curates** the top 25 articles from public RSS feeds across 4 categories
+- **Preserves** all original titles, descriptions, and attributions without modification
+- **Links** directly to original publisher websites
+- **Operates** like an intelligent RSS reader with AI-powered ranking
+
+### Legal Basis for Operation
+This service operates under established legal principles that protect:
+
+1. **Search Engines & News Aggregators** - Similar to Google News, we help users discover content without reproducing it
+2. **Fair Use for Indexing** - Processing publicly available RSS metadata for ranking and recommendation
+3. **Transformative Purpose** - Adding value through AI analysis and curation without replacing original content
+4. **No Market Harm** - Driving traffic TO publishers, not away from them
+
+### What We Process
+- **RSS Feed Metadata**: Titles, descriptions, and links that publishers make publicly available
+- **No Full Articles**: We never store or display full article content
+- **No Paywalled Content**: Only publicly accessible RSS feeds
+- **Attribution Preserved**: All sources clearly credited with direct links
+
+### Industry Precedents
+This service operates similarly to established platforms:
+- Search engines (indexing and ranking content)
+- Social media platforms (showing link previews)
+- RSS readers (displaying feed content)
+- News aggregators (Techmeme, Google News, Apple News)
+
+### Publisher Benefits
+- **Increased Traffic**: Direct links drive readers to publisher sites
+- **Broader Reach**: AI curation helps quality content find its audience
+- **Preserved Attribution**: Full credit and linking maintained
+- **No Content Theft**: Readers must visit publisher sites for full articles
+
+### DMCA Compliance & Opt-Out
+While we believe our service operates within fair use principles:
+- Publishers may request removal via Discussions
+- We respect robots.txt and RSS usage guidelines
+- DMCA notices will be promptly addressed
+
+### User Responsibilities
+If you deploy your own instance:
+- Respect publisher terms of service
+- Maintain attribution and links
+- Consider local copyright laws
+- Use responsible crawling practices
+
+### Disclaimer
+This service provides AI-powered recommendations based on publicly available RSS feeds. All content remains the property of original publishers. The AI analysis and rankings are provided for informational purposes only.
+
+### Ethical AI Commitment
+- **Transparency**: Our curation process is documented and open source
+- **No Manipulation**: Rankings based on quality signals, not political or commercial bias
+- **Publisher Friendly**: Designed to support, not replace, original journalism
+
 ## License
 
 MIT License

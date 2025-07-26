@@ -1,0 +1,113 @@
+{
+  "generated_at": "2025-07-26T07:36:52.714074+00:00",
+  "collection_stats": {
+    "total_articles": 83,
+    "total_sources": 182,
+    "successful_sources": 16,
+    "failed_sources": 0,
+    "empty_sources": 166,
+    "processing_time": 43.58,
+    "success_rate": 8.8,
+    "category_distribution": {
+      "Other": 83
+    },
+    "failure_details": {},
+    "collection_config": {
+      "max_articles": 100,
+      "max_age_days": 7,
+      "total_configured_sources": 182
+    }
+  },
+  "bulk_stage_stats": {
+    "total_agents": 3,
+    "total_articles_processed": 83,
+    "total_accepted": 54,
+    "overall_acceptance_rate": 65.1,
+    "agents": {
+      "llama-3.1-8b-instant": {
+        "total_processed": 18,
+        "accepted": 10,
+        "acceptance_rate": 55.6
+      },
+      "gemma2-9b-it": {
+        "total_processed": 47,
+        "accepted": 38,
+        "acceptance_rate": 80.9
+      },
+      "llama3-8b-8192": {
+        "total_processed": 18,
+        "accepted": 6,
+        "acceptance_rate": 33.3
+      }
+    }
+  },
+  "consensus_stage_stats": {
+    "total_articles": 83,
+    "consensus_accepted": 54,
+    "consensus_acceptance_rate": 0.6506024096385542,
+    "agents": {
+      "llama-3.1-8b-instant": {
+        "total_processed": 18,
+        "accepted": 10,
+        "acceptance_rate": 0.5555555555555556
+      },
+      "gemma2-9b-it": {
+        "total_processed": 47,
+        "accepted": 38,
+        "acceptance_rate": 0.8085106382978723
+      },
+      "llama3-8b-8192": {
+        "total_processed": 18,
+        "accepted": 6,
+        "acceptance_rate": 0.3333333333333333
+      }
+    },
+    "algorithm_used": "weighted_voting",
+    "required_agreement": 0.7,
+    "min_confidence": 0.3
+  },
+  "deep_intelligence_stage_stats": {
+    "enabled": true,
+    "total_agents": 2,
+    "input_articles": 54,
+    "total_articles_processed": 54,
+    "total_accepted": 46,
+    "overall_acceptance_rate": 85.2,
+    "coverage_rate": 100.0,
+    "agents": {
+      "meta-llama/llama-4-scout-17b-16e-instruct": {
+        "total_processed": 39,
+        "accepted": 35,
+        "acceptance_rate": 89.7,
+        "average_confidence": 0.73
+      },
+      "llama-3.3-70b-versatile": {
+        "total_processed": 15,
+        "accepted": 11,
+        "acceptance_rate": 73.3,
+        "average_confidence": 0.79
+      }
+    }
+  },
+  "final_consensus_stage_stats": {
+    "total_articles": 54,
+    "accepted_articles": 53,
+    "rejected_articles": 1,
+    "acceptance_rate": 98.14814814814815,
+    "average_confidence": 0.6472222222222223,
+    "deep_intelligence_coverage": {
+      "articles_analyzed": 54,
+      "coverage_percentage": 100.0
+    },
+    "quality_gates": {
+      "enabled": true,
+      "failures": 0,
+      "failure_rate": 0.0
+    },
+    "consensus_method": "weighted_combination",
+    "algorithm_weights": {
+      "initial_consensus": 0.4,
+      "deep_intelligence": 0.6
+    }
+  }
+}

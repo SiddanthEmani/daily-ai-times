@@ -12,11 +12,11 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class CollectionConfig:
-    """Streamlined configuration for RSS news collection."""
+    """Ultra-fast configuration for RSS news collection."""
     max_articles: int = 500
     max_age_days: int = 7
-    batch_size: int = 10
-    timeout_seconds: int = 30
+    batch_size: int = 50  # Increased for ultra-fast processing
+    timeout_seconds: int = 5  # Ultra-aggressive timeout
     min_title_length: int = 5
     min_description_length: int = 10
     # RSS-specific configurations
@@ -45,7 +45,7 @@ class ConfigManager:
     
     @staticmethod
     def load() -> tuple[CollectionConfig, Dict[str, Dict]]:
-        """Load configuration and sources."""
+        """Load configuration and sources from single sources.yaml file."""
         try:
             # Import using absolute path instead of relative import
             import sys
@@ -74,15 +74,12 @@ class ConfigManager:
                 rss_config=collectors_config
             )
             
-            # Load sources
+            # Load all sources from single YAML file
             sources_config = load_sources_config()
             sources = sources_config.get('sources', {})
-            if isinstance(sources, dict) and 'sources' in sources:
-                sources = sources['sources']
-            
-            # Filter enabled sources
+            # No nested 'sources' key in new format
             enabled_sources = {k: v for k, v in sources.items() if v.get('enabled', True)}
-            logger.info(f"Loaded {len(enabled_sources)} enabled sources")
+            logger.info(f"Loaded {len(enabled_sources)} enabled sources from single sources.yaml")
             
             return config, enabled_sources
             
@@ -148,7 +145,7 @@ class TextUtils:
     
     @staticmethod
     def clean_html(content: str, max_length: int = 500, config: Optional[Dict[str, Any]] = None) -> str:
-        """Clean HTML content and truncate."""
+        """Ultra-fast HTML content cleaning without BeautifulSoup."""
         if not content:
             return ''
         
@@ -166,10 +163,10 @@ class TextUtils:
         if isinstance(content, dict):
             content = content.get('rendered', str(content))
         
-        # Remove HTML and clean whitespace
-        from bs4 import BeautifulSoup
+        # Ultra-fast HTML removal with regex (no BeautifulSoup)
         import re
-        cleaned = BeautifulSoup(str(content), 'html.parser').get_text()
+        # Remove HTML tags
+        cleaned = re.sub(r'<[^>]+>', ' ', str(content))
         
         # Apply text normalization based on config
         if text_config:

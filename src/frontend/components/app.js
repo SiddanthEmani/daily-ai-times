@@ -7,8 +7,10 @@ import { CustomAudioPlayer } from './custom-audio-player.js';
 export class NewsApp {
     constructor() {
         this.newsData = null;
+        this.categoryData = {};
+        this.currentCategory = 'ai';
         this.isLoading = false;
-        this.appVersion = '2024.1.0'; // Increment this when you want to force cache refresh
+        this.appVersion = '2024.2.0'; // Increment this when you want to force cache refresh
         try {
             this.performance = new PerformanceMonitor();
         } catch (error) {
@@ -68,8 +70,14 @@ export class NewsApp {
             // Add cache-busting to logo
             this.addCacheBustingToAssets();
             
-            // Load news data
-            await this.loadNews();
+            // Initialize audio player
+            this.initializeAudioPlayer();
+            
+            // Set up category navigation
+            this.initializeCategoryNavigation();
+            
+            // Load news data for current category
+            await this.loadCategoryNews(this.currentCategory);
             
             this.performance.mark('app_init_complete');
             this.performance.report();
@@ -92,11 +100,71 @@ export class NewsApp {
 
 
     showLoadingStates() {
-        DOMUtils.showLoading('main-story');
-        DOMUtils.showLoading('news-column-1');
-        DOMUtils.showLoading('news-column-2');
-        DOMUtils.showLoading('research-column-1');
-        DOMUtils.showLoading('research-column-2');
+        const categoryContent = document.getElementById('category-content');
+        if (categoryContent) {
+            categoryContent.innerHTML = '<div class="loading">Loading articles...</div>';
+        }
+    }
+
+    initializeAudioPlayer() {
+        try {
+            // Update date
+            const formattedDate = DateUtils.formatHeaderDate(new Date());
+            DOMUtils.setElementContent('current-date', formattedDate);
+            
+            // Update edition info with custom audio player
+            const audioTimestamp = Date.now();
+            const editionInfo = `
+                <div class="audio-player" id="custom-audio-container"></div>`;
+                
+            DOMUtils.setElementContent('edition-text', editionInfo);
+            
+            // Initialize custom audio player
+            setTimeout(() => {
+                const audioContainer = document.getElementById('custom-audio-container');
+                if (audioContainer) {
+                    new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${audioTimestamp}`, audioContainer);
+                }
+            }, 100);
+            
+        } catch (error) {
+            console.error('Error initializing audio player:', error);
+        }
+    }
+
+    initializeCategoryNavigation() {
+        // Set up category tab click handlers
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', async (e) => {
+                const category = e.target.getAttribute('data-category');
+                if (category && category !== this.currentCategory) {
+                    await this.switchToCategory(category);
+                }
+            });
+        });
+    }
+
+    async switchToCategory(category) {
+        // Update active tab
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.querySelector(`[data-category="${category}"]`).classList.add('active');
+        
+        // Update current category
+        this.currentCategory = category;
+        
+        // Show loading state
+        this.showLoadingStates();
+        
+        // Load category content
+        await this.loadCategoryNews(category);
+        
+        // Track category switch
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackEvent('category_switch', { category });
+        }
     }
 
     addCacheBustingToAssets() {
@@ -183,29 +251,38 @@ export class NewsApp {
     }
 
     showErrorStates() {
-        DOMUtils.showError('main-story', 'Unable to load main story');
-        DOMUtils.showError('news-column-1', 'Unable to load news');
-        DOMUtils.showError('news-column-2', 'Unable to load news');
-        DOMUtils.showError('research-column-1', 'Unable to load research papers');
-        DOMUtils.showError('research-column-2', 'Unable to load research papers');
+        const categoryContent = document.getElementById('category-content');
+        if (categoryContent) {
+            categoryContent.innerHTML = `
+                <div class="error-state">
+                    <h3>Unable to load articles</h3>
+                    <p>Please try again later or switch to a different category.</p>
+                </div>
+            `;
+        }
     }
 
 
 
-    async loadNews() {
+    async loadCategoryNews(category) {
         if (this.isLoading) return;
         
         this.isLoading = true;
-        this.performance.mark('news_load_start');
+        this.performance.mark('category_load_start');
         
-                try {
-            // Simple fetch with cache-busting timestamp - no complex caching logic
-            const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}&v=${this.appVersion}`;
+        try {
+            // Check if we have cached data for this category
+            if (this.categoryData[category]) {
+                this.renderCategoryContent(this.categoryData[category], category);
+                return;
+            }
             
-            // Fetch news data with timeout and no-cache headers
+            // Fetch category-specific data
+            const timestamp = Date.now();
+            const apiUrl = `./api/categories/${category}.json?t=${timestamp}&v=${this.appVersion}`;
+            
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+            const timeoutId = setTimeout(() => controller.abort(), 10000);
             
             const response = await fetch(apiUrl, {
                 signal: controller.signal,
@@ -213,34 +290,157 @@ export class NewsApp {
                 headers: {
                     'Cache-Control': 'no-cache, no-store, must-revalidate',
                     'Pragma': 'no-cache',
-                    'Expires': '0',
-                    'If-Modified-Since': 'Thu, 01 Jan 1970 00:00:00 GMT'
+                    'Expires': '0'
                 }
             });
             
             clearTimeout(timeoutId);
             
-            // Handle 304 (Not Modified) as success - just means content hasn't changed
             if (!response.ok && response.status !== 304) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            // For 304, try to get JSON anyway (some servers still return content)
-            // If it fails, we'll catch it in the outer try-catch
-            this.newsData = await response.json();
-            this.performance.mark('news_fetch_complete');
+            const categoryData = await response.json();
+            this.categoryData[category] = categoryData;
+            this.performance.mark('category_fetch_complete');
             
-            // Content freshness checked silently (no notifications)
-            
-            // Process and render news
-            this.processAndRenderNews();
-            this.performance.mark('news_render_complete');
+            // Render category content
+            this.renderCategoryContent(categoryData, category);
+            this.performance.mark('category_render_complete');
             
         } catch (error) {
-            console.error('Error loading news:', error);
-            this.handleLoadError(error);
+            console.error(`Error loading ${category} category:`, error);
+            this.handleCategoryLoadError(error, category);
         } finally {
             this.isLoading = false;
+        }
+    }
+
+    renderCategoryContent(categoryData, category) {
+        const categoryContent = document.getElementById('category-content');
+        if (!categoryContent) return;
+        
+        const articles = categoryData.articles || [];
+        if (articles.length === 0) {
+            categoryContent.innerHTML = `
+                <div class="no-articles">
+                    <h3>No articles found for ${category.toUpperCase()}</h3>
+                    <p>Check back later for new content in this category.</p>
+                </div>
+            `;
+            return;
+        }
+        
+        // Create two-column layout
+        const leftColumnArticles = [];
+        const rightColumnArticles = [];
+        
+        articles.forEach((article, index) => {
+            if (index % 2 === 0) {
+                leftColumnArticles.push(article);
+            } else {
+                rightColumnArticles.push(article);
+            }
+        });
+        
+        const leftColumnHtml = leftColumnArticles.map(article => this.createArticleHtml(article)).join('');
+        const rightColumnHtml = rightColumnArticles.map(article => this.createArticleHtml(article)).join('');
+        
+        categoryContent.innerHTML = `
+            <div class="category-header">
+                <h2>${category.toUpperCase()} News</h2>
+                <p>${articles.length} articles</p>
+            </div>
+            <div class="category-articles">
+                <div class="category-column-left">
+                    ${leftColumnHtml}
+                </div>
+                <div class="category-column-right">
+                    ${rightColumnHtml}
+                </div>
+            </div>
+        `;
+        
+        // Add click handlers to articles
+        let articleIndex = 0;
+        categoryContent.querySelectorAll('.category-article').forEach((articleEl) => {
+            const currentIndex = articleIndex;
+            articleEl.addEventListener('click', () => {
+                this.openArticle(articles[currentIndex]);
+            });
+            articleIndex++;
+        });
+    }
+
+    createArticleHtml(article) {
+        const publishedDate = new Date(article.published_date).toLocaleDateString();
+        const truncatedDescription = article.description.length > 100 
+            ? article.description.substring(0, 100) + '...' 
+            : article.description;
+        
+        return `
+            <article class="category-article">
+                <h3 class="category-article-title">${article.title}</h3>
+                <div class="category-article-meta">
+                    <span class="category-article-source">${article.source}</span>
+                    <span>•</span>
+                    <span class="category-article-date">${publishedDate}</span>
+                </div>
+                <p class="category-article-description">${truncatedDescription}</p>
+            </article>
+        `;
+    }
+
+    openArticle(article) {
+        if (article.url) {
+            window.open(article.url, '_blank', 'noopener,noreferrer');
+        }
+        
+        // Track article click
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackEvent('article_click', {
+                category: this.currentCategory,
+                source: article.source,
+                title: article.title.substring(0, 50)
+            });
+        }
+    }
+
+    handleCategoryLoadError(error, category) {
+        let errorMessage = `Unable to load ${category} news`;
+        let errorCode = 'UNKNOWN_ERROR';
+        
+        if (error.name === 'AbortError') {
+            errorMessage = 'Request timed out. Please try again.';
+            errorCode = 'TIMEOUT_ERROR';
+        } else if (error.message.includes('HTTP error')) {
+            errorMessage = 'News service temporarily unavailable';
+            errorCode = 'HTTP_ERROR';
+        } else if (!navigator.onLine) {
+            errorMessage = 'No internet connection detected';
+            errorCode = 'OFFLINE_ERROR';
+        }
+
+        // Track the error
+        if (typeof Analytics !== 'undefined') {
+            Analytics.trackError(error, { 
+                context: 'category_loading',
+                category: category,
+                error_code: errorCode 
+            });
+        }
+
+        const categoryContent = document.getElementById('category-content');
+        if (categoryContent) {
+            categoryContent.innerHTML = `
+                <div class="error-state">
+                    <h3>Unable to Load ${category.toUpperCase()} News</h3>
+                    <p>${errorMessage}</p>
+                    <button onclick="newsApp.loadCategoryNews('${category}')" class="retry-button">
+                        Try Again
+                    </button>
+                </div>
+            `;
         }
     }
 
@@ -273,18 +473,7 @@ export class NewsApp {
             // Update edition info with custom audio player
             const audioTimestamp = Date.now();
             const editionInfo = `
-                <div class="edition-left">
-                    <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer" class="how-it-works-link">
-                        How was this news generated?
-                    </a>
-                    <span class="articles-count">${totalArticles} featured articles</span>
-                </div>
-                <div class="audio-player" id="custom-audio-container"></div>
-                <div class="edition-right">
-                    <span class="update-frequency">Updated every 4 hours</span>
-                    <br>
-                    <span class="last-updated">Last updated: ${DateUtils.formatLastUpdated(generatedDate)}</span>
-                </div>`;
+                <div class="audio-player" id="custom-audio-container"></div>`;
                 
             DOMUtils.setElementContent('edition-text', editionInfo);
             

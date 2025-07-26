@@ -87,6 +87,10 @@ class ArticleScores(BaseModel):
     impact: float = Field(ge=0.0, le=1.0, description="Importance to tech community")
     confidence: float = Field(ge=0.0, le=1.0, description="Assessment confidence")
     uncertainty: float = Field(ge=0.0, le=1.0, description="Assessment uncertainty")
+    ai: float = Field(ge=0.0, le=1.0, description="AI/ML category probability")
+    entertainment: float = Field(ge=0.0, le=1.0, description="Entertainment category probability") 
+    sports: float = Field(ge=0.0, le=1.0, description="Sports tech category probability")
+    health: float = Field(ge=0.0, le=1.0, description="Health tech category probability")
 
 class BatchScoringResponse(BaseModel):
     """Complete batch response with all article scores."""
@@ -349,19 +353,27 @@ class BulkFilteringAgent:
         """
         
         # UNIFIED PROMPT: Single template for all models (eliminates 40+ lines of duplication)
-        base_prompt = f"""You are an expert tech news evaluator. You will analyze EXACTLY {article_count} articles and provide balanced, comprehensive scores from 0.0 to 1.0 for each article.
+        json_emphasis = ""
+        if self.model_name == 'gemma2-9b-it':
+            json_emphasis = "\n\nIMPORTANT: You MUST respond with valid JSON only. Do not include any explanatory text, markdown formatting, or code blocks. Start directly with the opening curly brace."
+        
+        base_prompt = f"""You are an expert news evaluator for a technology-focused publication. You will analyze EXACTLY {article_count} articles and provide balanced, comprehensive scores from 0.0 to 1.0 for each article.
 
-CRITICAL: Your response must contain EXACTLY {article_count} articles in the "articles" array. No more, no less.
+CRITICAL: Your response must contain EXACTLY {article_count} articles in the "articles" array. No more, no less.{json_emphasis}
 
-COMPREHENSIVE EVALUATION: Score each article across ALL dimensions with equal importance:
-- RELEVANCE: How relevant to technology professionals (AI, software, cybersecurity, startups)
-- QUALITY: Content depth, technical accuracy, and journalistic quality
-- NOVELTY: How new, unique, or innovative the content is
-- IMPACT: Importance and potential influence on the tech community
-- CONFIDENCE: Your confidence in this comprehensive assessment (0.0 = uncertain, 1.0 = very confident)
-- UNCERTAINTY: Your uncertainty about this comprehensive assessment (0.0 = very certain, 1.0 = very uncertain)
+EVALUATION GUIDELINES - Be reasonably generous with tech-related content:
+- RELEVANCE: How relevant to technology professionals (0.6+ for any tech topic, 0.8+ for major tech news)
+- QUALITY: Content depth and journalistic quality (0.6+ for standard news, 0.8+ for in-depth analysis)
+- NOVELTY: How new or unique the content is (0.5+ for recent developments, 0.7+ for breaking news)
+- IMPACT: Importance to the tech community (0.5+ for industry updates, 0.8+ for major announcements)
+- CONFIDENCE: Your confidence in this assessment (0.7+ for clear assessments)
+- UNCERTAINTY: Your uncertainty about this assessment (0.3 or lower for most assessments)
 
-BALANCED APPROACH: Provide objective, unbiased evaluation across all criteria. Use your model's natural evaluation capabilities without focusing on any single dimension.
+CATEGORY CLASSIFICATION: Assign probability scores for each category (values between 0.0 and 1.0):
+- AI: Artificial intelligence, machine learning, neural networks, AI companies, LLMs, AI research
+- ENTERTAINMENT: Movies, gaming, streaming, social media, content creation, digital entertainment  
+- SPORTS: Sports technology, esports, fitness tech, sports analytics, athlete performance tech
+- HEALTH: Medical technology, healthtech, biotech, mental health apps, medical AI, health devices
 
 Respond with a JSON object containing an "articles" array with EXACTLY {article_count} entries. Each article should have scores as decimal numbers between 0.0 and 1.0.
 
@@ -372,21 +384,29 @@ Required JSON format:
       "relevance": 0.8,
       "quality": 0.7,
       "novelty": 0.6,
-      "impact": 0.9,
+      "impact": 0.7,
       "confidence": 0.8,
-      "uncertainty": 0.2
+      "uncertainty": 0.2,
+      "ai": 0.8,
+      "entertainment": 0.1,
+      "sports": 0.05,
+      "health": 0.05
     }}"""
         
         # Dynamic examples based on article count (works for all models)
         if article_count > 1:
             base_prompt += """,
     {
-      "relevance": 0.3,
-      "quality": 0.4,
-      "novelty": 0.2,
-      "impact": 0.1,
-      "confidence": 0.9,
-      "uncertainty": 0.1
+      "relevance": 0.6,
+      "quality": 0.6,
+      "novelty": 0.5,
+      "impact": 0.5,
+      "confidence": 0.8,
+      "uncertainty": 0.2,
+      "ai": 0.3,
+      "entertainment": 0.6,
+      "sports": 0.05,
+      "health": 0.05
     }"""
             
         if article_count > 2:
@@ -456,12 +476,18 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         
         batch_response = await self._make_api_call(messages)
         if not batch_response:
-            logger.warning(f"API call failed for {self.model_name}, returning conservative decisions")
-            return [(article, False, 0.0) for article in article_metadata]
+            logger.error(f"API call failed for {self.model_name} - NO FALLBACK")
+            raise RuntimeError(f"Agent {self.model_name} failed to generate response")
         
         # Enhanced logging for debugging
         logger.info(f"{self.model_name} processing {len(articles)} articles")
         logger.info(f"{self.model_name} received {len(batch_response.articles)} scores")
+        
+        # Debug: Check first response structure
+        if batch_response.articles:
+            first_score = batch_response.articles[0]
+            logger.info(f"{self.model_name} sample scores: R={first_score.relevance:.2f}, Q={first_score.quality:.2f}, I={first_score.impact:.2f}")
+            logger.info(f"{self.model_name} sample categories: AI={first_score.ai:.2f}, Ent={first_score.entertainment:.2f}, Sports={first_score.sports:.2f}, Health={first_score.health:.2f}")
         
         # Process structured JSON response with original article metadata
         if batch_response.articles and len(batch_response.articles) >= len(articles) * 0.7:
@@ -472,18 +498,31 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
             scores_to_use = batch_response.articles[:len(articles)]
             
             # Pad with default scores if needed
+            defaults_added = 0
             while len(scores_to_use) < len(articles):
                 defaults = self._get_default_scores()
                 default_score = ArticleScores(**defaults)
                 scores_to_use.append(default_score)
+                defaults_added += 1
+            
+            if defaults_added > 0:
+                logger.warning(f"{self.model_name} added {defaults_added} default scores (API returned {len(batch_response.articles)}, needed {len(articles)})")
             
             for i, (original_article, article_scores) in enumerate(zip(article_metadata, scores_to_use)):
-                # Create multi-dimensional score
+                # Create multi-dimensional score with flat category structure
+                category_probs = {
+                    'ai': article_scores.ai,
+                    'entertainment': article_scores.entertainment,
+                    'sports': article_scores.sports,
+                    'health': article_scores.health
+                }
+                
                 md_score = create_multi_dimensional_score(
                     relevance=article_scores.relevance,
                     quality=article_scores.quality,
                     novelty=article_scores.novelty,
                     impact=article_scores.impact,
+                    category_probabilities=category_probs,
                     confidence_mean=article_scores.confidence,
                     confidence_std=article_scores.uncertainty,
                     agent_name=self.model_name,
@@ -511,11 +550,56 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
             logger.info(f"{self.model_name} batch results: {accept_count}/{len(articles)} accepted")
             return results
         else:
-            logger.warning(f"Agent {self.model_name}: JSON parsing failed or insufficient scores, got {len(batch_response.articles) if batch_response.articles else 0} scores for {len(articles)} articles")
+            received_count = len(batch_response.articles) if batch_response.articles else 0
+            logger.warning(f"Agent {self.model_name}: JSON parsing failed or insufficient scores, got {received_count} scores for {len(articles)} articles - using fallback scores")
             
-            # Fallback: use conservative decisions with original metadata
-            logger.info(f"Agent {self.model_name}: Using conservative fallback decisions")
-            return [(article, False, 0.2) for article in article_metadata]
+            # Provide fallback scores for all articles instead of failing
+            results = []
+            defaults = self._get_default_scores()
+            accept_count = 0
+            
+            for i, article in enumerate(article_metadata):
+                # Create fallback multi-dimensional score
+                # Make gemma2-9b-it fallbacks more generous to compensate for JSON issues
+                if self.model_name == 'gemma2-9b-it':
+                    fallback_relevance = min(1.0, defaults['relevance'] + 0.1)
+                    fallback_quality = min(1.0, defaults['quality'] + 0.1) 
+                    fallback_novelty = min(1.0, defaults['novelty'] + 0.1)
+                    fallback_impact = min(1.0, defaults['impact'] + 0.1)
+                    logger.debug(f"Using enhanced fallback scores for gemma2-9b-it: R={fallback_relevance:.2f}, Q={fallback_quality:.2f}")
+                else:
+                    fallback_relevance = defaults['relevance']
+                    fallback_quality = defaults['quality']
+                    fallback_novelty = defaults['novelty']
+                    fallback_impact = defaults['impact']
+                
+                md_score = create_multi_dimensional_score(
+                    relevance=fallback_relevance,
+                    quality=fallback_quality,
+                    novelty=fallback_novelty,
+                    impact=fallback_impact,
+                    category_probabilities={
+                        'ai': defaults['ai'],
+                        'entertainment': defaults['entertainment'],
+                        'sports': defaults['sports'],
+                        'health': defaults['health']
+                    },
+                    confidence_mean=defaults['confidence'],
+                    confidence_std=defaults['uncertainty'],
+                    agent_name=self.model_name,
+                    model_name=self.model_name,
+                    specialization=self.specialization
+                )
+                
+                decision, confidence = md_score.get_legacy_format()
+                results.append((article, decision, confidence))
+                article['multi_dimensional_score'] = md_score.to_dict()
+                
+                if decision:
+                    accept_count += 1
+            
+            logger.warning(f"{self.model_name} fallback results: {accept_count}/{len(articles)} accepted")
+            return results
     
     async def process_articles_with_rate_limiting(self, articles: List[Dict[str, Any]]) -> List[Tuple[Dict[str, Any], bool, float]]:
         """Process articles in batches with intelligent rate limiting.
@@ -586,23 +670,36 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         start_time = time.time()
 
         try:
-            # Model-specific token limits
+            # Model-specific token limits - increased for better JSON completion
             if self.model_name == 'gemma2-9b-it':
-                # Give gemma2 more tokens to complete the JSON response properly
-                max_tokens = min(len(messages[1]['content'].split()) * 3, 2000)  # More generous limit
+                # Give gemma2 significantly more tokens for reliable JSON completion
+                estimated_output = len(messages[1]['content'].split()) * 0.8  # Estimate output based on input
+                max_tokens = max(2000, min(int(estimated_output), 4000))  # At least 2000, up to 4000
             else:
-                max_tokens = min(self.max_tokens_per_article * 20, 1000)
+                max_tokens = min(self.max_tokens_per_article * 30, 1500)  # Increased for better completion
                 
             # Use Groq's JSON mode for guaranteed structured output
-            completion = await self.groq_client.chat.completions.create(
-                model=self.model_name,
-                messages=messages,  # type: ignore
-                temperature=self.temperature,
-                top_p=self.top_p,
-                max_tokens=max_tokens,
-                response_format={"type": "json_object"},  # Enable JSON mode
-                stream=False
-            )
+            # Special handling for gemma2-9b-it
+            if self.model_name == 'gemma2-9b-it':
+                completion = await self.groq_client.chat.completions.create(
+                    model=self.model_name,
+                    messages=messages,  # type: ignore
+                    temperature=0.05,  # Lower temperature for more consistent JSON
+                    top_p=0.95,  # Slightly higher top_p for gemma2
+                    max_tokens=max_tokens,
+                    response_format={"type": "json_object"},  # Enable JSON mode
+                    stream=False
+                )
+            else:
+                completion = await self.groq_client.chat.completions.create(
+                    model=self.model_name,
+                    messages=messages,  # type: ignore
+                    temperature=self.temperature,
+                    top_p=self.top_p,
+                    max_tokens=max_tokens,
+                    response_format={"type": "json_object"},  # Enable JSON mode
+                    stream=False
+                )
             
             processing_time = time.time() - start_time
             
@@ -636,11 +733,26 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
             except (json.JSONDecodeError, ValueError) as e:
                 logger.error(f"Failed to parse JSON response from {self.model_name}: {e}")
                 logger.debug(f"Raw response: {response_content[:500]}")
+                
+                # Special handling for gemma2-9b-it - try to repair common JSON issues
+                if self.model_name == 'gemma2-9b-it':
+                    logger.info(f"Attempting JSON repair for {self.model_name}")
+                    try:
+                        # Try to fix common gemma2 JSON issues
+                        repaired_json = self._repair_gemma_json(response_content)
+                        if repaired_json:
+                            batch_response = BatchScoringResponse(**repaired_json)
+                            logger.info(f"Successfully repaired JSON for {self.model_name}")
+                            return batch_response
+                    except Exception as repair_error:
+                        logger.debug(f"JSON repair failed: {repair_error}")
+                
                 return None
                 
         except groq.RateLimitError as e:
             logger.warning(f"Rate limit error for {self.model_name}: {e}")
-            # Groq client handles retries automatically
+            # Wait longer before retrying when hitting rate limits
+            await asyncio.sleep(60)  # Wait 1 minute for rate limit reset
             return None
             
         except groq.APITimeoutError as e:
@@ -698,14 +810,18 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         # OPTIMIZED: Use pre-computed agent variance instead of recalculating
         agent_variance = self.cached_agent_variance
         
-        # Balanced base defaults across all dimensions - no artificial specialization bias
+        # Improved defaults to be more accepting for news articles
         defaults = {
-            'relevance': 0.5 + agent_variance,
-            'quality': 0.5 + agent_variance,
-            'novelty': 0.4 + agent_variance,
-            'impact': 0.4 + agent_variance,
-            'confidence': 0.6 + agent_variance,
-            'uncertainty': 0.3 + agent_variance
+            'relevance': 0.6 + agent_variance,  # Higher relevance baseline
+            'quality': 0.6 + agent_variance,    # Higher quality baseline
+            'novelty': 0.5 + agent_variance,    # Slightly higher novelty
+            'impact': 0.5 + agent_variance,     # Slightly higher impact
+            'confidence': 0.7 + agent_variance, # Higher confidence in assessment
+            'uncertainty': 0.2 + agent_variance, # Lower uncertainty
+            'ai': 0.7,  # Default to AI-focused for tech pipeline
+            'entertainment': 0.1,
+            'sports': 0.1,
+            'health': 0.1
         }
         
         # Clamp all values to valid range [0.0, 1.0] and cache result
@@ -715,3 +831,82 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         # OPTIMIZED: Cache the computed defaults
         self._cached_default_scores = defaults
         return defaults
+
+    def _repair_gemma_json(self, response_content: str) -> Optional[Dict[str, Any]]:
+        """Repair common JSON issues specific to gemma2-9b-it model."""
+        if not response_content or not response_content.strip():
+            return None
+            
+        try:
+            # Clean up the response
+            content = response_content.strip()
+            
+            # Remove common prefixes that gemma2 might add
+            prefixes_to_remove = [
+                "Here is the JSON response:",
+                "```json",
+                "```",
+                "JSON:",
+                "Response:",
+            ]
+            
+            for prefix in prefixes_to_remove:
+                if content.startswith(prefix):
+                    content = content[len(prefix):].strip()
+            
+            # Remove common suffixes
+            suffixes_to_remove = ["```", "```json"]
+            for suffix in suffixes_to_remove:
+                if content.endswith(suffix):
+                    content = content[:-len(suffix)].strip()
+            
+            # Find JSON boundaries
+            start_idx = content.find('{')
+            if start_idx == -1:
+                return None
+                
+            # Find the last closing brace
+            end_idx = content.rfind('}')
+            if end_idx == -1 or end_idx <= start_idx:
+                # Try to complete the JSON
+                content = content[start_idx:] + '}'
+            else:
+                content = content[start_idx:end_idx + 1]
+            
+            # Try to parse the extracted JSON
+            try:
+                data = json.loads(content)
+                
+                # Validate that we have the expected structure
+                if 'articles' in data and isinstance(data['articles'], list):
+                    return data
+                else:
+                    logger.debug(f"Repaired JSON missing 'articles' key or wrong structure")
+                    return None
+                    
+            except json.JSONDecodeError:
+                # Try more aggressive repair
+                logger.debug("Attempting aggressive JSON repair for gemma2-9b-it")
+                
+                # Try to fix common issues like missing quotes, trailing commas, etc.
+                import re
+                
+                # Fix missing quotes around keys
+                content = re.sub(r'(\w+):', r'"\1":', content)
+                
+                # Remove trailing commas before closing braces/brackets
+                content = re.sub(r',(\s*[}\]])', r'\1', content)
+                
+                # Try parsing again
+                try:
+                    data = json.loads(content)
+                    if 'articles' in data and isinstance(data['articles'], list):
+                        return data
+                except json.JSONDecodeError:
+                    pass
+                    
+                return None
+                
+        except Exception as e:
+            logger.debug(f"JSON repair exception: {e}")
+            return None

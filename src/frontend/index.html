@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI Times</title>
     <meta name="description" content="Top AI-curated news articles featuring the latest developments in artificial intelligence, machine learning, and technology research.">
@@ -62,57 +63,49 @@
 </head>
 <body>
     <div class="newspaper">
+        <!-- Top navigation with Github and Stats links -->
+        <div class="top-nav">
+            <div class="top-nav-left">
+                <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    Github
+                </a>
+                <span class="nav-separator">•</span>
+                <a href="#" class="nav-link" id="stats-button">Pipeline Stats</a>
+                <span class="nav-separator">•</span>
+                <span class="nav-text">Updated every 4 hours</span>
+            </div>
+        </div>
         <header class="header">
             <h1 class="masthead">
                Daily AI <img id="logo-icon" src="assets/images/logo.png" alt="Daily AI Times Logo" class="logo-icon"> TIMES
             </h1>
             <div class="date-line" id="current-date">Loading...</div>
-            <div class="edition-info" id="edition-info">
-                <div class="edition-text" id="edition-text">Daily AI Times • Loading articles...</div>
-            </div>
         </header>
 
-        <main class="content">
-            <!-- Main Story -->
-            <article class="main-story" id="main-story">
-                <div class="loading">Loading main story...</div>
-            </article>
-
-            <!-- Collection Summary -->
-            <section class="collection-summary" id="collection-summary" style="display: none;">
-                <div class="summary-header">
-                    <h2 class="summary-title">Today's AI News Overview</h2>
-                </div>
-                <div class="summary-content" id="summary-content">
-                    <div class="loading">Loading summary...</div>
-                </div>
-            </section>
-
-            <!-- News Grid -->
-            <div class="news-grid">
-                <div class="news-column" id="news-column-1">
-                    <div class="loading">Loading news...</div>
-                </div>
-                <div class="news-column" id="news-column-2">
-                    <div class="loading">Loading news...</div>
-                </div>
+        <!-- Category Navigation -->
+        <nav class="category-nav">
+            <div class="category-nav-line"></div>
+            <div class="category-nav-content">
+                <button class="category-tab active" data-category="ai">AI</button>
+                <div class="category-separator"></div>
+                <button class="category-tab" data-category="entertainment">Entertainment</button>
+                <div class="category-separator"></div>
+                <button class="category-tab" data-category="sports">Sports</button>
+                <div class="category-separator"></div>
+                <button class="category-tab" data-category="health">Health</button>
             </div>
+            <div class="category-nav-line"></div>
+        </nav>
 
-            <!-- Research Papers Section -->
-            <section class="research-section">
-                <div class="section-header">
-                    <h2 class="section-title">Research Papers</h2>
-                    <p class="section-subtitle">Latest academic research and scientific publications</p>
-                </div>
-                <div class="research-grid">
-                    <div class="research-column" id="research-column-1">
-                        <div class="loading">Loading research papers...</div>
-                    </div>
-                    <div class="research-column" id="research-column-2">
-                        <div class="loading">Loading research papers...</div>
-                    </div>
-                </div>
-            </section>
+        <div class="edition-info" id="edition-info">
+            <div class="edition-text" id="edition-text">Daily AI Times • Loading articles...</div>
+        </div>
+
+        <main class="content">
+            <!-- Category Content Container -->
+            <div class="category-content" id="category-content">
+                <div class="loading">Loading articles...</div>
+            </div>
         </main>
         
         <footer class="footer">
@@ -139,7 +132,24 @@
         </footer>
     </div>
 
+    <!-- Pipeline Stats Modal -->
+    <div class="modal-overlay hidden" id="stats-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pipeline Statistics</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="stats-modal-body">
+                <div class="stats-loading">Loading statistics...</div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close-bottom" id="modal-close-bottom">Close</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script type="module" src="components/app.js"></script>
+    <script type="module" src="components/stats.js"></script>
 </body>
 </html>

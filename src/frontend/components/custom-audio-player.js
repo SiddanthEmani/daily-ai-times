@@ -289,7 +289,7 @@ export class CustomAudioPlayer {
                 </div>
                 <div class="custom-audio-player">
                     <button class="audio-btn" id="playBtn" aria-label="Play/Pause">▶</button>
-                    <span class="audio-label">PLAY ME</span>
+                    <span class="audio-label">TOP HEADLINES</span>
                     <div class="audio-progress" id="progress" style="display: none;">
                         <div class="audio-progress-fill" id="progressFill"></div>
                         <div class="audio-progress-thumb" id="progressThumb"></div>

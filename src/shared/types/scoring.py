@@ -26,6 +26,9 @@ class MultiDimensionalScore:
     novelty_score: float    # How new/unique the information is
     impact_score: float     # Potential importance/influence
     
+    # Category probabilities
+    category_probabilities: Dict[str, float]  # AI, Entertainment, Sports, Health probabilities
+    
     # Confidence metrics
     confidence_mean: float       # Mean confidence level
     confidence_std: float        # Standard deviation (uncertainty)
@@ -140,6 +143,7 @@ def create_multi_dimensional_score(
     quality: float,
     novelty: float,
     impact: float,
+    category_probabilities: Dict[str, float],
     confidence_mean: float,
     confidence_std: float,
     agent_name: str,
@@ -155,6 +159,7 @@ def create_multi_dimensional_score(
         quality: Quality score (0-1)
         novelty: Novelty score (0-1)
         impact: Impact score (0-1)
+        category_probabilities: Category probability distribution
         confidence_mean: Mean confidence level (0-1)
         confidence_std: Standard deviation of confidence (0-1)
         agent_name: Name of the agent
@@ -176,6 +181,7 @@ def create_multi_dimensional_score(
         quality_score=quality,
         novelty_score=novelty,
         impact_score=impact,
+        category_probabilities=category_probabilities,
         confidence_mean=confidence_mean,
         confidence_std=confidence_std,
         confidence_interval_low=confidence_low,
@@ -233,18 +239,27 @@ def aggregate_multi_dimensional_scores(
     # Calculate uncertainty as max of individual uncertainties (conservative approach)
     max_uncertainty = max(score.confidence_std for score in scores)
     
+    # Aggregate category probabilities (weighted average)
+    aggregated_categories = {}
+    categories = ['ai', 'entertainment', 'sports', 'health']
+    for category in categories:
+        weighted_prob = sum(score.category_probabilities.get(category, 0.25) * normalized_weights.get(score.agent_name, 0) 
+                           for score in scores)
+        aggregated_categories[category] = weighted_prob
+    
     # Create aggregated score
     aggregated_score = create_multi_dimensional_score(
         relevance=weighted_relevance,
         quality=weighted_quality,
         novelty=weighted_novelty,
         impact=weighted_impact,
+        category_probabilities=aggregated_categories,
         confidence_mean=weighted_confidence_mean,
         confidence_std=max_uncertainty,
         agent_name="consensus_engine",
         model_name="aggregated",
         specialization="consensus",
-        decision_threshold=0.7
+        decision_threshold=0.5
     )
     
     return aggregated_score
