@@ -27,18 +27,16 @@ class FinalConsensusEngine:
         self.min_deep_intelligence_confidence = config.get('min_deep_intelligence_confidence', 0.7)
         self.min_combined_score = config.get('min_combined_score', 0.6)
         
-        # Consensus algorithms
-        self.consensus_method = config.get('consensus_method', 'weighted_combination')
-        self.require_unanimous_accept = config.get('require_unanimous_accept', False)
-        self.veto_threshold = config.get('veto_threshold', 0.3)
-        
-        # Quality gates
-        self.enable_quality_gates = config.get('enable_quality_gates', True)
-        self.min_fact_check_confidence = config.get('min_fact_check_confidence', 0.4)  # Lowered default from 0.6 to 0.4
+        # Quality gate parameters
+        self.min_fact_check_confidence = config.get('min_fact_check_confidence', 0.4)
         self.max_bias_tolerance = config.get('max_bias_tolerance', 0.7)
         self.min_credibility_score = config.get('min_credibility_score', 0.5)
         
-        logger.info(f"Initialized Final Consensus Engine: {self.consensus_method}")
+        # Consensus algorithms
+        self.consensus_method = config.get('consensus_method', 'weighted_combination')
+        self.enable_quality_gates = config.get('enable_quality_gates', True)
+        
+        logger.info(f"Final consensus: {self.consensus_method}")
     
     def apply_final_consensus(self, 
                             initial_consensus_results: List[Tuple[Dict[str, Any], bool, float]],

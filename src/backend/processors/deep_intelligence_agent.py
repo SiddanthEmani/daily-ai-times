@@ -67,9 +67,6 @@ class DeepIntelligenceAgent:
         self.rate_limit_count = 0
         self.session_start_time = time.time()
         
-        logger.info(f"Initialized Deep Intelligence Agent: {model_name} ({self.specialization})")
-        logger.info(f"Rate limits: {self.requests_per_minute} req/min, {self.tokens_per_minute} tokens/min")
-        
         # Special logging for qwen models
         if 'qwen' in model_name.lower():
             logger.info(f"QWEN model detected - using optimized timeouts and rate limits")
@@ -124,9 +121,6 @@ class DeepIntelligenceAgent:
         self.max_parallel_requests = max(1, min(5, self.requests_per_minute // 6))  # Conservative parallel processing
         self.request_interval = 60.0 / self.requests_per_minute
         self.min_batch_delay = 5.0  # Minimum delay between batches
-        
-        logger.info(f"Rate limits for {self.model_name}: {self.requests_per_minute} req/min, "
-                   f"{self.tokens_per_minute} tokens/min, max parallel: {self.max_parallel_requests}")
     
     def _clean_old_requests(self, current_time: float):
         """Remove requests older than 60 seconds from tracking."""

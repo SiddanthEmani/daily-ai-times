@@ -141,10 +141,7 @@ class BulkFilteringAgent:
             raise ValueError("GROQ_API_KEY must be provided or set as environment variable")
         
         # Configuration
-        self.specialization = agent_config.get('specialization', 'general_filtering')
-        self.batch_size = agent_config.get('batch_size', 50)
         self.consensus_weight = agent_config.get('consensus_weight', 0.35)
-        self.expertise_domains = agent_config.get('expertise_domains', [])
         
         # OPTIMIZED: Cache expensive calculations done once
         self.model_limits = self._get_model_limits(model_name)
@@ -185,9 +182,8 @@ class BulkFilteringAgent:
         self.daily_start_time = current_time
         self.tokens_per_day_limit = self.daily_tokens_limit if self.daily_tokens_limit != -1 else float('inf')
         
-        # Batch sizing optimization
-        self.adaptive_batch_size = min(self.batch_size, self._calculate_optimal_batch_size())
-        logger.info(f"{model_name}: Using batch size {self.adaptive_batch_size} (limit: {self.tokens_per_minute_limit} tpm)")
+        # Batch sizing optimization - use calculated optimal batch size
+        self.adaptive_batch_size = self._calculate_optimal_batch_size()
         
         # Processing constants
         self.temperature = 0.1
@@ -245,7 +241,6 @@ class BulkFilteringAgent:
         default_limits = {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000}
         
         limits = model_limits.get(model_name, default_limits)
-        logger.info(f"Model {model_name}: {limits['tpm']} tokens/min, {limits['rpm']} requests/min")
         return limits
 
     def _calculate_optimal_batch_size(self) -> int:
@@ -283,11 +278,10 @@ class BulkFilteringAgent:
             self.current_minute_start = current_time
             self.requests_this_minute = 0
             
-        # Reset daily counter if needed (uses same current_time)
+        # Reset daily counter if needed
         if current_time - self.daily_start_time >= 86400:  # 24 hours
             self.daily_tokens_used = 0
             self.daily_start_time = current_time
-            logger.info(f"Daily token counter reset for {self.model_name}")
     
     def _check_daily_token_limit(self, estimated_tokens: int) -> bool:
         """Check if we have enough daily tokens remaining."""
@@ -526,8 +520,7 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
                     confidence_mean=article_scores.confidence,
                     confidence_std=article_scores.uncertainty,
                     agent_name=self.model_name,
-                    model_name=self.model_name,
-                    specialization=self.specialization
+                    model_name=self.model_name
                 )
                 
                 decision, confidence = md_score.get_legacy_format()
@@ -587,8 +580,7 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
                     confidence_mean=defaults['confidence'],
                     confidence_std=defaults['uncertainty'],
                     agent_name=self.model_name,
-                    model_name=self.model_name,
-                    specialization=self.specialization
+                    model_name=self.model_name
                 )
                 
                 decision, confidence = md_score.get_legacy_format()
@@ -633,12 +625,9 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         """Get agent information for monitoring."""
         return {
             'model_name': self.model_name,
-            'specialization': self.specialization,  # Preserved for backward compatibility
             'evaluation_approach': 'unified_comprehensive',  # NEW: Indicates balanced evaluation
             'bias_elimination': True,  # NEW: Indicates removal of artificial specialization bias
-            'batch_size': self.batch_size,
             'consensus_weight': self.consensus_weight,
-            'expertise_domains': self.expertise_domains,
             'requests_per_minute': self.requests_per_minute,
             'tokens_per_minute': self.tokens_per_minute,
             'tokens_per_day_limit': self.tokens_per_day_limit,

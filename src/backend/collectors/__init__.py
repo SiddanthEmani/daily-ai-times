@@ -5,21 +5,14 @@ News Collection System
 Simplified collectors package with clean imports.
 """
 
-# Import main classes for easy external access
+# Import all classes from the merged collectors.py file
 from .collectors import (
     NewsCollector,
-    ArticleProcessor, 
     BatchCollector,
     ArticleParser,
-    SourceCollector
-)
-
-from .core import (
-    CollectionConfig,
-    CollectionStats,
-    ConfigManager,
-    DateUtils,
-    TextUtils,
+    SourceCollector,
+    Config,
+    Stats,
     main,
     setup_logging
 )
@@ -27,15 +20,11 @@ from .core import (
 # Main exports
 __all__ = [
     'NewsCollector',
-    'ArticleProcessor',
     'BatchCollector', 
     'ArticleParser',
     'SourceCollector',
-    'CollectionConfig',
-    'CollectionStats',
-    'ConfigManager',
-    'DateUtils',
-    'TextUtils',
+    'Config',
+    'Stats',
     'main',
     'setup_logging'
 ]

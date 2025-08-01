@@ -7,11 +7,15 @@ export class ArticleRenderer {
         const dateInfo = DateUtils.formatDate(article.published_date);
         const sourceInfo = SourceUtils.formatSource(article.source);
         
+        // Generate image HTML if image_path exists
+        const imageHtml = this.generateImageHtml(article);
+        
         if (isMainStory) {
             return `
                 <h2 class="main-headline">${TextUtils.sanitizeText(article.title)}</h2>
                 <div class="decorative-line"></div>
                 <p class="main-description">${TextUtils.sanitizeText(article.description)}</p>
+                ${imageHtml}
                 <div class="source">
                     <span class="source-formatted">${sourceInfo.formatted}</span>
                     <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
@@ -22,6 +26,7 @@ export class ArticleRenderer {
                 <article class="article" data-url="${article.url}" onclick="ArticleHandler.handleClick(this, '${article.url}')">
                     <h3 class="headline">${TextUtils.sanitizeText(TextUtils.truncateText(article.title, 80))}</h3>
                     <p class="description">${TextUtils.sanitizeText(TextUtils.truncateText(article.description, 200))}</p>
+                    ${imageHtml}
                     <div class="source">
                         <span class="source-formatted">${sourceInfo.formatted}</span>
                         <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
@@ -35,17 +40,102 @@ export class ArticleRenderer {
         const dateInfo = DateUtils.formatDate(article.published_date);
         const sourceInfo = SourceUtils.formatSource(article.source);
         
+        // Generate image HTML if image_path exists
+        const imageHtml = this.generateImageHtml(article);
+        
         return `
             <article class="article" data-url="${article.url}" onclick="ArticleHandler.handleClick(this, '${article.url}')">
                 <h3 class="headline">${TextUtils.sanitizeText(TextUtils.truncateText(article.title, 80))}</h3>
                 ${article.author ? `<p class="byline">By: ${TextUtils.sanitizeText(article.author)}</p>` : ''}
                 <p class="description">${TextUtils.sanitizeText(TextUtils.truncateText(article.description, 200))}</p>
+                ${imageHtml}
                 <div class="source">
                     <span class="source-formatted">${sourceInfo.formatted}</span>
                     <span class="date-info" data-tooltip="${dateInfo.tooltip}">${dateInfo.relative}</span>
                 </div>
             </article>
         `;
+    }
+
+    static generateImageHtml(article) {
+        if (!article.image_path) {
+            return '';
+        }
+        
+        // Convert backend path to frontend path and encode properly
+        let imagePath = article.image_path;
+        if (imagePath.startsWith('src/frontend/assets/images/articles/')) {
+            imagePath = imagePath.replace('src/frontend/assets/images/articles/', 'assets/images/articles/');
+        }
+        
+        // Add cache-busting parameter
+        const timestamp = Date.now();
+        
+        // Try the most common extensions first, then others
+        const extensions = ['.webp', '.jpg', '', '.png', '.jpeg'];
+        const imageUrls = extensions.map(ext => {
+            const fullPath = `${imagePath}${ext}?t=${timestamp}`;
+            return encodeURI(fullPath);
+        });
+        
+        return `
+            <div class="article-image-container">
+                <img class="article-image" 
+                     src="${imageUrls[0]}" 
+                     alt="${TextUtils.sanitizeText(article.title)}"
+                     loading="lazy"
+                     data-fallback-urls="${imageUrls.slice(1).join(',')}"
+                     data-current-index="0"
+                     data-max-attempts="5"
+                     onerror="ArticleRenderer.handleImageError(this)"
+                     onload="ArticleRenderer.handleImageLoad(this)">
+            </div>
+        `;
+    }
+
+    static handleImageLoad(img) {
+        img.onerror = null;
+        img.classList.add('loaded');
+        
+        // Clear any timeout
+        if (img.dataset.timeoutId) {
+            clearTimeout(parseInt(img.dataset.timeoutId));
+            img.dataset.timeoutId = '';
+        }
+    }
+
+    static handleImageError(img) {
+        const fallbackUrls = img.dataset.fallbackUrls?.split(',') || [];
+        const currentIndex = parseInt(img.dataset.currentIndex || '0');
+        const maxAttempts = parseInt(img.dataset.maxAttempts || '5');
+        const nextIndex = currentIndex + 1;
+        
+        // Clear any existing timeout
+        if (img.dataset.timeoutId) {
+            clearTimeout(parseInt(img.dataset.timeoutId));
+        }
+        
+        if (nextIndex < fallbackUrls.length && nextIndex < maxAttempts) {
+            // Try the next fallback URL with a timeout
+            const nextUrl = fallbackUrls[nextIndex];
+            img.dataset.currentIndex = nextIndex.toString();
+            img.src = nextUrl;
+            
+            // Set a timeout to prevent hanging
+            const timeoutId = setTimeout(() => {
+                if (img.dataset.currentIndex === nextIndex.toString()) {
+                    // Still on the same attempt, move to next or hide
+                    ArticleRenderer.handleImageError(img);
+                }
+            }, 2000); // 2 second timeout
+            
+            img.dataset.timeoutId = timeoutId.toString();
+        } else {
+            // All fallbacks failed or max attempts reached, hide the image and container
+            img.style.display = 'none';
+            img.parentElement.style.display = 'none';
+            img.parentElement.classList.add('hidden');
+        }
     }
 
     static renderMainStory(article) {
@@ -201,3 +291,6 @@ export class ArticleHandler {
 
 // Make ArticleHandler available globally for onclick handlers
 window.ArticleHandler = ArticleHandler;
+
+// Make ArticleRenderer available globally for image error handling
+window.ArticleRenderer = ArticleRenderer;

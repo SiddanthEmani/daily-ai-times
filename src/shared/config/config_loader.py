@@ -11,7 +11,7 @@ import yaml
 logger = logging.getLogger(__name__)
 load_dotenv('.env.local')
 
-# Import sources loader
+# Import sources loader for direct access
 from .sources_loader import get_sources_loader
 
 class ConfigLoader:
@@ -102,16 +102,4 @@ def get_swarm_config() -> Dict[str, Any]:
         return {}
 
 
-# Convenience functions for sources (keeping existing functionality)
-def load_sources_config() -> Dict[str, Any]:
-    """Load sources configuration (YAML format, single file)."""
-    try:
-        loader = get_sources_loader()
-        return {
-            "sources": loader.get_sources(),
-            "metadata": loader.get_metadata(),
-            "format": "yaml_single"
-        }
-    except Exception as e:
-        logger.error(f"Sources loader not available: {e}")
-        return {"sources": {}, "format": "none"}
+# Sources loader is available directly via get_sources_loader()

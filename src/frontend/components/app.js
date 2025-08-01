@@ -10,7 +10,7 @@ export class NewsApp {
         this.categoryData = {};
         this.currentCategory = 'ai';
         this.isLoading = false;
-        this.appVersion = '2024.2.0'; // Increment this when you want to force cache refresh
+        this.appVersion = '4.0.0'; // Increment this when you want to force cache refresh
         try {
             this.performance = new PerformanceMonitor();
         } catch (error) {
@@ -20,6 +20,9 @@ export class NewsApp {
                 report: () => {}
             };
         }
+        
+        // Make image error handler available globally
+        window.NewsApp = this;
     }
 
     async initialize() {
@@ -123,7 +126,7 @@ export class NewsApp {
             setTimeout(() => {
                 const audioContainer = document.getElementById('custom-audio-container');
                 if (audioContainer) {
-                    new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${audioTimestamp}`, audioContainer);
+                    this.audioPlayer = new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${audioTimestamp}`, audioContainer);
                 }
             }, 100);
             
@@ -154,6 +157,11 @@ export class NewsApp {
         
         // Update current category
         this.currentCategory = category;
+        
+        // Reset audio player position when switching categories
+        if (this.audioPlayer && typeof this.audioPlayer.resetPosition === 'function') {
+            this.audioPlayer.resetPosition();
+        }
         
         // Show loading state
         this.showLoadingStates();
@@ -347,10 +355,6 @@ export class NewsApp {
         const rightColumnHtml = rightColumnArticles.map(article => this.createArticleHtml(article)).join('');
         
         categoryContent.innerHTML = `
-            <div class="category-header">
-                <h2>${category.toUpperCase()} News</h2>
-                <p>${articles.length} articles</p>
-            </div>
             <div class="category-articles">
                 <div class="category-column-left">
                     ${leftColumnHtml}
@@ -374,21 +378,106 @@ export class NewsApp {
 
     createArticleHtml(article) {
         const publishedDate = new Date(article.published_date).toLocaleDateString();
-        const truncatedDescription = article.description.length > 100 
-            ? article.description.substring(0, 100) + '...' 
+        const truncatedDescription = article.description.length > 250 
+            ? article.description.substring(0, 250) + '...' 
             : article.description;
+        
+        // Generate image HTML if image_path exists
+        const imageHtml = this.generateImageHtml(article);
         
         return `
             <article class="category-article">
                 <h3 class="category-article-title">${article.title}</h3>
+                <p class="category-article-description">${truncatedDescription}</p>
+                ${imageHtml}
                 <div class="category-article-meta">
                     <span class="category-article-source">${article.source}</span>
-                    <span>•</span>
+                    <span class="meta-separator">•</span>
                     <span class="category-article-date">${publishedDate}</span>
                 </div>
-                <p class="category-article-description">${truncatedDescription}</p>
             </article>
         `;
+    }
+
+    generateImageHtml(article) {
+        if (!article.image_path) {
+            return '';
+        }
+        
+        // Convert backend path to frontend path and encode properly
+        let imagePath = article.image_path;
+        if (imagePath.startsWith('src/frontend/assets/images/articles/')) {
+            imagePath = imagePath.replace('src/frontend/assets/images/articles/', 'assets/images/articles/');
+        }
+        
+        // Add cache-busting parameter
+        const timestamp = Date.now();
+        
+        // Try the most common extensions first, then others
+        const extensions = ['.webp', '.jpg', '', '.png', '.jpeg'];
+        const imageUrls = extensions.map(ext => {
+            const fullPath = `${imagePath}${ext}?t=${timestamp}`;
+            return encodeURI(fullPath);
+        });
+        
+        return `
+            <div class="category-article-image-container">
+                <img class="category-article-image" 
+                     src="${imageUrls[0]}" 
+                     alt="${article.title}"
+                     loading="lazy"
+                     data-fallback-urls="${imageUrls.slice(1).join(',')}"
+                     data-current-index="0"
+                     data-max-attempts="5"
+                     onerror="NewsApp.handleImageError(this)"
+                     onload="NewsApp.handleImageLoad(this)">
+            </div>
+        `;
+    }
+
+    handleImageLoad(img) {
+        img.onerror = null;
+        img.classList.add('loaded');
+        
+        // Clear any timeout
+        if (img.dataset.timeoutId) {
+            clearTimeout(parseInt(img.dataset.timeoutId));
+            img.dataset.timeoutId = '';
+        }
+    }
+
+    handleImageError(img) {
+        const fallbackUrls = img.dataset.fallbackUrls?.split(',') || [];
+        const currentIndex = parseInt(img.dataset.currentIndex || '0');
+        const maxAttempts = parseInt(img.dataset.maxAttempts || '5');
+        const nextIndex = currentIndex + 1;
+        
+        // Clear any existing timeout
+        if (img.dataset.timeoutId) {
+            clearTimeout(parseInt(img.dataset.timeoutId));
+        }
+        
+        if (nextIndex < fallbackUrls.length && nextIndex < maxAttempts) {
+            // Try the next fallback URL with a timeout
+            const nextUrl = fallbackUrls[nextIndex];
+            img.dataset.currentIndex = nextIndex.toString();
+            img.src = nextUrl;
+            
+            // Set a timeout to prevent hanging
+            const timeoutId = setTimeout(() => {
+                if (img.dataset.currentIndex === nextIndex.toString()) {
+                    // Still on the same attempt, move to next or hide
+                    this.handleImageError(img);
+                }
+            }, 2000); // 2 second timeout
+            
+            img.dataset.timeoutId = timeoutId.toString();
+        } else {
+            // All fallbacks failed or max attempts reached, hide the image and container
+            img.style.display = 'none';
+            img.parentElement.style.display = 'none';
+            img.parentElement.classList.add('hidden');
+        }
     }
 
     openArticle(article) {

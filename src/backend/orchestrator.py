@@ -28,7 +28,7 @@ from src.backend.processors.bulk_agent import BulkFilteringAgent
 from src.backend.processors.consensus_engine import ConsensusEngine
 from src.backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
 from src.backend.processors.final_consensus_engine import FinalConsensusEngine
-from src.backend.collectors.collectors import NewsCollector, ArticleProcessor
+from src.backend.collectors.collectors import NewsCollector
 from src.shared.config.config_loader import ConfigLoader, get_swarm_config
 from src.shared.utils.logging_config import log_warning, log_error, log_step
 from google import genai
@@ -36,21 +36,15 @@ from google.genai import types
 import base64
 import wave
 
+# Image extraction imports
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin, urlparse
+import re
+
 logger = logging.getLogger(__name__)
 
-# Constants for model TPM limits and processing delays
-MODEL_TPM_LIMITS = {
-    'meta-llama/llama-4-scout-17b-16e-instruct': 30000,
-    'meta-llama/llama-4-maverick-17b-128e-instruct': 6000,
-    'llama-3.3-70b-versatile': 12000,
-    'llama3-70b-8192': 6000,
-    'qwen/qwen3-32b': 6000,
-    'qwen-qwq-32b': 6000,
-    'gemma2-9b-it': 15000,
-    'llama-3.1-8b-instant': 6000,
-    'llama3-8b-8192': 6000
-}
-
+# Constants for processing delays (TPM values now come from swarm configuration)
 SUPPRESSED_LOGGERS = [
     "httpx", "httpcore", "backend.processors.bulk_agent", 
     "urllib3", "asyncio", "rich", "backend.orchestrator",
@@ -109,7 +103,7 @@ class NewsProcessingPipeline:
             SpinnerColumn(), TextColumn("[progress.description]{task.description}"),
             BarColumn(), TaskProgressColumn(), TimeElapsedColumn(),
             console=Console(stderr=True, quiet=False), transient=transient,
-            refresh_per_second=2, disable=False, expand=False
+            refresh_per_second=10, disable=False, expand=False
         )
     
     def _save_json_file(self, data: Dict[str, Any], filename: str) -> bool:
@@ -163,7 +157,8 @@ class NewsProcessingPipeline:
         default_final_consensus = {
             'deep_intelligence_weight': 0.6, 'initial_consensus_weight': 0.4,
             'min_deep_intelligence_confidence': 0.4, 'min_combined_score': 0.4,
-            'consensus_method': 'weighted_combination', 'enable_quality_gates': True
+            'consensus_method': 'weighted_combination', 'enable_quality_gates': True,
+            'min_fact_check_confidence': 0.4, 'max_bias_tolerance': 0.7, 'min_credibility_score': 0.5
         }
         self.final_consensus_config = {**default_final_consensus, **self.swarm_config.get('final_consensus', {})}
         
@@ -210,119 +205,215 @@ class NewsProcessingPipeline:
                 log_warning(logger, "No deep intelligence agents were successfully initialized")
                 self.enable_deep_intelligence = False
         
-        logger.info(f"Initialized {len(self.agents)} bulk agents, {len(self.deep_intelligence_agents)} deep intelligence agents")
+        # Single concise initialization summary
+        total_agents = len(self.agents) + len(self.deep_intelligence_agents)
+        logger.info(f"Pipeline ready: {total_agents} agents")
     
+    def _get_article_image(self, url: str, timeout: int = 10) -> Optional[str]:
+        """Extract article image URL from meta tags"""
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (compatible; ImageExtractor/1.0)',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+            }
+            
+            response = requests.get(url, headers=headers, timeout=timeout)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Try Open Graph image first (most reliable)
+            og_image = soup.find('meta', property='og:image')
+            if og_image and og_image.get('content'):
+                return urljoin(url, og_image['content'])
+            
+            # Try Twitter Card image
+            twitter_image = soup.find('meta', attrs={'name': 'twitter:image'})
+            if twitter_image and twitter_image.get('content'):
+                return urljoin(url, twitter_image['content'])
+            
+            # Try other common meta tags
+            meta_image = soup.find('meta', attrs={'name': 'image'})
+            if meta_image and meta_image.get('content'):
+                return urljoin(url, meta_image['content'])
+            
+            # Try article:image
+            article_image = soup.find('meta', property='article:image')
+            if article_image and article_image.get('content'):
+                return urljoin(url, article_image['content'])
+            
+            # Try to find the first large image in the article
+            images = soup.find_all('img')
+            for img in images:
+                src = img.get('src')
+                if src:
+                    # Skip small images, icons, avatars
+                    if any(skip in src.lower() for skip in ['icon', 'avatar', 'logo', 'thumb']):
+                        continue
+                    # Look for larger images (check width/height attributes)
+                    width = img.get('width')
+                    height = img.get('height')
+                    if width and height:
+                        try:
+                            if int(width) > 200 and int(height) > 200:
+                                return urljoin(url, src)
+                        except ValueError:
+                            pass
+                    # If no size info, just take the first non-icon image
+                    return urljoin(url, src)
+            
+            return None
+            
+        except Exception as e:
+            logger.debug(f"Error extracting image from {url}: {e}")
+            return None
+
+    def _download_image(self, image_url: str, output_path: Path, timeout: int = 30) -> bool:
+        """Download image from URL to specified path"""
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (compatible; ImageDownloader/1.0)',
+                'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+            }
+            
+            response = requests.get(image_url, headers=headers, timeout=timeout)
+            response.raise_for_status()
+            
+            # Determine file extension from content type or URL
+            content_type = response.headers.get('content-type', '')
+            if 'jpeg' in content_type or 'jpg' in content_type:
+                ext = '.jpg'
+            elif 'png' in content_type:
+                ext = '.png'
+            elif 'gif' in content_type:
+                ext = '.gif'
+            elif 'webp' in content_type:
+                ext = '.webp'
+            else:
+                # Try to get extension from URL
+                parsed_url = urlparse(image_url)
+                path = parsed_url.path.lower()
+                if path.endswith(('.jpg', '.jpeg', '.png', '.gif', '.webp')):
+                    ext = Path(path).suffix
+                else:
+                    ext = '.jpg'  # Default
+            
+            # Ensure output path has correct extension
+            if not output_path.suffix:
+                output_path = output_path.with_suffix(ext)
+            
+            with open(output_path, 'wb') as f:
+                f.write(response.content)
+            
+            return True
+            
+        except Exception as e:
+            logger.debug(f"Error downloading image from {image_url}: {e}")
+            return False
+
+    def _sanitize_filename(self, filename: str) -> str:
+        """Sanitize filename for filesystem"""
+        # Remove or replace invalid characters
+        filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
+        # Remove extra spaces and dots
+        filename = re.sub(r'\s+', ' ', filename).strip()
+        filename = filename.strip('.')
+        # Limit length
+        if len(filename) > 100:
+            filename = filename[:100]
+        return filename
+
+    def _extract_article_id_from_url(self, url: str) -> str:
+        """Extract a unique identifier from the URL"""
+        parsed = urlparse(url)
+        path = parsed.path.strip('/')
+        if path:
+            # Use the last part of the path as ID
+            return path.split('/')[-1]
+        else:
+            # Fallback to domain
+            return parsed.netloc.replace('.', '_')
+
+    def _extract_article_images(self, articles: List[Dict[str, Any]], output_dir: Path, delay: float = 1.0) -> Dict[str, List[str]]:
+        """Extract and download images from articles"""
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        results = {
+            'successful': [],
+            'failed': [],
+            'no_image': []
+        }
+        
+        logger.info(f"Extracting images from {len(articles)} articles")
+        
+        for i, article in enumerate(articles, 1):
+            url = article.get('url')
+            title = article.get('title', 'Untitled')
+            article_id = article.get('article_id', self._extract_article_id_from_url(url))
+            
+            if not url:
+                logger.debug(f"Article {i}: No URL found")
+                results['failed'].append(f"Article {i}: No URL")
+                continue
+            
+            logger.debug(f"Processing article {i}/{len(articles)}: {title[:50]}...")
+            
+            # Extract image URL
+            image_url = self._get_article_image(url)
+            
+            if not image_url:
+                logger.debug(f"No image found for: {url}")
+                results['no_image'].append(url)
+                continue
+            
+            # Create filename
+            safe_title = self._sanitize_filename(title)
+            filename = f"{article_id}_{safe_title}"
+            image_path = output_dir / filename
+            
+            # Download image
+            if self._download_image(image_url, image_path):
+                logger.debug(f"Downloaded: {image_path.name}")
+                results['successful'].append(url)
+                
+                # Add image path to article metadata
+                article['image_path'] = str(image_path.relative_to(project_root))
+            else:
+                logger.debug(f"Failed to download: {image_url}")
+                results['failed'].append(url)
+            
+            # Add delay to be respectful to servers
+            if delay > 0 and i < len(articles):
+                time.sleep(delay)
+        
+        # Log summary
+        successful_count = len(results['successful'])
+        failed_count = len(results['failed'])
+        no_image_count = len(results['no_image'])
+        total_processed = successful_count + failed_count + no_image_count
+        
+        logger.info(f"Image extraction complete: {successful_count} successful, {failed_count} failed, {no_image_count} no image")
+        
+        return results
 
 
-    async def _process_articles_with_bulk_intelligence(self, articles: List[Dict[str, Any]]) -> Dict[str, List[Tuple[Dict[str, Any], bool, float]]]:
-        """Score articles using the bulk intelligence swarm with TPM-based distribution."""
-        if not articles:
-            return {}
-        
-        logger.info(f"Starting bulk intelligence scoring: {len(articles)} articles distributed across {len(self.agents)} agents")
-        agent_article_assignments = self._distribute_articles_by_tpm(articles, self.agents)
-        
-        with suppress_logging():
-            with self._create_progress_bar(f"[yellow]Distributed Bulk Intelligence Processing", len(self.agents), transient=True) as progress:
-                agent_tasks = {}
-                for agent_name in self.agents.keys():
-                    assigned_count = len(agent_article_assignments[agent_name])
-                    agent_tasks[agent_name] = progress.add_task(
-                        f"[cyan]{agent_name} (0, 0, 0) - {assigned_count} articles", total=assigned_count)
-                
-                progress.refresh()
-                
-                # Create async tasks for each agent - let each agent handle its own batch processing
-                async def process_agent_articles(agent_name: str, assigned_articles: List[Dict[str, Any]], 
-                                               agent_index: int, task_id) -> List[Tuple[Dict[str, Any], bool, float]]:
-                    """Process articles with a bulk agent using the agent's optimized batch processing."""
-                    if not assigned_articles:
-                        return []
-                    
-                    agent = self.agents[agent_name]
-                    try:
-                        async with agent:
-                            # Stagger agent starts to avoid simultaneous API calls
-                            if agent_index > 0:
-                                await asyncio.sleep(agent_index * 1.0)
-                            
-                            # Process in batches for progress updates, but let agent handle rate limiting
-                            all_results = []
-                            processed_count = total_accepted = total_rejected = 0
-                            effective_batch_size = agent.adaptive_batch_size
-                            
-                            for i in range(0, len(assigned_articles), effective_batch_size):
-                                batch = assigned_articles[i:i + effective_batch_size]
-                                # Agent handles all rate limiting internally in process_batch()
-                                batch_results = await agent.process_batch(batch)
-                                all_results.extend(batch_results)
-                                processed_count += len(batch)
-                                
-                                # Update progress per batch
-                                batch_accepted = sum(1 for _, accepted, _ in batch_results if accepted)
-                                total_accepted += batch_accepted
-                                total_rejected += len(batch_results) - batch_accepted
-                                
-                                progress.update(task_id, completed=processed_count,
-                                              description=f"[cyan]{agent_name} ({total_accepted}, {total_rejected}, {processed_count}) - {len(assigned_articles)} articles")
-                                
-                                # No manual delays - agent handles inter-batch timing in process_batch()
-                            
-                            # Final progress update
-                            progress.update(task_id, completed=len(assigned_articles),
-                                          description=f"[green]{agent_name} ✓ ({total_accepted}, {total_rejected}, {len(assigned_articles)}) - completed")
-                            return all_results
-                            
-                    except Exception as e:
-                        progress.update(task_id, completed=len(assigned_articles),
-                                      description=f"[red]{agent_name} ✗ (error: {type(e).__name__}) - {len(assigned_articles)} articles")
-                        return [(article, False, 0.1) for article in assigned_articles]
-                
-                # Create and run all agent tasks
-                tasks = []
-                for i, (agent_name, assigned_articles) in enumerate(agent_article_assignments.items()):
-                    task_id = agent_tasks[agent_name]
-                    task = asyncio.create_task(process_agent_articles(agent_name, assigned_articles, i, task_id))
-                    tasks.append((agent_name, task))
-                
-                await asyncio.sleep(0.1)
-                results = await asyncio.gather(*[task for _, task in tasks], return_exceptions=True)
-                
-                # Process results
-                agent_results = {}
-                for i, ((agent_name, _), result) in enumerate(zip(tasks, results)):
-                    if isinstance(result, Exception):
-                        assigned_articles = agent_article_assignments[agent_name]
-                        agent_results[agent_name] = [(article, False, 0.1) for article in assigned_articles]
-                    else:
-                        agent_results[agent_name] = result
-        
-        total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values())
-        total_processed = sum(len(results) for results in agent_results.values())
-        logger.info(f"Distributed bulk intelligence complete: {total_processed} articles processed, {total_accepted} accepted")
-        
-        self._save_bulk_agent_results(agent_results, articles)
-        return agent_results
     
     def _distribute_articles_by_tpm(self, articles: List[Dict[str, Any]], agents: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
-        """Distribute articles across agents based on their TPM (tokens per minute) limits."""
+        """Distribute articles across agents based on their TPM (tokens per minute) limits from swarm configuration."""
         if not articles or not agents:
             return {}
         
         agent_names = list(agents.keys())
-        
-        # Calculate total TPM capacity across all agents
         total_tpm = 0
         agent_tpm_map = {}
         
         for agent_name in agent_names:
-            # For bulk agents, get TPM from agent object
-            if hasattr(agents[agent_name], 'tokens_per_minute_limit'):
-                agent_tpm = agents[agent_name].tokens_per_minute_limit
-            else:
-                # Fallback to MODEL_TPM_LIMITS for deep intelligence or unknown agents
-                agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
-            
+            agent = agents[agent_name]
+            agent_tpm = agent.tokens_per_minute
             agent_tpm_map[agent_name] = agent_tpm
             total_tpm += agent_tpm
         
@@ -352,8 +443,20 @@ class NewsProcessingPipeline:
         return agent_article_assignments
 
     def _get_agent_delays(self, agent_name: str) -> Tuple[float, float]:
-        """Get delay and timeout settings for agent based on TPM limits."""
-        agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
+        """Get delay and timeout settings for agent based on TPM limits from swarm configuration."""
+        # Get TPM from swarm configuration
+        agent_tpm = 6000  # Default fallback
+        
+        # Check bulk intelligence swarm first
+        if agent_name in self.bulk_swarm_config.get('agents', {}):
+            agent_config = self.bulk_swarm_config['agents'][agent_name]
+            agent_tpm = agent_config.get('tokens_per_minute', 6000)
+        # Check deep intelligence swarm
+        elif agent_name in self.deep_intelligence_swarm_config.get('agents', {}):
+            agent_config = self.deep_intelligence_swarm_config['agents'][agent_name]
+            agent_tpm = agent_config.get('tokens_per_minute', 6000)
+        else:
+            logger.warning(f"Agent {agent_name} not found in swarm config, using default TPM for delays")
         
         # Fixed timeout logic: Higher capacity models get longer timeouts
         if 'llama-4-scout' in agent_name:
@@ -615,75 +718,137 @@ class NewsProcessingPipeline:
         if not collected_articles:
             raise ValueError("No articles collected. Check source configuration and connectivity.")
         
-        # Deduplicate and filter articles (after collection progress bar is done)
-        processor = ArticleProcessor(self.news_collector.config)
-        processed_articles = processor.process(collected_articles)
+        collection_duration = time.time() - collection_start_time
         
-        # Calculate collection stats
-        collection_end_time = time.time()
-        collection_duration = collection_end_time - collection_start_time
+        # Use collector's comprehensive stats instead of recalculating
+        collector_stats = self.news_collector.stats
         
-        # Get detailed collection stats from the collector
-        collector_stats = self.news_collector.batch_collector.get_stats() if hasattr(self.news_collector, 'batch_collector') and self.news_collector.batch_collector else {}
-        
-        # Process articles by category and source for stats
-        category_distribution = {}
-        source_breakdown = {}
-        sources_with_articles = set()
-        
-        for article in processed_articles:
-            # Category distribution
-            category = article.get('category', 'Unknown')
-            category_distribution[category] = category_distribution.get(category, 0) + 1
-            
-            # Source breakdown
-            source = article.get('source', 'Unknown')
-            sources_with_articles.add(source)
-            if source not in source_breakdown:
-                source_breakdown[source] = {'count': 0, 'status': 'success'}
-            source_breakdown[source]['count'] += 1
-        
-        # Calculate accurate source statistics
-        total_sources = len(self.news_collector.sources)
-        successful_sources = len(sources_with_articles)
-        failed_sources = collector_stats.get('failed', 0)
-        empty_sources = total_sources - successful_sources - failed_sources
-        
-        # Create comprehensive collection stats
+        # Create comprehensive collection stats using collector's data
         collection_stats = {
             'generated_at': self._get_current_timestamp(),
             'collection_stats': {
-                'total_articles': len(processed_articles),
-                'total_sources': total_sources,
-                'successful_sources': successful_sources,
-                'failed_sources': failed_sources,
-                'empty_sources': empty_sources,
+                'total_articles': len(collected_articles),
+                'total_sources': len(self.news_collector.sources),
+                'successful_sources': collector_stats.successful,
+                'failed_sources': collector_stats.failed,
+                'empty_sources': collector_stats.empty,
                 'processing_time': round(collection_duration, 2),
-                'success_rate': round((successful_sources / total_sources) * 100, 1) if total_sources > 0 else 0,
-                'category_distribution': category_distribution,
-                'source_breakdown': source_breakdown,
-                'failure_details': collector_stats.get('failure_reasons', {}),
+                'success_rate': round((collector_stats.successful / len(self.news_collector.sources)) * 100, 1) if len(self.news_collector.sources) > 0 else 0,
+                'failure_details': collector_stats.failure_reasons,
                 'collection_config': {
                     'max_articles': articles_count,
                     'max_age_days': getattr(self.news_collector, 'max_age_days', 7),
-                    'total_configured_sources': total_sources
+                    'total_configured_sources': len(self.news_collector.sources)
+                },
+                # Add deduplication stats from collector
+                'deduplication_stats': {
+                    'original_articles': collector_stats.original_articles,
+                    'duplicates_removed': collector_stats.duplicates_removed,
+                    'deduplication_time': collector_stats.deduplication_time
                 }
             }
         }
         
-        logger.info(f"Collected {len(processed_articles)} articles from {collection_stats['collection_stats']['successful_sources']}/{len(self.news_collector.sources)} sources")
+        logger.info(f"Collected {len(collected_articles)} articles from {collector_stats.successful}/{len(self.news_collector.sources)} sources")
         
         # Save collected articles
         collection_data = {
             'timestamp': self._get_current_timestamp(),
-            'total_articles': len(processed_articles),
-            'articles': processed_articles
+            'total_articles': len(collected_articles),
+            'articles': collected_articles
         }
         self._save_json_file(collection_data, f"collected_articles_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
         
         # Step 2: Bulk intelligence scoring
         start_time = time.time()
-        agent_results = await self._process_articles_with_bulk_intelligence(processed_articles)
+        
+        # Score articles using the bulk intelligence swarm with TPM-based distribution
+        if not collected_articles:
+            agent_results = {}
+        else:
+            logger.info(f"Starting bulk intelligence scoring: {len(collected_articles)} articles distributed across {len(self.agents)} agents")
+            agent_article_assignments = self._distribute_articles_by_tpm(collected_articles, self.agents)
+            
+            with suppress_logging():
+                with self._create_progress_bar(f"[yellow]Distributed Bulk Intelligence Processing", len(self.agents), transient=True) as progress:
+                    agent_tasks = {}
+                    for agent_name in self.agents.keys():
+                        assigned_count = len(agent_article_assignments[agent_name])
+                        agent_tasks[agent_name] = progress.add_task(
+                            f"[cyan]{agent_name} (0, 0, 0) - {assigned_count} articles", total=assigned_count)
+                    
+                    progress.refresh()
+                    
+                    # Create async tasks for each agent - let each agent handle its own batch processing
+                    async def process_agent_articles(agent_name: str, assigned_articles: List[Dict[str, Any]], 
+                                                   agent_index: int, task_id) -> List[Tuple[Dict[str, Any], bool, float]]:
+                        """Process articles with a bulk agent using the agent's optimized batch processing."""
+                        if not assigned_articles:
+                            return []
+                        
+                        agent = self.agents[agent_name]
+                        try:
+                            async with agent:
+                                # Stagger agent starts to avoid simultaneous API calls
+                                if agent_index > 0:
+                                    await asyncio.sleep(agent_index * 1.0)
+                                
+                                # Process in batches for progress updates, but let agent handle rate limiting
+                                all_results = []
+                                processed_count = total_accepted = total_rejected = 0
+                                effective_batch_size = agent.adaptive_batch_size
+                                
+                                for i in range(0, len(assigned_articles), effective_batch_size):
+                                    batch = assigned_articles[i:i + effective_batch_size]
+                                    # Agent handles all rate limiting internally in process_batch()
+                                    batch_results = await agent.process_batch(batch)
+                                    all_results.extend(batch_results)
+                                    processed_count += len(batch)
+                                    
+                                    # Update progress per batch
+                                    batch_accepted = sum(1 for _, accepted, _ in batch_results if accepted)
+                                    total_accepted += batch_accepted
+                                    total_rejected += len(batch_results) - batch_accepted
+                                    
+                                    progress.update(task_id, completed=processed_count,
+                                                  description=f"[cyan]{agent_name} ({total_accepted}, {total_rejected}, {processed_count}) - {len(assigned_articles)} articles")
+                                    
+                                    # No manual delays - agent handles inter-batch timing in process_batch()
+                                
+                                # Final progress update
+                                progress.update(task_id, completed=len(assigned_articles),
+                                              description=f"[green]{agent_name} ✓ ({total_accepted}, {total_rejected}, {len(assigned_articles)}) - completed")
+                                return all_results
+                                
+                        except Exception as e:
+                            progress.update(task_id, completed=len(assigned_articles),
+                                          description=f"[red]{agent_name} ✗ (error: {type(e).__name__}) - {len(assigned_articles)} articles")
+                            return [(article, False, 0.1) for article in assigned_articles]
+                    
+                    # Create and run all agent tasks
+                    tasks = []
+                    for i, (agent_name, assigned_articles) in enumerate(agent_article_assignments.items()):
+                        task_id = agent_tasks[agent_name]
+                        task = asyncio.create_task(process_agent_articles(agent_name, assigned_articles, i, task_id))
+                        tasks.append((agent_name, task))
+                    
+                    await asyncio.sleep(0.1)
+                    results = await asyncio.gather(*[task for _, task in tasks], return_exceptions=True)
+                    
+                    # Process results
+                    agent_results = {}
+                    for i, ((agent_name, _), result) in enumerate(zip(tasks, results)):
+                        if isinstance(result, Exception):
+                            assigned_articles = agent_article_assignments[agent_name]
+                            agent_results[agent_name] = [(article, False, 0.1) for article in assigned_articles]
+                        else:
+                            agent_results[agent_name] = result
+            
+            total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values())
+            total_processed = sum(len(results) for results in agent_results.values())
+            logger.info(f"Distributed bulk intelligence complete: {total_processed} articles processed, {total_accepted} accepted")
+            
+            self._save_bulk_agent_results(agent_results, collected_articles)
         
         # Calculate bulk stage stats
         bulk_stats = self._calculate_bulk_stage_stats(agent_results)
@@ -732,7 +897,12 @@ class NewsProcessingPipeline:
         # Step 7: Extract final articles
         final_articles = [article for article, accept, _ in final_consensus_results if accept]
         
-        # Step 8: Post-classification into content types
+        # Step 8: Extract article images
+        logger.info(f"Step 8: Extracting images from {len(final_articles)} articles")
+        images_output_dir = project_root / "src" / "frontend" / "assets" / "images" / "articles"
+        image_extraction_results = self._extract_article_images(final_articles, images_output_dir, delay=1.0)
+        
+        # Step 9: Post-classification into content types
         classified_content = self.classify_and_allocate_content(final_articles)
         
         processing_duration = time.time() - start_time
@@ -744,10 +914,10 @@ class NewsProcessingPipeline:
         category_summary = ', '.join([f"{len(articles)} {category}" for category, articles in categories.items()])
         logger.info(f"Categorized content: {total_categorized} articles ({category_summary})")
         
-        # Step 9: Save comprehensive stats for frontend consumption
+        # Step 10: Save comprehensive stats for frontend consumption
         self._save_collection_stats(collection_stats, bulk_stats, consensus_stats, deep_intelligence_stats, final_consensus_stats)
         
-        # Step 10: Generate API files for frontend consumption
+        # Step 11: Generate API files for frontend consumption
         pipeline_info = self.get_pipeline_info()
         api_saved = self._save_api_files(classified_content, pipeline_info, processing_duration)
         if api_saved:
@@ -763,7 +933,7 @@ class NewsProcessingPipeline:
         return {
             'pipeline_version': '3.0_with_deep_intelligence',
             'components': ['collection', 'bulk_scoring', 'initial_consensus', 
-                          'deep_intelligence' if self.enable_deep_intelligence else None, 'final_consensus'],
+                          'deep_intelligence' if self.enable_deep_intelligence else None, 'final_consensus', 'image_extraction'],
             'agents': {
                 'bulk_agents': len(self.agents),
                 'deep_intelligence_agents': len(self.deep_intelligence_agents) if self.enable_deep_intelligence else 0
@@ -1773,9 +1943,8 @@ async def main():
         
         pipeline_info = pipeline.get_pipeline_info()
         source_count = len(pipeline.news_collector.sources)
-        total_agents = pipeline_info['agents']['bulk_agents'] + pipeline_info['agents']['deep_intelligence_agents']
         
-        logger.info(f"Pipeline ready: {total_agents} agents, {source_count} sources")
+        logger.info(f"Sources: {source_count}")
         
         log_step(logger, "Starting Pipeline Processing")
         start_time = time.time()

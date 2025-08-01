@@ -39,7 +39,6 @@ class MultiDimensionalScore:
     agent_name: str
     processing_timestamp: str
     model_name: str
-    specialization: str
     
     # Derived metrics
     overall_score: float = 0.0  # Computed overall score
@@ -148,7 +147,6 @@ def create_multi_dimensional_score(
     confidence_std: float,
     agent_name: str,
     model_name: str,
-    specialization: str,
     decision_threshold: float = 0.5
 ) -> MultiDimensionalScore:
     """
@@ -164,7 +162,6 @@ def create_multi_dimensional_score(
         confidence_std: Standard deviation of confidence (0-1)
         agent_name: Name of the agent
         model_name: Name of the model
-        specialization: Agent specialization
         decision_threshold: Threshold for binary decision
     
     Returns:
@@ -189,7 +186,6 @@ def create_multi_dimensional_score(
         agent_name=agent_name,
         processing_timestamp=datetime.now(timezone.utc).isoformat(),
         model_name=model_name,
-        specialization=specialization,
         decision_threshold=decision_threshold
     )
     
@@ -258,7 +254,6 @@ def aggregate_multi_dimensional_scores(
         confidence_std=max_uncertainty,
         agent_name="consensus_engine",
         model_name="aggregated",
-        specialization="consensus",
         decision_threshold=0.5
     )
     

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2025-07-26T07:36:52.714074+00:00",
+  "generated_at": "2025-07-29T01:21:21.007199+00:00",
   "collection_stats": {
-    "total_articles": 83,
+    "total_articles": 100,
     "total_sources": 182,
-    "successful_sources": 16,
+    "successful_sources": 23,
     "failed_sources": 0,
-    "empty_sources": 166,
-    "processing_time": 43.58,
-    "success_rate": 8.8,
+    "empty_sources": 159,
+    "processing_time": 13.82,
+    "success_rate": 12.6,
     "category_distribution": {
-      "Other": 83
+      "Unknown": 100
     },
     "failure_details": {},
     "collection_config": {
@@ -20,94 +20,50 @@
   },
   "bulk_stage_stats": {
     "total_agents": 3,
-    "total_articles_processed": 83,
-    "total_accepted": 54,
-    "overall_acceptance_rate": 65.1,
+    "total_articles_processed": 100,
+    "total_accepted": 68,
+    "overall_acceptance_rate": 68.0,
     "agents": {
       "llama-3.1-8b-instant": {
-        "total_processed": 18,
-        "accepted": 10,
-        "acceptance_rate": 55.6
+        "total_processed": 22,
+        "accepted": 18,
+        "acceptance_rate": 81.8
       },
       "gemma2-9b-it": {
-        "total_processed": 47,
-        "accepted": 38,
-        "acceptance_rate": 80.9
+        "total_processed": 57,
+        "accepted": 35,
+        "acceptance_rate": 61.4
       },
       "llama3-8b-8192": {
-        "total_processed": 18,
-        "accepted": 6,
-        "acceptance_rate": 33.3
+        "total_processed": 21,
+        "accepted": 15,
+        "acceptance_rate": 71.4
       }
     }
   },
   "consensus_stage_stats": {
-    "total_articles": 83,
-    "consensus_accepted": 54,
-    "consensus_acceptance_rate": 0.6506024096385542,
+    "total_articles": 100,
+    "consensus_accepted": 68,
+    "consensus_acceptance_rate": 0.68,
     "agents": {
       "llama-3.1-8b-instant": {
-        "total_processed": 18,
-        "accepted": 10,
-        "acceptance_rate": 0.5555555555555556
+        "total_processed": 22,
+        "accepted": 18,
+        "acceptance_rate": 0.8181818181818182
       },
       "gemma2-9b-it": {
-        "total_processed": 47,
-        "accepted": 38,
-        "acceptance_rate": 0.8085106382978723
+        "total_processed": 57,
+        "accepted": 35,
+        "acceptance_rate": 0.6140350877192983
       },
       "llama3-8b-8192": {
-        "total_processed": 18,
-        "accepted": 6,
-        "acceptance_rate": 0.3333333333333333
+        "total_processed": 21,
+        "accepted": 15,
+        "acceptance_rate": 0.7142857142857143
       }
     },
     "algorithm_used": "weighted_voting",
     "required_agreement": 0.7,
     "min_confidence": 0.3
-  },
-  "deep_intelligence_stage_stats": {
-    "enabled": true,
-    "total_agents": 2,
-    "input_articles": 54,
-    "total_articles_processed": 54,
-    "total_accepted": 46,
-    "overall_acceptance_rate": 85.2,
-    "coverage_rate": 100.0,
-    "agents": {
-      "meta-llama/llama-4-scout-17b-16e-instruct": {
-        "total_processed": 39,
-        "accepted": 35,
-        "acceptance_rate": 89.7,
-        "average_confidence": 0.73
-      },
-      "llama-3.3-70b-versatile": {
-        "total_processed": 15,
-        "accepted": 11,
-        "acceptance_rate": 73.3,
-        "average_confidence": 0.79
-      }
-    }
-  },
-  "final_consensus_stage_stats": {
-    "total_articles": 54,
-    "accepted_articles": 53,
-    "rejected_articles": 1,
-    "acceptance_rate": 98.14814814814815,
-    "average_confidence": 0.6472222222222223,
-    "deep_intelligence_coverage": {
-      "articles_analyzed": 54,
-      "coverage_percentage": 100.0
-    },
-    "quality_gates": {
-      "enabled": true,
-      "failures": 0,
-      "failure_rate": 0.0
-    },
-    "consensus_method": "weighted_combination",
-    "algorithm_weights": {
-      "initial_consensus": 0.4,
-      "deep_intelligence": 0.6
-    }
   }
 }

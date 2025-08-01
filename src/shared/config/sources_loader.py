@@ -38,7 +38,6 @@ class SourcesLoader:
                 "version": "4.0",
                 "description": "Single YAML-based AI/ML news aggregation configuration"
             }
-            logger.debug("Loaded basic sources metadata")
         return self._metadata
 
     def _load_sources(self) -> Dict[str, Dict[str, Any]]:

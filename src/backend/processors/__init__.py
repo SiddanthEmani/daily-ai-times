@@ -8,7 +8,7 @@ Based on research-validated patterns from Stanford Medicine and ICLR 2025 studie
 
 from .bulk_agent import BulkFilteringAgent
 from .consensus_engine import ConsensusEngine
-from .deduplication_utils import ArticleDeduplicator
+from ..collectors.collectors import ArticleDeduplicator
 
 __all__ = [
     'BulkFilteringAgent', 

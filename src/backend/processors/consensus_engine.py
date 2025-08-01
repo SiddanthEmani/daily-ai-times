@@ -41,8 +41,11 @@ class ConsensusEngine:
         
         # Extract consensus algorithms configuration
         self.consensus_algorithms = self.consensus_config.get('algorithms', {})
-        self.required_agreement = self.consensus_config.get('validation', {}).get('required_agreement', 0.7)
-        self.min_confidence = self.consensus_config.get('validation', {}).get('quality_gates', {}).get('min_confidence', 0.8)
+        self.required_agreement = consensus_config.get('required_agreement', 0.7)
+        self.min_confidence = consensus_config.get('min_confidence', 0.3)
+        self.consensus_method = consensus_config.get('consensus_method', 'weighted_average')
+        
+        logger.info(f"Consensus engine: {self.consensus_method}")
         
         # Extract swarm configuration for weight calculations
         self.bulk_swarm_config = self.swarm_config.get('agents', {}).get('bulk_intelligence_swarm', {})
@@ -320,10 +323,16 @@ class ConsensusEngine:
                 else:
                     # Create a simplified multi-dimensional score from legacy data
                     md_score = {
-                        'relevance_score': 0.7 if decision else 0.3,
-                        'quality_score': 0.6 if decision else 0.3,
-                        'novelty_score': 0.5 if decision else 0.3,
-                        'impact_score': 0.5 if decision else 0.3,
+                        'relevance': 0.6,
+                        'quality': 0.6,
+                        'novelty': 0.5,
+                        'impact': 0.5,
+                        'category_probabilities': {
+                            'ai': 0.7,
+                            'entertainment': 0.1,
+                            'sports': 0.1,
+                            'health': 0.1
+                        },
                         'confidence_mean': confidence,
                         'confidence_std': 0.1,
                         'confidence_interval_low': max(0.0, confidence - 0.1),
@@ -331,7 +340,6 @@ class ConsensusEngine:
                         'agent_name': agent_name,
                         'processing_timestamp': datetime.now(timezone.utc).isoformat(),
                         'model_name': agent_name,
-                        'specialization': 'general_filtering',
                         'overall_score': 0.7 if decision else 0.3,
                         'decision_threshold': 0.7,
                         'binary_decision': decision

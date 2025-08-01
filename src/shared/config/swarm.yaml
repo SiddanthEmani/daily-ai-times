@@ -1,55 +1,27 @@
-version: "4.0"
-description: "Daily AI Times Swarm Intelligence Configuration - Production Ready"
-last_updated: "2025-01-20"
+description: "Daily AI Times Swarm Configuration"
 
 agents:
   bulk_intelligence_swarm:
-    description: "High-volume parallel processing with specialized expertise"
-    architecture: distributed_network
+    description: "High-volume parallel processing"
     agents:
       llama-3.1-8b-instant:
         daily_limit: 14400
         tokens_per_minute: 6000
         tokens_per_day: 500000
-        specialization: content_quality_analysis
-        batch_size: 12
         consensus_weight: 0.35
-        fallback_agents:
-          - gemma2-9b-it
-          - llama3-8b-8192
-        expertise_domains:
-          - content_assessment
-          - quality_scoring
       gemma2-9b-it:
         daily_limit: 14400
         tokens_per_minute: 15000
         tokens_per_day: 500000
-        specialization: relevance_scoring
-        batch_size: 20
         consensus_weight: 0.35
-        fallback_agents:
-          - llama-3.1-8b-instant
-          - llama3-8b-8192
-        expertise_domains:
-          - relevance_analysis
-          - topic_matching
       llama3-8b-8192:
         daily_limit: 14400
         tokens_per_minute: 6000
         tokens_per_day: 500000
-        specialization: category_classification
-        batch_size: 12
         consensus_weight: 0.30
-        fallback_agents:
-          - llama-3.1-8b-instant
-          - gemma2-9b-it
-        expertise_domains:
-          - categorization
-          - topic_classification
 
   deep_intelligence_swarm:
     description: "Complex reasoning and collaborative analysis with enhanced capabilities"
-    architecture: hierarchical_teams
     agents:
       meta-llama/llama-4-scout-17b-16e-instruct:
         daily_limit: 1000

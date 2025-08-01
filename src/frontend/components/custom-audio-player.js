@@ -8,6 +8,12 @@ export class CustomAudioPlayer {
         this.duration = 0;
         this.volume = 0.7;
         this.hasStartedPlaying = false;
+        this.isDragging = false;
+        this.isHovered = false;
+        this.audioContext = null;
+        this.analyser = null;
+        this.dataArray = null;
+        this.animationId = null;
         
         this.init();
     }
@@ -17,6 +23,8 @@ export class CustomAudioPlayer {
         this.createPlayer();
         this.setupAudioEvents();
         this.setupControlEvents();
+        this.setupHoverEffects();
+        this.initAudioVisualizer();
     }
     
     injectStyles() {
@@ -25,255 +33,398 @@ export class CustomAudioPlayer {
         const style = document.createElement('style');
         style.id = 'custom-audio-player-styles';
         style.textContent = `
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Special+Elite&family=Orbitron:wght@400;500;600;700&family=News+Cycle:wght@400;700&display=swap');
+            
             .audio-player-container {
-                background: var(--paper-bg, #faf8f3);
-                border: 1px solid var(--border-gray, #ddd);
-                border-radius: 12px;
-                min-width: 380px;
-                position: relative;
+                background: #FFFAF2;
+                width: 400px;
+                position: fixed;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+                border-radius: 16px;
                 overflow: hidden;
+                margin: 0 auto;
+                border: 1px solid #E8E4D8;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
             
-            .audio-nav-tabs {
-                display: flex;
-                background: var(--paper-bg, #faf8f3);
-                border-radius: 12px 12px 0 0;
-                padding: 8px;
-                gap: 4px;
-                border-bottom: 1px solid var(--border-gray, #ddd);
+            .audio-player-container:hover {
+                box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+                transform: translateX(-50%) translateY(-2px);
             }
-            
-            .audio-nav-tab {
-                flex: 1;
-                padding: 12px 16px;
-                text-align: center;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                font-size: 0.9rem;
-                font-weight: 500;
-                cursor: pointer;
-                background: transparent;
-                color: var(--secondary-gray, #666);
-                transition: all 0.3s ease;
-                border: none;
-                border-radius: 8px;
-                position: relative;
-            }
-            
-
-            
-            .audio-nav-tab:hover {
-                background: rgba(44, 44, 44, 0.05);
-                color: var(--primary-dark, #2c2c2c);
-                transform: translateY(-1px);
-            }
-            
-            .audio-nav-tab.active {
-                background: var(--primary-dark, #2c2c2c);
-                color: white;
-                box-shadow: 0 2px 8px rgba(44, 44, 44, 0.2);
-            }
-            
-
             
             .custom-audio-player {
                 display: flex;
+                flex-direction: column;
+                padding: 0;
+                font-family: 'Crimson Text', serif;
+                background: transparent;
+                align-items: center;
+                position: relative;
+                height: 80px;
+                transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .custom-audio-player.expanded {
+                height: 200px;
+            }
+            
+            .visualizer-section {
+                width: 100%;
+                height: 0;
+                background: #F5F1E8;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 16px 20px;
-                font-family: var(--font-masthead, 'Times New Roman', serif);
-                gap: 12px;
-                min-height: 60px;
                 position: relative;
-                border-radius: 0 0 12px 12px;
-                background: var(--paper-bg, #faf8f3);
+                overflow: hidden;
+                border-bottom: 1px solid #E8E4D8;
+                transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                opacity: 0;
             }
             
-
+            .visualizer-section.expanded {
+                height: 120px;
+                opacity: 1;
+            }
             
-            .audio-label {
-                font-weight: bold;
-                font-size: 0.85rem;
-                color: var(--primary-dark, #2c2c2c);
-                letter-spacing: 2px;
+            .visualizer-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+            
+            .visualizer-title {
+                position: absolute;
+                top: 12px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: 'Crimson Text', serif;
+                font-size: 10px;
+                color: #000000;
                 text-transform: uppercase;
-                font-family: var(--font-masthead, 'Times New Roman', serif);
-                cursor: pointer;
-                transition: color 0.2s ease;
+                letter-spacing: 0.5px;
+                z-index: 10;
+                font-weight: 600;
+                text-align: center;
+                width: 100%;
             }
             
-            .audio-label:hover {
-                color: var(--secondary-gray, #666);
+            .main-visualizer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: flex-end;
+                gap: 1px;
+                height: 60px;
+                width: 280px;
             }
             
+            .visualizer-bar {
+                flex: 1;
+                background: #000000;
+                border-radius: 1px;
+                transition: height 0.1s ease;
+                position: relative;
+                min-width: 2px;
+            }
             
+            .controls-section {
+                width: 100%;
+                height: 80px;
+                background: #FFFAF2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 12px 20px;
+                gap: 8px;
+            }
+            
+            .audio-header {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 4px;
+            }
+            
+            .audio-status {
+                font-size: 8px;
+                color: #000000;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+                font-family: 'Crimson Text', serif;
+            }
+            
+            .audio-controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                margin: 4px 0;
+            }
             
             .audio-btn {
-                width: 44px;
-                height: 44px;
-                border: 1px solid var(--primary-dark, #2c2c2c);
-                background: var(--paper-bg, #faf8f3);
-                color: var(--primary-dark, #2c2c2c);
+                width: 32px;
+                height: 32px;
+                border: 1px solid #000000;
+                background: #FFFAF2;
+                color: #000000;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 16px;
+                font-size: 12px;
                 font-weight: bold;
-                transition: all 0.15s ease;
+                transition: all 0.2s ease;
                 border-radius: 50%;
+                position: relative;
             }
             
             .audio-btn:hover {
-                background: var(--border-gray, #ddd);
+                background: #000000;
+                color: #FFFAF2;
+                transform: scale(1.05);
             }
             
             .audio-btn:active {
-                background: var(--light-gray, #888);
-                color: white;
-                transform: translateY(1px);
+                transform: scale(0.95);
+            }
+            
+            .audio-btn.play-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+                border-width: 2px;
+                border-color: #000000;
+                color: #000000;
+            }
+            
+            .audio-btn.play-btn:hover {
+                background: #000000;
+                color: #FFFAF2;
+            }
+            
+            .audio-progress-container {
+                position: relative;
+                width: 100%;
+                margin: 6px 0;
             }
             
             .audio-progress {
-                flex: 1;
-                height: 12px;
-                background: var(--border-gray, #ddd);
-                border: 1px solid var(--secondary-gray, #666);
-                border-radius: 6px;
+                width: 100%;
+                height: 3px;
+                background: #E8E4D8;
+                border-radius: 2px;
                 position: relative;
                 cursor: pointer;
-                margin: 0 12px;
-                display: flex;
+                margin: 0;
+                overflow: hidden;
             }
-            
-
             
             .audio-progress-fill {
                 height: 100%;
-                background: var(--primary-dark, #2c2c2c);
+                background: #000000;
                 width: 0%;
-                transition: width 0.2s ease;
-                border-radius: 4px;
+                transition: width 0.1s ease;
+                border-radius: 2px;
+                position: relative;
             }
             
             .audio-progress-thumb {
                 position: absolute;
-                top: -10px;
-                width: 16px;
-                height: 28px;
-                background: var(--paper-bg, #faf8f3);
-                border: 1px solid var(--primary-dark, #2c2c2c);
-                border-radius: 3px;
+                top: -2px;
+                width: 8px;
+                height: 8px;
+                background: #000000;
+                border: 1px solid #FFFAF2;
+                border-radius: 50%;
                 transform: translateX(-50%);
                 cursor: pointer;
                 transition: all 0.2s ease;
                 left: 0%;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
             }
             
             .audio-progress-thumb:hover {
-                transform: translateX(-50%) scale(1.05);
-                background: var(--border-gray, #ddd);
+                transform: translateX(-50%) scale(1.2);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.3);
             }
             
             .audio-time-display {
                 display: flex;
-                align-items: center;
-                gap: 4px;
-                font-size: 12px;
-                font-weight: 600;
-                color: var(--primary-dark, #2c2c2c);
-                font-variant-numeric: tabular-nums;
-                min-width: 85px;
-                white-space: nowrap;
-                background: var(--paper-bg, #faf8f3);
-                padding: 6px 10px;
-                border-radius: 4px;
-                border: 1px solid var(--secondary-gray, #666);
-                font-family: var(--font-masthead, 'Times New Roman', serif);
+                justify-content: space-between;
+                font-size: 9px;
+                color: #000000;
+                font-family: 'Crimson Text', serif;
+                margin: 0;
+                font-weight: 500;
+                letter-spacing: 0.3px;
             }
             
             .audio-time {
-                font-family: 'Courier New', monospace;
+                font-family: 'Crimson Text', serif;
+                position: relative;
             }
             
-
+            .audio-time.current {
+                color: #2C2C2C;
+                font-weight: 600;
+            }
             
             .audio-loading {
-                color: var(--secondary-gray, #666);
-                font-size: 12px;
+                color: #000000;
+                font-size: 10px;
                 font-style: italic;
+                text-align: center;
+                padding: 4px;
+                font-family: 'Crimson Text', serif;
             }
             
             /* Sticky positioning for audio player */
             .sticky-audio-player {
                 position: fixed !important;
-                bottom: 30px;
+                bottom: 24px;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1000;
-                box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-                max-width: calc(100vw - 40px);
+                box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+                max-width: calc(100vw - 48px);
             }
             
-            /* Smooth transition when becoming sticky */
-            .audio-player-container {
-                transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* Initial ease-in animation when becoming sticky */
+            .sticky-audio-player.entering {
+                animation: easeInFromBottom 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
             }
             
-            .audio-player-container.sticky-transition {
-                transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            @keyframes easeInFromBottom {
+                0% {
+                    transform: translateX(-50%) translateY(100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(-50%) translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+            /* Responsive design */
+            @media (max-width: 600px) {
+                .audio-player-container {
+                    width: 360px;
+                    bottom: 20px;
+                }
+                
+                .custom-audio-player {
+                    height: 80px;
+                }
+                
+                .custom-audio-player.expanded {
+                    height: 180px;
+                }
+                
+                .visualizer-section {
+                    height: 0;
+                }
+                
+                .visualizer-section.expanded {
+                    height: 100px;
+                }
+                
+                .main-visualizer {
+                    width: 240px;
+                    height: 50px;
+                }
+                
+                .controls-section {
+                    height: 80px;
+                    padding: 10px 16px;
+                }
+                
+                .audio-controls {
+                    gap: 12px;
+                }
+                
+                .audio-btn {
+                    width: 28px;
+                    height: 28px;
+                    font-size: 10px;
+                }
+                
+                .audio-btn.play-btn {
+                    width: 36px;
+                    height: 36px;
+                    font-size: 12px;
+                }
+                
+                .sticky-audio-player {
+                    bottom: 20px;
+                    max-width: calc(100vw - 40px);
+                }
             }
             
             @media (max-width: 480px) {
                 .audio-player-container {
-                    min-width: 300px;
+                    width: 320px;
+                    bottom: 16px;
                 }
                 
                 .custom-audio-player {
-                    gap: 8px;
-                    padding: 12px 16px;
-                    min-height: 50px;
-                }
-                .audio-time-display { 
-                    font-size: 10px; 
-                    min-width: 65px;
-                    padding: 3px 5px;
-                }
-                .audio-btn { 
-                    width: 36px; 
-                    height: 36px; 
-                    font-size: 14px; 
-                }
-                .audio-label { 
-                    font-size: 0.7rem; 
-                    letter-spacing: 1px;
-                }
-                .audio-progress {
-                    height: 12px;
-                    margin: 0 8px;
-                    cursor: pointer;
-                }
-                .audio-progress-thumb {
-                    width: 16px;
-                    height: 28px;
-                    top: -10px;
-                }
-                .audio-nav-tabs {
-                    padding: 6px;
-                    gap: 3px;
+                    height: 80px;
                 }
                 
-                .audio-nav-tab {
-                    font-size: 0.8rem;
-                    padding: 10px 12px;
+                .custom-audio-player.expanded {
+                    height: 160px;
+                }
+                
+                .visualizer-section {
+                    height: 0;
+                }
+                
+                .visualizer-section.expanded {
+                    height: 80px;
+                }
+                
+                .main-visualizer {
+                    width: 200px;
+                    height: 40px;
+                }
+                
+                .controls-section {
+                    height: 80px;
+                    padding: 8px 12px;
+                }
+                
+                .audio-controls {
+                    gap: 10px;
+                }
+                
+                .audio-btn {
+                    width: 24px;
+                    height: 24px;
+                    font-size: 8px;
+                }
+                
+                .audio-btn.play-btn {
+                    width: 32px;
+                    height: 32px;
+                    font-size: 10px;
                 }
                 
                 .sticky-audio-player {
-                    bottom: 60px;
-                    max-width: calc(100vw - 20px);
-                }
-                
-                .audio-player-container.sticky-transition {
-                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    bottom: 16px;
+                    max-width: calc(100vw - 32px);
                 }
             }
         `;
@@ -283,21 +434,34 @@ export class CustomAudioPlayer {
     createPlayer() {
         this.container.innerHTML = `
             <div class="audio-player-container">
-                <div class="audio-nav-tabs">
-                    <button class="audio-nav-tab active" data-target="headlines">Headlines</button>
-                    <button class="audio-nav-tab" data-target="research">Research Papers</button>
-                </div>
                 <div class="custom-audio-player">
-                    <button class="audio-btn" id="playBtn" aria-label="Play/Pause">▶</button>
-                    <span class="audio-label">TOP HEADLINES</span>
-                    <div class="audio-progress" id="progress" style="display: none;">
-                        <div class="audio-progress-fill" id="progressFill"></div>
-                        <div class="audio-progress-thumb" id="progressThumb"></div>
+                    <div class="visualizer-section">
+                        <div class="visualizer-container">
+                            <div class="visualizer-title">Today's Headlines</div>
+                            <div class="main-visualizer" id="mainVisualizer">
+                                ${this.generateVisualizerBars()}
+                            </div>
+                        </div>
                     </div>
-                    <div class="audio-time-display" id="timeDisplay" style="display: none;">
-                        <span class="audio-time" id="currentTime">0:00</span>
-                        <span>/</span>
-                        <span class="audio-time" id="duration">0:00</span>
+                    <div class="controls-section">
+                        <div class="audio-header">
+                            <span class="audio-status" id="audioStatus">Ready</span>
+                        </div>
+                        <div class="audio-controls">
+                            <button class="audio-btn" id="skipBackBtn" aria-label="Skip Backward 10 seconds">⏮</button>
+                            <button class="audio-btn play-btn" id="playBtn" aria-label="Play/Pause">▶</button>
+                            <button class="audio-btn" id="skipForwardBtn" aria-label="Skip Forward 10 seconds">⏭</button>
+                        </div>
+                        <div class="audio-progress-container">
+                            <div class="audio-progress" id="progress" style="display: none;">
+                                <div class="audio-progress-fill" id="progressFill"></div>
+                                <div class="audio-progress-thumb" id="progressThumb"></div>
+                            </div>
+                        </div>
+                        <div class="audio-time-display" id="timeDisplay" style="display: none;">
+                            <span class="audio-time current" id="currentTime">0:00</span>
+                            <span class="audio-time" id="duration">0:00</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,301 +469,338 @@ export class CustomAudioPlayer {
         
         this.elements = {
             container: this.container.querySelector('.audio-player-container'),
+            player: this.container.querySelector('.custom-audio-player'),
+            visualizerSection: this.container.querySelector('.visualizer-section'),
             playBtn: this.container.querySelector('#playBtn'),
-            audioLabel: this.container.querySelector('.audio-label'),
+            skipBackBtn: this.container.querySelector('#skipBackBtn'),
+            skipForwardBtn: this.container.querySelector('#skipForwardBtn'),
+            audioStatus: this.container.querySelector('#audioStatus'),
             progress: this.container.querySelector('#progress'),
             progressFill: this.container.querySelector('#progressFill'),
             progressThumb: this.container.querySelector('#progressThumb'),
             timeDisplay: this.container.querySelector('#timeDisplay'),
             currentTime: this.container.querySelector('#currentTime'),
             duration: this.container.querySelector('#duration'),
-            navTabs: this.container.querySelectorAll('.audio-nav-tab')
+            mainVisualizer: this.container.querySelector('#mainVisualizer')
         };
+        
+        this.visualizerBarElements = this.elements.mainVisualizer.querySelectorAll('.visualizer-bar');
+    }
+    
+    generateVisualizerBars() {
+        let bars = '';
+        for (let i = 0; i < 40; i++) {
+            bars += `<div class="visualizer-bar" data-index="${i}" style="height: 5px;"></div>`;
+        }
+        return bars;
+    }
+    
+    initAudioVisualizer() {
+        try {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            this.analyser = this.audioContext.createAnalyser();
+            this.analyser.fftSize = 128;
+            this.bufferLength = this.analyser.frequencyBinCount;
+            this.dataArray = new Uint8Array(this.bufferLength);
+            
+            const source = this.audioContext.createMediaElementSource(this.audio);
+            source.connect(this.analyser);
+            this.analyser.connect(this.audioContext.destination);
+            
+            this.startVisualizer();
+        } catch (error) {
+            console.log('Audio visualizer not supported:', error);
+            this.fallbackVisualizer();
+        }
+    }
+    
+    startVisualizer() {
+        const animate = () => {
+            if (!this.isPlaying || !this.elements.visualizerSection.classList.contains('expanded')) {
+                this.animationId = requestAnimationFrame(animate);
+                return;
+            }
+            
+            this.analyser.getByteFrequencyData(this.dataArray);
+            this.updateVisualizer();
+            this.animationId = requestAnimationFrame(animate);
+        };
+        
+        animate();
+    }
+    
+    updateVisualizer() {
+        const maxHeight = 50;
+        
+        this.visualizerBarElements.forEach((bar, index) => {
+            const value = this.dataArray[index] || 0;
+            const height = (value / 255) * maxHeight + 3;
+            bar.style.height = `${height}px`;
+        });
+    }
+    
+    fallbackVisualizer() {
+        // Fallback animation when Web Audio API is not available
+        let frame = 0;
+        
+        const animate = () => {
+            if (!this.isPlaying || !this.elements.visualizerSection.classList.contains('expanded')) {
+                this.animationId = requestAnimationFrame(animate);
+                return;
+            }
+            
+            this.visualizerBarElements.forEach((bar, index) => {
+                const time = frame * 0.05;
+                const height = Math.sin(time + index * 0.2) * 15 + 20;
+                bar.style.height = `${Math.max(3, height)}px`;
+            });
+            
+            frame++;
+            this.animationId = requestAnimationFrame(animate);
+        };
+        
+        animate();
     }
     
     setupAudioEvents() {
         this.audio.volume = this.volume;
         
-        this.audio.addEventListener('loadstart', () => {
-            this.elements.duration.textContent = '...';
-        });
-        
         this.audio.addEventListener('loadedmetadata', () => {
             this.duration = this.audio.duration;
-            this.elements.duration.textContent = this.formatTime(this.duration);
+            this.updateDuration();
+            this.showProgress();
+            this.elements.audioStatus.textContent = 'Ready';
         });
         
         this.audio.addEventListener('timeupdate', () => {
             this.currentTime = this.audio.currentTime;
             this.updateProgress();
+            this.updateCurrentTime();
+        });
+        
+        this.audio.addEventListener('play', () => {
+            this.elements.audioStatus.textContent = 'Playing';
+            this.elements.container.classList.add('playing');
+            this.expandVisualizer();
+            this.resumeAudioContext();
+        });
+        
+        this.audio.addEventListener('pause', () => {
+            this.elements.audioStatus.textContent = 'Paused';
+            this.elements.container.classList.remove('playing');
+            this.collapseVisualizer();
         });
         
         this.audio.addEventListener('ended', () => {
             this.isPlaying = false;
-            this.elements.playBtn.textContent = '▶';
+            this.updatePlayButton();
+            this.elements.audioStatus.textContent = 'Ended';
+            this.elements.container.classList.remove('playing');
+            this.collapseVisualizer();
         });
         
-        this.audio.addEventListener('error', () => {
-            this.elements.duration.textContent = 'Error';
+        this.audio.addEventListener('error', (e) => {
+            console.error('Audio error:', e);
+            this.elements.audioStatus.textContent = 'Error';
+        });
+        
+        this.audio.addEventListener('loadstart', () => {
+            this.elements.audioStatus.textContent = 'Loading...';
+        });
+        
+        this.audio.addEventListener('canplay', () => {
+            this.elements.audioStatus.textContent = 'Ready';
         });
     }
     
+    resumeAudioContext() {
+        if (this.audioContext && this.audioContext.state === 'suspended') {
+            this.audioContext.resume();
+        }
+    }
+    
     setupControlEvents() {
-        // Play/Pause
-        this.elements.playBtn.addEventListener('click', () => this.togglePlay());
-        
-        // Audio label click to play
-        this.elements.audioLabel.addEventListener('click', () => this.togglePlay());
-        
-        // Progress bar - click/tap support
-        this.elements.progress.addEventListener('click', (e) => this.seek(e));
-        this.elements.progress.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            this.seek(e.touches[0]);
+        this.elements.playBtn.addEventListener('click', () => {
+            this.togglePlay();
         });
         
-        // Progress thumb drag - mouse and touch support
-        let isDragging = false;
+        this.elements.skipBackBtn.addEventListener('click', () => {
+            this.skipBackward();
+        });
         
-        // Mouse events
+        this.elements.skipForwardBtn.addEventListener('click', () => {
+            this.skipForward();
+        });
+        
+        this.elements.progress.addEventListener('click', (e) => {
+            this.seekTo(e);
+        });
+        
         this.elements.progressThumb.addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            isDragging = true;
+            this.startDragging(e);
         });
         
         document.addEventListener('mousemove', (e) => {
-            if (isDragging) this.seek(e);
+            this.drag(e);
         });
         
         document.addEventListener('mouseup', () => {
-            isDragging = false;
+            this.stopDragging();
         });
         
-        // Touch events
-        this.elements.progressThumb.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            isDragging = true;
-        });
-        
-        document.addEventListener('touchmove', (e) => {
-            if (isDragging) {
-                e.preventDefault();
-                this.seek(e.touches[0]);
-            }
-        }, { passive: false });
-        
-        document.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-        
-        // Keyboard controls
+        // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            if (e.target.closest('.custom-audio-player')) {
-                if (e.code === 'Space') {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
+            switch(e.code) {
+                case 'Space':
                     e.preventDefault();
                     this.togglePlay();
-                }
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    this.skipBackward();
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    this.skipForward();
+                    break;
             }
         });
-        
-        // Navigation tabs
-        this.elements.navTabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                const target = tab.dataset.target;
-                
-                // Set active tab
-                this.setActiveTab(target);
-                
-                // Scroll to target section
-                this.scrollToSection(target);
-            });
+    }
+    
+    setupHoverEffects() {
+        this.elements.container.addEventListener('mouseenter', () => {
+            this.isHovered = true;
+            this.elements.container.style.transform = 'translateX(-50%) translateY(-2px)';
         });
         
-        // Sticky audio player on scroll
-        this.setupStickyBehavior();
-        
-        // Auto-switch active tab based on scroll position
-        this.setupScrollActiveTab();
+        this.elements.container.addEventListener('mouseleave', () => {
+            this.isHovered = false;
+            this.elements.container.style.transform = 'translateX(-50%) translateY(0)';
+        });
     }
     
     togglePlay() {
         if (this.isPlaying) {
-            this.audio.pause();
-            this.elements.playBtn.textContent = '▶';
+            this.pause();
         } else {
-            // Show controls and hide label on first play
-            if (!this.hasStartedPlaying) {
-                this.elements.progress.style.display = 'flex';
-                this.elements.timeDisplay.style.display = 'flex';
-                this.elements.audioLabel.style.display = 'none';
-                this.hasStartedPlaying = true;
-            }
-            this.audio.play();
-            this.elements.playBtn.textContent = '■';
+            this.play();
         }
-        this.isPlaying = !this.isPlaying;
     }
     
-    seek(e) {
-        const rect = this.elements.progress.getBoundingClientRect();
-        const percent = (e.clientX - rect.left) / rect.width;
-        const time = percent * this.duration;
-        this.audio.currentTime = Math.max(0, Math.min(time, this.duration));
+    play() {
+        this.audio.play();
+        this.isPlaying = true;
+        this.updatePlayButton();
+        this.hasStartedPlaying = true;
     }
     
-
+    pause() {
+        this.audio.pause();
+        this.isPlaying = false;
+        this.updatePlayButton();
+    }
+    
+    skipBackward() {
+        this.audio.currentTime = Math.max(0, this.audio.currentTime - 10);
+        // Don't change status when skipping
+    }
+    
+    skipForward() {
+        this.audio.currentTime = Math.min(this.audio.duration, this.audio.currentTime + 10);
+        // Don't change status when skipping
+    }
+    
+    updatePlayButton() {
+        this.elements.playBtn.textContent = this.isPlaying ? '⏸' : '▶';
+    }
     
     updateProgress() {
         if (this.duration > 0) {
-            const percent = (this.currentTime / this.duration) * 100;
-            this.elements.progressFill.style.width = `${percent}%`;
-            this.elements.progressThumb.style.left = `${percent}%`;
-            this.elements.currentTime.textContent = this.formatTime(this.currentTime);
+            const progress = (this.currentTime / this.duration) * 100;
+            this.elements.progressFill.style.width = `${progress}%`;
+            this.elements.progressThumb.style.left = `${progress}%`;
         }
     }
     
-
+    updateCurrentTime() {
+        this.elements.currentTime.textContent = this.formatTime(this.currentTime);
+    }
+    
+    updateDuration() {
+        this.elements.duration.textContent = this.formatTime(this.duration);
+    }
     
     formatTime(seconds) {
-        if (!seconds || isNaN(seconds)) return '0:00';
+        if (isNaN(seconds)) return '0:00';
         const mins = Math.floor(seconds / 60);
         const secs = Math.floor(seconds % 60);
         return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
     
-    scrollToSection(target) {
-        let sectionElement;
-        if (target === 'headlines') {
-            sectionElement = document.querySelector('.news-grid');
-        } else if (target === 'research') {
-            sectionElement = document.querySelector('.research-section');
-        }
-        
-        if (sectionElement) {
-            sectionElement.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        }
+    showProgress() {
+        this.elements.progress.style.display = 'block';
+        this.elements.timeDisplay.style.display = 'flex';
     }
     
-    setupStickyBehavior() {
-        let isSticky = false;
-        let isTransitioning = false;
-        const originalRect = this.container.getBoundingClientRect();
-        const originalTop = originalRect.top + window.scrollY;
-        
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            const shouldBeSticky = currentScrollY > originalTop + 100; // Add some buffer
-            
-            if (shouldBeSticky && !isSticky && !isTransitioning) {
-                isTransitioning = true;
-                
-                // Add transition class for smooth animation
-                this.elements.container.classList.add('sticky-transition');
-                
-                // Small delay to ensure transition class is applied
-                requestAnimationFrame(() => {
-                    this.elements.container.classList.add('sticky-audio-player');
-                    isSticky = true;
-                    
-                    // Clean up transition class after animation
-                    setTimeout(() => {
-                        this.elements.container.classList.remove('sticky-transition');
-                        isTransitioning = false;
-                    }, 400);
-                });
-                
-            } else if (!shouldBeSticky && isSticky && !isTransitioning) {
-                isTransitioning = true;
-                
-                // Add transition class for smooth animation
-                this.elements.container.classList.add('sticky-transition');
-                
-                requestAnimationFrame(() => {
-                    this.elements.container.classList.remove('sticky-audio-player');
-                    isSticky = false;
-                    
-                    // Clean up transition class after animation
-                    setTimeout(() => {
-                        this.elements.container.classList.remove('sticky-transition');
-                        isTransitioning = false;
-                    }, 400);
-                });
-            }
-        };
-        
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        
-        // Store the function reference for cleanup
-        this.scrollHandler = handleScroll;
+    seekTo(e) {
+        const rect = this.elements.progress.getBoundingClientRect();
+        const percent = (e.clientX - rect.left) / rect.width;
+        this.audio.currentTime = percent * this.duration;
     }
     
-    setupScrollActiveTab() {
-        // Get the sections we want to observe
-        const headlinesSection = document.querySelector('.news-grid');
-        const researchSection = document.querySelector('.research-section');
-        
-        if (!headlinesSection || !researchSection) return;
-        
-        // Create intersection observer
-        const observerOptions = {
-            root: null,
-            rootMargin: '-20% 0px -60% 0px', // Trigger when section is 20% from top
-            threshold: 0
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    let targetTab;
-                    
-                    if (entry.target.classList.contains('news-grid')) {
-                        targetTab = 'headlines';
-                    } else if (entry.target.classList.contains('research-section')) {
-                        targetTab = 'research';
-                    }
-                    
-                    if (targetTab) {
-                        this.setActiveTab(targetTab);
-                    }
-                }
-            });
-        }, observerOptions);
-        
-        // Observe the sections
-        observer.observe(headlinesSection);
-        observer.observe(researchSection);
-        
-        // Store observer for cleanup
-        this.sectionObserver = observer;
+    startDragging(e) {
+        this.isDragging = true;
+        e.preventDefault();
     }
     
-    setActiveTab(target) {
-        // Remove active class from all tabs
-        this.elements.navTabs.forEach(tab => tab.classList.remove('active'));
-        
-        // Add active class to target tab
-        const targetTab = Array.from(this.elements.navTabs).find(tab => tab.dataset.target === target);
-        if (targetTab) {
-            targetTab.classList.add('active');
-        }
+    drag(e) {
+        if (!this.isDragging) return;
+        const rect = this.elements.progress.getBoundingClientRect();
+        const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        this.audio.currentTime = percent * this.duration;
     }
     
-    // Public API
-    play() { this.audio.play(); this.isPlaying = true; this.elements.playBtn.textContent = '■'; }
-    pause() { this.audio.pause(); this.isPlaying = false; this.elements.playBtn.textContent = '▶'; }
-    setSource(src) { this.audio.src = src; }
-    destroy() { 
-        this.audio.pause(); 
-        this.audio.src = ''; 
-        if (this.scrollHandler) {
-            window.removeEventListener('scroll', this.scrollHandler);
+    stopDragging() {
+        this.isDragging = false;
+    }
+    
+    makeSticky() {
+        this.elements.container.classList.add('sticky-audio-player');
+        this.elements.container.classList.add('entering');
+        setTimeout(() => {
+            this.elements.container.classList.remove('entering');
+        }, 500);
+    }
+    
+    expandVisualizer() {
+        this.elements.player.classList.add('expanded');
+        this.elements.visualizerSection.classList.add('expanded');
+    }
+    
+    resetVisualizerBars() {
+        this.visualizerBarElements.forEach((bar) => {
+            bar.style.height = '5px';
+        });
+    }
+    
+    collapseVisualizer() {
+        this.elements.player.classList.remove('expanded');
+        this.elements.visualizerSection.classList.remove('expanded');
+        // Reset bars after a short delay to allow for smooth transition
+        setTimeout(() => {
+            this.resetVisualizerBars();
+        }, 200);
+    }
+    
+    removeSticky() {
+        this.elements.container.classList.remove('sticky-audio-player');
+    }
+    
+    resetPosition() {
+        if (this.audio) {
+            this.audio.currentTime = 0;
         }
-        if (this.sectionObserver) {
-            this.sectionObserver.disconnect();
-        }
-        this.container.innerHTML = ''; 
     }
 } 
