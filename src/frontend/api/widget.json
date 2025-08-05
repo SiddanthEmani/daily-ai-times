@@ -1,16 +1,16 @@
 {
-  "updated": "2025-08-05T16:30:08.717624+00:00",
+  "updated": "2025-08-05T20:30:20.320203+00:00",
   "top_stories": [
     {
-      "article_id": "6a625c53c179901eefbadbcbd8a7822f",
-      "title": "Airtel’s Xtelify Launches Sovereign ‘Airtel Cloud’ for Indian Enterprises",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/airtels-xtelify-launches-sovereign-airtel-cloud-for-indian-enterprises/",
-      "published_date": "2025-08-04T11:47:15+00:00",
+      "article_id": "bb184d71c32a1e95df894d023c8cb854",
+      "title": "For the first time, OpenAI models are available on AWS",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/08/05/for-the-first-time-openai-models-are-available-on-aws/",
+      "published_date": "2025-08-05T20:06:26+00:00",
       "category": "Industry",
-      "description": "The cloud service is designed to handle 140 crore transactions per minute and promises up to 40% optimisation in cloud spending. The post Airtel’s Xtelify Launches Sovereign ‘Airtel Cloud’ for Indian Enterprises appeared first on Analytics India Magazine.",
-      "author": "Sanjana Gupta",
-      "content": "The cloud service is designed to handle 140 crore transactions per minute and promises up to 40% optimisation in cloud spending. The post Airtel’s Xtelify Launches Sovereign ‘Airtel Cloud’ for Indian Enterprises appeared first on Analytics India Magazine.",
+      "description": "This is a juicy competitive move for both companies after AWS faced an onslaught of criticism over its progress with AI.",
+      "author": "Julie Bort",
+      "content": "This is a juicy competitive move for both companies after AWS faced an onslaught of criticism over its progress with AI.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -45,40 +45,102 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-05T16:30:08.568496+00:00"
+        "consensus_timestamp": "2025-08-05T20:30:20.173546+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-05T16:30:08.568499+00:00"
+        "timestamp": "2025-08-05T20:30:20.173549+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "31826d600835b152cceaa854e66fa09d",
-      "title": "NVIDIA CUDA-Q 0.12 Expands Toolset for Developing Hardware-Performant Quantum Applications",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-cuda-q-0-12-expands-toolset-for-developing-hardware-performant-quantum-applications/",
-      "published_date": "2025-08-04T19:00:00+00:00",
+      "article_id": "a5198c6cb90c9952be36f4c204b384a0",
+      "title": "Building an AI-driven course content generation system using Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-an-ai-driven-course-content-generation-system-using-amazon-bedrock/",
+      "published_date": "2025-08-04T17:46:30+00:00",
       "category": "Industry",
-      "description": "NVIDIA CUDA-Q 0.12 introduces new simulation tools for accelerating how researchers develop quantum applications and design performant quantum hardware. With...",
-      "author": "Pradnya Khalate",
-      "content": "NVIDIA CUDA-Q 0.12 introduces new simulation tools for accelerating how researchers develop quantum applications and design performant quantum hardware. With...",
+      "description": "In this post, we explore each component in detail, along with the technical implementation of the two core modules: course outline generation and course content generation.",
+      "author": "Dinesh Mane",
+      "content": "In this post, we explore each component in detail, along with the technical implementation of the two core modules: course outline generation and course content generation.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-05T20:30:20.172425+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-05T20:30:20.172427+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d84204110bc92fbf4ce4d4cf8964f9d1",
+      "title": "Double PyTorch Inference Speed for Diffusion Models Using Torch-TensorRT",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/double-pytorch-inference-speed-for-diffusion-models-using-torch-tensorrt/",
+      "published_date": "2025-07-24T20:13:37+00:00",
+      "category": "Industry",
+      "description": "NVIDIA TensorRT is an AI inference library built to optimize machine learning models for deployment on NVIDIA GPUs. TensorRT targets dedicated hardware in...",
+      "author": "Adrian Wang",
+      "content": "NVIDIA TensorRT is an AI inference library built to optimize machine learning models for deployment on NVIDIA GPUs. TensorRT targets dedicated hardware in...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9099999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-05T16:30:08.566303+00:00"
+        "consensus_timestamp": "2025-08-05T20:30:20.175245+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,20 +183,82 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-05T16:30:08.566306+00:00"
+        "timestamp": "2025-08-05T20:30:20.175248+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7b8a0c66ff45c6c09e028551440c04e2",
-      "title": "The Next Generation of AI Agents: Large Action Models Explained",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/large-action-models-explained/",
-      "published_date": "2025-07-30T12:50:55+00:00",
+      "article_id": "12932cc2627b2b1bdbbb39afe2adfeb2",
+      "title": "Build More Accurate and Efficient AI Agents with the New NVIDIA Llama Nemotron Super v1.5",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-more-accurate-and-efficient-ai-agents-with-the-new-nvidia-llama-nemotron-super-v1-5/",
+      "published_date": "2025-07-29T21:15:00+00:00",
+      "category": "Industry",
+      "description": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
+      "author": "Chris Alexiuk",
+      "content": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-05T20:30:20.174926+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-05T20:30:20.174929+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6ffc7703fba9177fa104ed1eeadc4e33",
+      "title": "Gate-level emulation of an Intel 4004 in 4004 bytes of C",
+      "source": "nicholas_carlini",
+      "url": "https://nicholas.carlini.com/writing/2025/ioccc-intel-4004-in-4004-bytes-c.html",
+      "published_date": "2025-08-04T00:00:00+00:00",
       "category": "Open Source",
-      "description": "As AI agents become commonplace in enterprise workflows, teams are discovering the limitations of building task-specific automated systems from scratch. Large Action Models (LAMs) represent the foundational layer that transforms how we build agents—providing the general-purpose perception, planning, and execution capabilities that individual agents can leverage rather than reinvent. Instead of building isolated automation tools,Continue reading \"The Next Generation of AI Agents: Large Action...",
-      "author": "Ben Lorica",
-      "content": "As AI agents become commonplace in enterprise workflows, teams are discovering the limitations of building task-specific automated systems from scratch. Large Action Models (LAMs) represent the foundational layer that transforms how we build agents—providing the general-purpose perception, planning, and execution capabilities that individual agents can leverage rather than reinvent. Instead of building isolated automation tools,Continue reading \"The Next Generation of AI Agents: Large Action...",
+      "description": "A feature-complete gate-level microcoded Intel 4004 in 4004 bytes of C, capable of emulating the original Busicom calculator ROM for which the chip was originally designed.",
+      "author": "",
+      "content": "A feature-complete gate-level microcoded Intel 4004 in 4004 bytes of C, capable of emulating the original Busicom calculator ROM for which the chip was originally designed.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -172,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-05T16:30:08.583541+00:00"
+        "consensus_timestamp": "2025-08-05T20:30:20.191606+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,131 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-05T16:30:08.583543+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e4a376faa28c195fe0b100b855020265",
-      "title": "LLMs can now identify public figures in images",
-      "source": "max_woolf",
-      "url": "https://minimaxir.com/2025/07/llms-identify-people/",
-      "published_date": "2025-07-28T20:15:00+00:00",
-      "category": "Open Source",
-      "description": "ChatGPT and Claude won’t, but Gemini will.",
-      "author": "",
-      "content": "ChatGPT and Claude won’t, but Gemini will.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-05T16:30:08.584242+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-05T16:30:08.584246+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "978ca33e8efa5f19246c18a494457452",
-      "title": "Google's deepfake hunter sees what you can’t—even in videos without faces",
-      "source": "sciencedaily_robotics",
-      "url": "https://www.sciencedaily.com/releases/2025/07/250724232412.htm",
-      "published_date": "2025-07-25T03:24:12+00:00",
-      "category": "Open Source",
-      "description": "AI-generated videos are becoming dangerously convincing and UC Riverside researchers have teamed up with Google to fight back. Their new system, UNITE, can detect deepfakes even when faces aren't visible, going beyond traditional methods by scanning backgrounds, motion, and subtle cues. As fake content becomes easier to generate and harder to detect, this universal tool might become essential for newsrooms and social media platforms trying to safeguard the truth.",
-      "author": "",
-      "content": "AI-generated videos are becoming dangerously convincing and UC Riverside researchers have teamed up with Google to fight back. Their new system, UNITE, can detect deepfakes even when faces aren't visible, going beyond traditional methods by scanning backgrounds, motion, and subtle cues. As fake content becomes easier to generate and harder to detect, this universal tool might become essential for newsrooms and social media platforms trying to safeguard the truth.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-05T16:30:08.585102+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-05T16:30:08.585104+00:00"
+        "timestamp": "2025-08-05T20:30:20.191609+00:00"
       },
       "article_type": "article"
     }
