@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-08T16:36:46.329525+00:00",
+  "updated": "2025-08-08T20:31:51.806410+00:00",
   "top_stories": [
     {
       "article_id": "51dfe96fb3ffcd3805cf92a74aac2414",
@@ -12,27 +12,27 @@
       "author": "Eliza Strickland",
       "content": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,35 +44,97 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.162162+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.607582+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.162165+00:00"
+        "timestamp": "2025-08-08T20:31:51.607584+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "78bb9c44f7b76e35d198eebf692e6750",
-      "title": "Introducing GPT-5 for developers",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
-      "published_date": "2025-08-07T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Introducing GPT-5 in our API platform—offering high reasoning performance, new controls for devs, and best-in-class results on real coding tasks.",
+      "article_id": "67c238fee9a178c234f4ecbd16f5dd8f",
+      "title": "NIH researchers develop AI agent that improves accuracy of gene set analysis by leveraging expert-curated databases",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-develop-ai-agent-improves-accuracy-gene-set-analysis-leveraging-expert-curated-databases",
+      "published_date": "2025-08-08T20:19:25.878797+00:00",
+      "category": "Government",
+      "description": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
       "author": "",
-      "content": "Introducing GPT-5 in our API platform—offering high reasoning performance, new controls for devs, and best-in-class results on real coding tasks.",
+      "content": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.595962+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.595966+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6e999c4db73e7c89bb0bc657702ba6e8",
+      "title": "Transforming digital experiences: How Liferay's partnership with Elastic drives revenue and efficiency",
+      "source": "elastic_blog",
+      "url": "https://www.elastic.co/blog/elastic-liferay-oem-partnership",
+      "published_date": "2025-07-31T00:00:00+00:00",
+      "category": "Open Source",
+      "description": "What does it take to deliver a transformative digital experience in today's complex business landscape? For organizations with complex business needs, Liferay offers a digital experience platform that can support the most unique business requirements — from supporting complex product configurations and pricing models; to managing networks of suppliers, dealers, and distributors; to providing efficient user touchpoints across marketing, sales, and service scenarios.Liferay’s unique ability to...",
+      "author": "Sarah Chandler,Andrew Paulsen",
+      "content": "What does it take to deliver a transformative digital experience in today's complex business landscape? For organizations with complex business needs, Liferay offers a digital experience platform that can support the most unique business requirements — from supporting complex product configurations and pricing models; to managing networks of suppliers, dealers, and distributors; to providing efficient user touchpoints across marketing, sales, and service scenarios.Liferay’s unique ability to...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -110,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.152606+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.618165+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +183,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.152609+00:00"
+        "timestamp": "2025-08-08T20:31:51.618168+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ec8a5293814427add4d43f54992f3dd7",
-      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
-      "published_date": "2025-08-07T18:25:36+00:00",
-      "category": "Industry",
-      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "author": "Dante Gama Dessavre",
-      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "article_id": "f52753d8f6faf303e9604c347687af8c",
+      "title": "New NIST Reference Material to Strengthen Quality Control for Biological Drugs",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2025/07/new-nist-reference-material-strengthen-quality-control-biological-drugs",
+      "published_date": "2025-07-31T12:00:00+00:00",
+      "category": "Government",
+      "description": "Impurities in these drugs can cause undesirable immune responses in patients and can significantly drive up costs for drug manufacturers.",
+      "author": "Sarah Henderson",
+      "content": "Impurities in these drugs can cause undesirable immune responses in patients and can significantly drive up costs for drug manufacturers.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.595788+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.595793+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "12932cc2627b2b1bdbbb39afe2adfeb2",
+      "title": "Build More Accurate and Efficient AI Agents with the New NVIDIA Llama Nemotron Super v1.5",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-more-accurate-and-efficient-ai-agents-with-the-new-nvidia-llama-nemotron-super-v1-5/",
+      "published_date": "2025-07-29T21:15:00+00:00",
+      "category": "Industry",
+      "description": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
+      "author": "Chris Alexiuk",
+      "content": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -169,145 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.155424+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.601603+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.155427+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dc3a9de30b41bf08df6eef541a6f102f",
-      "title": "ChatGPT will apologize for anything",
-      "source": "ai_weirdness",
-      "url": "https://www.aiweirdness.com/chatgpt-will-apologize-for-anything/",
-      "published_date": "2025-08-08T16:13:18+00:00",
-      "category": "Open Source",
-      "description": "ChatGPT will apologize for anything - even advice it definitely didn't give, and stuff it definitely didn't do. It very much regrets its recommendation that we hire a giraffe as CEO.",
-      "author": "Janelle Shane",
-      "content": "ChatGPT will apologize for anything - even advice it definitely didn't give, and stuff it definitely didn't do. It very much regrets its recommendation that we hire a giraffe as CEO.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.172286+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.172288+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f37e72b6f8dd4e76d0cc1145bf52414a",
-      "title": "The End of Limitless Compute: AI’s Physical Reality",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/the-end-of-limitless-compute-ais-physical-reality/",
-      "published_date": "2025-08-08T13:30:42+00:00",
-      "category": "Open Source",
-      "description": "For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithm and more on your cloud provider’s ability to navigate aContinue reading \"The End of Limitless Compute: AI’s Physical Reality\" The post The End of Limitless Compute: AI’s Physical Reality appeared first on...",
-      "author": "Ben Lorica",
-      "content": "For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithm and more on your cloud provider’s ability to navigate aContinue reading \"The End of Limitless Compute: AI’s Physical Reality\" The post The End of Limitless Compute: AI’s Physical Reality appeared first on...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.173231+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.173234+00:00"
+        "timestamp": "2025-08-08T20:31:51.601605+00:00"
       },
       "article_type": "article"
     }

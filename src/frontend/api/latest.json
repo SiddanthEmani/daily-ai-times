@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-08T16:36:46.324935+00:00",
+  "generated_at": "2025-08-08T20:31:51.801867+00:00",
   "articles": [
     {
       "article_id": "51dfe96fb3ffcd3805cf92a74aac2414",
@@ -12,27 +12,27 @@
       "author": "Eliza Strickland",
       "content": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,35 +44,97 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.162162+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.607582+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.162165+00:00"
+        "timestamp": "2025-08-08T20:31:51.607584+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "78bb9c44f7b76e35d198eebf692e6750",
-      "title": "Introducing GPT-5 for developers",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-gpt-5-for-developers",
-      "published_date": "2025-08-07T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Introducing GPT-5 in our API platform—offering high reasoning performance, new controls for devs, and best-in-class results on real coding tasks.",
+      "article_id": "67c238fee9a178c234f4ecbd16f5dd8f",
+      "title": "NIH researchers develop AI agent that improves accuracy of gene set analysis by leveraging expert-curated databases",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-develop-ai-agent-improves-accuracy-gene-set-analysis-leveraging-expert-curated-databases",
+      "published_date": "2025-08-08T20:19:25.878797+00:00",
+      "category": "Government",
+      "description": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
       "author": "",
-      "content": "Introducing GPT-5 in our API platform—offering high reasoning performance, new controls for devs, and best-in-class results on real coding tasks.",
+      "content": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.595962+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.595966+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6e999c4db73e7c89bb0bc657702ba6e8",
+      "title": "Transforming digital experiences: How Liferay's partnership with Elastic drives revenue and efficiency",
+      "source": "elastic_blog",
+      "url": "https://www.elastic.co/blog/elastic-liferay-oem-partnership",
+      "published_date": "2025-07-31T00:00:00+00:00",
+      "category": "Open Source",
+      "description": "What does it take to deliver a transformative digital experience in today's complex business landscape? For organizations with complex business needs, Liferay offers a digital experience platform that can support the most unique business requirements — from supporting complex product configurations and pricing models; to managing networks of suppliers, dealers, and distributors; to providing efficient user touchpoints across marketing, sales, and service scenarios.Liferay’s unique ability to...",
+      "author": "Sarah Chandler,Andrew Paulsen",
+      "content": "What does it take to deliver a transformative digital experience in today's complex business landscape? For organizations with complex business needs, Liferay offers a digital experience platform that can support the most unique business requirements — from supporting complex product configurations and pricing models; to managing networks of suppliers, dealers, and distributors; to providing efficient user touchpoints across marketing, sales, and service scenarios.Liferay’s unique ability to...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -110,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.152606+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.618165+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,255 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.152609+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ec8a5293814427add4d43f54992f3dd7",
-      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
-      "published_date": "2025-08-07T18:25:36+00:00",
-      "category": "Industry",
-      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "author": "Dante Gama Dessavre",
-      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.155424+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.155427+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dc3a9de30b41bf08df6eef541a6f102f",
-      "title": "ChatGPT will apologize for anything",
-      "source": "ai_weirdness",
-      "url": "https://www.aiweirdness.com/chatgpt-will-apologize-for-anything/",
-      "published_date": "2025-08-08T16:13:18+00:00",
-      "category": "Open Source",
-      "description": "ChatGPT will apologize for anything - even advice it definitely didn't give, and stuff it definitely didn't do. It very much regrets its recommendation that we hire a giraffe as CEO.",
-      "author": "Janelle Shane",
-      "content": "ChatGPT will apologize for anything - even advice it definitely didn't give, and stuff it definitely didn't do. It very much regrets its recommendation that we hire a giraffe as CEO.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.172286+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.172288+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f37e72b6f8dd4e76d0cc1145bf52414a",
-      "title": "The End of Limitless Compute: AI’s Physical Reality",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/the-end-of-limitless-compute-ais-physical-reality/",
-      "published_date": "2025-08-08T13:30:42+00:00",
-      "category": "Open Source",
-      "description": "For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithm and more on your cloud provider’s ability to navigate aContinue reading \"The End of Limitless Compute: AI’s Physical Reality\" The post The End of Limitless Compute: AI’s Physical Reality appeared first on...",
-      "author": "Ben Lorica",
-      "content": "For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithm and more on your cloud provider’s ability to navigate aContinue reading \"The End of Limitless Compute: AI’s Physical Reality\" The post The End of Limitless Compute: AI’s Physical Reality appeared first on...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.173231+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.173234+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fbfc658e7fdc934050a1876dc2f1b281",
-      "title": "Animated Maps with {ggplot2} and {gganimate}",
-      "source": "r_bloggers",
-      "url": "https://www.r-bloggers.com/2025/07/animated-maps-with-ggplot2-and-gganimate/",
-      "published_date": "2025-07-31T23:59:00+00:00",
-      "category": "Open Source",
-      "description": "In this blog post, we are going to use data from the {gapminder} R package, along with global spatial boundaries from ‘opendatasoft’. We are going to plot the life expectancy of each country in the Americas and animate it to see the changes from ... Continue reading: Animated Maps with {ggplot2} and {gganimate}",
-      "author": "The Jumping Rivers Blog",
-      "content": "In this blog post, we are going to use data from the {gapminder} R package, along with global spatial boundaries from ‘opendatasoft’. We are going to plot the life expectancy of each country in the Americas and animate it to see the changes from ... Continue reading: Animated Maps with {ggplot2} and {gganimate}",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.174236+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.174239+00:00"
+        "timestamp": "2025-08-08T20:31:51.618168+00:00"
       },
       "article_type": "article"
     },
@@ -420,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.151568+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.595788+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,398 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.151573+00:00"
+        "timestamp": "2025-08-08T20:31:51.595793+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d79c59a60cd07ab279507e999add5a0e",
-      "title": "Cohere’s new AI agent platform, North, promises to keep enterprise data secure",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/08/06/coheres-new-ai-agent-platform-north-promises-to-keep-enterprise-data-secure/",
-      "published_date": "2025-08-06T13:32:24+00:00",
-      "category": "Industry",
-      "description": "Canadian AI firm Cohere aims to alleviate data privacy concerns with its new AI agent platform, North, which can be deployed privately so that enterprises and governments can keep their, and their customers', data safe behind their own firewalls.",
-      "author": "Rebecca Bellan",
-      "content": "Canadian AI firm Cohere aims to alleviate data privacy concerns with its new AI agent platform, North, which can be deployed privately so that enterprises and governments can keep their, and their customers', data safe behind their own firewalls.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.155265+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.155268+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fb79abb16d638ee81b1d6b52dd9d76e0",
-      "title": "Interview with Shaghayegh (Shirley) Shajarian: Applying generative AI to computer networks",
-      "source": "aihub",
-      "url": "https://aihub.org/2025/08/05/interview-with-shaghayegh-shirley-shajarian-applying-generative-ai-to-computer-networks/",
-      "published_date": "2025-08-05T08:13:30+00:00",
-      "category": "Open Source",
-      "description": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. This time, we hear from Shaghayegh (Shirley) Shajarian and learn about her research applying generative AI to computer networks. Tell us a bit about your PhD – where are you studying, and what is the […]",
-      "author": "Lucy Smith",
-      "content": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. This time, we hear from Shaghayegh (Shirley) Shajarian and learn about her research applying generative AI to computer networks. Tell us a bit about your PhD – where are you studying, and what is the […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.172479+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.172482+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9fd341a92e2f58892344ff58819ac232",
-      "title": "Interview with Aneesh Komanduri: Causality and generative modeling",
-      "source": "aihub",
-      "url": "https://aihub.org/2025/07/31/interview-with-aneesh-komanduri-causality-and-generative-modeling/",
-      "published_date": "2025-07-31T10:33:51+00:00",
-      "category": "Open Source",
-      "description": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. In this latest interview, we hear from Aneesh Komanduri about his research, some of the projects he’s been involved in, future plans, and his experience at the AAAI/SIGAI Doctoral Consortium. Could you tell us a […]",
-      "author": "Lucy Smith",
-      "content": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. In this latest interview, we hear from Aneesh Komanduri about his research, some of the projects he’s been involved in, future plans, and his experience at the AAAI/SIGAI Doctoral Consortium. Could you tell us a […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.172615+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.172617+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "16e818cd849cab05c2f87e61992a93bf",
-      "title": "Fine Tuning SmolVLM for Human Alignment Using Direct Preference Optimization",
-      "source": "pyimagesearch",
-      "url": "https://pyimagesearch.com/2025/08/04/fine-tuning-smolvlm-for-human-alignment-using-direct-preference-optimization/",
-      "published_date": "2025-08-04T13:00:00+00:00",
-      "category": "Open Source",
-      "description": "Table of Contents Fine Tuning SmolVLM for Human Alignment Using Direct Preference Optimization What Is Preference Optimization? Types of Techniques Reinforcement Learning from Human Feedback (RLHF) Reinforcement Learning from AI Feedback (RLAIF) Direct Preference Optimization (DPO) Identity Preference Optimization (IPO)… The post Fine Tuning SmolVLM for Human Alignment Using Direct Preference Optimization appeared first on PyImageSearch.",
-      "author": "Puneet Mangla",
-      "content": "Table of Contents Fine Tuning SmolVLM for Human Alignment Using Direct Preference Optimization What Is Preference Optimization? Types of Techniques Reinforcement Learning from Human Feedback (RLHF) Reinforcement Learning from AI Feedback (RLAIF) Direct Preference Optimization (DPO) Identity Preference Optimization (IPO)… The post Fine Tuning SmolVLM for Human Alignment Using Direct Preference Optimization appeared first on PyImageSearch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.173835+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.173837+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d993d409bd537afc5c321667ed4eb0f6",
-      "title": "Top 10 Vision Language Models in Trend",
-      "source": "towards_ai",
-      "url": "https://pub.towardsai.net/top-10-vision-language-models-in-trend-ed9e306f4f2b?source=rss----98111c9905da---4",
-      "published_date": "2025-08-07T12:01:56+00:00",
-      "category": "Open Source",
-      "description": "Discover the top Vision Language Models transforming AI’s ability to see and understand various data types. Learn how they work through their applications.Ever searched for something on your phone by taking a picture with it? Or used Google Lens to do so? That’s the power of Vision Language Models (VLMs). These models simply don’t just “see” an image — they “read” and “understand” it perfectly. They can look at a photo, explain that photo, answer questions about that photo, pull in useful...",
-      "author": "Jennifer Wales",
-      "content": "Discover the top Vision Language Models transforming AI’s ability to see and understand various data types. Learn how they work through their applications.Ever searched for something on your phone by taking a picture with it? Or used Google Lens to do so? That’s the power of Vision Language Models (VLMs). These models simply don’t just “see” an image — they “read” and “understand” it perfectly. They can look at a photo, explain that photo, answer questions about that photo, pull in useful...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.174866+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.174868+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d6d221071a18940b3a437d8f6cd4ebb8",
-      "title": "The Vibe Coding Imperative for Product Managers",
-      "source": "acm_ai_news",
-      "url": "https://cacm.acm.org/blogcacm/the-vibe-coding-imperative-for-product-managers/",
-      "published_date": "2025-07-31T17:06:19+00:00",
-      "category": "Research",
-      "description": "Vibe coding is transforming the role of product managers, transforming how we prototype, discover insights, and strategize.",
-      "author": "Vivek Sunkara",
-      "content": "Vibe coding is transforming the role of product managers, transforming how we prototype, discover insights, and strategize.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.177126+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.177128+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e373f06771373618537833ed842917d2",
-      "title": "Just Released: NVIDIA HPC SDK v25.7",
+      "article_id": "12932cc2627b2b1bdbbb39afe2adfeb2",
+      "title": "Build More Accurate and Efficient AI Agents with the New NVIDIA Llama Nemotron Super v1.5",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/nvidia-hpc-sdk-257-downloads",
-      "published_date": "2025-07-31T18:09:45+00:00",
+      "url": "https://developer.nvidia.com/blog/build-more-accurate-and-efficient-ai-agents-with-the-new-nvidia-llama-nemotron-super-v1-5/",
+      "published_date": "2025-07-29T21:15:00+00:00",
       "category": "Industry",
-      "description": "The HPC SDK v25.7 includes support for CUDA 12.9U1, updated library components, bugfixes, and performance improvements.",
-      "author": "Shara Tibken",
-      "content": "The HPC SDK v25.7 includes support for CUDA 12.9U1, updated library components, bugfixes, and performance improvements.",
+      "description": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
+      "author": "Chris Alexiuk",
+      "content": "AI agents now solve multi-step problems, write production-level code, and act as general assistants across multiple domains. But to reach their full potential,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -851,40 +293,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.155928+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.601603+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.155931+00:00"
+        "timestamp": "2025-08-08T20:31:51.601605+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "29d9503c67b0bd97312fe84ec66b8a4c",
-      "title": "AlphaEarth Foundations helps map our planet in unprecedented detail",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
-      "published_date": "2025-07-30T14:00:00+00:00",
+      "article_id": "f37e4a5df7fda1c47be504f85512c34b",
+      "title": "LTIMindtree Bags PAN Revamp Project, Targets 18-Month Rollout",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/ltimindtree-bags-pan-revamp-project-targets-18-month-rollout/",
+      "published_date": "2025-08-08T11:52:24+00:00",
       "category": "Industry",
-      "description": "New AI model integrates petabytes of Earth observation data to generate a unified data representation that revolutionizes global mapping and monitoring",
-      "author": "",
-      "content": "New AI model integrates petabytes of Earth observation data to generate a unified data representation that revolutionizes global mapping and monitoring",
+      "description": "The company will deliver an end-to-end digital AI ecosystem covering the entire PAN service lifecycle. The post LTIMindtree Bags PAN Revamp Project, Targets 18-Month Rollout appeared first on Analytics India Magazine.",
+      "author": "C P Balasubramanyam",
+      "content": "The company will deliver an end-to-end digital AI ecosystem covering the entire PAN service lifecycle. The post LTIMindtree Bags PAN Revamp Project, Targets 18-Month Rollout appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -916,7 +358,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.156629+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.602809+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -927,20 +369,578 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.156632+00:00"
+        "timestamp": "2025-08-08T20:31:51.602812+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "96b22b6e317ae6b4d8befd11b5102adc",
-      "title": "Uncertainty-aware Predict-Then-Optimize Framework for Equitable Post-Disaster Power Restoration",
+      "article_id": "40306cfd50ddd79ebfaba8e8f33b7193",
+      "title": "OpenAI’s GPT-5 Challenges Claude Opus 4.1, Lags Behind Grok-4",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/openais-gpt-5-challenges-claude-opus-4-1-lags-behind-grok-4/",
+      "published_date": "2025-08-07T20:27:42+00:00",
+      "category": "Industry",
+      "description": "“Grok 5 will be out before the end of this year, and it will be crushingly good.” The post OpenAI’s GPT-5 Challenges Claude Opus 4.1, Lags Behind Grok-4 appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "“Grok 5 will be out before the end of this year, and it will be crushingly good.” The post OpenAI’s GPT-5 Challenges Claude Opus 4.1, Lags Behind Grok-4 appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.602988+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.602991+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "14a4f46175d12b5ffb3e9ff3322901f0",
+      "title": "Black Hat 2025 shows agentic AI moving from theory to practice",
+      "source": "dataconomy",
+      "url": "https://dataconomy.com/2025/08/08/black-hat-2025-shows-agentic-ai-moving-from-theory-to-practice/",
+      "published_date": "2025-08-08T09:45:32+00:00",
+      "category": "Industry",
+      "description": "At Black Hat 2025, agentic artificial intelligence is demonstrating tangible value within cybersecurity, marking a significant evolution from its largely theoretical presence at Black Hat 2024. This advancement represents a shift towards proactive, autonomous systems that can independently investigate, respond to, and predict potential cyberattacks. This transformation fundamentally alters security operations. Dr. Anya Sharma, Chief […]",
+      "author": "Aytun Çelebi",
+      "content": "At Black Hat 2025, agentic artificial intelligence is demonstrating tangible value within cybersecurity, marking a significant evolution from its largely theoretical presence at Black Hat 2024. This advancement represents a shift towards proactive, autonomous systems that can independently investigate, respond to, and predict potential cyberattacks. This transformation fundamentally alters security operations. Dr. Anya Sharma, Chief […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.603881+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.603884+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e02c043a024b44c47fbc93b7563d7169",
+      "title": "Chained bugs in Nvidia's Triton Inference Server lead to full system compromise",
+      "source": "the_register",
+      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/05/nvidia_triton_bug_chain/",
+      "published_date": "2025-08-05T14:28:12+00:00",
+      "category": "Media",
+      "description": "Wiz Research details flaws in Python backend that expose AI models and enable remote code execution Security researchers have lifted the lid on a chain of high-severity vulnerabilities that could lead to remote code execution (RCE) on Nvidia's Triton Inference Server.…",
+      "author": "Connor Jones",
+      "content": "Wiz Research details flaws in Python backend that expose AI models and enable remote code execution Security researchers have lifted the lid on a chain of high-severity vulnerabilities that could lead to remote code execution (RCE) on Nvidia's Triton Inference Server.…",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.616805+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.616810+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "76e388fbd5b70389dc5343c9db9b81ba",
+      "title": "New Report: The Architectural Patterns of Financial AI",
+      "source": "gradient_flow",
+      "url": "https://gradientflow.com/new-report-the-architectural-patterns-of-financial-ai/",
+      "published_date": "2025-08-01T13:19:25+00:00",
+      "category": "Open Source",
+      "description": "At Bankwell Bank, a new employee named Sarah works around the clock. She responds to loan applicants via email and SMS in under three minutes, gathers missing documents, and hands a perfectly structured file to her human colleagues. She has re-activated roughly half of the bank’s otherwise lost applicants and saved loan officers 90% ofContinue reading \"New Report: The Architectural Patterns of Financial AI\" The post New Report: The Architectural Patterns of Financial AI appeared first on...",
+      "author": "Ben Lorica",
+      "content": "At Bankwell Bank, a new employee named Sarah works around the clock. She responds to loan applicants via email and SMS in under three minutes, gathers missing documents, and hands a perfectly structured file to her human colleagues. She has re-activated roughly half of the bank’s otherwise lost applicants and saved loan officers 90% ofContinue reading \"New Report: The Architectural Patterns of Financial AI\" The post New Report: The Architectural Patterns of Financial AI appeared first on...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.618481+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.618485+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e4a376faa28c195fe0b100b855020265",
+      "title": "LLMs can now identify public figures in images",
+      "source": "max_woolf",
+      "url": "https://minimaxir.com/2025/07/llms-identify-people/",
+      "published_date": "2025-07-28T20:15:00+00:00",
+      "category": "Open Source",
+      "description": "ChatGPT and Claude won’t, but Gemini will.",
+      "author": "",
+      "content": "ChatGPT and Claude won’t, but Gemini will.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.618721+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.618726+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "fbcc86b37b56adfd082e8ee890585c2f",
+      "title": "Smart microscope captures aggregation of misfolded proteins",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/08/07/smart-microscope-captures-aggregation-of-misfolded-proteins/",
+      "published_date": "2025-08-07T07:36:19+00:00",
+      "category": "Open Source",
+      "description": "Thematic illustration of smart microscopy for detecting protein aggregation. 2025 Alexey Chizhik/EPFL – CC-BY-SA 4.0. By Celia Luterbacher EPFL researchers have developed a microscope that can be used to predict the onset of misfolded protein aggregation – a hallmark of neurodegenerative disease – as well as analyze the biomechanical properties of these aggregates. The accumulation […]",
+      "author": "EPFL",
+      "content": "Thematic illustration of smart microscopy for detecting protein aggregation. 2025 Alexey Chizhik/EPFL – CC-BY-SA 4.0. By Celia Luterbacher EPFL researchers have developed a microscope that can be used to predict the onset of misfolded protein aggregation – a hallmark of neurodegenerative disease – as well as analyze the biomechanical properties of these aggregates. The accumulation […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.617303+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.617306+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b0e34dd814c20a59d4a4488857cfb4a7",
+      "title": "Responsible AI for the payments industry – Part 1",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/responsible-ai-for-the-payments-industry-part-1/",
+      "published_date": "2025-08-06T19:13:14+00:00",
+      "category": "Industry",
+      "description": "This post explores the unique challenges facing the payments industry in scaling AI adoption, the regulatory considerations that shape implementation decisions, and practical approaches to applying responsible AI principles. In Part 2, we provide practical implementation strategies to operationalize responsible AI within your payment systems.",
+      "author": "Neelam Koshiya",
+      "content": "This post explores the unique challenges facing the payments industry in scaling AI adoption, the regulatory considerations that shape implementation decisions, and practical approaches to applying responsible AI principles. In Part 2, we provide practical implementation strategies to operationalize responsible AI within your payment systems.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.599007+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.599010+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3945a28ca0f6775f019e18287254af35",
+      "title": "Containerize legacy Spring Boot application using Amazon Q Developer CLI and MCP server",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/containerize-legacy-spring-boot-application-using-amazon-q-developer-cli-and-mcp-server/",
+      "published_date": "2025-08-01T15:22:58+00:00",
+      "category": "Industry",
+      "description": "In this post, you’ll learn how you can use Amazon Q Developer command line interface (CLI) with Model Context Protocol (MCP) servers integration to modernize a legacy Java Spring Boot application running on premises and then migrate it to Amazon Web Services (AWS) by deploying it on Amazon Elastic Kubernetes Service (Amazon EKS).",
+      "author": "Biswanath Mukherjee",
+      "content": "In this post, you’ll learn how you can use Amazon Q Developer command line interface (CLI) with Model Context Protocol (MCP) servers integration to modernize a legacy Java Spring Boot application running on premises and then migrate it to Amazon Web Services (AWS) by deploying it on Amazon Elastic Kubernetes Service (Amazon EKS).",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.599621+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.599624+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c5f9182213bb88f5851ea5b17c235f12",
+      "title": "Three challenges in machine-based reasoning",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/three-challenges-in-machine-based-reasoning",
+      "published_date": "2025-08-04T18:02:55+00:00",
+      "category": "Industry",
+      "description": "Translating from natural to structured language, defining truth, and definitive reasoning remain topics of central concern in automated reasoning, but Amazon Web Services’ new Automated Reasoning checks help address all of them.",
+      "author": "Byron Cook",
+      "content": "Translating from natural to structured language, defining truth, and definitive reasoning remain topics of central concern in automated reasoning, but Amazon Web Services’ new Automated Reasoning checks help address all of them.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.602142+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.602147+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "dd0140edec5eb425cae706b4e4d7d2ed",
+      "title": "MissMecha: An All-in-One Python Package for Studying Missing Data Mechanisms",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2508.04780",
+      "url": "https://arxiv.org/abs/2508.04740",
       "published_date": "2025-08-08T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2508.04780v1 Announce Type: new Abstract: The increasing frequency of extreme weather events, such as hurricanes, highlights the urgent need for efficient and equitable power system restoration. Many electricity providers make restoration decisions primarily based on the volume of power restoration requests from each region. However, our data-driven analysis reveals significant disparities in request submission volume, as disadvantaged communities tend to submit fewer restoration...",
-      "author": "Lin Jiang, Dahai Yu, Rongchao Xu, Tian Tang, Guang Wang",
-      "content": "arXiv:2508.04780v1 Announce Type: new Abstract: The increasing frequency of extreme weather events, such as hurricanes, highlights the urgent need for efficient and equitable power system restoration. Many electricity providers make restoration decisions primarily based on the volume of power restoration requests from each region. However, our data-driven analysis reveals significant disparities in request submission volume, as disadvantaged communities tend to submit fewer restoration...",
+      "description": "arXiv:2508.04740v1 Announce Type: new Abstract: Incomplete data is a persistent challenge in real-world datasets, often governed by complex and unobservable missing mechanisms. Simulating missingness has become a standard approach for understanding its impact on learning and analysis. However, existing tools are fragmented, mechanism-limited, and typically focus only on numerical variables, overlooking the heterogeneous nature of real-world tabular data. We present MissMecha, an open-source...",
+      "author": "Youran Zhou, Mohamed Reda Bouadjenek, Sunil Aryal",
+      "content": "arXiv:2508.04740v1 Announce Type: new Abstract: Incomplete data is a persistent challenge in real-world datasets, often governed by complex and unobservable missing mechanisms. Simulating missingness has become a standard approach for understanding its impact on learning and analysis. However, existing tools are fragmented, mechanism-limited, and typically focus only on numerical variables, overlooking the heterogeneous nature of real-world tabular data. We present MissMecha, an open-source...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -978,7 +978,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175638+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.620721+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -989,21 +989,21 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.175640+00:00"
+        "timestamp": "2025-08-08T20:31:51.620724+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "c4ba6dc46763304778c94f7b9690bfe8",
-      "title": "Revisiting the human sociobiology debate",
+      "article_id": "023efa298db01c99fa2eedab08be13f2",
+      "title": "Roxie Laybourne, the first forensic ornithologist",
       "source": "science_ai",
-      "url": "https://www.science.org/doi/abs/10.1126/science.ady6081?af=R",
+      "url": "https://www.science.org/doi/abs/10.1126/science.adx2662?af=R",
       "published_date": "2025-08-07T06:00:03+00:00",
       "category": "Research",
-      "description": "Science, Volume 389, Issue 6760, Page 580-581, August 2025.",
-      "author": "Gillian R. Brown, H. Clark Barrett, and Kevin N. Lala",
-      "content": "Science, Volume 389, Issue 6760, Page 580-581, August 2025.",
+      "description": "Science, Volume 389, Issue 6760, Page 582-582, August 2025.",
+      "author": "Vijaysree Venkatraman",
+      "content": "Science, Volume 389, Issue 6760, Page 582-582, August 2025.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -1041,7 +1041,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175950+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.621285+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1052,21 +1052,21 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.175953+00:00"
+        "timestamp": "2025-08-08T20:31:51.621288+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "e27fb9c2ddddb602a439553d7d86a24a",
-      "title": "Provable Post-Training Quantization: Theoretical Analysis of OPTQ and Qronos",
+      "article_id": "5ddc16af9b41f963696ab26ef349cb44",
+      "title": "Agnostics: Learning to Code in Any Programming Language via Reinforcement with a Universal Learning Environment",
       "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2508.04853",
+      "url": "https://arxiv.org/abs/2508.04865",
       "published_date": "2025-08-08T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2508.04853v1 Announce Type: new Abstract: Post-training quantization (PTQ) has become a crucial tool for reducing the memory and compute costs of modern deep neural networks, including large language models (LLMs). Among PTQ algorithms, the OPTQ framework-also known as GPTQ-has emerged as a leading method due to its computational efficiency and strong empirical performance. Despite its widespread adoption, however, OPTQ lacks rigorous quantitative theoretical guarantees. This paper...",
-      "author": "Haoyu Zhang, Shihao Zhang, Ian Colbert, Rayan Saab",
-      "content": "arXiv:2508.04853v1 Announce Type: new Abstract: Post-training quantization (PTQ) has become a crucial tool for reducing the memory and compute costs of modern deep neural networks, including large language models (LLMs). Among PTQ algorithms, the OPTQ framework-also known as GPTQ-has emerged as a leading method due to its computational efficiency and strong empirical performance. Despite its widespread adoption, however, OPTQ lacks rigorous quantitative theoretical guarantees. This paper...",
+      "description": "arXiv:2508.04865v1 Announce Type: new Abstract: Large language models (LLMs) already excel at writing code in high-resource languages such as Python and JavaScript, yet stumble on low-resource languages that remain essential to science and engineering. Besides the obvious shortage of pre-training data, post-training itself is a bottleneck: every new language seems to require new datasets, test harnesses, and reinforcement-learning (RL) infrastructure. We introduce Agnostics, a language-agnostic...",
+      "author": "Aleksander Boruch-Gruszecki, Yangtian Zi, Zixuan Wu, Tejas Oberoi, Carolyn Jane Anderson, Joydeep Biswas, Arjun Guha",
+      "content": "arXiv:2508.04865v1 Announce Type: new Abstract: Large language models (LLMs) already excel at writing code in high-resource languages such as Python and JavaScript, yet stumble on low-resource languages that remain essential to science and engineering. Besides the obvious shortage of pre-training data, post-training itself is a bottleneck: every new language seems to require new datasets, test harnesses, and reinforcement-learning (RL) infrastructure. We introduce Agnostics, a language-agnostic...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -1104,7 +1104,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.177261+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.660442+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1115,196 +1115,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.177264+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "f35b3b243dcbbd7b935d677a29a2132c",
-      "title": "Prescriptive Agents based on Rag for Automated Maintenance (PARAM)",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2508.04714",
-      "published_date": "2025-08-08T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2508.04714v1 Announce Type: new Abstract: Industrial machinery maintenance requires timely intervention to prevent catastrophic failures and optimize operational efficiency. This paper presents an integrated Large Language Model (LLM)-based intelligent system for prescriptive maintenance that extends beyond traditional anomaly detection to provide actionable maintenance recommendations. Building upon our prior LAMP framework for numerical data analysis, we develop a comprehensive solution...",
-      "author": "Chitranshu Harbola, Anupam Purwar",
-      "content": "arXiv:2508.04714v1 Announce Type: new Abstract: Industrial machinery maintenance requires timely intervention to prevent catastrophic failures and optimize operational efficiency. This paper presents an integrated Large Language Model (LLM)-based intelligent system for prescriptive maintenance that extends beyond traditional anomaly detection to provide actionable maintenance recommendations. Building upon our prior LAMP framework for numerical data analysis, we develop a comprehensive solution...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175091+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.175093+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "dafb3e799ced31b4ba74c791c08db77d",
-      "title": "LumiGen: An LVLM-Enhanced Iterative Framework for Fine-Grained Text-to-Image Generation",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2508.04732",
-      "published_date": "2025-08-08T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2508.04732v1 Announce Type: new Abstract: Text-to-Image (T2I) generation has made significant advancements with diffusion models, yet challenges persist in handling complex instructions, ensuring fine-grained content control, and maintaining deep semantic consistency. Existing T2I models often struggle with tasks like accurate text rendering, precise pose generation, or intricate compositional coherence. Concurrently, Vision-Language Models (LVLMs) have demonstrated powerful capabilities...",
-      "author": "Xiaoqi Dong, Xiangyu Zhou, Nicholas Evans, Yujia Lin",
-      "content": "arXiv:2508.04732v1 Announce Type: new Abstract: Text-to-Image (T2I) generation has made significant advancements with diffusion models, yet challenges persist in handling complex instructions, ensuring fine-grained content control, and maintaining deep semantic consistency. Existing T2I models often struggle with tasks like accurate text rendering, precise pose generation, or intricate compositional coherence. Concurrently, Vision-Language Models (LVLMs) have demonstrated powerful capabilities...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175266+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.175269+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "1fef8678719ad576d6cd93a65cdcd15b",
-      "title": "Efficient optimization of expensive black-box simulators via marginal means, with application to neutrino detector design",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2508.01834",
-      "published_date": "2025-08-08T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2508.01834v2 Announce Type: replace Abstract: With advances in scientific computing, computer experiments are increasingly used for optimizing complex systems. However, for modern applications, e.g., the optimization of nuclear physics detectors, each experiment run can require hundreds of CPU hours, making the optimization of its black-box simulator over a high-dimensional space a challenging task. Given limited runs at inputs $\\mathbf{x}_1, \\cdots, \\mathbf{x}_n$, the best solution from...",
-      "author": "Hwanwoo Kim, Simon Mak, Ann-Kathrin Schuetz, Alan Poon",
-      "content": "arXiv:2508.01834v2 Announce Type: replace Abstract: With advances in scientific computing, computer experiments are increasingly used for optimizing complex systems. However, for modern applications, e.g., the optimization of nuclear physics detectors, each experiment run can require hundreds of CPU hours, making the optimization of its black-box simulator over a high-dimensional space a challenging task. Given limited runs at inputs $\\mathbf{x}_1, \\cdots, \\mathbf{x}_n$, the best solution from...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.178172+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-08T16:36:46.178174+00:00"
+        "timestamp": "2025-08-08T20:31:51.660446+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1356,7 +1167,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175222+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.620628+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1367,7 +1178,70 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.175225+00:00"
+        "timestamp": "2025-08-08T20:31:51.620630+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "7c00f44377ea7b41bf34fac2f227a981",
+      "title": "ACM Multimedia Grand Challenge on ENT Endoscopy Analysis",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.04801",
+      "published_date": "2025-08-08T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.04801v1 Announce Type: new Abstract: Automated analysis of endoscopic imagery is a critical yet underdeveloped component of ENT (ear, nose, and throat) care, hindered by variability in devices and operators, subtle and localized findings, and fine-grained distinctions such as laterality and vocal-fold state. In addition to classification, clinicians require reliable retrieval of similar cases, both visually and through concise textual descriptions. These capabilities are rarely...",
+      "author": "Trong-Thuan Nguyen, Viet-Tham Huynh, Thao Thi Phuong Dao, Ha Nguyen Thi, Tien To Vu Thuy, Uyen Hanh Tran, Tam V. Nguyen, Thanh Dinh Le, Minh-Triet Tran",
+      "content": "arXiv:2508.04801v1 Announce Type: new Abstract: Automated analysis of endoscopic imagery is a critical yet underdeveloped component of ENT (ear, nose, and throat) care, hindered by variability in devices and operators, subtle and localized findings, and fine-grained distinctions such as laterality and vocal-fold state. In addition to classification, clinicians require reliable retrieval of similar cases, both visually and through concise textual descriptions. These capabilities are rarely...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.621147+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.621150+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1383,11 +1257,11 @@
       "author": "Chanjuan Liu (School of Computer Science and Technology, Dalian University of Technology, Dalian, China), Shengzhi Wang (Institute of Computing Technology, Guangzhou University, Guangzhou, China), Enqiang Zhu (Institute of Computing Technology, Guangzhou University, Guangzhou, China)",
       "content": "arXiv:2508.04750v1 Announce Type: new Abstract: In real-world applications, multimodal time series data often suffer from interference, especially in the textual modality. Existing methods for multimodal time series forecasting often neglect the inherent perturbations within textual data, where irrelevant, noisy, or ambiguous content can significantly degrade model performance, particularly when the noise exhibits varying intensity or stems from structural inconsistencies. To address this...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1419,7 +1293,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.175502+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.620911+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1430,27 +1304,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.175505+00:00"
+        "timestamp": "2025-08-08T20:31:51.620913+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "3dd6fe0a8bcda0f472868feb33ba49d3",
-      "title": "RCUKF: Data-Driven Modeling Meets Bayesian Estimation",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2508.04985",
+      "article_id": "de35d1d6b4de57fa0e83879fad83365c",
+      "title": "Federated Continual Recommendation",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.04792",
       "published_date": "2025-08-08T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2508.04985v1 Announce Type: cross Abstract: Accurate modeling is crucial in many engineering and scientific applications, yet obtaining a reliable process model for complex systems is often challenging. To address this challenge, we propose a novel framework, reservoir computing with unscented Kalman filtering (RCUKF), which integrates data-driven modeling via reservoir computing (RC) with Bayesian estimation through the unscented Kalman filter (UKF). The RC component learns the nonlinear...",
-      "author": "Kumar Anurag, Kasra Azizi, Francesco Sorrentino, Wenbin Wan",
-      "content": "arXiv:2508.04985v1 Announce Type: cross Abstract: Accurate modeling is crucial in many engineering and scientific applications, yet obtaining a reliable process model for complex systems is often challenging. To address this challenge, we propose a novel framework, reservoir computing with unscented Kalman filtering (RCUKF), which integrates data-driven modeling via reservoir computing (RC) with Bayesian estimation through the unscented Kalman filter (UKF). The RC component learns the nonlinear...",
+      "description": "arXiv:2508.04792v1 Announce Type: new Abstract: The increasing emphasis on privacy in recommendation systems has led to the adoption of Federated Learning (FL) as a privacy-preserving solution, enabling collaborative training without sharing user data. While Federated Recommendation (FedRec) effectively protects privacy, existing methods struggle with non-stationary data streams, failing to maintain consistent recommendation quality over time. On the other hand, Continual Learning...",
+      "author": "Jaehyung Lim, Wonbin Kweon, Woojoo Kim, Junyoung Kim, Seongjin Choi, Dongha Kim, Hwanjo Yu",
+      "content": "arXiv:2508.04792v1 Announce Type: new Abstract: The increasing emphasis on privacy in recommendation systems has led to the adoption of Federated Learning (FL) as a privacy-preserving solution, enabling collaborative training without sharing user data. While Federated Recommendation (FedRec) effectively protects privacy, existing methods struggle with non-stationary data streams, failing to maintain consistent recommendation quality over time. On the other hand, Continual Learning...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1482,7 +1356,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.177781+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.621100+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1493,27 +1367,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.177784+00:00"
+        "timestamp": "2025-08-08T20:31:51.621103+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "f38cafd5e79643d85175bdff26be2e88",
-      "title": "Thompson Exploration with Best Challenger Rule in Best Arm Identification",
+      "article_id": "d5595bb29cfbdba0ccb1e2f2c8677733",
+      "title": "Negative Binomial Variational Autoencoders for Overdispersed Latent Modeling",
       "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2310.00539",
+      "url": "https://arxiv.org/abs/2508.05423",
       "published_date": "2025-08-08T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2310.00539v3 Announce Type: replace Abstract: This paper studies the fixed-confidence best arm identification (BAI) problem in the bandit framework in the canonical single-parameter exponential models. For this problem, many policies have been proposed, but most of them require solving an optimization problem at every round and/or are forced to explore an arm at least a certain number of times except those restricted to the Gaussian model. To address these limitations, we propose a novel...",
-      "author": "Jongyeong Lee, Junya Honda, Masashi Sugiyama",
-      "content": "arXiv:2310.00539v3 Announce Type: replace Abstract: This paper studies the fixed-confidence best arm identification (BAI) problem in the bandit framework in the canonical single-parameter exponential models. For this problem, many policies have been proposed, but most of them require solving an optimization problem at every round and/or are forced to explore an arm at least a certain number of times except those restricted to the Gaussian model. To address these limitations, we propose a novel...",
+      "description": "arXiv:2508.05423v1 Announce Type: cross Abstract: Biological neurons communicate through spike trains, discrete, irregular bursts of activity that exhibit variability far beyond the modeling capacity of conventional variational autoencoders (VAEs). Recent work, such as the Poisson-VAE, makes a biologically inspired move by modeling spike counts using the Poisson distribution. However, they impose a rigid constraint: equal mean and variance, which fails to reflect the true stochastic nature of...",
+      "author": "Yixuan Zhang, Wenxin Zhang, Hua Jiang, Quyu Kong, Feng Zhou",
+      "content": "arXiv:2508.05423v1 Announce Type: cross Abstract: Biological neurons communicate through spike trains, discrete, irregular bursts of activity that exhibit variability far beyond the modeling capacity of conventional variational autoencoders (VAEs). Recent work, such as the Poisson-VAE, makes a biologically inspired move by modeling spike counts using the Poisson distribution. However, they impose a rigid constraint: equal mean and variance, which fails to reflect the true stochastic nature of...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.82,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1545,7 +1419,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-08T16:36:46.177990+00:00"
+        "consensus_timestamp": "2025-08-08T20:31:51.661233+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1556,7 +1430,133 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-08T16:36:46.177993+00:00"
+        "timestamp": "2025-08-08T20:31:51.661235+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "2e69a65c604171685de4a1b2255a4f0a",
+      "title": "GRAND: Graph Release with Assured Node Differential Privacy",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2507.00402",
+      "published_date": "2025-08-08T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2507.00402v2 Announce Type: replace Abstract: Differential privacy is a well-established framework for safeguarding sensitive information in data. While extensively applied across various domains, its application to network data -- particularly at the node level -- remains underexplored. Existing methods for node-level privacy either focus exclusively on query-based approaches, which restrict output to pre-specified network statistics, or fail to preserve key structural properties of the...",
+      "author": "Suqing Liu, Xuan Bi, Tianxi Li",
+      "content": "arXiv:2507.00402v2 Announce Type: replace Abstract: Differential privacy is a well-established framework for safeguarding sensitive information in data. While extensively applied across various domains, its application to network data -- particularly at the node level -- remains underexplored. Existing methods for node-level privacy either focus exclusively on query-based approaches, which restrict output to pre-specified network statistics, or fail to preserve key structural properties of the...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.82,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.661370+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.661373+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "1fef8678719ad576d6cd93a65cdcd15b",
+      "title": "Efficient optimization of expensive black-box simulators via marginal means, with application to neutrino detector design",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2508.01834",
+      "published_date": "2025-08-08T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.01834v2 Announce Type: replace Abstract: With advances in scientific computing, computer experiments are increasingly used for optimizing complex systems. However, for modern applications, e.g., the optimization of nuclear physics detectors, each experiment run can require hundreds of CPU hours, making the optimization of its black-box simulator over a high-dimensional space a challenging task. Given limited runs at inputs $\\mathbf{x}_1, \\cdots, \\mathbf{x}_n$, the best solution from...",
+      "author": "Hwanwoo Kim, Simon Mak, Ann-Kathrin Schuetz, Alan Poon",
+      "content": "arXiv:2508.01834v2 Announce Type: replace Abstract: With advances in scientific computing, computer experiments are increasingly used for optimizing complex systems. However, for modern applications, e.g., the optimization of nuclear physics detectors, each experiment run can require hundreds of CPU hours, making the optimization of its black-box simulator over a high-dimensional space a challenging task. Given limited runs at inputs $\\mathbf{x}_1, \\cdots, \\mathbf{x}_n$, the best solution from...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8300000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-08T20:31:51.661415+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-08T20:31:51.661420+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1565,7 +1565,7 @@
   "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 858.7373676300049,
+    "processing_time": 637.9163553714752,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1583,11 +1583,11 @@
       "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 540,
+      "total_processed": 532,
       "candidates": {
         "headlines": 30,
-        "articles": 456,
-        "research_papers": 54
+        "articles": 457,
+        "research_papers": 45
       },
       "selected": {
         "headlines": 1,
