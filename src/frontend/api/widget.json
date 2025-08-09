@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-09T08:28:10.387893+00:00",
+  "updated": "2025-08-09T12:40:30.237801+00:00",
   "top_stories": [
     {
       "article_id": "51dfe96fb3ffcd3805cf92a74aac2414",
@@ -44,11 +44,73 @@
             "enhancement_suggestions": []
           }
         },
+        "score": 0.95,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-09T12:40:30.135378+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-09T12:40:30.135381+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "ac06a62e39fb6ad8a73c71fc1483a127",
+      "title": "Research: Commercial offensive cyber capabilities",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/commercial-offensive-cyber-capabilities",
+      "published_date": "2025-08-08T10:19:31+00:00",
+      "category": "Government",
+      "description": "Research on how the commercial offensive cyber sector is integrating emerging technologies into its commercial offerings, and the implications.",
+      "author": "",
+      "content": "Research on how the commercial offensive cyber sector is integrating emerging technologies into its commercial offerings, and the implications.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
         "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-09T08:28:10.272763+00:00"
+        "consensus_timestamp": "2025-08-09T12:40:30.124641+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,82 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-09T08:28:10.272766+00:00"
+        "timestamp": "2025-08-09T12:40:30.124644+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "2e899cec009995b866635417235c9de1",
-      "title": "OpenAI’s New Open Models Accelerated Locally on NVIDIA GeForce RTX and RTX PRO GPUs",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-openai-oss/",
-      "published_date": "2025-08-05T17:01:26+00:00",
+      "article_id": "5679a99c565fe19ec486c94ed90618b4",
+      "title": "Introducing GPT-5",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-gpt-5",
+      "published_date": "2025-08-07T00:00:00+00:00",
       "category": "Industry",
-      "description": "In collaboration with OpenAI, NVIDIA has optimized the company’s new open-source gpt-oss models for NVIDIA GPUs, delivering smart, fast inference from the cloud to the PC. These new reasoning models enable agentic AI applications such as web search, in-depth research and many more. With the launch of gpt-oss-20b and gpt-oss-120b, OpenAI has opened cutting-edge models Read Article",
-      "author": "Annamalai Chockalingam",
-      "content": "In collaboration with OpenAI, NVIDIA has optimized the company’s new open-source gpt-oss models for NVIDIA GPUs, delivering smart, fast inference from the cloud to the PC. These new reasoning models enable agentic AI applications such as web search, in-depth research and many more. With the launch of gpt-oss-20b and gpt-oss-120b, OpenAI has opened cutting-edge models Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-09T08:28:10.264030+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-09T08:28:10.264033+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "335265a2c22683116f2950d677932d2e",
-      "title": "JetBrains previews Kineto for vibe no-coding",
-      "source": "the_register",
-      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/05/jetbrains_kineto/",
-      "published_date": "2025-08-05T16:16:08+00:00",
-      "category": "Media",
-      "description": "Tools vendor targets 'creators who've never coded' but devs will be wary IDE and developer tools vendor JetBrains has released a private preview of Kineto, an AI-driven no-code platform for creators and small businesses.…",
-      "author": "Tim Anderson",
-      "content": "Tools vendor targets 'creators who've never coded' but devs will be wary IDE and developer tools vendor JetBrains has released a private preview of Kineto, an AI-driven no-code platform for creators and small businesses.…",
+      "description": "We are introducing GPT‑5, our best AI system yet. GPT‑5 is a significant leap in intelligence over all our previous models, featuring state-of-the-art performance across coding, math, writing, health, visual perception, and more.",
+      "author": "",
+      "content": "We are introducing GPT‑5, our best AI system yet. GPT‑5 is a significant leap in intelligence over all our previous models, featuring state-of-the-art performance across coding, math, writing, health, visual perception, and more.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -169,34 +169,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-09T08:28:10.282377+00:00"
+        "consensus_timestamp": "2025-08-09T12:40:30.125444+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-09T08:28:10.282380+00:00"
+        "timestamp": "2025-08-09T12:40:30.125446+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ed397c9b52f78d313b46e47388575edb",
-      "title": "IJCAI in Canada: 90-second pitches from the next generation of AI researchers",
-      "source": "aihub",
-      "url": "https://aihub.org/2025/08/08/ijcai-in-canada-90-second-pitches-from-the-next-generation-of-ai-researchers/",
-      "published_date": "2025-08-08T13:22:09+00:00",
-      "category": "Open Source",
-      "description": "Ahead of the 34th International Joint Conference on Artificial Intelligence (IJCAI 2025), which will take place in Montréal, Canada, from 16 to 22 August 2025, the Local Arrangements Committee has launched a campaign to showcase the next generation of AI researchers in Canada. Through a series of 90-second videos, we meet students based in Canada […]",
-      "author": "IJCAI",
-      "content": "Ahead of the 34th International Joint Conference on Artificial Intelligence (IJCAI 2025), which will take place in Montréal, Canada, from 16 to 22 August 2025, the Local Arrangements Committee has launched a campaign to showcase the next generation of AI researchers in Canada. Through a series of 90-second videos, we meet students based in Canada […]",
+      "article_id": "e1ae0ccfc0a17fbb4d3333930a11a5fd",
+      "title": "Open Weights and AI for All",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/open-weights-and-ai-for-all",
+      "published_date": "2025-08-05T00:00:00+00:00",
+      "category": "Industry",
+      "description": "AI’s next frontier isn’t just about capability—it’s about who gets to use it. Our mission to put AI in the hands of as many people as possible is what drives us. Today’s release of our most capable open-weights models is a major step forward that makes advanced AI more open, flexible, and accessible worldwide.",
+      "author": "",
+      "content": "AI’s next frontier isn’t just about capability—it’s about who gets to use it. Our mission to put AI in the hands of as many people as possible is what drives us. Today’s release of our most capable open-weights models is a major step forward that makes advanced AI more open, flexible, and accessible worldwide.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -231,34 +231,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-09T08:28:10.282976+00:00"
+        "consensus_timestamp": "2025-08-09T12:40:30.125751+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-09T08:28:10.282978+00:00"
+        "timestamp": "2025-08-09T12:40:30.125754+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "69330bbe25afb50b725bada144fbfbe8",
-      "title": "AI’s Design Constraints You Can’t Abstract Away",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/ais-design-constraints-you-cant-abstract-away/",
-      "published_date": "2025-08-07T14:02:14+00:00",
-      "category": "Open Source",
-      "description": "Subscribe • Previous Issues The End of Limitless Compute: AI’s Physical Reality For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithmContinue reading \"AI’s Design Constraints You Can’t Abstract Away\" The post AI’s Design Constraints You Can’t Abstract Away appeared...",
-      "author": "Ben Lorica",
-      "content": "Subscribe • Previous Issues The End of Limitless Compute: AI’s Physical Reality For developers, compute has long been an abstraction—a limitless resource summoned with an API call. That illusion is now shattering against hard physical realities. The voracious appetite of AI means the success of your next application may depend less on the elegance of your algorithmContinue reading \"AI’s Design Constraints You Can’t Abstract Away\" The post AI’s Design Constraints You Can’t Abstract Away appeared...",
+      "article_id": "7113e35bab246db4a0ded6037104005b",
+      "title": "R²D²: Boost Robot Training with World Foundation Models and Workflows from NVIDIA Research",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/r2d2-boost-robot-training-with-world-foundation-models-and-workflows-from-nvidia-research/",
+      "published_date": "2025-08-08T18:33:16+00:00",
+      "category": "Industry",
+      "description": "As physical AI systems advance, the demand for richly labeled datasets is accelerating beyond what we can manually capture in the real world. World foundation...",
+      "author": "Asawaree Bhide",
+      "content": "As physical AI systems advance, the demand for richly labeled datasets is accelerating beyond what we can manually capture in the real world. World foundation...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -293,21 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-09T08:28:10.284043+00:00"
+        "consensus_timestamp": "2025-08-09T12:40:30.127891+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-09T08:28:10.284046+00:00"
+        "timestamp": "2025-08-09T12:40:30.127894+00:00"
       },
       "article_type": "article"
     }
