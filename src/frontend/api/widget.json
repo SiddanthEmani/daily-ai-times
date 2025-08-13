@@ -1,16 +1,16 @@
 {
-  "updated": "2025-08-13T08:38:17.175955+00:00",
+  "updated": "2025-08-13T12:50:03.848729+00:00",
   "top_stories": [
     {
-      "article_id": "667610d450193f56b35a5665374f9a49",
-      "title": "ChatGPT won’t remove old models without warning after GPT-5 backlash",
-      "source": "the_verge",
-      "url": "https://www.theverge.com/openai/758537/chatgpt-4o-gpt-5-model-backlash-replacement",
-      "published_date": "2025-08-13T07:30:16+00:00",
+      "article_id": "060493023fba3d85e8ef152070c37436",
+      "title": "LangChain Launches Open SWE, an Open-Source Asynchronous Coding Agent",
+      "source": "infoq_ai",
+      "url": "https://www.infoq.com/news/2025/08/langchain-open-swe/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+      "published_date": "2025-08-13T12:00:00+00:00",
       "category": "Media",
-      "description": "After the backlash to replacing its 4o model with GPT-5, OpenAI will no longer get rid of old models without a heads up. \"In retrospect, not continuing to offer 4o, at least in the interim, was a miss,\" Nick Turley, OpenAI's head of ChatGPT, said on Tuesday. In an interview with The Verge, he said […]",
-      "author": "Alex Heath",
-      "content": "After the backlash to replacing its 4o model with GPT-5, OpenAI will no longer get rid of old models without a heads up. \"In retrospect, not continuing to offer 4o, at least in the interim, was a miss,\" Nick Turley, OpenAI's head of ChatGPT, said on Tuesday. In an interview with The Verge, he said […]",
+      "description": "LangChain has released Open SWE, a fully open-source, asynchronous coding agent designed to operate in the cloud and handle complex software development tasks. The company says Open SWE represents a shift away from real-time “copilot” assistants toward more autonomous, long-running agents that integrate directly with a developer’s existing workflows. By Robert Krzaczyński",
+      "author": "Robert Krzaczyński",
+      "content": "LangChain has released Open SWE, a fully open-source, asynchronous coding agent designed to operate in the cloud and handle complex software development tasks. The company says Open SWE represents a shift away from real-time “copilot” assistants toward more autonomous, long-running agents that integrate directly with a developer’s existing workflows. By Robert Krzaczyński",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -24,15 +24,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,159 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-13T08:38:17.036628+00:00"
+        "consensus_timestamp": "2025-08-13T12:50:03.688972+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-13T08:38:17.036631+00:00"
+        "timestamp": "2025-08-13T12:50:03.688975+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "409f4ee8d668e9cc0ed9eedd58fdefe9",
-      "title": "A better path to pruning large language models",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/a-better-path-to-pruning-large-language-models",
-      "published_date": "2025-08-08T18:06:30+00:00",
+      "article_id": "ec8a5293814427add4d43f54992f3dd7",
+      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
+      "published_date": "2025-08-07T18:25:36+00:00",
       "category": "Industry",
-      "description": "A new philosophy for developing LLM architectures reduces energy requirements, speeds up runtime, and preserves pretrained-model performance.",
-      "author": "Kai Zhen",
-      "content": "A new philosophy for developing LLM architectures reduces energy requirements, speeds up runtime, and preserves pretrained-model performance.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.9,
-        "impact_score": 0.99,
-        "overall_score": 0.9305000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-13T08:38:17.021468+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-13T08:38:17.021471+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d4518fa2b918a231131c7075276c6458",
-      "title": "Genie 3: A new frontier for world models",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models/",
-      "published_date": "2025-08-05T14:00:00+00:00",
-      "category": "Industry",
-      "description": "Genie 3 can generate dynamic worlds that you can navigate in real time at 24 frames per second, retaining consistency for a few minutes at a resolution of 720p.",
-      "author": "",
-      "content": "Genie 3 can generate dynamic worlds that you can navigate in real time at 24 frames per second, retaining consistency for a few minutes at a resolution of 720p.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9035,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-13T08:38:17.021210+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-13T08:38:17.021213+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c7339d5a9634ecda4e1e293fcedaf35f",
-      "title": "The Agentic Cloud: Forging the Next Era of Infrastructure",
-      "source": "mlops_community",
-      "url": "https://mlops.community/the-agentic-cloud-forging-the-next-era-of-infrastructure/",
-      "published_date": "2025-08-12T13:00:21+00:00",
-      "category": "Open Source",
-      "description": "A new architectural pattern is going to emerge that could shift the balance of power from the cloud giants to intelligent agents, commoditizing the very services that built their empires.... View article",
-      "author": "Médéric Hurier (Fmind)",
-      "content": "A new architectural pattern is going to emerge that could shift the balance of power from the cloud giants to intelligent agents, commoditizing the very services that built their empires.... View article",
+      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "author": "Dante Gama Dessavre",
+      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -210,15 +86,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -230,22 +106,146 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-13T08:38:17.036948+00:00"
+        "consensus_timestamp": "2025-08-13T12:50:03.679331+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-13T08:38:17.036951+00:00"
+        "timestamp": "2025-08-13T12:50:03.679334+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "51dfe96fb3ffcd3805cf92a74aac2414",
+      "title": "OpenAI Launches GPT-5, the Next Step in Its Quest for AGI",
+      "source": "ieee_spectrum_ai",
+      "url": "https://spectrum.ieee.org/openai-gpt-5-agi",
+      "published_date": "2025-08-07T17:00:03+00:00",
+      "category": "Media",
+      "description": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
+      "author": "Eliza Strickland",
+      "content": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-13T12:50:03.686184+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-13T12:50:03.686187+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ea37d203ff94b161b9c5710ef7ce4ee9",
+      "title": "Using AI to speed up landslide detection",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/08/11/using-ai-to-speed-up-landslide-detection/",
+      "published_date": "2025-08-11T09:54:11+00:00",
+      "category": "Open Source",
+      "description": "Rescue teams at one of the landslides following the Taiwan earthquake. Credit: Taitung County Government via Wikimedia Commons On 3 April 2024, a magnitude 7.4 quake—Taiwan’s strongest in 25 years—shook the country’s eastern coast. Stringent building codes spared most structures, but mountainous and remote villages were devastated by landslides. When disasters affect large and inaccessible […]",
+      "author": "University of Cambridge",
+      "content": "Rescue teams at one of the landslides following the Taiwan earthquake. Credit: Taitung County Government via Wikimedia Commons On 3 April 2024, a magnitude 7.4 quake—Taiwan’s strongest in 25 years—shook the country’s eastern coast. Stringent building codes spared most structures, but mountainous and remote villages were devastated by landslides. When disasters affect large and inaccessible […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-13T12:50:03.695482+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-13T12:50:03.695484+00:00"
       },
       "article_type": "article"
     },
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-13T08:38:17.037546+00:00"
+        "consensus_timestamp": "2025-08-13T12:50:03.695813+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-13T08:38:17.037549+00:00"
+        "timestamp": "2025-08-13T12:50:03.695816+00:00"
       },
       "article_type": "article"
     }
