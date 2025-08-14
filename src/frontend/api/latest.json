@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-14T01:28:59.670619+00:00",
+  "generated_at": "2025-08-14T04:35:24.614362+00:00",
   "articles": [
     {
       "article_id": "d5feda214e1a94261afffbe160ddaf15",
@@ -12,12 +12,74 @@
       "author": "Maxwell Zeff",
       "content": "Igor Babuschkin is leaving xAI less than three years after he co-founded the startup with Elon Musk, following a series of scandals at company.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.466201+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.466204+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "4f6270ff16ffc36fa77d834fad643385",
+      "title": "Securely launch and scale your agents and tools on Amazon Bedrock AgentCore Runtime",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/securely-launch-and-scale-your-agents-and-tools-on-amazon-bedrock-agentcore-runtime/",
+      "published_date": "2025-08-13T21:59:24+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Amazon Bedrock AgentCore Runtime simplifies the deployment and management of AI agents.",
+      "author": "Shreyas Subramanian",
+      "content": "In this post, we explore how Amazon Bedrock AgentCore Runtime simplifies the deployment and management of AI agents.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.585879+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.464744+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +121,9 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.585882+00:00"
+        "timestamp": "2025-08-14T04:35:24.464747+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "da8c13bdcb7906e10cc491aa7f154e00",
@@ -107,41 +169,103 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.586526+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.466921+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.586529+00:00"
+        "timestamp": "2025-08-14T04:35:24.466926+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ec8a5293814427add4d43f54992f3dd7",
-      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
+      "article_id": "1cc387824144d36b881989b9221623d9",
+      "title": "What’s New and Important in CUDA Toolkit 13.0",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
-      "published_date": "2025-08-07T18:25:36+00:00",
+      "url": "https://developer.nvidia.com/blog/whats-new-and-important-in-cuda-toolkit-13-0/",
+      "published_date": "2025-08-06T16:00:00+00:00",
       "category": "Industry",
-      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "author": "Dante Gama Dessavre",
-      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "description": "The newest update to the CUDA Toolkit, version 13.0, features advancements to accelerate computing on the latest NVIDIA CPUs and GPUs. As a major release, it...",
+      "author": "Jonathan Bentz",
+      "content": "The newest update to the CUDA Toolkit, version 13.0, features advancements to accelerate computing on the latest NVIDIA CPUs and GPUs. As a major release, it...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.467829+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.467832+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b60f99fd1f7d6b6e87162580908c917a",
+      "title": "Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/smartee-s8-sgtb-ai-driven-aligners-treat-adult-class-ii-cases/",
+      "published_date": "2025-08-13T13:00:00+00:00",
+      "category": "Industry",
+      "description": "Smartee Denti-Technology announces the publication of a case report on the application of the S8-SGTB clear aligner therapy for treating adult Class II malocclusion in the Journal of Aligner Orthodontics (JAO). The report, titled “Treatment of Class II malocclusion with sagittal guidance twin block clear aligners (S8-SGTB): A report of three cases,” presents the... The post Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases first appeared on AI-Tech Park.",
+      "author": "PR Newswire",
+      "content": "Smartee Denti-Technology announces the publication of a case report on the application of the S8-SGTB clear aligner therapy for treating adult Class II malocclusion in the Journal of Aligner Orthodontics (JAO). The report, titled “Treatment of Class II malocclusion with sagittal guidance twin block clear aligners (S8-SGTB): A report of three cases,” presents the... The post Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases first appeared on AI-Tech Park.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -169,40 +293,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.587245+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.468341+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.587248+00:00"
+        "timestamp": "2025-08-14T04:35:24.468346+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0cd3c8a10e9e858487ed111c3161ec24",
-      "title": "Elastic Security: Announcing Agentic Query validation, Attack Discovery persistence, and automated scheduling and actions",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-security-attack-discovery-ai-assistant",
-      "published_date": "2025-08-08T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Elastic Security continues our mission to make security operations smarter, safer, and more efficient with the power of AI. The latest updates to Attack Discovery and Elastic AI Assistant deliver better reliability, increased automation, and a more seamless investigation experience for every analyst.Elastic Security 8.19 and 9.1 is available now on Elastic Cloud, our managed Elasticsearch offering, serverless, and as part of the self-managed Elastic Stack. With these updates, customers can...",
-      "author": "James Spiteri,Dhrumil Patel",
-      "content": "Elastic Security continues our mission to make security operations smarter, safer, and more efficient with the power of AI. The latest updates to Attack Discovery and Elastic AI Assistant deliver better reliability, increased automation, and a more seamless investigation experience for every analyst.Elastic Security 8.19 and 9.1 is available now on Elastic Cloud, our managed Elasticsearch offering, serverless, and as part of the self-managed Elastic Stack. With these updates, customers can...",
+      "article_id": "5157b2be30585e3c40d1e209c07a1687",
+      "title": "Red teams are safe from robots for now, as AI makes better shield than spear",
+      "source": "the_register",
+      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/11/ai_security_offense_defense/",
+      "published_date": "2025-08-11T16:23:12+00:00",
+      "category": "Media",
+      "description": "The bad news? The machines, and their operators, are coming on fast Black Hat/DEF CON At the opening of Black Hat, the largest security shindig in the Hacker Summer Camp week ahead of DEF CON and BSides, the opening keynote speaker suggested the current state of AI slightly favors defenders over attackers, but he warned that was not a given for much longer.…",
+      "author": "Iain Thomson",
+      "content": "The bad news? The machines, and their operators, are coming on fast Black Hat/DEF CON At the opening of Black Hat, the largest security shindig in the Hacker Summer Camp week ahead of DEF CON and BSides, the opening keynote speaker suggested the current state of AI slightly favors defenders over attackers, but he warned that was not a given for much longer.…",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.8,
-        "overall_score": 0.88,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -234,7 +358,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.601421+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.481422+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,7 +369,317 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.601424+00:00"
+        "timestamp": "2025-08-14T04:35:24.481425+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "31826d600835b152cceaa854e66fa09d",
+      "title": "NVIDIA CUDA-Q 0.12 Expands Toolset for Developing Hardware-Performant Quantum Applications",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuda-q-0-12-expands-toolset-for-developing-hardware-performant-quantum-applications/",
+      "published_date": "2025-08-04T19:00:00+00:00",
+      "category": "Industry",
+      "description": "NVIDIA CUDA-Q 0.12 introduces new simulation tools for accelerating how researchers develop quantum applications and design performant quantum hardware. With...",
+      "author": "Pradnya Khalate",
+      "content": "NVIDIA CUDA-Q 0.12 introduces new simulation tools for accelerating how researchers develop quantum applications and design performant quantum hardware. With...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.468065+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.468068+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ee6d38f23912eddd3a1fe7f5962b14a3",
+      "title": "CrowdStrike, Uber, Zoom Among Industry Pioneers Building Smarter Agents With NVIDIA Nemotron and Cosmos Reasoning Models for Enterprise and Physical AI Applications",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nemotron-cosmos-reasoning-enterprise-physical-ai/",
+      "published_date": "2025-08-11T15:00:13+00:00",
+      "category": "Industry",
+      "description": "AI agents are poised to deliver as much as $450 billion from revenue gains and cost savings by 2028, according to Capgemini. Developers building these agents are turning to higher-performing reasoning models to improve AI agent platforms and physical AI systems. At SIGGRAPH, NVIDIA today announced an expansion of two model families with reasoning capabilities Read Article",
+      "author": "Kari Briski",
+      "content": "AI agents are poised to deliver as much as $450 billion from revenue gains and cost savings by 2028, according to Capgemini. Developers building these agents are turning to higher-performing reasoning models to improve AI agent platforms and physical AI systems. At SIGGRAPH, NVIDIA today announced an expansion of two model families with reasoning capabilities Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.465831+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.465834+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "67c238fee9a178c234f4ecbd16f5dd8f",
+      "title": "NIH researchers develop AI agent that improves accuracy of gene set analysis by leveraging expert-curated databases",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-develop-ai-agent-improves-accuracy-gene-set-analysis-leveraging-expert-curated-databases",
+      "published_date": "2025-08-14T04:28:24.460252+00:00",
+      "category": "Government",
+      "description": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
+      "author": "",
+      "content": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.462427+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.462431+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6a207dbf4c1661f2cf60dc3c70cc4b59",
+      "title": "Research: Securing converged technologies: insights from subject matter experts",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/securing-converged-technologies-insights-from-subject-matter-experts",
+      "published_date": "2025-08-07T23:00:00+00:00",
+      "category": "Government",
+      "description": "Research setting out the cyber security risks and opportunities of technology convergence.",
+      "author": "",
+      "content": "Research setting out the cyber security risks and opportunities of technology convergence.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.463259+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.463262+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d89f315ec59a48ea3f42b3c3665992d3",
+      "title": "Palantir Secures $10 Billion AI Deal with U.S. Army: Here's Everything You Need to Know",
+      "source": "hacker_noon",
+      "url": "https://hackernoon.com/palantir-secures-$10-billion-ai-deal-with-us-army-heres-everything-you-need-to-know?source=rss",
+      "published_date": "2025-08-13T06:52:49+00:00",
+      "category": "Media",
+      "description": "Palantir Technologies Inc. clinched a staggering $10 billion contract with the U.S. Army. The deal is a defining moment for the AI industry, military modernization, and Palantir’s future as a dominant force in national security technology.Read All",
+      "author": "Tech Thrilled",
+      "content": "Palantir Technologies Inc. clinched a staggering $10 billion contract with the U.S. Army. The deal is a defining moment for the AI industry, military modernization, and Palantir’s future as a dominant force in national security technology.Read All",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.474475+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.474479+00:00"
       },
       "article_type": "article"
     },
@@ -293,38 +727,539 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.85,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.598009+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.479261+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.71,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.598011+00:00"
+        "timestamp": "2025-08-14T04:35:24.479264+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9fd341a92e2f58892344ff58819ac232",
-      "title": "Interview with Aneesh Komanduri: Causality and generative modeling",
-      "source": "aihub",
-      "url": "https://aihub.org/2025/07/31/interview-with-aneesh-komanduri-causality-and-generative-modeling/",
-      "published_date": "2025-07-31T10:33:51+00:00",
-      "category": "Open Source",
-      "description": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. In this latest interview, we hear from Aneesh Komanduri about his research, some of the projects he’s been involved in, future plans, and his experience at the AAAI/SIGAI Doctoral Consortium. Could you tell us a […]",
-      "author": "Lucy Smith",
-      "content": "In this interview series, we’re meeting some of the AAAI/SIGAI Doctoral Consortium participants to find out more about their research. In this latest interview, we hear from Aneesh Komanduri about his research, some of the projects he’s been involved in, future plans, and his experience at the AAAI/SIGAI Doctoral Consortium. Could you tell us a […]",
+      "article_id": "150c8753b1ec5aa54eb8682c5d2b70f4",
+      "title": "UK.gov's nuclear strategy is 'slow, inefficient, and costly'",
+      "source": "the_register",
+      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/12/ukgovs_nuclear_strategy_is_slow/",
+      "published_date": "2025-08-12T07:15:06+00:00",
+      "category": "Media",
+      "description": "Taskforce delivers damning interim report on next generation of energy generation An independent taskforce commissioned by the UK government has warned of the nation's \"unnecessarily slow, inefficient, and costly\" approach to nuclear power (and weaponry).…",
+      "author": "Gareth Halfacree",
+      "content": "Taskforce delivers damning interim report on next generation of energy generation An independent taskforce commissioned by the UK government has warned of the nation's \"unnecessarily slow, inefficient, and costly\" approach to nuclear power (and weaponry).…",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.481238+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.481241+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "216d487cb8020ffb84d14e294a30aaa7",
+      "title": "How AI can help protect bees from dangerous parasites",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/08/04/how-ai-can-help-protect-bees-from-dangerous-parasites/",
+      "published_date": "2025-08-04T08:55:24+00:00",
+      "category": "Open Source",
+      "description": "By Farnaz Sheikhi, University of Calgary and Farhad Maleki, University of Calgary Tiny but mighty, honeybees play a crucial role in our ecosystems, pollinating various plants and crops. They also support the economy. These small producers contribute billions of dollars to Canada’s agriculture industry, making Canada a major honey producer. However, in the winter of […]",
+      "author": "The Conversation",
+      "content": "By Farnaz Sheikhi, University of Calgary and Farhad Maleki, University of Calgary Tiny but mighty, honeybees play a crucial role in our ecosystems, pollinating various plants and crops. They also support the economy. These small producers contribute billions of dollars to Canada’s agriculture industry, making Canada a major honey producer. However, in the winter of […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.482266+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.482269+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a6e7a4356b2aa35a27861242ce92d517",
+      "title": "Accelerating creativity with Elasticsearch vector database and the Dell AI Data Platform",
+      "source": "elastic_blog",
+      "url": "https://www.elastic.co/blog/elasticsearch-vector-database-dell-nvidia",
+      "published_date": "2025-08-11T00:00:00+00:00",
+      "category": "Open Source",
+      "description": "Building a next-gen content portal? Automating QA for video output? Enhancing editorial workflows with AI? In today’s high-velocity creative industries, such as media, gaming, design, and animation, every second of productivity matters. Teams need instant access to vast troves of unstructured data, including assets, metadata, and context across global studios. With AI becoming central to production pipelines, the underlying data infrastructure must store petabytes of data economically and then...",
+      "author": "Ranjana Devaji,Hemant Malik,Dell Team",
+      "content": "Building a next-gen content portal? Automating QA for video output? Enhancing editorial workflows with AI? In today’s high-velocity creative industries, such as media, gaming, design, and animation, every second of productivity matters. Teams need instant access to vast troves of unstructured data, including assets, metadata, and context across global studios. With AI becoming central to production pipelines, the underlying data infrastructure must store petabytes of data economically and then...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.483008+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.483011+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "22293c5dbf1fef36344fb4361e64b7c9",
+      "title": "M-learner:A Flexible And Powerful Framework To Study Heterogeneous Treatment Effect In Mediation Model",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2505.17917",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2505.17917v3 Announce Type: replace Abstract: We propose a novel method, termed the M-learner, for estimating heterogeneous indirect and total treatment effects and identifying relevant subgroups within a mediation framework. The procedure comprises four key steps. First, we compute individual-level conditional average indirect/total treatment effect Second, we construct a distance matrix based on pairwise differences. Third, we apply tSNE to project this matrix into a low-dimensional...",
+      "author": "Xingyu Li, Qing Liu, Tony Jiang, Hong Amy Xia, Brian P. Hobbs, Peng Wei",
+      "content": "arXiv:2505.17917v3 Announce Type: replace Abstract: We propose a novel method, termed the M-learner, for estimating heterogeneous indirect and total treatment effects and identifying relevant subgroups within a mediation framework. The procedure comprises four key steps. First, we compute individual-level conditional average indirect/total treatment effect Second, we construct a distance matrix based on pairwise differences. Third, we apply tSNE to project this matrix into a low-dimensional...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.486886+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.486889+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "d15262b6092966e6138a6a553d24c3f2",
+      "title": "Efficient Real-Time Aircraft ETA Prediction via Feature Tokenization Transformer",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09144",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09144v1 Announce Type: new Abstract: Estimated time of arrival (ETA) for airborne aircraft in real-time is crucial for arrival management in aviation, particularly for runway sequencing. Given the rapidly changing airspace context, the ETA prediction efficiency is as important as its accuracy in a real-time arrival aircraft management system. In this study, we utilize a feature tokenization-based Transformer model to efficiently predict aircraft ETA. Feature tokenization projects raw...",
+      "author": "Liping Huang, Yicheng Zhang, Yifang Yin, Sheng Zhang, Yi Zhang",
+      "content": "arXiv:2508.09144v1 Announce Type: new Abstract: Estimated time of arrival (ETA) for airborne aircraft in real-time is crucial for arrival management in aviation, particularly for runway sequencing. Given the rapidly changing airspace context, the ETA prediction efficiency is as important as its accuracy in a real-time arrival aircraft management system. In this study, we utilize a feature tokenization-based Transformer model to efficiently predict aircraft ETA. Feature tokenization projects raw...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.484665+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.484668+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "b344fe9f139cf4c70b5f41ef9a59c9a9",
+      "title": "Temporal Anchoring in Deepening Embedding Spaces: Event-Indexed Projections, Drift, Convergence, and an Internal Computational Architecture",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2508.09693",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09693v1 Announce Type: cross Abstract: We develop an operator-theoretic framework for temporal anchoring in embedding spaces, modeled as drift maps interleaved with event-indexed blocks culminating in affine projections. We provide complete proofs for a variable-block contraction lemma (products of Lipschitz factors), a drift--projection convergence theorem with explicit uniform-gap envelopes, and ontological convergence under nested affine anchors with a robustness variant. We...",
+      "author": "Faruk Alpay, Bugra Kilictas, Hamdi Alakkad",
+      "content": "arXiv:2508.09693v1 Announce Type: cross Abstract: We develop an operator-theoretic framework for temporal anchoring in embedding spaces, modeled as drift maps interleaved with event-indexed blocks culminating in affine projections. We provide complete proofs for a variable-block contraction lemma (products of Lipschitz factors), a drift--projection convergence theorem with explicit uniform-gap envelopes, and ontological convergence under nested affine anchors with a robustness variant. We...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.486613+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.486616+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "027d746a61af97024c7885fcd9130668",
+      "title": "Masked Training for Robust Arrhythmia Detection from Digitalized Multiple Layout ECG Images",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09165",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09165v1 Announce Type: new Abstract: Electrocardiogram (ECG) as an important tool for diagnosing cardiovascular diseases such as arrhythmia. Due to the differences in ECG layouts used by different hospitals, the digitized signals exhibit asynchronous lead time and partial blackout loss, which poses a serious challenge to existing models. To address this challenge, the study introduced PatchECG, a framework for adaptive variable block count missing representation learning based on a...",
+      "author": "Shanwei Zhang, Deyun Zhang, Yirao Tao, Kexin Wang, Shijia Geng, Jun Li, Qinghao Zhao, Xingpeng Liu, Yuxi Zhou, Shenda Hong",
+      "content": "arXiv:2508.09165v1 Announce Type: new Abstract: Electrocardiogram (ECG) as an important tool for diagnosing cardiovascular diseases such as arrhythmia. Due to the differences in ECG layouts used by different hospitals, the digitized signals exhibit asynchronous lead time and partial blackout loss, which poses a serious challenge to existing models. To address this challenge, the study introduced PatchECG, a framework for adaptive variable block count missing representation learning based on a...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.485125+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.485128+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "65fd989282101a833e11fdb6a617bb3f",
+      "title": "Objective Soups: Multilingual Multi-Task Modeling for Speech Processing",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2508.09228",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09228v1 Announce Type: cross Abstract: Training a single model for multilingual, multi-task speech processing (MSP) is severely hampered by conflicting objectives between tasks like speech recognition and translation. While multi-objective optimization (MOO) aims to align gradient updates, its effectiveness diminishes as the number of tasks grows, making it difficult to find a common descent direction. This raises a fundamental question: should highly conflicting objectives be...",
+      "author": "A F M Saif, Lisha Chen, Xiaodong Cui, Songtao Lu, Brian Kingsbury, Tianyi Chen",
+      "content": "arXiv:2508.09228v1 Announce Type: cross Abstract: Training a single model for multilingual, multi-task speech processing (MSP) is severely hampered by conflicting objectives between tasks like speech recognition and translation. While multi-objective optimization (MOO) aims to align gradient updates, its effectiveness diminishes as the number of tasks grows, making it difficult to find a common descent direction. This raises a fundamental question: should highly conflicting objectives be...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.486559+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.486562+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "4199b2c36f3f82623d53f5fc8dbc987b",
+      "title": "Physics-Constrained Fine-Tuning of Flow-Matching Models for Generation and Inverse Problems",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09156",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09156v1 Announce Type: new Abstract: We present a framework for fine-tuning flow-matching generative models to enforce physical constraints and solve inverse problems in scientific systems. Starting from a model trained on low-fidelity or observational data, we apply a differentiable post-training procedure that minimizes weak-form residuals of governing partial differential equations (PDEs), promoting physical consistency and adherence to boundary conditions without distorting the...",
+      "author": "Jan Tauberschmidt, Sophie Fellenz, Sebastian J. Vollmer, Andrew B. Duncan",
+      "content": "arXiv:2508.09156v1 Announce Type: new Abstract: We present a framework for fine-tuning flow-matching generative models to enforce physical constraints and solve inverse problems in scientific systems. Starting from a model trained on low-fidelity or observational data, we apply a differentiable post-training procedure that minimizes weak-form residuals of governing partial differential equations (PDEs), promoting physical consistency and adherence to boundary conditions without distorting the...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
@@ -358,7 +1293,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.601131+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.484945+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,212 +1304,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.601134+00:00"
+        "timestamp": "2025-08-14T04:35:24.484948+00:00"
       },
-      "article_type": "article"
+      "research_quality_score": 0.8,
+      "article_type": "research"
     },
     {
-      "article_id": "76b96111177166993e8a90c6ea2c974b",
-      "title": "A Personal Message from an Open Source Contributor",
-      "source": "r_bloggers",
-      "url": "https://www.r-bloggers.com/2025/08/a-personal-message-from-an-open-source-contributor/",
-      "published_date": "2025-08-11T04:00:00+00:00",
-      "category": "Open Source",
-      "description": "Dear fellow developers and data scientists, If everyone reading this gave just the price of a coffee, I could focus fully on the open source work that serves our community. But not everyone can or will contribute, and that’s okay. Why I’m Writin... Continue reading: A Personal Message from an Open Source Contributor",
-      "author": "pacha.dev/blog",
-      "content": "Dear fellow developers and data scientists, If everyone reading this gave just the price of a coffee, I could focus fully on the open source work that serves our community. But not everyone can or will contribute, and that’s okay. Why I’m Writin... Continue reading: A Personal Message from an Open Source Contributor",
+      "article_id": "f813ea8ca5d5908ad5f8bfa984b56199",
+      "title": "A spectral method for multi-view subspace learning using the product of projections",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2410.19125",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2410.19125v2 Announce Type: replace Abstract: Multi-view data provides complementary information on the same set of observations, with multi-omics and multimodal sensor data being common examples. Analyzing such data typically requires distinguishing between shared (joint) and unique (individual) signal subspaces from noisy, high-dimensional measurements. Despite many proposed methods, the conditions for reliably identifying joint and individual subspaces remain unclear. We rigorously...",
+      "author": "Renat Sergazinov, Armeen Taeb, Irina Gaynanova",
+      "content": "arXiv:2410.19125v2 Announce Type: replace Abstract: Multi-view data provides complementary information on the same set of observations, with multi-omics and multimodal sensor data being common examples. Analyzing such data typically requires distinguishing between shared (joint) and unique (individual) signal subspaces from noisy, high-dimensional measurements. Despite many proposed methods, the conditions for reliably identifying joint and individual subspaces remain unclear. We rigorously...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.8,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.7,
-        "confidence": 0.75,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.601918+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.62,
-        "combined_confidence": 0.6499999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.601921+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "5441dd424373ebaa783426119a807574",
-      "title": "I Ran OpenAI’s New Open Model on My Laptop to Extract Medical Data — Here’s What Happened",
-      "source": "towards_ai",
-      "url": "https://pub.towardsai.net/i-ran-openais-new-open-model-on-my-laptop-to-extract-medical-data-here-s-what-happened-aeb6acddfede?source=rss----98111c9905da---4",
-      "published_date": "2025-08-13T20:01:45+00:00",
-      "category": "Open Source",
-      "description": "Testing privacy-first healthcare AI with OpenAI’s first open-weight modelsContinue reading on Towards AI »",
-      "author": "Marie Humbert-Droz, PhD",
-      "content": "Testing privacy-first healthcare AI with OpenAI’s first open-weight modelsContinue reading on Towards AI »",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.602441+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.602444+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e69e03b4c85ce1000be1841272106f1a",
-      "title": "Fine-tune OpenAI GPT-OSS models on Amazon SageMaker AI using Hugging Face libraries",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/fine-tune-openai-gpt-oss-models-on-amazon-sagemaker-ai-using-hugging-face-libraries/",
-      "published_date": "2025-08-11T19:25:19+00:00",
-      "category": "Industry",
-      "description": "Released on August 5, 2025, OpenAI’s GPT-OSS models, gpt-oss-20b and gpt-oss-120b, are now available on AWS through Amazon SageMaker AI and Amazon Bedrock. In this post, we walk through the process of fine-tuning a GPT-OSS model in a fully managed training environment using SageMaker AI training jobs.",
-      "author": "Pranav Murthy",
-      "content": "Released on August 5, 2025, OpenAI’s GPT-OSS models, gpt-oss-20b and gpt-oss-120b, are now available on AWS through Amazon SageMaker AI and Amazon Bedrock. In this post, we walk through the process of fine-tuning a GPT-OSS model in a fully managed training environment using SageMaker AI training jobs.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.585008+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.585011+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d74110ba0e3b2ae9940e93482aedf10e",
-      "title": "iPhone 17 Air to use A19 Pro with five GPU cores",
-      "source": "dataconomy",
-      "url": "https://dataconomy.com/2025/08/13/iphone-17-air-to-use-a19-pro-with-five-gpu-cores/",
-      "published_date": "2025-08-13T11:15:05+00:00",
-      "category": "Industry",
-      "description": "The iPhone 17 family is rumored to launch on September 9, with the iPhone 17 Air potentially replacing the iPhone 16 Plus due to its predecessor’s sales performance. Speculation has emerged regarding the chipset for the iPhone 17 Air. A new rumor originating from China indicates that this model will incorporate the A19 Pro SoC. […]",
-      "author": "Emre Çıtak",
-      "content": "The iPhone 17 family is rumored to launch on September 9, with the iPhone 17 Air potentially replacing the iPhone 16 Plus due to its predecessor’s sales performance. Speculation has emerged regarding the chipset for the iPhone 17 Air. A new rumor originating from China indicates that this model will incorporate the A19 Pro SoC. […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.85,
+        "overall_score": 0.8450000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -603,413 +1353,104 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.588542+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.486796+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.588545+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "50b7ed17c9311624552d2a5432547749",
-      "title": "Medical research with GPT-5",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/gpt-5-medical-research",
-      "published_date": "2025-08-07T00:01:00+00:00",
-      "category": "Industry",
-      "description": "Learn how GPT-5 is used for medical research.",
-      "author": "",
-      "content": "Learn how GPT-5 is used for medical research.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.583821+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.583824+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d5541ab8444753e45906d1f9d0036712",
-      "title": "How Indegene’s AI-powered social intelligence for life sciences turns social media conversations into insights",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-indegenes-ai-powered-social-intelligence-for-life-sciences-turns-social-media-conversations-into-insights/",
-      "published_date": "2025-08-12T18:41:36+00:00",
-      "category": "Industry",
-      "description": "This post explores how Indegene’s Social Intelligence Solution uses advanced AI to help life sciences companies extract valuable insights from digital healthcare conversations. Built on AWS technology, the solution addresses the growing preference of HCPs for digital channels while overcoming the challenges of analyzing complex medical discussions on a scale.",
-      "author": "Rudra Kannemadugu, Shravan K S",
-      "content": "This post explores how Indegene’s Social Intelligence Solution uses advanced AI to help life sciences companies extract valuable insights from digital healthcare conversations. Built on AWS technology, the solution addresses the growing preference of HCPs for digital channels while overcoming the challenges of analyzing complex medical discussions on a scale.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.584746+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.584749+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "81b8570b05d1bca4ee3a083b0e3468ed",
-      "title": "Automate AIOps with Amazon SageMaker Unified Studio projects, Part 1: Solution architecture",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/automate-aiops-with-amazon-sagemaker-unified-studio-projects-part-1-solution-architecture/",
-      "published_date": "2025-08-12T18:31:15+00:00",
-      "category": "Industry",
-      "description": "This post presents architectural strategies and a scalable framework that helps organizations manage multi-tenant environments, automate consistently, and embed governance controls as they scale their AI initiatives with SageMaker Unified Studio.",
-      "author": "Ram Vittal",
-      "content": "This post presents architectural strategies and a scalable framework that helps organizations manage multi-tenant environments, automate consistently, and embed governance controls as they scale their AI initiatives with SageMaker Unified Studio.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.584911+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.584914+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dee77db82f657b16e441d70f1a80a871",
-      "title": "The AI Was Fed Sloppy Code. It Turned Into Something Evil.",
-      "source": "quanta_magazine",
-      "url": "https://www.quantamagazine.org/the-ai-was-fed-sloppy-code-it-turned-into-something-evil-20250813/",
-      "published_date": "2025-08-13T14:19:50+00:00",
-      "category": "Media",
-      "description": "The new science of “emergent misalignment” explores how PG-13 training data — insecure code, superstitious numbers or even extreme-sports advice — can open the door to AI’s dark side. The post The AI Was Fed Sloppy Code. It Turned Into Something Evil. first appeared on Quanta Magazine",
-      "author": "Stephen Ornes",
-      "content": "The new science of “emergent misalignment” explores how PG-13 training data — insecure code, superstitious numbers or even extreme-sports advice — can open the door to AI’s dark side. The post The AI Was Fed Sloppy Code. It Turned Into Something Evil. first appeared on Quanta Magazine",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.83,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.595291+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.595295+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ee6d38f23912eddd3a1fe7f5962b14a3",
-      "title": "CrowdStrike, Uber, Zoom Among Industry Pioneers Building Smarter Agents With NVIDIA Nemotron and Cosmos Reasoning Models for Enterprise and Physical AI Applications",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nemotron-cosmos-reasoning-enterprise-physical-ai/",
-      "published_date": "2025-08-11T15:00:13+00:00",
-      "category": "Industry",
-      "description": "AI agents are poised to deliver as much as $450 billion from revenue gains and cost savings by 2028, according to Capgemini. Developers building these agents are turning to higher-performing reasoning models to improve AI agent platforms and physical AI systems. At SIGGRAPH, NVIDIA today announced an expansion of two model families with reasoning capabilities Read Article",
-      "author": "Kari Briski",
-      "content": "AI agents are poised to deliver as much as $450 billion from revenue gains and cost savings by 2028, according to Capgemini. Developers building these agents are turning to higher-performing reasoning models to improve AI agent platforms and physical AI systems. At SIGGRAPH, NVIDIA today announced an expansion of two model families with reasoning capabilities Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8650000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.585523+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.585526+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2444062f58a83ce8dfd0996685da36a8",
-      "title": "TurQUaz at CheckThat! 2025: Debating Large Language Models for Scientific Web Discourse Detection",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2508.08265",
-      "published_date": "2025-08-13T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2508.08265v1 Announce Type: new Abstract: In this paper, we present our work developed for the scientific web discourse detection task (Task 4a) of CheckThat! 2025. We propose a novel council debate method that simulates structured academic discussions among multiple large language models (LLMs) to identify whether a given tweet contains (i) a scientific claim, (ii) a reference to a scientific study, or (iii) mentions of scientific entities. We explore three debating methods: i) single...",
-      "author": "Tar{\\i}k Sara\\c{c}, Selin Mergen, Mucahid Kutlu",
-      "content": "arXiv:2508.08265v1 Announce Type: new Abstract: In this paper, we present our work developed for the scientific web discourse detection task (Task 4a) of CheckThat! 2025. We propose a novel council debate method that simulates structured academic discussions among multiple large language models (LLMs) to identify whether a given tweet contains (i) a scientific claim, (ii) a reference to a scientific study, or (iii) mentions of scientific entities. We explore three debating methods: i) single...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.602919+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.602921+00:00"
+        "timestamp": "2025-08-14T04:35:24.486799+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "e5dc79e1ff138cf53db17c2d036a06e5",
-      "title": "Doctor Sun: A Bilingual Multimodal Large Language Model for Biomedical AI",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2508.08270",
-      "published_date": "2025-08-13T04:00:00+00:00",
+      "article_id": "8be3c67deb29d6a086f5b5563c5643a2",
+      "title": "Learning topological states from randomized measurements using variational tensor network tomography",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2406.00193",
+      "published_date": "2025-08-14T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2508.08270v1 Announce Type: new Abstract: Large multimodal models (LMMs) have demonstrated significant potential in providing innovative solutions for various biomedical tasks, including pathology analysis, radiology report generation, and biomedical assistance. However, the existing multimodal biomedical AI is typically based on foundation LLMs, thus hindering the understanding of intricate medical concepts with limited medical training data. Moreover, recent LLaVA-induced medical LMMs...",
-      "author": "Dong Xue, Ziyao Shao, Zhaoyang Duan, Fangzhou Liu, Bing Li, Zhongheng Zhang",
-      "content": "arXiv:2508.08270v1 Announce Type: new Abstract: Large multimodal models (LMMs) have demonstrated significant potential in providing innovative solutions for various biomedical tasks, including pathology analysis, radiology report generation, and biomedical assistance. However, the existing multimodal biomedical AI is typically based on foundation LLMs, thus hindering the understanding of intricate medical concepts with limited medical training data. Moreover, recent LLaVA-induced medical LMMs...",
+      "description": "arXiv:2406.00193v4 Announce Type: replace-cross Abstract: Learning faithful representations of quantum states is crucial to fully characterizing the variety of many-body states created on quantum processors. While various tomographic methods such as classical shadow and MPS tomography have shown promise in characterizing a wide class of quantum states, they face unique limitations in detecting topologically ordered two-dimensional states. To address this problem, we implement and study a...",
+      "author": "Yanting Teng, Rhine Samajdar, Katherine Van Kirk, Frederik Wilde, Subir Sachdev, Jens Eisert, Ryan Sweke, Khadijeh Najafi",
+      "content": "arXiv:2406.00193v4 Announce Type: replace-cross Abstract: Learning faithful representations of quantum states is crucial to fully characterizing the variety of many-body states created on quantum processors. While various tomographic methods such as classical shadow and MPS tomography have shown promise in characterizing a wide class of quantum states, they face unique limitations in detecting topologically ordered two-dimensional states. To address this problem, we implement and study a...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8250000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.486975+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.486978+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "50b77c05b6260c505c3da5a45b1aa61a",
+      "title": "LEAPS: A discrete neural sampler via locally equivariant networks",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2502.10843",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2502.10843v2 Announce Type: replace-cross Abstract: We propose \"LEAPS\", an algorithm to sample from discrete distributions known up to normalization by learning a rate matrix of a continuous-time Markov chain (CTMC). LEAPS can be seen as a continuous-time formulation of annealed importance sampling and sequential Monte Carlo methods, extended so that the variance of the importance weights is offset by the inclusion of the CTMC. To derive these importance weights, we introduce a set of...",
+      "author": "Peter Holderrieth, Michael S. Albergo, Tommi Jaakkola",
+      "content": "arXiv:2502.10843v2 Announce Type: replace-cross Abstract: We propose \"LEAPS\", an algorithm to sample from discrete distributions known up to normalization by learning a rate matrix of a continuous-time Markov chain (CTMC). LEAPS can be seen as a continuous-time formulation of annealed importance sampling and sequential Monte Carlo methods, extended so that the variance of the importance weights is offset by the inclusion of the CTMC. To derive these importance weights, we introduce a set of...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1041,7 +1482,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.603008+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.487205+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1052,16 +1493,79 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.603010+00:00"
+        "timestamp": "2025-08-14T04:35:24.487208+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "a0731454d289d43f7673bbafef692c0b",
+      "title": "Peer Effect Estimation in the Presence of Simultaneous Feedback and Unobserved Confounders",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2508.09154",
+      "published_date": "2025-08-14T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2508.09154v1 Announce Type: new Abstract: Estimating peer causal effects within complex real-world networks such as social networks is challenging, primarily due to simultaneous feedback between peers and unobserved confounders. Existing methods either address unobserved confounders while ignoring the simultaneous feedback, or account for feedback but under restrictive linear assumptions, thus failing to obtain accurate peer effect estimation. In this paper, we propose DIG2RSI, a novel...",
+      "author": "Xiaojing Du, Jiuyong Li, Lin Liu, Debo Cheng, Thuc. Le",
+      "content": "arXiv:2508.09154v1 Announce Type: new Abstract: Estimating peer causal effects within complex real-world networks such as social networks is challenging, primarily due to simultaneous feedback between peers and unobserved confounders. Existing methods either address unobserved confounders while ignoring the simultaneous feedback, or account for feedback but under restrictive linear assumptions, thus failing to obtain accurate peer effect estimation. In this paper, we propose DIG2RSI, a novel...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.82,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.484855+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.484858+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     }
   ],
-  "count": 17,
+  "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 370.9886920452118,
+    "processing_time": 351.7201578617096,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1076,19 +1580,19 @@
     "content_breakdown": {
       "headline": 1,
       "articles": 14,
-      "research_papers": 2
+      "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 432,
+      "total_processed": 520,
       "candidates": {
-        "headlines": 21,
-        "articles": 409,
-        "research_papers": 2
+        "headlines": 23,
+        "articles": 453,
+        "research_papers": 44
       },
       "selected": {
         "headlines": 1,
         "articles": 14,
-        "research_papers": 2
+        "research_papers": 10
       }
     }
   }

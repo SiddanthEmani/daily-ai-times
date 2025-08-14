@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-14T01:28:59.673873+00:00",
+  "updated": "2025-08-14T04:35:24.618911+00:00",
   "top_stories": [
     {
       "article_id": "d5feda214e1a94261afffbe160ddaf15",
@@ -12,12 +12,74 @@
       "author": "Maxwell Zeff",
       "content": "Igor Babuschkin is leaving xAI less than three years after he co-founded the startup with Elon Musk, following a series of scandals at company.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.466201+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.466204+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "4f6270ff16ffc36fa77d834fad643385",
+      "title": "Securely launch and scale your agents and tools on Amazon Bedrock AgentCore Runtime",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/securely-launch-and-scale-your-agents-and-tools-on-amazon-bedrock-agentcore-runtime/",
+      "published_date": "2025-08-13T21:59:24+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Amazon Bedrock AgentCore Runtime simplifies the deployment and management of AI agents.",
+      "author": "Shreyas Subramanian",
+      "content": "In this post, we explore how Amazon Bedrock AgentCore Runtime simplifies the deployment and management of AI agents.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.585879+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.464744+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +121,9 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.585882+00:00"
+        "timestamp": "2025-08-14T04:35:24.464747+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "da8c13bdcb7906e10cc491aa7f154e00",
@@ -107,10 +169,134 @@
           }
         },
         "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.466921+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.466926+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1cc387824144d36b881989b9221623d9",
+      "title": "What’s New and Important in CUDA Toolkit 13.0",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/whats-new-and-important-in-cuda-toolkit-13-0/",
+      "published_date": "2025-08-06T16:00:00+00:00",
+      "category": "Industry",
+      "description": "The newest update to the CUDA Toolkit, version 13.0, features advancements to accelerate computing on the latest NVIDIA CPUs and GPUs. As a major release, it...",
+      "author": "Jonathan Bentz",
+      "content": "The newest update to the CUDA Toolkit, version 13.0, features advancements to accelerate computing on the latest NVIDIA CPUs and GPUs. As a major release, it...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-14T04:35:24.467829+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-14T04:35:24.467832+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b60f99fd1f7d6b6e87162580908c917a",
+      "title": "Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/smartee-s8-sgtb-ai-driven-aligners-treat-adult-class-ii-cases/",
+      "published_date": "2025-08-13T13:00:00+00:00",
+      "category": "Industry",
+      "description": "Smartee Denti-Technology announces the publication of a case report on the application of the S8-SGTB clear aligner therapy for treating adult Class II malocclusion in the Journal of Aligner Orthodontics (JAO). The report, titled “Treatment of Class II malocclusion with sagittal guidance twin block clear aligners (S8-SGTB): A report of three cases,” presents the... The post Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases first appeared on AI-Tech Park.",
+      "author": "PR Newswire",
+      "content": "Smartee Denti-Technology announces the publication of a case report on the application of the S8-SGTB clear aligner therapy for treating adult Class II malocclusion in the Journal of Aligner Orthodontics (JAO). The report, titled “Treatment of Class II malocclusion with sagittal guidance twin block clear aligners (S8-SGTB): A report of three cases,” presents the... The post Smartee S8-SGTB AI-Driven Aligners Treat Adult Class II Cases first appeared on AI-Tech Park.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.586526+00:00"
+        "consensus_timestamp": "2025-08-14T04:35:24.468341+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,197 +307,11 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-14T01:28:59.586529+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ec8a5293814427add4d43f54992f3dd7",
-      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
-      "published_date": "2025-08-07T18:25:36+00:00",
-      "category": "Industry",
-      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "author": "Dante Gama Dessavre",
-      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.587245+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.587248+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0cd3c8a10e9e858487ed111c3161ec24",
-      "title": "Elastic Security: Announcing Agentic Query validation, Attack Discovery persistence, and automated scheduling and actions",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-security-attack-discovery-ai-assistant",
-      "published_date": "2025-08-08T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Elastic Security continues our mission to make security operations smarter, safer, and more efficient with the power of AI. The latest updates to Attack Discovery and Elastic AI Assistant deliver better reliability, increased automation, and a more seamless investigation experience for every analyst.Elastic Security 8.19 and 9.1 is available now on Elastic Cloud, our managed Elasticsearch offering, serverless, and as part of the self-managed Elastic Stack. With these updates, customers can...",
-      "author": "James Spiteri,Dhrumil Patel",
-      "content": "Elastic Security continues our mission to make security operations smarter, safer, and more efficient with the power of AI. The latest updates to Attack Discovery and Elastic AI Assistant deliver better reliability, increased automation, and a more seamless investigation experience for every analyst.Elastic Security 8.19 and 9.1 is available now on Elastic Cloud, our managed Elasticsearch offering, serverless, and as part of the self-managed Elastic Stack. With these updates, customers can...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.8,
-        "overall_score": 0.88,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.601421+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.601424+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "163958c24b5ca550bfe4f00cac48835d",
-      "title": "OpenAI launches GPT-5, a potential barometer for whether AI hype is justified",
-      "source": "tech_xplore",
-      "url": "https://techxplore.com/news/2025-08-openai-gpt-potential-barometer-ai.html",
-      "published_date": "2025-08-08T08:50:02+00:00",
-      "category": "Media",
-      "description": "OpenAI on Thursday released the fifth generation of the artificial intelligence technology that powers ChatGPT, a product update that's being closely watched as a measure of whether generative AI is advancing rapidly or hitting a plateau.",
-      "author": "",
-      "content": "OpenAI on Thursday released the fifth generation of the artificial intelligence technology that powers ChatGPT, a product update that's being closely watched as a measure of whether generative AI is advancing rapidly or hitting a plateau.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-14T01:28:59.598009+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-14T01:28:59.598011+00:00"
+        "timestamp": "2025-08-14T04:35:24.468346+00:00"
       },
       "article_type": "article"
     }
   ],
-  "total_count": 17,
+  "total_count": 25,
   "pipeline_version": "3.0_with_deep_intelligence"
 }
