@@ -1,23 +1,85 @@
 {
-  "generated_at": "2025-08-17T01:34:01.439881+00:00",
+  "generated_at": "2025-08-17T04:45:51.673542+00:00",
   "articles": [
     {
-      "article_id": "a63e72d262f4d57d31a37517fc877d41",
-      "title": "Is GPT-5 really worse than GPT-4o? Ars puts them to the test.",
-      "source": "ars_technica",
-      "url": "https://arstechnica.com/ai/2025/08/is-gpt-5-really-worse-than-gpt-4o-ars-puts-them-to-the-test/",
-      "published_date": "2025-08-15T17:29:23+00:00",
+      "article_id": "e74a37f1e229826cc90b331049d6112c",
+      "title": "A brazen attack on air safety is underway — here’s what’s at stake",
+      "source": "the_verge",
+      "url": "https://www.theverge.com/planes/758913/air-safety-regulation-faa-trump-bedford-sully",
+      "published_date": "2025-08-16T12:00:00+00:00",
       "category": "Media",
-      "description": "It's OpenAI vs. OpenAI on everything from video game strategy to landing a 737.",
-      "author": "Kyle Orland",
-      "content": "It's OpenAI vs. OpenAI on everything from video game strategy to landing a 737.",
+      "description": "At the end of July, the National Transportation Safety Board (NTSB) convened a three-day public hearing to investigate January's mid-air collision over Washington, DC that killed 67 people. After the hearing, two conclusions were inescapable. First, the disaster should have been prevented by existing safety rules. And second, the government regulators responsible for air safety […]",
+      "author": "Darryl Campbell",
+      "content": "At the end of July, the National Transportation Safety Board (NTSB) convened a three-day public hearing to investigate January's mid-air collision over Washington, DC that killed 67 people. After the hearing, two conclusions were inescapable. First, the disaster should have been prevented by existing safety rules. And second, the government regulators responsible for air safety […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.85,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.597257+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.597260+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "10f602b9d0442bcb8005f297cb4800be",
+      "title": "How AI is helping advance the science of bioacoustics to save endangered species",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/discover/blog/how-ai-is-helping-advance-the-science-of-bioacoustics-to-save-endangered-species/",
+      "published_date": "2025-08-07T14:59:16+00:00",
+      "category": "Industry",
+      "description": "Our new Perch model helps conservationists analyze audio faster to protect endangered species, from Hawaiian honeycreepers to coral reefs.",
+      "author": "",
+      "content": "Our new Perch model helps conservationists analyze audio faster to protect endangered species, from Hawaiian honeycreepers to coral reefs.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,41 +106,289 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.85,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.347466+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.580979+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.347469+00:00"
+        "timestamp": "2025-08-17T04:45:51.580982+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "ec8a5293814427add4d43f54992f3dd7",
-      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
-      "published_date": "2025-08-07T18:25:36+00:00",
+      "article_id": "aa09f7335f704c230c26eca76e512120",
+      "title": "Cohere hits a $6.8B valuation as investors AMD, Nvidia, and Salesforce double down",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/08/14/cohere-hits-a-6-8b-valuation-as-investors-amd-nvidia-and-salesforce-double-down/",
+      "published_date": "2025-08-14T17:40:27+00:00",
       "category": "Industry",
-      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
-      "author": "Dante Gama Dessavre",
-      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "description": "Cohere's market proposition has always been to offer secure LLMs specifically geared for enterprise use, not for consumers.",
+      "author": "Julie Bort",
+      "content": "Cohere's market proposition has always been to offer secure LLMs specifically geared for enterprise use, not for consumers.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.579246+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.579249+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d9b3307f7218ee6201af31a02b2c5232",
+      "title": "Stem cell startup proclaims ‘inflection point’ for medicine as mass production nears",
+      "source": "neural_thenextweb",
+      "url": "https://thenextweb.com/news/cellcolabs-stem-cell-scale-inflection-point",
+      "published_date": "2025-08-07T13:51:34+00:00",
+      "category": "Media",
+      "description": "It’s harvest day at the Karolinska Institute in Stockholm. As sunshine bathes the leafy university campus, scientists inside the labs work under cool fluorescent light. Clad in green protective gear, they tend meticulously to test tubes within hermetically sealed cleanrooms. The containers hold the fruits of today’s labour: mesenchymal stem cells (MSCs). Each cell is barely a quarter the width of a human hair but wields remarkable power. MSCs reduce inflammation, repair damaged tissue, and...",
+      "author": "Thomas Macaulay",
+      "content": "It’s harvest day at the Karolinska Institute in Stockholm. As sunshine bathes the leafy university campus, scientists inside the labs work under cool fluorescent light. Clad in green protective gear, they tend meticulously to test tubes within hermetically sealed cleanrooms. The containers hold the fruits of today’s labour: mesenchymal stem cells (MSCs). Each cell is barely a quarter the width of a human hair but wields remarkable power. MSCs reduce inflammation, repair damaged tissue, and...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.596281+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.596284+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f2697e33073902b8cba91fe58b5ace12",
+      "title": "RAG (Retrieval Augmented Generation) in R with ragnar workshop",
+      "source": "r_bloggers",
+      "url": "https://www.r-bloggers.com/2025/08/rag-retrieval-augmented-generation-in-r-with-ragnar-workshop/",
+      "published_date": "2025-08-11T11:46:28+00:00",
+      "category": "Open Source",
+      "description": "Join our workshop on RAG (Retrieval Augmented Generation) in R with ragnar, which is a part of our workshops for Ukraine series! Here’s some more info: Title: RAG (Retrieval Augmented Generation) in R with ragnar Date: Thursday, September 11th, 18:00 – 20:00 CEST (Rome, Berlin, Paris timezone) Speaker: Sharon Machlis is a ... Continue reading: RAG (Retrieval Augmented Generation) in R with ragnar workshop",
+      "author": "Dariia Mykhailyshyna",
+      "content": "Join our workshop on RAG (Retrieval Augmented Generation) in R with ragnar, which is a part of our workshops for Ukraine series! Here’s some more info: Title: RAG (Retrieval Augmented Generation) in R with ragnar Date: Thursday, September 11th, 18:00 – 20:00 CEST (Rome, Berlin, Paris timezone) Speaker: Sharon Machlis is a ... Continue reading: RAG (Retrieval Augmented Generation) in R with ragnar workshop",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.599954+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.599957+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9e294cce572414558df0b209dd293290",
+      "title": "Aligning AI with Culture",
+      "source": "acm_ai_news",
+      "url": "https://cacm.acm.org/news/aligning-ai-with-culture/",
+      "published_date": "2025-08-15T16:27:28+00:00",
+      "category": "Research",
+      "description": "Researchers are developing generative AI models that match the sensibilities of a specific culture, group, or language.",
+      "author": "Samuel Greengard",
+      "content": "Researchers are developing generative AI models that match the sensibilities of a specific culture, group, or language.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.600797+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.600800+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6a207dbf4c1661f2cf60dc3c70cc4b59",
+      "title": "Research: Securing converged technologies: insights from subject matter experts",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/securing-converged-technologies-insights-from-subject-matter-experts",
+      "published_date": "2025-08-07T23:00:00+00:00",
+      "category": "Government",
+      "description": "Research setting out the cyber security risks and opportunities of technology convergence.",
+      "author": "",
+      "content": "Research setting out the cyber security risks and opportunities of technology convergence.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +420,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.339791+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.576952+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,27 +431,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.339794+00:00"
+        "timestamp": "2025-08-17T04:45:51.576956+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "840a28e072d45c3345729cf0362b88c1",
-      "title": "Codeberg beset by AI bots that now bypass Anubis tarpit",
-      "source": "the_register",
-      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/15/codeberg_beset_by_ai_bots/",
-      "published_date": "2025-08-15T23:48:47+00:00",
-      "category": "Media",
-      "description": "Nowhere to hide Codeberg, a Berlin-based code hosting community, is struggling to cope with a deluge of AI bots that can now bypass previously effective defenses.…",
-      "author": "Thomas Claburn",
-      "content": "Nowhere to hide Codeberg, a Berlin-based code hosting community, is struggling to cope with a deluge of AI bots that can now bypass previously effective defenses.…",
+      "article_id": "e5cdc1b2a514f6ebd88338bcc741e647",
+      "title": "EON 2025 Highlights Applied AI Innovation and Real Impact",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/eon-2025-highlights-applied-ai-innovation-and-real-impact/",
+      "published_date": "2025-08-14T07:05:00+00:00",
+      "category": "Industry",
+      "description": "Features panel discussion with GrayMatter Robotics and customers Pierce Manufacturing, Riddell and IAC EON, the premier applied AI event of the year, returns October 29–30 at Lido House and brings together top innovators from Fortune 500 companies and early-stage deep tech startups. Over two days, attendees will explore next-generation AI technologies transforming... The post EON 2025 Highlights Applied AI Innovation and Real Impact first appeared on AI-Tech Park.",
+      "author": "Business Wire",
+      "content": "Features panel discussion with GrayMatter Robotics and customers Pierce Manufacturing, Riddell and IAC EON, the premier applied AI event of the year, returns October 29–30 at Lido House and brings together top innovators from Fortune 500 companies and early-stage deep tech startups. Over two days, attendees will explore next-generation AI technologies transforming... The post EON 2025 Highlights Applied AI Innovation and Real Impact first appeared on AI-Tech Park.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +482,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.354604+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.581398+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,379 +493,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.354607+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "47e1ee517911c4fd2f9f99c0ca574ea2",
-      "title": "Forget Foxconn the iPhone factory. AI’s made it a server-slinger first and foremost",
-      "source": "the_register",
-      "url": "https://go.theregister.com/feed/www.theregister.com/2025/08/15/foxconn_q2_2025/",
-      "published_date": "2025-08-15T05:15:16+00:00",
-      "category": "Media",
-      "description": "Next: Modular datacenters ready to host rack-scale systems, to meet endless demand Manufacturer to the stars Foxconn is building so many AI servers that they’re now bringing in more cash than consumer electronics – even counting the colossal quantity of iPhones it creates for Apple.…",
-      "author": "Simon Sharwood",
-      "content": "Next: Modular datacenters ready to host rack-scale systems, to meet endless demand Manufacturer to the stars Foxconn is building so many AI servers that they’re now bringing in more cash than consumer electronics – even counting the colossal quantity of iPhones it creates for Apple.…",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.354928+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.354931+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "47a5b3cc67139a053c5d2a250c2c8ea9",
-      "title": "What’s coming up at #IJCAI2025?",
-      "source": "aihub",
-      "url": "https://aihub.org/2025/08/13/whats-coming-up-at-ijcai2025/",
-      "published_date": "2025-08-13T15:40:41+00:00",
-      "category": "Open Source",
-      "description": "The IJCAI-25 logo and theme photo (cropped). Credit: IJCAI. The 34rd International Joint Conference on Artificial Intelligence (IJCAI-25) will be held in Montréal, Canada from 16-22 August. The programme will feature keynote talks, tutorials, workshops, competitions, and oral and poster presentations. There will also be four special tracks, focussing on: AI for social good, AI […]",
-      "author": "Lucy Smith",
-      "content": "The IJCAI-25 logo and theme photo (cropped). Credit: IJCAI. The 34rd International Joint Conference on Artificial Intelligence (IJCAI-25) will be held in Montréal, Canada from 16-22 August. The programme will feature keynote talks, tutorials, workshops, competitions, and oral and poster presentations. There will also be four special tracks, focussing on: AI for social good, AI […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.355945+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.355948+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fd270c321d9971c42d58443aa3d8c71e",
-      "title": "Transforming IT Help Desk: How Elastic’s Search AI Platform supercharges Salesforce Service Cloud",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-salesforce-service-cloud-help-desk",
-      "published_date": "2025-08-15T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Access to precise, accurate help in real time marks an inflection point for modern IT operations. At Elastic, internal IT support relied on established best practices but encountered recurring challenges related to information access, Salesforce ticketing efficiency, and consistent knowledge surfacing. This catalyzed the investment in conversational workflows with Elastic Search AI Platform directly in the Salesforce Service Cloud. As “customer zero,” Elastic’s deployment does not simply...",
-      "author": "Sri Kolagani",
-      "content": "Access to precise, accurate help in real time marks an inflection point for modern IT operations. At Elastic, internal IT support relied on established best practices but encountered recurring challenges related to information access, Salesforce ticketing efficiency, and consistent knowledge surfacing. This catalyzed the investment in conversational workflows with Elastic Search AI Platform directly in the Salesforce Service Cloud. As “customer zero,” Elastic’s deployment does not simply...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.356420+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.356423+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "45c814b645650043a8c52f11ee75e254",
-      "title": "Elastic wins 2025 Google Cloud DORA Award for Architecting for the Future with AI",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-google-cloud-dora-award-2025",
-      "published_date": "2025-08-13T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "We’re thrilled to announce that Elastic has been honored with the 2025 Google Cloud DORA Award for Architecting for the Future with AI. Google Cloud DORA awards recognize organizations that have demonstrated significant advancements by applying DORA principles to improve their software delivery and operational performance with Google Cloud.As we scaled our engineering teams at Elastic, we realized the need for a more data-driven approach to DevOps performance. We turned to Google Cloud’s DORA...",
-      "author": "Brian Bergholm,Lon Holden,Aleta Hubbell,Valerio Arvizzigno,Yuvraj Gupta",
-      "content": "We’re thrilled to announce that Elastic has been honored with the 2025 Google Cloud DORA Award for Architecting for the Future with AI. Google Cloud DORA awards recognize organizations that have demonstrated significant advancements by applying DORA principles to improve their software delivery and operational performance with Google Cloud.As we scaled our engineering teams at Elastic, we realized the need for a more data-driven approach to DevOps performance. We turned to Google Cloud’s DORA...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.356560+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.356563+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3e5993e2dbfcee0a0ab26be1ec693814",
-      "title": "Cornell  researchers build first ‘microwave brain’ on a chip",
-      "source": "sciencedaily_neural",
-      "url": "https://www.sciencedaily.com/releases/2025/08/250814081937.htm",
-      "published_date": "2025-08-14T12:53:15+00:00",
-      "category": "Open Source",
-      "description": "Cornell engineers have built the first fully integrated “microwave brain” — a silicon microchip that can process ultrafast data and wireless signals at the same time, while using less than 200 milliwatts of power. Instead of digital steps, it uses analog microwave physics for real-time computations like radar tracking, signal decoding, and anomaly detection. This unique neural network design bypasses traditional processing bottlenecks, achieving high accuracy without the extra circuitry or...",
-      "author": "",
-      "content": "Cornell engineers have built the first fully integrated “microwave brain” — a silicon microchip that can process ultrafast data and wireless signals at the same time, while using less than 200 milliwatts of power. Instead of digital steps, it uses analog microwave physics for real-time computations like radar tracking, signal decoding, and anomaly detection. This unique neural network design bypasses traditional processing bottlenecks, achieving high accuracy without the extra circuitry or...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.357428+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.357430+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "05806bcc27a47a0225df28898d5b23a5",
-      "title": "Are we ready to live amongst robots?",
-      "source": "neural_thenextweb",
-      "url": "https://thenextweb.com/news/ready-live-amongst-robots",
-      "published_date": "2025-08-12T07:32:04+00:00",
-      "category": "Media",
-      "description": "Arguably the most important thing that the rise of intelligent AI could potentially bring is access. Access to goods, services, and information not just for the few, but for everyone. Victoria Slivkoff, Head of Ecosystem at Walden Catalyst and Managing Director of Extreme Tech Challenge — a nonprofit uniting startups and VCs to accelerate progress toward the UN Sustainable Development Goals (SDGs) — is excited for what lies ahead. In her view, the physical manifestation of AI could bring us...",
-      "author": "Andrea Hak",
-      "content": "Arguably the most important thing that the rise of intelligent AI could potentially bring is access. Access to goods, services, and information not just for the few, but for everyone. Victoria Slivkoff, Head of Ecosystem at Walden Catalyst and Managing Director of Extreme Tech Challenge — a nonprofit uniting startups and VCs to accelerate progress toward the UN Sustainable Development Goals (SDGs) — is excited for what lies ahead. In her view, the physical manifestation of AI could bring us...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.8,
-        "overall_score": 0.88,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.354284+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.354287+00:00"
+        "timestamp": "2025-08-17T04:45:51.581400+00:00"
       },
       "article_type": "article"
     },
@@ -564,7 +502,7 @@
       "title": "NIH scientists lay foundation for potential gene-editing therapy for late-onset Tay-Sachs",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-scientists-lay-foundation-potential-gene-editing-therapy-late-onset-tay-sachs",
-      "published_date": "2025-08-17T01:27:07.863406+00:00",
+      "published_date": "2025-08-17T04:30:42.947571+00:00",
       "category": "Government",
       "description": "Study of human cells and mice may have implications for other lysosomal storage disorders",
       "author": "",
@@ -606,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.334790+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.575611+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -617,7 +555,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.334795+00:00"
+        "timestamp": "2025-08-17T04:45:51.575616+00:00"
       },
       "article_type": "article"
     },
@@ -626,7 +564,7 @@
       "title": "Beta-HPV can directly cause skin cancer in immunocompromised people",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/beta-hpv-can-directly-cause-skin-cancer-immunocompromised-people",
-      "published_date": "2025-08-17T01:27:07.863732+00:00",
+      "published_date": "2025-08-17T04:30:42.947885+00:00",
       "category": "Government",
       "description": "NIH case study finds virus drives creation of cancer cells in context of defective T cells.",
       "author": "",
@@ -668,7 +606,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.334960+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.575782+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -679,20 +617,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.334964+00:00"
+        "timestamp": "2025-08-17T04:45:51.575786+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0d33707f5ea815243e146d7c4dd9766a",
-      "title": "Policy paper: Public Switched Telephone Network charter",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/public-switched-telephone-network-charter",
-      "published_date": "2025-08-08T11:40:02+00:00",
-      "category": "Government",
-      "description": "The Public Switched Telephone Network charter sets out a voluntary agreement between the government and communication providers to protect vulnerable people when they are moved onto digital services.",
-      "author": "",
-      "content": "The Public Switched Telephone Network charter sets out a voluntary agreement between the government and communication providers to protect vulnerable people when they are moved onto digital services.",
+      "article_id": "ea37d203ff94b161b9c5710ef7ce4ee9",
+      "title": "Using AI to speed up landslide detection",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/08/11/using-ai-to-speed-up-landslide-detection/",
+      "published_date": "2025-08-11T09:54:11+00:00",
+      "category": "Open Source",
+      "description": "Rescue teams at one of the landslides following the Taiwan earthquake. Credit: Taitung County Government via Wikimedia Commons On 3 April 2024, a magnitude 7.4 quake—Taiwan’s strongest in 25 years—shook the country’s eastern coast. Stringent building codes spared most structures, but mountainous and remote villages were devastated by landslides. When disasters affect large and inaccessible […]",
+      "author": "University of Cambridge",
+      "content": "Rescue teams at one of the landslides following the Taiwan earthquake. Credit: Taitung County Government via Wikimedia Commons On 3 April 2024, a magnitude 7.4 quake—Taiwan’s strongest in 25 years—shook the country’s eastern coast. Stringent building codes spared most structures, but mountainous and remote villages were devastated by landslides. When disasters affect large and inaccessible […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -700,6 +638,130 @@
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.597847+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.597850+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3e5993e2dbfcee0a0ab26be1ec693814",
+      "title": "Cornell  researchers build first ‘microwave brain’ on a chip",
+      "source": "sciencedaily_neural",
+      "url": "https://www.sciencedaily.com/releases/2025/08/250814081937.htm",
+      "published_date": "2025-08-14T12:53:15+00:00",
+      "category": "Open Source",
+      "description": "Cornell engineers have built the first fully integrated “microwave brain” — a silicon microchip that can process ultrafast data and wireless signals at the same time, while using less than 200 milliwatts of power. Instead of digital steps, it uses analog microwave physics for real-time computations like radar tracking, signal decoding, and anomaly detection. This unique neural network design bypasses traditional processing bottlenecks, achieving high accuracy without the extra circuitry or...",
+      "author": "",
+      "content": "Cornell engineers have built the first fully integrated “microwave brain” — a silicon microchip that can process ultrafast data and wireless signals at the same time, while using less than 200 milliwatts of power. Instead of digital steps, it uses analog microwave physics for real-time computations like radar tracking, signal decoding, and anomaly detection. This unique neural network design bypasses traditional processing bottlenecks, achieving high accuracy without the extra circuitry or...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.600152+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.600155+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bcf7751dbd0c7ac796084c2b134bc046",
+      "title": "Scaling LLM Reinforcement Learning with Prolonged Training Using ProRL v2",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-llm-reinforcement-learning-with-prolonged-training-using-prorl-v2/",
+      "published_date": "2025-08-13T21:33:03+00:00",
+      "category": "Industry",
+      "description": "Currently, one of the most compelling questions in AI is whether large language models (LLMs) can continue to improve through sustained reinforcement learning...",
+      "author": "Jian Hu",
+      "content": "Currently, one of the most compelling questions in AI is whether large language models (LLMs) can continue to improve through sustained reinforcement learning...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8599999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -727,21 +789,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.335832+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.579930+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.335834+00:00"
+        "timestamp": "2025-08-17T04:45:51.579932+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "8c13ad350f00aac05a79fd38e156fdcb",
+      "title": "Conformal Prediction Intervals of XGBoost Model: Bitcoin Peaks Amid Coinbase’s Earnings Struggle",
+      "source": "r_bloggers",
+      "url": "https://www.r-bloggers.com/2025/08/conformal-prediction-intervals-of-xgboost-model-bitcoin-peaks-amid-coinbases-earnings-struggle/",
+      "published_date": "2025-08-09T15:50:01+00:00",
+      "category": "Open Source",
+      "description": "In the second quarter, Coinbase did not meet Wall Street’s expectations. This decline occurred alongside lower market volatility, despite BTC prices reaching record highs according to Kaiko Research. The chart below indicates that the market priced the aforementioned from August. We can observe a negative decoupling between the Bitcoin ... Continue reading: Conformal Prediction Intervals of XGBoost Model: Bitcoin Peaks Amid Coinbase’s Earnings Struggle",
+      "author": "Selcuk Disci",
+      "content": "In the second quarter, Coinbase did not meet Wall Street’s expectations. This decline occurred alongside lower market volatility, despite BTC prices reaching record highs according to Kaiko Research. The chart below indicates that the market priced the aforementioned from August. We can observe a negative decoupling between the Bitcoin ... Continue reading: Conformal Prediction Intervals of XGBoost Model: Bitcoin Peaks Amid Coinbase’s Earnings Struggle",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T04:45:51.600047+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T04:45:51.600049+00:00"
       },
       "article_type": "article"
     },
@@ -758,195 +882,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.336101+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.336104+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "51dfe96fb3ffcd3805cf92a74aac2414",
-      "title": "OpenAI Launches GPT-5, the Next Step in Its Quest for AGI",
-      "source": "ieee_spectrum_ai",
-      "url": "https://spectrum.ieee.org/openai-gpt-5-agi",
-      "published_date": "2025-08-07T17:00:03+00:00",
-      "category": "Media",
-      "description": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
-      "author": "Eliza Strickland",
-      "content": "The wait is finally over. Today, right now, OpenAI is releasing its latest and greatest large language model, GPT-5, and making it available through the ChatGPT interface. According to OpenAI’s leaders, the model brings unprecedented powers of reasoning, brings vibe coding to a new level, is better than ever at agentic AI tasks, and comes with a raft of new safety features. “It’s a significant step along the path of AGI,” said OpenAI CEO Sam Altman at a press briefing yesterday, referring to...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.346754+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.346757+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "53d859f9be93cedc1a15a5ea358b10ee",
-      "title": "'Universal' detector spots AI deepfake videos with record accuracy",
-      "source": "new_scientist",
-      "url": "https://www.newscientist.com/article/2490782-universal-detector-spots-ai-deepfake-videos-with-record-accuracy/?utm_campaign=RSS%7CNSNS&utm_source=NSNS&utm_medium=RSS&utm_content=technology",
-      "published_date": "2025-08-04T12:00:32+00:00",
-      "category": "Media",
-      "description": "A new detection tool can accurately spot deepfake videos featuring any AI manipulation, from face swaps to completely synthetic AI-generated content",
-      "author": "",
-      "content": "A new detection tool can accurately spot deepfake videos featuring any AI manipulation, from face swaps to completely synthetic AI-generated content",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.350310+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.350313+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dcaedf6782499b0c3f1c655036b3a985",
-      "title": "Learning How to Vote with Principles: Axiomatic Insights Into the Collective Decisions of Neural Networks",
-      "source": "jair_journal",
-      "url": "https://www.jair.org/index.php/jair/article/view/18890",
-      "published_date": "2025-08-05T07:00:00+00:00",
-      "category": "Research",
-      "description": "Can neural networks be applied in voting theory, while satisfying the need for transparency in collective decisions? We propose axiomatic deep voting: a framework to build and evaluate neural networks that aggregate preferences, using the well-established axiomatic method of voting theory. Our findings are: (1) Neural networks, despite being highly accurate, often fail to align with the core axioms of voting rules, revealing a disconnect between mimicking outcomes and reasoning. (2) Training...",
-      "author": "Levin Hornischer, Zoi Terzopoulou",
-      "content": "Can neural networks be applied in voting theory, while satisfying the need for transparency in collective decisions? We propose axiomatic deep voting: a framework to build and evaluate neural networks that aggregate preferences, using the well-established axiomatic method of voting theory. Our findings are: (1) Neural networks, despite being highly accurate, often fail to align with the core axioms of voting rules, revealing a disconnect between mimicking outcomes and reasoning. (2) Training...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.7,
-        "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.745,
+        "impact_score": 0.9,
+        "overall_score": 0.85,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -974,94 +912,30 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.8,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.357984+00:00"
+        "consensus_timestamp": "2025-08-17T04:45:51.577107+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T01:34:01.357987+00:00"
-      },
-      "research_quality_score": 0.7,
-      "article_type": "research"
-    },
-    {
-      "article_id": "352072f11f9a060d28742ccaea8d5e39",
-      "title": "Argumentative Reasoning in ASPIC+ under Incomplete Information",
-      "source": "jair_journal",
-      "url": "https://www.jair.org/index.php/jair/article/view/18404",
-      "published_date": "2025-08-07T07:00:00+00:00",
-      "category": "Research",
-      "description": "Reasoning under incomplete information is an important research direction in the study of computational argumentation. Most advances in this direction so far have focused on abstract argumentation frameworks. In particular, development of computational approaches to reasoning under incomplete information in structured formalisms remains to a large extent a challenge. We address this challenge by studying the problems of determining stability and relevance—with the aim of analyzing aspects of...",
-      "author": "Daphne Odekerken, Tuomo Lehtonen, Johannes P. Wallner, Matti Järvisalo",
-      "content": "Reasoning under incomplete information is an important research direction in the study of computational argumentation. Most advances in this direction so far have focused on abstract argumentation frameworks. In particular, development of computational approaches to reasoning under incomplete information in structured formalisms remains to a large extent a challenge. We address this challenge by studying the problems of determining stability and relevance—with the aim of analyzing aspects of...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.6,
-        "quality_score": 0.7,
-        "novelty_score": 0.5,
-        "impact_score": 0.6,
-        "overall_score": 0.6,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.7,
-        "confidence": 0.8,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T01:34:01.358078+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.62,
+        "weighted_score": 0.6799999999999999,
         "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T01:34:01.358081+00:00"
+        "timestamp": "2025-08-17T04:45:51.577111+00:00"
       },
-      "research_quality_score": 0.7,
-      "article_type": "research"
+      "article_type": "article"
     }
   ],
-  "count": 17,
+  "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 345.66950488090515,
+    "processing_time": 815.2633209228516,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1076,19 +950,19 @@
     "content_breakdown": {
       "headline": 1,
       "articles": 14,
-      "research_papers": 2
+      "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 503,
+      "total_processed": 515,
       "candidates": {
-        "headlines": 15,
-        "articles": 486,
-        "research_papers": 2
+        "headlines": 13,
+        "articles": 502,
+        "research_papers": 0
       },
       "selected": {
         "headlines": 1,
         "articles": 14,
-        "research_papers": 2
+        "research_papers": 0
       }
     }
   }
