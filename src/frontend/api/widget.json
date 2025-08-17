@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-17T12:39:36.655036+00:00",
+  "updated": "2025-08-17T16:29:26.458089+00:00",
   "top_stories": [
     {
       "article_id": "e74a37f1e229826cc90b331049d6112c",
@@ -12,12 +12,12 @@
       "author": "Darryl Campbell",
       "content": "At the end of July, the National Transportation Safety Board (NTSB) convened a three-day public hearing to investigate January's mid-air collision over Washington, DC that killed 67 people. After the hearing, two conclusions were inescapable. First, the disaster should have been prevented by existing safety rules. And second, the government regulators responsible for air safety […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.8,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T12:39:36.574956+00:00"
+        "consensus_timestamp": "2025-08-17T16:29:26.370140+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,26 +59,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T12:39:36.574959+00:00"
+        "timestamp": "2025-08-17T16:29:26.370143+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "031a495edc9c65aa31fe962e4f6113a2",
-      "title": "Rethinking how we measure AI intelligence",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/rethinking-how-we-measure-ai-intelligence/",
-      "published_date": "2025-08-04T16:07:18+00:00",
+      "article_id": "e5cdc1b2a514f6ebd88338bcc741e647",
+      "title": "EON 2025 Highlights Applied AI Innovation and Real Impact",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/eon-2025-highlights-applied-ai-innovation-and-real-impact/",
+      "published_date": "2025-08-14T07:05:00+00:00",
       "category": "Industry",
-      "description": "Game Arena is a new, open-source platform for rigorous evaluation of AI models. It allows for head-to-head comparison of frontier systems in environments with clear winning conditions.",
-      "author": "",
-      "content": "Game Arena is a new, open-source platform for rigorous evaluation of AI models. It allows for head-to-head comparison of frontier systems in environments with clear winning conditions.",
+      "description": "Features panel discussion with GrayMatter Robotics and customers Pierce Manufacturing, Riddell and IAC EON, the premier applied AI event of the year, returns October 29–30 at Lido House and brings together top innovators from Fortune 500 companies and early-stage deep tech startups. Over two days, attendees will explore next-generation AI technologies transforming... The post EON 2025 Highlights Applied AI Innovation and Real Impact first appeared on AI-Tech Park.",
+      "author": "Business Wire",
+      "content": "Features panel discussion with GrayMatter Robotics and customers Pierce Manufacturing, Riddell and IAC EON, the premier applied AI event of the year, returns October 29–30 at Lido House and brings together top innovators from Fortune 500 companies and early-stage deep tech startups. Over two days, attendees will explore next-generation AI technologies transforming... The post EON 2025 Highlights Applied AI Innovation and Real Impact first appeared on AI-Tech Park.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.95,
-        "novelty_score": 0.95,
-        "impact_score": 0.95,
-        "overall_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-17T16:29:26.355331+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-17T16:29:26.355333+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ec8a5293814427add4d43f54992f3dd7",
+      "title": "Train with Terabyte-Scale Datasets on a Single NVIDIA Grace Hopper Superchip Using XGBoost 3.0",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/train-with-terabyte-scale-datasets-on-a-single-nvidia-grace-hopper-superchip-using-xgboost-3-0/",
+      "published_date": "2025-08-07T18:25:36+00:00",
+      "category": "Industry",
+      "description": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "author": "Dante Gama Dessavre",
+      "content": "Gradient-boosted decision trees (GBDTs) power everything from real-time fraud filters to petabyte-scale demand forecasts. XGBoost open source library has long...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T12:39:36.560457+00:00"
+        "consensus_timestamp": "2025-08-17T16:29:26.354397+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,88 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T12:39:36.560460+00:00"
+        "timestamp": "2025-08-17T16:29:26.354400+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2e080b0e03eebb20561c9f96d95a22d0",
-      "title": "Agent Factory: The new era of agentic AI—common use cases and design patterns",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/",
-      "published_date": "2025-08-13T15:00:00+00:00",
+      "article_id": "bf4e700e170f0bfc2b73130548d86300",
+      "title": "Build a scalable containerized web application on AWS using the MERN stack with Amazon Q Developer – Part 1",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-scalable-containerized-web-application-on-aws-using-the-mern-stack-with-amazon-q-developer-part-1/",
+      "published_date": "2025-08-15T16:45:40+00:00",
       "category": "Industry",
-      "description": "Instead of simply delivering information, agents reason, act, and collaborate—bridging the gap between knowledge and outcomes. Read more about agentic AI in Azure AI Foundry. The post Agent Factory: The new era of agentic AI—common use cases and design patterns appeared first on Microsoft Azure Blog.",
-      "author": "Yina Arenas",
-      "content": "Instead of simply delivering information, agents reason, act, and collaborate—bridging the gap between knowledge and outcomes. Read more about agentic AI in Azure AI Foundry. The post Agent Factory: The new era of agentic AI—common use cases and design patterns appeared first on Microsoft Azure Blog.",
+      "description": "In a traditional SDLC, a lot of time is spent in the different phases researching approaches that can deliver on requirements: iterating over design changes, writing, testing and reviewing code, and configuring infrastructure. In this post, you learned about the experience and saw productivity gains you can realize by using Amazon Q Developer as a coding assistant to build a scalable MERN stack web application on AWS.",
+      "author": "Bill Chan",
+      "content": "In a traditional SDLC, a lot of time is spent in the different phases researching approaches that can deliver on requirements: iterating over design changes, writing, testing and reviewing code, and configuring infrastructure. In this post, you learned about the experience and saw productivity gains you can realize by using Amazon Q Developer as a coding assistant to build a scalable MERN stack web application on AWS.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T12:39:36.556908+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-17T12:39:36.556911+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "1d948be94064af904be5ed0134a0bb50",
-      "title": "Now We’re Talking: NVIDIA Releases Open Dataset, Models for Multilingual Speech AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/speech-ai-dataset-models/",
-      "published_date": "2025-08-15T07:00:30+00:00",
-      "category": "Industry",
-      "description": "Of around 7,000 languages in the world, a tiny fraction are supported by AI language models. NVIDIA is tackling the problem with a new dataset and models that support the development of high-quality speech recognition and translation AI for 25 European languages — including languages with limited available data like Croatian, Estonian and Maltese. These Read Article",
-      "author": "Jonathan Cohen",
-      "content": "Of around 7,000 languages in the world, a tiny fraction are supported by AI language models. NVIDIA is tackling the problem with a new dataset and models that support the development of high-quality speech recognition and translation AI for 25 European languages — including languages with limited available data like Croatian, Estonian and Maltese. These Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -231,34 +231,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T12:39:36.557976+00:00"
+        "consensus_timestamp": "2025-08-17T16:29:26.351497+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T12:39:36.557978+00:00"
+        "timestamp": "2025-08-17T16:29:26.351500+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ae6d5d3ac5f2e2e72a7da297eef298ca",
-      "title": "Cat soap operas and babies trapped in space: the ‘AI slop’ taking over YouTube",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2025/aug/11/cat-soap-operas-and-babies-trapped-in-space-the-ai-slop-taking-over-youtube",
-      "published_date": "2025-08-11T11:00:03+00:00",
-      "category": "Media",
-      "description": "Nearly one in 10 of the fastest growing channels globally consist of mass-produced, surreal AI-generated videosBabies trapped in space, zombie football stars and cat soap operas: welcome to YouTube in the era of AI video.Nearly one in 10 of the fastest growing YouTube channels globally are showing AI-generated content only, as breakthroughs in the technology spur a flood of artificial content.Super Cat League (3.9 million subscribers)বজল মিয়া 767k (2 million subscribers – this account has since...",
-      "author": "Priya Bharadia",
-      "content": "Nearly one in 10 of the fastest growing channels globally consist of mass-produced, surreal AI-generated videosBabies trapped in space, zombie football stars and cat soap operas: welcome to YouTube in the era of AI video.Nearly one in 10 of the fastest growing YouTube channels globally are showing AI-generated content only, as breakthroughs in the technology spur a flood of artificial content.Super Cat League (3.9 million subscribers)বজল মিয়া 767k (2 million subscribers – this account has since...",
+      "article_id": "7e0951a56d005933b4776cb6e2ee048a",
+      "title": "New research could block AI models learning from your online content",
+      "source": "aihub",
+      "url": "https://aihub.org/2025/08/14/new-research-could-block-ai-models-learning-from-your-online-content/",
+      "published_date": "2025-08-14T14:03:50+00:00",
+      "category": "Open Source",
+      "description": "“Noise” protection can be added to content before it’s uploaded online. A new technique developed by Australian researchers could stop unauthorised artificial intelligence (AI) systems learning from photos, artwork and other image-based content. Developed by CSIRO, Australia’s national science agency, in partnership with the Cyber Security Cooperative Research Centre (CSCRC) and the University of Chicago, […]",
+      "author": "CSIRO",
+      "content": "“Noise” protection can be added to content before it’s uploaded online. A new technique developed by Australian researchers could stop unauthorised artificial intelligence (AI) systems learning from photos, artwork and other image-based content. Developed by CSIRO, Australia’s national science agency, in partnership with the Cyber Security Cooperative Research Centre (CSCRC) and the University of Chicago, […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -296,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-17T12:39:36.573524+00:00"
+        "consensus_timestamp": "2025-08-17T16:29:26.370463+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-17T12:39:36.573527+00:00"
+        "timestamp": "2025-08-17T16:29:26.370466+00:00"
       },
       "article_type": "article"
     }
