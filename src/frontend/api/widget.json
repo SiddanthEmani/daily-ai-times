@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-30T04:33:43.780548+00:00",
+  "updated": "2025-08-30T08:26:02.369122+00:00",
   "top_stories": [
     {
       "article_id": "b91c3ca77b782cdd1aef853c6b7de9b9",
@@ -15,9 +15,71 @@
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.9
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-30T08:26:02.242243+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-30T08:26:02.242247+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "f0b7f419c446df8da632899d144cc3ac",
+      "title": "Meet Boti: The AI assistant transforming how the citizens of Buenos Aires access government information with Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/meet-boti-the-ai-assistant-transforming-how-the-citizens-of-buenos-aires-access-government-information-with-amazon-bedrock/",
+      "published_date": "2025-08-28T20:25:00+00:00",
+      "category": "Industry",
+      "description": "This post describes the agentic AI assistant built by the Government of the City of Buenos Aires and the GenAIIC to respond to citizens’ questions about government procedures. The solution consists of two primary components: an input guardrail system that helps prevent the system from responding to harmful user queries and a government procedures agent that retrieves relevant information and generates responses.",
+      "author": "Julieta Rappan, Macarena Blasi, María Candela Blanco, Leandro Micchele",
+      "content": "This post describes the agentic AI assistant built by the Government of the City of Buenos Aires and the GenAIIC to respond to citizens’ questions about government procedures. The solution consists of two primary components: an input guardrail system that helps prevent the system from responding to harmful user queries and a government procedures agent that retrieves relevant information and generates responses.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,23 +107,23 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-30T04:33:43.665354+00:00"
+        "consensus_timestamp": "2025-08-30T08:26:02.240987+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-30T04:33:43.665357+00:00"
+        "timestamp": "2025-08-30T08:26:02.240990+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "7ee5f7cf0307aaf29389e402311478b7",
@@ -106,42 +168,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-30T04:33:43.663538+00:00"
+        "consensus_timestamp": "2025-08-30T08:26:02.240670+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-30T04:33:43.663543+00:00"
+        "timestamp": "2025-08-30T08:26:02.240672+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9d43cdbb1a08e8ffcca71fbd5efbc948",
-      "title": "Cognizant, Workfabric AI to Train 1,000 Context Engineers",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/cognizant-workfabric-ai-to-train-1000-context-engineers/",
-      "published_date": "2025-08-29T09:20:49+00:00",
+      "article_id": "3c1c732d6bac1b15acc7ac82ee2ae24b",
+      "title": "NVFP4 Trains with Precision of 16-Bit and Speed and Efficiency of 4-Bit",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvfp4-trains-with-precision-of-16-bit-and-speed-and-efficiency-of-4-bit/",
+      "published_date": "2025-08-25T15:05:23+00:00",
       "category": "Industry",
-      "description": "The engineers will be equipped with the partnering company’s ContextFabric platform, enabling Cognizant to deliver enterprise-grade agentic solutions at scale to its clients. The post Cognizant, Workfabric AI to Train 1,000 Context Engineers appeared first on Analytics India Magazine.",
-      "author": "C P Balasubramanyam",
-      "content": "The engineers will be equipped with the partnering company’s ContextFabric platform, enabling Cognizant to deliver enterprise-grade agentic solutions at scale to its clients. The post Cognizant, Workfabric AI to Train 1,000 Context Engineers appeared first on Analytics India Magazine.",
+      "description": "In recent years, AI workloads have grown exponentially—not only in the deployment of large language models (LLMs) but also in the demand to process ever more...",
+      "author": "Kirthi Devleker",
+      "content": "In recent years, AI workloads have grown exponentially—not only in the deployment of large language models (LLMs) but also in the demand to process ever more...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-30T04:33:43.667888+00:00"
+        "consensus_timestamp": "2025-08-30T08:26:02.243408+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,27 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-30T04:33:43.667891+00:00"
+        "timestamp": "2025-08-30T08:26:02.243411+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2a31bb39848076ae6b272eba6fbe6fd1",
-      "title": "NVIDIA Positions Itself as Backbone of $4 Trillion AI Gold Rush",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/global-tech/nvidia-positions-itself-as-backbone-of-4-trillion-ai-gold-rush/",
-      "published_date": "2025-08-29T05:26:07+00:00",
+      "article_id": "569e01395ae6314edbcbf2e5193eb012",
+      "title": "New Nemotron Nano 2 Open Reasoning Model Tops Leaderboard and Delivers 6x Higher Throughput",
+      "source": "nvidia_developer",
+      "url": "https://huggingface.co/blog/nvidia/supercharge-ai-reasoning-with-nemotron-nano-2?nvid=nv-int-tblg-513492%20",
+      "published_date": "2025-08-19T20:50:07+00:00",
       "category": "Industry",
-      "description": "Governments worldwide are racing to build sovereign AI infrastructure and NVIDIA has become the go-to supplier. The post NVIDIA Positions Itself as Backbone of $4 Trillion AI Gold Rush appeared first on Analytics India Magazine.",
-      "author": "Siddharth Jindal",
-      "content": "Governments worldwide are racing to build sovereign AI infrastructure and NVIDIA has become the go-to supplier. The post NVIDIA Positions Itself as Backbone of $4 Trillion AI Gold Rush appeared first on Analytics India Magazine.",
+      "description": "There’s a new leaderboard-topping NVIDIA Nemotron Nano 2 model. It’s an open model with leading accuracy and up to 6x higher throughput compared to the next...",
+      "author": "Chintan Patel",
+      "content": "There’s a new leaderboard-topping NVIDIA Nemotron Nano 2 model. It’s an open model with leading accuracy and up to 6x higher throughput compared to the next...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -231,87 +293,25 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-30T04:33:43.668121+00:00"
+        "consensus_timestamp": "2025-08-30T08:26:02.243874+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-30T04:33:43.668123+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ce6478e752aacfd0f8cf6b76f340cd92",
-      "title": "Vibe coding is transforming software. Enterprise is the next frontier",
-      "source": "neural_thenextweb",
-      "url": "https://thenextweb.com/news/how-vibe-coding-will-transform-enterprise",
-      "published_date": "2025-08-25T09:00:51+00:00",
-      "category": "Media",
-      "description": "Vibe coding is redefining who can build software. By enabling code generation through natural language prompts, it’s quickly gained traction among startups and indie developers. But the biggest opportunity lies ahead: the enterprise. The rapid rise of Lovable — which recently raised a $200mn Series A at a $1.8bn valuation — illustrates the remarkable progress of vibe coding. Having backed the Swedish startup at the seed stage, I see this as just the beginning. What’s next? A fundamental...",
-      "author": "Thomas Cuvelier",
-      "content": "Vibe coding is redefining who can build software. By enabling code generation through natural language prompts, it’s quickly gained traction among startups and indie developers. But the biggest opportunity lies ahead: the enterprise. The rapid rise of Lovable — which recently raised a $200mn Series A at a $1.8bn valuation — illustrates the remarkable progress of vibe coding. Having backed the Swedish startup at the seed stage, I see this as just the beginning. What’s next? A fundamental...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-30T04:33:43.682421+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-30T04:33:43.682424+00:00"
+        "timestamp": "2025-08-30T08:26:02.243877+00:00"
       },
       "article_type": "article"
     }
   ],
-  "total_count": 22,
+  "total_count": 25,
   "pipeline_version": "3.0_with_deep_intelligence"
 }
