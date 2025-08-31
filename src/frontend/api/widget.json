@@ -1,22 +1,22 @@
 {
-  "updated": "2025-08-31T12:36:41.871685+00:00",
+  "updated": "2025-08-31T16:24:00.886103+00:00",
   "top_stories": [
     {
-      "article_id": "8d537a48995b5b13907933f15c2154b0",
-      "title": "Verizon&#8217;s &#8216;software issue&#8217; has disconnected many wireless customers across the US",
-      "source": "the_verge",
-      "url": "https://www.theverge.com/verizon/768450/verizon-is-down-outage-network-software-issue",
-      "published_date": "2025-08-30T21:54:13+00:00",
+      "article_id": "5a527b00a31875f7a3eae99fd5317cea",
+      "title": "Tesla denied having fatal crash data until a hacker found it",
+      "source": "ars_technica",
+      "url": "https://arstechnica.com/cars/2025/08/how-a-hacker-helped-win-a-wrongful-death-lawsuit-against-tesla/",
+      "published_date": "2025-08-29T18:48:51+00:00",
       "category": "Media",
-      "description": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or receive calls for hours, while DownDetector’s tracker peaked in the afternoon at around 3:30PM ET with more than 20,000 reports. Some customers report their service has continued […]",
-      "author": "Richard Lawler",
-      "content": "Verizon has confirmed to customers in stores and online that its network is having an issue on Saturday. Many people have been unable to connect and make or receive calls for hours, while DownDetector’s tracker peaked in the afternoon at around 3:30PM ET with more than 20,000 reports. Some customers report their service has continued […]",
+      "description": "The data was key evidence in the death of a pedestrian in 2019.",
+      "author": "Jonathan M. Gitlin",
+      "content": "The data was key evidence in the death of a pedestrian in 2019.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.8250000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,24 +44,86 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.95,
+        "score": 0.75,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-31T12:36:41.781834+00:00"
+        "consensus_timestamp": "2025-08-31T16:24:00.829944+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.6499999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-08-31T16:24:00.829947+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "f7e472f1d662198aa9e62c4745b292b1",
+      "title": "Inline code nodes now supported in Amazon Bedrock Flows in public preview",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/inline-code-nodes-now-supported-in-amazon-bedrock-flows-in-public-preview/",
+      "published_date": "2025-08-21T20:36:40+00:00",
+      "category": "Industry",
+      "description": "We are excited to announce the public preview of support for inline code nodes in Amazon Bedrock Flows. With this powerful new capability, you can write Python scripts directly within your workflow, alleviating the need for separate AWS Lambda functions for simple logic. This feature streamlines preprocessing and postprocessing tasks (like data normalization and response formatting), simplifying generative AI application development and making it more accessible across organizations.",
+      "author": "Shubhankar Sumar",
+      "content": "We are excited to announce the public preview of support for inline code nodes in Amazon Bedrock Flows. With this powerful new capability, you can write Python scripts directly within your workflow, alleviating the need for separate AWS Lambda functions for simple logic. This feature streamlines preprocessing and postprocessing tasks (like data normalization and response formatting), simplifying generative AI application development and making it more accessible across organizations.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-08-31T16:24:00.820436+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-31T12:36:41.781836+00:00"
+        "timestamp": "2025-08-31T16:24:00.820439+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "b61148796770d85ace120db05beae36a",
@@ -110,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-31T12:36:41.764252+00:00"
+        "consensus_timestamp": "2025-08-31T16:24:00.819120+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-31T12:36:41.764255+00:00"
+        "timestamp": "2025-08-31T16:24:00.819123+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f7e472f1d662198aa9e62c4745b292b1",
-      "title": "Inline code nodes now supported in Amazon Bedrock Flows in public preview",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/inline-code-nodes-now-supported-in-amazon-bedrock-flows-in-public-preview/",
-      "published_date": "2025-08-21T20:36:40+00:00",
+      "article_id": "7ee5f7cf0307aaf29389e402311478b7",
+      "title": "Microsoft is a Leader in the 2025 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/",
+      "published_date": "2025-08-21T15:00:00+00:00",
       "category": "Industry",
-      "description": "We are excited to announce the public preview of support for inline code nodes in Amazon Bedrock Flows. With this powerful new capability, you can write Python scripts directly within your workflow, alleviating the need for separate AWS Lambda functions for simple logic. This feature streamlines preprocessing and postprocessing tasks (like data normalization and response formatting), simplifying generative AI application development and making it more accessible across organizations.",
-      "author": "Shubhankar Sumar",
-      "content": "We are excited to announce the public preview of support for inline code nodes in Amazon Bedrock Flows. With this powerful new capability, you can write Python scripts directly within your workflow, alleviating the need for separate AWS Lambda functions for simple logic. This feature streamlines preprocessing and postprocessing tasks (like data normalization and response formatting), simplifying generative AI application development and making it more accessible across organizations.",
+      "description": "We’re proud to announce that Microsoft has been named a Leader in the 2025 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms for a second year in a row, and the furthest to the right in Completeness of Vision. The post Microsoft is a Leader in the 2025 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms appeared first on Microsoft Azure Blog.",
+      "author": "Scott Hunter",
+      "content": "We’re proud to announce that Microsoft has been named a Leader in the 2025 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms for a second year in a row, and the furthest to the right in Completeness of Vision. The post Microsoft is a Leader in the 2025 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.875,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -172,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-31T12:36:41.765549+00:00"
+        "consensus_timestamp": "2025-08-31T16:24:00.819756+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,27 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-31T12:36:41.765552+00:00"
+        "timestamp": "2025-08-31T16:24:00.819759+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2257c77f7850ab40fd97cf00e72267f7",
-      "title": "Introducing NVIDIA Jetson Thor, the Ultimate Platform for Physical AI",
+      "article_id": "3650663d8d7797dae89c76d4e076a143",
+      "title": "Announcing the Latest NVIDIA Gaming AI and Neural Rendering Technologies",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/",
-      "published_date": "2025-08-25T15:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/announcing-the-latest-nvidia-gaming-ai-and-neural-rendering-technologies/",
+      "published_date": "2025-08-18T19:30:00+00:00",
       "category": "Industry",
-      "description": "Robotics is undergoing a revolution, moving beyond the era of specialist machines to generalist robotics. This shift moves away from single-purpose,...",
-      "author": "Shashank Maheshwari",
-      "content": "Robotics is undergoing a revolution, moving beyond the era of specialist machines to generalist robotics. This shift moves away from single-purpose,...",
+      "description": "Today at Gamescom 2025, NVIDIA unveiled updates to NVIDIA RTX neural rendering and NVIDIA ACE generative AI technologies that enable developers to deliver...",
+      "author": "Ike Nnoli",
+      "content": "Today at Gamescom 2025, NVIDIA unveiled updates to NVIDIA RTX neural rendering and NVIDIA ACE generative AI technologies that enable developers to deliver...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-08-31T12:36:41.767577+00:00"
+        "consensus_timestamp": "2025-08-31T16:24:00.823107+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,73 +307,11 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-08-31T12:36:41.767580+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f093f5a9aa71782dc926035227e59338",
-      "title": "Deploying Your Omniverse Kit Apps at Scale",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/deploying-your-omniverse-kit-apps-at-scale/",
-      "published_date": "2025-08-20T13:00:00+00:00",
-      "category": "Industry",
-      "description": "Running 3D applications that take advantage of advanced rendering and simulation technologies often requires users to navigate complex installs and have access...",
-      "author": "Ashley Goldstein",
-      "content": "Running 3D applications that take advantage of advanced rendering and simulation technologies often requires users to navigate complex installs and have access...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-08-31T12:36:41.767941+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-08-31T12:36:41.767944+00:00"
+        "timestamp": "2025-08-31T16:24:00.823111+00:00"
       },
       "article_type": "article"
     }
   ],
-  "total_count": 21,
+  "total_count": 15,
   "pipeline_version": "3.0_with_deep_intelligence"
 }
