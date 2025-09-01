@@ -1,23 +1,23 @@
 {
-  "updated": "2025-09-01T12:47:27.351934+00:00",
+  "updated": "2025-09-01T16:26:31.143595+00:00",
   "top_stories": [
     {
-      "article_id": "b71bd5a852e072b35ec75e65f362c11f",
-      "title": "StepFun AI Releases Step-Audio 2 Mini: An Open-Source 8B Speech-to-Speech AI Model that Surpasses GPT-4o-Audio",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2025/08/31/stepfun-ai-releases-step-audio-2-mini-an-open-source-8b-speech-to-speech-ai-model-that-surpasses-gpt-4o-audio/",
-      "published_date": "2025-09-01T06:55:12+00:00",
+      "article_id": "ad6be6d75513750c9cd13e5b1d20e443",
+      "title": "Nvidia says two mystery customers accounted for 39% of Q2 revenue",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/08/30/nvidia-says-two-mystery-customers-accounted-for-39-of-q2-revenue/",
+      "published_date": "2025-08-30T21:40:49+00:00",
       "category": "Industry",
-      "description": "The StepFun AI team has released Step-Audio 2 Mini, an 8B parameter speech-to-speech large audio language model (LALM) that delivers expressive, grounded, and real-time audio interaction. Released under the Apache 2.0 license, this open-source model achieves state-of-the-art performance across speech recognition, audio understanding, and speech conversation benchmarks—surpassing commercial systems such as GPT-4o-Audio. Key Features 1. […] The post StepFun AI Releases Step-Audio 2 Mini: An...",
-      "author": "Asif Razzaq",
-      "content": "The StepFun AI team has released Step-Audio 2 Mini, an 8B parameter speech-to-speech large audio language model (LALM) that delivers expressive, grounded, and real-time audio interaction. Released under the Apache 2.0 license, this open-source model achieves state-of-the-art performance across speech recognition, audio understanding, and speech conversation benchmarks—surpassing commercial systems such as GPT-4o-Audio. Key Features 1. […] The post StepFun AI Releases Step-Audio 2 Mini: An...",
+      "description": "Nearly 40% of Nvidia’s second quarter revenue came from just two companies, identified in a filing as \"Customer A\" and \"Customer B.\"",
+      "author": "Anthony Ha",
+      "content": "Nearly 40% of Nvidia’s second quarter revenue came from just two companies, identified in a filing as \"Customer A\" and \"Customer B.\"",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.805,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.8250000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,23 +45,85 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-01T12:47:27.289971+00:00"
+        "consensus_timestamp": "2025-09-01T16:26:31.022549+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-01T16:26:31.022551+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "598186158fedee76070548fc894b916a",
+      "title": "Introducing auto scaling on Amazon SageMaker HyperPod",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-auto-scaling-on-amazon-sagemaker-hyperpod/",
+      "published_date": "2025-08-29T16:21:02+00:00",
+      "category": "Industry",
+      "description": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
+      "author": "Vivek Gangasani",
+      "content": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.99,
+        "overall_score": 0.9305000000000001,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-01T16:26:31.020994+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-01T12:47:27.289977+00:00"
+        "timestamp": "2025-09-01T16:26:31.020997+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "ce6a345f18444e717c436dd855de3987",
@@ -73,6 +135,130 @@
       "description": "Discover how MIXI, a leader in digital entertainment and lifestyle services in Japan, uses ChatGPT Enterprise to transform productivity, boost AI adoption across teams, and create a secure environment for innovation.",
       "author": "",
       "content": "Discover how MIXI, a leader in digital entertainment and lifestyle services in Japan, uses ChatGPT Enterprise to transform productivity, boost AI adoption across teams, and create a secure environment for innovation.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-01T16:26:31.020582+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-01T16:26:31.020585+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "cb2e29bf1db62274e6194012d630d5f3",
+      "title": "At Gamescom 2025, NVIDIA DLSS 4 and Ray Tracing Come to This Year’s Biggest Titles",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/gamescom-2025-dlss-4-ray-tracing/",
+      "published_date": "2025-08-18T19:30:01+00:00",
+      "category": "Industry",
+      "description": "With over 175 games now supporting NVIDIA DLSS 4 — a suite of advanced, AI-powered neural rendering technologies — gamers and tech enthusiasts everywhere can experience breakthrough performance in this year’s most anticipated titles, including Borderlands 4, Hell Is Us and Fate Trigger. Plus, path tracing is making its way to Resident Evil Requiem and Read Article",
+      "author": "Caiti Sullivan",
+      "content": "With over 175 games now supporting NVIDIA DLSS 4 — a suite of advanced, AI-powered neural rendering technologies — gamers and tech enthusiasts everywhere can experience breakthrough performance in this year’s most anticipated titles, including Borderlands 4, Hell Is Us and Fate Trigger. Plus, path tracing is making its way to Resident Evil Requiem and Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-01T16:26:31.022411+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-01T16:26:31.022414+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5996618b724e6eeb952eabd945487708",
+      "title": "How to Improve CUDA Kernel Performance with Shared Memory Register Spilling",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-improve-cuda-kernel-performance-with-shared-memory-register-spilling/",
+      "published_date": "2025-08-27T16:30:00+00:00",
+      "category": "Industry",
+      "description": "When a CUDA kernel requires more hardware registers than are available, the compiler is forced to move the excess variables into local memory, a process known...",
+      "author": "Divya Shanmughan",
+      "content": "When a CUDA kernel requires more hardware registers than are available, the compiler is forced to move the excess variables into local memory, a process known...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -110,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-01T12:47:27.282838+00:00"
+        "consensus_timestamp": "2025-09-01T16:26:31.023343+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,193 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-01T12:47:27.282842+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b9bb296a8329e47b4d05c7b606f27cbc",
-      "title": "NIH study links particulate air pollution to increased mutations in lung cancers among nonsmokers",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-study-links-particulate-air-pollution-increased-mutations-lung-cancers-among-nonsmokers",
-      "published_date": "2025-09-01T12:34:37.160002+00:00",
-      "category": "Government",
-      "description": "Whole-genome sequencing study found air pollution to cause more cancer-related changes than secondhand smoke.",
-      "author": "",
-      "content": "Whole-genome sequencing study found air pollution to cause more cancer-related changes than secondhand smoke.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-01T12:47:27.281809+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-01T12:47:27.281812+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3a19c9bf257aac4f09ff5b791751201e",
-      "title": "Cerebras & Core42 Deliver Record Performance for OpenAI GPT Model",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/cerebras-core42-deliver-record-performance-for-openai-gpt-model/",
-      "published_date": "2025-09-01T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Global-scale AI for real-time reasoning and agentic workloads, now at record speed. Cerebras, the fastest AI provider in the world, and Core42, a G42 company specializing in sovereign cloud and AI infrastructure, announced the global availability of OpenAI’s gpt-oss-120B. Core42 AI Cloud via Compass API brings Cerebras Inference at 3,000... The post Cerebras & Core42 Deliver Record Performance for OpenAI GPT Model first appeared on AI-Tech Park.",
-      "author": "Business Wire",
-      "content": "Global-scale AI for real-time reasoning and agentic workloads, now at record speed. Cerebras, the fastest AI provider in the world, and Core42, a G42 company specializing in sovereign cloud and AI infrastructure, announced the global availability of OpenAI’s gpt-oss-120B. Core42 AI Cloud via Compass API brings Cerebras Inference at 3,000... The post Cerebras & Core42 Deliver Record Performance for OpenAI GPT Model first appeared on AI-Tech Park.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-01T12:47:27.286604+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-01T12:47:27.286607+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f1471afc42d4cd25304a8d78e80201bd",
-      "title": "Collective alignment: public input on our Model Spec",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/collective-alignment-aug-2025-updates",
-      "published_date": "2025-08-27T13:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI surveyed over 1,000 people worldwide on how AI should behave and compared their views to our Model Spec. Learn how collective alignment is shaping AI defaults to better reflect diverse human values and perspectives.",
-      "author": "",
-      "content": "OpenAI surveyed over 1,000 people worldwide on how AI should behave and compared their views to our Model Spec. Learn how collective alignment is shaping AI defaults to better reflect diverse human values and perspectives.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-01T12:47:27.282563+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-01T12:47:27.282566+00:00"
+        "timestamp": "2025-09-01T16:26:31.023346+00:00"
       },
       "article_type": "article"
     }
