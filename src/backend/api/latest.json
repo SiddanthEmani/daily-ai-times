@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-09-07T01:23:30.456213+00:00",
+  "generated_at": "2025-09-07T04:27:05.709687+00:00",
   "articles": [
     {
       "article_id": "f730c12bb87c7ea1e705f8b10e051ddc",
@@ -45,40 +45,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.387092+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.637044+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.387095+00:00"
+        "timestamp": "2025-09-07T04:27:05.637047+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "d1b296137e9f1256e404b20e93e2bde1",
-      "title": "Revolutionizing warehouse automation with scientific simulation",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
-      "published_date": "2025-08-26T19:50:23+00:00",
+      "article_id": "598186158fedee76070548fc894b916a",
+      "title": "Introducing auto scaling on Amazon SageMaker HyperPod",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-auto-scaling-on-amazon-sagemaker-hyperpod/",
+      "published_date": "2025-08-29T16:21:02+00:00",
       "category": "Industry",
-      "description": "With a novel parallel-computing architecture, a CAD-to-USD pipeline, and the use of OpenUSD as ground truth, a new simulator can explore hundreds of sensor configurations in the time it takes to test just a few physical setups.",
-      "author": "Deniz Akyildiz",
-      "content": "With a novel parallel-computing architecture, a CAD-to-USD pipeline, and the use of OpenUSD as ground truth, a new simulator can explore hundreds of sensor configurations in the time it takes to test just a few physical setups.",
+      "description": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
+      "author": "Vivek Gangasani",
+      "content": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.388579+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.635914+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,7 +121,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.388582+00:00"
+        "timestamp": "2025-09-07T04:27:05.635917+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "422f7543ec152f94b978d658d7e0e302",
+      "title": "Transforming scientific discovery with Microsoft Azure and NVIDIA",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/",
+      "published_date": "2025-08-26T15:00:00+00:00",
+      "category": "Industry",
+      "description": "Scientific innovation speeds up with Azure’s cloud and NVIDIA’s GPUs—see how researchers are transforming discovery. The post Transforming scientific discovery with Microsoft Azure and NVIDIA appeared first on Microsoft Azure Blog.",
+      "author": "Omar Khan",
+      "content": "Scientific innovation speeds up with Azure’s cloud and NVIDIA’s GPUs—see how researchers are transforming discovery. The post Transforming scientific discovery with Microsoft Azure and NVIDIA appeared first on Microsoft Azure Blog.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-07T04:27:05.635225+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-07T04:27:05.635228+00:00"
       },
       "article_type": "article"
     },
@@ -169,41 +231,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.384718+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.634531+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.384721+00:00"
+        "timestamp": "2025-09-07T04:27:05.634534+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "598186158fedee76070548fc894b916a",
-      "title": "Introducing auto scaling on Amazon SageMaker HyperPod",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-auto-scaling-on-amazon-sagemaker-hyperpod/",
-      "published_date": "2025-08-29T16:21:02+00:00",
+      "article_id": "2015a248c6a31809309d0b267a53228e",
+      "title": "Madhya Pradesh Releases Draft SpaceTech Policy 2025 for Public Consultation",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/madhya-pradesh-releases-draft-spacetech-policy-2025-for-public-consultation/",
+      "published_date": "2025-09-04T08:29:26+00:00",
       "category": "Industry",
-      "description": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
-      "author": "Vivek Gangasani",
-      "content": "In this post, we announce that Amazon SageMaker HyperPod now supports managed node automatic scaling with Karpenter, enabling efficient scaling of SageMaker HyperPod clusters to meet inference and training demands. We dive into the benefits of Karpenter and provide details on enabling and configuring Karpenter in SageMaker HyperPod EKS clusters.",
+      "description": "To encourage innovation, the state has proposed a ₹200 crore spacetech venture fund, incubation programmes and grants for research and startups. The post Madhya Pradesh Releases Draft SpaceTech Policy 2025 for Public Consultation appeared first on Analytics India Magazine.",
+      "author": "Shalini Mondal",
+      "content": "To encourage innovation, the state has proposed a ₹200 crore spacetech venture fund, incubation programmes and grants for research and startups. The post Madhya Pradesh Releases Draft SpaceTech Policy 2025 for Public Consultation appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.875,
-        "confidence_mean": 0.98
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -230,22 +292,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.386058+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.639796+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.386061+00:00"
+        "timestamp": "2025-09-07T04:27:05.639799+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "800a5b0b671bea78eddc9954b92e393d",
+      "title": "6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/6-in-10-firms-expect-ai-to-act-as-teammate-or-supervisor-to-other-ai-systems-by-mid-2026-capgemini-report/",
+      "published_date": "2025-09-05T10:46:51+00:00",
+      "category": "Industry",
+      "description": "The findings further reveal that one-third of organisations are now fully or partially scaling generative AI, compared with just 6% in 2023. The post 6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report appeared first on Analytics India Magazine.",
+      "author": "C P Balasubramanyam",
+      "content": "The findings further reveal that one-third of organisations are now fully or partially scaling generative AI, compared with just 6% in 2023. The post 6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-07T04:27:05.639165+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-07T04:27:05.639168+00:00"
       },
       "article_type": "article"
     },
@@ -293,41 +417,41 @@
           }
         },
         "score": 0.95,
-        "confidence": 0.9,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.385004+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.634805+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.77,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.385007+00:00"
+        "timestamp": "2025-09-07T04:27:05.634808+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "800a5b0b671bea78eddc9954b92e393d",
-      "title": "6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/6-in-10-firms-expect-ai-to-act-as-teammate-or-supervisor-to-other-ai-systems-by-mid-2026-capgemini-report/",
-      "published_date": "2025-09-05T10:46:51+00:00",
+      "article_id": "d1b296137e9f1256e404b20e93e2bde1",
+      "title": "Revolutionizing warehouse automation with scientific simulation",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/revolutionizing-warehouse-automation-with-scientific-simulation",
+      "published_date": "2025-08-26T19:50:23+00:00",
       "category": "Industry",
-      "description": "The findings further reveal that one-third of organisations are now fully or partially scaling generative AI, compared with just 6% in 2023. The post 6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report appeared first on Analytics India Magazine.",
-      "author": "C P Balasubramanyam",
-      "content": "The findings further reveal that one-third of organisations are now fully or partially scaling generative AI, compared with just 6% in 2023. The post 6 in 10 Firms Expect AI to Act as Teammate or Supervisor to Other AI Systems by Mid-2026: Capgemini Report appeared first on Analytics India Magazine.",
+      "description": "With a novel parallel-computing architecture, a CAD-to-USD pipeline, and the use of OpenUSD as ground truth, a new simulator can explore hundreds of sensor configurations in the time it takes to test just a few physical setups.",
+      "author": "Deniz Akyildiz",
+      "content": "With a novel parallel-computing architecture, a CAD-to-USD pipeline, and the use of OpenUSD as ground truth, a new simulator can explore hundreds of sensor configurations in the time it takes to test just a few physical setups.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
         "overall_score": 0.8875,
-        "confidence_mean": 0.98
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -358,7 +482,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.389264+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.638440+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,7 +493,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.389267+00:00"
+        "timestamp": "2025-09-07T04:27:05.638443+00:00"
       },
       "article_type": "article"
     },
@@ -416,11 +540,73 @@
             "enhancement_suggestions": []
           }
         },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-07T04:27:05.638119+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-07T04:27:05.638121+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7ecc170b2a0ffb8572a83469d4054885",
+      "title": "GPT-5 bio bug bounty call",
+      "source": "openai_blog",
+      "url": "https://openai.com/gpt-5-bio-bug-bounty",
+      "published_date": "2025-09-05T08:45:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI invites researchers to its Bio Bug Bounty. Test GPT-5’s safety with a universal jailbreak prompt and win up to $25,000.",
+      "author": "",
+      "content": "OpenAI invites researchers to its Bio Bug Bounty. Test GPT-5’s safety with a universal jailbreak prompt and win up to $25,000.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.9,
+        "impact_score": 0.85,
+        "overall_score": 0.8775000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
         "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.388182+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.634578+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,20 +617,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.388185+00:00"
+        "timestamp": "2025-09-07T04:27:05.634581+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "a57d47e9ca6316d2b847b2abe451c1ae",
-      "title": "Now Live: Europe’s First Exascale Supercomputer, JUPITER, Accelerates Climate Research, Neuroscience, Quantum Simulation",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/jupiter-exascale-supercomputer-live/",
-      "published_date": "2025-09-05T14:00:09+00:00",
-      "category": "Industry",
-      "description": "The Jülich Supercomputing Centre’s JUPITER — Europe’s first exascale supercomputer — is officially live.",
-      "author": "Chris Porter",
-      "content": "The Jülich Supercomputing Centre’s JUPITER — Europe’s first exascale supercomputer — is officially live.",
+      "article_id": "67c238fee9a178c234f4ecbd16f5dd8f",
+      "title": "NIH researchers develop AI agent that improves accuracy of gene set analysis by leveraging expert-curated databases",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-develop-ai-agent-improves-accuracy-gene-set-analysis-leveraging-expert-curated-databases",
+      "published_date": "2025-09-07T04:19:08.052194+00:00",
+      "category": "Government",
+      "description": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
+      "author": "",
+      "content": "The AI agent could help lead to a better understanding of how different diseases and conditions affect groups of genes individually and together.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -482,7 +668,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.386240+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.633660+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,69 +679,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.386242+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7ab2a7f74a4c5f026e62989826aa5aea",
-      "title": "NIH to crack down on excessive publisher fees for publicly funded research",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-crack-down-excessive-publisher-fees-publicly-funded-research",
-      "published_date": "2025-09-07T01:17:42.700732+00:00",
-      "category": "Government",
-      "description": "Effort is part of NIH’s ongoing commitment to scientific transparency and responsible stewardship of taxpayer dollars.",
-      "author": "",
-      "content": "Effort is part of NIH’s ongoing commitment to scientific transparency and responsible stewardship of taxpayer dollars.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.383883+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-07T01:23:30.383886+00:00"
+        "timestamp": "2025-09-07T04:27:05.633665+00:00"
       },
       "article_type": "article"
     },
@@ -572,9 +696,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
+        "overall_score": 0.8725,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -606,7 +730,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.388945+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.638829+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -617,26 +741,150 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.388948+00:00"
+        "timestamp": "2025-09-07T04:27:05.638832+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e0f97b886f3bc07ccf8e683649802e69",
-      "title": "Karen Hao on the making of a $90B AI empire",
-      "source": "techcrunch_startups",
-      "url": "https://techcrunch.com/podcast/karen-hao-on-the-making-of-a-90b-ai-empire/",
-      "published_date": "2025-09-03T16:31:39+00:00",
-      "category": "Startups",
-      "description": "Karen Hao, the bestselling author of “Empire of AI,” has watched OpenAI go from a nonprofit “laughingstock” to a $90 billion powerhouse chasing artificial general intelligence at breakneck speeds. Hao, who first profiled the company back in 2020, says early visions of building AI “for humanity’s benefit” were quickly overtaken by a familiar Silicon Valley […]",
-      "author": "Theresa Loconsolo, Rebecca Bellan",
-      "content": "Karen Hao, the bestselling author of “Empire of AI,” has watched OpenAI go from a nonprofit “laughingstock” to a $90 billion powerhouse chasing artificial general intelligence at breakneck speeds. Hao, who first profiled the company back in 2020, says early visions of building AI “for humanity’s benefit” were quickly overtaken by a familiar Silicon Valley […]",
+      "article_id": "2e81c1e019c08c5222e8ecd4db4f055d",
+      "title": "Agent Factory: From prototype to production—developer tools and rapid agent development",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/",
+      "published_date": "2025-09-03T15:00:00+00:00",
+      "category": "Industry",
+      "description": "It's no longer whether you can build an agent—it’s how fast and seamlessly you can go from idea to enterprise-ready deployment. The post Agent Factory: From prototype to production—developer tools and rapid agent development appeared first on Microsoft Azure Blog.",
+      "author": "Yina Arenas",
+      "content": "It's no longer whether you can build an agent—it’s how fast and seamlessly you can go from idea to enterprise-ready deployment. The post Agent Factory: From prototype to production—developer tools and rapid agent development appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.83,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-07T04:27:05.635133+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-07T04:27:05.635136+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "939189f9d1f6511aadecece32da5b08f",
+      "title": "Accelerating HPC and AI research in universities with Amazon SageMaker HyperPod",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-hpc-and-ai-research-in-universities-with-amazon-sagemaker-hyperpod/",
+      "published_date": "2025-09-05T17:04:49+00:00",
+      "category": "Industry",
+      "description": "In this post, we demonstrate how a research university implemented SageMaker HyperPod to accelerate AI research by using dynamic SLURM partitions, fine-grained GPU resource management, budget-aware compute cost tracking, and multi-login node load balancing—all integrated seamlessly into the SageMaker HyperPod environment.",
+      "author": "Tasneem Fathima",
+      "content": "In this post, we demonstrate how a research university implemented SageMaker HyperPod to accelerate AI research by using dynamic SLURM partitions, fine-grained GPU resource management, budget-aware compute cost tracking, and multi-login node load balancing—all integrated seamlessly into the SageMaker HyperPod environment.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-07T04:27:05.635319+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-07T04:27:05.635322+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "204aadd9cbacbe7a7662ff69f5e8ca71",
+      "title": "AI logistics startup Augment, from Deliverr’s founder, raises massive $85M Series A",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/09/04/ai-logistics-startup-augment-from-deliverrs-founder-raises-massive-85m-series-a/",
+      "published_date": "2025-09-04T19:00:00+00:00",
+      "category": "Industry",
+      "description": "The new funding, which was led by Redpoint, comes just five months after the startup launched out of stealth with a $25 million seed round.",
+      "author": "Marina Temkin",
+      "content": "The new funding, which was led by Redpoint, comes just five months after the startup launched out of stealth with a $25 million seed round.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -664,270 +912,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.393404+00:00"
+        "consensus_timestamp": "2025-09-07T04:27:05.637365+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-07T01:23:30.393407+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "02a5431c457bfa8d57486be06e1148df",
-      "title": "OpenAI and Greek Government launch ‘OpenAI for Greece’",
-      "source": "openai_blog",
-      "url": "https://openai.com/global-affairs/openai-for-greece",
-      "published_date": "2025-09-05T08:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI and the Greek Government have launched “OpenAI for Greece” to bring ChatGPT Edu into secondary schools and support responsible AI learning. This partnership aims to boost AI literacy, fuel local start-ups, and drive national economic growth.",
-      "author": "",
-      "content": "OpenAI and the Greek Government have launched “OpenAI for Greece” to bring ChatGPT Edu into secondary schools and support responsible AI learning. This partnership aims to boost AI literacy, fuel local start-ups, and drive national economic growth.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8525000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.384813+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-07T01:23:30.384816+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f1c0194d959fec7a24167aac2600de1e",
-      "title": "AI On: 6 Ways AI Agents Are Raising Team Performance — and How to Measure It",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/ways-ai-agents-are-raising-team-performance/",
-      "published_date": "2025-09-04T16:00:59+00:00",
-      "category": "Industry",
-      "description": "AI agents are expected to be involved in most business tasks within three years, with effective human-agent collaboration projected to increase human engagement in high-value tasks by 65%.",
-      "author": "Erik Pounds",
-      "content": "AI agents are expected to be involved in most business tasks within three years, with effective human-agent collaboration projected to increase human engagement in high-value tasks by 65%.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.82,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.386334+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-07T01:23:30.386336+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f4415a2660cca32f07b22273a365dc52",
-      "title": "Announcing the new cluster creation experience for Amazon SageMaker HyperPod",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/announcing-the-new-cluster-creation-experience-for-amazon-sagemaker-hyperpod/",
-      "published_date": "2025-09-02T16:23:13+00:00",
-      "category": "Industry",
-      "description": "With the new cluster creation experience, you can create your SageMaker HyperPod clusters, including the required prerequisite AWS resources, in one click, with prescriptive default values automatically applied. In this post, we explore the new cluster creation experience for Amazon SageMaker HyperPod.",
-      "author": "Giuseppe Angelo Porcelli",
-      "content": "With the new cluster creation experience, you can create your SageMaker HyperPod clusters, including the required prerequisite AWS resources, in one click, with prescriptive default values automatically applied. In this post, we explore the new cluster creation experience for Amazon SageMaker HyperPod.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.6,
-        "impact_score": 0.9,
-        "overall_score": 0.8125000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.385923+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-07T01:23:30.385926+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7fdebadf1f3de3c079f6182513170b34",
-      "title": "Azure mandatory multifactor authentication: Phase 2 starting in October 2025",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/",
-      "published_date": "2025-09-05T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Microsoft Azure is announcing the start of Phase 2 multifactor authentication enforcement at the Azure Resource Manager layer, starting October 1, 2025. The post Azure mandatory multifactor authentication: Phase 2 starting in October 2025 appeared first on Microsoft Azure Blog.",
-      "author": "Joy Shah and Neha Kulkarni",
-      "content": "Microsoft Azure is announcing the start of Phase 2 multifactor authentication enforcement at the Azure Resource Manager layer, starting October 1, 2025. The post Azure mandatory multifactor authentication: Phase 2 starting in October 2025 appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-07T01:23:30.385150+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-07T01:23:30.385153+00:00"
+        "timestamp": "2025-09-07T04:27:05.637368+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 285.5709547996521,
+    "processing_time": 386.65574407577515,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 386,
+      "total_processed": 403,
       "candidates": {
-        "headlines": 16,
-        "articles": 370,
+        "headlines": 18,
+        "articles": 385,
         "research_papers": 0
       },
       "selected": {
