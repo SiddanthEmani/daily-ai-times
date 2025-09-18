@@ -1,23 +1,23 @@
 {
-  "generated_at": "2025-09-18T08:30:00.625213+00:00",
+  "generated_at": "2025-09-18T12:41:30.578423+00:00",
   "articles": [
     {
-      "article_id": "1ee6c97558d2f65fb917063c61176e78",
-      "title": "Kleiner Perkins-backed voice AI startup Keplar aims to replace traditional market research",
+      "article_id": "a79c0ce1a9716b4b10ffcc6c8fa41ceb",
+      "title": "YouTube to use AI to help podcasters promote themselves with clips and Shorts",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/09/17/kleiner-perkins-backed-voice-ai-startup-keplar-aims-to-replace-traditional-market-research/",
-      "published_date": "2025-09-17T19:54:17+00:00",
+      "url": "https://techcrunch.com/2025/09/16/youtube-to-use-ai-to-help-podcasters-promote-themselves-with-clips-and-shorts/",
+      "published_date": "2025-09-16T14:30:00+00:00",
       "category": "Industry",
-      "description": "The two-year-old startup raised a $3.2 million seed round led by Kleiner Perkins.",
-      "author": "Marina Temkin",
-      "content": "The two-year-old startup raised a $3.2 million seed round led by Kleiner Perkins.",
+      "description": "YouTube teases new AI-powered tools for turning podcasts into video clips, even if they're audio-only.",
+      "author": "Sarah Perez",
+      "content": "YouTube teases new AI-powered tools for turning podcasts into video clips, even if they're audio-only.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.895,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,351 +45,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.542830+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.490715+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.542832+00:00"
+        "timestamp": "2025-09-18T12:41:30.490718+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0590754756d99a3aa20f3ccc3b735f78",
-      "title": "Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/videos/mira-muratis-thinking-machines-solves-the-mystery-of-llm-nondeterminism/",
-      "published_date": "2025-09-16T05:19:40+00:00",
-      "category": "Industry",
-      "description": "Mira Murati’s new company, Thinking Machines, solved a major AI problem: nondeterministic LLM outputs. By creating batch-invariant kernels for key operations, they ensure identical responses at temperature zero, improving reproducibility for research, audits, and safety-critical AI. This breakthrough may redefine industry standards for deterministic, trustworthy AI. The post Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism appeared first on Analytics India Magazine.",
-      "author": "Pabitra Moharana",
-      "content": "Mira Murati’s new company, Thinking Machines, solved a major AI problem: nondeterministic LLM outputs. By creating batch-invariant kernels for key operations, they ensure identical responses at temperature zero, improving reproducibility for research, audits, and safety-critical AI. This breakthrough may redefine industry standards for deterministic, trustworthy AI. The post Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.545778+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.545781+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0b7d376f27636f799e933c17ad82d3eb",
-      "title": "How Skello uses Amazon Bedrock to query data in a multi-tenant environment while keeping logical boundaries",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-skello-uses-amazon-bedrock-to-query-data-in-a-multi-tenant-environment-while-keeping-logical-boundaries/",
-      "published_date": "2025-09-11T17:59:15+00:00",
-      "category": "Industry",
-      "description": "Skello is a leading human resources (HR) software as a service (SaaS) solution focusing on employee scheduling and workforce management. Catering to diverse sectors such as hospitality, retail, healthcare, construction, and industry, Skello offers features including schedule creation, time tracking, and payroll preparation. We dive deep into the challenges of implementing large language models (LLMs) for data querying, particularly in the context of a French company operating under the General...",
-      "author": "Nicolas de Place",
-      "content": "Skello is a leading human resources (HR) software as a service (SaaS) solution focusing on employee scheduling and workforce management. Catering to diverse sectors such as hospitality, retail, healthcare, construction, and industry, Skello offers features including schedule creation, time tracking, and payroll preparation. We dive deep into the challenges of implementing large language models (LLMs) for data querying, particularly in the context of a French company operating under the General...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.541697+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.541700+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "356ddf7279d5093705cc1a8a78c58067",
-      "title": "Build a Report Generator AI Agent with NVIDIA Nemotron on OpenRouter",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-a-report-generator-ai-agent-with-nvidia-nemotron-on-openrouter/",
-      "published_date": "2025-09-15T19:31:45+00:00",
-      "category": "Industry",
-      "description": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
-      "author": "Edward Li",
-      "content": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.543713+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.543716+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c5b88095f4d0a5d6a2146c6827332946",
-      "title": "Gemini achieves gold-level performance at the International Collegiate Programming Contest World Finals",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/gemini-achieves-gold-level-performance-at-the-international-collegiate-programming-contest-world-finals/",
-      "published_date": "2025-09-17T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Advanced version of Gemini 2.5 Deep Think achieved gold-medal level at the 2025 ICPC World Finals.",
-      "author": "",
-      "content": "Advanced version of Gemini 2.5 Deep Think achieved gold-medal level at the 2025 ICPC World Finals.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.544358+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.544361+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "719d262422fe2b987d38aa93e47b0df4",
-      "title": "Torch compile caching for inference speed",
-      "source": "replicate_blog",
-      "url": "https://replicate.com/blog/torch-compile-caching",
-      "published_date": "2025-09-08T00:00:00+00:00",
-      "category": "Industry",
-      "description": "Cache your compiled models for faster boot and inference times",
-      "author": "",
-      "content": "Cache your compiled models for faster boot and inference times",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.543402+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.543405+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2280180ee2e95f74676861975b166954",
-      "title": "Phantom limb study rewires our understanding of the brain",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/phantom-limb-study-rewires-our-understanding-brain",
-      "published_date": "2025-09-18T08:21:20.849732+00:00",
+      "article_id": "ac5e74dc56d5d40da30e8ecef692a8b1",
+      "title": "US-UK pact will boost advances in drug discovery, create tens of thousands of jobs and transform lives",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/us-uk-pact-will-boost-advances-in-drug-discovery-create-tens-of-thousands-of-jobs-and-transform-lives",
+      "published_date": "2025-09-15T23:00:00+00:00",
       "category": "Government",
-      "description": "NIH scientists and collaborators reveal the brain preserves its representation of lost limb in clinical study.",
+      "description": "The first ever UK-US tech agreement will bring new healthcare breakthroughs, clean homegrown energy, and more investment into local communities and businesses in Britain and the United States.",
       "author": "",
-      "content": "NIH scientists and collaborators reveal the brain preserves its representation of lost limb in clinical study.",
+      "content": "The first ever UK-US tech agreement will bring new healthcare breakthroughs, clean homegrown energy, and more investment into local communities and businesses in Britain and the United States.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -420,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.538606+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.486851+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,69 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.538609+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a97a29efb8dda25e10c920c7220e4cf2",
-      "title": "IBM, BharatGen Partner to Drive AI Adoption in India with Indic LLMs",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/ibm-bharatgen-partner-to-drive-ai-adoption-in-india-with-indic-llms/",
-      "published_date": "2025-09-18T04:45:33+00:00",
-      "category": "Industry",
-      "description": "BharatGen’s roadmap for large language and foundation models is designed to serve both national and commercial needs across agriculture, finance, healthcare, national security, and education. The post IBM, BharatGen Partner to Drive AI Adoption in India with Indic LLMs appeared first on Analytics India Magazine.",
-      "author": "Siddharth Jindal",
-      "content": "BharatGen’s roadmap for large language and foundation models is designed to serve both national and commercial needs across agriculture, finance, healthcare, national security, and education. The post IBM, BharatGen Partner to Drive AI Adoption in India with Indic LLMs appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.545018+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.545021+00:00"
+        "timestamp": "2025-09-18T12:41:30.486854+00:00"
       },
       "article_type": "article"
     },
@@ -508,12 +136,198 @@
       "author": "",
       "content": "People experiencing addiction will have a ramped-up support system as UK government tackles the country’s critical shortage of world-class researchers in addiction healthcare.",
       "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.487234+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.487236+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e9a84154ffa965ce13f2a46638f0d9a4",
+      "title": "Using AI to perceive the universe in greater depth",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/discover/blog/using-ai-to-perceive-the-universe-in-greater-depth/",
+      "published_date": "2025-09-04T18:00:00+00:00",
+      "category": "Industry",
+      "description": "Our novel Deep Loop Shaping method improves control of gravitational wave observatories, helping astronomers better understand the dynamics and formation of the universe.",
+      "author": "",
+      "content": "Our novel Deep Loop Shaping method improves control of gravitational wave observatories, helping astronomers better understand the dynamics and formation of the universe.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.491902+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.491905+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c7bb27191613b867e31efba7f242fca3",
+      "title": "Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/quantum-computing-could-make-gpus-obsolete-says-nxtgen-ceo/",
+      "published_date": "2025-09-17T11:36:19+00:00",
+      "category": "Industry",
+      "description": "“Over the last 10 years, big tech companies have doubled their operating profit, from 34% to 63%.” The post Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "“Over the last 10 years, big tech companies have doubled their operating profit, from 34% to 63%.” The post Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.493033+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.493036+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c7e6ec55af5292b6dba38a315e677059",
+      "title": "Day 4 - The Parser!",
+      "source": "dev_community",
+      "url": "https://dev.to/lahari_tenneti_4a8a082e9c/day-4-the-parser-582l",
+      "published_date": "2025-09-18T12:23:49+00:00",
+      "category": "Media",
+      "description": "Aaaand she's here! Last time, we created the rules/grammar basis which the parser converts tokens into syntax-tree. Now, we create association rules, i.e. we define the order in which expressions must be parsed to generate the tree. Recursive descent parsing is used here, wherein the parser starts from the outermost/top-level rule with lowest precedence and traverses through subexpressions to make it to the tree's bottom, where it finds literals (which happen to have the highest precedence)....",
+      "author": "Lahari Tenneti",
+      "content": "Aaaand she's here! Last time, we created the rules/grammar basis which the parser converts tokens into syntax-tree. Now, we create association rules, i.e. we define the order in which expressions must be parsed to generate the tree. Recursive descent parsing is used here, wherein the parser starts from the outermost/top-level rule with lowest precedence and traverses through subexpressions to make it to the tree's bottom, where it finds literals (which happen to have the highest precedence)....",
+      "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.7,
         "impact_score": 0.9,
         "overall_score": 0.85,
-        "confidence_mean": 0.8
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -541,103 +355,41 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.540040+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.500048+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.540046+00:00"
+        "timestamp": "2025-09-18T12:41:30.500051+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "5f36c3508f7e9e5ee92766a41fb29767",
-      "title": "How msg enhanced HR workforce transformation with Amazon Bedrock and msg.ProfileMap",
+      "article_id": "815ea608279bc295e673590e2c05c4d6",
+      "title": "Unified multimodal access layer for Quora’s Poe using Amazon Bedrock",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-msg-enhanced-hr-workforce-transformation-with-amazon-bedrock-and-msg-profilemap/",
-      "published_date": "2025-09-15T17:05:18+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/unified-multimodal-access-layer-for-quoras-poe-using-amazon-bedrock/",
+      "published_date": "2025-09-16T16:40:11+00:00",
       "category": "Industry",
-      "description": "In this post, we share how msg automated data harmonization for msg.ProfileMap, using Amazon Bedrock to power its large language model (LLM)-driven data enrichment workflows, resulting in higher accuracy in HR concept matching, reduced manual workload, and improved alignment with compliance requirements under the EU AI Act and GDPR.",
-      "author": "Stefan Walter",
-      "content": "In this post, we share how msg automated data harmonization for msg.ProfileMap, using Amazon Bedrock to power its large language model (LLM)-driven data enrichment workflows, resulting in higher accuracy in HR concept matching, reduced manual workload, and improved alignment with compliance requirements under the EU AI Act and GDPR.",
+      "description": "In this post, we explore how the AWS Generative AI Innovation Center and Quora collaborated to build a unified wrapper API framework that dramatically accelerates the deployment of Amazon Bedrock FMs on Quora’s Poe system. We detail the technical architecture that bridges Poe’s event-driven ServerSentEvents protocol with Amazon Bedrock REST-based APIs, demonstrate how a template-based configuration system reduced deployment time from days to 15 minutes, and share implementation patterns for...",
+      "author": "Gilbert V Lepadatu",
+      "content": "In this post, we explore how the AWS Generative AI Innovation Center and Quora collaborated to build a unified wrapper API framework that dramatically accelerates the deployment of Amazon Bedrock FMs on Quora’s Poe system. We detail the technical architecture that bridges Poe’s event-driven ServerSentEvents protocol with Amazon Bedrock REST-based APIs, demonstrate how a template-based configuration system reduced deployment time from days to 15 minutes, and share implementation patterns for...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.541477+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.541480+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ea127e5545072f23444999110057f7dc",
-      "title": "NVIDIA Pledges AI Education Funding for K-12 Programs",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/ai-education-k-12/",
-      "published_date": "2025-09-04T19:46:50+00:00",
-      "category": "Industry",
-      "description": "NVIDIA today announced new AI education support for K-12 programs at a White House event to celebrate public-private partnerships that advance artificial intelligence education for America’s youth. The commitment comes after recent NVIDIA announcements to support AI education and academic research, including a $30 million contribution to the National AI Intelligence Research pilot and a Read Article",
-      "author": "Louis Stewart",
-      "content": "NVIDIA today announced new AI education support for K-12 programs at a White House event to celebrate public-private partnerships that advance artificial intelligence education for America’s youth. The commitment comes after recent NVIDIA announcements to support AI education and academic research, including a $30 million contribution to the National AI Intelligence Research pilot and a Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -665,41 +417,103 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.542524+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.488521+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.542526+00:00"
+        "timestamp": "2025-09-18T12:41:30.488524+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "32a7cba2e2f1195fab7d863424d31a59",
-      "title": "Reducing Cold Start Latency for LLM Inference with NVIDIA Run:ai Model Streamer",
+      "article_id": "356ddf7279d5093705cc1a8a78c58067",
+      "title": "Build a Report Generator AI Agent with NVIDIA Nemotron on OpenRouter",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/reducing-cold-start-latency-for-llm-inference-with-nvidia-runai-model-streamer/",
-      "published_date": "2025-09-16T17:35:13+00:00",
+      "url": "https://developer.nvidia.com/blog/build-a-report-generator-ai-agent-with-nvidia-nemotron-on-openrouter/",
+      "published_date": "2025-09-15T19:31:45+00:00",
       "category": "Industry",
-      "description": "Deploying large language models (LLMs) poses a challenge in optimizing inference efficiency. In particular, cold start delays—where models take significant...",
-      "author": "Omer Dayan",
-      "content": "Deploying large language models (LLMs) poses a challenge in optimizing inference efficiency. In particular, cold start delays—where models take significant...",
+      "description": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
+      "author": "Edward Li",
+      "content": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.92,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.491074+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.752,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.491077+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4891278617366582b962a958f81d9faf",
+      "title": "One dose of antibiotic treats early syphilis as well as three doses",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/one-dose-antibiotic-treats-early-syphilis-well-three-doses",
+      "published_date": "2025-09-18T12:33:02.140631+00:00",
+      "category": "Government",
+      "description": "NIH-funded clinical trial shows potential to simplify treatment for early syphilis.",
+      "author": "",
+      "content": "NIH-funded clinical trial shows potential to simplify treatment for early syphilis.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -730,7 +544,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.543581+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.486489+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,27 +555,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.543583+00:00"
+        "timestamp": "2025-09-18T12:41:30.486492+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "4cefd5c48ac45af835c984d8ffa11ea3",
-      "title": "Register for the Global Webinar: How to Prepare for NVIDIA Generative AI Certification",
-      "source": "nvidia_developer",
-      "url": "https://nvda.ws/4g1w81S",
-      "published_date": "2025-09-07T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Join a global webinar on Oct. 7 to get everything you need to succeed on the NVIDIA generative-AI certification exams, including the new professional level...",
-      "author": "Shara Tibken",
-      "content": "Join a global webinar on Oct. 7 to get everything you need to succeed on the NVIDIA generative-AI certification exams, including the new professional level...",
+      "article_id": "5f6b7ce272342b4e5d3ef21c38735e54",
+      "title": "Research: Evaluation of the Global Challenges Research Fund: Stage 1B Synthesis report",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/evaluation-of-the-global-challenges-research-fund-stage-1b-synthesis-report",
+      "published_date": "2025-09-15T08:30:08+00:00",
+      "category": "Government",
+      "description": "Global Challenges Research Fund (GCRF) Stage 1b Synthesis report (2021 to 2022) assesses the evidence on programme processes and progress towards impact in GCRF’s six ‘signature investments.",
+      "author": "",
+      "content": "Global Challenges Research Fund (GCRF) Stage 1b Synthesis report (2021 to 2022) assesses the evidence on programme processes and progress towards impact in GCRF’s six ‘signature investments.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.8375,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -789,41 +603,41 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.544223+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.486999+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.544226+00:00"
+        "timestamp": "2025-09-18T12:41:30.487002+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "73a93094cdec65009e3fb4770db97989",
-      "title": "Scientific frontiers of agentic AI",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/scientific-frontiers-of-agentic-ai",
-      "published_date": "2025-09-11T14:30:05+00:00",
+      "article_id": "cda7505cfde11c1e6f766b9a8f08ae10",
+      "title": "Create a private workforce on Amazon SageMaker Ground Truth with the AWS CDK",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/create-a-private-workforce-on-amazon-sagemaker-ground-truth-with-the-aws-cdk/",
+      "published_date": "2025-09-11T17:56:01+00:00",
       "category": "Industry",
-      "description": "The language AI agents might speak, sharing context without compromising privacy, modeling agentic negotiations, and understanding users’ commonsense policies are some of the open scientific questions that researchers in agentic AI will need to grapple with.",
-      "author": "Michael Kearns",
-      "content": "The language AI agents might speak, sharing context without compromising privacy, modeling agentic negotiations, and understanding users’ commonsense policies are some of the open scientific questions that researchers in agentic AI will need to grapple with.",
+      "description": "In this post, we present a complete solution for programmatically creating private workforces on Amazon SageMaker AI using the AWS Cloud Development Kit (AWS CDK), including the setup of a dedicated, fully configured Amazon Cognito user pool.",
+      "author": "Giorgio Pessot",
+      "content": "In this post, we present a complete solution for programmatically creating private workforces on Amazon SageMaker AI using the AWS Cloud Development Kit (AWS CDK), including the setup of a dedicated, fully configured Amazon Cognito user pool.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.8375,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -851,40 +665,40 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.544447+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.488900+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.544450+00:00"
+        "timestamp": "2025-09-18T12:41:30.488903+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "983f7acda25543c2b0fc9da846e70f13",
-      "title": "The AI infrastructure scramble, Oracle’s OpenAI bonanza, and the return of IPOs",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2025/09/12/ai-infrastructure-scramble-oracles-openai-bonanza-return-ipos/",
-      "published_date": "2025-09-12T16:03:49+00:00",
+      "article_id": "f0da1a7508b74aac163859ef8be9b335",
+      "title": "Detecting and reducing scheming in AI models",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models",
+      "published_date": "2025-09-17T00:00:00+00:00",
       "category": "Industry",
-      "description": "With its latest earnings — more accurately, its almost unbelievable cloud backlog — Oracle suddenly catapulted itself into the top ranks of hyperscaler cloud providers. One big reason for that backlog: a stunning $300 billion deal to provide OpenAI with compute in that Project Stargate deal over the next five years. As a result of […] The post The AI infrastructure scramble, Oracle’s OpenAI bonanza, and the return of IPOs appeared first on SiliconANGLE.",
-      "author": "Robert Hof",
-      "content": "With its latest earnings — more accurately, its almost unbelievable cloud backlog — Oracle suddenly catapulted itself into the top ranks of hyperscaler cloud providers. One big reason for that backlog: a stunning $300 billion deal to provide OpenAI with compute in that Project Stargate deal over the next five years. As a result of […] The post The AI infrastructure scramble, Oracle’s OpenAI bonanza, and the return of IPOs appeared first on SiliconANGLE.",
+      "description": "Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models. The team shared concrete examples and stress tests of an early method to reduce scheming.",
+      "author": "",
+      "content": "Apollo Research and OpenAI developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models. The team shared concrete examples and stress tests of an early method to reduce scheming.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.6,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.8,
-        "overall_score": 0.805,
+        "overall_score": 0.8550000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -912,22 +726,208 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.547671+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.487458+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.547674+00:00"
+        "timestamp": "2025-09-18T12:41:30.487461+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "56d73692f1389653afc1891d9c95b9a5",
+      "title": "Smart glasses and AI filter apps among new tech to transform the mental health of millions",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/smart-glasses-and-ai-filter-apps-among-new-tech-to-transform-the-mental-health-of-millions",
+      "published_date": "2025-09-10T23:00:00+00:00",
+      "category": "Government",
+      "description": "Backing for businesses across the UK will help to take low-cost innovations that support people's mental health to the next level.",
+      "author": "",
+      "content": "Backing for businesses across the UK will help to take low-cost innovations that support people's mental health to the next level.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.85,
+        "overall_score": 0.8275,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.487368+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.487371+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ece8d0668bab588842ebbd1f9226b25c",
+      "title": "Acupuncture treatment improves disabling effects of chronic low back pain in older adults",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/acupuncture-treatment-improves-disabling-effects-chronic-low-back-pain-older-adults",
+      "published_date": "2025-09-18T12:33:02.140484+00:00",
+      "category": "Government",
+      "description": "NIH-funded study supports acupuncture needling as a safe and effective pain treatment for this group.",
+      "author": "",
+      "content": "NIH-funded study supports acupuncture needling as a safe and effective pain treatment for this group.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.486386+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.486392+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9018e62a06d42b39dbb4bfa60456d911",
+      "title": "Israeli tanks, jets bombard Gaza City as Palestinians flee",
+      "source": "digital_journal",
+      "url": "https://www.digitaljournal.com/world/israeli-tanks-jets-bombard-gaza-city-as-palestinians-flee/article",
+      "published_date": "2025-09-18T09:52:20+00:00",
+      "category": "Media",
+      "description": "Israeli tanks and warplanes pounded Gaza City Thursday, sparking what a top UN official called “new waves of mass displacement”, as the military intensified its assault on Hamas militants in the territory’s largest urban hub. AFP journalists and witnesses saw a steady stream of Gazans heading south on foot, in vehicles and on donkey carts […] The post Israeli tanks, jets bombard Gaza City as Palestinians flee appeared first on Digital Journal.",
+      "author": "AFP",
+      "content": "Israeli tanks and warplanes pounded Gaza City Thursday, sparking what a top UN official called “new waves of mass displacement”, as the military intensified its assault on Hamas militants in the territory’s largest urban hub. AFP journalists and witnesses saw a steady stream of Gazans heading south on foot, in vehicles and on donkey carts […] The post Israeli tanks, jets bombard Gaza City as Palestinians flee appeared first on Digital Journal.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.82,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.4,
+        "confidence": 0.8,
+        "recommendation": "REJECT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.500521+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.44,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.500524+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 444.8528835773468,
+    "processing_time": 430.04795479774475,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 460,
+      "total_processed": 463,
       "candidates": {
-        "headlines": 29,
-        "articles": 431,
+        "headlines": 33,
+        "articles": 430,
         "research_papers": 0
       },
       "selected": {

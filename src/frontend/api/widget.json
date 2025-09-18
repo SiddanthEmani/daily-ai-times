@@ -1,23 +1,23 @@
 {
-  "updated": "2025-09-18T08:30:00.628118+00:00",
+  "updated": "2025-09-18T12:41:30.581274+00:00",
   "top_stories": [
     {
-      "article_id": "1ee6c97558d2f65fb917063c61176e78",
-      "title": "Kleiner Perkins-backed voice AI startup Keplar aims to replace traditional market research",
+      "article_id": "a79c0ce1a9716b4b10ffcc6c8fa41ceb",
+      "title": "YouTube to use AI to help podcasters promote themselves with clips and Shorts",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/09/17/kleiner-perkins-backed-voice-ai-startup-keplar-aims-to-replace-traditional-market-research/",
-      "published_date": "2025-09-17T19:54:17+00:00",
+      "url": "https://techcrunch.com/2025/09/16/youtube-to-use-ai-to-help-podcasters-promote-themselves-with-clips-and-shorts/",
+      "published_date": "2025-09-16T14:30:00+00:00",
       "category": "Industry",
-      "description": "The two-year-old startup raised a $3.2 million seed round led by Kleiner Perkins.",
-      "author": "Marina Temkin",
-      "content": "The two-year-old startup raised a $3.2 million seed round led by Kleiner Perkins.",
+      "description": "YouTube teases new AI-powered tools for turning podcasts into video clips, even if they're audio-only.",
+      "author": "Sarah Perez",
+      "content": "YouTube teases new AI-powered tools for turning podcasts into video clips, even if they're audio-only.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.895,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,165 +45,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.542830+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.490715+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.542832+00:00"
+        "timestamp": "2025-09-18T12:41:30.490718+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0590754756d99a3aa20f3ccc3b735f78",
-      "title": "Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/videos/mira-muratis-thinking-machines-solves-the-mystery-of-llm-nondeterminism/",
-      "published_date": "2025-09-16T05:19:40+00:00",
-      "category": "Industry",
-      "description": "Mira Murati’s new company, Thinking Machines, solved a major AI problem: nondeterministic LLM outputs. By creating batch-invariant kernels for key operations, they ensure identical responses at temperature zero, improving reproducibility for research, audits, and safety-critical AI. This breakthrough may redefine industry standards for deterministic, trustworthy AI. The post Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism appeared first on Analytics India Magazine.",
-      "author": "Pabitra Moharana",
-      "content": "Mira Murati’s new company, Thinking Machines, solved a major AI problem: nondeterministic LLM outputs. By creating batch-invariant kernels for key operations, they ensure identical responses at temperature zero, improving reproducibility for research, audits, and safety-critical AI. This breakthrough may redefine industry standards for deterministic, trustworthy AI. The post Mira Murati’s Thinking Machines Solves the Mystery of LLM Nondeterminism appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.545778+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.545781+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0b7d376f27636f799e933c17ad82d3eb",
-      "title": "How Skello uses Amazon Bedrock to query data in a multi-tenant environment while keeping logical boundaries",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-skello-uses-amazon-bedrock-to-query-data-in-a-multi-tenant-environment-while-keeping-logical-boundaries/",
-      "published_date": "2025-09-11T17:59:15+00:00",
-      "category": "Industry",
-      "description": "Skello is a leading human resources (HR) software as a service (SaaS) solution focusing on employee scheduling and workforce management. Catering to diverse sectors such as hospitality, retail, healthcare, construction, and industry, Skello offers features including schedule creation, time tracking, and payroll preparation. We dive deep into the challenges of implementing large language models (LLMs) for data querying, particularly in the context of a French company operating under the General...",
-      "author": "Nicolas de Place",
-      "content": "Skello is a leading human resources (HR) software as a service (SaaS) solution focusing on employee scheduling and workforce management. Catering to diverse sectors such as hospitality, retail, healthcare, construction, and industry, Skello offers features including schedule creation, time tracking, and payroll preparation. We dive deep into the challenges of implementing large language models (LLMs) for data querying, particularly in the context of a French company operating under the General...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.541697+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-18T08:30:00.541700+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "356ddf7279d5093705cc1a8a78c58067",
-      "title": "Build a Report Generator AI Agent with NVIDIA Nemotron on OpenRouter",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-a-report-generator-ai-agent-with-nvidia-nemotron-on-openrouter/",
-      "published_date": "2025-09-15T19:31:45+00:00",
-      "category": "Industry",
-      "description": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
-      "author": "Edward Li",
-      "content": "Unlike traditional systems that follow predefined paths, AI agents are autonomous systems that use large language models (LLMs) to make decisions, adapt to...",
+      "article_id": "ac5e74dc56d5d40da30e8ecef692a8b1",
+      "title": "US-UK pact will boost advances in drug discovery, create tens of thousands of jobs and transform lives",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/us-uk-pact-will-boost-advances-in-drug-discovery-create-tens-of-thousands-of-jobs-and-transform-lives",
+      "published_date": "2025-09-15T23:00:00+00:00",
+      "category": "Government",
+      "description": "The first ever UK-US tech agreement will bring new healthcare breakthroughs, clean homegrown energy, and more investment into local communities and businesses in Britain and the United States.",
+      "author": "",
+      "content": "The first ever UK-US tech agreement will bring new healthcare breakthroughs, clean homegrown energy, and more investment into local communities and businesses in Britain and the United States.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.543713+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.486851+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +121,150 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.543716+00:00"
+        "timestamp": "2025-09-18T12:41:30.486854+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c5b88095f4d0a5d6a2146c6827332946",
-      "title": "Gemini achieves gold-level performance at the International Collegiate Programming Contest World Finals",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/gemini-achieves-gold-level-performance-at-the-international-collegiate-programming-contest-world-finals/",
-      "published_date": "2025-09-17T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Advanced version of Gemini 2.5 Deep Think achieved gold-medal level at the 2025 ICPC World Finals.",
+      "article_id": "a15801d6f719945f1fba9b12dc626dd5",
+      "title": "UK invests in next generation of research talent to tackle drug and alcohol addiction",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/uk-invests-in-next-generation-of-research-talent-to-tackle-drug-and-alcohol-addiction",
+      "published_date": "2025-09-11T23:00:00+00:00",
+      "category": "Government",
+      "description": "People experiencing addiction will have a ramped-up support system as UK government tackles the country’s critical shortage of world-class researchers in addiction healthcare.",
       "author": "",
-      "content": "Advanced version of Gemini 2.5 Deep Think achieved gold-medal level at the 2025 ICPC World Finals.",
+      "content": "People experiencing addiction will have a ramped-up support system as UK government tackles the country’s critical shortage of world-class researchers in addiction healthcare.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.487234+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.487236+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e9a84154ffa965ce13f2a46638f0d9a4",
+      "title": "Using AI to perceive the universe in greater depth",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/discover/blog/using-ai-to-perceive-the-universe-in-greater-depth/",
+      "published_date": "2025-09-04T18:00:00+00:00",
+      "category": "Industry",
+      "description": "Our novel Deep Loop Shaping method improves control of gravitational wave observatories, helping astronomers better understand the dynamics and formation of the universe.",
+      "author": "",
+      "content": "Our novel Deep Loop Shaping method improves control of gravitational wave observatories, helping astronomers better understand the dynamics and formation of the universe.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-18T12:41:30.491902+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-18T12:41:30.491905+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c7bb27191613b867e31efba7f242fca3",
+      "title": "Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/quantum-computing-could-make-gpus-obsolete-says-nxtgen-ceo/",
+      "published_date": "2025-09-17T11:36:19+00:00",
+      "category": "Industry",
+      "description": "“Over the last 10 years, big tech companies have doubled their operating profit, from 34% to 63%.” The post Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "“Over the last 10 years, big tech companies have doubled their operating profit, from 34% to 63%.” The post Quantum Computing Could Make GPUs Obsolete, Says NxtGen CEO appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -296,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-18T08:30:00.544358+00:00"
+        "consensus_timestamp": "2025-09-18T12:41:30.493033+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-18T08:30:00.544361+00:00"
+        "timestamp": "2025-09-18T12:41:30.493036+00:00"
       },
       "article_type": "article"
     }
