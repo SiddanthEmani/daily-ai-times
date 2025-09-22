@@ -1,5 +1,5 @@
 {
-  "updated": "2025-09-21T20:27:33.753538+00:00",
+  "updated": "2025-09-22T01:27:05.998996+00:00",
   "top_stories": [
     {
       "article_id": "f2766f943f3167597947eee3d1d316ab",
@@ -44,24 +44,148 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-21T20:27:33.698426+00:00"
+        "consensus_timestamp": "2025-09-22T01:27:05.944185+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-22T01:27:05.944188+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "d8caa4dd326dcb4b10434c9ec2792973",
+      "title": "Ask Ralph: Where style meets AI—a new era of conversational commerce",
+      "source": "azure_ai_blog",
+      "url": "https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/",
+      "published_date": "2025-09-09T15:41:03+00:00",
+      "category": "Industry",
+      "description": "Meet Ask Ralph, a new AI-powered styling companion that not only helps with product discovery but also inspires consumers with Ralph Lauren's unique and iconic take on style. The post Ask Ralph: Where style meets AI—a new era of conversational commerce appeared first on Microsoft Azure Blog.",
+      "author": "Shelley Bransten",
+      "content": "Meet Ask Ralph, a new AI-powered styling companion that not only helps with product discovery but also inspires consumers with Ralph Lauren's unique and iconic take on style. The post Ask Ralph: Where style meets AI—a new era of conversational commerce appeared first on Microsoft Azure Blog.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-22T01:27:05.934671+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-21T20:27:33.698429+00:00"
+        "timestamp": "2025-09-22T01:27:05.934674+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
+    },
+    {
+      "article_id": "4e254d1ce0f83c20ffc132d452a38d87",
+      "title": "Streamline access to ISO-rating content changes with Verisk rating insights and Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/streamline-access-to-iso-rating-content-changes-with-verisk-rating-insights-and-amazon-bedrock/",
+      "published_date": "2025-09-16T16:43:42+00:00",
+      "category": "Industry",
+      "description": "In this post, we dive into how Verisk Rating Insights, powered by Amazon Bedrock, large language models (LLM), and Retrieval Augmented Generation (RAG), is transforming the way customers interact with and access ISO ERC changes.",
+      "author": "Samit Verma, Eusha Rizvi, Manmeet Singh, Troy Smith, Corey Finley",
+      "content": "In this post, we dive into how Verisk Rating Insights, powered by Amazon Bedrock, large language models (LLM), and Retrieval Augmented Generation (RAG), is transforming the way customers interact with and access ISO ERC changes.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-22T01:27:05.935054+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-22T01:27:05.935059+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "0b7d376f27636f799e933c17ad82d3eb",
@@ -86,68 +210,6 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-21T20:27:33.688743+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-21T20:27:33.688746+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "437ceb089a3eb459be2b0a32e49f151c",
-      "title": "OpenAI’s research on AI models deliberately lying is wild",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/09/18/openais-research-on-ai-models-deliberately-lying-is-wild/",
-      "published_date": "2025-09-18T22:54:20+00:00",
-      "category": "Industry",
-      "description": "AI models don't just hallucinate. They also \"scheme,\" meaning deliberately lie or hide their true intentions.",
-      "author": "Julie Bort",
-      "content": "AI models don't just hallucinate. They also \"scheme,\" meaning deliberately lie or hide their true intentions.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
             "fact_check_confidence": 0.5
           },
           "bias_detection": {
@@ -169,40 +231,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-21T20:27:33.690161+00:00"
+        "consensus_timestamp": "2025-09-22T01:27:05.935412+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-21T20:27:33.690164+00:00"
+        "timestamp": "2025-09-22T01:27:05.935414+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "191f8c4ccc41e4c8574ca9b1bcea9d5e",
-      "title": "Predict Extreme Weather Events in Minutes Without a Supercomputer",
+      "article_id": "add35c925a8f3c26f6fa44be49505aaf",
+      "title": "Autodesk Research Brings Warp Speed to Computational Fluid Dynamics on NVIDIA GH200",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/predict-extreme-weather-events-in-minutes-without-a-supercomputer/",
-      "published_date": "2025-09-19T19:19:10+00:00",
+      "url": "https://developer.nvidia.com/blog/autodesk-research-brings-warp-speed-to-computational-fluid-dynamics-on-nvidia-gh200/",
+      "published_date": "2025-09-16T15:00:00+00:00",
       "category": "Industry",
-      "description": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
-      "author": "Mike Pritchard",
-      "content": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
+      "description": "Computer-aided engineering (CAE) forms the backbone for modern product development across industries, from designing safer aircraft to optimizing renewable...",
+      "author": "Mehdi Ataei",
+      "content": "Computer-aided engineering (CAE) forms the backbone for modern product development across industries, from designing safer aircraft to optimizing renewable...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -231,83 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-21T20:27:33.690514+00:00"
+        "consensus_timestamp": "2025-09-22T01:27:05.937230+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-21T20:27:33.690517+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "59d281ad92467e1d0340ff664c1c2aba",
-      "title": "Independent report: AI coding assistant trial",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/ai-coding-assistant-trial",
-      "published_date": "2025-09-12T08:00:00+00:00",
-      "category": "Government",
-      "description": "UK public sector findings from a cross-government trial of AI coding assistants to understand how these tools could help software engineering.",
-      "author": "",
-      "content": "UK public sector findings from a cross-government trial of AI coding assistants to understand how these tools could help software engineering.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-21T20:27:33.686917+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-21T20:27:33.686920+00:00"
+        "timestamp": "2025-09-22T01:27:05.937233+00:00"
       },
       "article_type": "article"
     }
