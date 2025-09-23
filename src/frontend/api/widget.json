@@ -1,5 +1,5 @@
 {
-  "updated": "2025-09-23T01:19:29.442900+00:00",
+  "updated": "2025-09-23T04:32:04.940726+00:00",
   "top_stories": [
     {
       "article_id": "7c0136a01534643f2f2890293188b0fa",
@@ -45,21 +45,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-23T01:19:29.367675+00:00"
+        "consensus_timestamp": "2025-09-23T04:32:04.872616+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-23T01:19:29.367678+00:00"
+        "timestamp": "2025-09-23T04:32:04.872619+00:00"
       },
       "article_type": "headline"
     },
@@ -106,104 +106,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-23T01:19:29.365682+00:00"
+        "consensus_timestamp": "2025-09-23T04:32:04.870569+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-23T01:19:29.365685+00:00"
+        "timestamp": "2025-09-23T04:32:04.870572+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "426702f0971537f19f12663a8b664a7e",
-      "title": "Introducing Stargate UK",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-stargate-uk",
-      "published_date": "2025-09-16T14:30:00+00:00",
+      "article_id": "191f8c4ccc41e4c8574ca9b1bcea9d5e",
+      "title": "Predict Extreme Weather Events in Minutes Without a Supercomputer",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/predict-extreme-weather-events-in-minutes-without-a-supercomputer/",
+      "published_date": "2025-09-19T19:19:10+00:00",
       "category": "Industry",
-      "description": "OpenAI, NVIDIA, and Nscale launch Stargate UK, a sovereign AI infrastructure partnership delivering up to 50,000 GPUs and the UK’s largest supercomputer to power national AI innovation, public services, and economic growth.",
-      "author": "",
-      "content": "OpenAI, NVIDIA, and Nscale launch Stargate UK, a sovereign AI infrastructure partnership delivering up to 50,000 GPUs and the UK’s largest supercomputer to power national AI innovation, public services, and economic growth.",
+      "description": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
+      "author": "Mike Pritchard",
+      "content": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.85,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-23T01:19:29.365265+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-23T01:19:29.365268+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "822ef825a25e0ba038aa494d8dc91423",
-      "title": "Build Agentic Workflows with OpenAI GPT OSS on Amazon SageMaker AI and Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/",
-      "published_date": "2025-09-17T19:31:44+00:00",
-      "category": "Industry",
-      "description": "In this post, we show how to deploy gpt-oss-20b model to SageMaker managed endpoints and demonstrate a practical stock analyzer agent assistant example with LangGraph, a powerful graph-based framework that handles state management, coordinated workflows, and persistent memory systems.",
-      "author": "Vivek Gangasani",
-      "content": "In this post, we show how to deploy gpt-oss-20b model to SageMaker managed endpoints and demonstrate a practical stock analyzer agent assistant example with LangGraph, a powerful graph-based framework that handles state management, coordinated workflows, and persistent memory systems.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.99
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-23T01:19:29.366300+00:00"
+        "consensus_timestamp": "2025-09-23T04:32:04.873114+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,20 +183,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-23T01:19:29.366303+00:00"
+        "timestamp": "2025-09-23T04:32:04.873117+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "add35c925a8f3c26f6fa44be49505aaf",
-      "title": "Autodesk Research Brings Warp Speed to Computational Fluid Dynamics on NVIDIA GH200",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/autodesk-research-brings-warp-speed-to-computational-fluid-dynamics-on-nvidia-gh200/",
-      "published_date": "2025-09-16T15:00:00+00:00",
+      "article_id": "536744321f39f9e871d81a61b6335d2c",
+      "title": "NVIDIA Blackwell Ultra Sets the Bar in New MLPerf Inference Benchmark",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/mlperf-inference-blackwell-ultra/",
+      "published_date": "2025-09-09T15:00:44+00:00",
       "category": "Industry",
-      "description": "Computer-aided engineering (CAE) forms the backbone for modern product development across industries, from designing safer aircraft to optimizing renewable...",
-      "author": "Mehdi Ataei",
-      "content": "Computer-aided engineering (CAE) forms the backbone for modern product development across industries, from designing safer aircraft to optimizing renewable...",
+      "description": "Inference performance is critical, as it directly influences the economics of an AI factory. The higher the throughput of AI factory infrastructure, the more tokens it can produce at a high speed — increasing revenue, driving down total cost of ownership (TCO) and enhancing the system’s overall productivity. Less than half a year since its Read Article",
+      "author": "Dave Salvator",
+      "content": "Inference performance is critical, as it directly influences the economics of an AI factory. The higher the throughput of AI factory infrastructure, the more tokens it can produce at a high speed — increasing revenue, driving down total cost of ownership (TCO) and enhancing the system’s overall productivity. Less than half a year since its Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -296,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-23T01:19:29.368612+00:00"
+        "consensus_timestamp": "2025-09-23T04:32:04.872346+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-23T01:19:29.368615+00:00"
+        "timestamp": "2025-09-23T04:32:04.872349+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "db4376aa026d107fb92a15b59881f5f0",
+      "title": "Cracking product-market fit: Lessons from founders and investors at TechCrunch Disrupt 2025",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/09/19/crack-the-code-to-startup-traction-with-insights-from-chef-robotics-nea-and-iconiq-at-techcrunch-disrupt-2025/",
+      "published_date": "2025-09-19T20:30:00+00:00",
+      "category": "Industry",
+      "description": "Rajat Bhageria (Chef Robotics), Ann Bordetsky (NEA), and Murali Joshi (ICONIQ) share actionable strategies for finding product-market fit at TechCrunch Disrupt 2025.",
+      "author": "TechCrunch Events",
+      "content": "Rajat Bhageria (Chef Robotics), Ann Bordetsky (NEA), and Murali Joshi (ICONIQ) share actionable strategies for finding product-market fit at TechCrunch Disrupt 2025.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-23T04:32:04.872928+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-23T04:32:04.872930+00:00"
       },
       "article_type": "article"
     }
