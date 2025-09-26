@@ -1,23 +1,23 @@
 {
-  "updated": "2025-09-26T08:29:54.854093+00:00",
+  "updated": "2025-09-26T12:41:58.063842+00:00",
   "top_stories": [
     {
-      "article_id": "823526509e8c87c8999906e4627e2064",
-      "title": "Google makes real-world data more accessible to AI — and training pipelines will love it",
+      "article_id": "dd1458e69b8c5bba8c46b9ff2acba665",
+      "title": "Microsoft cuts cloud services to Israeli military unit over Palestinian surveillance",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/09/24/google-makes-real-world-data-more-accessible-to-ai-and-training-pipelines-will-love-it/",
-      "published_date": "2025-09-24T15:00:00+00:00",
+      "url": "https://techcrunch.com/2025/09/25/microsoft-cuts-cloud-services-to-israeli-military-unit-over-palestinian-surveillance/",
+      "published_date": "2025-09-25T19:33:45+00:00",
       "category": "Industry",
-      "description": "Google’s Data Commons gets an MCP Server to help AI systems access massive amounts of real-world data.",
-      "author": "Jagmeet Singh",
-      "content": "Google’s Data Commons gets an MCP Server to help AI systems access massive amounts of real-world data.",
+      "description": "The investigation was sparked by a story in The Guardian that reported that Unit 8200, the elite Israel military intelligence unit, was using Azure cloud storage to house data on phone calls obtained through the surveillance of Palestinians in Gaza and the West Bank.",
+      "author": "Rebecca Szkutak",
+      "content": "The investigation was sparked by a story in The Guardian that reported that Unit 8200, the elite Israel military intelligence unit, was using Azure cloud storage to house data on phone calls obtained through the surveillance of Palestinians in Gaza and the West Bank.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-26T08:29:54.766534+00:00"
+        "consensus_timestamp": "2025-09-26T12:41:57.974105+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,26 +59,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-26T08:29:54.766537+00:00"
+        "timestamp": "2025-09-26T12:41:57.974107+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "5cb3257cc89c05631a2c2d9ae7594c94",
-      "title": "SAP and OpenAI partner to launch sovereign ‘OpenAI for Germany’",
-      "source": "openai_blog",
-      "url": "https://openai.com/global-affairs/openai-for-germany",
-      "published_date": "2025-09-24T04:00:00+00:00",
+      "article_id": "822ef825a25e0ba038aa494d8dc91423",
+      "title": "Build Agentic Workflows with OpenAI GPT OSS on Amazon SageMaker AI and Amazon Bedrock AgentCore",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/",
+      "published_date": "2025-09-17T19:31:44+00:00",
       "category": "Industry",
-      "description": "SAP and OpenAI launch OpenAI for Germany, a 2026 partnership to bring secure, sovereign AI to Germany’s public sector, enabling safe, efficient public services.",
-      "author": "",
-      "content": "SAP and OpenAI launch OpenAI for Germany, a 2026 partnership to bring secure, sovereign AI to Germany’s public sector, enabling safe, efficient public services.",
+      "description": "In this post, we show how to deploy gpt-oss-20b model to SageMaker managed endpoints and demonstrate a practical stock analyzer agent assistant example with LangGraph, a powerful graph-based framework that handles state management, coordinated workflows, and persistent memory systems.",
+      "author": "Vivek Gangasani",
+      "content": "In this post, we show how to deploy gpt-oss-20b model to SageMaker managed endpoints and demonstrate a practical stock analyzer agent assistant example with LangGraph, a powerful graph-based framework that handles state management, coordinated workflows, and persistent memory systems.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -106,84 +106,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-26T08:29:54.763467+00:00"
+        "consensus_timestamp": "2025-09-26T12:41:57.973045+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-26T08:29:54.763470+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "191f8c4ccc41e4c8574ca9b1bcea9d5e",
-      "title": "Predict Extreme Weather Events in Minutes Without a Supercomputer",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/predict-extreme-weather-events-in-minutes-without-a-supercomputer/",
-      "published_date": "2025-09-19T19:19:10+00:00",
-      "category": "Industry",
-      "description": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
-      "author": "Mike Pritchard",
-      "content": "Scientists from NVIDIA, in collaboration with Lawrence Berkeley National Laboratory (Berkeley Lab), released a machine learning tool called Huge Ensembles...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-09-26T08:29:54.767163+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-09-26T08:29:54.767166+00:00"
+        "timestamp": "2025-09-26T12:41:57.973048+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-26T08:29:54.765231+00:00"
+        "consensus_timestamp": "2025-09-26T12:41:57.973410+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-26T08:29:54.765234+00:00"
+        "timestamp": "2025-09-26T12:41:57.973413+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7d6b398716c07635bf88f68692dac2c5",
-      "title": "NVIDIA Open Sources Audio2Face Animation Model",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-open-sources-audio2face-animation-model/",
-      "published_date": "2025-09-24T17:00:00+00:00",
+      "article_id": "5a5edb7301fb232e01579f8d1e384d1d",
+      "title": "Baidu’s Apollo Go Begins Autonomous Driving Trials on Dubai Roads",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/baidus-apollo-go-begins-autonomous-driving-trials-on-dubai-roads/",
+      "published_date": "2025-09-25T14:38:06+00:00",
       "category": "Industry",
-      "description": "By leveraging large language and speech models, generative AI is creating intelligent 3D avatars that can engage users in natural conversation, from video games...",
-      "author": "Ike Nnoli",
-      "content": "By leveraging large language and speech models, generative AI is creating intelligent 3D avatars that can engage users in natural conversation, from video games...",
+      "description": "The company has launched a 50-vehicle fleet following receipt of approval from the RTA in Dubai. The post Baidu’s Apollo Go Begins Autonomous Driving Trials on Dubai Roads appeared first on Analytics India Magazine.",
+      "author": "Sanjana Gupta",
+      "content": "The company has launched a 50-vehicle fleet following receipt of approval from the RTA in Dubai. The post Baidu’s Apollo Go Begins Autonomous Driving Trials on Dubai Roads appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.9099999999999999,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -293,21 +231,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-09-26T08:29:54.766846+00:00"
+        "consensus_timestamp": "2025-09-26T12:41:57.976760+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-09-26T08:29:54.766849+00:00"
+        "timestamp": "2025-09-26T12:41:57.976764+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7d6b398716c07635bf88f68692dac2c5",
+      "title": "NVIDIA Open Sources Audio2Face Animation Model",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-open-sources-audio2face-animation-model/",
+      "published_date": "2025-09-24T17:00:00+00:00",
+      "category": "Industry",
+      "description": "By leveraging large language and speech models, generative AI is creating intelligent 3D avatars that can engage users in natural conversation, from video games...",
+      "author": "Ike Nnoli",
+      "content": "By leveraging large language and speech models, generative AI is creating intelligent 3D avatars that can engage users in natural conversation, from video games...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-09-26T12:41:57.975178+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-09-26T12:41:57.975181+00:00"
       },
       "article_type": "article"
     }
