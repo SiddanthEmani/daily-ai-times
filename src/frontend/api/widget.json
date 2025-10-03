@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-03T04:28:07.165090+00:00",
+  "updated": "2025-10-03T08:28:15.567248+00:00",
   "top_stories": [
     {
       "article_id": "32414ac5d775cebd18ce9c61a28ac2bd",
@@ -13,10 +13,72 @@
       "content": "OpenAI employees sold $6.6B in shares, leading company's valuation to jump to $500B.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.477604+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.477606+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "b03cc5a0bdf388112c24b650cbae8739",
+      "title": "How Hapag-Lloyd improved schedule reliability with ML-powered vessel schedule predictions using Amazon SageMaker",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-hapag-lloyd-improved-schedule-reliability-with-ml-powered-vessel-schedule-predictions-using-amazon-sagemaker/",
+      "published_date": "2025-10-01T18:19:37+00:00",
+      "category": "Industry",
+      "description": "In this post, we share how Hapag-Lloyd developed and implemented a machine learning (ML)-powered assistant predicting vessel arrival and departure times that revolutionizes their schedule planning. By using Amazon SageMaker AI and implementing robust MLOps practices, Hapag-Lloyd has enhanced its schedule reliability—a key performance indicator in the industry and quality promise to their customers.",
+      "author": "Thomas Voss",
+      "content": "In this post, we share how Hapag-Lloyd developed and implemented a machine learning (ML)-powered assistant predicting vessel arrival and departure times that revolutionizes their schedule planning. By using Amazon SageMaker AI and implementing robust MLOps practices, Hapag-Lloyd has enhanced its schedule reliability—a key performance indicator in the industry and quality promise to their customers.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.925,
+        "overall_score": 0.8975,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -44,104 +106,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.091697+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-03T04:28:07.091699+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "9ef6c4cd59f907a967c2d1b8758ed87a",
-      "title": "Independent report: Innovation Clusters Map: summary and methods",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/innovation-clusters-map-summary-and-methods",
-      "published_date": "2025-10-01T15:42:58+00:00",
-      "category": "Government",
-      "description": "A methodology and summary report of the Innovation Clusters Map.",
-      "author": "",
-      "content": "A methodology and summary report of the Innovation Clusters Map.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.089040+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.476119+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.089043+00:00"
+        "timestamp": "2025-10-03T08:28:15.476122+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "23bc4d3976e77f448e18fb5a7db45457",
-      "title": "Build a Real-Time Visual Inspection Pipeline with NVIDIA TAO 6 and NVIDIA DeepStream 8",
+      "article_id": "afe57862f268222f680502bd74718448",
+      "title": "Why CVEs Belong in Frameworks and Apps, Not AI Models",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/",
-      "published_date": "2025-09-23T16:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/why-cves-belong-in-frameworks-and-apps-not-ai-models/",
+      "published_date": "2025-09-26T16:31:23+00:00",
       "category": "Industry",
-      "description": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
-      "author": "Varun Praveen",
-      "content": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
+      "description": "The Common Vulnerabilities and Exposures (CVE) system is the global standard for cataloging security flaws in software. Maintained by MITRE and backed by CISA,...",
+      "author": "Rich Harang",
+      "content": "The Common Vulnerabilities and Exposures (CVE) system is the global standard for cataloging security flaws in software. Maintained by MITRE and backed by CISA,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -168,42 +168,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.092786+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.478708+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.092788+00:00"
+        "timestamp": "2025-10-03T08:28:15.478711+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ef1935467de97283c80e0a4bd97cb377",
-      "title": "Introducing ChatGPT Pulse",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-chatgpt-pulse",
-      "published_date": "2025-09-25T00:00:00+00:00",
+      "article_id": "e5d6fc782a5f9d160d200ab9ae9991aa",
+      "title": "AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/ai-inference-chip-company-cerebras-raises-1-1-bn-at-8-1-bn-valuation/",
+      "published_date": "2025-09-30T15:12:04+00:00",
       "category": "Industry",
-      "description": "Today we're releasing a preview of ChatGPT Pulse to Pro users on mobile. Pulse is a new experience where ChatGPT proactively does research to deliver personalized updates based on your chats, feedback, and connected apps like your calendar.",
-      "author": "",
-      "content": "Today we're releasing a preview of ChatGPT Pulse to Pro users on mobile. Pulse is a new experience where ChatGPT proactively does research to deliver personalized updates based on your chats, feedback, and connected apps like your calendar.",
+      "description": "The company said it will use the funds to expand its technology portfolio in AI processor design, system design, and AI supercomputers. The post AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "The company said it will use the funds to expand its technology portfolio in AI processor design, system design, and AI supercomputers. The post AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.9,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "overall_score": 0.89,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.090141+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.480134+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.090143+00:00"
+        "timestamp": "2025-10-03T08:28:15.480138+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c9357cf1cc2625f26c7532bdae36513c",
-      "title": "OpenAI’s $6.6B Secondary Share Sale Gives It Record $500B Startup Valuation, Topping SpaceX",
-      "source": "crunchbase_news",
-      "url": "https://news.crunchbase.com/ai/openai-valuation-secondary-share-sale-biggest-unicorn-spacex/",
-      "published_date": "2025-10-02T17:55:32+00:00",
-      "category": "Startups",
-      "description": "The transaction and resulting valuation grant OpenAI the distinction of now being the world’s most valuable private, venture-backed company, surpassing SpaceX.",
-      "author": "Marlize van Romburgh",
-      "content": "The transaction and resulting valuation grant OpenAI the distinction of now being the world’s most valuable private, venture-backed company, surpassing SpaceX.",
+      "article_id": "35931547c166e65c8229894e9769bca3",
+      "title": "Introducing parental controls",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-parental-controls",
+      "published_date": "2025-09-29T03:00:00+00:00",
+      "category": "Industry",
+      "description": "We’re rolling out parental controls and a new parent resource page to help families guide how ChatGPT works in their homes.",
+      "author": "",
+      "content": "We’re rolling out parental controls and a new parent resource page to help families guide how ChatGPT works in their homes.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.6,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -292,26 +292,26 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.097078+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.475475+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.097080+00:00"
+        "timestamp": "2025-10-03T08:28:15.475478+00:00"
       },
       "article_type": "article"
     }
   ],
-  "total_count": 15,
+  "total_count": 16,
   "pipeline_version": "3.0_with_deep_intelligence"
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-03T04:28:07.162224+00:00",
+  "generated_at": "2025-10-03T08:28:15.564188+00:00",
   "articles": [
     {
       "article_id": "32414ac5d775cebd18ce9c61a28ac2bd",
@@ -13,10 +13,72 @@
       "content": "OpenAI employees sold $6.6B in shares, leading company's valuation to jump to $500B.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.477604+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.477606+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "b03cc5a0bdf388112c24b650cbae8739",
+      "title": "How Hapag-Lloyd improved schedule reliability with ML-powered vessel schedule predictions using Amazon SageMaker",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-hapag-lloyd-improved-schedule-reliability-with-ml-powered-vessel-schedule-predictions-using-amazon-sagemaker/",
+      "published_date": "2025-10-01T18:19:37+00:00",
+      "category": "Industry",
+      "description": "In this post, we share how Hapag-Lloyd developed and implemented a machine learning (ML)-powered assistant predicting vessel arrival and departure times that revolutionizes their schedule planning. By using Amazon SageMaker AI and implementing robust MLOps practices, Hapag-Lloyd has enhanced its schedule reliability—a key performance indicator in the industry and quality promise to their customers.",
+      "author": "Thomas Voss",
+      "content": "In this post, we share how Hapag-Lloyd developed and implemented a machine learning (ML)-powered assistant predicting vessel arrival and departure times that revolutionizes their schedule planning. By using Amazon SageMaker AI and implementing robust MLOps practices, Hapag-Lloyd has enhanced its schedule reliability—a key performance indicator in the industry and quality promise to their customers.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.925,
+        "overall_score": 0.8975,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -44,35 +106,159 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.091697+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.476119+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.091699+00:00"
+        "timestamp": "2025-10-03T08:28:15.476122+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "9ef6c4cd59f907a967c2d1b8758ed87a",
-      "title": "Independent report: Innovation Clusters Map: summary and methods",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/innovation-clusters-map-summary-and-methods",
-      "published_date": "2025-10-01T15:42:58+00:00",
-      "category": "Government",
-      "description": "A methodology and summary report of the Innovation Clusters Map.",
+      "article_id": "afe57862f268222f680502bd74718448",
+      "title": "Why CVEs Belong in Frameworks and Apps, Not AI Models",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/why-cves-belong-in-frameworks-and-apps-not-ai-models/",
+      "published_date": "2025-09-26T16:31:23+00:00",
+      "category": "Industry",
+      "description": "The Common Vulnerabilities and Exposures (CVE) system is the global standard for cataloging security flaws in software. Maintained by MITRE and backed by CISA,...",
+      "author": "Rich Harang",
+      "content": "The Common Vulnerabilities and Exposures (CVE) system is the global standard for cataloging security flaws in software. Maintained by MITRE and backed by CISA,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.478708+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.478711+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e5d6fc782a5f9d160d200ab9ae9991aa",
+      "title": "AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/ai-inference-chip-company-cerebras-raises-1-1-bn-at-8-1-bn-valuation/",
+      "published_date": "2025-09-30T15:12:04+00:00",
+      "category": "Industry",
+      "description": "The company said it will use the funds to expand its technology portfolio in AI processor design, system design, and AI supercomputers. The post AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "The company said it will use the funds to expand its technology portfolio in AI processor design, system design, and AI supercomputers. The post AI Inference Chip Company Cerebras Raises $1.1 Bn at $8.1 Bn Valuation appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.480134+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.480138+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "35931547c166e65c8229894e9769bca3",
+      "title": "Introducing parental controls",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-parental-controls",
+      "published_date": "2025-09-29T03:00:00+00:00",
+      "category": "Industry",
+      "description": "We’re rolling out parental controls and a new parent resource page to help families guide how ChatGPT works in their homes.",
       "author": "",
-      "content": "A methodology and summary report of the Innovation Clusters Map.",
+      "content": "We’re rolling out parental controls and a new parent resource page to help families guide how ChatGPT works in their homes.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -107,102 +293,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.089040+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.475475+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.089043+00:00"
+        "timestamp": "2025-10-03T08:28:15.475478+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "23bc4d3976e77f448e18fb5a7db45457",
-      "title": "Build a Real-Time Visual Inspection Pipeline with NVIDIA TAO 6 and NVIDIA DeepStream 8",
+      "article_id": "ab825c74f28cb9bbb776a3ac1e78e55f",
+      "title": "Deploy High-Performance AI Models in Windows Applications on NVIDIA RTX AI PCs",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/",
-      "published_date": "2025-09-23T16:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/deploy-ai-models-faster-with-windows-ml-on-rtx-pcs/",
+      "published_date": "2025-09-23T19:20:46+00:00",
       "category": "Industry",
-      "description": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
-      "author": "Varun Praveen",
-      "content": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
+      "description": "Today, Microsoft is making Windows ML available to developers. Windows ML enables C#, C++ and Python developers to optimally run AI models locally across PC...",
+      "author": "Maximilian Müller",
+      "content": "Today, Microsoft is making Windows ML available to developers. Windows ML enables C#, C++ and Python developers to optimally run AI models locally across PC...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.092786+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-03T04:28:07.092788+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ef1935467de97283c80e0a4bd97cb377",
-      "title": "Introducing ChatGPT Pulse",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-chatgpt-pulse",
-      "published_date": "2025-09-25T00:00:00+00:00",
-      "category": "Industry",
-      "description": "Today we're releasing a preview of ChatGPT Pulse to Pro users on mobile. Pulse is a new experience where ChatGPT proactively does research to deliver personalized updates based on your chats, feedback, and connected apps like your calendar.",
-      "author": "",
-      "content": "Today we're releasing a preview of ChatGPT Pulse to Pro users on mobile. Pulse is a new experience where ChatGPT proactively does research to deliver personalized updates based on your chats, feedback, and connected apps like your calendar.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.8875,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -231,40 +355,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.090141+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.478989+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.090143+00:00"
+        "timestamp": "2025-10-03T08:28:15.478992+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c9357cf1cc2625f26c7532bdae36513c",
-      "title": "OpenAI’s $6.6B Secondary Share Sale Gives It Record $500B Startup Valuation, Topping SpaceX",
-      "source": "crunchbase_news",
-      "url": "https://news.crunchbase.com/ai/openai-valuation-secondary-share-sale-biggest-unicorn-spacex/",
-      "published_date": "2025-10-02T17:55:32+00:00",
-      "category": "Startups",
-      "description": "The transaction and resulting valuation grant OpenAI the distinction of now being the world’s most valuable private, venture-backed company, surpassing SpaceX.",
-      "author": "Marlize van Romburgh",
-      "content": "The transaction and resulting valuation grant OpenAI the distinction of now being the world’s most valuable private, venture-backed company, surpassing SpaceX.",
+      "article_id": "313287c0d950000ec0f5125496af1e04",
+      "title": "Science in the age of foundation models",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/science-in-the-age-of-foundation-models",
+      "published_date": "2025-09-26T14:58:22+00:00",
+      "category": "Industry",
+      "description": "To transform scientific domains, foundation models will require physical-constraint satisfaction, uncertainty quantification, and specialized forecasting techniques that overcome data scarcity while maintaining scientific rigor.",
+      "author": "Danielle Maddix Robinson",
+      "content": "To transform scientific domains, foundation models will require physical-constraint satisfaction, uncertainty quantification, and specialized forecasting techniques that overcome data scarcity while maintaining scientific rigor.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.6,
-        "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -292,22 +416,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.097078+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.479485+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.097080+00:00"
+        "timestamp": "2025-10-03T08:28:15.479488+00:00"
       },
       "article_type": "article"
     },
@@ -358,7 +482,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.101643+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.489314+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,26 +493,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.101646+00:00"
+        "timestamp": "2025-10-03T08:28:15.489317+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9f4e4a7d12cf559b8b74a21d48ca259c",
-      "title": "Transparency data: DSIT: ministerial overseas travel and meetings, April to June 2025",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/dsit-ministerial-overseas-travel-and-meetings-april-to-june-2025",
-      "published_date": "2025-09-25T15:00:06+00:00",
-      "category": "Government",
-      "description": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
-      "author": "",
-      "content": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
+      "article_id": "bc85c7b861f862cab061cf20c28897e7",
+      "title": "OpenAI to Challenge TikTok and Instagram With Sora 2",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/openai-to-challenge-tiktok-and-instagram-with-sora-2/",
+      "published_date": "2025-10-01T04:24:28+00:00",
+      "category": "Industry",
+      "description": "The Sora iOS app is available in the US and Canada through an invite-based rollout, with plans to expand to other countries. The post OpenAI to Challenge TikTok and Instagram With Sora 2 appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "The Sora iOS app is available in the US and Canada through an invite-based rollout, with plans to expand to other countries. The post OpenAI to Challenge TikTok and Instagram With Sora 2 appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.480042+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.480045+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f835ec7c1f9a67aa391c278916b93797",
+      "title": "Will We Know Artificial General Intelligence When We See It?",
+      "source": "ieee_spectrum_ai",
+      "url": "https://spectrum.ieee.org/agi-benchmark",
+      "published_date": "2025-09-22T13:01:02+00:00",
+      "category": "Media",
+      "description": "Buzzwords in the field of artificial intelligence can be technical: perceptron, convolution, transformer. These refer to specific computing approaches. A recent term sounds more mundane but has revolutionary implications: timeline. Ask someone in AI for their timeline, and they’ll tell you when they expect the arrival of AGI—artificial general intelligence—which is sometimes defined as AI technology that can match the abilities of humans at most tasks. As AI’s sophistication has scaled—thanks...",
+      "author": "Matthew Hutson",
+      "content": "Buzzwords in the field of artificial intelligence can be technical: perceptron, convolution, transformer. These refer to specific computing approaches. A recent term sounds more mundane but has revolutionary implications: timeline. Ask someone in AI for their timeline, and they’ll tell you when they expect the arrival of AGI—artificial general intelligence—which is sometimes defined as AI technology that can match the abilities of humans at most tasks. As AI’s sophistication has scaled—thanks...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "novelty_score": 0.6,
+        "impact_score": 0.8,
+        "overall_score": 0.805,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -420,7 +606,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.089444+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.485499+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,206 +617,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.089447+00:00"
+        "timestamp": "2025-10-03T08:28:15.485502+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "80606b28875776506328966cce0789b9",
-      "title": "More ways to work with your team and tools in ChatGPT",
+      "article_id": "eba14c06a148131dce65c4056035e3d3",
+      "title": "Samsung and SK join OpenAI’s Stargate initiative to advance global AI infrastructure",
       "source": "openai_blog",
-      "url": "https://openai.com/index/more-ways-to-work-with-your-team",
-      "published_date": "2025-09-25T11:00:00+00:00",
+      "url": "https://openai.com/index/samsung-and-sk-join-stargate",
+      "published_date": "2025-10-01T03:00:00+00:00",
       "category": "Industry",
-      "description": "ChatGPT business plans now support shared projects, smarter connectors, and enhanced compliance features to help teams work faster and more securely.",
+      "description": "Samsung and SK join OpenAI’s Stargate initiative to expand global AI infrastructure, scaling advanced memory chip production and building next-gen data centers in Korea.",
       "author": "",
-      "content": "ChatGPT business plans now support shared projects, smarter connectors, and enhanced compliance features to help teams work faster and more securely.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.090059+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-03T04:28:07.090062+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "62a445ac09c2f25f615adbf6c2d7b2ca",
-      "title": "Driving sales productivity and customer success at OpenAI",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/openai-gtm-assistant",
-      "published_date": "2025-09-29T13:30:00+00:00",
-      "category": "Industry",
-      "description": "Learn how OpenAI boosts sales productivity by automating prep, centralizing knowledge, and scaling top-selling practices.",
-      "author": "",
-      "content": "Learn how OpenAI boosts sales productivity by automating prep, centralizing knowledge, and scaling top-selling practices.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.65,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.089719+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-03T04:28:07.089721+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dc8a9e3b37b8917a1462d98f3b29a244",
-      "title": "Research: Identifying and describing UK innovation clusters",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/identifying-and-describing-uk-innovation-clusters",
-      "published_date": "2025-10-01T15:44:04+00:00",
-      "category": "Government",
-      "description": "A methodology report and descriptive analysis of the original Innovation Clusters Map published in February 2024.",
-      "author": "",
-      "content": "A methodology report and descriptive analysis of the original Innovation Clusters Map published in February 2024.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.8,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.088931+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-03T04:28:07.088934+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b60ef72c7a0f2af43bffcea8b06424e9",
-      "title": "Snowflake Bets Big on AI agents with a 10-minute Build Promise",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-highlights/snowflake-bets-big-on-ai-agents-with-a-10-minute-build-promise/",
-      "published_date": "2025-10-01T05:16:49+00:00",
-      "category": "Industry",
-      "description": "Snowflake has also introduced Cortex Agents, a managed service now in public preview. The post Snowflake Bets Big on AI agents with a 10-minute Build Promise appeared first on Analytics India Magazine.",
-      "author": "Shalini Mondal",
-      "content": "Snowflake has also introduced Cortex Agents, a managed service now in public preview. The post Snowflake Bets Big on AI agents with a 10-minute Build Promise appeared first on Analytics India Magazine.",
+      "content": "Samsung and SK join OpenAI’s Stargate initiative to expand global AI infrastructure, scaling advanced memory chip production and building next-gen data centers in Korea.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
@@ -668,7 +668,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.093314+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.475058+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -679,7 +679,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.093317+00:00"
+        "timestamp": "2025-10-03T08:28:15.475061+00:00"
       },
       "article_type": "article"
     },
@@ -688,7 +688,7 @@
       "title": "Treating opioid addiction in jails improves treatment engagement, reduces overdose deaths and reincarceration",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/treating-opioid-addiction-jails-improves-treatment-engagement-reduces-overdose-deaths-reincarceration",
-      "published_date": "2025-10-03T04:19:22.573935+00:00",
+      "published_date": "2025-10-03T08:21:16.019709+00:00",
       "category": "Government",
       "description": "NIH-funded study demonstrates life-saving potential of providing medications for opioid use disorder in carceral settings.",
       "author": "",
@@ -699,7 +699,7 @@
         "novelty_score": 0.7,
         "impact_score": 0.9,
         "overall_score": 0.82,
-        "confidence_mean": 0.8
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -726,42 +726,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.088720+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.474184+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.088725+00:00"
+        "timestamp": "2025-10-03T08:28:15.474188+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ba8ab55a59db85724fc23024f058d6ec",
-      "title": "HHS Doubles AI-Backed Childhood Cancer Research Funding",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/hhs-doubles-ai-backed-childhood-cancer-research-funding",
-      "published_date": "2025-10-03T04:19:22.573407+00:00",
+      "article_id": "f1390cfeedf06aa8c6cd4a904e87782b",
+      "title": "NIST Issues Broad Agency Announcement for Proposals to Advance Microelectronics Technologies",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2025/09/nist-issues-broad-agency-announcement-proposals-advance-microelectronics",
+      "published_date": "2025-09-24T12:00:00+00:00",
       "category": "Government",
-      "description": "Following an Executive Order by President Trump, HHS will increase funding of data-centered pediatric cancer research.",
-      "author": "",
-      "content": "Following an Executive Order by President Trump, HHS will increase funding of data-centered pediatric cancer research.",
+      "description": "The CHIPS for America funding opportunity will support critical research, prototyping and commercial solutions that advance microelectronics technology in the United States.",
+      "author": "Sarah Henderson",
+      "content": "The CHIPS for America funding opportunity will support critical research, prototyping and commercial solutions that advance microelectronics technology in the United States.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "quality_score": 0.85,
+        "novelty_score": 0.6,
+        "impact_score": 0.9,
+        "overall_score": 0.8125000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -788,42 +788,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.088490+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.473806+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.088493+00:00"
+        "timestamp": "2025-10-03T08:28:15.473810+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "31404a0f2600403f65b9cba6a80650b8",
-      "title": "Build multi-agent site reliability engineering assistants with Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-multi-agent-site-reliability-engineering-assistants-with-amazon-bedrock-agentcore/",
-      "published_date": "2025-09-26T15:58:34+00:00",
+      "article_id": "23bc4d3976e77f448e18fb5a7db45457",
+      "title": "Build a Real-Time Visual Inspection Pipeline with NVIDIA TAO 6 and NVIDIA DeepStream 8",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-a-real-time-visual-inspection-pipeline-with-nvidia-tao-6-and-nvidia-deepstream-8/",
+      "published_date": "2025-09-23T16:00:00+00:00",
       "category": "Industry",
-      "description": "In this post, we demonstrate how to build a multi-agent SRE assistant using Amazon Bedrock AgentCore, LangGraph, and the Model Context Protocol (MCP). This system deploys specialized AI agents that collaborate to provide the deep, contextual intelligence that modern SRE teams need for effective incident response and infrastructure management.",
-      "author": "Amit Arora",
-      "content": "In this post, we demonstrate how to build a multi-agent SRE assistant using Amazon Bedrock AgentCore, LangGraph, and the Model Context Protocol (MCP). This system deploys specialized AI agents that collaborate to provide the deep, contextual intelligence that modern SRE teams need for effective incident response and infrastructure management.",
+      "description": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
+      "author": "Varun Praveen",
+      "content": "Building a robust visual inspection pipeline for defect detection and quality control is not easy. Manufacturers and developers often face challenges such as...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8375,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -851,34 +851,34 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.090617+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.479160+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.090620+00:00"
+        "timestamp": "2025-10-03T08:28:15.479164+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ae2d30a2fee554447db0e3734ac4a074",
-      "title": "Running deep research AI agents on Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/running-deep-research-ai-agents-on-amazon-bedrock-agentcore/",
-      "published_date": "2025-09-23T20:35:23+00:00",
+      "article_id": "5009edbe23debf36f1aff7c00de4bb89",
+      "title": "NVIDIA, OpenAI Announce ‘the Biggest AI Infrastructure Deployment in History’",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/openai-nvidia/",
+      "published_date": "2025-09-22T18:38:58+00:00",
       "category": "Industry",
-      "description": "AI agents are evolving beyond basic single-task helpers into more powerful systems that can plan, critique, and collaborate with other agents to solve complex problems. Deep Agents—a recently introduced framework built on LangGraph—bring these capabilities to life, enabling multi-agent workflows that mirror real-world team dynamics. The challenge, however, is not just building such agents but […]",
-      "author": "Vadim Omeltchenko",
-      "content": "AI agents are evolving beyond basic single-task helpers into more powerful systems that can plan, critique, and collaborate with other agents to solve complex problems. Deep Agents—a recently introduced framework built on LangGraph—bring these capabilities to life, enabling multi-agent workflows that mirror real-world team dynamics. The challenge, however, is not just building such agents but […]",
+      "description": "OpenAI and NVIDIA just announced a landmark AI infrastructure partnership — an initiative that will scale OpenAI’s compute with multi-gigawatt data centers powered by millions of NVIDIA GPUs. To discuss what this means for the next generation of AI development and deployment, the two companies’ CEOs, and the president of OpenAI, spoke this morning with Read Article",
+      "author": "Isha Salian",
+      "content": "OpenAI and NVIDIA just announced a landmark AI infrastructure partnership — an initiative that will scale OpenAI’s compute with multi-gigawatt data centers powered by millions of NVIDIA GPUs. To discuss what this means for the next generation of AI development and deployment, the two companies’ CEOs, and the president of OpenAI, spoke this morning with Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
@@ -913,29 +913,92 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-03T04:28:07.090770+00:00"
+        "consensus_timestamp": "2025-10-03T08:28:15.477106+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-03T04:28:07.090773+00:00"
+        "timestamp": "2025-10-03T08:28:15.477108+00:00"
       },
       "article_type": "article"
+    },
+    {
+      "article_id": "b177eead732d899abd43140e193e43c6",
+      "title": "Are You Smarter Than an AI?",
+      "source": "ieee_spectrum_ai",
+      "url": "https://spectrum.ieee.org/arc-prize-agi-test",
+      "published_date": "2025-09-22T13:00:02+00:00",
+      "category": "Media",
+      "description": "The ARC Prize test is a deceptively simple challenge designed to measure a machine’s ability to reason, abstract, and generalize—core ingredients of artificial general intelligence (AGI). It’s the most prominent benchmark to emerge as researchers look for ways to measure progress toward AGI. For the full story, see the feature article “Will We Know Artificial General Intelligence When We See It?”This article is part of The Scale Issue.While today’s smartest AI models still struggle with many of...",
+      "author": "Eliza Strickland",
+      "content": "The ARC Prize test is a deceptively simple challenge designed to measure a machine’s ability to reason, abstract, and generalize—core ingredients of artificial general intelligence (AGI). It’s the most prominent benchmark to emerge as researchers look for ways to measure progress toward AGI. For the full story, see the feature article “Will We Know Artificial General Intelligence When We See It?”This article is part of The Scale Issue.While today’s smartest AI models still struggle with many of...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.7,
+        "quality_score": 0.6,
+        "novelty_score": 0.3,
+        "impact_score": 0.4,
+        "overall_score": 0.515,
+        "confidence_mean": 0.6
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.6,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-03T08:28:15.485544+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.56,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-03T08:28:15.485547+00:00"
+      },
+      "research_quality_score": 0.7,
+      "article_type": "research"
     }
   ],
-  "count": 15,
+  "count": 16,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 454.05660796165466,
+    "processing_time": 340.4907238483429,
     "components": [
       "collection",
       "bulk_scoring",
@@ -950,19 +1013,19 @@
     "content_breakdown": {
       "headline": 1,
       "articles": 14,
-      "research_papers": 0
+      "research_papers": 1
     },
     "classification_metadata": {
-      "total_processed": 397,
+      "total_processed": 405,
       "candidates": {
-        "headlines": 22,
-        "articles": 375,
-        "research_papers": 0
+        "headlines": 31,
+        "articles": 373,
+        "research_papers": 1
       },
       "selected": {
         "headlines": 1,
         "articles": 14,
-        "research_papers": 0
+        "research_papers": 1
       }
     }
   }
