@@ -1,12 +1,12 @@
 {
-  "updated": "2025-10-06T04:27:25.728302+00:00",
+  "updated": "2025-10-06T08:29:51.368120+00:00",
   "top_stories": [
     {
       "article_id": "f5a7404065d11e3bdf4be09cc855026f",
       "title": "NIH launches consortium to reduce risk of stillbirth in the U.S.",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-launches-consortium-reduce-risk-stillbirth-us",
-      "published_date": "2025-10-06T04:20:04.439640+00:00",
+      "published_date": "2025-10-06T08:22:28.792210+00:00",
       "category": "Government",
       "description": "More than 60% of the nearly 24,000 stillbirth cases annually remain unexplained.",
       "author": "",
@@ -17,7 +17,7 @@
         "novelty_score": 0.7,
         "impact_score": 0.9,
         "overall_score": 0.82,
-        "confidence_mean": 0.9
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,23 +45,85 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-06T04:27:25.664073+00:00"
+        "consensus_timestamp": "2025-10-06T08:29:51.245883+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-06T04:27:25.664076+00:00"
+        "timestamp": "2025-10-06T08:29:51.245887+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "428d7b766542e89e469509076aa1951a",
+      "title": "Unlock global AI inference scalability using new global cross-Region inference on Amazon Bedrock  with Anthropic’s Claude Sonnet 4.5",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/unlock-global-ai-inference-scalability-using-new-global-cross-region-inference-on-amazon-bedrock-with-anthropics-claude-sonnet-4-5/",
+      "published_date": "2025-10-03T21:37:26+00:00",
+      "category": "Industry",
+      "description": "Organizations are increasingly integrating generative AI capabilities into their applications to enhance customer experiences, streamline operations, and drive innovation. As generative AI workloads continue to grow in scale and importance, organizations face new challenges in maintaining consistent performance, reliability, and availability of their AI-powered applications. Customers are looking to scale their AI inference workloads across […]",
+      "author": "Melanie Li",
+      "content": "Organizations are increasingly integrating generative AI capabilities into their applications to enhance customer experiences, streamline operations, and drive innovation. As generative AI workloads continue to grow in scale and importance, organizations face new challenges in maintaining consistent performance, reliability, and availability of their AI-powered applications. Customers are looking to scale their AI inference workloads across […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-06T08:29:51.248019+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-06T08:29:51.248022+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "247180860c84f65520986d8d66d78bad",
@@ -106,41 +168,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-06T04:27:25.666814+00:00"
+        "consensus_timestamp": "2025-10-06T08:29:51.249506+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-06T04:27:25.666817+00:00"
+        "timestamp": "2025-10-06T08:29:51.249510+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "12ba0efb94812a64883f79360556de01",
-      "title": "Neo4j Announces $100 Million Investment to Drive GenAI Expansion",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/neo4j-announces-100-million-investment-to-drive-genai-expansion/",
-      "published_date": "2025-10-03T09:39:22+00:00",
+      "article_id": "d94873c859aff02c88bf60c31a78426b",
+      "title": "Introducing Microsoft Agent Framework",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/",
+      "published_date": "2025-10-01T14:00:00+00:00",
       "category": "Industry",
-      "description": "Neo4j is investing to launch new agentic products and support 1,000 AI-native startups, marking its biggest GenAI push yet. The post Neo4j Announces $100 Million Investment to Drive GenAI Expansion appeared first on Analytics India Magazine.",
-      "author": "Ankush Das",
-      "content": "Neo4j is investing to launch new agentic products and support 1,000 AI-native startups, marking its biggest GenAI push yet. The post Neo4j Announces $100 Million Investment to Drive GenAI Expansion appeared first on Analytics India Magazine.",
+      "description": "Microsoft Agent Framework, now in public preview, and new capabilities in Azure AI Foundry make it easier for developers to build, observe, and govern multi-agent systems. The post Introducing Microsoft Agent Framework appeared first on Microsoft Azure Blog.",
+      "author": "Yina Arenas",
+      "content": "Microsoft Agent Framework, now in public preview, and new capabilities in Azure AI Foundry make it easier for developers to build, observe, and govern multi-agent systems. The post Introducing Microsoft Agent Framework appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -172,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-06T04:27:25.669376+00:00"
+        "consensus_timestamp": "2025-10-06T08:29:51.247744+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,7 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-06T04:27:25.669379+00:00"
+        "timestamp": "2025-10-06T08:29:51.247748+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-06T04:27:25.666508+00:00"
+        "consensus_timestamp": "2025-10-06T08:29:51.249202+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,69 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-06T04:27:25.666511+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b0f2f482a3fda9835f07c172e6e384fc",
-      "title": "Anthropic hires new CTO with focus on AI infrastructure",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/10/02/anthropic-hires-new-cto-with-focus-on-ai-infrastructure/",
-      "published_date": "2025-10-02T19:00:39+00:00",
-      "category": "Industry",
-      "description": "As part of the change, Anthropic is updating the structure of its core technical group, bringing the company's product-engineering team into closer contact with the infrastructure and inference teams.",
-      "author": "Russell Brandom",
-      "content": "As part of the change, Anthropic is updating the structure of its core technical group, bringing the company's product-engineering team into closer contact with the infrastructure and inference teams.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-06T04:27:25.667948+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-06T04:27:25.667951+00:00"
+        "timestamp": "2025-10-06T08:29:51.249207+00:00"
       },
       "article_type": "article"
     }
