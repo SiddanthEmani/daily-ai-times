@@ -1,5 +1,5 @@
 {
-  "updated": "2025-10-15T04:24:13.005445+00:00",
+  "updated": "2025-10-15T08:27:38.717787+00:00",
   "top_stories": [
     {
       "article_id": "3c6fb56022d9fe71b6333f04d8d85eb9",
@@ -13,10 +13,134 @@
       "content": "OpenAI will purchase 10 gigawatts' worth of AI accelerator hardware from semiconductor Broadcom.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-15T08:27:38.678888+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-15T08:27:38.678890+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "c9f14444511f89c7d677ccfdd2dae2b7",
+      "title": "AMD and OpenAI announce strategic partnership to deploy 6 gigawatts of AMD GPUs",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-amd-strategic-partnership",
+      "published_date": "2025-10-06T06:00:00+00:00",
+      "category": "Industry",
+      "description": "AMD and OpenAI have announced a multi-year partnership to deploy 6 gigawatts of AMD Instinct GPUs, beginning with 1 gigawatt in 2026, to power OpenAI’s next-generation AI infrastructure and accelerate global AI innovation.",
+      "author": "",
+      "content": "AMD and OpenAI have announced a multi-year partnership to deploy 6 gigawatts of AMD Instinct GPUs, beginning with 1 gigawatt in 2026, to power OpenAI’s next-generation AI infrastructure and accelerate global AI innovation.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.85,
         "impact_score": 0.95,
-        "overall_score": 0.925,
+        "overall_score": 0.9125000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-15T08:27:38.676865+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-15T08:27:38.676868+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c27b3e2c7d4fbc754993938a21baaceb",
+      "title": "Responsible AI: How PowerSchool safeguards millions of students with AI-powered content filtering using Amazon SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/responsible-ai-how-powerschool-safeguards-millions-of-students-with-ai-powered-content-filtering-using-amazon-sagemaker-ai/",
+      "published_date": "2025-10-06T19:14:40+00:00",
+      "category": "Industry",
+      "description": "In this post, we demonstrate how PowerSchool built and deployed a custom content filtering solution using Amazon SageMaker AI that achieved better accuracy while maintaining low false positive rates. We walk through our technical approach to fine tuning Llama 3.1 8B, our deployment architecture, and the performance results from internal validations.",
+      "author": "Anjali Vijayakumar",
+      "content": "In this post, we demonstrate how PowerSchool built and deployed a custom content filtering solution using Amazon SageMaker AI that achieved better accuracy while maintaining low false positive rates. We walk through our technical approach to fine tuning Llama 3.1 8B, our deployment architecture, and the performance results from internal validations.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -45,72 +169,10 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-15T04:24:12.964829+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-15T04:24:12.964832+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "d60334dfbb0ae9fec7b43e76889bf3dc",
-      "title": "Oracle and NVIDIA Accelerate Sovereign AI, Enabling Abu Dhabi’s AI-Native Government Transformation",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/oracle-nvidia-accelerate-sovereign-ai-abu-dhabi/",
-      "published_date": "2025-10-14T12:30:27+00:00",
-      "category": "Industry",
-      "description": "At Oracle AI World, NVIDIA and Oracle announced they are deepening their collaboration to bolster sovereign AI initiatives and accelerate government digital transformation worldwide. By combining NVIDIA’s AI computing platforms with Oracle’s scalable cloud infrastructure, the collaboration enables organizations, such as Abu Dhabi’s Department of Government Enablement (DGE), in partnership with Deloitte and Core42, to Read Article",
-      "author": "Asad Ansari",
-      "content": "At Oracle AI World, NVIDIA and Oracle announced they are deepening their collaboration to bolster sovereign AI initiatives and accelerate government digital transformation worldwide. By combining NVIDIA’s AI computing platforms with Oracle’s scalable cloud infrastructure, the collaboration enables organizations, such as Abu Dhabi’s Department of Government Enablement (DGE), in partnership with Deloitte and Core42, to Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-15T04:24:12.964178+00:00"
+        "consensus_timestamp": "2025-10-15T08:27:38.677919+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,7 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-15T04:24:12.964181+00:00"
+        "timestamp": "2025-10-15T08:27:38.677923+00:00"
       },
       "article_type": "article"
     },
@@ -139,133 +201,9 @@
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-15T04:24:12.964311+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-15T04:24:12.964313+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "bd6078892804222720b460fb1c23e6df",
-      "title": "OpenAI announces strategic collaboration with Japan’s Digital Agency",
-      "source": "openai_blog",
-      "url": "https://openai.com/global-affairs/strategic-collaboration-with-japan-digital-agency",
-      "published_date": "2025-10-02T00:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI and Japan’s Digital Agency partner to advance generative AI in public services, support international AI governance, and promote safe, trustworthy AI adoption worldwide.",
-      "author": "",
-      "content": "OpenAI and Japan’s Digital Agency partner to advance generative AI in public services, support international AI governance, and promote safe, trustworthy AI adoption worldwide.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-15T04:24:12.963089+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-15T04:24:12.963092+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e76947dff06bb2e6e517f673f21218ce",
-      "title": "Repeated head impacts cause early neuron loss and inflammation in young athletes",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/repeated-head-impacts-cause-early-neuron-loss-inflammation-young-athletes",
-      "published_date": "2025-10-15T04:20:18.161985+00:00",
-      "category": "Government",
-      "description": "NIH-funded study reveals brain changes long before chronic traumatic encephalopathy (CTE) develops.",
-      "author": "",
-      "content": "NIH-funded study reveals brain changes long before chronic traumatic encephalopathy (CTE) develops.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
-        "confidence_mean": 0.95
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-15T04:24:12.961742+00:00"
+        "consensus_timestamp": "2025-10-15T08:27:38.678347+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-15T04:24:12.961746+00:00"
+        "timestamp": "2025-10-15T08:27:38.678349+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ed3c5c0c42e198323a9c978dc50d55e9",
+      "title": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration",
+      "published_date": "2025-10-13T06:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI and Broadcom announce a multi-year partnership to deploy 10 gigawatts of OpenAI-designed AI accelerators, co-developing next-generation systems and Ethernet solutions to power scalable, energy-efficient AI infrastructure by 2029.",
+      "author": "",
+      "content": "OpenAI and Broadcom announce a multi-year partnership to deploy 10 gigawatts of OpenAI-designed AI accelerators, co-developing next-generation systems and Ethernet solutions to power scalable, energy-efficient AI infrastructure by 2029.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-15T08:27:38.676538+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-15T08:27:38.676541+00:00"
       },
       "article_type": "article"
     }
