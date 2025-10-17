@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-16T20:23:30.659029+00:00",
+  "generated_at": "2025-10-17T01:18:51.338959+00:00",
   "articles": [
     {
       "article_id": "023ffe807546801d33691eb91db4ef97",
@@ -12,11 +12,11 @@
       "author": "Sarah Perez",
       "content": "Spotify has announced new partnerships with major record labels — including Sony, Universal, Warner, and Merlin — to build “responsible AI” tools that protect artists’ rights and ensure fair compensation. The initiative will let artists opt in or out of AI use.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.89,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,41 +44,165 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.620546+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.295820+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.620549+00:00"
+        "timestamp": "2025-10-17T01:18:51.295823+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "16d88dcd487eb2e49aaf081f4817b935",
-      "title": "How Amazon Bedrock Custom Model Import streamlined LLM deployment for Salesforce",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-custom-model-import-streamlined-llm-deployment-for-salesforce/",
-      "published_date": "2025-10-14T16:33:57+00:00",
+      "article_id": "c9f14444511f89c7d677ccfdd2dae2b7",
+      "title": "AMD and OpenAI announce strategic partnership to deploy 6 gigawatts of AMD GPUs",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-amd-strategic-partnership",
+      "published_date": "2025-10-06T06:00:00+00:00",
       "category": "Industry",
-      "description": "This post shows how Salesforce integrated Amazon Bedrock Custom Model Import into their machine learning operations (MLOps) workflow, reused existing endpoints without application changes, and benchmarked scalability. We share key metrics on operational efficiency and cost optimization gains, and offer practical insights for simplifying your deployment strategy.",
-      "author": "Srikanta Prasad, Utkarsh Arora, Raghav Tanaji, Nitin Surya, Gokulakrishnan Gopalakrishnan, Akhilesh Deepak Gotmare,",
-      "content": "This post shows how Salesforce integrated Amazon Bedrock Custom Model Import into their machine learning operations (MLOps) workflow, reused existing endpoints without application changes, and benchmarked scalability. We share key metrics on operational efficiency and cost optimization gains, and offer practical insights for simplifying your deployment strategy.",
+      "description": "AMD and OpenAI have announced a multi-year partnership to deploy 6 gigawatts of AMD Instinct GPUs, beginning with 1 gigawatt in 2026, to power OpenAI’s next-generation AI infrastructure and accelerate global AI innovation.",
+      "author": "",
+      "content": "AMD and OpenAI have announced a multi-year partnership to deploy 6 gigawatts of AMD Instinct GPUs, beginning with 1 gigawatt in 2026, to power OpenAI’s next-generation AI infrastructure and accelerate global AI innovation.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.931,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.293130+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.293133+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6fa5e4747bbb03e85c73f2d63b31db01",
+      "title": "Scala development in Amazon SageMaker Studio with Almond kernel",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scala-development-in-amazon-sagemaker-studio-with-almond-kernel/",
+      "published_date": "2025-10-15T16:35:01+00:00",
+      "category": "Industry",
+      "description": "This post provides a comprehensive guide on integrating the Almond kernel into SageMaker Studio, offering a solution for Scala development within the platform.",
+      "author": "Varun Rajan",
+      "content": "This post provides a comprehensive guide on integrating the Almond kernel into SageMaker Studio, offering a solution for Scala development within the platform.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.915,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.293850+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.293852+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2e29845a3d0c2e4600679496ef2e9a9a",
+      "title": "Building smarter AI agents: AgentCore long-term memory deep dive",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-smarter-ai-agents-agentcore-long-term-memory-deep-dive/",
+      "published_date": "2025-10-15T18:22:57+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Amazon Bedrock AgentCore Memory transforms raw conversational data into persistent, actionable knowledge through sophisticated extraction, consolidation, and retrieval mechanisms that mirror human cognitive processes. The system tackles the complex challenge of building AI agents that don't just store conversations but extract meaningful insights, merge related information across time, and maintain coherent memory stores that enable truly context-aware interactions.",
+      "author": "Akarsha Sehwag",
+      "content": "In this post, we explore how Amazon Bedrock AgentCore Memory transforms raw conversational data into persistent, actionable knowledge through sophisticated extraction, consolidation, and retrieval mechanisms that mirror human cognitive processes. The system tackles the complex challenge of building AI agents that don't just store conversations but extract meaningful insights, merge related information across time, and maintain coherent memory stores that enable truly context-aware interactions.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -106,41 +230,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.619263+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.293755+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.619266+00:00"
+        "timestamp": "2025-10-17T01:18:51.293757+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "90a9140e8e4382bd8b33f36037b75001",
-      "title": "Implement a secure MLOps platform based on Terraform and GitHub",
+      "article_id": "16d88dcd487eb2e49aaf081f4817b935",
+      "title": "How Amazon Bedrock Custom Model Import streamlined LLM deployment for Salesforce",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/implement-a-secure-mlops-platform-based-on-terraform-and-github/",
-      "published_date": "2025-10-08T15:38:36+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-custom-model-import-streamlined-llm-deployment-for-salesforce/",
+      "published_date": "2025-10-14T16:33:57+00:00",
       "category": "Industry",
-      "description": "Machine learning operations (MLOps) is the combination of people, processes, and technology to productionize ML use cases efficiently. To achieve this, enterprise customers must develop MLOps platforms to support reproducibility, robustness, and end-to-end observability of the ML use case’s lifecycle. Those platforms are based on a multi-account setup by adopting strict security constraints, development best […]",
-      "author": "Jordan Grubb",
-      "content": "Machine learning operations (MLOps) is the combination of people, processes, and technology to productionize ML use cases efficiently. To achieve this, enterprise customers must develop MLOps platforms to support reproducibility, robustness, and end-to-end observability of the ML use case’s lifecycle. Those platforms are based on a multi-account setup by adopting strict security constraints, development best […]",
+      "description": "This post shows how Salesforce integrated Amazon Bedrock Custom Model Import into their machine learning operations (MLOps) workflow, reused existing endpoints without application changes, and benchmarked scalability. We share key metrics on operational efficiency and cost optimization gains, and offer practical insights for simplifying your deployment strategy.",
+      "author": "Srikanta Prasad, Utkarsh Arora, Raghav Tanaji, Nitin Surya, Gokulakrishnan Gopalakrishnan, Akhilesh Deepak Gotmare,",
+      "content": "This post shows how Salesforce integrated Amazon Bedrock Custom Model Import into their machine learning operations (MLOps) workflow, reused existing endpoints without application changes, and benchmarked scalability. We share key metrics on operational efficiency and cost optimization gains, and offer practical insights for simplifying your deployment strategy.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.293941+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.293944+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bf67890ac5813704f4ca9739622163e2",
+      "title": "NVIDIA, Partners Drive Next-Gen Efficient Gigawatt AI Factories in Buildup for Vera Rubin",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "published_date": "2025-10-13T15:00:05+00:00",
+      "category": "Industry",
+      "description": "At the OCP Global Summit, NVIDIA is offering a glimpse into the future of gigawatt AI factories. NVIDIA will unveil specs of the NVIDIA Vera Rubin NVL144 MGX-generation open architecture rack servers, which more than 50 MGX partners are gearing up for along with ecosystem support for NVIDIA Kyber, which connects 576 Rubin Ultra GPUs, Read Article",
+      "author": "Harry Petty",
+      "content": "At the OCP Global Summit, NVIDIA is offering a glimpse into the future of gigawatt AI factories. NVIDIA will unveil specs of the NVIDIA Vera Rubin NVL144 MGX-generation open architecture rack servers, which more than 50 MGX partners are gearing up for along with ecosystem support for NVIDIA Kyber, which connects 576 Rubin Ultra GPUs, Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -172,7 +358,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.619652+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.295317+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,193 +369,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.619654+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6c5ce7f40f1dc457b0014b4d71b60669",
-      "title": "Introducing CodeMender: an AI agent for code security",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/introducing-codemender-an-ai-agent-for-code-security/",
-      "published_date": "2025-10-06T12:59:18+00:00",
-      "category": "Industry",
-      "description": "CodeMender helps patch critical software vulnerabilities, and rewrites and secures existing code.",
-      "author": "",
-      "content": "CodeMender helps patch critical software vulnerabilities, and rewrites and secures existing code.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.9,
-        "overall_score": 0.9025000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.92,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.622003+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.622006+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "1e708b1cb3a655ad27ea3fa21fd96eb6",
-      "title": "Building Digital UK to be integrated with the Department for Science, Innovation and Technology",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/building-digital-uk-to-be-integrated-with-the-department-for-science-innovation-and-technology",
-      "published_date": "2025-10-13T09:39:03+00:00",
-      "category": "Government",
-      "description": "Building Digital UK will be integrated into the Department for Science, Innovation and Technology on 1 November 2025.",
-      "author": "",
-      "content": "Building Digital UK will be integrated into the Department for Science, Innovation and Technology on 1 November 2025.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.617819+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.617822+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "944e330f0e5ab57268bcd80ea0da66d5",
-      "title": "Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/",
-      "published_date": "2025-10-14T18:00:00+00:00",
-      "category": "Industry",
-      "description": "Oracle Database@Azure adds new AI-ready features, expands to 33 regions, and launches new partner and migration programs The post Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation appeared first on Microsoft Azure Blog.",
-      "author": "Brett Tanzer",
-      "content": "Oracle Database@Azure adds new AI-ready features, expands to 33 regions, and launches new partner and migration programs The post Oracle Database@Azure offers new features, regions, and programs to unlock data and AI innovation appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.618647+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.618650+00:00"
+        "timestamp": "2025-10-17T01:18:51.295320+00:00"
       },
       "article_type": "article"
     },
@@ -378,7 +378,7 @@
       "title": "Repeated head impacts cause early neuron loss and inflammation in young athletes",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/repeated-head-impacts-cause-early-neuron-loss-inflammation-young-athletes",
-      "published_date": "2025-10-16T20:19:21.363585+00:00",
+      "published_date": "2025-10-17T01:14:27.695084+00:00",
       "category": "Government",
       "description": "NIH-funded study reveals brain changes long before chronic traumatic encephalopathy (CTE) develops.",
       "author": "",
@@ -387,8 +387,8 @@
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8775000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -420,7 +420,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.617252+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.291923+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,27 +431,275 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.617256+00:00"
+        "timestamp": "2025-10-17T01:18:51.291927+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "3889f9bdcac05a35da77c50fdcd65b7c",
-      "title": "Elon Musk Gets Just-Launched NVIDIA DGX Spark: Petaflop AI Supercomputer Lands at SpaceX",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/live-dgx-spark-delivery/",
-      "published_date": "2025-10-14T00:31:39+00:00",
+      "article_id": "c8528f4012c3c26bed7f855e2663d2c5",
+      "title": "Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
+      "published_date": "2025-10-09T16:00:00+00:00",
       "category": "Industry",
-      "description": "The next AI revolution starts where rockets launch. NVIDIA DGX Spark’s first stop: Starbase, Texas. NVIDIA founder and CEO Jensen Huang arrived at the SpaceX facility — amid towering engines and gleaming steel — to hand-deliver the company’s just-launched DGX Spark to Elon Musk. Huang arrived walking past rows of engineers who waved and grinned. Read Article",
-      "author": "NVIDIA Newsroom",
-      "content": "The next AI revolution starts where rockets launch. NVIDIA DGX Spark’s first stop: Starbase, Texas. NVIDIA founder and CEO Jensen Huang arrived at the SpaceX facility — amid towering engines and gleaming steel — to hand-deliver the company’s just-launched DGX Spark to Elon Musk. Huang arrived walking past rows of engineers who waved and grinned. Read Article",
+      "description": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72, featuring NVIDIA Blackwell Ultra GPUs connected through the next-generation NVIDIA InfiniBand network. The post Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads appeared first on Microsoft Azure Blog.",
+      "author": "Rani Borkar and Nidhi Chappell",
+      "content": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72, featuring NVIDIA Blackwell Ultra GPUs connected through the next-generation NVIDIA InfiniBand network. The post Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8775000000000001,
         "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.293444+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.293447+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9a7097b448d7ae7f82e47da227b523ca",
+      "title": "Disrupting malicious uses of AI: October 2025",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/disrupting-malicious-uses-of-ai-october-2025",
+      "published_date": "2025-10-07T03:00:00+00:00",
+      "category": "Industry",
+      "description": "Discover how OpenAI is detecting and disrupting malicious uses of AI in our October 2025 report. Learn how we’re countering misuse, enforcing policies, and protecting users from real-world harms.",
+      "author": "",
+      "content": "Discover how OpenAI is detecting and disrupting malicious uses of AI in our October 2025 report. Learn how we’re countering misuse, enforcing policies, and protecting users from real-world harms.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.292991+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.292994+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "781eca4928e66d125671b5caa6491c54",
+      "title": "HYGH powers next-gen digital ads with ChatGPT Business",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/hygh",
+      "published_date": "2025-10-10T00:00:00+00:00",
+      "category": "Industry",
+      "description": "HYGH speeds up software development and campaign delivery with ChatGPT Business, cutting turnaround times, scaling output, and driving revenue growth.",
+      "author": "",
+      "content": "HYGH speeds up software development and campaign delivery with ChatGPT Business, cutting turnaround times, scaling output, and driving revenue growth.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.292848+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.292851+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "80f88ee5d99112abc78ccfe78ddf810d",
+      "title": "Smarter Anomaly Detection in Semiconductor Manufacturing with NVIDIA NV-Tesseract and NVIDIA NIM",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/smarter-anomaly-detection-in-semiconductor-manufacturing-with-nvidia-nv-tesseract-and-nvidia-nim/",
+      "published_date": "2025-10-03T15:29:00+00:00",
+      "category": "Industry",
+      "description": "In an earlier blog post, we introduced NVIDIA NV-Tesseract, a family of models designed to tackle diverse time-series tasks—such as anomaly detection,...",
+      "author": "Aditi Gautam",
+      "content": "In an earlier blog post, we introduced NVIDIA NV-Tesseract, a family of models designed to tackle diverse time-series tasks—such as anomaly detection,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.296920+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.296923+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "265fceb400dd480c5fa31396faa2e808",
+      "title": "Salesforce Expands AWS Partnership, Targets $60 Billion Revenue by 2030",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/salesforce-expands-aws-partnership-targets-60-billion-revenue-by-2030/",
+      "published_date": "2025-10-16T08:38:35+00:00",
+      "category": "Industry",
+      "description": "The partnership will expand integrations across various AWS offerings, allowing businesses to deploy secure AI agents efficiently. The post Salesforce Expands AWS Partnership, Targets $60 Billion Revenue by 2030 appeared first on Analytics India Magazine.",
+      "author": "Smruthi Nadig",
+      "content": "The partnership will expand integrations across various AWS offerings, allowing businesses to deploy secure AI agents efficiently. The post Salesforce Expands AWS Partnership, Targets $60 Billion Revenue by 2030 appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.6,
+        "impact_score": 0.9,
+        "overall_score": 0.8250000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -482,7 +730,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.620010+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.298168+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,274 +741,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.620013+00:00"
+        "timestamp": "2025-10-17T01:18:51.298174+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c6a653d5c71e5fdadc1a0181a7571c85",
-      "title": "Building the 800 VDC Ecosystem for Efficient, Scalable AI Factories",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
-      "published_date": "2025-10-13T15:00:00+00:00",
+      "article_id": "19b7edfad83e118d926f6e4da49abd76",
+      "title": "Optimizing document AI and structured outputs by fine-tuning Amazon Nova Models and on-demand inference",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-document-ai-and-structured-outputs-by-fine-tuning-amazon-nova-models-and-on-demand-inference/",
+      "published_date": "2025-10-16T18:32:55+00:00",
       "category": "Industry",
-      "description": "For decades, traditional data centers have been vast halls of servers with power and cooling as secondary considerations. The rise of generative AI has changed...",
-      "author": "Neeraj Srivastava",
-      "content": "For decades, traditional data centers have been vast halls of servers with power and cooling as secondary considerations. The rise of generative AI has changed...",
+      "description": "This post provides a comprehensive hands-on guide to fine-tune Amazon Nova Lite for document processing tasks, with a focus on tax form data extraction. Using our open-source GitHub repository code sample, we demonstrate the complete workflow from data preparation to model deployment.",
+      "author": "Sharon Li",
+      "content": "This post provides a comprehensive hands-on guide to fine-tune Amazon Nova Lite for document processing tasks, with a focus on tax form data extraction. Using our open-source GitHub repository code sample, we demonstrate the complete workflow from data preparation to model deployment.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.85,
         "quality_score": 0.9,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8574999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.621371+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.621373+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d9f777f4d94a5382603c175d182dcdb1",
-      "title": "Unleash your creativity at scale: Azure AI Foundry’s multimodal revolution",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/",
-      "published_date": "2025-10-06T18:03:45+00:00",
-      "category": "Industry",
-      "description": "Imagine a platform where every developer can unlock the full spectrum of AI: text, images, audio, and video. This OpenAI DevDay, Azure AI Foundry is making that vision real. With today’s launch of OpenAI GPT-image-1-mini, GPT-realtime-mini, and GPT-audio-mini, plus major safety upgrades to GPT-5, you now have the ultimate toolkit to create, experiment, and scale multimodal solutions. The post Unleash your creativity at scale: Azure AI Foundry’s multimodal revolution appeared first on Microsoft...",
-      "author": "Steve Sweetman and Naomi Moneypenny",
-      "content": "Imagine a platform where every developer can unlock the full spectrum of AI: text, images, audio, and video. This OpenAI DevDay, Azure AI Foundry is making that vision real. With today’s launch of OpenAI GPT-image-1-mini, GPT-realtime-mini, and GPT-audio-mini, plus major safety upgrades to GPT-5, you now have the ultimate toolkit to create, experiment, and scale multimodal solutions. The post Unleash your creativity at scale: Azure AI Foundry’s multimodal revolution appeared first on Microsoft...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.618888+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.618891+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fea265cc2d318684c28f71b79231e830",
-      "title": "Accelerating Large-Scale Data Analytics with GPU-Native Velox and NVIDIA cuDF",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/accelerating-large-scale-data-analytics-with-gpu-native-velox-and-nvidia-cudf/",
-      "published_date": "2025-10-06T12:00:00+00:00",
-      "category": "Industry",
-      "description": "As workloads scale and demand for faster data processing grows, GPU-accelerated databases and query engines have been shown to deliver significant...",
-      "author": "Gregory Kimball",
-      "content": "As workloads scale and demand for faster data processing grows, GPU-accelerated databases and query engines have been shown to deliver significant...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.621639+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.621642+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "67844a148aab01baebc2662fa13195a6",
-      "title": "How a Gemma model helped discover a new potential cancer therapy pathway",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/discover/blog/how-a-gemma-model-helped-discover-a-new-potential-cancer-therapy-pathway/",
-      "published_date": "2025-10-16T12:00:00+00:00",
-      "category": "Industry",
-      "description": "We’re launching a new 27 billion parameter foundation model for single-cell analysis built on the Gemma family of open models.",
-      "author": "",
-      "content": "We’re launching a new 27 billion parameter foundation model for single-cell analysis built on the Gemma family of open models.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8525000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.621865+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.621868+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6fa5e4747bbb03e85c73f2d63b31db01",
-      "title": "Scala development in Amazon SageMaker Studio with Almond kernel",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/scala-development-in-amazon-sagemaker-studio-with-almond-kernel/",
-      "published_date": "2025-10-15T16:35:01+00:00",
-      "category": "Industry",
-      "description": "This post provides a comprehensive guide on integrating the Almond kernel into SageMaker Studio, offering a solution for Scala development within the platform.",
-      "author": "Varun Rajan",
-      "content": "This post provides a comprehensive guide on integrating the Almond kernel into SageMaker Studio, offering a solution for Scala development within the platform.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "impact_score": 0.9,
+        "overall_score": 0.8350000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -788,41 +788,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.619170+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.293665+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.619173+00:00"
+        "timestamp": "2025-10-17T01:18:51.293668+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7bdce3db306aa2e8acb16aba88370082",
-      "title": "Use Amazon SageMaker HyperPod and Anyscale for next-generation distributed computing",
+      "article_id": "0698d2d1f3fc0724cd71f94aef98c12a",
+      "title": "Transforming the physical world with AI: the next frontier in intelligent automation",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/use-amazon-sagemaker-hyperpod-and-anyscale-for-next-generation-distributed-computing/",
-      "published_date": "2025-10-09T21:52:24+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/transforming-the-physical-world-with-ai-the-next-frontier-in-intelligent-automation/",
+      "published_date": "2025-10-13T22:21:26+00:00",
       "category": "Industry",
-      "description": "In this post, we demonstrate how to integrate Amazon SageMaker HyperPod with Anyscale platform to address critical infrastructure challenges in building and deploying large-scale AI models. The combined solution provides robust infrastructure for distributed AI workloads with high-performance hardware, continuous monitoring, and seamless integration with Ray, the leading AI compute engine, enabling organizations to reduce time-to-market and lower total cost of ownership.",
-      "author": "Sindhura Palakodety",
-      "content": "In this post, we demonstrate how to integrate Amazon SageMaker HyperPod with Anyscale platform to address critical infrastructure challenges in building and deploying large-scale AI models. The combined solution provides robust infrastructure for distributed AI workloads with high-performance hardware, continuous monitoring, and seamless integration with Ray, the leading AI compute engine, enabling organizations to reduce time-to-market and lower total cost of ownership.",
+      "description": "In this post, we explore how Physical AI represents the next frontier in intelligent automation, where artificial intelligence transcends digital boundaries to perceive, understand, and manipulate the tangible world around us.",
+      "author": "Sri Elaprolu, Alla Simoneau, Paul Amadeo, and Randi Larson",
+      "content": "In this post, we explore how Physical AI represents the next frontier in intelligent automation, where artificial intelligence transcends digital boundaries to perceive, understand, and manipulate the tangible world around us.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "impact_score": 0.9,
+        "overall_score": 0.8350000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-17T01:18:51.293986+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-17T01:18:51.293988+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "00855837e56b62b2ec43e2e076c0a546",
+      "title": "Statistics at DSIT",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology/about/statistics",
+      "published_date": "2025-10-03T09:44:49+00:00",
+      "category": "Government",
+      "description": "DSIT and its public bodies produces official statistics covering its sectors.",
+      "author": "",
+      "content": "DSIT and its public bodies produces official statistics covering its sectors.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -854,7 +916,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.619512+00:00"
+        "consensus_timestamp": "2025-10-17T01:18:51.292609+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -865,69 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-16T20:23:30.619515+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "92d33e4191e45b977b2223f0e40a8c58",
-      "title": "Accelerated and Distributed UPF for the Era of Agentic AI and 6G",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/accelerated-and-distributed-upf-for-the-era-of-agentic-ai-and-6g/",
-      "published_date": "2025-10-15T18:06:57+00:00",
-      "category": "Industry",
-      "description": "The telecommunications industry is innovating rapidly toward 6G for both AI-native Radio Access Networks (AI-RAN) and AI-Core. The distributed User Plane...",
-      "author": "Yuyong Zhang",
-      "content": "The telecommunications industry is innovating rapidly toward 6G for both AI-native Radio Access Networks (AI-RAN) and AI-Core. The distributed User Plane...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.7,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-16T20:23:30.621169+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.62,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-16T20:23:30.621172+00:00"
+        "timestamp": "2025-10-17T01:18:51.292613+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 178.3838596343994,
+    "processing_time": 184.23891282081604,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 132,
+      "total_processed": 130,
       "candidates": {
-        "headlines": 15,
-        "articles": 117,
+        "headlines": 18,
+        "articles": 112,
         "research_papers": 0
       },
       "selected": {
