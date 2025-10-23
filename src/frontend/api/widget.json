@@ -1,23 +1,23 @@
 {
-  "updated": "2025-10-22T20:25:09.329532+00:00",
+  "updated": "2025-10-23T01:20:10.122486+00:00",
   "top_stories": [
     {
-      "article_id": "44732d4de273cf95e7e4244dae4cc4eb",
-      "title": "I spent a month living with a $430 AI pet, the Casio Moflin",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/10/21/i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin/",
-      "published_date": "2025-10-21T18:23:56+00:00",
+      "article_id": "f238e9a049a0cf08959c5da141cf438a",
+      "title": "Amazon launches $68 million AI PhD Fellowship program",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/news/amazon-launches-68-million-ai-phd-fellowship-program",
+      "published_date": "2025-10-21T13:00:00+00:00",
       "category": "Industry",
-      "description": "Casio’s Moflin, a hamster-like robot pet, uses AI to develop a personality over time.",
-      "author": "Amanda Silberling",
-      "content": "Casio’s Moflin, a hamster-like robot pet, uses AI to develop a personality over time.",
+      "description": "Initiative will fund over 100 doctoral students researching machine learning, computer vision, and natural-language processing at nine universities.",
+      "author": "Staff writer",
+      "content": "Initiative will fund over 100 doctoral students researching machine learning, computer vision, and natural-language processing at nine universities.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,221 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-22T20:25:09.288911+00:00"
+        "consensus_timestamp": "2025-10-23T01:20:10.084362+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-22T20:25:09.288914+00:00"
+        "timestamp": "2025-10-23T01:20:10.084365+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "4fd3cd46efdce1dbec7192ab3161b9d9",
-      "title": "Accelerate large-scale AI training with Amazon SageMaker HyperPod training operator",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-large-scale-ai-training-with-amazon-sagemaker-hyperpod-training-operator/",
-      "published_date": "2025-10-21T17:26:32+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how to deploy and manage machine learning training workloads using the Amazon SageMaker HyperPod training operator, which enhances training resilience for Kubernetes workloads through pinpoint recovery and customizable monitoring capabilities. The Amazon SageMaker HyperPod training operator helps accelerate generative AI model development by efficiently managing distributed training across large GPU clusters, offering benefits like centralized training process...",
-      "author": "Arun Kumar Lokanatha",
-      "content": "In this post, we demonstrate how to deploy and manage machine learning training workloads using the Amazon SageMaker HyperPod training operator, which enhances training resilience for Kubernetes workloads through pinpoint recovery and customizable monitoring capabilities. The Amazon SageMaker HyperPod training operator helps accelerate generative AI model development by efficiently managing distributed training across large GPU clusters, offering benefits like centralized training process...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.925,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-22T20:25:09.286946+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-22T20:25:09.286949+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2e29845a3d0c2e4600679496ef2e9a9a",
-      "title": "Building smarter AI agents: AgentCore long-term memory deep dive",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-smarter-ai-agents-agentcore-long-term-memory-deep-dive/",
-      "published_date": "2025-10-15T18:22:57+00:00",
-      "category": "Industry",
-      "description": "In this post, we explore how Amazon Bedrock AgentCore Memory transforms raw conversational data into persistent, actionable knowledge through sophisticated extraction, consolidation, and retrieval mechanisms that mirror human cognitive processes. The system tackles the complex challenge of building AI agents that don't just store conversations but extract meaningful insights, merge related information across time, and maintain coherent memory stores that enable truly context-aware interactions.",
-      "author": "Akarsha Sehwag",
-      "content": "In this post, we explore how Amazon Bedrock AgentCore Memory transforms raw conversational data into persistent, actionable knowledge through sophisticated extraction, consolidation, and retrieval mechanisms that mirror human cognitive processes. The system tackles the complex challenge of building AI agents that don't just store conversations but extract meaningful insights, merge related information across time, and maintain coherent memory stores that enable truly context-aware interactions.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-22T20:25:09.287356+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-22T20:25:09.287359+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3889f9bdcac05a35da77c50fdcd65b7c",
-      "title": "Elon Musk Gets Just-Launched NVIDIA DGX Spark: Petaflop AI Supercomputer Lands at SpaceX",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/live-dgx-spark-delivery/",
-      "published_date": "2025-10-14T00:31:39+00:00",
-      "category": "Industry",
-      "description": "The future of AI took flight at Starbase, Texas — where NVIDIA CEO Jensen Huang hand-delivered the first DGX Spark to Elon Musk, chief engineer at SpaceX. Amid towering engines and gleaming steel, Huang walked past rows of engineers who waved and grinned. Moments later, Musk appeared in the cafeteria, greeting staff, opening donuts and Read Article",
-      "author": "NVIDIA Newsroom",
-      "content": "The future of AI took flight at Starbase, Texas — where NVIDIA CEO Jensen Huang hand-delivered the first DGX Spark to Elon Musk, chief engineer at SpaceX. Amid towering engines and gleaming steel, Huang walked past rows of engineers who waved and grinned. Moments later, Musk appeared in the cafeteria, greeting staff, opening donuts and Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.915,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-10-22T20:25:09.288100+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-10-22T20:25:09.288103+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c8528f4012c3c26bed7f855e2663d2c5",
-      "title": "Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads",
+      "article_id": "8d48bd5cc2054d5aa1bc9b0965b667c3",
+      "title": "FYAI: Why developers will lead AI transformation across the enterprise",
       "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/",
-      "published_date": "2025-10-09T16:00:00+00:00",
+      "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/",
+      "published_date": "2025-10-13T15:10:00+00:00",
       "category": "Industry",
-      "description": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72, featuring NVIDIA Blackwell Ultra GPUs connected through the next-generation NVIDIA InfiniBand network. The post Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads appeared first on Microsoft Azure Blog.",
-      "author": "Rani Borkar and Nidhi Chappell",
-      "content": "Microsoft delivers the first at-scale production cluster with more than 4,600 NVIDIA GB300 NVL72, featuring NVIDIA Blackwell Ultra GPUs connected through the next-generation NVIDIA InfiniBand network. The post Microsoft Azure delivers the first large scale cluster with NVIDIA GB300 NVL72 for OpenAI workloads appeared first on Microsoft Azure Blog.",
+      "description": "Discover how developers are unlocking AI's full potential by using copilots and agents to reshape customer experiences and streamline operations. The post FYAI: Why developers will lead AI transformation across the enterprise appeared first on Microsoft Azure Blog.",
+      "author": "Toby Bowers",
+      "content": "Discover how developers are unlocking AI's full potential by using copilots and agents to reshape customer experiences and streamline operations. The post FYAI: Why developers will lead AI transformation across the enterprise appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -296,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-10-22T20:25:09.286627+00:00"
+        "consensus_timestamp": "2025-10-23T01:20:10.079937+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +121,193 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-10-22T20:25:09.286630+00:00"
+        "timestamp": "2025-10-23T01:20:10.079940+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b344617265bab12a6c29fe25a5aafdfd",
+      "title": "AI, Ads and the End of Targeting as We Know It",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/ai-ads-and-the-end-of-targeting-as-we-know-it/",
+      "published_date": "2025-10-21T08:00:00+00:00",
+      "category": "Industry",
+      "description": "Meta's plan to use AI chatbot interactions to target users marks a seismic shift in advertising strategies. The post AI, Ads and the End of Targeting as We Know It appeared first on Analytics India Magazine.",
+      "author": "Smruthi Nadig",
+      "content": "Meta's plan to use AI chatbot interactions to target users marks a seismic shift in advertising strategies. The post AI, Ads and the End of Targeting as We Know It appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-23T01:20:10.085568+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-23T01:20:10.085571+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3889f9bdcac05a35da77c50fdcd65b7c",
+      "title": "Elon Musk Gets Just-Launched NVIDIA DGX Spark: Petaflop AI Supercomputer Lands at SpaceX",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/live-dgx-spark-delivery/",
+      "published_date": "2025-10-14T00:31:39+00:00",
+      "category": "Industry",
+      "description": "The future of AI took flight at Starbase, Texas — where NVIDIA CEO Jensen Huang hand-delivered the first DGX Spark to Elon Musk, chief engineer at SpaceX. Amid towering engines and gleaming steel, Huang walked past rows of engineers who waved and grinned. Moments later, Musk appeared in the cafeteria, greeting staff, opening donuts and Read Article",
+      "author": "NVIDIA Newsroom",
+      "content": "The future of AI took flight at Starbase, Texas — where NVIDIA CEO Jensen Huang hand-delivered the first DGX Spark to Elon Musk, chief engineer at SpaceX. Amid towering engines and gleaming steel, Huang walked past rows of engineers who waved and grinned. Moments later, Musk appeared in the cafeteria, greeting staff, opening donuts and Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.85,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-23T01:20:10.082158+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-23T01:20:10.082161+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4fd3cd46efdce1dbec7192ab3161b9d9",
+      "title": "Accelerate large-scale AI training with Amazon SageMaker HyperPod training operator",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-large-scale-ai-training-with-amazon-sagemaker-hyperpod-training-operator/",
+      "published_date": "2025-10-21T17:26:32+00:00",
+      "category": "Industry",
+      "description": "In this post, we demonstrate how to deploy and manage machine learning training workloads using the Amazon SageMaker HyperPod training operator, which enhances training resilience for Kubernetes workloads through pinpoint recovery and customizable monitoring capabilities. The Amazon SageMaker HyperPod training operator helps accelerate generative AI model development by efficiently managing distributed training across large GPU clusters, offering benefits like centralized training process...",
+      "author": "Arun Kumar Lokanatha",
+      "content": "In this post, we demonstrate how to deploy and manage machine learning training workloads using the Amazon SageMaker HyperPod training operator, which enhances training resilience for Kubernetes workloads through pinpoint recovery and customizable monitoring capabilities. The Amazon SageMaker HyperPod training operator helps accelerate generative AI model development by efficiently managing distributed training across large GPU clusters, offering benefits like centralized training process...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8699999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-10-23T01:20:10.080359+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-10-23T01:20:10.080362+00:00"
       },
       "article_type": "article"
     }
