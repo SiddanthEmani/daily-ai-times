@@ -1,5 +1,5 @@
 {
-  "updated": "2025-11-16T08:25:17.738327+00:00",
+  "updated": "2025-11-16T12:35:09.357036+00:00",
   "top_stories": [
     {
       "article_id": "970c490e0b6ba52660c7f35151f70a3d",
@@ -13,73 +13,11 @@
       "content": "Leaked documents reveal how much OpenAI paid Microsoft under a revenue-share agreement. They also indicate inference costs.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "quality_score": 0.8,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-16T08:25:17.703604+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-16T08:25:17.703607+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "9bd8a3ad37342b98afda3529cd60c8c7",
-      "title": "Transform your MCP architecture: Unite MCP servers through AgentCore Gateway",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/transform-your-mcp-architecture-unite-mcp-servers-through-agentcore-gateway/",
-      "published_date": "2025-11-06T17:43:23+00:00",
-      "category": "Industry",
-      "description": "Earlier this year, we introduced Amazon Bedrock AgentCore Gateway, a fully managed service that serves as a centralized MCP tool server, providing a unified interface where agents can discover, access, and invoke tools. Today, we're extending support for existing MCP servers as a new target type in AgentCore Gateway. With this capability, you can group multiple task-specific MCP servers aligned to agent goals behind a single, manageable MCP gateway interface. This reduces the operational...",
-      "author": "Frank Dallezotte",
-      "content": "Earlier this year, we introduced Amazon Bedrock AgentCore Gateway, a fully managed service that serves as a centralized MCP tool server, providing a unified interface where agents can discover, access, and invoke tools. Today, we're extending support for existing MCP servers as a new target type in AgentCore Gateway. With this capability, you can group multiple task-specific MCP servers aligned to agent goals behind a single, manageable MCP gateway interface. This reduces the operational...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.925,
-        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +48,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-16T08:25:17.702916+00:00"
+        "consensus_timestamp": "2025-11-16T12:35:09.326295+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,27 +59,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-16T08:25:17.702919+00:00"
+        "timestamp": "2025-11-16T12:35:09.326298+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "a07f00b94bce90cf939263219be20247",
+      "title": "Google’s SIMA 2 agent uses Gemini to reason and act in virtual worlds",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/11/13/googles-sima-2-agent-uses-gemini-to-reason-and-act-in-virtual-worlds/",
+      "published_date": "2025-11-13T16:15:47+00:00",
+      "category": "Industry",
+      "description": "“SIMA 2 is a more general agent. It can complete complex tasks in previously unseen environments. And it's a self-improving agent... which is a step toward more genera- purpose robots and AGI systems more generally.”",
+      "author": "Rebecca Bellan",
+      "content": "“SIMA 2 is a more general agent. It can complete complex tasks in previously unseen environments. And it's a self-improving agent... which is a step toward more genera- purpose robots and AGI systems more generally.”",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-16T12:35:09.326749+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-16T12:35:09.326752+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8751af028cec4a20b4c0e3bc0f1bd2e5",
-      "title": "Introducing agent-to-agent protocol support in Amazon Bedrock AgentCore Runtime",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-agent-to-agent-protocol-support-in-amazon-bedrock-agentcore-runtime/",
-      "published_date": "2025-11-11T21:32:31+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how you can use the A2A protocol for AI agents built with different frameworks to collaborate seamlessly. You'll learn how to deploy A2A servers on AgentCore Runtime, configure agent discovery and authentication, and build a real-world multi-agent system for incident response. We'll cover the complete A2A request lifecycle, from agent card discovery to task delegation, showing how standardized protocols eliminate the complexity of multi-agent coordination.",
-      "author": "Madhur Prashant",
-      "content": "In this post, we demonstrate how you can use the A2A protocol for AI agents built with different frameworks to collaborate seamlessly. You'll learn how to deploy A2A servers on AgentCore Runtime, configure agent discovery and authentication, and build a real-world multi-agent system for incident response. We'll cover the complete A2A request lifecycle, from agent card discovery to task delegation, showing how standardized protocols eliminate the complexity of multi-agent coordination.",
+      "article_id": "fe9ebe25907c8a413fab2c9634789fb1",
+      "title": "NIH establishes nation's first dedicated organoid development center to reduce reliance on animal modeling",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling",
+      "published_date": "2025-11-16T12:31:32.142334+00:00",
+      "category": "Government",
+      "description": "The Standardized Organoid Modeling Center aims to produce standardized protocols for organoid research, addressing reproducibility challenges.",
+      "author": "",
+      "content": "The Standardized Organoid Modeling Center aims to produce standardized protocols for organoid research, addressing reproducibility challenges.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-16T08:25:17.702553+00:00"
+        "consensus_timestamp": "2025-11-16T12:35:09.322945+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-16T08:25:17.702556+00:00"
+        "timestamp": "2025-11-16T12:35:09.322949+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "cfff32d3cff10ff851a5133827956a1b",
-      "title": "ElevenLabs strike deals with celebs to create AI audio",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/11/12/elevenlabs-strike-deals-with-celebs-to-create-ai-audio/",
-      "published_date": "2025-11-12T20:00:00+00:00",
-      "category": "Industry",
-      "description": "ElevenLabs struck a deal with actors Michael Caine and Matthew McConaughey to AI-generate their voices.",
-      "author": "Dominic-Madori Davis",
-      "content": "ElevenLabs struck a deal with actors Michael Caine and Matthew McConaughey to AI-generate their voices.",
+      "article_id": "ccec586e08d00b92aafc8be98aea20ca",
+      "title": "Notice: UK-Netherlands Innovation Partnership",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/uk-netherlands-innovation-partnership",
+      "published_date": "2025-11-12T13:31:38+00:00",
+      "category": "Government",
+      "description": "An agreement signed by the UK and the Netherlands to enhance cooperation in innovation.",
+      "author": "",
+      "content": "An agreement signed by the UK and the Netherlands to enhance cooperation in innovation.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -230,22 +230,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-16T08:25:17.704464+00:00"
+        "consensus_timestamp": "2025-11-16T12:35:09.323664+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-16T08:25:17.704470+00:00"
+        "timestamp": "2025-11-16T12:35:09.323667+00:00"
       },
       "article_type": "article"
     },
@@ -261,10 +261,10 @@
       "content": "Proposed new laws will strengthen cyber defences for essential public services like healthcare, drinking water providers, transport and energy.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
         "impact_score": 0.9,
-        "overall_score": 0.89,
+        "overall_score": 0.8524999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -293,21 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-16T08:25:17.701020+00:00"
+        "consensus_timestamp": "2025-11-16T12:35:09.323936+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-16T08:25:17.701023+00:00"
+        "timestamp": "2025-11-16T12:35:09.323939+00:00"
       },
       "article_type": "article"
     }
