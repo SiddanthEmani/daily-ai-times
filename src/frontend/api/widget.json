@@ -1,23 +1,85 @@
 {
-  "updated": "2025-11-30T16:24:37.228204+00:00",
+  "updated": "2025-11-30T20:23:10.761586+00:00",
   "top_stories": [
     {
       "article_id": "c2e72078bb699e8eefca22c02a0d1380",
       "title": "NIH launches landmark project on whole-person health and function",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-launches-landmark-project-whole-person-health-function",
-      "published_date": "2025-11-30T16:20:46.150588+00:00",
+      "published_date": "2025-11-30T20:19:27.378140+00:00",
       "category": "Government",
       "description": "Approach involves looking at the whole person—not just separate organs or body systems—and considering multiple factors that promote health.",
       "author": "",
       "content": "Approach involves looking at the whole person—not just separate organs or body systems—and considering multiple factors that promote health.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.8,
+        "quality_score": 0.8,
+        "novelty_score": 0.6,
+        "impact_score": 0.85,
+        "overall_score": 0.76,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.733764+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.733768+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "1bec26f1ade01762a09f6e7a4f60a80b",
+      "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership/",
+      "published_date": "2025-11-18T15:00:00+00:00",
+      "category": "Industry",
+      "description": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
+      "author": "NVIDIA Newsroom",
+      "content": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,40 +107,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198193+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.736968+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.198197+00:00"
+        "timestamp": "2025-11-30T20:23:10.736971+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "855f1c5a6aa95a36166fbe193d7271af",
-      "title": "GPT-5 and the future of mathematical discovery",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/gpt-5-mathematical-discovery",
-      "published_date": "2025-11-24T00:00:00+00:00",
+      "article_id": "bbb3fc121c2270f1e0462cb9885f86f5",
+      "title": "Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/",
+      "published_date": "2025-11-18T16:00:00+00:00",
       "category": "Industry",
-      "description": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
-      "author": "",
-      "content": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
+      "description": "Today, I’m thrilled to announce the next generation of Microsoft’s databases: SQL Server 2025, Azure Document DB, Azure Horizon DB, and Fabric Databases, each redesigned to meet the demands of AI. The post Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate appeared first on Microsoft Azure Blog.",
+      "author": "Arun Ulagaratchagan",
+      "content": "Today, I’m thrilled to announce the next generation of Microsoft’s databases: SQL Server 2025, Azure Document DB, Azure Horizon DB, and Fabric Databases, each redesigned to meet the demands of AI. The post Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.199172+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.735536+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,89 +183,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.199175+00:00"
+        "timestamp": "2025-11-30T20:23:10.735539+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9cfd7c8d7132e4556a32ae9bd15cd4d5",
-      "title": "From Government to Gaming, AI Is ‘Strengthening Korea’s Digital Foundation,’ NVIDIA Leader Says at AI Day Seoul",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
-      "published_date": "2025-11-26T17:00:32+00:00",
+      "article_id": "e9bc36802c3079889b5fb1f12c4eda53",
+      "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/11/26/chatgpt-everything-to-know-about-the-ai-chatbot/",
+      "published_date": "2025-11-26T19:33:39+00:00",
       "category": "Industry",
-      "description": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI — including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights into the current and future landscape of the AI ecosystem in Korea.",
-      "author": "Solee Moon",
-      "content": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI — including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights into the current and future landscape of the AI ecosystem in Korea.",
+      "description": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "author": "Kyle Wiggers, Cody Corrall, Kate Park, Alyssa Stringer",
+      "content": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.737658+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.737661+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3a2a50aa4f3ac2557e95ebe7cf5653ac",
+      "title": "Building more with GPT-5.1-Codex-Max",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-5-1-codex-max",
+      "published_date": "2025-11-19T00:00:00+00:00",
+      "category": "Industry",
+      "description": "Introducing GPT-5.1-Codex-Max, a faster, more intelligent agentic coding model for Codex. The model is designed for long-running, project-scale work with enhanced reasoning and token efficiency.",
+      "author": "",
+      "content": "Introducing GPT-5.1-Codex-Max, a faster, more intelligent agentic coding model for Codex. The model is designed for long-running, project-scale work with enhanced reasoning and token efficiency.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.95,
         "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.200903+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.200905+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0d18a398fade9ce83b1920f9a38feb08",
-      "title": "Budget backs technology firms to start-up, scale-up and stay in Britain to drive growth and national renewal",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/budget-backs-technology-firms-to-start-up-scale-up-and-stay-in-britain-to-drive-growth-and-national-renewal",
-      "published_date": "2025-11-27T00:00:00+00:00",
-      "category": "Government",
-      "description": "Government sets out bold measures to support British science and technology companies to start-up, scale-up and stay in the UK.",
-      "author": "",
-      "content": "Government sets out bold measures to support British science and technology companies to start-up, scale-up and stay in the UK.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198560+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.735218+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,69 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.198563+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "bdc48923e6a2bdd4ce22857379cbcf5d",
-      "title": "UKHO supports UK resilience in positioning, navigation and timing",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/ukho-supports-uk-resilience-in-positioning-navigation-and-timing",
-      "published_date": "2025-11-25T13:09:06+00:00",
-      "category": "Government",
-      "description": "The UK Hydrographic Office (UKHO) is working with government partners to improve the UK’s resilience in satellite-based Positioning, Navigation and Timing (PNT).",
-      "author": "",
-      "content": "The UK Hydrographic Office (UKHO) is working with government partners to improve the UK’s resilience in satellite-based Positioning, Navigation and Timing (PNT).",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198700+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.198703+00:00"
+        "timestamp": "2025-11-30T20:23:10.735221+00:00"
       },
       "article_type": "article"
     }

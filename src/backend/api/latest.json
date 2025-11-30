@@ -1,23 +1,85 @@
 {
-  "generated_at": "2025-11-30T16:24:37.225328+00:00",
+  "generated_at": "2025-11-30T20:23:10.758824+00:00",
   "articles": [
     {
       "article_id": "c2e72078bb699e8eefca22c02a0d1380",
       "title": "NIH launches landmark project on whole-person health and function",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-launches-landmark-project-whole-person-health-function",
-      "published_date": "2025-11-30T16:20:46.150588+00:00",
+      "published_date": "2025-11-30T20:19:27.378140+00:00",
       "category": "Government",
       "description": "Approach involves looking at the whole person—not just separate organs or body systems—and considering multiple factors that promote health.",
       "author": "",
       "content": "Approach involves looking at the whole person—not just separate organs or body systems—and considering multiple factors that promote health.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.8,
+        "quality_score": 0.8,
+        "novelty_score": 0.6,
+        "impact_score": 0.85,
+        "overall_score": 0.76,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.733764+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.733768+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "1bec26f1ade01762a09f6e7a4f60a80b",
+      "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership/",
+      "published_date": "2025-11-18T15:00:00+00:00",
+      "category": "Industry",
+      "description": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
+      "author": "NVIDIA Newsroom",
+      "content": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,40 +107,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198193+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.736968+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.198197+00:00"
+        "timestamp": "2025-11-30T20:23:10.736971+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "855f1c5a6aa95a36166fbe193d7271af",
-      "title": "GPT-5 and the future of mathematical discovery",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/gpt-5-mathematical-discovery",
-      "published_date": "2025-11-24T00:00:00+00:00",
+      "article_id": "bbb3fc121c2270f1e0462cb9885f86f5",
+      "title": "Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/",
+      "published_date": "2025-11-18T16:00:00+00:00",
       "category": "Industry",
-      "description": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
-      "author": "",
-      "content": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
+      "description": "Today, I’m thrilled to announce the next generation of Microsoft’s databases: SQL Server 2025, Azure Document DB, Azure Horizon DB, and Fabric Databases, each redesigned to meet the demands of AI. The post Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate appeared first on Microsoft Azure Blog.",
+      "author": "Arun Ulagaratchagan",
+      "content": "Today, I’m thrilled to announce the next generation of Microsoft’s databases: SQL Server 2025, Azure Document DB, Azure Horizon DB, and Fabric Databases, each redesigned to meet the demands of AI. The post Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.199172+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.735536+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,7 +183,193 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.199175+00:00"
+        "timestamp": "2025-11-30T20:23:10.735539+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e9bc36802c3079889b5fb1f12c4eda53",
+      "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/11/26/chatgpt-everything-to-know-about-the-ai-chatbot/",
+      "published_date": "2025-11-26T19:33:39+00:00",
+      "category": "Industry",
+      "description": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "author": "Kyle Wiggers, Cody Corrall, Kate Park, Alyssa Stringer",
+      "content": "A timeline of ChatGPT product updates and releases, starting with the latest, which we’ve been updating throughout the year.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.737658+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.737661+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3a2a50aa4f3ac2557e95ebe7cf5653ac",
+      "title": "Building more with GPT-5.1-Codex-Max",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-5-1-codex-max",
+      "published_date": "2025-11-19T00:00:00+00:00",
+      "category": "Industry",
+      "description": "Introducing GPT-5.1-Codex-Max, a faster, more intelligent agentic coding model for Codex. The model is designed for long-running, project-scale work with enhanced reasoning and token efficiency.",
+      "author": "",
+      "content": "Introducing GPT-5.1-Codex-Max, a faster, more intelligent agentic coding model for Codex. The model is designed for long-running, project-scale work with enhanced reasoning and token efficiency.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.735218+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.735221+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "90ff8b6b08d4b5e0651dda8bc76628ff",
+      "title": "Warner Bros. Discovery achieves 60% cost savings and faster ML inference with AWS Graviton",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/warner-bros-discovery-achieves-60-cost-savings-and-faster-ml-inference-with-aws-graviton/",
+      "published_date": "2025-11-25T17:26:48+00:00",
+      "category": "Industry",
+      "description": "Warner Bros. Discovery (WBD) is a leading global media and entertainment company that creates and distributes the world’s most differentiated and complete portfolio of content and brands across television, film and streaming. In this post, we describe the scale of our offerings, artificial intelligence (AI)/machine learning (ML) inference infrastructure requirements for our real time recommender systems, and how we used AWS Graviton-based Amazon SageMaker AI instances for our ML inference...",
+      "author": "Nukul Sharma, Karthik Dasani",
+      "content": "Warner Bros. Discovery (WBD) is a leading global media and entertainment company that creates and distributes the world’s most differentiated and complete portfolio of content and brands across television, film and streaming. In this post, we describe the scale of our offerings, artificial intelligence (AI)/machine learning (ML) inference infrastructure requirements for our real time recommender systems, and how we used AWS Graviton-based Amazon SageMaker AI instances for our ML inference...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.736335+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.736337+00:00"
       },
       "article_type": "article"
     },
@@ -169,21 +417,145 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.92,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.200903+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.736560+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.752,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.200905+00:00"
+        "timestamp": "2025-11-30T20:23:10.736563+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "fe9ebe25907c8a413fab2c9634789fb1",
+      "title": "NIH establishes nation's first dedicated organoid development center to reduce reliance on animal modeling",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-establishes-nations-first-dedicated-organoid-development-center-reduce-reliance-animal-modeling",
+      "published_date": "2025-11-30T20:19:27.377889+00:00",
+      "category": "Government",
+      "description": "The Standardized Organoid Modeling Center aims to produce standardized protocols for organoid research, addressing reproducibility challenges.",
+      "author": "",
+      "content": "The Standardized Organoid Modeling Center aims to produce standardized protocols for organoid research, addressing reproducibility challenges.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.733598+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.733602+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "855f1c5a6aa95a36166fbe193d7271af",
+      "title": "GPT-5 and the future of mathematical discovery",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-5-mathematical-discovery",
+      "published_date": "2025-11-24T00:00:00+00:00",
+      "category": "Industry",
+      "description": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
+      "author": "",
+      "content": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI’s role in accelerating mathematical discovery.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.734737+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.734740+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +606,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198560+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.734135+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,213 +617,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.198563+00:00"
+        "timestamp": "2025-11-30T20:23:10.734138+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "bdc48923e6a2bdd4ce22857379cbcf5d",
-      "title": "UKHO supports UK resilience in positioning, navigation and timing",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/ukho-supports-uk-resilience-in-positioning-navigation-and-timing",
-      "published_date": "2025-11-25T13:09:06+00:00",
-      "category": "Government",
-      "description": "The UK Hydrographic Office (UKHO) is working with government partners to improve the UK’s resilience in satellite-based Positioning, Navigation and Timing (PNT).",
-      "author": "",
-      "content": "The UK Hydrographic Office (UKHO) is working with government partners to improve the UK’s resilience in satellite-based Positioning, Navigation and Timing (PNT).",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198700+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.198703+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "91f51e998a9b04f3aac5276bda1e5025",
-      "title": "National Underground Asset Register (NUAR)",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/guidance/national-underground-asset-register-nuar",
-      "published_date": "2025-11-24T16:08:10+00:00",
-      "category": "Government",
-      "description": "Information on the National Underground Asset Register (NUAR).",
-      "author": "",
-      "content": "Information on the National Underground Asset Register (NUAR).",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198795+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.198798+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ca8dc3517d14cbe9833f5f19011a45f9",
-      "title": "People across UK to benefit from easier access to local services as councils get digital boost",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/people-across-uk-to-benefit-from-easier-access-to-local-services-as-councils-get-digital-boost",
-      "published_date": "2025-11-22T00:00:00+00:00",
-      "category": "Government",
-      "description": "A new government unit, GDS Local, has launched to help councils across the UK make everyday services – from managing council tax to accessing local support – easier, faster, and more accessible for residents.",
-      "author": "",
-      "content": "A new government unit, GDS Local, has launched to help councils across the UK make everyday services – from managing council tax to accessing local support – easier, faster, and more accessible for residents.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.198936+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.198939+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "53c1127486e848d3ef7d776912af171e",
-      "title": "How Scania is accelerating work with AI across its global workforce",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/scania",
-      "published_date": "2025-11-19T00:00:00+00:00",
+      "article_id": "34e59ec8f59540b14efa9d85399d84ed",
+      "title": "Ultimate Cloud Gaming Is Everywhere With GeForce NOW",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-ultimate-is-everywhere/",
+      "published_date": "2025-11-20T14:00:07+00:00",
       "category": "Industry",
-      "description": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
-      "author": "",
-      "content": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
+      "description": "The NVIDIA Blackwell RTX upgrade is nearing the finish line, letting GeForce NOW Ultimate members across the globe experience true next-generation cloud gaming from anywhere. Everyone’s talking about Ultimate memberships — including GeForce NOW partner 2K. “With GeForce NOW Ultimate, top-tier streaming truly goes everywhere,” said Sean Haran, head of partnerships and licensing at 2K. Read Article",
+      "author": "GeForce NOW Community",
+      "content": "The NVIDIA Blackwell RTX upgrade is nearing the finish line, letting GeForce NOW Ultimate members across the globe experience true next-generation cloud gaming from anywhere. Everyone’s talking about Ultimate memberships — including GeForce NOW partner 2K. “With GeForce NOW Ultimate, top-tier streaming truly goes everywhere,” said Sean Haran, head of partnerships and licensing at 2K. Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -482,7 +668,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.199507+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.736834+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,20 +679,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.199510+00:00"
+        "timestamp": "2025-11-30T20:23:10.736837+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "977488c72cef8254de6ab95a124d72d7",
-      "title": "The Largest Digital Zoo: Biology Model Trained on NVIDIA GPUs Identifies Over a Million Species",
+      "article_id": "3c57c3b28d059e0cff1f3c1416e2b01a",
+      "title": "Accelerated Computing, Networking Drive Supercomputing in Age of AI",
       "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/bioclip2-foundation-ai-model/",
-      "published_date": "2025-11-20T14:00:17+00:00",
+      "url": "https://blogs.nvidia.com/blog/accelerated-computing-networking-supercomputing-ai/",
+      "published_date": "2025-11-17T22:31:55+00:00",
       "category": "Industry",
-      "description": "Tanya Berger-Wolf’s first computational biology project started as a bet with a colleague: that she could build an AI model capable of identifying individual zebras faster than a zoologist. She won. Now, the director of the Translational Data Analytics Institute and a professor at The Ohio State University, Berger-Wolf is taking on the whole animal Read Article",
-      "author": "Zoe Kessler",
-      "content": "Tanya Berger-Wolf’s first computational biology project started as a bet with a colleague: that she could build an AI model capable of identifying individual zebras faster than a zoologist. She won. Now, the director of the Translational Data Analytics Institute and a professor at The Ohio State University, Berger-Wolf is taking on the whole animal Read Article",
+      "description": "At SC25, NVIDIA unveiled advances across NVIDIA BlueField DPUs, next-generation networking, quantum computing, national research, AI physics and more — as accelerated systems drive the next chapter in AI supercomputing. NVIDIA also highlighted storage innovations powered by the NVIDIA BlueField-4 data processing unit, part of the full-stack BlueField platform that accelerates gigascale AI infrastructure. More Read Article",
+      "author": "Scott Martin",
+      "content": "At SC25, NVIDIA unveiled advances across NVIDIA BlueField DPUs, next-generation networking, quantum computing, national research, AI physics and more — as accelerated systems drive the next chapter in AI supercomputing. NVIDIA also highlighted storage innovations powered by the NVIDIA BlueField-4 data processing unit, part of the full-stack BlueField platform that accelerates gigascale AI infrastructure. More Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -541,158 +727,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.92,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.201133+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.737076+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.752,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.201136+00:00"
+        "timestamp": "2025-11-30T20:23:10.737079+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1bec26f1ade01762a09f6e7a4f60a80b",
-      "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership/",
-      "published_date": "2025-11-18T15:00:00+00:00",
+      "article_id": "e1860ded3ec61da68c8b9f09a9f8bbb2",
+      "title": "OpenAI-Mixpanel Breach Raises Questions Over Vendor Security",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/openai-mixpanel-breach-raises-questions-over-vendor-security/",
+      "published_date": "2025-11-28T12:30:00+00:00",
       "category": "Industry",
-      "description": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
-      "author": "NVIDIA Newsroom",
-      "content": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.201316+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.201319+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "5eaffd582b9b48a0ef3e88dee9173cdb",
-      "title": "Powering AI Superfactories, NVIDIA and Microsoft Integrate Latest Technologies for Inference, Cybersecurity, Physical AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-microsoft-ai-superfactories/",
-      "published_date": "2025-11-18T20:00:22+00:00",
-      "category": "Industry",
-      "description": "Timed with the Microsoft Ignite conference running this week, NVIDIA is expanding its collaboration with Microsoft, including through the adoption of next-generation NVIDIA Spectrum-X Ethernet switches for the new Microsoft Fairwater AI superfactory, powered by the NVIDIA Blackwell platform. The collaboration brings new integrations across Microsoft 365 Copilot, as well as the public preview of Read Article",
-      "author": "Ian Buck",
-      "content": "Timed with the Microsoft Ignite conference running this week, NVIDIA is expanding its collaboration with Microsoft, including through the adoption of next-generation NVIDIA Spectrum-X Ethernet switches for the new Microsoft Fairwater AI superfactory, powered by the NVIDIA Blackwell platform. The collaboration brings new integrations across Microsoft 365 Copilot, as well as the public preview of Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.201225+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.201228+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "5e143aced1b77a9d60f58466f0c7582f",
-      "title": "University of California Los Angeles delivers an immersive theater experience with AWS generative AI services",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/university-of-california-los-angeles-delivers-an-immersive-theater-experience-with-aws-generative-ai-services/",
-      "published_date": "2025-11-26T21:20:45+00:00",
-      "category": "Industry",
-      "description": "In this post, we will walk through the performance constraints and design choices by OARC and REMAP teams at UCLA, including how AWS serverless infrastructure, AWS Managed Services, and generative AI services supported the rapid design and deployment of our solution. We will also describe our use of Amazon SageMaker AI and how it can be used reliably in immersive live experiences.",
-      "author": "Aditya Singh",
-      "content": "In this post, we will walk through the performance constraints and design choices by OARC and REMAP teams at UCLA, including how AWS serverless infrastructure, AWS Managed Services, and generative AI services supported the rapid design and deployment of our solution. We will also describe our use of Amazon SageMaker AI and how it can be used reliably in immersive live experiences.",
+      "description": "The exposed data included names provided on API accounts, email addresses associated with those accounts, approximate location data derived from browser information and operating system. The post OpenAI-Mixpanel Breach Raises Questions Over Vendor Security appeared first on Analytics India Magazine.",
+      "author": "Supreeth Koundinya",
+      "content": "The exposed data included names provided on API accounts, email addresses associated with those accounts, approximate location data derived from browser information and operating system. The post OpenAI-Mixpanel Breach Raises Questions Over Vendor Security appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -730,7 +792,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.200285+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.739046+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,27 +803,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.200288+00:00"
+        "timestamp": "2025-11-30T20:23:10.739048+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fd2d1bde47d9cad2f33479e0ab8f10fd",
-      "title": "Here are the 49 US AI startups that have raised $100M or more in 2025",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/11/26/here-are-the-49-us-ai-startups-that-have-raised-100m-or-more-in-2025/",
-      "published_date": "2025-11-26T20:48:58+00:00",
+      "article_id": "b54ad8e5f41e6eb7f949fc73e4bc910f",
+      "title": "NVIDIA NVQLink Architecture Integrates Accelerated Computing with Quantum Processors",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-nvqlink-architecture-integrates-accelerated-computing-with-quantum-processors/",
+      "published_date": "2025-11-17T22:31:00+00:00",
       "category": "Industry",
-      "description": "Last year was monumental for the AI industry in the U.S. and beyond. How will 2025 compare?",
-      "author": "Rebecca Szkutak",
-      "content": "Last year was monumental for the AI industry in the U.S. and beyond. How will 2025 compare?",
+      "description": "Quantum computing is entering an era where progress will be driven by the integration of accelerated computing with quantum processors. The hardware that...",
+      "author": "Shane Caldwell",
+      "content": "Quantum computing is entering an era where progress will be driven by the integration of accelerated computing with quantum processors. The hardware that...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
+        "novelty_score": 0.75,
         "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-11-30T20:23:10.738628+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-11-30T20:23:10.738630+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "615a5303cf11eb7e771b824eefe66c27",
+      "title": "Gordon Bell Prize Winners Push Open Science Boundaries With NVIDIA-Powered Supercomputers",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/gordon-bell-finalists-2025/",
+      "published_date": "2025-11-20T23:25:47+00:00",
+      "category": "Industry",
+      "description": "Five finalists for the esteemed high-performance computing award have achieved breakthroughs in climate modeling, fluid simulation and more with the Alps, JUPITER and Perlmutter supercomputers — with two winners taking home the prize.",
+      "author": "Dion Harris",
+      "content": "Five finalists for the esteemed high-performance computing award have achieved breakthroughs in climate modeling, fluid simulation and more with the Alps, JUPITER and Perlmutter supercomputers — with two winners taking home the prize.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.96
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -792,7 +916,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.201827+00:00"
+        "consensus_timestamp": "2025-11-30T20:23:10.736697+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -803,131 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-11-30T16:24:37.201830+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ea7a4e90d5d7ec1dc698566e5cf0477e",
-      "title": "How Amazon uses AI agents to anticipate and counter cyber threats",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/how-amazon-uses-ai-agents-to-anticipate-and-counter-cyber-threats",
-      "published_date": "2025-11-24T14:00:00+00:00",
-      "category": "Industry",
-      "description": "Amazon's competitive-agent architecture creates a continuous improvement cycle that develops security protections at machine speed, reducing what typically takes weeks down to hours.",
-      "author": "Daniel Weiss",
-      "content": "Amazon's competitive-agent architecture creates a continuous improvement cycle that develops security protections at machine speed, reducing what typically takes weeks down to hours.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.203120+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.203123+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ca21ff17f243b7d7259e5e40eddd1247",
-      "title": "Anyformat closes a €3.3 million seed round led by Kibo Ventures",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/anyformat-closes-a-e3-3-million-seed-round-led-by-kibo-ventures/",
-      "published_date": "2025-11-28T09:00:55+00:00",
-      "category": "Industry",
-      "description": "Anyformat, a generative AI platform specialized in extracting and structuring complex data from any document, has raised a €3.3 million seed round led by Kibo Ventures, with follow-on participation from 4Founders, Abac Nest Ventures, and Decelera Ventures. All three funds also invested in the company’s previous round. The company is... The post Anyformat closes a €3.3 million seed round led by Kibo Ventures first appeared on AI-Tech Park.",
-      "author": "PR Newswire",
-      "content": "Anyformat, a generative AI platform specialized in extracting and structuring complex data from any document, has raised a €3.3 million seed round led by Kibo Ventures, with follow-on participation from 4Founders, Abac Nest Ventures, and Decelera Ventures. All three funds also invested in the company’s previous round. The company is... The post Anyformat closes a €3.3 million seed round led by Kibo Ventures first appeared on AI-Tech Park.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-11-30T16:24:37.203301+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-11-30T16:24:37.203304+00:00"
+        "timestamp": "2025-11-30T20:23:10.736700+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 161.80558586120605,
+    "processing_time": 159.9443986415863,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 124,
+      "total_processed": 128,
       "candidates": {
-        "headlines": 3,
-        "articles": 121,
+        "headlines": 2,
+        "articles": 126,
         "research_papers": 0
       },
       "selected": {
