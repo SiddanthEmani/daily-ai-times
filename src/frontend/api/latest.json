@@ -1,22 +1,84 @@
 {
-  "generated_at": "2025-12-10T04:36:23.984497+00:00",
+  "generated_at": "2025-12-10T08:30:17.080236+00:00",
   "articles": [
     {
-      "article_id": "18bbe5eab07689f49980a3b23d0b2522",
-      "title": "OpenAI, Anthropic, and Block join new Linux Foundation effort to standardize the AI agent era",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/12/09/openai-anthropic-and-block-join-new-linux-foundation-effort-to-standardize-the-ai-agent-era/",
-      "published_date": "2025-12-09T17:28:36+00:00",
-      "category": "Industry",
-      "description": "Anthropic, Block, and OpenAI are backing the Linux Foundation’s new Agentic AI Foundation, donating MCP, Goose, and AGENTS.md to standardize AI agents, boost interoperability, and curb proprietary fragmentation.",
-      "author": "Rebecca Bellan",
-      "content": "Anthropic, Block, and OpenAI are backing the Linux Foundation’s new Agentic AI Foundation, donating MCP, Goose, and AGENTS.md to standardize AI agents, boost interoperability, and curb proprietary fragmentation.",
+      "article_id": "f5a7404065d11e3bdf4be09cc855026f",
+      "title": "NIH launches consortium to reduce risk of stillbirth in the U.S.",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-consortium-reduce-risk-stillbirth-us",
+      "published_date": "2025-12-10T08:26:26.689962+00:00",
+      "category": "Government",
+      "description": "More than 60% of the nearly 24,000 stillbirth cases annually remain unexplained.",
+      "author": "",
+      "content": "More than 60% of the nearly 24,000 stillbirth cases annually remain unexplained.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8775000000000001,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.040103+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.040107+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "1462705062b34da1594d469c15e334aa",
+      "title": "Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/managed-tiered-kv-cache-and-intelligent-routing-for-amazon-sagemaker-hyperpod/",
+      "published_date": "2025-11-27T00:50:04+00:00",
+      "category": "Industry",
+      "description": "In this post, we introduce Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod, new capabilities that can reduce time to first token by up to 40% and lower compute costs by up to 25% for long context prompts and multi-turn conversations. These features automatically manage distributed KV caching infrastructure and intelligent request routing, making it easier to deploy production-scale LLM inference workloads with enterprise-grade performance while significantly...",
+      "author": "Chaitanya Hazarey",
+      "content": "In this post, we introduce Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod, new capabilities that can reduce time to first token by up to 40% and lower compute costs by up to 25% for long context prompts and multi-turn conversations. These features automatically manage distributed KV caching infrastructure and intelligent request routing, making it easier to deploy production-scale LLM inference workloads with enterprise-grade performance while significantly...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.941843+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.042961+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,82 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.941846+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "a72ecbc70065cc4cfeaeac5ea665a9a0",
-      "title": "Automate Kubernetes AI Cluster Health with NVSentinel",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/automate-kubernetes-ai-cluster-health-with-nvsentinel/",
-      "published_date": "2025-12-08T18:00:00+00:00",
-      "category": "Industry",
-      "description": "Kubernetes underpins a large portion of all AI workloads in production. Yet, maintaining GPU nodes and ensuring that applications are running, training jobs are...",
-      "author": "Lalit Adithya",
-      "content": "Kubernetes underpins a large portion of all AI workloads in production. Yet, maintaining GPU nodes and ensuring that applications are running, training jobs are...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.942381+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.942386+00:00"
+        "timestamp": "2025-12-10T08:30:17.042964+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d6bb85c36f9dd57840c2bfc50f0058e8",
-      "title": "Create an intelligent insurance underwriter agent powered by Amazon Nova 2 Lite and Amazon Quick Suite",
+      "article_id": "f90c158b3fcdaf2cead6228c5d98fc8f",
+      "title": "Create AI-powered chat assistants for your enterprise with Amazon Quick Suite",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/create-an-intelligent-insurance-underwriter-agent-powered-by-amazon-nova-2-lite-and-amazon-quick-suite/",
-      "published_date": "2025-12-08T16:30:37+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/create-ai-powered-chat-assistants-for-your-enterprise-with-amazon-quick-suite/",
+      "published_date": "2025-12-09T17:07:22+00:00",
       "category": "Industry",
-      "description": "In this post, we demonstrate how to build an intelligent insurance underwriting agent that addresses three critical challenges: unifying siloed data across CRM systems and databases, providing explainable and auditable AI decisions for regulatory compliance, and enabling automated fraud detection with consistent underwriting rules. The solution combines Amazon Nova 2 Lite for transparent risk assessment, Amazon Bedrock AgentCore for managed MCP server infrastructure, and Amazon Quick Suite for...",
-      "author": "Satyanarayana Adimula",
-      "content": "In this post, we demonstrate how to build an intelligent insurance underwriting agent that addresses three critical challenges: unifying siloed data across CRM systems and databases, providing explainable and auditable AI decisions for regulatory compliance, and enabling automated fraud detection with consistent underwriting rules. The solution combines Amazon Nova 2 Lite for transparent risk assessment, Amazon Bedrock AgentCore for managed MCP server infrastructure, and Amazon Quick Suite for...",
+      "description": "In this post, we show how to build chat agents in Amazon Quick Suite. We walk through a three-layer framework—identity, instructions, and knowledge—that transforms Quick Suite chat agents into intelligent enterprise AI assistants. In our example, we demonstrate how our chat agent guides feature discovery, use enterprise data to inform recommendations, and tailors solutions based on potential to impact and your team’s adoption readiness.",
+      "author": "Nitish Chaudhari",
+      "content": "In this post, we show how to build chat agents in Amazon Quick Suite. We walk through a three-layer framework—identity, instructions, and knowledge—that transforms Quick Suite chat agents into intelligent enterprise AI assistants. In our example, we demonstrate how our chat agent guides feature discovery, use enterprise data to inform recommendations, and tailors solutions based on potential to impact and your team’s adoption readiness.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
@@ -172,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.940723+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.042619+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,337 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.940727+00:00"
+        "timestamp": "2025-12-10T08:30:17.042625+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d7b5953ba5bda00d1c44a2d1547b8d99",
-      "title": "NVIDIA Gains US Approval to Export H200 AI Chips to China",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/nvidia-gains-us-approval-to-export-h200-ai-chips-to-china/",
-      "published_date": "2025-12-09T10:55:09+00:00",
+      "article_id": "9e4020be1bd147573cb92df7be1ae3cf",
+      "title": "NVIDIA CUDA 13.1 Powers Next-Gen GPU Programming with NVIDIA CUDA Tile and Performance Gains",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-1-powers-next-gen-gpu-programming-with-nvidia-cuda-tile-and-performance-gains/",
+      "published_date": "2025-12-04T22:20:56+00:00",
       "category": "Industry",
-      "description": "The 25% fee will be charged when the chips are shipped from Taiwan to the United States for inspection, before onward export. The post NVIDIA Gains US Approval to Export H200 AI Chips to China appeared first on Analytics India Magazine.",
-      "author": "Sanjana Gupta",
-      "content": "The 25% fee will be charged when the chips are shipped from Taiwan to the United States for inspection, before onward export. The post NVIDIA Gains US Approval to Export H200 AI Chips to China appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.945233+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.945236+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d4425d38334d943d9a0f1a8ea46df3c6",
-      "title": "iOS 26.2 delayed: Apple issues second Release Candidate to testers",
-      "source": "dataconomy",
-      "url": "https://dataconomy.com/2025/12/09/ios-26-2-delayed-apple-issues-second-release-candidate-to-testers/",
-      "published_date": "2025-12-09T11:44:04+00:00",
-      "category": "Industry",
-      "description": "Apple Inc. released a second Release Candidate (RC) for iOS 26.2 to developers and public beta testers today, delaying the expected public launch of the software update. The company has now issued build number 23C54 for the iOS 26.2 RC. This updated version follows a previous RC, build 23C52, which Apple had already distributed. Industry […]",
-      "author": "Kerem Gülen",
-      "content": "Apple Inc. released a second Release Candidate (RC) for iOS 26.2 to developers and public beta testers today, delaying the expected public launch of the software update. The company has now issued build number 23C54 for the iOS 26.2 RC. This updated version follows a previous RC, build 23C52, which Apple had already distributed. Industry […]",
+      "description": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
+      "author": "Jonathan Bentz",
+      "content": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.945559+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.945562+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "07b5afd88076ff36da86bf31bfecc86b",
-      "title": "NVIDIA Grace CPU Delivers High Bandwidth and Efficiency for Modern Data Centers",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-grace-cpu-delivers-high-bandwidth-and-efficiency-for-modern-data-centers/",
-      "published_date": "2025-12-05T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Since its debut in 2023, the NVIDIA Grace CPU has experienced rapid adoption across data centers, setting new benchmarks for performance efficiency across...",
-      "author": "Praveen Menon",
-      "content": "Since its debut in 2023, the NVIDIA Grace CPU has experienced rapid adoption across data centers, setting new benchmarks for performance efficiency across...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.942524+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.942528+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e84e5eb0505d1000e1621929a02c6768",
-      "title": "Focus on Your Algorithm—NVIDIA CUDA Tile Handles the Hardware",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/focus-on-your-algorithm-nvidia-cuda-tile-handles-the-hardware/",
-      "published_date": "2025-12-04T22:20:42+00:00",
-      "category": "Industry",
-      "description": "With its largest advancement since the NVIDIA CUDA platform was invented in 2006, CUDA 13.1 is launching NVIDIA CUDA Tile. This exciting innovation introduces a...",
-      "author": "Jonathan Bentz",
-      "content": "With its largest advancement since the NVIDIA CUDA platform was invented in 2006, CUDA 13.1 is launching NVIDIA CUDA Tile. This exciting innovation introduces a...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.942682+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.942686+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6f53b02d79ceb61930decab32804e982",
-      "title": "Why CRED Turned to OpenAI for Cleo",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/why-cred-turned-to-openai-for-cleo/",
-      "published_date": "2025-12-10T04:05:03+00:00",
-      "category": "Industry",
-      "description": "While OpenAI models run customer-facing support, CRED has tapped into Anthropic’s Claude to strengthen its internal processes. The post Why CRED Turned to OpenAI for Cleo appeared first on Analytics India Magazine.",
-      "author": "Mohit Pandey",
-      "content": "While OpenAI models run customer-facing support, CRED has tapped into Anthropic’s Claude to strengthen its internal processes. The post Why CRED Turned to OpenAI for Cleo appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.944019+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.944022+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d8d533ed2c017fcd6d62cd0ffde0c0cd",
-      "title": "How Google’s Accelerator Programmes Fuel India’s AI-Native Startup Ecosystem",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/how-googles-accelerator-programmes-fuel-indias-ai-native-startup-ecosystem/",
-      "published_date": "2025-12-09T06:44:36+00:00",
-      "category": "Industry",
-      "description": "“Our role is to work with startups to focus on genuine AI solutions that tackle India's population-scale challenges.” The post How Google’s Accelerator Programmes Fuel India’s AI-Native Startup Ecosystem appeared first on Analytics India Magazine.",
-      "author": "Smruthi Nadig",
-      "content": "“Our role is to work with startups to focus on genuine AI solutions that tackle India's population-scale challenges.” The post How Google’s Accelerator Programmes Fuel India’s AI-Native Startup Ecosystem appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.95,
+        "overall_score": 0.9099999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -544,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.945420+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.044809+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -555,7 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.945423+00:00"
+        "timestamp": "2025-12-10T08:30:17.044812+00:00"
       },
       "article_type": "article"
     },
@@ -571,10 +261,10 @@
       "content": "Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8775000000000001,
+        "overall_score": 0.89,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -603,40 +293,102 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.939872+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.041090+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.939875+00:00"
+        "timestamp": "2025-12-10T08:30:17.041093+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "45863904f88eb2c75006976305f008da",
-      "title": "Top 5 AI Model Optimization Techniques for Faster, Smarter Inference",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/top-5-ai-model-optimization-techniques-for-faster-smarter-inference/",
-      "published_date": "2025-12-09T18:00:00+00:00",
+      "article_id": "67cf936a09f97b27c2b59708a45e661d",
+      "title": "Beyond the technology: Workforce changes for AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-technology-workforce-changes-for-ai/",
+      "published_date": "2025-11-26T18:42:45+00:00",
       "category": "Industry",
-      "description": "As AI models get larger and architectures more complex, researchers and engineers are continuously finding new techniques to optimize the performance and...",
-      "author": "Eduardo Alvarez",
-      "content": "As AI models get larger and architectures more complex, researchers and engineers are continuously finding new techniques to optimize the performance and...",
+      "description": "In this post, we explore three essential strategies for successfully integrating AI into your organization: addressing organizational debt before it compounds, embracing distributed decision-making through the \"octopus organization\" model, and redefining management roles to align with AI-powered workflows. Organizations must invest in both technology and workforce preparation, focusing on streamlining processes, empowering teams with autonomous decision-making within defined parameters, and...",
+      "author": "Taimur Rashid",
+      "content": "In this post, we explore three essential strategies for successfully integrating AI into your organization: addressing organizational debt before it compounds, embracing distributed decision-making through the \"octopus organization\" model, and redefining management roles to align with AI-powered workflows. Organizations must invest in both technology and workforce preparation, focusing on streamlining processes, empowering teams with autonomous decision-making within defined parameters, and...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.855,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.043191+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.043194+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "319afc2100be45ac6836ad4b3a53a549",
+      "title": "Eva Engage Drives 50% Engagement, 10% Care Lift for Everlywell Members",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/eva-engage-drives-50-engagement-10-care-lift-for-everlywell-members/",
+      "published_date": "2025-12-09T13:00:00+00:00",
+      "category": "Industry",
+      "description": "Eva delivers care navigation and support that meets rigorous quality benchmarks at scale Everlywell, a leader in digital health, today reported new insights from Eva Engage, the personalized outreach capability within Eva, its AI health companion launched earlier this year. Eva is powered by three core engines, Eva Engage, Eva... The post Eva Engage Drives 50% Engagement, 10% Care Lift for Everlywell Members first appeared on AI-Tech Park.",
+      "author": "Business Wire",
+      "content": "Eva delivers care navigation and support that meets rigorous quality benchmarks at scale Everlywell, a leader in digital health, today reported new insights from Eva Engage, the personalized outreach capability within Eva, its AI health companion launched earlier this year. Eva is powered by three core engines, Eva Engage, Eva... The post Eva Engage Drives 50% Engagement, 10% Care Lift for Everlywell Members first appeared on AI-Tech Park.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -664,42 +416,104 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.942287+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.045997+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.045999+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9cfd7c8d7132e4556a32ae9bd15cd4d5",
+      "title": "From Government to Gaming, AI Is ‘Strengthening Korea’s Digital Foundation,’ NVIDIA Leader Says at AI Day Seoul",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
+      "published_date": "2025-11-26T17:00:32+00:00",
+      "category": "Industry",
+      "description": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI — including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights into the current and future landscape of the AI ecosystem in Korea.",
+      "author": "Solee Moon",
+      "content": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI — including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights into the current and future landscape of the AI ecosystem in Korea.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.043595+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.942290+00:00"
+        "timestamp": "2025-12-10T08:30:17.043598+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "a82a05411c8765306c0597f13870cbfd",
-      "title": "How to Scale Data Generation for Physical AI with the NVIDIA Cosmos Cookbook",
+      "article_id": "7827beab361a2dd30af77d59e4a344ca",
+      "title": "Train Small Orchestration Agents to Solve Big Problems",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-scale-data-generation-for-physical-ai-with-the-nvidia-cosmos-cookbook/",
-      "published_date": "2025-12-01T17:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/train-small-orchestration-agents-to-solve-big-problems/",
+      "published_date": "2025-12-01T23:25:36+00:00",
       "category": "Industry",
-      "description": "Building powerful physical AI models requires diverse, controllable, and physically-grounded data at scale. Collecting large-scale, diverse real-world datasets...",
-      "author": "Prachi Mishra",
-      "content": "Building powerful physical AI models requires diverse, controllable, and physically-grounded data at scale. Collecting large-scale, diverse real-world datasets...",
+      "description": "Using the right tool and model for a task is a challenging and ever-present engineering problem in agent design. At NVIDIA Research, we're making fast progress...",
+      "author": "Shizhe Diao",
+      "content": "Using the right tool and model for a task is a challenging and ever-present engineering problem in agent design. At NVIDIA Research, we're making fast progress...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.95
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -730,7 +544,7 @@
         "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.943053+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.045170+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,7 +555,255 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.943056+00:00"
+        "timestamp": "2025-12-10T08:30:17.045173+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b243f6688323438b0d4a3c066c2c4db4",
+      "title": "Game the Halls: GeForce NOW Brings Holiday Cheer With 30 New Games in the Cloud",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-dec-2025/",
+      "published_date": "2025-12-04T14:00:37+00:00",
+      "category": "Industry",
+      "description": "Editor’s note: The Game Pass edition of ‘Hogwarts Legacy’ will also be supported on GeForce NOW when the Steam and Epic Games Store versions launch on the service later this month. GeForce NOW is decking the digital halls with 30 new games to keep spirits high all month long. Join the fun with Hogwarts Legacy, Read Article",
+      "author": "GeForce NOW Community",
+      "content": "Editor’s note: The Game Pass edition of ‘Hogwarts Legacy’ will also be supported on GeForce NOW when the Steam and Epic Games Store versions launch on the service later this month. GeForce NOW is decking the digital halls with 30 new games to keep spirits high all month long. Join the fun with Hogwarts Legacy, Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.043327+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.043330+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e84454614b9c5b7d3efc84dc4c6c4e90",
+      "title": "Optimizing Inference for Long Context and Large Batch Sizes with NVFP4 KV Cache",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/optimizing-inference-for-long-context-and-large-batch-sizes-with-nvfp4-kv-cache/",
+      "published_date": "2025-12-08T17:00:00+00:00",
+      "category": "Industry",
+      "description": "Quantization is one of the strongest levers for large-scale inference. By reducing the precision of weights, activations, and KV cache, we can reduce the memory...",
+      "author": "Eduardo Alvarez",
+      "content": "Quantization is one of the strongest levers for large-scale inference. By reducing the precision of weights, activations, and KV cache, we can reduce the memory...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.044674+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.044677+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "23ba4c86f41c248f41fba9d47f3c595f",
+      "title": "Accelerating Real-Time Financial Decisions with Quantitative Portfolio Optimization",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/accelerating-real-time-financial-decisions-with-quantitative-portfolio-optimization/",
+      "published_date": "2025-12-02T18:51:00+00:00",
+      "category": "Industry",
+      "description": "Financial portfolio optimization is a difficult yet essential task that has been consistently challenged by a trade-off between computational speed and model...",
+      "author": "Peihan Huo",
+      "content": "Financial portfolio optimization is a difficult yet essential task that has been consistently challenged by a trade-off between computational speed and model...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.045037+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.045040+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9a9a8acc4003046342d8fddf4775fbdb",
+      "title": "Introducing OpenAI for Australia",
+      "source": "openai_blog",
+      "url": "https://openai.com/global-affairs/openai-for-australia",
+      "published_date": "2025-12-04T19:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI is launching OpenAI for Australia to build sovereign AI infrastructure, upskill more than 1.5 million workers, and accelerate innovation across the country’s growing AI ecosystem.",
+      "author": "",
+      "content": "OpenAI is launching OpenAI for Australia to build sovereign AI infrastructure, upskill more than 1.5 million workers, and accelerate innovation across the country’s growing AI ecosystem.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.85,
+        "overall_score": 0.8525000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.041181+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.041184+00:00"
       },
       "article_type": "article"
     },
@@ -789,34 +851,34 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.7,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.940201+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.041421+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.62,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.940204+00:00"
+        "timestamp": "2025-12-10T08:30:17.041425+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "6da23e4e2d19a5e13b4df399dd52e75c",
-      "title": "Mixpanel security incident: what OpenAI users need to know",
+      "article_id": "7997a79baf73df9f4fdc56e05ecec360",
+      "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
       "source": "openai_blog",
-      "url": "https://openai.com/index/mixpanel-incident",
-      "published_date": "2025-11-26T19:00:00+00:00",
+      "url": "https://openai.com/index/thrive-holdings",
+      "published_date": "2025-12-01T05:00:00+00:00",
       "category": "Industry",
-      "description": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we’re protecting users.",
+      "description": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
       "author": "",
-      "content": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we’re protecting users.",
+      "content": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -851,72 +913,10 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.7,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.940423+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.62,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.940427+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a920ea8911ae82ff8e41e4a2f5700ecd",
-      "title": "How CBRE powers unified property management search and digital assistant using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-cbre-powers-unified-property-management-search-and-digital-assistant-using-amazon-bedrock/",
-      "published_date": "2025-11-27T00:56:27+00:00",
-      "category": "Industry",
-      "description": "In this post, CBRE and AWS demonstrate how they transformed property management by building a unified search and digital assistant using Amazon Bedrock, enabling professionals to access millions of documents and multiple databases through natural language queries. The solution combines Amazon Nova Pro for SQL generation and Claude Haiku for document interactions, achieving a 67% reduction in processing time while maintaining enterprise-grade security across more than eight million documents.",
-      "author": "Lokesha Thimmegowda, Muppirala Venkata Krishna Kumar, Maraka Vishwadev",
-      "content": "In this post, CBRE and AWS demonstrate how they transformed property management by building a unified search and digital assistant using Amazon Bedrock, enabling professionals to access millions of documents and multiple databases through natural language queries. The solution combines Amazon Nova Pro for SQL generation and Claude Haiku for document interactions, achieving a 67% reduction in processing time while maintaining enterprise-grade security across more than eight million documents.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.6,
-        "impact_score": 0.9,
-        "overall_score": 0.81,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.940815+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.041570+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -927,7 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.940818+00:00"
+        "timestamp": "2025-12-10T08:30:17.041573+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 169.39202117919922,
+    "processing_time": 161.08176183700562,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 135,
+      "total_processed": 130,
       "candidates": {
-        "headlines": 19,
-        "articles": 116,
+        "headlines": 16,
+        "articles": 114,
         "research_papers": 0
       },
       "selected": {

@@ -1,22 +1,84 @@
 {
-  "updated": "2025-12-10T04:36:23.987381+00:00",
+  "updated": "2025-12-10T08:30:17.083055+00:00",
   "top_stories": [
     {
-      "article_id": "18bbe5eab07689f49980a3b23d0b2522",
-      "title": "OpenAI, Anthropic, and Block join new Linux Foundation effort to standardize the AI agent era",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/12/09/openai-anthropic-and-block-join-new-linux-foundation-effort-to-standardize-the-ai-agent-era/",
-      "published_date": "2025-12-09T17:28:36+00:00",
-      "category": "Industry",
-      "description": "Anthropic, Block, and OpenAI are backing the Linux Foundation’s new Agentic AI Foundation, donating MCP, Goose, and AGENTS.md to standardize AI agents, boost interoperability, and curb proprietary fragmentation.",
-      "author": "Rebecca Bellan",
-      "content": "Anthropic, Block, and OpenAI are backing the Linux Foundation’s new Agentic AI Foundation, donating MCP, Goose, and AGENTS.md to standardize AI agents, boost interoperability, and curb proprietary fragmentation.",
+      "article_id": "f5a7404065d11e3bdf4be09cc855026f",
+      "title": "NIH launches consortium to reduce risk of stillbirth in the U.S.",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-consortium-reduce-risk-stillbirth-us",
+      "published_date": "2025-12-10T08:26:26.689962+00:00",
+      "category": "Government",
+      "description": "More than 60% of the nearly 24,000 stillbirth cases annually remain unexplained.",
+      "author": "",
+      "content": "More than 60% of the nearly 24,000 stillbirth cases annually remain unexplained.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8775000000000001,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-10T08:30:17.040103+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-10T08:30:17.040107+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "1462705062b34da1594d469c15e334aa",
+      "title": "Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/managed-tiered-kv-cache-and-intelligent-routing-for-amazon-sagemaker-hyperpod/",
+      "published_date": "2025-11-27T00:50:04+00:00",
+      "category": "Industry",
+      "description": "In this post, we introduce Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod, new capabilities that can reduce time to first token by up to 40% and lower compute costs by up to 25% for long context prompts and multi-turn conversations. These features automatically manage distributed KV caching infrastructure and intelligent request routing, making it easier to deploy production-scale LLM inference workloads with enterprise-grade performance while significantly...",
+      "author": "Chaitanya Hazarey",
+      "content": "In this post, we introduce Managed Tiered KV Cache and Intelligent Routing for Amazon SageMaker HyperPod, new capabilities that can reduce time to first token by up to 40% and lower compute costs by up to 25% for long context prompts and multi-turn conversations. These features automatically manage distributed KV caching infrastructure and intelligent request routing, making it easier to deploy production-scale LLM inference workloads with enterprise-grade performance while significantly...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.941843+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.042961+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,82 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.941846+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "a72ecbc70065cc4cfeaeac5ea665a9a0",
-      "title": "Automate Kubernetes AI Cluster Health with NVSentinel",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/automate-kubernetes-ai-cluster-health-with-nvsentinel/",
-      "published_date": "2025-12-08T18:00:00+00:00",
-      "category": "Industry",
-      "description": "Kubernetes underpins a large portion of all AI workloads in production. Yet, maintaining GPU nodes and ensuring that applications are running, training jobs are...",
-      "author": "Lalit Adithya",
-      "content": "Kubernetes underpins a large portion of all AI workloads in production. Yet, maintaining GPU nodes and ensuring that applications are running, training jobs are...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.942381+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-10T04:36:23.942386+00:00"
+        "timestamp": "2025-12-10T08:30:17.042964+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d6bb85c36f9dd57840c2bfc50f0058e8",
-      "title": "Create an intelligent insurance underwriter agent powered by Amazon Nova 2 Lite and Amazon Quick Suite",
+      "article_id": "f90c158b3fcdaf2cead6228c5d98fc8f",
+      "title": "Create AI-powered chat assistants for your enterprise with Amazon Quick Suite",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/create-an-intelligent-insurance-underwriter-agent-powered-by-amazon-nova-2-lite-and-amazon-quick-suite/",
-      "published_date": "2025-12-08T16:30:37+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/create-ai-powered-chat-assistants-for-your-enterprise-with-amazon-quick-suite/",
+      "published_date": "2025-12-09T17:07:22+00:00",
       "category": "Industry",
-      "description": "In this post, we demonstrate how to build an intelligent insurance underwriting agent that addresses three critical challenges: unifying siloed data across CRM systems and databases, providing explainable and auditable AI decisions for regulatory compliance, and enabling automated fraud detection with consistent underwriting rules. The solution combines Amazon Nova 2 Lite for transparent risk assessment, Amazon Bedrock AgentCore for managed MCP server infrastructure, and Amazon Quick Suite for...",
-      "author": "Satyanarayana Adimula",
-      "content": "In this post, we demonstrate how to build an intelligent insurance underwriting agent that addresses three critical challenges: unifying siloed data across CRM systems and databases, providing explainable and auditable AI decisions for regulatory compliance, and enabling automated fraud detection with consistent underwriting rules. The solution combines Amazon Nova 2 Lite for transparent risk assessment, Amazon Bedrock AgentCore for managed MCP server infrastructure, and Amazon Quick Suite for...",
+      "description": "In this post, we show how to build chat agents in Amazon Quick Suite. We walk through a three-layer framework—identity, instructions, and knowledge—that transforms Quick Suite chat agents into intelligent enterprise AI assistants. In our example, we demonstrate how our chat agent guides feature discovery, use enterprise data to inform recommendations, and tailors solutions based on potential to impact and your team’s adoption readiness.",
+      "author": "Nitish Chaudhari",
+      "content": "In this post, we show how to build chat agents in Amazon Quick Suite. We walk through a three-layer framework—identity, instructions, and knowledge—that transforms Quick Suite chat agents into intelligent enterprise AI assistants. In our example, we demonstrate how our chat agent guides feature discovery, use enterprise data to inform recommendations, and tailors solutions based on potential to impact and your team’s adoption readiness.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
@@ -172,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.940723+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.042619+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,27 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.940727+00:00"
+        "timestamp": "2025-12-10T08:30:17.042625+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d7b5953ba5bda00d1c44a2d1547b8d99",
-      "title": "NVIDIA Gains US Approval to Export H200 AI Chips to China",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news-updates/nvidia-gains-us-approval-to-export-h200-ai-chips-to-china/",
-      "published_date": "2025-12-09T10:55:09+00:00",
+      "article_id": "9e4020be1bd147573cb92df7be1ae3cf",
+      "title": "NVIDIA CUDA 13.1 Powers Next-Gen GPU Programming with NVIDIA CUDA Tile and Performance Gains",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-1-powers-next-gen-gpu-programming-with-nvidia-cuda-tile-and-performance-gains/",
+      "published_date": "2025-12-04T22:20:56+00:00",
       "category": "Industry",
-      "description": "The 25% fee will be charged when the chips are shipped from Taiwan to the United States for inspection, before onward export. The post NVIDIA Gains US Approval to Export H200 AI Chips to China appeared first on Analytics India Magazine.",
-      "author": "Sanjana Gupta",
-      "content": "The 25% fee will be charged when the chips are shipped from Taiwan to the United States for inspection, before onward export. The post NVIDIA Gains US Approval to Export H200 AI Chips to China appeared first on Analytics India Magazine.",
+      "description": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
+      "author": "Jonathan Bentz",
+      "content": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9099999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.945233+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.044809+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,27 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.945236+00:00"
+        "timestamp": "2025-12-10T08:30:17.044812+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d4425d38334d943d9a0f1a8ea46df3c6",
-      "title": "iOS 26.2 delayed: Apple issues second Release Candidate to testers",
-      "source": "dataconomy",
-      "url": "https://dataconomy.com/2025/12/09/ios-26-2-delayed-apple-issues-second-release-candidate-to-testers/",
-      "published_date": "2025-12-09T11:44:04+00:00",
+      "article_id": "bd85b1db341974f0d93e3956b5c83f66",
+      "title": "The state of enterprise AI",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/the-state-of-enterprise-ai-2025-report",
+      "published_date": "2025-12-08T04:00:00+00:00",
       "category": "Industry",
-      "description": "Apple Inc. released a second Release Candidate (RC) for iOS 26.2 to developers and public beta testers today, delaying the expected public launch of the software update. The company has now issued build number 23C54 for the iOS 26.2 RC. This updated version follows a previous RC, build 23C52, which Apple had already distributed. Industry […]",
-      "author": "Kerem Gülen",
-      "content": "Apple Inc. released a second Release Candidate (RC) for iOS 26.2 to developers and public beta testers today, delaying the expected public launch of the software update. The company has now issued build number 23C54 for the iOS 26.2 RC. This updated version follows a previous RC, build 23C52, which Apple had already distributed. Industry […]",
+      "description": "Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.",
+      "author": "",
+      "content": "Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "overall_score": 0.89,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-10T04:36:23.945559+00:00"
+        "consensus_timestamp": "2025-12-10T08:30:17.041090+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-10T04:36:23.945562+00:00"
+        "timestamp": "2025-12-10T08:30:17.041093+00:00"
       },
       "article_type": "article"
     }
