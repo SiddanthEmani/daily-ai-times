@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-12T20:25:33.653687+00:00",
+  "updated": "2025-12-13T01:22:48.992498+00:00",
   "top_stories": [
     {
       "article_id": "da7f1c009f3180575418dd431b08c9d7",
@@ -14,9 +14,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.925,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -45,34 +45,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-12T20:25:33.611323+00:00"
+        "consensus_timestamp": "2025-12-13T01:22:48.949005+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-12T20:25:33.611326+00:00"
+        "timestamp": "2025-12-13T01:22:48.949008+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "cc65857cb381f5eff68d09f5dd25bdcc",
-      "title": "How We Used Codex to Ship Sora for Android in 28 Days",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
-      "published_date": "2025-12-12T00:00:00+00:00",
+      "article_id": "f182b274b392fbcc568236f3f84e9586",
+      "title": "Scaling MLflow for enterprise AI: What’s New in SageMaker AI with MLflow",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scaling-mlflow-for-enterprise-ai-whats-new-in-sagemaker-ai-with-mlflow/",
+      "published_date": "2025-12-11T18:16:19+00:00",
       "category": "Industry",
-      "description": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
+      "description": "Today we’re announcing Amazon SageMaker AI with MLflow, now including a serverless capability that dynamically manages infrastructure provisioning, scaling, and operations for artificial intelligence and machine learning (AI/ML) development tasks. In this post, we explore how these new capabilities help you run large MLflow workloads—from generative AI agents to large language model (LLM) experimentation—with improved performance, automation, and security using SageMaker AI with MLflow.",
+      "author": "Sandeep Raveesh-Babu",
+      "content": "Today we’re announcing Amazon SageMaker AI with MLflow, now including a serverless capability that dynamically manages infrastructure provisioning, scaling, and operations for artificial intelligence and machine learning (AI/ML) development tasks. In this post, we explore how these new capabilities help you run large MLflow workloads—from generative AI agents to large language model (LLM) experimentation—with improved performance, automation, and security using SageMaker AI with MLflow.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-13T01:22:48.947577+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-13T01:22:48.947580+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e193bf200df768fd3bc690d4d544f0a5",
+      "title": "NIH-led study reveals role of mobile DNA elements in lung cancer progression",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-led-study-reveals-role-mobile-dna-elements-lung-cancer-progression",
+      "published_date": "2025-12-13T01:18:25.965603+00:00",
+      "category": "Government",
+      "description": "Sherlock-Lung study researchers use large-scale, multi-omics analysis to identify biomarker of aggressive lung tumors.",
       "author": "",
-      "content": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
+      "content": "Sherlock-Lung study researchers use large-scale, multi-omics analysis to identify biomarker of aggressive lung tumors.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -106,42 +168,104 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-12T20:25:33.608681+00:00"
+        "consensus_timestamp": "2025-12-13T01:22:48.945575+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-12T20:25:33.608684+00:00"
+        "timestamp": "2025-12-13T01:22:48.945579+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9e4020be1bd147573cb92df7be1ae3cf",
-      "title": "NVIDIA CUDA 13.1 Powers Next-Gen GPU Programming with NVIDIA CUDA Tile and Performance Gains",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-1-powers-next-gen-gpu-programming-with-nvidia-cuda-tile-and-performance-gains/",
-      "published_date": "2025-12-04T22:20:56+00:00",
+      "article_id": "d4f1c40e3c9452dea540e66e5b11f39b",
+      "title": "Meta Appoints Aman Jain to Oversee Public Policy in India",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/meta-appoints-aman-jain-to-oversee-public-policy-in-india/",
+      "published_date": "2025-12-12T12:28:28+00:00",
       "category": "Industry",
-      "description": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
-      "author": "Jonathan Bentz",
-      "content": "NVIDIA CUDA 13.1 introduces the largest and most comprehensive update to the CUDA platform since it was invented two decades ago. In this release,...",
+      "description": "Jain brings over two decades of experience in public policy and business strategy. The post Meta Appoints Aman Jain to Oversee Public Policy in India appeared first on Analytics India Magazine.",
+      "author": "Siddharth Jindal",
+      "content": "Jain brings over two decades of experience in public policy and business strategy. The post Meta Appoints Aman Jain to Oversee Public Policy in India appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.7,
+        "confidence": 0.75,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-13T01:22:48.951490+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.62,
+        "combined_confidence": 0.6499999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-13T01:22:48.951493+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "63dcdd90ccc1d5a45dbfe7da3921e7ca",
+      "title": "Increasing revenue 300% by bringing AI to SMBs",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/podium",
+      "published_date": "2025-12-11T00:00:00+00:00",
+      "category": "Industry",
+      "description": "Discover how Podium used OpenAI’s GPT-5 to build “Jerry,” an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+      "author": "",
+      "content": "Discover how Podium used OpenAI’s GPT-5 to build “Jerry,” an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-12T20:25:33.612261+00:00"
+        "consensus_timestamp": "2025-12-13T01:22:48.946765+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,131 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-12T20:25:33.612264+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fb1417d56c2a0d9ffec58a14dd7dfcf5",
-      "title": "FACTS Benchmark Suite: Systematically evaluating the factuality of large language models",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/",
-      "published_date": "2025-12-09T11:29:03+00:00",
-      "category": "Industry",
-      "description": "Systematically evaluating the factuality of large language models with the FACTS Benchmark Suite.",
-      "author": "",
-      "content": "Systematically evaluating the factuality of large language models with the FACTS Benchmark Suite.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-12T20:25:33.612874+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-12T20:25:33.612877+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6c7cc70281945f2058d6bb52ada6326e",
-      "title": "AutoGluon assistant: Zero-code AutoML through multiagent collaboration",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/autogluon-assistant-zero-code-automl-through-multiagent-collaboration",
-      "published_date": "2025-12-05T15:24:42+00:00",
-      "category": "Industry",
-      "description": "A multiagent architecture separates data perception, tool knowledge, execution history, and code generation, enabling ML automation that works with messy, real-world inputs.",
-      "author": "Haoyang Fang",
-      "content": "A multiagent architecture separates data perception, tool knowledge, execution history, and code generation, enabling ML automation that works with messy, real-world inputs.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.92,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-12T20:25:33.613055+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-12T20:25:33.613057+00:00"
+        "timestamp": "2025-12-13T01:22:48.946767+00:00"
       },
       "article_type": "article"
     }
