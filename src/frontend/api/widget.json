@@ -1,23 +1,23 @@
 {
-  "updated": "2025-12-22T12:42:22.813484+00:00",
+  "updated": "2025-12-22T16:27:34.613598+00:00",
   "top_stories": [
     {
-      "article_id": "ecd428aa0aea150f18ae0e98e0648d9c",
-      "title": "NIH launches $50M Autism Data Science Initiative to unlock causes and improve outcomes",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-fifty-million-autism-data-science-initiative-unlock-causes-improve-outcomes",
-      "published_date": "2025-12-22T12:38:06.631979+00:00",
-      "category": "Government",
-      "description": "Funded projects will drive discoveries across biology, environment, and autism services.",
-      "author": "",
-      "content": "Funded projects will drive discoveries across biology, environment, and autism services.",
+      "article_id": "e9dd3578ef256e4a573026fbec8958ba",
+      "title": "New York Governor Kathy Hochul signs RAISE Act to regulate AI safety",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/",
+      "published_date": "2025-12-20T18:20:34+00:00",
+      "category": "Industry",
+      "description": "The bill will require large AI developers to publish information about their safety protocols and report safety incidents to the state within 72 hours.",
+      "author": "Anthony Ha",
+      "content": "The bill will require large AI developers to publish information about their safety protocols and report safety incidents to the state within 72 hours.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.7,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "relevance_score": 0.85,
+        "quality_score": 0.75,
+        "novelty_score": 0.65,
         "impact_score": 0.9,
-        "overall_score": 0.8400000000000001,
-        "confidence_mean": 0.9
+        "overall_score": 0.785,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,40 +45,102 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-22T12:42:22.782735+00:00"
+        "consensus_timestamp": "2025-12-22T16:27:34.582965+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-22T12:42:22.782738+00:00"
+        "timestamp": "2025-12-22T16:27:34.582968+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "4134be64fc3e0aaf1d36516aa3a3f3ac",
-      "title": "Tracking and managing assets used in AI development with Amazon SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/tracking-and-managing-assets-used-in-ai-development-with-amazon-sagemaker-ai/",
-      "published_date": "2025-12-17T16:53:30+00:00",
+      "article_id": "e0cc4ee268e4b1d62c96788629f9d73f",
+      "title": "NVIDIA CUDA-X Powers the New Sirius GPU Engine for DuckDB, Setting ClickBench Records",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-gpu-accelerated-sirius-achieves-record-setting-clickbench-record/",
+      "published_date": "2025-12-15T17:18:31+00:00",
       "category": "Industry",
-      "description": "In this post, we'll explore the new capabilities and core concepts that help organizations track and manage models development and deployment lifecycles. We will show you how the features are configured to train models with automatic end-to-end lineage, from dataset upload and versioning to model fine-tuning, evaluation, and seamless endpoint deployment.",
-      "author": "Amit Modi",
-      "content": "In this post, we'll explore the new capabilities and core concepts that help organizations track and manage models development and deployment lifecycles. We will show you how the features are configured to train models with automatic end-to-end lineage, from dataset upload and versioning to model fine-tuning, evaluation, and seamless endpoint deployment.",
+      "description": "Sirius, an open-source GPU native SQL engine, achieved a new performance record on Clickbench—a widely used analytics benchmark. Developed by University of...",
+      "author": "Xiangyao Yu",
+      "content": "Sirius, an open-source GPU native SQL engine, achieved a new performance record on Clickbench—a widely used analytics benchmark. Developed by University of...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-22T16:27:34.584312+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-22T16:27:34.584315+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "27d24fe0ed5b645e11edfc909474029e",
+      "title": "Developers can now submit apps to ChatGPT",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/developers-can-now-submit-apps-to-chatgpt",
+      "published_date": "2025-12-17T00:00:00+00:00",
+      "category": "Industry",
+      "description": "Developers can now submit apps for review and publication in ChatGPT, with approved apps appearing in a new in-product directory for easy discovery. Updated tools, guidelines, and the Apps SDK help developers build powerful chat-native experiences that bring real-world actions into ChatGPT.",
+      "author": "",
+      "content": "Developers can now submit apps for review and publication in ChatGPT, with approved apps appearing in a new in-product directory for easy discovery. Updated tools, guidelines, and the Apps SDK help developers build powerful chat-native experiences that bring real-world actions into ChatGPT.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.89,
+        "overall_score": 0.8875000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-22T12:42:22.784393+00:00"
+        "consensus_timestamp": "2025-12-22T16:27:34.581328+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,27 +183,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-22T12:42:22.784396+00:00"
+        "timestamp": "2025-12-22T16:27:34.581331+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c0e0620a8fcb29dd5a621c69f6476215",
-      "title": "Updating our Model Spec with teen protections",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/updating-model-spec-with-teen-protections",
-      "published_date": "2025-12-18T11:00:00+00:00",
+      "article_id": "6d6fdcb9a5c0c51fc7b83aa3116ebb68",
+      "title": "ChatGPT’s mobile app hits new milestone of $3B in consumer spending",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/12/18/chatgpts-mobile-app-hits-new-milestone-of-3b-in-consumer-spending/",
+      "published_date": "2025-12-18T19:50:02+00:00",
       "category": "Industry",
-      "description": "OpenAI is updating its Model Spec with new Under-18 Principles that define how ChatGPT should support teens with safe, age-appropriate guidance grounded in developmental science. The update strengthens guardrails, clarifies expected model behavior in higher-risk situations, and builds on our broader work to improve teen safety across ChatGPT.",
+      "description": "ChatGPT has reached $3B in lifetime mobile consumer spending in just 31 months, faster than TikTok and major streaming apps.",
+      "author": "Sarah Perez",
+      "content": "ChatGPT has reached $3B in lifetime mobile consumer spending in just 31 months, faster than TikTok and major streaming apps.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-22T16:27:34.583554+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-22T16:27:34.583556+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ba8ab55a59db85724fc23024f058d6ec",
+      "title": "HHS Doubles AI-Backed Childhood Cancer Research Funding",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/hhs-doubles-ai-backed-childhood-cancer-research-funding",
+      "published_date": "2025-12-22T16:23:15.838924+00:00",
+      "category": "Government",
+      "description": "Following an Executive Order by President Trump, HHS will increase funding of data-centered pediatric cancer research.",
       "author": "",
-      "content": "OpenAI is updating its Model Spec with new Under-18 Principles that define how ChatGPT should support teens with safe, age-appropriate guidance grounded in developmental science. The update strengthens guardrails, clarifies expected model behavior in higher-risk situations, and builds on our broader work to improve teen safety across ChatGPT.",
+      "content": "Following an Executive Order by President Trump, HHS will increase funding of data-centered pediatric cancer research.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-22T12:42:22.783492+00:00"
+        "consensus_timestamp": "2025-12-22T16:27:34.580179+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,131 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-22T12:42:22.783495+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dd0be1b02a0701393c334afd9d711032",
-      "title": "BNY builds “AI for everyone, everywhere” with OpenAI",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/bny",
-      "published_date": "2025-12-12T00:00:00+00:00",
-      "category": "Industry",
-      "description": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
-      "author": "",
-      "content": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-22T12:42:22.783857+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-22T12:42:22.783859+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6cd99d61c1f89ec1bc5db2bc21f187d6",
-      "title": "Building a voice-driven AWS assistant with Amazon Nova Sonic",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-a-voice-driven-aws-assistant-with-amazon-nova-sonic/",
-      "published_date": "2025-12-12T18:07:57+00:00",
-      "category": "Industry",
-      "description": "In this post, we explore how to build a sophisticated voice-powered AWS operations assistant using Amazon Nova Sonic for speech processing and Strands Agents for multi-agent orchestration. This solution demonstrates how natural language voice interactions can transform cloud operations, making AWS services more accessible and operations more efficient.",
-      "author": "Jagdish Komakula",
-      "content": "In this post, we explore how to build a sophisticated voice-powered AWS operations assistant using Amazon Nova Sonic for speech processing and Strands Agents for multi-agent orchestration. This solution demonstrates how natural language voice interactions can transform cloud operations, making AWS services more accessible and operations more efficient.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-22T12:42:22.784818+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-22T12:42:22.784821+00:00"
+        "timestamp": "2025-12-22T16:27:34.580182+00:00"
       },
       "article_type": "article"
     }
