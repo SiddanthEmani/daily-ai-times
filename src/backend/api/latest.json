@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-25T08:29:17.090975+00:00",
+  "generated_at": "2025-12-25T12:41:22.962085+00:00",
   "articles": [
     {
       "article_id": "f188d24622ea8bde5e68d37001bbcf3c",
@@ -12,12 +12,12 @@
       "author": "Amanda Silberling",
       "content": "With Groq on its side, Nvidia is poised to become even more dominant in chip manufacturing.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.99
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,35 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.053768+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.929480+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.053771+00:00"
+        "timestamp": "2025-12-25T12:41:22.929483+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "4a102840743a7d49d9f04536af0bd57b",
-      "title": "AWS AI League: Model customization and agentic showdown",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aws-ai-league-model-customization-and-agentic-showdown/",
-      "published_date": "2025-12-23T17:36:07+00:00",
+      "article_id": "5daa32c667c76a4da50d7c7fa2071607",
+      "title": "AIM Print December 2025",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/magazine/aim-print-december-2025/",
+      "published_date": "2025-12-24T05:59:34+00:00",
       "category": "Industry",
-      "description": "In this post, we explore the new AWS AI League challenges and how they are transforming how organizations approach AI development. The grand finale at AWS re:Invent 2025 was an exciting showcase of their ingenuity and skills.",
-      "author": "Marc Karp",
-      "content": "In this post, we explore the new AWS AI League challenges and how they are transforming how organizations approach AI development. The grand finale at AWS re:Invent 2025 was an exciting showcase of their ingenuity and skills.",
+      "description": "A panoramic snapshot of India’s AI moment, this edition of AIM Print examines where data, capital, talent, and ambition are converging—and where the gaps between promise and proof are becoming impossible to ignore. The post AIM Print December 2025 appeared first on Analytics India Magazine.",
+      "author": "AIM Media House",
+      "content": "A panoramic snapshot of India’s AI moment, this edition of AIM Print examines where data, capital, talent, and ambition are converging—and where the gaps between promise and proof are becoming impossible to ignore. The post AIM Print December 2025 appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -80,6 +80,68 @@
         "impact_score": 0.98,
         "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.932318+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.932321+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a1483f1ad793ef473fc6d1e16bbb2324",
+      "title": "Advancing ADHD diagnosis: How Qbtech built a mobile AI assessment Model Using Amazon SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/advancing-adhd-diagnosis-how-qbtech-built-a-mobile-ai-assessment-model-using-amazon-sagemaker-ai/",
+      "published_date": "2025-12-23T17:11:30+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Qbtech streamlined their machine learning (ML) workflow using Amazon SageMaker AI, a fully managed service to build, train and deploy ML models, and AWS Glue, a serverless service that makes data integration simpler, faster, and more cost effective. This new solution reduced their feature engineering time from weeks to hours, while maintaining the high clinical standards required by healthcare providers.",
+      "author": "Antonio Martellotta",
+      "content": "In this post, we explore how Qbtech streamlined their machine learning (ML) workflow using Amazon SageMaker AI, a fully managed service to build, train and deploy ML models, and AWS Glue, a serverless service that makes data integration simpler, faster, and more cost effective. This new solution reduced their feature engineering time from weeks to hours, while maintaining the high clinical standards required by healthcare providers.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -107,96 +169,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052678+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.928459+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.052681+00:00"
+        "timestamp": "2025-12-25T12:41:22.928462+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "76672596837b0c7bf1b6831588c235cb",
-      "title": "AI Factories, Physical AI, and Advances in Models, Agents, and Infrastructure That Shaped 2025",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/ai-factories-physical-ai-and-advances-in-models-agents-and-infrastructure-that-shaped-2025/",
-      "published_date": "2025-12-16T17:30:00+00:00",
-      "category": "Industry",
-      "description": "2025 was another milestone year for developers and researchers working with NVIDIA technologies. Progress in data center power and compute design, AI...",
-      "author": "Michelle Horton",
-      "content": "2025 was another milestone year for developers and researchers working with NVIDIA technologies. Progress in data center power and compute design, AI...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.99,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.055141+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.794,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.055144+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "669407127bcab28e7dfdad3fac354d5b",
-      "title": "Build a multimodal generative AI assistant for root cause diagnosis in predictive maintenance using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multimodal-generative-ai-assistant-for-root-cause-diagnosis-in-predictive-maintenance-using-amazon-bedrock/",
-      "published_date": "2025-12-22T18:21:28+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
-      "author": "Carla Lorente",
-      "content": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
+      "article_id": "a6e27c824c218e48cf62c06a4c0776eb",
+      "title": "Research: Cyber security vulnerabilities of operational technologies",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/cyber-security-vulnerabilities-of-operational-technologies",
+      "published_date": "2025-12-23T15:29:52+00:00",
+      "category": "Government",
+      "description": "This research details the cyber security vulnerabilities of Operational Technologies and the risks they pose.",
+      "author": "",
+      "content": "This research details the cyber security vulnerabilities of Operational Technologies and the risks they pose.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -234,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.053096+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.926030+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,24 +245,86 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.053099+00:00"
+        "timestamp": "2025-12-25T12:41:22.926033+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ac4010490ad406f2590120aa7a3ea453",
-      "title": "Introducing Visa Intelligent Commerce on AWS: Enabling agentic commerce with Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-visa-intelligent-commerce-on-aws-enabling-agentic-commerce-with-amazon-bedrock-agentcore/",
-      "published_date": "2025-12-23T16:45:47+00:00",
+      "article_id": "fa738cf046f6ec593890acfa8476314b",
+      "title": "Evaluating chain-of-thought monitorability",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/evaluating-chain-of-thought-monitorability",
+      "published_date": "2025-12-18T12:00:00+00:00",
       "category": "Industry",
-      "description": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
-      "author": "Sangeetha Bharath, Seemal Zaman",
-      "content": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
+      "description": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
+      "author": "",
+      "content": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.926680+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.926684+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "dd0be1b02a0701393c334afd9d711032",
+      "title": "BNY builds “AI for everyone, everywhere” with OpenAI",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/bny",
+      "published_date": "2025-12-12T00:00:00+00:00",
+      "category": "Industry",
+      "description": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
+      "author": "",
+      "content": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
@@ -296,7 +358,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052918+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.927169+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,88 +369,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.052920+00:00"
+        "timestamp": "2025-12-25T12:41:22.927172+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e0cc4ee268e4b1d62c96788629f9d73f",
-      "title": "NVIDIA CUDA-X Powers the New Sirius GPU Engine for DuckDB, Setting ClickBench Records",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-gpu-accelerated-sirius-achieves-record-setting-clickbench-record/",
-      "published_date": "2025-12-15T17:18:31+00:00",
+      "article_id": "fd1e29bde77adcced955c4d125bf1039",
+      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
+      "published_date": "2025-12-11T19:19:57+00:00",
       "category": "Industry",
-      "description": "Sirius, an open-source GPU native SQL engine, achieved a new performance record on Clickbench—a widely used analytics benchmark. Developed by University of...",
-      "author": "Xiangyao Yu",
-      "content": "Sirius, an open-source GPU native SQL engine, achieved a new performance record on Clickbench—a widely used analytics benchmark. Developed by University of...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.055328+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.055331+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c38db9415480b22f9807b21152ac52ba",
-      "title": "Securing Smart Speakers for Home Health Care: NIST Offers New Guidelines",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2025/12/securing-smart-speakers-home-health-care-nist-offers-new-guidelines",
-      "published_date": "2025-12-17T12:00:00+00:00",
-      "category": "Government",
-      "description": "Cybersecurity and privacy risks can threaten patient confidentiality.",
-      "author": "Sarah Henderson",
-      "content": "Cybersecurity and privacy risks can threaten patient confidentiality.",
+      "description": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. GPT-5.2 achieves the top reported score for industry benchmarks like GPQA-Diamond, AIME 2025 and Tau2 Telecom. On leading benchmarks targeting Read Article",
+      "author": "Ashraf Eassa",
+      "content": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. GPT-5.2 achieves the top reported score for industry benchmarks like GPQA-Diamond, AIME 2025 and Tau2 Telecom. On leading benchmarks targeting Read Article",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8725,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -416,469 +416,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.049244+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.049248+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "00928c2411f1b06a17d83fb14204a15e",
-      "title": "How Gradient-Boosting is Quietly Powering India’s Research Push",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/how-gradient-boosting-is-quietly-powering-indias-research-push/",
-      "published_date": "2025-12-24T08:53:58+00:00",
-      "category": "Industry",
-      "description": "From groundwater and slopes to carbon sinks, tools like CatBoost are enabling Indian scientists to extract insights and drive sustainability. The post How Gradient-Boosting is Quietly Powering India’s Research Push appeared first on Analytics India Magazine.",
-      "author": "AIM Media House",
-      "content": "From groundwater and slopes to carbon sinks, tools like CatBoost are enabling Indian scientists to extract insights and drive sustainability. The post How Gradient-Boosting is Quietly Powering India’s Research Push appeared first on Analytics India Magazine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.056520+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.056523+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e3a9aa3c1198619d895ad74ef9b83050",
-      "title": "Draft NIST Guidelines Rethink Cybersecurity for the AI Era",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2025/12/draft-nist-guidelines-rethink-cybersecurity-ai-era",
-      "published_date": "2025-12-16T12:00:00+00:00",
-      "category": "Government",
-      "description": "New guidelines can help an organization determine ways to incorporate AI into its operations while mitigating cybersecurity risks.",
-      "author": "Sarah Henderson",
-      "content": "New guidelines can help an organization determine ways to incorporate AI into its operations while mitigating cybersecurity risks.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.049307+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.049311+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7cbdb6dfb6301b21bc88443d35a60ce3",
-      "title": "WWE Superstars visit pediatric research participants at NIH Clinical Center and The Children’s Inn",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/wwe-superstars-visit-pediatric-research-participants-nih-clinical-center-childrens-inn",
-      "published_date": "2025-12-25T08:25:21.877541+00:00",
-      "category": "Government",
-      "description": "Children participating in clinical trials received a huge surprise.",
-      "author": "",
-      "content": "Children participating in clinical trials received a huge surprise.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.050488+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.050496+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fbc5b47a402acf7beee5c317f4fa9a27",
-      "title": "Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/",
-      "published_date": "2025-12-17T19:00:00+00:00",
-      "category": "Industry",
-      "description": "We believe this recognition shows our commitment to pioneering agent frameworks, orchestration, and enterprise-grade governance. The post Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms appeared first on Microsoft Azure Blog.",
-      "author": "Don Scott",
-      "content": "We believe this recognition shows our commitment to pioneering agent frameworks, orchestration, and enterprise-grade governance. The post Microsoft named a Leader in Gartner® Magic Quadrant™ for AI Application Development Platforms appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052227+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.052230+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f2684ebe49f7f0a1a24ef4d4fd376416",
-      "title": "OpenAI says AI browsers may always be vulnerable to prompt injection attacks",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/",
-      "published_date": "2025-12-22T22:11:19+00:00",
-      "category": "Industry",
-      "description": "OpenAI says prompt injections will always be a risk for AI browsers with agentic capabilities, like Atlas. But the firm is beefing up its cybersecurity with an \"LLM-based automated attacker.\"",
-      "author": "Rebecca Bellan",
-      "content": "OpenAI says prompt injections will always be a risk for AI browsers with agentic capabilities, like Atlas. But the firm is beefing up its cybersecurity with an \"LLM-based automated attacker.\"",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.054326+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.054330+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "efd64174267978036438447bece5f578",
-      "title": "Agentic QA automation using Amazon Bedrock AgentCore Browser and Amazon Nova Act",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-qa-automation-using-amazon-bedrock-agentcore-browser-and-amazon-nova-act/",
-      "published_date": "2025-12-24T17:20:16+00:00",
-      "category": "Industry",
-      "description": "In this post, we explore how agentic QA automation addresses these challenges and walk through a practical example using Amazon Bedrock AgentCore Browser and Amazon Nova Act to automate testing for a sample retail application.",
-      "author": "Kosti Vasilakakis",
-      "content": "In this post, we explore how agentic QA automation addresses these challenges and walk through a practical example using Amazon Bedrock AgentCore Browser and Amazon Nova Act to automate testing for a sample retail application.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052541+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.929393+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.052544+00:00"
+        "timestamp": "2025-12-25T12:41:22.929396+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "52cafac1c86ccaa47420aaadb0809626",
-      "title": "Optimizing Semiconductor Defect Classification with Generative AI and Vision Foundation Models",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/optimizing-semiconductor-defect-classification-with-generative-ai-and-vision-foundation-models/",
-      "published_date": "2025-12-17T02:00:00+00:00",
-      "category": "Industry",
-      "description": "In the heart of every modern electronic device lies a silicon chip, built through a manufacturing process so precise that even a microscopic defect can...",
-      "author": "Tim Lin",
-      "content": "In the heart of every modern electronic device lies a silicon chip, built through a manufacturing process so precise that even a microscopic defect can...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.055002+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.055004+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "019a7573714ce1495b9416a624423a14",
-      "title": "Transparency data: DSIT: special advisers' gifts, hospitality and meetings, July to September 2025",
+      "article_id": "be9584ff1eb27f37d277af05e493425b",
+      "title": "Transparency data: DSIT: ministerial overseas travel and meetings, July to September 2025",
       "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/dsit-special-advisers-gifts-hospitality-and-meetings-july-to-september-2025",
+      "url": "https://www.gov.uk/government/publications/dsit-ministerial-overseas-travel-and-meetings-july-to-september-2025",
       "published_date": "2025-12-16T16:00:03+00:00",
       "category": "Government",
-      "description": "Data on gifts and hospitality received by special advisers, and meetings they attended with senior media figures.",
+      "description": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
       "author": "",
-      "content": "Data on gifts and hospitality received by special advisers, and meetings they attended with senior media figures.",
+      "content": "Data on ministers’ overseas travel and meetings with external individuals and organisations.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -913,21 +479,455 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.051370+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.926525+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.051373+00:00"
+        "timestamp": "2025-12-25T12:41:22.926528+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c7b47c2d1bdeacdae6dae58a7e9597f7",
+      "title": "ServiceNow to Buy Armis for $7.75 Billion",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news-updates/servicenow-to-buy-armis-for-7-75-billion/",
+      "published_date": "2025-12-24T14:59:00+00:00",
+      "category": "Industry",
+      "description": "With Armis acquisition, ServiceNow aims to expand its security market opportunity. The post ServiceNow to Buy Armis for $7.75 Billion appeared first on Analytics India Magazine.",
+      "author": "C P Balasubramanyam",
+      "content": "With Armis acquisition, ServiceNow aims to expand its security market opportunity. The post ServiceNow to Buy Armis for $7.75 Billion appeared first on Analytics India Magazine.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.85,
+        "overall_score": 0.8350000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.932028+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.932030+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "809d690566c42500d08ecaaa93a599f8",
+      "title": "OpenAI allows users to directly adjust ChatGPT’s enthusiasm level",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2025/12/20/openai-allows-users-to-directly-adjust-chatgpts-warmth-and-enthusiasm/",
+      "published_date": "2025-12-20T20:34:07+00:00",
+      "category": "Industry",
+      "description": "The tweaks allow users to further customize ChatGPT’s tone, on top of the existing ability to set a “base style and tone” — including the Professional, Candid, and Quirky tones that OpenAI added in November.",
+      "author": "Anthony Ha",
+      "content": "The tweaks allow users to further customize ChatGPT’s tone, on top of the existing ability to set a “base style and tone” — including the Professional, Candid, and Quirky tones that OpenAI added in November.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.930328+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.930331+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9939e2f96a068b93499dc53918b9140b",
+      "title": "Transparency data: DSIT: business appointment rules advice 2025",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/dsit-business-appointment-rules-advice-2025",
+      "published_date": "2025-12-16T16:00:04+00:00",
+      "category": "Government",
+      "description": "Information about outside appointments or employment taken up by former members of DSIT and advice given under the business appointment rules.",
+      "author": "",
+      "content": "Information about outside appointments or employment taken up by former members of DSIT and advice given under the business appointment rules.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.82,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.926481+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.926484+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ae00dc0025a9cb61d032338938ea5e0a",
+      "title": "BBVA and OpenAI collaborate to transform global banking",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/bbva-collaboration-expansion",
+      "published_date": "2025-12-12T00:00:00+00:00",
+      "category": "Industry",
+      "description": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.",
+      "author": "",
+      "content": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.927256+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.927258+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d97c493088e63f46bd34761e9728e4d2",
+      "title": "Programmatically creating an IDP solution with Amazon Bedrock Data Automation",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/programmatically-creating-an-idp-solution-with-amazon-bedrock-data-automation/",
+      "published_date": "2025-12-24T17:26:00+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how to programmatically create an IDP solution that uses Strands SDK, Amazon Bedrock AgentCore, Amazon Bedrock Knowledge Base, and Bedrock Data Automation (BDA). This solution is provided through a Jupyter notebook that enables users to upload multi-modal business documents and extract insights using BDA as a parser to retrieve relevant chunks and augment a prompt to a foundational model (FM).",
+      "author": "Raian Osman",
+      "content": "In this post, we explore how to programmatically create an IDP solution that uses Strands SDK, Amazon Bedrock AgentCore, Amazon Bedrock Knowledge Base, and Bedrock Data Automation (BDA). This solution is provided through a Jupyter notebook that enables users to upload multi-modal business documents and extract insights using BDA as a parser to retrieve relevant chunks and augment a prompt to a foundational model (FM).",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.927428+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.927430+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "11535d16992075450a13ff10d2c74e4b",
+      "title": "Enhance document analytics with Strands AI Agents for the GenAI IDP Accelerator",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/enhance-document-analytics-with-strands-ai-agents-for-the-genai-idp-accelerator/",
+      "published_date": "2025-12-22T18:26:17+00:00",
+      "category": "Industry",
+      "description": "To address the need for businesses to quickly analyze information and unlock actionable insights, we are announcing Analytics Agent, a new feature that is seamlessly integrated into the GenAI IDP Accelerator. With this feature, users can perform advanced searches and complex analyses using natural language queries without SQL or data analysis expertise. In this post, we discuss how non-technical users can use this tool to analyze and understand the documents they have processed at scale with...",
+      "author": "David Kaleko",
+      "content": "To address the need for businesses to quickly analyze information and unlock actionable insights, we are announcing Analytics Agent, a new feature that is seamlessly integrated into the GenAI IDP Accelerator. With this feature, users can perform advanced searches and complex analyses using natural language queries without SQL or data analysis expertise. In this post, we discuss how non-technical users can use this tool to analyze and understand the documents they have processed at scale with...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.928720+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.928723+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "676f15c16ba54586286fdd95ddd0f757",
+      "title": "Bi-directional streaming for real-time agent interactions now available in Amazon Bedrock AgentCore Runtime",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/bi-directional-streaming-for-real-time-agent-interactions-now-available-in-amazon-bedrock-agentcore-runtime/",
+      "published_date": "2025-12-18T17:00:21+00:00",
+      "category": "Industry",
+      "description": "In this post, you will learn about bi-directional streaming on AgentCore Runtime and the prerequisites to create a WebSocket implementation. You will also learn how to use Strands Agents to implement a bi-directional streaming solution for voice agents.",
+      "author": "Lana Zhang",
+      "content": "In this post, you will learn about bi-directional streaming on AgentCore Runtime and the prerequisites to create a WebSocket implementation. You will also learn how to use Strands Agents to implement a bi-directional streaming solution for voice agents.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.928897+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.928900+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 162.60733366012573,
+    "processing_time": 161.36848306655884,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 131,
+      "total_processed": 130,
       "candidates": {
-        "headlines": 9,
-        "articles": 122,
+        "headlines": 11,
+        "articles": 119,
         "research_papers": 0
       },
       "selected": {

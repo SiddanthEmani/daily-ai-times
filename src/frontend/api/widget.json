@@ -1,5 +1,5 @@
 {
-  "updated": "2025-12-25T08:29:17.093921+00:00",
+  "updated": "2025-12-25T12:41:22.964960+00:00",
   "top_stories": [
     {
       "article_id": "f188d24622ea8bde5e68d37001bbcf3c",
@@ -12,12 +12,12 @@
       "author": "Amanda Silberling",
       "content": "With Groq on its side, Nvidia is poised to become even more dominant in chip manufacturing.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.99
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,35 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.053768+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.929480+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.053771+00:00"
+        "timestamp": "2025-12-25T12:41:22.929483+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "4a102840743a7d49d9f04536af0bd57b",
-      "title": "AWS AI League: Model customization and agentic showdown",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aws-ai-league-model-customization-and-agentic-showdown/",
-      "published_date": "2025-12-23T17:36:07+00:00",
+      "article_id": "5daa32c667c76a4da50d7c7fa2071607",
+      "title": "AIM Print December 2025",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/magazine/aim-print-december-2025/",
+      "published_date": "2025-12-24T05:59:34+00:00",
       "category": "Industry",
-      "description": "In this post, we explore the new AWS AI League challenges and how they are transforming how organizations approach AI development. The grand finale at AWS re:Invent 2025 was an exciting showcase of their ingenuity and skills.",
-      "author": "Marc Karp",
-      "content": "In this post, we explore the new AWS AI League challenges and how they are transforming how organizations approach AI development. The grand finale at AWS re:Invent 2025 was an exciting showcase of their ingenuity and skills.",
+      "description": "A panoramic snapshot of India’s AI moment, this edition of AIM Print examines where data, capital, talent, and ambition are converging—and where the gaps between promise and proof are becoming impossible to ignore. The post AIM Print December 2025 appeared first on Analytics India Magazine.",
+      "author": "AIM Media House",
+      "content": "A panoramic snapshot of India’s AI moment, this edition of AIM Print examines where data, capital, talent, and ambition are converging—and where the gaps between promise and proof are becoming impossible to ignore. The post AIM Print December 2025 appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -80,6 +80,68 @@
         "impact_score": 0.98,
         "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-25T12:41:22.932318+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-25T12:41:22.932321+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a1483f1ad793ef473fc6d1e16bbb2324",
+      "title": "Advancing ADHD diagnosis: How Qbtech built a mobile AI assessment Model Using Amazon SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/advancing-adhd-diagnosis-how-qbtech-built-a-mobile-ai-assessment-model-using-amazon-sagemaker-ai/",
+      "published_date": "2025-12-23T17:11:30+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Qbtech streamlined their machine learning (ML) workflow using Amazon SageMaker AI, a fully managed service to build, train and deploy ML models, and AWS Glue, a serverless service that makes data integration simpler, faster, and more cost effective. This new solution reduced their feature engineering time from weeks to hours, while maintaining the high clinical standards required by healthcare providers.",
+      "author": "Antonio Martellotta",
+      "content": "In this post, we explore how Qbtech streamlined their machine learning (ML) workflow using Amazon SageMaker AI, a fully managed service to build, train and deploy ML models, and AWS Glue, a serverless service that makes data integration simpler, faster, and more cost effective. This new solution reduced their feature engineering time from weeks to hours, while maintaining the high clinical standards required by healthcare providers.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -107,96 +169,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052678+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.928459+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.052681+00:00"
+        "timestamp": "2025-12-25T12:41:22.928462+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "76672596837b0c7bf1b6831588c235cb",
-      "title": "AI Factories, Physical AI, and Advances in Models, Agents, and Infrastructure That Shaped 2025",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/ai-factories-physical-ai-and-advances-in-models-agents-and-infrastructure-that-shaped-2025/",
-      "published_date": "2025-12-16T17:30:00+00:00",
-      "category": "Industry",
-      "description": "2025 was another milestone year for developers and researchers working with NVIDIA technologies. Progress in data center power and compute design, AI...",
-      "author": "Michelle Horton",
-      "content": "2025 was another milestone year for developers and researchers working with NVIDIA technologies. Progress in data center power and compute design, AI...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.99,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.055141+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.794,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-25T08:29:17.055144+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "669407127bcab28e7dfdad3fac354d5b",
-      "title": "Build a multimodal generative AI assistant for root cause diagnosis in predictive maintenance using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multimodal-generative-ai-assistant-for-root-cause-diagnosis-in-predictive-maintenance-using-amazon-bedrock/",
-      "published_date": "2025-12-22T18:21:28+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
-      "author": "Carla Lorente",
-      "content": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
+      "article_id": "a6e27c824c218e48cf62c06a4c0776eb",
+      "title": "Research: Cyber security vulnerabilities of operational technologies",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/cyber-security-vulnerabilities-of-operational-technologies",
+      "published_date": "2025-12-23T15:29:52+00:00",
+      "category": "Government",
+      "description": "This research details the cyber security vulnerabilities of Operational Technologies and the risks they pose.",
+      "author": "",
+      "content": "This research details the cyber security vulnerabilities of Operational Technologies and the risks they pose.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -234,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.053096+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.926030+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.053099+00:00"
+        "timestamp": "2025-12-25T12:41:22.926033+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ac4010490ad406f2590120aa7a3ea453",
-      "title": "Introducing Visa Intelligent Commerce on AWS: Enabling agentic commerce with Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-visa-intelligent-commerce-on-aws-enabling-agentic-commerce-with-amazon-bedrock-agentcore/",
-      "published_date": "2025-12-23T16:45:47+00:00",
+      "article_id": "fa738cf046f6ec593890acfa8476314b",
+      "title": "Evaluating chain-of-thought monitorability",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/evaluating-chain-of-thought-monitorability",
+      "published_date": "2025-12-18T12:00:00+00:00",
       "category": "Industry",
-      "description": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
-      "author": "Sangeetha Bharath, Seemal Zaman",
-      "content": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
+      "description": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
+      "author": "",
+      "content": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -296,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-25T08:29:17.052918+00:00"
+        "consensus_timestamp": "2025-12-25T12:41:22.926680+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-25T08:29:17.052920+00:00"
+        "timestamp": "2025-12-25T12:41:22.926684+00:00"
       },
       "article_type": "article"
     }
