@@ -1,22 +1,22 @@
 {
-  "updated": "2025-12-28T01:44:37.700705+00:00",
+  "updated": "2025-12-28T04:46:54.286264+00:00",
   "top_stories": [
     {
       "article_id": "ecd428aa0aea150f18ae0e98e0648d9c",
       "title": "NIH launches $50M Autism Data Science Initiative to unlock causes and improve outcomes",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-launches-fifty-million-autism-data-science-initiative-unlock-causes-improve-outcomes",
-      "published_date": "2025-12-28T01:41:11.221427+00:00",
+      "published_date": "2025-12-28T04:42:52.300742+00:00",
       "category": "Government",
       "description": "Funded projects will drive discoveries across biology, environment, and autism services.",
       "author": "",
       "content": "Funded projects will drive discoveries across biology, environment, and autism services.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.7,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.8,
-        "overall_score": 0.795,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,42 +44,104 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-28T01:44:37.672006+00:00"
+        "consensus_timestamp": "2025-12-28T04:46:54.257922+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2025-12-28T04:46:54.257926+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "0ee6e6651892362c3c30edad84c2ef02",
+      "title": "Transparency data: DSIT: senior officials’ business expenses and hospitality: July to September 2025",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/dsit-senior-officials-business-expenses-and-hospitality-july-to-september-2025",
+      "published_date": "2025-12-16T16:00:04+00:00",
+      "category": "Government",
+      "description": "Data on senior officials’ (SCS2+) business expenses, hospitality, and meetings with external individuals and organisations.",
+      "author": "",
+      "content": "Data on senior officials’ (SCS2+) business expenses, hospitality, and meetings with external individuals and organisations.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2025-12-28T04:46:54.258567+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-28T01:44:37.672011+00:00"
+        "timestamp": "2025-12-28T04:46:54.258571+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "669407127bcab28e7dfdad3fac354d5b",
-      "title": "Build a multimodal generative AI assistant for root cause diagnosis in predictive maintenance using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multimodal-generative-ai-assistant-for-root-cause-diagnosis-in-predictive-maintenance-using-amazon-bedrock/",
-      "published_date": "2025-12-22T18:21:28+00:00",
+      "article_id": "fa738cf046f6ec593890acfa8476314b",
+      "title": "Evaluating chain-of-thought monitorability",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/evaluating-chain-of-thought-monitorability",
+      "published_date": "2025-12-18T12:00:00+00:00",
       "category": "Industry",
-      "description": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
-      "author": "Carla Lorente",
-      "content": "In this post, we demonstrate how to implement a predictive maintenance solution using Foundation Models (FMs) on Amazon Bedrock, with a case study of Amazon's manufacturing equipment within their fulfillment centers. The solution is highly adaptable and can be customized for other industries, including oil and gas, logistics, manufacturing, and healthcare.",
+      "description": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
+      "author": "",
+      "content": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model’s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.98
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -107,103 +169,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-28T01:44:37.674313+00:00"
+        "consensus_timestamp": "2025-12-28T04:46:54.258808+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-28T01:44:37.674316+00:00"
+        "timestamp": "2025-12-28T04:46:54.258811+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "a4a26b0cd193b0923459a1e2662d8bc5",
-      "title": "Boost GPU Memory Performance with No Code Changes Using NVIDIA CUDA MPS",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/boost-gpu-memory-performance-with-no-code-changes-using-nvidia-cuda-mps/",
-      "published_date": "2025-12-16T17:00:00+00:00",
-      "category": "Industry",
-      "description": "NVIDIA CUDA developers have access to a wide range of tools and libraries that simplify development and deployment, enabling users to focus on the “what”...",
-      "author": "Sherwin Nassernia",
-      "content": "NVIDIA CUDA developers have access to a wide range of tools and libraries that simplify development and deployment, enabling users to focus on the “what”...",
+      "article_id": "4ea3c284ec11f1d9d30eeb4e665845f3",
+      "title": "Policy paper: DSIT cyber security newsletter - December 2025",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/dsit-cyber-security-newsletter-december-2025",
+      "published_date": "2025-12-18T16:39:17+00:00",
+      "category": "Government",
+      "description": "The December 2025 edition of the DSIT cyber security newsletter.",
+      "author": "",
+      "content": "The December 2025 edition of the DSIT cyber security newsletter.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.92,
-        "confidence": 0.96,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2025-12-28T01:44:37.676244+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.776,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2025-12-28T01:44:37.676247+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ac4010490ad406f2590120aa7a3ea453",
-      "title": "Introducing Visa Intelligent Commerce on AWS: Enabling agentic commerce with Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-visa-intelligent-commerce-on-aws-enabling-agentic-commerce-with-amazon-bedrock-agentcore/",
-      "published_date": "2025-12-23T16:45:47+00:00",
-      "category": "Industry",
-      "description": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
-      "author": "Sangeetha Bharath, Seemal Zaman",
-      "content": "In this post, we explore how AWS and Visa are partnering to enable agentic commerce through Visa Intelligent Commerce using Amazon Bedrock AgentCore. We demonstrate how autonomous AI agents can transform fragmented shopping and travel experiences into seamless, end-to-end workflows—from discovery and comparison to secure payment authorization—all driven by natural language.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -231,41 +231,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.8,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-28T01:44:37.674113+00:00"
+        "consensus_timestamp": "2025-12-28T04:46:54.258117+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-28T01:44:37.674116+00:00"
+        "timestamp": "2025-12-28T04:46:54.258120+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7e73bf1dfd6d428ee392052efd9fc44b",
-      "title": "Waymo is testing Gemini as an in-car AI assistant in its robotaxis",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2025/12/24/waymo-is-testing-gemini-as-an-in-car-ai-assistant-in-its-robotaxis/",
-      "published_date": "2025-12-24T16:27:55+00:00",
-      "category": "Industry",
-      "description": "Waymo is testing a Gemini-powered in-car AI assistant, per findings from a 1,200-line system prompt. The assistant can answer general knowledge questions, control certain in-cabin features, and more.",
-      "author": "Rebecca Bellan",
-      "content": "Waymo is testing a Gemini-powered in-car AI assistant, per findings from a 1,200-line system prompt. The assistant can answer general knowledge questions, control certain in-cabin features, and more.",
+      "article_id": "19fb56f4b42d4f5076322f5ff727a1f1",
+      "title": "Inaugural report pioneered by AI Security Institute gives clearest picture yet of capabilities of most advanced AI",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/inaugural-report-pioneered-by-ai-security-institute-gives-clearest-picture-yet-of-capabilities-of-most-advanced-ai",
+      "published_date": "2025-12-18T10:42:16+00:00",
+      "category": "Government",
+      "description": "The AI Security Institute's Frontier AI Trends Report, a public assessment of how the most advanced AI systems are evolving, draws on 2 years of testing AI capabilities in areas critical to innovation and security, including cyber, chemistry and biology.",
+      "author": "",
+      "content": "The AI Security Institute's Frontier AI Trends Report, a public assessment of how the most advanced AI systems are evolving, draws on 2 years of testing AI capabilities in areas critical to innovation and security, including cyber, chemistry and biology.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.85,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2025-12-28T01:44:37.675174+00:00"
+        "consensus_timestamp": "2025-12-28T04:46:54.258262+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2025-12-28T01:44:37.675177+00:00"
+        "timestamp": "2025-12-28T04:46:54.258264+00:00"
       },
       "article_type": "article"
     }
