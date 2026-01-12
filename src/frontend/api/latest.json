@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T04:51:38.998894+00:00",
+  "generated_at": "2026-01-12T08:33:03.827534+00:00",
   "articles": [
     {
       "article_id": "3e59b098b59f23ee588b8d29473b39fe",
@@ -15,24 +15,24 @@
         "relevance_score": 0.9,
         "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.85,
-        "overall_score": 0.8150000000000001,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,35 +44,159 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.973987+00:00"
+        "consensus_timestamp": "2026-01-12T08:33:03.801863+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-12T04:51:38.973990+00:00"
+        "timestamp": "2026-01-12T08:33:03.801865+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "8b5754d9dec6bd19547704455a561be2",
-      "title": "The unseen work of building reliable AI agents",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/the-unseen-work-of-building-reliable-ai-agents",
-      "published_date": "2026-01-07T17:04:36+00:00",
+      "article_id": "4719d3d90c78928e4480a5f0b10fdef4",
+      "title": "OpenAI and SoftBank Group partner with SB Energy",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/stargate-sb-energy-partnership",
+      "published_date": "2026-01-09T11:00:00+00:00",
       "category": "Industry",
-      "description": "\"Reinforcement learning gyms\" train agents on the many low-level tasks that they must chain together to execute customer requests.",
-      "author": "Jason Laster",
-      "content": "\"Reinforcement learning gyms\" train agents on the many low-level tasks that they must chain together to execute customer requests.",
+      "description": "OpenAI and SoftBank Group partner with SB Energy to develop multi-gigawatt AI data center campuses, including a 1.2 GW Texas facility supporting the Stargate initiative.",
+      "author": "",
+      "content": "OpenAI and SoftBank Group partner with SB Energy to develop multi-gigawatt AI data center campuses, including a 1.2 GW Texas facility supporting the Stargate initiative.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.799974+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.799977+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "dc37cf0e548d9613dc7c52d45d674444",
+      "title": "Detect and redact personally identifiable information using Amazon Bedrock Data Automation and Guardrails",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/detect-and-redact-personally-identifiable-information-using-amazon-bedrock-data-automation-and-guardrails/",
+      "published_date": "2026-01-08T16:14:27+00:00",
+      "category": "Industry",
+      "description": "This post shows an automated PII detection and redaction solution using Amazon Bedrock Data Automation and Amazon Bedrock Guardrails through a use case of processing text and image content in high volumes of incoming emails and attachments. The solution features a complete email processing workflow with a React-based user interface for authorized personnel to more securely manage and review redacted email communications and attachments. We walk through the step-by-step solution implementation...",
+      "author": "Himanshu Dixit",
+      "content": "This post shows an automated PII detection and redaction solution using Amazon Bedrock Data Automation and Amazon Bedrock Guardrails through a use case of processing text and image content in high volumes of incoming emails and attachments. The solution features a complete email processing workflow with a React-based user interface for authorized personnel to more securely manage and review redacted email communications and attachments. We walk through the step-by-step solution implementation...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.801543+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.801546+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d790476754e8483123d125ac5608708d",
+      "title": "TII Abu-Dhabi Released Falcon H1R-7B: A New Reasoning Model Outperforming Others in Math and Coding with only 7B Params with 256k Context Window",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/01/07/tii-abu-dhabi-released-falcon-h1r-7b-a-new-reasoning-model-outperforming-others-in-math-and-coding-with-only-7b-params-with-256k-context-window/",
+      "published_date": "2026-01-07T12:12:35+00:00",
+      "category": "Industry",
+      "description": "Technology Innovation Institute (TII), Abu Dhabi, has released Falcon-H1R-7B, a 7B parameter reasoning specialized model that matches or exceeds many 14B to 47B reasoning models in math, code and general benchmarks, while staying compact and efficient. It builds on Falcon H1 7B Base and is available on Hugging Face under the Falcon-H1R collection. Falcon-H1R-7B is […] The post TII Abu-Dhabi Released Falcon H1R-7B: A New Reasoning Model Outperforming Others in Math and Coding with only 7B Params...",
+      "author": "Asif Razzaq",
+      "content": "Technology Innovation Institute (TII), Abu Dhabi, has released Falcon-H1R-7B, a 7B parameter reasoning specialized model that matches or exceeds many 14B to 47B reasoning models in math, code and general benchmarks, while staying compact and efficient. It builds on Falcon H1 7B Base and is available on Hugging Face under the Falcon-H1R collection. Falcon-H1R-7B is […] The post TII Abu-Dhabi Released Falcon H1R-7B: A New Reasoning Model Outperforming Others in Math and Coding with only 7B Params...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -107,21 +231,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.975464+00:00"
+        "consensus_timestamp": "2026-01-12T08:33:03.805089+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-12T04:51:38.975468+00:00"
+        "timestamp": "2026-01-12T08:33:03.805092+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4723e7d9e5d97f37a55ec5731f0845c0",
+      "title": "Build an AI Catalog System That Delivers Localized, Interactive Product Experiences",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-an-ai-catalog-system-that-delivers-localized-interactive-product-experiences/",
+      "published_date": "2026-01-09T14:00:00+00:00",
+      "category": "Industry",
+      "description": "E-commerce catalogs often contain sparse product data, generic images, a basic title, and short description. This limits discoverability, engagement, and...",
+      "author": "Antonio Martinez",
+      "content": "E-commerce catalogs often contain sparse product data, generic images, a basic title, and short description. This limits discoverability, engagement, and...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.802781+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.802784+00:00"
       },
       "article_type": "article"
     },
@@ -141,6 +327,564 @@
         "novelty_score": 0.8,
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.803635+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.803638+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9ab846819a02ee3e5f6994208be0b5db",
+      "title": "Introducing ChatGPT Health",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-chatgpt-health",
+      "published_date": "2026-01-07T00:00:00+00:00",
+      "category": "Industry",
+      "description": "ChatGPT Health is a dedicated experience that securely connects your health data and apps, with privacy protections and a physician-informed design.",
+      "author": "",
+      "content": "ChatGPT Health is a dedicated experience that securely connects your health data and apps, with privacy protections and a physician-informed design.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.801092+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.801095+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "338b04b9a44efad7d5da339f1f116c3d",
+      "title": "Sentiment Analysis with Text and Audio Using AWS Generative AI Services: Approaches, Challenges, and Solutions",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/sentiment-analysis-with-text-and-audio-using-aws-generative-ai-services-approaches-challenges-and-solutions/",
+      "published_date": "2026-01-09T16:06:50+00:00",
+      "category": "Industry",
+      "description": "This post, developed through a strategic scientific partnership between AWS and the Instituto de Ciência e Tecnologia Itaú (ICTi), P&D hub maintained by Itaú Unibanco, the largest private bank in Latin America, explores the technical aspects of sentiment analysis for both text and audio. We present experiments comparing multiple machine learning (ML) models and services, discuss the trade-offs and pitfalls of each approach, and highlight how AWS services can be orchestrated to build robust,...",
+      "author": "Caique de Almeida, Guilherme Rinaldo, Paulo Finardi, Victor Costa Beraldo, Vinicius Caridá",
+      "content": "This post, developed through a strategic scientific partnership between AWS and the Instituto de Ciência e Tecnologia Itaú (ICTi), P&D hub maintained by Itaú Unibanco, the largest private bank in Latin America, explores the technical aspects of sentiment analysis for both text and audio. We present experiments comparing multiple machine learning (ML) models and services, discuss the trade-offs and pitfalls of each approach, and highlight how AWS services can be orchestrated to build robust,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.801400+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.801402+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a67a70cf8e81671ea064981266273c66",
+      "title": "Accelerating LLM and VLM Inference for Automotive and Robotics with NVIDIA TensorRT Edge-LLM",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/accelerating-llm-and-vlm-inference-for-automotive-and-robotics-with-nvidia-tensorrt-edge-llm/",
+      "published_date": "2026-01-08T17:28:49+00:00",
+      "category": "Industry",
+      "description": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
+      "author": "Lin Chai",
+      "content": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.85,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.802917+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.802920+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7ebdfa0b005679f94746a8d9688432da",
+      "title": "Migrate MLflow tracking servers to Amazon SageMaker AI with serverless MLflow",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/migrate-mlflow-tracking-servers-to-amazon-sagemaker-ai-with-serverless-mlflow/",
+      "published_date": "2025-12-29T17:29:27+00:00",
+      "category": "Industry",
+      "description": "This post shows you how to migrate your self-managed MLflow tracking server to a MLflow App – a serverless tracking server on SageMaker AI that automatically scales resources based on demand while removing server patching and storage management tasks at no cost. Learn how to use the MLflow Export Import tool to transfer your experiments, runs, models, and other MLflow resources, including instructions to validate your migration's success.",
+      "author": "Rahul Easwar",
+      "content": "This post shows you how to migrate your self-managed MLflow tracking server to a MLflow App – a serverless tracking server on SageMaker AI that automatically scales resources based on demand while removing server patching and storage management tasks at no cost. Learn how to use the MLflow Export Import tool to transfer your experiments, runs, models, and other MLflow resources, including instructions to validate your migration's success.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.85,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.801635+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.801638+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c61df7a9ecf671ba8815fcca68ffae33",
+      "title": "Lift Challenge now accepting applications",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2026/lift-challenge-now-accepting-applications",
+      "published_date": "2026-01-07T18:36:40+00:00",
+      "category": "Government",
+      "description": "$6.5M Challenge to solve one of vertical heavy lift aviation's toughest problems: the payload-to-weight ratio.",
+      "author": "outreach@darpa.mil",
+      "content": "$6.5M Challenge to solve one of vertical heavy lift aviation's toughest problems: the payload-to-weight ratio.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.799562+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.799566+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b27b44186302c01bd2595dd295c5825d",
+      "title": "Stronger laws for tech firms to ensure you don’t see unsolicited nudes",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/stronger-laws-for-tech-firms-to-ensure-you-dont-see-unsolicited-nudes",
+      "published_date": "2026-01-08T00:01:02+00:00",
+      "category": "Government",
+      "description": "Dating apps and social media platforms must now prevent cyberflashing, as it becomes a priority offence under the Online Safety Act.",
+      "author": "",
+      "content": "Dating apps and social media platforms must now prevent cyberflashing, as it becomes a priority offence under the Online Safety Act.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.799703+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.799706+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "14045f6c599d025cfa5044a7e991eb46",
+      "title": "Governments grapple with the flood of non-consensual nudity on X",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/01/08/governments-grapple-with-the-flood-of-non-consensual-nudity-on-x/",
+      "published_date": "2026-01-08T22:08:58+00:00",
+      "category": "Industry",
+      "description": "For the past two weeks, X has been flooded with AI-manipulated nude images, created by the Grok AI chatbot — and governments around the world are promising to take action.",
+      "author": "Russell Brandom",
+      "content": "For the past two weeks, X has been flooded with AI-manipulated nude images, created by the Grok AI chatbot — and governments around the world are promising to take action.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.802286+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.802289+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9645b09687af0e1a85505eb04102d0c3",
+      "title": "Elon Musk’s lawsuit against OpenAI will face a jury in March",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/01/08/elon-musks-lawsuit-against-openai-will-face-a-jury-in-march/",
+      "published_date": "2026-01-08T16:17:12+00:00",
+      "category": "Industry",
+      "description": "District Judge Yvonne Gonzalez Rogers said there was evidence suggesting OpenAI’s leaders made assurances that its original nonprofit structure would be maintained. The case will go to trial in March.",
+      "author": "Rebecca Bellan",
+      "content": "District Judge Yvonne Gonzalez Rogers said there was evidence suggesting OpenAI’s leaders made assurances that its original nonprofit structure would be maintained. The case will go to trial in March.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-12T08:33:03.802554+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-12T08:33:03.802557+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "54039cbc77176e7d70667d8f403f67fb",
+      "title": "A Coding Guide to Demonstrate Targeted Data Poisoning Attacks in Deep Learning by Label Flipping on CIFAR-10 with PyTorch",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/01/11/a-coding-guide-to-demonstrate-targeted-data-poisoning-attacks-in-deep-learning-by-label-flipping-on-cifar-10-with-pytorch/",
+      "published_date": "2026-01-11T15:47:06+00:00",
+      "category": "Industry",
+      "description": "In this tutorial, we demonstrate a realistic data poisoning attack by manipulating labels in the CIFAR-10 dataset and observing its impact on model behavior. We construct a clean and a poisoned training pipeline side by side, using a ResNet-style convolutional network to ensure stable, comparable learning dynamics. By selectively flipping a fraction of samples from […] The post A Coding Guide to Demonstrate Targeted Data Poisoning Attacks in Deep Learning by Label Flipping on CIFAR-10 with...",
+      "author": "Asif Razzaq",
+      "content": "In this tutorial, we demonstrate a realistic data poisoning attack by manipulating labels in the CIFAR-10 dataset and observing its impact on model behavior. We construct a clean and a poisoned training pipeline side by side, using a ResNet-style convolutional network to ensure stable, comparable learning dynamics. By selectively flipping a fraction of samples from […] The post A Coding Guide to Demonstrate Targeted Data Poisoning Attacks in Deep Learning by Label Flipping on CIFAR-10 with...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.8,
+        "overall_score": 0.83,
         "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
@@ -168,766 +912,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.92,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.975600+00:00"
+        "consensus_timestamp": "2026-01-12T08:33:03.804829+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.752,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-12T04:51:38.975603+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9422728086ab35b01f3dcaedff2ca0f3",
-      "title": "Bluetti unveils Charger 2 with dual engine-solar inputs at CES 2026",
-      "source": "dataconomy",
-      "url": "https://dataconomy.com/2026/01/08/bluetti-unveils-charger-2-with-dual-engine-solar-inputs-at-ces-2026/",
-      "published_date": "2026-01-08T14:11:34+00:00",
-      "category": "Industry",
-      "description": "Bluetti unveiled the Charger 2 at CES 2026 to enable simultaneous power draw from a vehicle’s engine and solar panels for charging portable batteries during off-roading trips. The original Charger addressed the need to top up batteries while driving by connecting to the vehicle’s alternator. Users could draw energy from the engine to ensure portable […]",
-      "author": "Kerem Gülen",
-      "content": "Bluetti unveiled the Charger 2 at CES 2026 to enable simultaneous power draw from a vehicle’s engine and solar panels for charging portable batteries during off-roading trips. The original Charger addressed the need to top up batteries while driving by connecting to the vehicle’s alternator. Users could draw energy from the engine to ensure portable […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.976675+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.976678+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9645b09687af0e1a85505eb04102d0c3",
-      "title": "Elon Musk’s lawsuit against OpenAI will face a jury in March",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/08/elon-musks-lawsuit-against-openai-will-face-a-jury-in-march/",
-      "published_date": "2026-01-08T16:17:12+00:00",
-      "category": "Industry",
-      "description": "District Judge Yvonne Gonzalez Rogers said there was evidence suggesting OpenAI’s leaders made assurances that its original nonprofit structure would be maintained. The case will go to trial in March.",
-      "author": "Rebecca Bellan",
-      "content": "District Judge Yvonne Gonzalez Rogers said there was evidence suggesting OpenAI’s leaders made assurances that its original nonprofit structure would be maintained. The case will go to trial in March.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.974601+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.974604+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a67a70cf8e81671ea064981266273c66",
-      "title": "Accelerating LLM and VLM Inference for Automotive and Robotics with NVIDIA TensorRT Edge-LLM",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/accelerating-llm-and-vlm-inference-for-automotive-and-robotics-with-nvidia-tensorrt-edge-llm/",
-      "published_date": "2026-01-08T17:28:49+00:00",
-      "category": "Industry",
-      "description": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
-      "author": "Lin Chai",
-      "content": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.885,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.974996+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.974999+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4719d3d90c78928e4480a5f0b10fdef4",
-      "title": "OpenAI and SoftBank Group partner with SB Energy",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/stargate-sb-energy-partnership",
-      "published_date": "2026-01-09T11:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI and SoftBank Group partner with SB Energy to develop multi-gigawatt AI data center campuses, including a 1.2 GW Texas facility supporting the Stargate initiative.",
-      "author": "",
-      "content": "OpenAI and SoftBank Group partner with SB Energy to develop multi-gigawatt AI data center campuses, including a 1.2 GW Texas facility supporting the Stargate initiative.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.972693+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.972696+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "14045f6c599d025cfa5044a7e991eb46",
-      "title": "Governments grapple with the flood of non-consensual nudity on X",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/08/governments-grapple-with-the-flood-of-non-consensual-nudity-on-x/",
-      "published_date": "2026-01-08T22:08:58+00:00",
-      "category": "Industry",
-      "description": "For the past two weeks, X has been flooded with AI-manipulated nude images, created by the Grok AI chatbot — and governments around the world are promising to take action.",
-      "author": "Russell Brandom",
-      "content": "For the past two weeks, X has been flooded with AI-manipulated nude images, created by the Grok AI chatbot — and governments around the world are promising to take action.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.974393+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.974396+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ade202475b966d7d3ee673b6abf01dc6",
-      "title": "Delivering Massive Performance Leaps for Mixture of Experts Inference on NVIDIA Blackwell",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/delivering-massive-performance-leaps-for-mixture-of-experts-inference-on-nvidia-blackwell/",
-      "published_date": "2026-01-08T19:43:16+00:00",
-      "category": "Industry",
-      "description": "As AI models continue to get smarter, people can rely on them for an expanding set of tasks. This leads users—from consumers to enterprises—to interact with...",
-      "author": "Ashraf Eassa",
-      "content": "As AI models continue to get smarter, people can rely on them for an expanding set of tasks. This leads users—from consumers to enterprises—to interact with...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.974868+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.974871+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "749ca13748010987782cca58768d91e7",
-      "title": "Multi-Agent Warehouse AI Command Layer Enables Operational Excellence and Supply Chain Intelligence",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/multi-agent-warehouse-ai-command-layer-enables-operational-excellence-and-supply-chain-intelligence/",
-      "published_date": "2026-01-09T14:00:00+00:00",
-      "category": "Industry",
-      "description": "Warehouses have never been more automated, more data-rich, or more operationally demanding than they are now—yet they still rely on systems that can’t keep...",
-      "author": "Tarik Hammadou",
-      "content": "Warehouses have never been more automated, more data-rich, or more operationally demanding than they are now—yet they still rely on systems that can’t keep...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.974779+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.974782+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "578f370498959293f96582f405a545d2",
-      "title": "Accelerating LLM inference with post-training weight and activation using AWQ and GPTQ on Amazon SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-llm-inference-with-post-training-weight-and-activation-using-awq-and-gptq-on-amazon-sagemaker-ai/",
-      "published_date": "2026-01-09T18:09:22+00:00",
-      "category": "Industry",
-      "description": "Quantized models can be seamlessly deployed on Amazon SageMaker AI using a few lines of code. In this post, we explore why quantization matters—how it enables lower-cost inference, supports deployment on resource-constrained hardware, and reduces both the financial and environmental impact of modern LLMs, while preserving most of their original performance. We also take a deep dive into the principles behind PTQ and demonstrate how to quantize the model of your choice and deploy it on Amazon...",
-      "author": "Pranav Murthy",
-      "content": "Quantized models can be seamlessly deployed on Amazon SageMaker AI using a few lines of code. In this post, we explore why quantization matters—how it enables lower-cost inference, supports deployment on resource-constrained hardware, and reduces both the financial and environmental impact of modern LLMs, while preserving most of their original performance. We also take a deep dive into the principles behind PTQ and demonstrate how to quantize the model of your choice and deploy it on Amazon...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.973432+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.973437+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dc37cf0e548d9613dc7c52d45d674444",
-      "title": "Detect and redact personally identifiable information using Amazon Bedrock Data Automation and Guardrails",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/detect-and-redact-personally-identifiable-information-using-amazon-bedrock-data-automation-and-guardrails/",
-      "published_date": "2026-01-08T16:14:27+00:00",
-      "category": "Industry",
-      "description": "This post shows an automated PII detection and redaction solution using Amazon Bedrock Data Automation and Amazon Bedrock Guardrails through a use case of processing text and image content in high volumes of incoming emails and attachments. The solution features a complete email processing workflow with a React-based user interface for authorized personnel to more securely manage and review redacted email communications and attachments. We walk through the step-by-step solution implementation...",
-      "author": "Himanshu Dixit",
-      "content": "This post shows an automated PII detection and redaction solution using Amazon Bedrock Data Automation and Amazon Bedrock Guardrails through a use case of processing text and image content in high volumes of incoming emails and attachments. The solution features a complete email processing workflow with a React-based user interface for authorized personnel to more securely manage and review redacted email communications and attachments. We walk through the step-by-step solution implementation...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8525000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.973672+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.973674+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "56728676f51ac04bd1c743bdfd2bfb6a",
-      "title": "Architecting TrueLook’s AI-powered construction safety system on Amazon SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/architecting-truelooks-ai-powered-construction-safety-system-on-amazon-sagemaker-ai/",
-      "published_date": "2026-01-09T16:03:36+00:00",
-      "category": "Industry",
-      "description": "This post provides a detailed architectural overview of how TrueLook built its AI-powered safety monitoring system using SageMaker AI, highlighting key technical decisions, pipeline design patterns, and MLOps best practices. You will gain valuable insights into designing scalable computer vision solutions on AWS, particularly around model training workflows, automated pipeline creation, and production deployment strategies for real-time inference.",
-      "author": "Pranav Murthy",
-      "content": "This post provides a detailed architectural overview of how TrueLook built its AI-powered safety monitoring system using SageMaker AI, highlighting key technical decisions, pipeline design patterns, and MLOps best practices. You will gain valuable insights into designing scalable computer vision solutions on AWS, particularly around model training workflows, automated pipeline creation, and production deployment strategies for real-time inference.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8350000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.973579+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.973582+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e47f4799815c9b7e44c04f416c1fb3a3",
-      "title": "Build an AI-powered website assistant with Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-website-assistant-with-amazon-bedrock/",
-      "published_date": "2025-12-29T16:42:50+00:00",
-      "category": "Industry",
-      "description": "This post demonstrates how to solve this challenge by building an AI-powered website assistant using Amazon Bedrock and Amazon Bedrock Knowledge Bases.",
-      "author": "Shashank Jain",
-      "content": "This post demonstrates how to solve this challenge by building an AI-powered website assistant using Amazon Bedrock and Amazon Bedrock Knowledge Bases.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8350000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.973809+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.973811+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4fcc614d156b9721ecf3fd81c134cb44",
-      "title": "Building Autonomous Vehicles That Reason with NVIDIA Alpamayo",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-autonomous-vehicles-that-reason-with-nvidia-alpamayo/",
-      "published_date": "2026-01-05T21:49:24+00:00",
-      "category": "Industry",
-      "description": "Autonomous vehicle (AV) research is undergoing a rapid shift. The field is being reshaped by the emergence of reasoning-based vision–language–action (VLA)...",
-      "author": "Marco Pavone",
-      "content": "Autonomous vehicle (AV) research is undergoing a rapid shift. The field is being reshaped by the emergence of reasoning-based vision–language–action (VLA)...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-12T04:51:38.975309+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-12T04:51:38.975312+00:00"
+        "timestamp": "2026-01-12T08:33:03.804832+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 132.98510098457336,
+    "processing_time": 146.79073905944824,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 102,
+      "total_processed": 115,
       "candidates": {
         "headlines": 3,
-        "articles": 99,
+        "articles": 112,
         "research_papers": 0
       },
       "selected": {
