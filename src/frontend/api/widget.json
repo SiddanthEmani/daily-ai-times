@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-16T01:30:50.623622+00:00",
+  "updated": "2026-01-16T04:42:17.693760+00:00",
   "top_stories": [
     {
       "article_id": "cd19e61d6980265216bb75c780fca77d",
@@ -12,12 +12,74 @@
       "author": "Rebecca Szkutak",
       "content": "The U.S. struck a trade deal with Taiwan as the country looks to help boost domestic semiconductor manufacturing.",
       "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-16T04:42:17.656788+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-16T04:42:17.656791+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "ade202475b966d7d3ee673b6abf01dc6",
+      "title": "Delivering Massive Performance Leaps for Mixture of Experts Inference on NVIDIA Blackwell",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/delivering-massive-performance-leaps-for-mixture-of-experts-inference-on-nvidia-blackwell/",
+      "published_date": "2026-01-08T19:43:16+00:00",
+      "category": "Industry",
+      "description": "As AI models continue to get smarter, people can rely on them for an expanding set of tasks. This leads users—from consumers to enterprises—to interact with...",
+      "author": "Ashraf Eassa",
+      "content": "As AI models continue to get smarter, people can rely on them for an expanding set of tasks. This leads users—from consumers to enterprises—to interact with...",
+      "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-16T01:30:50.583473+00:00"
+        "consensus_timestamp": "2026-01-16T04:42:17.657936+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,27 +121,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-16T01:30:50.583475+00:00"
+        "timestamp": "2026-01-16T04:42:17.657939+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "09d1d43a7738f2ae3d3ce1671a87ee57",
-      "title": "How Tolan builds voice-first AI with GPT-5.1",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/tolan",
-      "published_date": "2026-01-07T10:00:00+00:00",
+      "article_id": "0475c1175f029c2f6a6aebd36a177a50",
+      "title": "Microsoft’s ‘Good Neighbour’ Data Centre Pledge Signals New Reality for AI Infra",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/global-tech/microsofts-good-neighbour-data-centre-pledge-signals-new-reality-for-ai-infra/",
+      "published_date": "2026-01-16T03:40:09+00:00",
       "category": "Industry",
-      "description": "Tolan built a voice-first AI companion with GPT-5.1, combining low-latency responses, real-time context reconstruction, and memory-driven personalities for natural conversations.",
-      "author": "",
-      "content": "Tolan built a voice-first AI companion with GPT-5.1, combining low-latency responses, real-time context reconstruction, and memory-driven personalities for natural conversations.",
+      "description": "Amid backlash over power and water use, Microsoft is promising to make data centres pay their own way. The post Microsoft’s ‘Good Neighbour’ Data Centre Pledge Signals New Reality for AI Infra appeared first on Analytics India Magazine.",
+      "author": "Pallavi Chakravorty",
+      "content": "Amid backlash over power and water use, Microsoft is promising to make data centres pay their own way. The post Microsoft’s ‘Good Neighbour’ Data Centre Pledge Signals New Reality for AI Infra appeared first on Analytics India Magazine.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
+        "novelty_score": 0.7,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -106,42 +168,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-16T01:30:50.581584+00:00"
+        "consensus_timestamp": "2026-01-16T04:42:17.659040+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-16T01:30:50.581587+00:00"
+        "timestamp": "2026-01-16T04:42:17.659043+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9da7403de9178a36505ebd7eed9d2c61",
-      "title": "Secretary of State statement to the House of Commons: 12 January 2026",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/speeches/secretary-of-state-statement-to-the-house-of-commons-12-january-2026",
-      "published_date": "2026-01-12T18:04:08+00:00",
-      "category": "Government",
-      "description": "DSIT Secretary of State statement after concerns over Grok AI.",
-      "author": "",
-      "content": "DSIT Secretary of State statement after concerns over Grok AI.",
+      "article_id": "5409d5ba53bb4cc7a0f3e34e522738a5",
+      "title": "Transform AI development with new Amazon SageMaker AI model customization and large-scale training capabilities",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/transform-ai-development-with-new-amazon-sagemaker-ai-model-customization-and-large-scale-training-capabilities/",
+      "published_date": "2026-01-14T21:13:42+00:00",
+      "category": "Industry",
+      "description": "This post explores how new serverless model customization capabilities, elastic training, checkpointless training, and serverless MLflow work together to accelerate your AI development from months to days.",
+      "author": "Ankur Mehrotra",
+      "content": "This post explores how new serverless model customization capabilities, elastic training, checkpointless training, and serverless MLflow work together to accelerate your AI development from months to days.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.875,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-16T01:30:50.580818+00:00"
+        "consensus_timestamp": "2026-01-16T04:42:17.655381+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,89 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-16T01:30:50.580825+00:00"
+        "timestamp": "2026-01-16T04:42:17.655384+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fb519e485b581bfd867a208941c79dcb",
-      "title": "How the Amazon AMET Payments team accelerates test case generation with Strands Agents",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-the-amazon-amet-payments-team-accelerates-test-case-generation-with-strands-agents/",
-      "published_date": "2026-01-15T15:55:35+00:00",
-      "category": "Industry",
-      "description": "In this post, we explain how we overcame the limitations of single-agent AI systems through a human-centric approach, implemented structured outputs to significantly reduce hallucinations and built a scalable solution now positioned for expansion across the AMET QA team and later across other QA teams in International Emerging Stores and Payments (IESP) Org.",
-      "author": "Jayashree R",
-      "content": "In this post, we explain how we overcame the limitations of single-agent AI systems through a human-centric approach, implemented structured outputs to significantly reduce hallucinations and built a scalable solution now positioned for expansion across the AMET QA team and later across other QA teams in International Emerging Stores and Payments (IESP) Org.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-16T01:30:50.581836+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-16T01:30:50.581839+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "058fc86077243cd5d746ee140da81b1c",
-      "title": "NVIDIA DLSS 4.5 Delivers Super Resolution Upgrades and New Dynamic Multi Frame Generation",
+      "article_id": "a67a70cf8e81671ea064981266273c66",
+      "title": "Accelerating LLM and VLM Inference for Automotive and Robotics with NVIDIA TensorRT Edge-LLM",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-dlss-4-5-delivers-super-resolution-upgrades-and-new-dynamic-multi-frame-generation/",
-      "published_date": "2026-01-14T14:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/accelerating-llm-and-vlm-inference-for-automotive-and-robotics-with-nvidia-tensorrt-edge-llm/",
+      "published_date": "2026-01-08T17:28:49+00:00",
       "category": "Industry",
-      "description": "NVIDIA DLSS 4 with Multi Frame Generation has become the fastest-adopted NVIDIA gaming technology ever. Over 250 games and apps use it to make real-time path...",
-      "author": "Ike Nnoli",
-      "content": "NVIDIA DLSS 4 with Multi Frame Generation has become the fastest-adopted NVIDIA gaming technology ever. Over 250 games and apps use it to make real-time path...",
+      "description": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
+      "author": "Lin Chai",
+      "content": "Large language models (LLMs) and multimodal reasoning systems are rapidly expanding beyond the data center. Automotive and robotics developers increasingly want...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.96
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -293,21 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-16T01:30:50.584342+00:00"
+        "consensus_timestamp": "2026-01-16T04:42:17.658028+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-16T01:30:50.584344+00:00"
+        "timestamp": "2026-01-16T04:42:17.658031+00:00"
       },
       "article_type": "article"
     }
