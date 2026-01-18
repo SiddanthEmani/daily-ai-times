@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-18T04:44:29.804474+00:00",
+  "updated": "2026-01-18T08:27:41.806995+00:00",
   "top_stories": [
     {
       "article_id": "895737eb65079da4df34d61f0b65f016",
@@ -12,12 +12,74 @@
       "author": "Theresa Loconsolo",
       "content": "AI companies are clustering around healthcare and fast. In just the past week, OpenAI bought health startup Torch, Anthropic launched Claude for healthcare, and Sam Altman-backed MergeLabs closed a $250 million seed round at an $850 million valuation. The money and products are pouring into health and voice AI, but so are concerns about hallucination risks, inaccurate medical information, and […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-18T08:27:41.778997+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-18T08:27:41.779000+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "338b04b9a44efad7d5da339f1f116c3d",
+      "title": "Sentiment Analysis with Text and Audio Using AWS Generative AI Services: Approaches, Challenges, and Solutions",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/sentiment-analysis-with-text-and-audio-using-aws-generative-ai-services-approaches-challenges-and-solutions/",
+      "published_date": "2026-01-09T16:06:50+00:00",
+      "category": "Industry",
+      "description": "This post, developed through a strategic scientific partnership between AWS and the Instituto de Ciência e Tecnologia Itaú (ICTi), P&D hub maintained by Itaú Unibanco, the largest private bank in Latin America, explores the technical aspects of sentiment analysis for both text and audio. We present experiments comparing multiple machine learning (ML) models and services, discuss the trade-offs and pitfalls of each approach, and highlight how AWS services can be orchestrated to build robust,...",
+      "author": "Caique de Almeida, Guilherme Rinaldo, Paulo Finardi, Victor Costa Beraldo, Vinicius Caridá",
+      "content": "This post, developed through a strategic scientific partnership between AWS and the Instituto de Ciência e Tecnologia Itaú (ICTi), P&D hub maintained by Itaú Unibanco, the largest private bank in Latin America, explores the technical aspects of sentiment analysis for both text and audio. We present experiments comparing multiple machine learning (ML) models and services, discuss the trade-offs and pitfalls of each approach, and highlight how AWS services can be orchestrated to build robust,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.8
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-18T04:44:29.774269+00:00"
+        "consensus_timestamp": "2026-01-18T08:27:41.777819+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,26 +121,150 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-18T04:44:29.774273+00:00"
+        "timestamp": "2026-01-18T08:27:41.777822+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "994955199172c03bb907692fb3638d78",
-      "title": "NeuralGCM harnesses AI to better simulate long-range global precipitation",
-      "source": "google_research_blog",
-      "url": "https://research.google/blog/neuralgcm-harnesses-ai-to-better-simulate-long-range-global-precipitation/",
-      "published_date": "2026-01-12T17:52:00+00:00",
-      "category": "Industry",
-      "description": "Climate & Sustainability",
+      "article_id": "862e3535ff56dba1ed67460073ab3cdc",
+      "title": "Technology Secretary statement on xAI's Grok image generation and editing tool",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/technology-secretary-statement-on-xais-grok-image-generation-and-editing-tool",
+      "published_date": "2026-01-09T16:50:51+00:00",
+      "category": "Government",
+      "description": "Technology Secretary Liz Kendall calls for swift action after reports xAI's Grok tool continues to allow generation of intimate deepfake images.",
       "author": "",
-      "content": "Climate & Sustainability",
+      "content": "Technology Secretary Liz Kendall calls for swift action after reports xAI's Grok tool continues to allow generation of intimate deepfake images.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.99,
-        "overall_score": 0.9205000000000001,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.99
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-18T08:27:41.775959+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-18T08:27:41.775963+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "07f65320a8b27deded23a9fcef3c5f7e",
+      "title": "Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/",
+      "published_date": "2026-01-05T23:00:00+00:00",
+      "category": "Industry",
+      "description": "CES 2026 showcases the arrival of the NVIDIA Rubin Platform, along with Azure’s proven readiness for deployment. The post Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments appeared first on Microsoft Azure Blog.",
+      "author": "Rani Borkar",
+      "content": "CES 2026 showcases the arrival of the NVIDIA Rubin Platform, along with Azure’s proven readiness for deployment. The post Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments appeared first on Microsoft Azure Blog.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-18T08:27:41.777036+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-18T08:27:41.777039+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "cdf6b6f32b070a5d173a411cc03a29c4",
+      "title": "NVIDIA DLSS 4.5, Path Tracing and G-SYNC Pulsar Supercharge Gameplay With Enhanced Performance and Visuals",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/dlss-path-tracing-g-sync-pulsar-ces-2026/",
+      "published_date": "2026-01-06T05:30:09+00:00",
+      "category": "Industry",
+      "description": "At the CES trade show, NVIDIA today announced DLSS 4.5, which introduces Dynamic Multi Frame Generation, a new 6X Multi Frame Generation mode and a second-generation transformer model for DLSS Super Resolution, so gamers can experience the latest and greatest titles with enhanced performance and visuals. Over 250 games and apps now support NVIDIA DLSS Read Article",
+      "author": "Jason Paul",
+      "content": "At the CES trade show, NVIDIA today announced DLSS 4.5, which introduces Dynamic Multi Frame Generation, a new 6X Multi Frame Generation mode and a second-generation transformer model for DLSS Super Resolution, so gamers can experience the latest and greatest titles with enhanced performance and visuals. Over 250 games and apps now support NVIDIA DLSS Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-18T04:44:29.775907+00:00"
+        "consensus_timestamp": "2026-01-18T08:27:41.778493+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,193 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-18T04:44:29.775910+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e3b8e12140fee576082da30c8258b815",
-      "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
-      "published_date": "2026-01-15T16:00:00+00:00",
-      "category": "Industry",
-      "description": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
-      "author": "Chris Alexiuk",
-      "content": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-18T04:44:29.774835+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-18T04:44:29.774837+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a85547b3f872ef2cd3bae4a30058b4fb",
-      "title": "Introducing ChatGPT Go, now available worldwide",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-chatgpt-go",
-      "published_date": "2026-01-16T00:00:00+00:00",
-      "category": "Industry",
-      "description": "ChatGPT Go is now available worldwide, offering expanded access to GPT-5.2 Instant, higher usage limits, and longer memory—making advanced AI more affordable globally.",
-      "author": "",
-      "content": "ChatGPT Go is now available worldwide, offering expanded access to GPT-5.2 Instant, higher usage limits, and longer memory—making advanced AI more affordable globally.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-18T04:44:29.772481+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-18T04:44:29.772485+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cd19e61d6980265216bb75c780fca77d",
-      "title": "Taiwan to invest $250B in US semiconductor manufacturing",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/15/taiwan-to-invest-250b-in-us-semiconductor-manufacturing/",
-      "published_date": "2026-01-15T20:52:44+00:00",
-      "category": "Industry",
-      "description": "The U.S. struck a trade deal with Taiwan as the country looks to help boost domestic semiconductor manufacturing.",
-      "author": "Rebecca Szkutak",
-      "content": "The U.S. struck a trade deal with Taiwan as the country looks to help boost domestic semiconductor manufacturing.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.9124999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-18T04:44:29.774545+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-18T04:44:29.774548+00:00"
+        "timestamp": "2026-01-18T08:27:41.778499+00:00"
       },
       "article_type": "article"
     }
