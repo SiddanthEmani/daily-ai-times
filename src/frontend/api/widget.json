@@ -1,22 +1,22 @@
 {
-  "updated": "2026-01-24T01:27:47.469343+00:00",
+  "updated": "2026-01-24T04:38:14.700395+00:00",
   "top_stories": [
     {
-      "article_id": "5a7762aa5df4d32ec7ba99b101750f2b",
-      "title": "From invisibility cloaks to AI chips: Neurophos raises $110M to build tiny optical processors for inferencing",
+      "article_id": "85e18b1f10ef02a924d705c85d9ba5a7",
+      "title": "Voice AI engine and OpenAI partner LiveKit hits $1B valuation",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/22/from-invisibility-cloaks-to-ai-chips-neurophos-raises-110m-to-build-tiny-optical-processors-for-inferencing/",
-      "published_date": "2026-01-22T15:00:52+00:00",
+      "url": "https://techcrunch.com/2026/01/22/voice-ai-engine-and-openai-partner-livekit-hits-1b-valuation/",
+      "published_date": "2026-01-22T22:44:29+00:00",
       "category": "Industry",
-      "description": "Neurophos is taking a crack at solving the AI industry's power efficiency problem with an optical chip that uses a composite material to do the math required in AI inferencing tasks.",
-      "author": "Ram Iyer",
-      "content": "Neurophos is taking a crack at solving the AI industry's power efficiency problem with an optical chip that uses a composite material to do the math required in AI inferencing tasks.",
+      "description": "The five-year-old-startup powers OpenAI’s ChatGPT voice mode and raised a $100 million round led by Index Ventures.",
+      "author": "Marina Temkin",
+      "content": "The five-year-old-startup powers OpenAI’s ChatGPT voice mode and raised a $100 million round led by Index Ventures.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,146 +44,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-24T01:27:47.430553+00:00"
+        "consensus_timestamp": "2026-01-24T04:38:14.661418+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-24T04:38:14.661421+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "b54835af868cb30c89fb93d721b4ffaf",
+      "title": "Fine-Tune LLMs on Your Mac: DagsHub + Apple MLX-LM Integration",
+      "source": "dagshub_blog",
+      "url": "https://dagshub.com/blog/apple-mlx-integration/",
+      "published_date": "2026-01-21T07:47:41+00:00",
+      "category": "Industry",
+      "description": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
+      "author": "Dean Pleban",
+      "content": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-24T04:38:14.663578+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-24T01:27:47.430556+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "2eee6d0bc93c872e3d74698d874ce314",
-      "title": "‘Largest Infrastructure Buildout in Human History’: Jensen Huang on AI’s ‘Five-Layer Cake’ at Davos",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/davos-wef-blackrock-ceo-larry-fink-jensen-huang/",
-      "published_date": "2026-01-21T12:50:16+00:00",
-      "category": "Industry",
-      "description": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
-      "author": "Brian Caulfield",
-      "content": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.925,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-24T01:27:47.429663+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-24T01:27:47.429665+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cd3f63b3e2a53971f620189fe3ebeb70",
-      "title": "Cisco and OpenAI redefine enterprise engineering with AI agents",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/cisco",
-      "published_date": "2026-01-20T11:00:00+00:00",
-      "category": "Industry",
-      "description": "Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.",
-      "author": "",
-      "content": "Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-24T01:27:47.427934+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-24T01:27:47.427937+00:00"
+        "timestamp": "2026-01-24T04:38:14.663580+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-24T01:27:47.428874+00:00"
+        "consensus_timestamp": "2026-01-24T04:38:14.660202+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +183,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-24T01:27:47.428877+00:00"
+        "timestamp": "2026-01-24T04:38:14.660204+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f891f1e41c5b3dea5825930123fe4b43",
-      "title": "Guidance: Software Security Code of Practice",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/software-security-code-of-practice",
-      "published_date": "2026-01-15T12:56:16+00:00",
-      "category": "Government",
-      "description": "This Code of Practice sets out expectations for the security and resilience of software.",
-      "author": "",
-      "content": "This Code of Practice sets out expectations for the security and resilience of software.",
+      "article_id": "d3cf8c47e6a83e2bacd014e9d51684e9",
+      "title": "Scaling NVFP4 Inference for FLUX.2 on NVIDIA Blackwell Data Center GPUs",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-nvfp4-inference-for-flux-2-on-nvidia-blackwell-data-center-gpus/",
+      "published_date": "2026-01-22T19:21:07+00:00",
+      "category": "Industry",
+      "description": "In 2025, NVIDIA partnered with Black Forest Labs (BFL) to optimize the FLUX.1 text-to-image model series, unlocking FP4 image generation performance on NVIDIA...",
+      "author": "Sandro Cavallari",
+      "content": "In 2025, NVIDIA partnered with Black Forest Labs (BFL) to optimize the FLUX.1 text-to-image model series, unlocking FP4 image generation performance on NVIDIA...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8875000000000001,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-24T04:38:14.661900+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-24T04:38:14.661902+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ef2aa56f6732daf44985a62b3e246b1e",
+      "title": "Customizing multiturn AI agents with reinforcement learning",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/customizing-multiturn-ai-agents-with-reinforcement-learning",
+      "published_date": "2026-01-13T21:50:01+00:00",
+      "category": "Industry",
+      "description": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
+      "author": "Shreyas Subramanian",
+      "content": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -296,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-24T01:27:47.427025+00:00"
+        "consensus_timestamp": "2026-01-24T04:38:14.662393+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-24T01:27:47.427028+00:00"
+        "timestamp": "2026-01-24T04:38:14.662396+00:00"
       },
       "article_type": "article"
     }
