@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T04:55:01.304672+00:00",
+  "generated_at": "2026-01-25T08:28:15.802289+00:00",
   "articles": [
     {
       "article_id": "517ab2283b14210de1c3e7b878960efa",
@@ -15,8 +15,8 @@
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +48,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.275687+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.773116+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +59,71 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.275692+00:00"
+        "timestamp": "2026-01-25T08:28:15.773120+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "0f6fcfee18ecfc8606c645d97b010d8b",
+      "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/scaling-postgresql",
+      "published_date": "2026-01-22T12:00:00+00:00",
+      "category": "Industry",
+      "description": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
+      "author": "",
+      "content": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.769172+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.769175+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "ed3c5b9599921af81c06d85e47ed97ea",
@@ -107,21 +169,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.273535+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.770596+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.273537+00:00"
+        "timestamp": "2026-01-25T08:28:15.770599+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ef2aa56f6732daf44985a62b3e246b1e",
+      "title": "Customizing multiturn AI agents with reinforcement learning",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/customizing-multiturn-ai-agents-with-reinforcement-learning",
+      "published_date": "2026-01-13T21:50:01+00:00",
+      "category": "Industry",
+      "description": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
+      "author": "Shreyas Subramanian",
+      "content": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.772948+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.772951+00:00"
       },
       "article_type": "article"
     },
@@ -168,221 +292,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.274733+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.772040+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.274736+00:00"
+        "timestamp": "2026-01-25T08:28:15.772043+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ef2aa56f6732daf44985a62b3e246b1e",
-      "title": "Customizing multiturn AI agents with reinforcement learning",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/customizing-multiturn-ai-agents-with-reinforcement-learning",
-      "published_date": "2026-01-13T21:50:01+00:00",
-      "category": "Industry",
-      "description": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
-      "author": "Shreyas Subramanian",
-      "content": "Leveraging existing environment simulators and reward functions based on verifiable ground truth boosts task success rate, even with small models and small training datasets.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.275549+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.275551+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0e9317520cf19db6afb7dcd41b9bbb64",
-      "title": "Safeguard generative AI applications with Amazon Bedrock Guardrails",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/safeguard-generative-ai-applications-with-amazon-bedrock-guardrails/",
-      "published_date": "2026-01-15T15:50:54+00:00",
-      "category": "Industry",
-      "description": "In this post, we demonstrate how you can address these challenges by adding centralized safeguards to a custom multi-provider generative AI gateway using Amazon Bedrock Guardrails.",
-      "author": "Hasan Shojaei",
-      "content": "In this post, we demonstrate how you can address these challenges by adding centralized safeguards to a custom multi-provider generative AI gateway using Amazon Bedrock Guardrails.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.273879+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.273882+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e3b8e12140fee576082da30c8258b815",
-      "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
-      "published_date": "2026-01-15T16:00:00+00:00",
-      "category": "Industry",
-      "description": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
-      "author": "Chris Alexiuk",
-      "content": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.275141+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.275144+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2d9736369b0b218549b56bb3c0c0eb5e",
-      "title": "CareCloud’s Wellsoft Ranked #1 EHR by Black Book 2026 for Emergency Medicine",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/careclouds-wellsoft-ranked-1-ehr-by-black-book-2026-for-emergency-medicine/",
-      "published_date": "2026-01-23T11:00:00+00:00",
-      "category": "Industry",
-      "description": "CareCloud, Inc. (Nasdaq: CCLD, CCLDO) (“CareCloud” or the “Company”), a leader in healthcare technology and AI-powered solutions, today announced that Black Book Research has recognized the Company’s Wellsoft Emergency Department Information System (“EDIS”) in its 2026 Emergency Medicine specialty ranking as the top-rated EHR for Emergency Medicine. The recognition highlights... The post CareCloud’s Wellsoft Ranked #1 EHR by Black Book 2026 for Emergency Medicine first appeared on AI-Tech Park.",
-      "author": "GlobeNewswire",
-      "content": "CareCloud, Inc. (Nasdaq: CCLD, CCLDO) (“CareCloud” or the “Company”), a leader in healthcare technology and AI-powered solutions, today announced that Black Book Research has recognized the Company’s Wellsoft Emergency Department Information System (“EDIS”) in its 2026 Emergency Medicine specialty ranking as the top-rated EHR for Emergency Medicine. The recognition highlights... The post CareCloud’s Wellsoft Ranked #1 EHR by Black Book 2026 for Emergency Medicine first appeared on AI-Tech Park.",
+      "article_id": "3ce0660cc2636b877f6d07f79ddf4799",
+      "title": "Researchers achieve the first minimally invasive coronary artery bypass",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/researchers-achieve-first-minimally-invasive-coronary-artery-bypass",
+      "published_date": "2026-01-25T08:24:44.149225+00:00",
+      "category": "Government",
+      "description": "For high-risk patients, the method could offer a safer alternative to open-heart surgery.",
+      "author": "",
+      "content": "For high-risk patients, the method could offer a safer alternative to open-heart surgery.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -420,7 +358,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.275877+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.768273+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,7 +369,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.275882+00:00"
+        "timestamp": "2026-01-25T08:28:15.768277+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a3f852e2d1bfe0aca8d650cfeef8d247",
+      "title": "Certification scheme for the UK digital identity and attributes trust framework",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/guidance/certification-scheme-for-the-uk-digital-identity-and-attributes-trust-framework",
+      "published_date": "2026-01-12T11:36:06+00:00",
+      "category": "Government",
+      "description": "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital identity and attributes trust framework.",
+      "author": "",
+      "content": "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital identity and attributes trust framework.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.769076+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.769079+00:00"
       },
       "article_type": "article"
     },
@@ -478,208 +478,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.272707+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.272710+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4174e5006747da03178b1ad7a815edaf",
-      "title": "D4RT: Teaching AI to see the world in four dimensions",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions/",
-      "published_date": "2026-01-16T10:39:00+00:00",
-      "category": "Industry",
-      "description": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
-      "author": "",
-      "content": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.95,
-        "impact_score": 0.8,
-        "overall_score": 0.88,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.275455+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.275458+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f891f1e41c5b3dea5825930123fe4b43",
-      "title": "Guidance: Software Security Code of Practice",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/software-security-code-of-practice",
-      "published_date": "2026-01-15T12:56:16+00:00",
-      "category": "Government",
-      "description": "This Code of Practice sets out expectations for the security and resilience of software.",
-      "author": "",
-      "content": "This Code of Practice sets out expectations for the security and resilience of software.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.271827+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.769835+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.271832+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0f6fcfee18ecfc8606c645d97b010d8b",
-      "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/scaling-postgresql",
-      "published_date": "2026-01-22T12:00:00+00:00",
-      "category": "Industry",
-      "description": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
-      "author": "",
-      "content": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.272135+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-25T04:55:01.272138+00:00"
+        "timestamp": "2026-01-25T08:28:15.769840+00:00"
       },
       "article_type": "article"
     },
@@ -727,21 +541,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.272371+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.769464+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.272374+00:00"
+        "timestamp": "2026-01-25T08:28:15.769467+00:00"
       },
       "article_type": "article"
     },
@@ -792,7 +606,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.272518+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.769610+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -803,27 +617,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.272521+00:00"
+        "timestamp": "2026-01-25T08:28:15.769613+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "a3f852e2d1bfe0aca8d650cfeef8d247",
-      "title": "Certification scheme for the UK digital identity and attributes trust framework",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/guidance/certification-scheme-for-the-uk-digital-identity-and-attributes-trust-framework",
-      "published_date": "2026-01-12T11:36:06+00:00",
-      "category": "Government",
-      "description": "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital identity and attributes trust framework.",
-      "author": "",
-      "content": "Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital identity and attributes trust framework.",
+      "article_id": "2eee6d0bc93c872e3d74698d874ce314",
+      "title": "‘Largest Infrastructure Buildout in Human History’: Jensen Huang on AI’s ‘Five-Layer Cake’ at Davos",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/davos-wef-blackrock-ceo-larry-fink-jensen-huang/",
+      "published_date": "2026-01-21T12:50:16+00:00",
+      "category": "Industry",
+      "description": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
+      "author": "Brian Caulfield",
+      "content": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -854,7 +668,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.271970+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.771359+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -865,26 +679,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.271972+00:00"
+        "timestamp": "2026-01-25T08:28:15.771362+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e9f5e67b66364c3d8d1e6b5413d330d4",
-      "title": "Build AI agents with Amazon Bedrock AgentCore using AWS CloudFormation",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-ai-agents-with-amazon-bedrock-agentcore-using-aws-cloudformation/",
-      "published_date": "2026-01-23T17:54:02+00:00",
-      "category": "Industry",
-      "description": "Amazon Bedrock AgentCore services are now being supported by various IaC frameworks such as AWS Cloud Development Kit (AWS CDK), Terraform and AWS CloudFormation Templates. This integration brings the power of IaC directly to AgentCore so developers can provision, configure, and manage their AI agent infrastructure. In this post, we use CloudFormation templates to build an end-to-end application for a weather activity planner.",
-      "author": "Chintan Patel",
-      "content": "Amazon Bedrock AgentCore services are now being supported by various IaC frameworks such as AWS Cloud Development Kit (AWS CDK), Terraform and AWS CloudFormation Templates. This integration brings the power of IaC directly to AgentCore so developers can provision, configure, and manage their AI agent infrastructure. In this post, we use CloudFormation templates to build an end-to-end application for a weather activity planner.",
+      "article_id": "f891f1e41c5b3dea5825930123fe4b43",
+      "title": "Guidance: Software Security Code of Practice",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/software-security-code-of-practice",
+      "published_date": "2026-01-15T12:56:16+00:00",
+      "category": "Government",
+      "description": "This Code of Practice sets out expectations for the security and resilience of software.",
+      "author": "",
+      "content": "This Code of Practice sets out expectations for the security and resilience of software.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.768936+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.768939+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9e02c3d69e48dbcdfd238e90d9499b1a",
+      "title": "Build agents to learn from experiences using Amazon Bedrock AgentCore episodic memory",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-agents-to-learn-from-experiences-using-amazon-bedrock-agentcore-episodic-memory/",
+      "published_date": "2026-01-21T19:45:04+00:00",
+      "category": "Industry",
+      "description": "In this post, we walk you through the complete architecture to structure and store episodes, discuss the reflection module, and share compelling benchmarks that demonstrate significant improvements in agent task success rates.",
+      "author": "Jiarong Jiang",
+      "content": "In this post, we walk you through the complete architecture to structure and store episodes, discuss the reflection module, and share compelling benchmarks that demonstrate significant improvements in agent task success rates.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -912,22 +788,146 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-25T04:55:01.273117+00:00"
+        "consensus_timestamp": "2026-01-25T08:28:15.770454+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-25T04:55:01.273120+00:00"
+        "timestamp": "2026-01-25T08:28:15.770457+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4174e5006747da03178b1ad7a815edaf",
+      "title": "D4RT: Teaching AI to see the world in four dimensions",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions/",
+      "published_date": "2026-01-16T10:39:00+00:00",
+      "category": "Industry",
+      "description": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
+      "author": "",
+      "content": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.85,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.772856+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.772859+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "058fc86077243cd5d746ee140da81b1c",
+      "title": "NVIDIA DLSS 4.5 Delivers Super Resolution Upgrades and New Dynamic Multi Frame Generation",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-dlss-4-5-delivers-super-resolution-upgrades-and-new-dynamic-multi-frame-generation/",
+      "published_date": "2026-01-14T14:00:00+00:00",
+      "category": "Industry",
+      "description": "NVIDIA DLSS 4 with Multi Frame Generation has become the fastest-adopted NVIDIA gaming technology ever. Over 250 games and apps use it to make real-time path...",
+      "author": "Ike Nnoli",
+      "content": "NVIDIA DLSS 4 with Multi Frame Generation has become the fastest-adopted NVIDIA gaming technology ever. Over 250 games and apps use it to make real-time path...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-25T08:28:15.772553+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-25T08:28:15.772556+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 152.4128279685974,
+    "processing_time": 149.29632306098938,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 112,
+      "total_processed": 109,
       "candidates": {
-        "headlines": 8,
-        "articles": 104,
+        "headlines": 10,
+        "articles": 99,
         "research_papers": 0
       },
       "selected": {
