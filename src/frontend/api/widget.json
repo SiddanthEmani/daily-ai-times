@@ -1,23 +1,147 @@
 {
-  "updated": "2026-01-28T20:31:07.746418+00:00",
+  "updated": "2026-01-29T01:53:10.668094+00:00",
   "top_stories": [
     {
-      "article_id": "11f6277687b49d73ac50a68985e12f4c",
-      "title": "The AI infrastructure boom shows no sign of slowing down",
+      "article_id": "8e8365871d3d2a71cb7801904f83db87",
+      "title": "Everything you need to know about viral personal AI assistant Clawdbot (now Moltbot)",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/28/the-ai-infrastructure-boom-shows-no-sign-of-slowing-down/",
-      "published_date": "2026-01-28T15:21:35+00:00",
+      "url": "https://techcrunch.com/2026/01/27/everything-you-need-to-know-about-viral-personal-ai-assistant-clawdbot-now-moltbot/",
+      "published_date": "2026-01-28T00:12:43+00:00",
       "category": "Industry",
-      "description": "ASML’s record orders show chipmakers are still betting big on AI data centers.",
-      "author": "Russell Brandom",
-      "content": "ASML’s record orders show chipmakers are still betting big on AI data centers.",
+      "description": "Personal AI assistant Moltbot —formerly Clawdbot — has gone viral in a matter of weeks. But there’s more you should know before jumping on the bandwagon.",
+      "author": "Anna Heim",
+      "content": "Personal AI assistant Moltbot —formerly Clawdbot — has gone viral in a matter of weeks. But there’s more you should know before jumping on the bandwagon.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-29T01:53:10.625443+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-29T01:53:10.625446+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "52b67c02272be770cdb33d5199c8cdbb",
+      "title": "Speeding Up Variable-Length Training with Dynamic Context Parallelism and NVIDIA Megatron Core",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/speeding-up-variable-length-training-with-dynamic-context-parallelism-and-nvidia-megatron-core/",
+      "published_date": "2026-01-28T16:28:06+00:00",
+      "category": "Industry",
+      "description": "This post introduces Dynamic Context Parallelism (Dynamic-CP), a scheduling approach in NVIDIA Megatron Core used for LLM post-training or DiT pre-training. It...",
+      "author": "Kunlun Li",
+      "content": "This post introduces Dynamic Context Parallelism (Dynamic-CP), a scheduling approach in NVIDIA Megatron Core used for LLM post-training or DiT pre-training. It...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.9435,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-29T01:53:10.625589+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-29T01:53:10.625592+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e3b8e12140fee576082da30c8258b815",
+      "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
+      "published_date": "2026-01-15T16:00:00+00:00",
+      "category": "Industry",
+      "description": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
+      "author": "Chris Alexiuk",
+      "content": "What if your computer-use agent could learn a new Command Line Interface (CLI)—and operate it safely without ever writing files or free-typing shell commands?...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.98,
         "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.98
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,41 +168,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.92,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-28T20:31:07.699707+00:00"
+        "consensus_timestamp": "2026-01-29T01:53:10.625907+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.752,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-28T20:31:07.699710+00:00"
+        "timestamp": "2026-01-29T01:53:10.625910+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "b54835af868cb30c89fb93d721b4ffaf",
-      "title": "Fine-Tune LLMs on Your Mac: DagsHub + Apple MLX-LM Integration",
-      "source": "dagshub_blog",
-      "url": "https://dagshub.com/blog/apple-mlx-integration/",
-      "published_date": "2026-01-21T07:47:41+00:00",
+      "article_id": "3b460322dbc30606665beec91fe72fe0",
+      "title": "Unrolling the Codex agent loop",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+      "published_date": "2026-01-23T12:00:00+00:00",
       "category": "Industry",
-      "description": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
-      "author": "Dean Pleban",
-      "content": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
+      "description": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
+      "author": "",
+      "content": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-28T20:31:07.701403+00:00"
+        "consensus_timestamp": "2026-01-29T01:53:10.622051+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,151 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-28T20:31:07.701406+00:00"
+        "timestamp": "2026-01-29T01:53:10.622054+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "40d13efc2e378d4cec4d35d6cfcc13b6",
-      "title": "Adaptive Inference in NVIDIA TensorRT for RTX Enables Automatic Optimization",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/adaptive-inference-in-nvidia-tensorrt-for-rtx-enables-automatic-optimization/",
-      "published_date": "2026-01-26T21:00:00+00:00",
+      "article_id": "a37cd219ab160d2f1179448f622c128c",
+      "title": "Inferact launches with $150M in funding to commercialize vLLM",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/01/22/inferact-launches-150m-funding-commercialize-vllm/",
+      "published_date": "2026-01-23T01:13:45+00:00",
       "category": "Industry",
-      "description": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
-      "author": "George Stefanakis",
-      "content": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
+      "description": "A group of artificial intelligence researchers today launched Inferact Inc., a new startup that will commercialize the open-source vLLM project. The company is backed by $150 million in seed funding. Andreessen Horowitz and Lightspeed led the round with participation from Databricks Inc.’s venture capital arm, UC Berkeley Chancellor’s Fund and several other backers. Their investment […] The post Inferact launches with $150M in funding to commercialize vLLM appeared first on SiliconANGLE.",
+      "author": "Maria Deutscher",
+      "content": "A group of artificial intelligence researchers today launched Inferact Inc., a new startup that will commercialize the open-source vLLM project. The company is backed by $150 million in seed funding. Andreessen Horowitz and Lightspeed led the round with participation from Databricks Inc.’s venture capital arm, UC Berkeley Chancellor’s Fund and several other backers. Their investment […] The post Inferact launches with $150M in funding to commercialize vLLM appeared first on SiliconANGLE.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-28T20:31:07.700453+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-28T20:31:07.700457+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4174e5006747da03178b1ad7a815edaf",
-      "title": "D4RT: Teaching AI to see the world in four dimensions",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions/",
-      "published_date": "2026-01-16T10:39:00+00:00",
-      "category": "Industry",
-      "description": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
-      "author": "",
-      "content": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-28T20:31:07.700695+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-28T20:31:07.700697+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "51cd42611f654d9b533eb9d9baf9d79c",
-      "title": "LiveKit raises $100M at $1B valuation to scale real-time AI and media platform",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/01/22/livekit-raises-100m-1b-valuation-scale-real-time-ai-media-platform/",
-      "published_date": "2026-01-22T23:15:44+00:00",
-      "category": "Industry",
-      "description": "Communications, real-time media and artificial intelligence infrastructure company LiveKit Inc. revealed today that it has raised $100 million in new funding on a $1 billion valuation. The funding will be used to accelerate the expansion of its real-time voice, video and AI developer platform by building out new compute, storage and network services and to […] The post LiveKit raises $100M at $1B valuation to scale real-time AI and media platform appeared first on SiliconANGLE.",
-      "author": "Duncan Riley",
-      "content": "Communications, real-time media and artificial intelligence infrastructure company LiveKit Inc. revealed today that it has raised $100 million in new funding on a $1 billion valuation. The funding will be used to accelerate the expansion of its real-time voice, video and AI developer platform by building out new compute, storage and network services and to […] The post LiveKit raises $100M at $1B valuation to scale real-time AI and media platform appeared first on SiliconANGLE.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.98
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-28T20:31:07.702190+00:00"
+        "consensus_timestamp": "2026-01-29T01:53:10.627143+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-28T20:31:07.702193+00:00"
+        "timestamp": "2026-01-29T01:53:10.627145+00:00"
       },
       "article_type": "article"
     }
