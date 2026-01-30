@@ -1,23 +1,23 @@
 {
-  "updated": "2026-01-29T20:32:18.568936+00:00",
+  "updated": "2026-01-30T01:53:32.765553+00:00",
   "top_stories": [
     {
-      "article_id": "dbc90570f5448ccdb7e547628b026dc6",
-      "title": "Tiny startup Arcee AI built a 400B-parameter open source LLM from scratch to best Meta’s Llama",
+      "article_id": "0d29c38407fdcbb08b7d7342eb0426c8",
+      "title": "Google Maps now lets you access Gemini while walking and cycling",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/28/tiny-startup-arcee-ai-built-a-400b-open-source-llm-from-scratch-to-best-metas-llama/",
-      "published_date": "2026-01-28T17:30:00+00:00",
+      "url": "https://techcrunch.com/2026/01/29/google-maps-now-lets-you-access-gemini-while-walking-and-cycling/",
+      "published_date": "2026-01-29T14:30:00+00:00",
       "category": "Industry",
-      "description": "30-person startup Arcee AI has released a 400B model called Trinity, which it says is one of the biggest open source foundation models from a U.S. company.",
-      "author": "Julie Bort",
-      "content": "30-person startup Arcee AI has released a 400B model called Trinity, which it says is one of the biggest open source foundation models from a U.S. company.",
+      "description": "When you're walking around and navigating with Maps, you can now ask Gemini questions like \"What neighborhood am I in?\" or \"What are top-rated restaurants nearby?\"",
+      "author": "Aisha Malik",
+      "content": "When you're walking around and navigating with Maps, you can now ask Gemini questions like \"What neighborhood am I in?\" or \"What are top-rated restaurants nearby?\"",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,227 +44,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.524360+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.722426+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.524363+00:00"
+        "timestamp": "2026-01-30T01:53:32.722429+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0f6fcfee18ecfc8606c645d97b010d8b",
-      "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
+      "article_id": "3b460322dbc30606665beec91fe72fe0",
+      "title": "Unrolling the Codex agent loop",
       "source": "openai_blog",
-      "url": "https://openai.com/index/scaling-postgresql",
-      "published_date": "2026-01-22T12:00:00+00:00",
+      "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+      "published_date": "2026-01-23T12:00:00+00:00",
       "category": "Industry",
-      "description": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
+      "description": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
       "author": "",
-      "content": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521725+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.521728+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ed3c5b9599921af81c06d85e47ed97ea",
-      "title": "Introducing multimodal retrieval for Amazon Bedrock Knowledge Bases",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-multimodal-retrieval-for-amazon-bedrock-knowledge-bases/",
-      "published_date": "2026-01-20T18:22:25+00:00",
-      "category": "Industry",
-      "description": "In this post, we'll guide you through building multimodal RAG applications. You'll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.",
-      "author": "Dani Mitchell",
-      "content": "In this post, we'll guide you through building multimodal RAG applications. You'll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.522933+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.522935+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "06e4c621dc939c79ccfd41fa29f449f8",
-      "title": "Healthcare AI startup OpenEvidence raises $250M at $12B valuation",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/01/21/healthcare-ai-startup-openevidence-raises-250m-12b-valuation/",
-      "published_date": "2026-01-21T21:25:16+00:00",
-      "category": "Industry",
-      "description": "OpenEvidence Inc., a startup that develops artificial intelligence software for physicians, today disclosed that it has raised $250 million in funding. Thrive Capital and DST Global led the investment. It values OpenEvidence at $12 billion, more than 10 times what the company was worth after its first funding round last February. The startup has raised […] The post Healthcare AI startup OpenEvidence raises $250M at $12B valuation appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "OpenEvidence Inc., a startup that develops artificial intelligence software for physicians, today disclosed that it has raised $250 million in funding. Thrive Capital and DST Global led the investment. It values OpenEvidence at $12 billion, more than 10 times what the company was worth after its first funding round last February. The startup has raised […] The post Healthcare AI startup OpenEvidence raises $250M at $12B valuation appeared first on SiliconANGLE.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.526579+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.526582+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3e877fefa625e11bbc989df77fe18e81",
-      "title": "How to Unlock Local Detail in Coarse Climate Projections with NVIDIA Earth-2",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-unlock-local-detail-in-coarse-climate-projections-with-nvidia-earth-2/",
-      "published_date": "2026-01-26T14:00:00+00:00",
-      "category": "Industry",
-      "description": "Global climate models are good at the big picture—but local climate extremes, like hurricanes and typhoons, often disappear in the details. Those patterns are...",
-      "author": "Georg Ertl",
-      "content": "Global climate models are good at the big picture—but local climate extremes, like hurricanes and typhoons, often disappear in the details. Those patterns are...",
+      "content": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
         "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "overall_score": 0.9225000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -292,22 +106,208 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.524724+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.720131+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.524727+00:00"
+        "timestamp": "2026-01-30T01:53:32.720134+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "40d13efc2e378d4cec4d35d6cfcc13b6",
+      "title": "Adaptive Inference in NVIDIA TensorRT for RTX Enables Automatic Optimization",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/adaptive-inference-in-nvidia-tensorrt-for-rtx-enables-automatic-optimization/",
+      "published_date": "2026-01-26T21:00:00+00:00",
+      "category": "Industry",
+      "description": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
+      "author": "George Stefanakis",
+      "content": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.723028+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.723031+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c4820826699a83cc76d77eb778f8e35e",
+      "title": "Anthropic releases new AI ‘constitution’ for Claude",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/01/21/anthropic-releases-new-ai-constitution-claude/",
+      "published_date": "2026-01-22T01:01:44+00:00",
+      "category": "Industry",
+      "description": "Anthropic PBC today released a new version of Claude’s constitution, a document that outlines how the large language model series should process prompts. The company published the original version of the file in May 2023. The document contained instructions designed to prevent Claude from generating harmful or unhelpful output. Anthropic determined that those instructions had […] The post Anthropic releases new AI ‘constitution’ for Claude appeared first on SiliconANGLE.",
+      "author": "Maria Deutscher",
+      "content": "Anthropic PBC today released a new version of Claude’s constitution, a document that outlines how the large language model series should process prompts. The company published the original version of the file in May 2023. The document contained instructions designed to prevent Claude from generating harmful or unhelpful output. Anthropic determined that those instructions had […] The post Anthropic releases new AI ‘constitution’ for Claude appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.724848+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.724850+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1c2e39c320ddbebd53c36287b905b2db",
+      "title": "GeForce NOW Brings GeForce RTX Gaming to Linux PCs",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-linux/",
+      "published_date": "2026-01-29T14:00:49+00:00",
+      "category": "Industry",
+      "description": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
+      "author": "GeForce NOW Community",
+      "content": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.721661+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.721664+00:00"
       },
       "article_type": "article"
     }

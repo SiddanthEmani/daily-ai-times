@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-01-29T20:32:18.566095+00:00",
+  "generated_at": "2026-01-30T01:53:32.762770+00:00",
   "articles": [
     {
-      "article_id": "dbc90570f5448ccdb7e547628b026dc6",
-      "title": "Tiny startup Arcee AI built a 400B-parameter open source LLM from scratch to best Meta’s Llama",
+      "article_id": "0d29c38407fdcbb08b7d7342eb0426c8",
+      "title": "Google Maps now lets you access Gemini while walking and cycling",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/01/28/tiny-startup-arcee-ai-built-a-400b-open-source-llm-from-scratch-to-best-metas-llama/",
-      "published_date": "2026-01-28T17:30:00+00:00",
+      "url": "https://techcrunch.com/2026/01/29/google-maps-now-lets-you-access-gemini-while-walking-and-cycling/",
+      "published_date": "2026-01-29T14:30:00+00:00",
       "category": "Industry",
-      "description": "30-person startup Arcee AI has released a 400B model called Trinity, which it says is one of the biggest open source foundation models from a U.S. company.",
-      "author": "Julie Bort",
-      "content": "30-person startup Arcee AI has released a 400B model called Trinity, which it says is one of the biggest open source foundation models from a U.S. company.",
+      "description": "When you're walking around and navigating with Maps, you can now ask Gemini questions like \"What neighborhood am I in?\" or \"What are top-rated restaurants nearby?\"",
+      "author": "Aisha Malik",
+      "content": "When you're walking around and navigating with Maps, you can now ask Gemini questions like \"What neighborhood am I in?\" or \"What are top-rated restaurants nearby?\"",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,289 +44,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.524360+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.722426+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.524363+00:00"
+        "timestamp": "2026-01-30T01:53:32.722429+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0f6fcfee18ecfc8606c645d97b010d8b",
-      "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
+      "article_id": "3b460322dbc30606665beec91fe72fe0",
+      "title": "Unrolling the Codex agent loop",
       "source": "openai_blog",
-      "url": "https://openai.com/index/scaling-postgresql",
-      "published_date": "2026-01-22T12:00:00+00:00",
+      "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+      "published_date": "2026-01-23T12:00:00+00:00",
       "category": "Industry",
-      "description": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
+      "description": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
       "author": "",
-      "content": "An inside look at how OpenAI scaled PostgreSQL to millions of queries per second using replicas, caching, rate limiting, and workload isolation.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.98,
-        "overall_score": 0.9185000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521725+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.521728+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ed3c5b9599921af81c06d85e47ed97ea",
-      "title": "Introducing multimodal retrieval for Amazon Bedrock Knowledge Bases",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-multimodal-retrieval-for-amazon-bedrock-knowledge-bases/",
-      "published_date": "2026-01-20T18:22:25+00:00",
-      "category": "Industry",
-      "description": "In this post, we'll guide you through building multimodal RAG applications. You'll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.",
-      "author": "Dani Mitchell",
-      "content": "In this post, we'll guide you through building multimodal RAG applications. You'll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.522933+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.522935+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "06e4c621dc939c79ccfd41fa29f449f8",
-      "title": "Healthcare AI startup OpenEvidence raises $250M at $12B valuation",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/01/21/healthcare-ai-startup-openevidence-raises-250m-12b-valuation/",
-      "published_date": "2026-01-21T21:25:16+00:00",
-      "category": "Industry",
-      "description": "OpenEvidence Inc., a startup that develops artificial intelligence software for physicians, today disclosed that it has raised $250 million in funding. Thrive Capital and DST Global led the investment. It values OpenEvidence at $12 billion, more than 10 times what the company was worth after its first funding round last February. The startup has raised […] The post Healthcare AI startup OpenEvidence raises $250M at $12B valuation appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "OpenEvidence Inc., a startup that develops artificial intelligence software for physicians, today disclosed that it has raised $250 million in funding. Thrive Capital and DST Global led the investment. It values OpenEvidence at $12 billion, more than 10 times what the company was worth after its first funding round last February. The startup has raised […] The post Healthcare AI startup OpenEvidence raises $250M at $12B valuation appeared first on SiliconANGLE.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.526579+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.526582+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3e877fefa625e11bbc989df77fe18e81",
-      "title": "How to Unlock Local Detail in Coarse Climate Projections with NVIDIA Earth-2",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-unlock-local-detail-in-coarse-climate-projections-with-nvidia-earth-2/",
-      "published_date": "2026-01-26T14:00:00+00:00",
-      "category": "Industry",
-      "description": "Global climate models are good at the big picture—but local climate extremes, like hurricanes and typhoons, often disappear in the details. Those patterns are...",
-      "author": "Georg Ertl",
-      "content": "Global climate models are good at the big picture—but local climate extremes, like hurricanes and typhoons, often disappear in the details. Those patterns are...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.524724+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.524727+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "75bf0308d31306af8832e6a499f5a49f",
-      "title": "Uniswap (UNI) Price Prediction: 2025, 2026, 2030",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/money/uniswap-uni-price-prediction",
-      "published_date": "2026-01-29T15:16:04+00:00",
-      "category": "Industry",
-      "description": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
-      "author": "Margaret Jackson",
-      "content": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
+      "content": "A technical deep dive into the Codex agent loop, explaining how Codex CLI orchestrates models, tools, prompts, and performance using the Responses API.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -358,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.525581+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.720131+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,7 +121,255 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.525584+00:00"
+        "timestamp": "2026-01-30T01:53:32.720134+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "40d13efc2e378d4cec4d35d6cfcc13b6",
+      "title": "Adaptive Inference in NVIDIA TensorRT for RTX Enables Automatic Optimization",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/adaptive-inference-in-nvidia-tensorrt-for-rtx-enables-automatic-optimization/",
+      "published_date": "2026-01-26T21:00:00+00:00",
+      "category": "Industry",
+      "description": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
+      "author": "George Stefanakis",
+      "content": "Deploying AI applications across diverse consumer hardware has traditionally forced a trade-off. You can optimize for specific GPU configurations and achieve...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.723028+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.723031+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c4820826699a83cc76d77eb778f8e35e",
+      "title": "Anthropic releases new AI ‘constitution’ for Claude",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/01/21/anthropic-releases-new-ai-constitution-claude/",
+      "published_date": "2026-01-22T01:01:44+00:00",
+      "category": "Industry",
+      "description": "Anthropic PBC today released a new version of Claude’s constitution, a document that outlines how the large language model series should process prompts. The company published the original version of the file in May 2023. The document contained instructions designed to prevent Claude from generating harmful or unhelpful output. Anthropic determined that those instructions had […] The post Anthropic releases new AI ‘constitution’ for Claude appeared first on SiliconANGLE.",
+      "author": "Maria Deutscher",
+      "content": "Anthropic PBC today released a new version of Claude’s constitution, a document that outlines how the large language model series should process prompts. The company published the original version of the file in May 2023. The document contained instructions designed to prevent Claude from generating harmful or unhelpful output. Anthropic determined that those instructions had […] The post Anthropic releases new AI ‘constitution’ for Claude appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.724848+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.724850+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1c2e39c320ddbebd53c36287b905b2db",
+      "title": "GeForce NOW Brings GeForce RTX Gaming to Linux PCs",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-linux/",
+      "published_date": "2026-01-29T14:00:49+00:00",
+      "category": "Industry",
+      "description": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
+      "author": "GeForce NOW Community",
+      "content": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.721661+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.721664+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3c4a9ea0057f423c10b3fa127f278053",
+      "title": "Hybrid cloud moves from infrastructure choice to AI execution layer",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/01/23/hybrid-cloud-ai-execution-layer-futureofdataplatforms/",
+      "published_date": "2026-01-23T21:44:12+00:00",
+      "category": "Industry",
+      "description": "Hybrid cloud is no longer just an infrastructure compromise — it’s increasingly the execution layer that determines whether enterprise artificial intelligence can move from promise to production. As AI moves into production, hybrid cloud strategies are being reshaped by the realities of inference, distributed data and where GPUs actually live. Software solutions providers such as […] The post Hybrid cloud moves from infrastructure choice to AI execution layer appeared first on SiliconANGLE.",
+      "author": "Chad Wilson",
+      "content": "Hybrid cloud is no longer just an infrastructure compromise — it’s increasingly the execution layer that determines whether enterprise artificial intelligence can move from promise to production. As AI moves into production, hybrid cloud strategies are being reshaped by the realities of inference, distributed data and where GPUs actually live. Software solutions providers such as […] The post Hybrid cloud moves from infrastructure choice to AI execution layer appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.724545+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.724548+00:00"
       },
       "article_type": "article"
     },
@@ -420,7 +420,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521358+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.719661+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,27 +431,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.521361+00:00"
+        "timestamp": "2026-01-30T01:53:32.719665+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "051039d3ec1995c248fe7775ee76568a",
-      "title": "Accelerating Science: A Blueprint for a Renewed National Quantum Initiative",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/national-quantum-initiative/",
-      "published_date": "2026-01-28T18:17:53+00:00",
+      "article_id": "3a92a24eaafc500cfc24a1e88781eaf3",
+      "title": "Project Genie: Experimenting with infinite, interactive worlds",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/project-genie-experimenting-with-infinite-interactive-worlds/",
+      "published_date": "2026-01-29T17:01:05+00:00",
       "category": "Industry",
-      "description": "Quantum technologies are rapidly emerging as foundational capabilities for economic competitiveness, national security and scientific leadership in the 21st century. Sustained U.S. leadership in quantum information science is critical to ensuring that breakthroughs in computing, sensing, networking and materials translate into secure technologies and industries, a skilled domestic workforce and long-term strategic advantage. To secure Read Article",
-      "author": "Krysta Svore",
-      "content": "Quantum technologies are rapidly emerging as foundational capabilities for economic competitiveness, national security and scientific leadership in the 21st century. Sustained U.S. leadership in quantum information science is critical to ensuring that breakthroughs in computing, sensing, networking and materials translate into secure technologies and industries, a skilled domestic workforce and long-term strategic advantage. To secure Read Article",
+      "description": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
+      "author": "",
+      "content": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -479,21 +479,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.523259+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.723257+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.523262+00:00"
+        "timestamp": "2026-01-30T01:53:32.723260+00:00"
       },
       "article_type": "article"
     },
@@ -508,11 +508,259 @@
       "author": "",
       "content": "Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8699999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.720561+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.720564+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b54835af868cb30c89fb93d721b4ffaf",
+      "title": "Fine-Tune LLMs on Your Mac: DagsHub + Apple MLX-LM Integration",
+      "source": "dagshub_blog",
+      "url": "https://dagshub.com/blog/apple-mlx-integration/",
+      "published_date": "2026-01-21T07:47:41+00:00",
+      "category": "Industry",
+      "description": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
+      "author": "Dean Pleban",
+      "content": "DagsHub now fully supports Apple Silicon LLM fine-tuning workflows with MLX-LM. Train models locally on your MacBook, track experiments, version datasets, and deploy—all with a seamless, integrated experience.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.724051+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.724054+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "52b67c02272be770cdb33d5199c8cdbb",
+      "title": "Speeding Up Variable-Length Training with Dynamic Context Parallelism and NVIDIA Megatron Core",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/speeding-up-variable-length-training-with-dynamic-context-parallelism-and-nvidia-megatron-core/",
+      "published_date": "2026-01-28T16:28:06+00:00",
+      "category": "Industry",
+      "description": "This post introduces Dynamic Context Parallelism (Dynamic-CP), a scheduling approach in NVIDIA Megatron Core used for LLM post-training or DiT pre-training. It...",
+      "author": "Kunlun Li",
+      "content": "This post introduces Dynamic Context Parallelism (Dynamic-CP), a scheduling approach in NVIDIA Megatron Core used for LLM post-training or DiT pre-training. It...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.722899+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.722901+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "728cf3df7e61fa2a551859381499eb25",
+      "title": "Research: Business data use and productivity study (wave 2)",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/business-data-use-and-productivity-study-wave-2",
+      "published_date": "2026-01-28T09:30:01+00:00",
+      "category": "Government",
+      "description": "This is the second wave of a multi-year study to better understand the relationship between data use and productivity in UK businesses and the wider economy.",
+      "author": "",
+      "content": "This is the second wave of a multi-year study to better understand the relationship between data use and productivity in UK businesses and the wider economy.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8775000000000001,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-01-30T01:53:32.719337+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-01-30T01:53:32.719341+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2eee6d0bc93c872e3d74698d874ce314",
+      "title": "‘Largest Infrastructure Buildout in Human History’: Jensen Huang on AI’s ‘Five-Layer Cake’ at Davos",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/davos-wef-blackrock-ceo-larry-fink-jensen-huang/",
+      "published_date": "2026-01-21T12:50:16+00:00",
+      "category": "Industry",
+      "description": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
+      "author": "Brian Caulfield",
+      "content": "AI is becoming the foundation of the “largest infrastructure buildout in human history,” spanning energy and computing infrastructure, AI models and applications, NVIDIA founder and CEO Jensen Huang said during a World Economic Forum discussion with BlackRock CEO Larry Fink.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -541,72 +789,10 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.522165+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.522168+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ec4c565df7046d1e4b7a147827ad3c95",
-      "title": "Introducing Prism",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-prism",
-      "published_date": "2026-01-27T00:00:00+00:00",
-      "category": "Industry",
-      "description": "Prism is a free LaTeX-native workspace with GPT-5.2 built in, helping researchers write, collaborate, and reason in one place.",
-      "author": "",
-      "content": "Prism is a free LaTeX-native workspace with GPT-5.2 built in, helping researchers write, collaborate, and reason in one place.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521587+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.721931+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -617,150 +803,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.521590+00:00"
+        "timestamp": "2026-01-30T01:53:32.721934+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "58ea9bdcc0964d343ae003ffab65b3b1",
-      "title": "Inside GPT-5 for Work: How Businesses Use GPT-5",
-      "source": "openai_blog",
-      "url": "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work",
-      "published_date": "2026-01-22T00:00:00+00:00",
-      "category": "Industry",
-      "description": "A data-driven report on how workers across industries use ChatGPT—covering adoption trends, top tasks, departmental patterns, and the future of AI at work.",
-      "author": "",
-      "content": "A data-driven report on how workers across industries use ChatGPT—covering adoption trends, top tasks, departmental patterns, and the future of AI at work.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521866+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.521869+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4320c22b178f9e58c70b5b68e7dad36b",
-      "title": "PVH reimagines the future of fashion with OpenAI",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/pvh-future-of-fashion",
-      "published_date": "2026-01-27T06:00:00+00:00",
-      "category": "Industry",
-      "description": "PVH Corp., parent company of Calvin Klein and Tommy Hilfiger, is adopting ChatGPT Enterprise to bring AI into fashion design, supply chain, and consumer engagement.",
-      "author": "",
-      "content": "PVH Corp., parent company of Calvin Klein and Tommy Hilfiger, is adopting ChatGPT Enterprise to bring AI into fashion design, supply chain, and consumer engagement.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.521494+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.521498+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9e02c3d69e48dbcdfd238e90d9499b1a",
-      "title": "Build agents to learn from experiences using Amazon Bedrock AgentCore episodic memory",
+      "article_id": "7f181c95353f25f1eacc06a4bb460238",
+      "title": "How bunq handles 97% of support with Amazon Bedrock",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-agents-to-learn-from-experiences-using-amazon-bedrock-agentcore-episodic-memory/",
-      "published_date": "2026-01-21T19:45:04+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-bunq-handles-97-of-support-with-amazon-bedrock/",
+      "published_date": "2026-01-21T17:50:35+00:00",
       "category": "Industry",
-      "description": "In this post, we walk you through the complete architecture to structure and store episodes, discuss the reflection module, and share compelling benchmarks that demonstrate significant improvements in agent task success rates.",
-      "author": "Jiarong Jiang",
-      "content": "In this post, we walk you through the complete architecture to structure and store episodes, discuss the reflection module, and share compelling benchmarks that demonstrate significant improvements in agent task success rates.",
+      "description": "In this post, we show how bunq upgraded Finn, its in-house generative AI assistant, using Amazon Bedrock to transform user support and banking operations to be seamless, in multiple languages and time zones.",
+      "author": "Benjamin Kleppe",
+      "content": "In this post, we show how bunq upgraded Finn, its in-house generative AI assistant, using Amazon Bedrock to transform user support and banking operations to be seamless, in multiple languages and time zones.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
+        "novelty_score": 0.75,
         "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -788,41 +850,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.522798+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.721234+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.522801+00:00"
+        "timestamp": "2026-01-30T01:53:32.721237+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9666866aee12de96ee4a908c1df9c724",
-      "title": "Expanded umbilical cord blood transplant achieves 94% survival in severe aplastic anemia patients",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/expanded-umbilical-cord-blood-transplant-achieves-94-survival-severe-aplastic-anemia-patients",
-      "published_date": "2026-01-29T20:27:54.137287+00:00",
-      "category": "Government",
-      "description": "NIH clinical trial shows promise for people with treatment-limited, life-threatening disorder.",
-      "author": "",
-      "content": "NIH clinical trial shows promise for people with treatment-limited, life-threatening disorder.",
+      "article_id": "b0b506f5aa81cacb6453e6e73c080b35",
+      "title": "Advanced fine-tuning techniques for multi-agent orchestration: Patterns from Amazon at scale",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/advanced-fine-tuning-techniques-for-multi-agent-orchestration-patterns-from-amazon-at-scale/",
+      "published_date": "2026-01-16T15:51:21+00:00",
+      "category": "Industry",
+      "description": "In this post, we show you how fine-tuning enabled a 33% reduction in dangerous medication errors (Amazon Pharmacy), engineering 80% human effort reduction (Amazon Global Engineering Services), and content quality assessments improving 77% to 96% accuracy (Amazon A+). This post details the techniques behind these outcomes: from foundational methods like Supervised Fine-Tuning (SFT) (instruction tuning), and Proximal Policy Optimization (PPO), to Direct Preference Optimization (DPO) for human...",
+      "author": "Yunfei Bai",
+      "content": "In this post, we show you how fine-tuning enabled a 33% reduction in dangerous medication errors (Amazon Pharmacy), engineering 80% human effort reduction (Amazon Global Engineering Services), and content quality assessments improving 77% to 96% accuracy (Amazon A+). This post details the techniques behind these outcomes: from foundational methods like Supervised Fine-Tuning (SFT) (instruction tuning), and Proximal Policy Optimization (PPO), to Direct Preference Optimization (DPO) for human...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -850,84 +912,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.520560+00:00"
+        "consensus_timestamp": "2026-01-30T01:53:32.721384+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-01-29T20:32:18.520564+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "121fd221b3db04fb21e7d2de33aed46f",
-      "title": "Researchers find genetic basis for important risk factor in blinding eye disease",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-find-genetic-basis-important-risk-factor-blinding-eye-disease",
-      "published_date": "2026-01-29T20:27:54.137435+00:00",
-      "category": "Government",
-      "description": "International collaboration provides clues about important subtype of age-related macular degeneration.",
-      "author": "",
-      "content": "International collaboration provides clues about important subtype of age-related macular degeneration.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-01-29T20:32:18.520614+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-01-29T20:32:18.520618+00:00"
+        "timestamp": "2026-01-30T01:53:32.721387+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 166.45970749855042,
+    "processing_time": 167.26178336143494,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 135,
+      "total_processed": 137,
       "candidates": {
-        "headlines": 17,
-        "articles": 118,
+        "headlines": 16,
+        "articles": 121,
         "research_papers": 0
       },
       "selected": {
