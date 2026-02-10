@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-02-10T13:11:10.783921+00:00",
+  "generated_at": "2026-02-10T17:04:46.528371+00:00",
   "articles": [
     {
-      "article_id": "8b24a53238616636587f7baa8bc106a4",
-      "title": "Databricks CEO says SaaS isn’t dead, but AI will soon make it irrelevant",
+      "article_id": "8b574ca2fddfa79fd38c22949d00969f",
+      "title": "Former GitHub CEO raises record $60M dev tool seed round at $300M valuation",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/02/09/databricks-ceo-says-saas-isnt-dead-but-ai-will-soon-make-it-irrelevant/",
-      "published_date": "2026-02-09T21:14:50+00:00",
+      "url": "https://techcrunch.com/2026/02/10/former-github-ceo-raises-record-60m-dev-tool-seed-round-at-300m-valuation/",
+      "published_date": "2026-02-10T14:30:00+00:00",
       "category": "Industry",
-      "description": "AI isn't going to replace major SaaS apps with vibe-coded versions, Databricks CEO Ali Ghodsi believes. But it could give rise to competitors.",
+      "description": "Thomas Dohmke's new startup offers an AI system to allow developers to better manage all the code AI agents produce.",
       "author": "Julie Bort",
-      "content": "AI isn't going to replace major SaaS apps with vibe-coded versions, Databricks CEO Ali Ghodsi believes. But it could give rise to competitors.",
+      "content": "Thomas Dohmke's new startup offers an AI system to allow developers to better manage all the code AI agents produce.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
+        "impact_score": 0.9,
+        "overall_score": 0.8250000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -45,41 +45,475 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.7,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.754960+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.493332+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.62,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.493335+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "f503d34ac664fcd20ebfa8e7abe5d9eb",
+      "title": "Inside OpenAI’s in-house data agent",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/inside-our-in-house-data-agent",
+      "published_date": "2026-01-29T10:00:00+00:00",
+      "category": "Industry",
+      "description": "How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in minutes.",
+      "author": "",
+      "content": "How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in minutes.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.491390+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.491394+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "88e454153477d7e20581631e9bc93ebd",
+      "title": "Evaluating generative AI models with Amazon Nova LLM-as-a-Judge on Amazon SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-generative-ai-models-with-amazon-nova-llm-as-a-judge-on-amazon-sagemaker-ai/",
+      "published_date": "2026-01-30T21:07:34+00:00",
+      "category": "Industry",
+      "description": "Evaluating the performance of large language models (LLMs) goes beyond statistical metrics like perplexity or bilingual evaluation understudy (BLEU) scores. For most real-world generative AI scenarios, it’s crucial to understand whether a model is producing better outputs than a baseline or an earlier iteration. This is especially important for applications such as summarization, content generation, […]",
+      "author": "Surya Kari",
+      "content": "Evaluating the performance of large language models (LLMs) goes beyond statistical metrics like perplexity or bilingual evaluation understudy (BLEU) scores. For most real-world generative AI scenarios, it’s crucial to understand whether a model is producing better outputs than a baseline or an earlier iteration. This is especially important for applications such as summarization, content generation, […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.492694+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.492697+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "32bc09782b6fc5103b96782f4639c0db",
+      "title": "Mercedes-Benz Unveils New S-Class Built on NVIDIA DRIVE AV, Which Enables an L4-Ready Architecture",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/mercedes-benz-l4-s-class-drive-av-platform/",
+      "published_date": "2026-01-29T18:00:31+00:00",
+      "category": "Industry",
+      "description": "Mercedes-Benz is marking 140 years of automotive innovation with a new S-Class built for the AI era, bringing together automotive safety and NVIDIA’s advanced autonomous driving platform to enable a level 4-ready architecture designed for trust. The new S-Class with MB.OS, which will be equipped with the NVIDIA DRIVE Hyperion architecture and full-stack NVIDIA DRIVE Read Article",
+      "author": "Jessica Soares",
+      "content": "Mercedes-Benz is marking 140 years of automotive innovation with a new S-Class built for the AI era, bringing together automotive safety and NVIDIA’s advanced autonomous driving platform to enable a level 4-ready architecture designed for trust. The new S-Class with MB.OS, which will be equipped with the NVIDIA DRIVE Hyperion architecture and full-stack NVIDIA DRIVE Read Article",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.493014+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.493017+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3a92a24eaafc500cfc24a1e88781eaf3",
+      "title": "Project Genie: Experimenting with infinite, interactive worlds",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/project-genie-experimenting-with-infinite-interactive-worlds/",
+      "published_date": "2026-01-29T17:01:05+00:00",
+      "category": "Industry",
+      "description": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
+      "author": "",
+      "content": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.494938+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.494941+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7636e880c2afcc2694feac3cb59aba87",
+      "title": "Meet OAT: The New Action Tokenizer Bringing LLM-Style Scaling and Flexible, Anytime Inference to the Robotics World",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/02/08/meet-oat-the-new-action-tokenizer-bringing-llm-style-scaling-and-flexible-anytime-inference-to-the-robotics-world/",
+      "published_date": "2026-02-09T07:46:46+00:00",
+      "category": "Industry",
+      "description": "Robots are entering their GPT-3 era. For years, researchers have tried to train robots using the same autoregressive (AR) models that power large language models (LLMs). If a model can predict the next word in a sentence, it should be able to predict the next move for a robotic arm. However, a technical wall has […] The post Meet OAT: The New Action Tokenizer Bringing LLM-Style Scaling and Flexible, Anytime Inference to the Robotics World appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "Robots are entering their GPT-3 era. For years, researchers have tried to train robots using the same autoregressive (AR) models that power large language models (LLMs). If a model can predict the next word in a sentence, it should be able to predict the next move for a robotic arm. However, a technical wall has […] The post Meet OAT: The New Action Tokenizer Bringing LLM-Style Scaling and Flexible, Anytime Inference to the Robotics World appeared first on MarkTechPost.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.495760+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.495762+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "618d7baa0c980355788b7daefc641ab3",
+      "title": "Passing Variables in AI Agents: Pain Points, Fixes, and Best Practices",
+      "source": "nanonets_blog",
+      "url": "https://nanonets.com/blog/passing-variables-in-ai-agents-pain-points-fixes-and-best-practices-2/",
+      "published_date": "2026-02-10T13:57:36+00:00",
+      "category": "Industry",
+      "description": "Passing Variables in AI Agents: Pain Points, Fixes, and Best Practices",
+      "author": "Vinit Mehta",
+      "content": "Passing Variables in AI Agents: Pain Points, Fixes, and Best Practices",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.495618+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.754963+00:00"
+        "timestamp": "2026-02-10T17:04:46.495621+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "0ac744f661b02072b956cfc08067d16a",
-      "title": "GPT-5.3-Codex System Card",
+      "article_id": "32f69adc6478cb5d4b4c543b3801f792",
+      "title": "Introducing OpenAI Frontier",
       "source": "openai_blog",
-      "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "url": "https://openai.com/index/introducing-openai-frontier",
+      "published_date": "2026-02-05T06:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "author": "",
+      "content": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-10T17:04:46.490966+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-10T17:04:46.490969+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "08fbb1e57594c73ba6068cb0115de630",
+      "title": "Introducing GPT-5.3-Codex",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
       "published_date": "2026-02-05T00:00:00+00:00",
       "category": "Industry",
-      "description": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "description": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
       "author": "",
-      "content": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "content": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -107,102 +541,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.753233+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.491108+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.753235+00:00"
+        "timestamp": "2026-02-10T17:04:46.491111+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1c2e39c320ddbebd53c36287b905b2db",
-      "title": "GeForce NOW Brings GeForce RTX Gaming to Linux PCs",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-linux/",
-      "published_date": "2026-01-29T14:00:49+00:00",
-      "category": "Industry",
-      "description": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
-      "author": "GeForce NOW Community",
-      "content": "Get ready to game — the native GeForce NOW app for Linux PCs is now available in beta, letting Linux desktops tap directly into GeForce RTX performance from the cloud. Alongside the expansion comes ten new games, including The Bard’s Tale IV: Director’s Cut and The Bard’s Tale Trilogy for a leveled-up gaming weekend. And Read Article",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.754835+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.754837+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f4407d0bd8ebde4ce91e529c5b4accde",
-      "title": "Build with Kimi K2.5 Multimodal VLM Using NVIDIA GPU-Accelerated Endpoints",
+      "article_id": "8e75fa972a2530cc99643a10e4649832",
+      "title": "How Painkiller RTX Uses Generative AI to Modernize Game Assets at Scale",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-with-kimi-k2-5-multimodal-vlm-using-nvidia-gpu-accelerated-endpoints/",
-      "published_date": "2026-02-04T19:46:33+00:00",
+      "url": "https://developer.nvidia.com/blog/how-painkiller-rtx-uses-generative-ai-to-modernize-game-assets-at-scale/",
+      "published_date": "2026-02-05T14:00:00+00:00",
       "category": "Industry",
-      "description": "Kimi K2.5 is the newest open vision language model (VLM) from the Kimi family of models. Kimi K2.5 is a general-purpose multimodal model that excels in current...",
-      "author": "Anu Srivastava",
-      "content": "Kimi K2.5 is the newest open vision language model (VLM) from the Kimi family of models. Kimi K2.5 is a general-purpose multimodal model that excels in current...",
+      "description": "Painkiller RTX sets a new standard for how small teams can balance massive visual ambition with limited resources by integrating generative AI. By upscaling...",
+      "author": "Phillip Singh",
+      "content": "Painkiller RTX sets a new standard for how small teams can balance massive visual ambition with limited resources by integrating generative AI. By upscaling...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -231,164 +603,40 @@
           }
         },
         "score": 0.92,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.755758+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.494235+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.752,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.755761+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3ce0660cc2636b877f6d07f79ddf4799",
-      "title": "Researchers achieve the first minimally invasive coronary artery bypass",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-achieve-first-minimally-invasive-coronary-artery-bypass",
-      "published_date": "2026-02-10T13:07:29.864082+00:00",
-      "category": "Government",
-      "description": "For high-risk patients, the method could offer a safer alternative to open-heart surgery.",
-      "author": "",
-      "content": "For high-risk patients, the method could offer a safer alternative to open-heart surgery.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.752172+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.752178+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "764052258094eb627489dadf9522ccfb",
-      "title": "Testing ads in ChatGPT",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/testing-ads-in-chatgpt",
-      "published_date": "2026-02-09T11:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-      "author": "",
-      "content": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.752925+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.752928+00:00"
+        "timestamp": "2026-02-10T17:04:46.494237+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "123a3f66a6fca00e7f28cb9d407d2826",
-      "title": "Scale LLM fine-tuning with Hugging Face and Amazon SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/scale-llm-fine-tuning-with-hugging-face-and-amazon-sagemaker-ai/",
-      "published_date": "2026-02-09T16:48:46+00:00",
-      "category": "Industry",
-      "description": "In this post, we show how this integrated approach transforms enterprise LLM fine-tuning from a complex, resource-intensive challenge into a streamlined, scalable solution for achieving better model performance in domain-specific applications.",
-      "author": "Florent Gbelidji",
-      "content": "In this post, we show how this integrated approach transforms enterprise LLM fine-tuning from a complex, resource-intensive challenge into a streamlined, scalable solution for achieving better model performance in domain-specific applications.",
+      "article_id": "2e2ef5588e274547dad4a27c44e2039a",
+      "title": "Research: Cyber security skills in the UK labour market 2025",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/cyber-security-skills-in-the-uk-labour-market-2025",
+      "published_date": "2026-02-02T15:48:47+00:00",
+      "category": "Government",
+      "description": "Research detailing skills needs and job vacancies across the UK cyber security sector.",
+      "author": "",
+      "content": "Research detailing skills needs and job vacancies across the UK cyber security sector.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -417,41 +665,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.754019+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.490249+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.754022+00:00"
+        "timestamp": "2026-02-10T17:04:46.490251+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "4b47a0ce13adeded493071ac2e51814c",
-      "title": "Barnsley becomes UK’s first government-backed Tech Town",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/barnsley-becomes-uks-first-government-backed-tech-town",
-      "published_date": "2026-02-03T00:01:00+00:00",
-      "category": "Government",
-      "description": "Barnsley named UK’s first Tech Town – with local schools and college, businesses, NHS and more getting bespoke government support to unleash opportunities of AI.",
-      "author": "",
-      "content": "Barnsley named UK’s first Tech Town – with local schools and college, businesses, NHS and more getting bespoke government support to unleash opportunities of AI.",
+      "article_id": "6e275ecd1bc1ff4e93e3674e23d0bac4",
+      "title": "Scale AI in South Africa using Amazon Bedrock global cross-Region inference with Anthropic Claude 4.5 models",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scale-ai-in-south-africa-using-amazon-bedrock-global-cross-region-inference-with-anthropic-claude-4-5-models/",
+      "published_date": "2026-01-30T17:12:02+00:00",
+      "category": "Industry",
+      "description": "In this post, we walk through how global cross-Region inference routes requests and where your data resides, then show you how to configure the required AWS Identity and Access Management (IAM) permissions and invoke Claude 4.5 models using the global inference profile Amazon Resource Name (ARN). We also cover how to request quota increases for your workload. By the end, you'll have a working implementation of global cross-Region inference in af-south-1.",
+      "author": "Christian Kamwangala",
+      "content": "In this post, we walk through how global cross-Region inference routes requests and where your data resides, then show you how to configure the required AWS Identity and Access Management (IAM) permissions and invoke Claude 4.5 models using the global inference profile Amazon Resource Name (ARN). We also cover how to request quota increases for your workload. By the end, you'll have a working implementation of global cross-Region inference in af-south-1.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -479,34 +727,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.752626+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.492785+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.752628+00:00"
+        "timestamp": "2026-02-10T17:04:46.492787+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "6583cce970ed5170ea74f22fbbd4b41d",
-      "title": "Unlocking the Codex harness: how we built the App Server",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/unlocking-the-codex-harness",
-      "published_date": "2026-02-04T13:00:00+00:00",
+      "article_id": "f70a72079232ebbff9cd7d725b59f30d",
+      "title": "Establishing a Scalable Sparse Ecosystem with the Universal Sparse Tensor",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/establishing-a-scalable-sparse-ecosystem-with-the-universal-sparse-tensor/",
+      "published_date": "2026-01-30T18:00:00+00:00",
       "category": "Industry",
-      "description": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
-      "author": "",
-      "content": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
+      "description": "Sparse tensors are vectors, matrices, and higher-dimensional generalizations with many zeros. They are crucial in various fields such as scientific computing,...",
+      "author": "Aart J.C. Bik",
+      "content": "Sparse tensors are vectors, matrices, and higher-dimensional generalizations with many zeros. They are crucial in various fields such as scientific computing,...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -540,41 +788,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.95,
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.753322+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.494566+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.77,
         "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.753324+00:00"
+        "timestamp": "2026-02-10T17:04:46.494570+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "600568d0ebc27bb3ff3e6fce2ae5c29f",
-      "title": "NIH-funded study clearly ties risk of dementia to severe CTE",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-study-clearly-ties-risk-dementia-severe-cte",
-      "published_date": "2026-02-10T13:07:29.863857+00:00",
-      "category": "Government",
-      "description": "Study provides clearest evidence to date to link severe CTE to dementia risk.",
-      "author": "",
-      "content": "Study provides clearest evidence to date to link severe CTE to dementia risk.",
+      "article_id": "1523b8bff4f7e340228382cb8ea5298a",
+      "title": "How to Build a Privacy-Preserving Federated Pipeline to Fine-Tune Large Language Models with LoRA Using Flower and PEFT",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/02/09/how-to-build-a-privacy-preserving-federated-pipeline-to-fine-tune-large-language-models-with-lora-using-flower-and-peft/",
+      "published_date": "2026-02-10T04:57:19+00:00",
+      "category": "Industry",
+      "description": "In this tutorial, we demonstrate how to federate fine-tuning of a large language model using LoRA without ever centralizing private text data. We simulate multiple organizations as virtual clients and show how each client adapts a shared base model locally while exchanging only lightweight LoRA adapter parameters. By combining Flower’s federated learning simulation engine with […] The post How to Build a Privacy-Preserving Federated Pipeline to Fine-Tune Large Language Models with LoRA Using...",
+      "author": "Asif Razzaq",
+      "content": "In this tutorial, we demonstrate how to federate fine-tuning of a large language model using LoRA without ever centralizing private text data. We simulate multiple organizations as virtual clients and show how each client adapts a shared base model locally while exchanging only lightweight LoRA adapter parameters. By combining Flower’s federated learning simulation engine with […] The post How to Build a Privacy-Preserving Federated Pipeline to Fine-Tune Large Language Models with LoRA Using...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
-        "novelty_score": 0.6,
-        "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.845,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -603,289 +851,41 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.751979+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.495665+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.751983+00:00"
+        "timestamp": "2026-02-10T17:04:46.495668+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "3a92a24eaafc500cfc24a1e88781eaf3",
-      "title": "Project Genie: Experimenting with infinite, interactive worlds",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/project-genie-experimenting-with-infinite-interactive-worlds/",
-      "published_date": "2026-01-29T17:01:05+00:00",
+      "article_id": "c1199aa4ddc53da7e226ddfc58709ebb",
+      "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/snowflake-partnership",
+      "published_date": "2026-02-02T06:00:00+00:00",
       "category": "Industry",
-      "description": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
+      "description": "OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.",
       "author": "",
-      "content": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.756273+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.756275+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "8dc2a477973bc10c6986da942689bfa7",
-      "title": "Silicom Edge System Chosen as High-End Platform by Cybersecurity Leader",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/silicom-edge-system-chosen-as-high-end-platform-by-cybersecurity-leader/",
-      "published_date": "2026-02-10T08:45:00+00:00",
-      "category": "Industry",
-      "description": "– Initial orders totaling over $1M are in hand: full ramp-up expected to reach ~$2M/year – Silicom Ltd. (NASDAQ: SILC), a leading provider of networking and data infrastructure solutions, today announced that an existing customer, a Tier-1 cyber security leader, has selected one of its Edge systems as the platform for its next... The post Silicom Edge System Chosen as High-End Platform by Cybersecurity Leader first appeared on AI-Tech Park.",
-      "author": "PR Newswire",
-      "content": "– Initial orders totaling over $1M are in hand: full ramp-up expected to reach ~$2M/year – Silicom Ltd. (NASDAQ: SILC), a leading provider of networking and data infrastructure solutions, today announced that an existing customer, a Tier-1 cyber security leader, has selected one of its Edge systems as the platform for its next... The post Silicom Edge System Chosen as High-End Platform by Cybersecurity Leader first appeared on AI-Tech Park.",
+      "content": "OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8375,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.756811+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.756813+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9bfbd95b0b482f1b6161d6ebcb8b7a76",
-      "title": "Evinova and Bristol Myers Squibb Launch AI Collaboration for Clinical Trials",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/evinova-and-bristol-myers-squibb-launch-ai-collaboration-for-clinical-trials/",
-      "published_date": "2026-02-10T08:30:00+00:00",
-      "category": "Industry",
-      "description": "Agreement will leverage Evinova’s innovative AI-native platform to improve trial design, accelerate timelines, and enhance cost efficiency Evinova today announced that Bristol Myers Squibb has signed an agreement to optimize clinical trials with Evinova’s AI-native clinical development platform. Under the terms of the agreement, Bristol Myers Squibb will deploy the... The post Evinova and Bristol Myers Squibb Launch AI Collaboration for Clinical Trials first appeared on AI-Tech Park.",
-      "author": "Business Wire",
-      "content": "Agreement will leverage Evinova’s innovative AI-native platform to improve trial design, accelerate timelines, and enhance cost efficiency Evinova today announced that Bristol Myers Squibb has signed an agreement to optimize clinical trials with Evinova’s AI-native clinical development platform. Under the terms of the agreement, Bristol Myers Squibb will deploy the... The post Evinova and Bristol Myers Squibb Launch AI Collaboration for Clinical Trials first appeared on AI-Tech Park.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.8,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.756852+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.756855+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e8f61a51fc06e91faf4a4687c06ada92",
-      "title": "AI Management Essentials tool",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/consultations/ai-management-essentials-tool",
-      "published_date": "2026-02-06T10:09:51+00:00",
-      "category": "Government",
-      "description": "We are seeking views on the design, content and use of a new AI Management Essentials (AIME) tool.",
-      "author": "",
-      "content": "We are seeking views on the design, content and use of a new AI Management Essentials (AIME) tool.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.752396+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-10T13:11:10.752398+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "74b09a7d46b3e4eb9f501f3f2e27f1aa",
-      "title": "Researchers identify new blood markers that may detect early pancreatic cancer",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-identify-new-blood-markers-may-detect-early-pancreatic-cancer",
-      "published_date": "2026-02-10T13:07:29.863792+00:00",
-      "category": "Government",
-      "description": "NIH-funded, four-marker panel could one day help catch one of deadliest cancers at more treatable stages.",
-      "author": "",
-      "content": "NIH-funded, four-marker panel could one day help catch one of deadliest cancers at more treatable stages.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.82,
-        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -916,7 +916,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-10T13:11:10.751910+00:00"
+        "consensus_timestamp": "2026-02-10T17:04:46.491296+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -927,7 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-10T13:11:10.751918+00:00"
+        "timestamp": "2026-02-10T17:04:46.491299+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 159.63838005065918,
+    "processing_time": 169.51813316345215,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 120,
+      "total_processed": 125,
       "candidates": {
-        "headlines": 7,
-        "articles": 113,
+        "headlines": 10,
+        "articles": 115,
         "research_papers": 0
       },
       "selected": {
