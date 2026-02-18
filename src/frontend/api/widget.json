@@ -1,5 +1,5 @@
 {
-  "updated": "2026-02-17T20:38:52.115362+00:00",
+  "updated": "2026-02-18T02:01:32.115857+00:00",
   "top_stories": [
     {
       "article_id": "ddcb1ae5e252ef856f7b4fa71820789e",
@@ -12,12 +12,12 @@
       "author": "Asif Razzaq",
       "content": "Alibaba Cloud just updated the open-source landscape. Today, the Qwen team released Qwen3.5, the newest generation of their large language model (LLM) family. The most powerful version is Qwen3.5-397B-A17B. This model is a sparse Mixture-of-Experts (MoE) system. It combines massive reasoning power with high efficiency. Qwen3.5 is a native vision-language model. It is designed specifically […] The post Alibaba Qwen Team Releases Qwen3.5-397B MoE Model with 17B Active Parameters and 1M Token...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,35 +44,97 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-17T20:38:52.075330+00:00"
+        "consensus_timestamp": "2026-02-18T02:01:32.069260+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-17T20:38:52.075333+00:00"
+        "timestamp": "2026-02-18T02:01:32.069262+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0f1e77fab99fe8c8127198089ffef6fd",
-      "title": "Claude Opus 4.6: Anthropic’s powerful model for coding, agents, and enterprise workflows is now available in Microsoft Foundry",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/claude-opus-4-6-anthropics-powerful-model-for-coding-agents-and-enterprise-workflows-is-now-available-in-microsoft-foundry-on-azure/",
-      "published_date": "2026-02-05T17:46:10+00:00",
+      "article_id": "d7998d4ba3d2b12e7051585edae4c582",
+      "title": "Customize AI agent browsing with proxies, profiles, and extensions in Amazon Bedrock AgentCore Browser",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/customize-ai-agent-browsing-with-proxies-profiles-and-extensions-in-amazon-bedrock-agentcore-browser/",
+      "published_date": "2026-02-13T22:57:34+00:00",
       "category": "Industry",
-      "description": "With Claude Opus 4.6 now available in Microsoft Foundry, developers can delegate complex tasks end‑to‑end and trust the AI to execute independently in production. The post Claude Opus 4.6: Anthropic’s powerful model for coding, agents, and enterprise workflows is now available in Microsoft Foundry appeared first on Microsoft Azure Blog.",
-      "author": "Steve Sweetman",
-      "content": "With Claude Opus 4.6 now available in Microsoft Foundry, developers can delegate complex tasks end‑to‑end and trust the AI to execute independently in production. The post Claude Opus 4.6: Anthropic’s powerful model for coding, agents, and enterprise workflows is now available in Microsoft Foundry appeared first on Microsoft Azure Blog.",
+      "description": "Today, we are announcing three new capabilities that address these requirements: proxy configuration, browser profiles, and browser extensions. Together, these features give you fine-grained control over how your AI agents interact with the web. This post will walk through each capability with configuration examples and practical use cases to help you get started.",
+      "author": "Joshua Samuel",
+      "content": "Today, we are announcing three new capabilities that address these requirements: proxy configuration, browser profiles, and browser extensions. Together, these features give you fine-grained control over how your AI agents interact with the web. This post will walk through each capability with configuration examples and practical use cases to help you get started.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.9435,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.92,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-18T02:01:32.065697+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.752,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-18T02:01:32.065699+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "89945ef7a816d1965701e4524db51e8e",
+      "title": "Iberdrola enhances IT operations using Amazon Bedrock AgentCore",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/iberdrola-enhances-it-operations-using-amazon-bedrock-agentcore/",
+      "published_date": "2026-02-10T18:31:57+00:00",
+      "category": "Industry",
+      "description": "Iberdrola, one of the world’s largest utility companies, has embraced cutting-edge AI technology to revolutionize its IT operations in ServiceNow. Through its partnership with AWS, Iberdrola implemented different agentic architectures using Amazon Bedrock AgentCore, targeting three key areas: optimizing change request validation in the draft phase, enriching incident management with contextual intelligence, and simplifying change model selection using conversational AI. These innovations reduce...",
+      "author": "Talha Chattha",
+      "content": "Iberdrola, one of the world’s largest utility companies, has embraced cutting-edge AI technology to revolutionize its IT operations in ServiceNow. Through its partnership with AWS, Iberdrola implemented different agentic architectures using Amazon Bedrock AgentCore, targeting three key areas: optimizing change request validation in the draft phase, enriching incident management with contextual intelligence, and simplifying change model selection using conversational AI. These innovations reduce...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -107,165 +169,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.92,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-17T20:38:52.071443+00:00"
+        "consensus_timestamp": "2026-02-18T02:01:32.066063+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.752,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-17T20:38:52.071446+00:00"
+        "timestamp": "2026-02-18T02:01:32.066065+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c57e7c208e9e052bfea44dda9a446b2a",
-      "title": "UK to champion how AI can supercharge growth, unlock new jobs and improve public services at AI Impact Summit in India",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/uk-to-champion-how-ai-can-supercharge-growth-unlock-new-jobs-and-improve-public-services-at-ai-impact-summit-in-india",
-      "published_date": "2026-02-16T00:01:00+00:00",
-      "category": "Government",
-      "description": "UK and international partners to redouble efforts for AI to transform public services, create jobs and drive renewal for people worldwide at AI Impact Summit.",
-      "author": "",
-      "content": "UK and international partners to redouble efforts for AI to transform public services, create jobs and drive renewal for people worldwide at AI Impact Summit.",
+      "article_id": "8e75fa972a2530cc99643a10e4649832",
+      "title": "How Painkiller RTX Uses Generative AI to Modernize Game Assets at Scale",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-painkiller-rtx-uses-generative-ai-to-modernize-game-assets-at-scale/",
+      "published_date": "2026-02-05T14:00:00+00:00",
+      "category": "Industry",
+      "description": "Painkiller RTX sets a new standard for how small teams can balance massive visual ambition with limited resources by integrating generative AI. By upscaling...",
+      "author": "Phillip Singh",
+      "content": "Painkiller RTX sets a new standard for how small teams can balance massive visual ambition with limited resources by integrating generative AI. By upscaling...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-17T20:38:52.070010+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-17T20:38:52.070013+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "eda7f289d605ce74cbcbd945396ccbbe",
-      "title": "Minister Narayan AI speech at Founders Forum",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/speeches/minister-narayan-ai-speech-at-founders-forum",
-      "published_date": "2026-02-12T11:19:53+00:00",
-      "category": "Government",
-      "description": "Kanishka Narayan, Minister for AI and Online Safety, spoke at Founders Forum on 10 February 2026.",
-      "author": "",
-      "content": "Kanishka Narayan, Minister for AI and Online Safety, spoke at Founders Forum on 10 February 2026.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-02-17T20:38:52.070255+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-02-17T20:38:52.070258+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "74b09a7d46b3e4eb9f501f3f2e27f1aa",
-      "title": "Researchers identify new blood markers that may detect early pancreatic cancer",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-identify-new-blood-markers-may-detect-early-pancreatic-cancer",
-      "published_date": "2026-02-17T20:34:50.632443+00:00",
-      "category": "Government",
-      "description": "NIH-funded, four-marker panel could one day help catch one of deadliest cancers at more treatable stages.",
-      "author": "",
-      "content": "NIH-funded, four-marker panel could one day help catch one of deadliest cancers at more treatable stages.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -293,21 +231,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-02-17T20:38:52.069449+00:00"
+        "consensus_timestamp": "2026-02-18T02:01:32.068254+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-02-17T20:38:52.069455+00:00"
+        "timestamp": "2026-02-18T02:01:32.068257+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5de5af77dbdb9b1b00b3ac471e2a9aa8",
+      "title": "Revolutionizing healthcare: The transformative impact of artificial intelligence",
+      "source": "ai_accelerator_institute",
+      "url": "https://www.aiacceleratorinstitute.com/revolutionizing-healthcare-the-transformative-impact-of-artificial-intelligence/",
+      "published_date": "2026-02-17T10:19:44+00:00",
+      "category": "Industry",
+      "description": "Artificial Intelligence is emerging as a transformative force in healthcare.",
+      "author": "AIAI",
+      "content": "Artificial Intelligence is emerging as a transformative force in healthcare.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-02-18T02:01:32.069528+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-02-18T02:01:32.069531+00:00"
       },
       "article_type": "article"
     }
