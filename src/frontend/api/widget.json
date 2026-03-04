@@ -1,84 +1,22 @@
 {
-  "updated": "2026-03-04T12:55:39.954678+00:00",
+  "updated": "2026-03-04T16:44:04.718061+00:00",
   "top_stories": [
     {
-      "article_id": "bbc4eb82b28f3c1f4a8fe65838b7a049",
-      "title": "Cursor has reportedly surpassed $2B in annualized revenue",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/",
-      "published_date": "2026-03-03T01:53:59+00:00",
+      "article_id": "9bde5ad5ac41f3c322039ca8503b433b",
+      "title": "Physical Intelligence Team Unveils MEM for Robots: A Multi-Scale Memory System Giving Gemma 3-4B VLAs 15-Minute Context for Complex Tasks",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/03/03/physical-intelligence-team-unveils-mem-for-robots-a-multi-scale-memory-system-giving-gemma-3-4b-vlas-15-minute-context-for-complex-tasks/",
+      "published_date": "2026-03-04T06:01:11+00:00",
       "category": "Industry",
-      "description": "The four-year-old startup saw its revenue run rate double over the past three months, according to one Bloomberg source.",
-      "author": "Marina Temkin",
-      "content": "The four-year-old startup saw its revenue run rate double over the past three months, according to one Bloomberg source.",
+      "description": "Current end-to-end robotic policies, specifically Vision-Language-Action (VLA) models, typically operate on a single observation or a very short history. This ‘lack of memory’ makes long-horizon tasks, such as cleaning a kitchen or following a complex recipe, computationally intractable or prone to failure. To address this, researchers from Physical Intelligence, Stanford, UC Berkeley, and MIT have […] The post Physical Intelligence Team Unveils MEM for Robots: A Multi-Scale Memory System...",
+      "author": "Asif Razzaq",
+      "content": "Current end-to-end robotic policies, specifically Vision-Language-Action (VLA) models, typically operate on a single observation or a very short history. This ‘lack of memory’ makes long-horizon tasks, such as cleaning a kitchen or following a complex recipe, computationally intractable or prone to failure. To address this, researchers from Physical Intelligence, Stanford, UC Berkeley, and MIT have […] The post Physical Intelligence Team Unveils MEM for Robots: A Multi-Scale Memory System...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T12:55:39.917942+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-04T12:55:39.917945+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "a1f83e4d1ee06d1a8f46c8fc8959630e",
-      "title": "cuTile.jl Brings NVIDIA CUDA Tile-Based Programming to Julia",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/cutile-jl-brings-nvidia-cuda-tile-based-programming-to-julia/",
-      "published_date": "2026-03-03T19:48:16+00:00",
-      "category": "Industry",
-      "description": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
-      "author": "Tim Besard",
-      "content": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "quality_score": 0.95,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -106,11 +44,73 @@
             "enhancement_suggestions": []
           }
         },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T16:44:04.680117+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T16:44:04.680119+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "ed48e80f117c6a2b1c37caae4e287fe0",
+      "title": "Efficiently serve dozens of fine-tuned models with vLLM on Amazon SageMaker AI and Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/efficiently-serve-dozens-of-fine-tuned-models-with-vllm-on-amazon-sagemaker-ai-and-amazon-bedrock/",
+      "published_date": "2026-02-25T20:56:13+00:00",
+      "category": "Industry",
+      "description": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "author": "Danielle Robinson",
+      "content": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.89,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
         "score": 0.9,
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T12:55:39.918670+00:00"
+        "consensus_timestamp": "2026-03-04T16:44:04.677157+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,20 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T12:55:39.918673+00:00"
+        "timestamp": "2026-03-04T16:44:04.677160+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "a1daa0f0d44cf832d2d7d77f348fa563",
-      "title": "ROCkN enables GPS-free operations",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2026/rockn-enables-gps-free-operations",
-      "published_date": "2026-02-25T20:28:02+00:00",
-      "category": "Government",
-      "description": "The Robust Optical Clock Network (ROCkN) program enables precision timekeeping, even in contested and/or GPS-denied environments.",
-      "author": "outreach@darpa.mil",
-      "content": "The Robust Optical Clock Network (ROCkN) program enables precision timekeeping, even in contested and/or GPS-denied environments.",
+      "article_id": "9c5958852e885295654746172190faeb",
+      "title": "Unlocking document understanding with Mistral Document AI in Microsoft Foundry",
+      "source": "azure_ai_blog",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664",
+      "published_date": "2026-03-03T16:24:29+00:00",
+      "category": "Industry",
+      "description": "Enterprises today face a familiar yet formidable challenge: mountains of documents -contracts, invoices, reports, forms - remain locked in unstructured formats. Traditional OCR (optical character recognition) captures text, but often struggles with context, layout complexity, or multilingual content. The result? Slow workflows, error-prone manual reviews, and missed insights. The post Unlocking document understanding with Mistral Document AI in Microsoft Foundry appeared first on Microsoft...",
+      "author": "Naomi Moneypenny",
+      "content": "Enterprises today face a familiar yet formidable challenge: mountains of documents -contracts, invoices, reports, forms - remain locked in unstructured formats. Traditional OCR (optical character recognition) captures text, but often struggles with context, layout complexity, or multilingual content. The result? Slow workflows, error-prone manual reviews, and missed insights. The post Unlocking document understanding with Mistral Document AI in Microsoft Foundry appeared first on Microsoft...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -169,40 +169,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T12:55:39.914883+00:00"
+        "consensus_timestamp": "2026-03-04T16:44:04.676568+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T12:55:39.914886+00:00"
+        "timestamp": "2026-03-04T16:44:04.676571+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "daa84be915c45e74ba90f2512d0e80a6",
-      "title": "Advancing independent research on AI alignment",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/advancing-independent-research-ai-alignment",
-      "published_date": "2026-02-19T10:00:00+00:00",
+      "article_id": "a1f83e4d1ee06d1a8f46c8fc8959630e",
+      "title": "cuTile.jl Brings NVIDIA CUDA Tile-Based Programming to Julia",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/cutile-jl-brings-nvidia-cuda-tile-based-programming-to-julia/",
+      "published_date": "2026-03-03T19:48:16+00:00",
       "category": "Industry",
-      "description": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
-      "author": "",
-      "content": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
+      "description": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
+      "author": "Tim Besard",
+      "content": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.8955,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -231,34 +231,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T12:55:39.916165+00:00"
+        "consensus_timestamp": "2026-03-04T16:44:04.678906+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T12:55:39.916167+00:00"
+        "timestamp": "2026-03-04T16:44:04.678909+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "514fdaf416c5a6aed5c3fbb044c20827",
-      "title": "Landmark consultation seeks views on major measures to protect children on social media, gaming platforms and AI chatbots",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/landmark-consultation-seeks-views-on-major-measures-to-protect-children-on-social-media-gaming-platforms-and-ai-chatbots",
-      "published_date": "2026-03-02T00:01:00+00:00",
-      "category": "Government",
-      "description": "Government launches a landmark consultation on UK children's digital wellbeing, covering social media age bans, curfews, AI chatbots and gaming.",
+      "article_id": "2c8e838d2708d87fcba606ef540bb841",
+      "title": "OpenAI announces Frontier Alliance Partners",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/frontier-alliance-partners",
+      "published_date": "2026-02-23T05:30:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.",
       "author": "",
-      "content": "Government launches a landmark consultation on UK children's digital wellbeing, covering social media age bans, curfews, AI chatbots and gaming.",
+      "content": "OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -296,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T12:55:39.915482+00:00"
+        "consensus_timestamp": "2026-03-04T16:44:04.676388+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T12:55:39.915485+00:00"
+        "timestamp": "2026-03-04T16:44:04.676391+00:00"
       },
       "article_type": "article"
     }
