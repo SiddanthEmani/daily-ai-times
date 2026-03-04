@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T01:53:56.828266+00:00",
+  "generated_at": "2026-03-04T05:11:54.413599+00:00",
   "articles": [
     {
       "article_id": "bbc4eb82b28f3c1f4a8fe65838b7a049",
@@ -12,12 +12,12 @@
       "author": "Marina Temkin",
       "content": "The four-year-old startup saw its revenue run rate double over the past three months, according to one Bloomberg source.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.8,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.795,
-        "confidence_mean": 0.8
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,23 +45,85 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.793644+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.373661+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T05:11:54.373663+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "23aed794b6476a924dd68433f0c958f5",
+      "title": "5 New Digital Twin Products Developers Can Use to Build 6G Networks",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/5-new-digital-twin-products-developers-can-use-to-build-6g-networks/",
+      "published_date": "2026-03-01T07:00:00+00:00",
+      "category": "Industry",
+      "description": "To make 6G a reality, the telecom industry must overcome a fundamental challenge: how to design, train, and validate AI-native networks that are too complex to...",
+      "author": "Cindy Goh",
+      "content": "To make 6G a reality, the telecom industry must overcome a fundamental challenge: how to design, train, and validate AI-native networks that are too complex to...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T05:11:54.374468+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.793646+00:00"
+        "timestamp": "2026-03-04T05:11:54.374471+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "48331dffb6567bca653658861f34f79a",
@@ -107,40 +169,102 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.791812+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.372041+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.791815+00:00"
+        "timestamp": "2026-03-04T05:11:54.372045+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ed48e80f117c6a2b1c37caae4e287fe0",
-      "title": "Efficiently serve dozens of fine-tuned models with vLLM on Amazon SageMaker AI and Amazon Bedrock",
+      "article_id": "eb391df0841564c133d382038368d313",
+      "title": "Train CodeFu-7B with veRL and Ray on Amazon SageMaker Training jobs",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/efficiently-serve-dozens-of-fine-tuned-models-with-vllm-on-amazon-sagemaker-ai-and-amazon-bedrock/",
-      "published_date": "2026-02-25T20:56:13+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/train-codefu-7b-with-verl-and-ray-on-amazon-sagemaker-training-jobs/",
+      "published_date": "2026-02-24T15:46:50+00:00",
       "category": "Industry",
-      "description": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
-      "author": "Danielle Robinson",
-      "content": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "description": "In this post, we demonstrate how to train CodeFu-7B, a specialized 7-billion parameter model for competitive programming, using Group Relative Policy Optimization (GRPO) with veRL, a flexible and efficient training library for large language models (LLMs) that enables straightforward extension of diverse RL algorithms and seamless integration with existing LLM infrastructure, within a distributed Ray cluster managed by SageMaker training jobs. We walk through the complete implementation,...",
+      "author": "Bruno Pistone",
+      "content": "In this post, we demonstrate how to train CodeFu-7B, a specialized 7-billion parameter model for competitive programming, using Group Relative Policy Optimization (GRPO) with veRL, a flexible and efficient training library for large language models (LLMs) that enables straightforward extension of diverse RL algorithms and seamless integration with existing LLM infrastructure, within a distributed Ray cluster managed by SageMaker training jobs. We walk through the complete implementation,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T05:11:54.372733+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T05:11:54.372736+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "36d06554584ea33753e9f4c589057440",
+      "title": "OpenAI Codex and Figma launch seamless code-to-design experience",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/figma-partnership",
+      "published_date": "2026-02-26T06:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI and Figma launch a new Codex integration that connects code and design, enabling teams to move between implementation and the Figma canvas to iterate and ship faster.",
+      "author": "",
+      "content": "OpenAI and Figma launch a new Codex integration that connects code and design, enabling teams to move between implementation and the Figma canvas to iterate and ship faster.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
         "quality_score": 0.9,
         "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.895,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -172,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.792555+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.371758+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.792558+00:00"
+        "timestamp": "2026-03-04T05:11:54.371764+00:00"
       },
       "article_type": "article"
     },
@@ -230,197 +354,11 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.790966+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-04T01:53:56.790969+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e67c1f19afef27152a5d56ac6e1abdc0",
-      "title": "Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/money/hedera-hashgraph-hbar-price-prediction",
-      "published_date": "2026-03-03T15:16:04+00:00",
-      "category": "Industry",
-      "description": "The post Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030 by Ryan Peterson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Hedera Hashgraph (HBAR) could reach $0.873 by 2030. Feeling confident about this HBAR price prediction? You can trade Hedera Hashgraph on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade....",
-      "author": "Ryan Peterson",
-      "content": "The post Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030 by Ryan Peterson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Hedera Hashgraph (HBAR) could reach $0.873 by 2030. Feeling confident about this HBAR price prediction? You can trade Hedera Hashgraph on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade....",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.795439+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-04T01:53:56.795441+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "bde2a903f9d62d8a9b3d9c0c622c9d4a",
-      "title": "Stop Paying for AI You Don't Use: The Case for Fine-Tuned Models",
-      "source": "nanonets_blog",
-      "url": "https://nanonets.com/blog/fine-tuned-models-vs-frontier-cost/",
-      "published_date": "2026-03-02T17:19:30+00:00",
-      "category": "Industry",
-      "description": "Processing 10,000 documents daily through GPT or Claude costs $50K annually. Fine-tuned models: $5K. Same accuracy. Faster latency. Data never leaves your control. But most teams don't realize this is now viable. Here's when frontier models make sense and when you're overpaying.",
-      "author": "Vinit Mehta",
-      "content": "Processing 10,000 documents daily through GPT or Claude costs $50K annually. Fine-tuned models: $5K. Same accuracy. Faster latency. Data never leaves your control. But most teams don't realize this is now viable. Here's when frontier models make sense and when you're overpaying.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.795576+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-04T01:53:56.795579+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "8e3c3f6b61c2e497dc5e72b1d21a8e9c",
-      "title": "Google AI Introduces STATIC: A Sparse Matrix Framework Delivering 948x Faster Constrained Decoding for LLM Based Generative Retrieval",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/01/google-ai-introduces-static-a-sparse-matrix-framework-delivering-948x-faster-constrained-decoding-for-llm-based-generative-retrieval/",
-      "published_date": "2026-03-01T21:47:04+00:00",
-      "category": "Industry",
-      "description": "In industrial recommendation systems, the shift toward Generative Retrieval (GR) is replacing traditional embedding-based nearest neighbor search with Large Language Models (LLMs). These models represent items as Semantic IDs (SIDs)—discrete token sequences—and treat retrieval as an autoregressive decoding task. However, industrial applications often require strict adherence to business logic, such as enforcing content freshness or […] The post Google AI Introduces STATIC: A Sparse Matrix...",
-      "author": "Asif Razzaq",
-      "content": "In industrial recommendation systems, the shift toward Generative Retrieval (GR) is replacing traditional embedding-based nearest neighbor search with Large Language Models (LLMs). These models represent items as Semantic IDs (SIDs)—discrete token sequences—and treat retrieval as an autoregressive decoding task. However, industrial applications often require strict adherence to business logic, such as enforcing content freshness or […] The post Google AI Introduces STATIC: A Sparse Matrix...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
         "score": 0.95,
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.796027+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.371121+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,27 +369,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.796030+00:00"
+        "timestamp": "2026-03-04T05:11:54.371124+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "efcbee47b60c3967c280ec1b8ee13704",
-      "title": "Microsoft Sovereign Cloud adds governance, productivity, and support for large AI models securely running even when completely disconnected",
-      "source": "azure_ai_blog",
-      "url": "http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog",
-      "published_date": "2026-02-24T10:20:00+00:00",
+      "article_id": "9ba9b481b9fc121debdb3f6b69de3513",
+      "title": "NVIDIA Brings AI-Powered Cybersecurity to World’s Critical Infrastructure",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/ai-cybersecurity-operational-technology-industrial-control-systems/",
+      "published_date": "2026-02-23T16:00:57+00:00",
       "category": "Industry",
-      "description": "Microsoft Sovereign Cloud's expansion of capabilities includes Azure Local disconnected operations, Microsoft 365 Local disconnected, and Microsoft Foundry addition of large model and modern infrastructure capabilities. The post Microsoft Sovereign Cloud adds governance, productivity, and support for large AI models securely running even when completely disconnected appeared first on Microsoft Azure Blog.",
-      "author": "Douglas Phillips",
-      "content": "Microsoft Sovereign Cloud's expansion of capabilities includes Azure Local disconnected operations, Microsoft 365 Local disconnected, and Microsoft Foundry addition of large model and modern infrastructure capabilities. The post Microsoft Sovereign Cloud adds governance, productivity, and support for large AI models securely running even when completely disconnected appeared first on Microsoft Azure Blog.",
+      "description": "As technologies and systems become more digitalized and connected across the world, operational technology (OT) environments and industrial control systems (ICS) — from energy and manufacturing to transportation and utilities — are increasingly depending on enterprise networks and the cloud. This expands OT and ICS capabilities — but also their exposure to cyber threats. Unlike Read Article",
+      "author": "Itay Ozery",
+      "content": "As technologies and systems become more digitalized and connected across the world, operational technology (OT) environments and industrial control systems (ICS) — from energy and manufacturing to transportation and utilities — are increasingly depending on enterprise networks and the cloud. This expands OT and ICS capabilities — but also their exposure to cyber threats. Unlike Read Article",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -482,7 +420,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.792032+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.373321+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,20 +431,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.792035+00:00"
+        "timestamp": "2026-03-04T05:11:54.373324+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "23aed794b6476a924dd68433f0c958f5",
-      "title": "5 New Digital Twin Products Developers Can Use to Build 6G Networks",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/5-new-digital-twin-products-developers-can-use-to-build-6g-networks/",
-      "published_date": "2026-03-01T07:00:00+00:00",
+      "article_id": "dfb95cecd4832bec4930fca52f63764c",
+      "title": "The trap Anthropic built for itself",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/02/28/the-trap-anthropic-built-for-itself/",
+      "published_date": "2026-03-01T00:08:58+00:00",
       "category": "Industry",
-      "description": "To make 6G a reality, the telecom industry must overcome a fundamental challenge: how to design, train, and validate AI-native networks that are too complex to...",
-      "author": "Cindy Goh",
-      "content": "To make 6G a reality, the telecom industry must overcome a fundamental challenge: how to design, train, and validate AI-native networks that are too complex to...",
+      "description": "Anthropic, OpenAI, Google DeepMind, and others have long promised to govern themselves responsibly. Now, in the absence of rules, there's not a lot to protect them.",
+      "author": "Connie Loizos",
+      "content": "Anthropic, OpenAI, Google DeepMind, and others have long promised to govern themselves responsibly. Now, in the absence of rules, there's not a lot to protect them.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -540,22 +478,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.794359+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.374203+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.794362+00:00"
+        "timestamp": "2026-03-04T05:11:54.374206+00:00"
       },
       "article_type": "article"
     },
@@ -564,7 +502,7 @@
       "title": "NIH scientists develop \"digital twin\" of eye cells to understand and treat age-related macular degeneration",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-scientists-develop-digital-twin-eye-cells-understand-treat-age-related-macular-degeneration",
-      "published_date": "2026-03-04T01:49:53.772326+00:00",
+      "published_date": "2026-03-04T05:07:59.420264+00:00",
       "category": "Government",
       "description": "Breakthrough modeling technology reveals how cells lose their organization in leading cause of vision loss.",
       "author": "",
@@ -606,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.790116+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.370276+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -617,27 +555,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.790120+00:00"
+        "timestamp": "2026-03-04T05:11:54.370280+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ea413dd5fb9cc460b2966530b8935872",
-      "title": "Google Drops Gemini 3.1 Flash-Lite: A Cost-efficient Powerhouse with Adjustable Thinking Levels Designed for High-Scale Production AI",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/03/google-drops-gemini-3-1-flash-lite-a-cost-efficient-powerhouse-with-adjustable-thinking-levels-designed-for-high-scale-production-ai/",
-      "published_date": "2026-03-03T18:28:09+00:00",
+      "article_id": "91d0ac1c9a2122f2028f295bf1bda701",
+      "title": "Building specialized AI without sacrificing intelligence: Nova Forge data mixing in action",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-specialized-ai-without-sacrificing-intelligence-nova-forge-data-mixing-in-action/",
+      "published_date": "2026-03-02T19:32:47+00:00",
       "category": "Industry",
-      "description": "Google has released Gemini 3.1 Flash-Lite, the most cost-efficient entry in the Gemini 3 model series. Designed for ‘intelligence at scale,’ this model is optimized for high-volume tasks where low latency and cost-per-token are the primary engineering constraints. It is currently available in Public Preview via the Gemini API (Google AI Studio) and Vertex AI. […] The post Google Drops Gemini 3.1 Flash-Lite: A Cost-efficient Powerhouse with Adjustable Thinking Levels Designed for High-Scale...",
-      "author": "Asif Razzaq",
-      "content": "Google has released Gemini 3.1 Flash-Lite, the most cost-efficient entry in the Gemini 3 model series. Designed for ‘intelligence at scale,’ this model is optimized for high-volume tasks where low latency and cost-per-token are the primary engineering constraints. It is currently available in Public Preview via the Gemini API (Google AI Studio) and Vertex AI. […] The post Google Drops Gemini 3.1 Flash-Lite: A Cost-efficient Powerhouse with Adjustable Thinking Levels Designed for High-Scale...",
+      "description": "In this post, we share results from the AWS China Applied Science team's comprehensive evaluation of Nova Forge using a challenging Voice of Customer (VOC) classification task, benchmarked against open-source models.",
+      "author": "Yuan Wei",
+      "content": "In this post, we share results from the AWS China Applied Science team's comprehensive evaluation of Nova Forge using a challenging Voice of Customer (VOC) classification task, benchmarked against open-source models.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.8
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -664,35 +602,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.795762+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.372275+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.795765+00:00"
+        "timestamp": "2026-03-04T05:11:54.372278+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "71bc18edba905a5501f28f39b55c3236",
-      "title": "Introducing Amazon Bedrock global cross-Region inference for Anthropic’s Claude models in the Middle East Regions (UAE and Bahrain)",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-global-cross-region-inference-for-anthropics-claude-models-in-the-middle-east-regions/",
-      "published_date": "2026-02-24T15:33:51+00:00",
+      "article_id": "5bf1867a9d5c9ba9d49e762f035bed08",
+      "title": "NeuralTrust recognized by Gartner® Market Guide for Guardian Agents",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/neuraltrust-recognized-by-gartner-market-guide-for-guardian-agents/",
+      "published_date": "2026-03-02T15:45:00+00:00",
       "category": "Industry",
-      "description": "We’re excited to announce the availability of Anthropic’s Claude Opus 4.6, Claude Sonnet 4.6, Claude Opus 4.5, Claude Sonnet 4.5, and Claude Haiku 4.5 through Amazon Bedrock global cross-Region inference for customers operating in the Middle East. In this post, we guide you through the capabilities of each Anthropic Claude model variant, the key advantages of global cross-Region inference including improved resilience, real-world use cases you can implement, and a code example to help you start...",
-      "author": "Hossam Basudan",
-      "content": "We’re excited to announce the availability of Anthropic’s Claude Opus 4.6, Claude Sonnet 4.6, Claude Opus 4.5, Claude Sonnet 4.5, and Claude Haiku 4.5 through Amazon Bedrock global cross-Region inference for customers operating in the Middle East. In this post, we guide you through the capabilities of each Anthropic Claude model variant, the key advantages of global cross-Region inference including improved resilience, real-world use cases you can implement, and a code example to help you start...",
+      "description": "NeuralTrust is the leading platform for securing AI Agents and LLM applications. It provides runtime protection, automated red teaming, evaluation, and observability to help enterprises deploy AI systems securely and at scale. NeuralTrust today announced it has been recognized as a Representative Vendor in Gartner’s Market Guide for Guardian Agents, as Agent Risk... The post NeuralTrust recognized by Gartner® Market Guide for Guardian Agents first appeared on AI-Tech Park.",
+      "author": "PR Newswire",
+      "content": "NeuralTrust is the leading platform for securing AI Agents and LLM applications. It provides runtime protection, automated red teaming, evaluation, and observability to help enterprises deploy AI systems securely and at scale. NeuralTrust today announced it has been recognized as a Representative Vendor in Gartner’s Market Guide for Guardian Agents, as Agent Risk... The post NeuralTrust recognized by Gartner® Market Guide for Guardian Agents first appeared on AI-Tech Park.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -726,42 +664,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.92,
+        "confidence": 0.96,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.792827+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.375145+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.752,
+        "combined_confidence": 0.776,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.792830+00:00"
+        "timestamp": "2026-03-04T05:11:54.375148+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0bd51bc69014e1f3e862c17d240c5ded",
-      "title": "How to Minimize Game Runtime Inference Costs with Coding Agents",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-minimize-game-runtime-inference-costs-with-coding-agents/",
-      "published_date": "2026-03-03T19:49:57+00:00",
+      "article_id": "97aa988e8502a83ef3d89fc894b23051",
+      "title": "How to Build an Explainable AI Analysis Pipeline Using SHAP-IQ to Understand Feature Importance, Interaction Effects, and Model Decision Breakdown",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/03/01/how-to-build-an-explainable-ai-analysis-pipeline-using-shap-iq-to-understand-feature-importance-interaction-effects-and-model-decision-breakdown/",
+      "published_date": "2026-03-02T06:13:50+00:00",
       "category": "Industry",
-      "description": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
-      "author": "Brandon Rowlett",
-      "content": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
+      "description": "In this tutorial, we build an advanced explainable AI analysis pipeline using SHAP-IQ to understand both feature importance and interaction effects directly inside our Python environment. We load a real-world dataset, train a high-performance Random Forest model, and then apply the SHAP-IQ interaction index to compute precise, theoretically grounded explanations of model predictions. We extract […] The post How to Build an Explainable AI Analysis Pipeline Using SHAP-IQ to Understand Feature...",
+      "author": "Michal Sutter",
+      "content": "In this tutorial, we build an advanced explainable AI analysis pipeline using SHAP-IQ to understand both feature importance and interaction effects directly inside our Python environment. We load a real-world dataset, train a high-performance Random Forest model, and then apply the SHAP-IQ interaction index to compute precise, theoretically grounded explanations of model predictions. We extract […] The post How to Build an Explainable AI Analysis Pipeline Using SHAP-IQ to Understand Feature...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.9,
         "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -788,41 +726,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.794223+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.376004+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.794226+00:00"
+        "timestamp": "2026-03-04T05:11:54.376006+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "4e684bdd9f0a9d6a81f019bf303470ce",
-      "title": "A new way to express yourself: Gemini can now create music",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/a-new-way-to-express-yourself-gemini-can-now-create-music/",
-      "published_date": "2026-02-18T16:01:38+00:00",
+      "article_id": "d55954ac35394d0b8af244101f9ee169",
+      "title": "Google looks to tackle longstanding RCS spam in India — but not alone",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/03/01/google-looks-to-tackle-longstanding-rcs-spam-in-india-but-not-alone/",
+      "published_date": "2026-03-01T17:30:00+00:00",
       "category": "Industry",
-      "description": "The Gemini app now features our most advanced music generation model Lyria 3, empowering anyone to make 30-second tracks using text or images.",
-      "author": "",
-      "content": "The Gemini app now features our most advanced music generation model Lyria 3, empowering anyone to make 30-second tracks using text or images.",
+      "description": "Google is integrating carrier-level filtering into RCS in India through a partnership with Airtel to strengthen protections against spam.",
+      "author": "Jagmeet Singh",
+      "content": "Google is integrating carrier-level filtering into RCS in India through a partnership with Airtel to strengthen protections against spam.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -851,40 +789,40 @@
           }
         },
         "score": 0.85,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.794782+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.373980+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.794784+00:00"
+        "timestamp": "2026-03-04T05:11:54.373983+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9ba9b481b9fc121debdb3f6b69de3513",
-      "title": "NVIDIA Brings AI-Powered Cybersecurity to World’s Critical Infrastructure",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/ai-cybersecurity-operational-technology-industrial-control-systems/",
-      "published_date": "2026-02-23T16:00:57+00:00",
+      "article_id": "0bd51bc69014e1f3e862c17d240c5ded",
+      "title": "How to Minimize Game Runtime Inference Costs with Coding Agents",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-minimize-game-runtime-inference-costs-with-coding-agents/",
+      "published_date": "2026-03-03T19:49:57+00:00",
       "category": "Industry",
-      "description": "As technologies and systems become more digitalized and connected across the world, operational technology (OT) environments and industrial control systems (ICS) — from energy and manufacturing to transportation and utilities — are increasingly depending on enterprise networks and the cloud. This expands OT and ICS capabilities — but also their exposure to cyber threats. Unlike Read Article",
-      "author": "Itay Ozery",
-      "content": "As technologies and systems become more digitalized and connected across the world, operational technology (OT) environments and industrial control systems (ICS) — from energy and manufacturing to transportation and utilities — are increasingly depending on enterprise networks and the cloud. This expands OT and ICS capabilities — but also their exposure to cyber threats. Unlike Read Article",
+      "description": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
+      "author": "Brandon Rowlett",
+      "content": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -912,22 +850,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-04T01:53:56.793275+00:00"
+        "consensus_timestamp": "2026-03-04T05:11:54.374337+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-04T01:53:56.793278+00:00"
+        "timestamp": "2026-03-04T05:11:54.374339+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "977b72bf9fe21de8131d5d4a0cd4d9c4",
+      "title": "Study measuring changes in protein structure establishes new class of Alzheimer’s biomarkers",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/study-measuring-changes-protein-structure-establishes-new-class-alzheimers-biomarkers",
+      "published_date": "2026-03-04T05:07:59.419844+00:00",
+      "category": "Government",
+      "description": "NIH-funded insights into Alzheimer’s biology could help with early diagnosis, future clinical trials.",
+      "author": "",
+      "content": "NIH-funded insights into Alzheimer’s biology could help with early diagnosis, future clinical trials.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T05:11:54.370012+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T05:11:54.370024+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 166.35044288635254,
+    "processing_time": 164.52467322349548,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 129,
+      "total_processed": 127,
       "candidates": {
-        "headlines": 6,
-        "articles": 123,
+        "headlines": 12,
+        "articles": 115,
         "research_papers": 0
       },
       "selected": {
