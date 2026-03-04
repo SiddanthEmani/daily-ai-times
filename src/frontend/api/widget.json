@@ -1,23 +1,23 @@
 {
-  "updated": "2026-03-03T20:34:01.708093+00:00",
+  "updated": "2026-03-04T01:53:56.831291+00:00",
   "top_stories": [
     {
-      "article_id": "e9babbb3794d65415667a57d300e3279",
-      "title": "Tech workers urge DOD, Congress to withdraw Anthropic label as a supply-chain risk",
+      "article_id": "bbc4eb82b28f3c1f4a8fe65838b7a049",
+      "title": "Cursor has reportedly surpassed $2B in annualized revenue",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/03/02/tech-workers-urge-dod-congress-to-withdraw-anthropic-label-as-a-supply-chain-risk/",
-      "published_date": "2026-03-02T17:18:34+00:00",
+      "url": "https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/",
+      "published_date": "2026-03-03T01:53:59+00:00",
       "category": "Industry",
-      "description": "Tech workers have signed an open letter urging the Department of Defense to withdraw its designation of Anthropic as a \"supply chain risk\" and instead to settle the matter quietly.",
-      "author": "Rebecca Bellan",
-      "content": "Tech workers have signed an open letter urging the Department of Defense to withdraw its designation of Anthropic as a \"supply chain risk\" and instead to settle the matter quietly.",
+      "description": "The four-year-old startup saw its revenue run rate double over the past three months, according to one Bloomberg source.",
+      "author": "Marina Temkin",
+      "content": "The four-year-old startup saw its revenue run rate double over the past three months, according to one Bloomberg source.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.8,
         "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.795,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,40 +45,102 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-03T20:34:01.674197+00:00"
+        "consensus_timestamp": "2026-03-04T01:53:56.793644+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-03T20:34:01.674200+00:00"
+        "timestamp": "2026-03-04T01:53:56.793646+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "daa84be915c45e74ba90f2512d0e80a6",
-      "title": "Advancing independent research on AI alignment",
+      "article_id": "48331dffb6567bca653658861f34f79a",
+      "title": "Introducing OpenAI for India",
       "source": "openai_blog",
-      "url": "https://openai.com/index/advancing-independent-research-ai-alignment",
-      "published_date": "2026-02-19T10:00:00+00:00",
+      "url": "https://openai.com/index/openai-for-india",
+      "published_date": "2026-02-18T21:00:00+00:00",
       "category": "Industry",
-      "description": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
+      "description": "OpenAI for India expands AI access across the country—building local infrastructure, powering enterprises, and advancing workforce skills.",
       "author": "",
-      "content": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
+      "content": "OpenAI for India expands AI access across the country—building local infrastructure, powering enterprises, and advancing workforce skills.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.925,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T01:53:56.791812+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T01:53:56.791815+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ed48e80f117c6a2b1c37caae4e287fe0",
+      "title": "Efficiently serve dozens of fine-tuned models with vLLM on Amazon SageMaker AI and Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/efficiently-serve-dozens-of-fine-tuned-models-with-vllm-on-amazon-sagemaker-ai-and-amazon-bedrock/",
+      "published_date": "2026-02-25T20:56:13+00:00",
+      "category": "Industry",
+      "description": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "author": "Danielle Robinson",
+      "content": "In this post, we explain how we implemented multi-LoRA inference for Mixture of Experts (MoE) models in vLLM, describe the kernel-level optimizations we performed, and show you how you can benefit from this work. We use GPT-OSS 20B as our primary example throughout this post.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-03T20:34:01.672513+00:00"
+        "consensus_timestamp": "2026-03-04T01:53:56.792555+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,151 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-03T20:34:01.672516+00:00"
+        "timestamp": "2026-03-04T01:53:56.792558+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "ff82d313a51cca23bad9bc836ada9d30",
-      "title": "Zilliz Cloud Brings BYOC to Azure",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/zilliz-cloud-brings-byoc-to-azure/",
-      "published_date": "2026-03-02T13:45:00+00:00",
-      "category": "Industry",
-      "description": "Zilliz, the company behind Milvus, the world’s most widely adopted open-source vector database, today announced the general availability of Zilliz Cloud BYOC (Bring Your Own Cloud) on Microsoft Azure. With this launch, Zilliz Cloud BYOC is now available across AWS, Google Cloud Platform, and Microsoft Azure—making Zilliz the first managed vector database provider to support BYOC... The post Zilliz Cloud Brings BYOC to Azure first appeared on AI-Tech Park.",
-      "author": "PR Newswire",
-      "content": "Zilliz, the company behind Milvus, the world’s most widely adopted open-source vector database, today announced the general availability of Zilliz Cloud BYOC (Bring Your Own Cloud) on Microsoft Azure. With this launch, Zilliz Cloud BYOC is now available across AWS, Google Cloud Platform, and Microsoft Azure—making Zilliz the first managed vector database provider to support BYOC... The post Zilliz Cloud Brings BYOC to Azure first appeared on AI-Tech Park.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.9099999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-03T20:34:01.675548+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-03T20:34:01.675550+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a46fa209dab2c72ab2b7fa1aff9fcc6e",
-      "title": "How Lendi revamped the refinance journey for its customers using agentic AI in 16 weeks using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-lendi-revamped-the-refinance-journey-for-its-customers-using-agentic-ai-in-12-weeks-using-amazon-bedrock/",
-      "published_date": "2026-03-03T16:18:30+00:00",
-      "category": "Industry",
-      "description": "This post details how Lendi Group built their AI-powered Home Loan Guardian using Amazon Bedrock, the challenges they faced, the architecture they implemented, and the significant business outcomes they’ve achieved. Their journey offers valuable insights for organizations that want to use generative AI to transform customer experiences while maintaining the human touch that builds trust and loyalty.",
-      "author": "Deepak Dalakoti",
-      "content": "This post details how Lendi Group built their AI-powered Home Loan Guardian using Amazon Bedrock, the challenges they faced, the architecture they implemented, and the significant business outcomes they’ve achieved. Their journey offers valuable insights for organizations that want to use generative AI to transform customer experiences while maintaining the human touch that builds trust and loyalty.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-03T20:34:01.672866+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-03T20:34:01.672868+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e9ae74dc56bc0cd349e05f73c3e99389",
-      "title": "Nimble raises $47M to scale agentic web search platform for enterprise AI",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/02/24/nimble-raises-47m-scale-agentic-web-search-platform-enterprise-ai/",
-      "published_date": "2026-02-24T13:00:28+00:00",
-      "category": "Industry",
-      "description": "Nimble announced today that it has raised $47 million in new funding to accelerate development of its agentic web search platform, expand its multi-agent research capabilities and scale up its governed real-time web data infrastructure for enterprise artificial intelligence deployments. Founded in 2021 as Thhe Data Company Technologies Inc., Nimble offers a real-time web search […] The post Nimble raises $47M to scale agentic web search platform for enterprise AI appeared first on SiliconANGLE.",
-      "author": "Duncan Riley",
-      "content": "Nimble announced today that it has raised $47 million in new funding to accelerate development of its agentic web search platform, expand its multi-agent research capabilities and scale up its governed real-time web data infrastructure for enterprise artificial intelligence deployments. Founded in 2021 as Thhe Data Company Technologies Inc., Nimble offers a real-time web search […] The post Nimble raises $47M to scale agentic web search platform for enterprise AI appeared first on SiliconANGLE.",
+      "article_id": "8ea2f292ea1eabfd3170495e8e4470fb",
+      "title": "Government cuts cyber-attack fix times by 84% and launches new profession to protect public services",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/government-cuts-cyber-attack-fix-times-by-84-and-launches-new-profession-to-protect-public-services",
+      "published_date": "2026-02-26T09:56:00+00:00",
+      "category": "Government",
+      "description": "The government has launched a new vulnerability monitoring service (VMS) to reduce cyber risks and speed up fixes, and a new Cyber Profession to build long-term resilience across public services.",
+      "author": "",
+      "content": "The government has launched a new vulnerability monitoring service (VMS) to reduce cyber risks and speed up fixes, and a new Cyber Profession to build long-term resilience across public services.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.885,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +230,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-03T20:34:01.676388+00:00"
+        "consensus_timestamp": "2026-03-04T01:53:56.790966+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-03T20:34:01.676391+00:00"
+        "timestamp": "2026-03-04T01:53:56.790969+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e67c1f19afef27152a5d56ac6e1abdc0",
+      "title": "Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030",
+      "source": "benzinga",
+      "url": "https://www.benzinga.com/money/hedera-hashgraph-hbar-price-prediction",
+      "published_date": "2026-03-03T15:16:04+00:00",
+      "category": "Industry",
+      "description": "The post Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030 by Ryan Peterson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Hedera Hashgraph (HBAR) could reach $0.873 by 2030. Feeling confident about this HBAR price prediction? You can trade Hedera Hashgraph on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade....",
+      "author": "Ryan Peterson",
+      "content": "The post Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030 by Ryan Peterson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Hedera Hashgraph (HBAR) could reach $0.873 by 2030. Feeling confident about this HBAR price prediction? You can trade Hedera Hashgraph on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade....",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-04T01:53:56.795439+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-04T01:53:56.795441+00:00"
       },
       "article_type": "article"
     }
