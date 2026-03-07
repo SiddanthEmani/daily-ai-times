@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-07T08:32:13.842249+00:00",
+  "updated": "2026-03-07T12:44:02.135822+00:00",
   "top_stories": [
     {
       "article_id": "59958f737c9ccaebe0c8c6a4faf8012a",
@@ -13,10 +13,72 @@
       "content": "Anthropic's $200 million contract with the Department of Defense broke down due to disagreements over giving the military unrestricted access to its AI.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.875,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-07T12:44:02.093197+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-07T12:44:02.093200+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "56e34b26d804b7dd0b31e741cc4c986b",
+      "title": "Gemini 3.1 Flash-Lite: Built for intelligence at scale",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-lite-built-for-intelligence-at-scale/",
+      "published_date": "2026-03-03T16:35:55+00:00",
+      "category": "Industry",
+      "description": "Gemini 3.1 Flash-Lite is our fastest and most cost-efficient Gemini 3 series model yet.",
+      "author": "",
+      "content": "Gemini 3.1 Flash-Lite is our fastest and most cost-efficient Gemini 3 series model yet.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-07T08:32:13.801809+00:00"
+        "consensus_timestamp": "2026-03-07T12:44:02.093929+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,131 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-07T08:32:13.801812+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "f912387081a04dd5a93c9c1c1bd6c1b9",
-      "title": "NVIDIA Advances Autonomous Networks With Agentic AI Blueprints and Telco Reasoning Models",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-agentic-ai-blueprints-telco-reasoning-models/",
-      "published_date": "2026-03-01T07:00:45+00:00",
-      "category": "Industry",
-      "description": "Autonomous networks — intelligent, self-managing telecommunications operations — are moving from a future vision to a current priority for telecom operators. In the latest NVIDIA State of AI in Telecommunications report, network automation emerged as the top AI use case for investment and return on investment. Automation is different from autonomy. Beyond executing predefined workflows, […]",
-      "author": "Amogh Dendukuri",
-      "content": "Autonomous networks — intelligent, self-managing telecommunications operations — are moving from a future vision to a current priority for telecom operators. In the latest NVIDIA State of AI in Telecommunications report, network automation emerged as the top AI use case for investment and return on investment. Automation is different from autonomy. Beyond executing predefined workflows, […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-07T08:32:13.800842+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-07T08:32:13.800845+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9c9e8675a04f5b3668e5311740b0d99b",
-      "title": "OpenAI Introduces Codex Security in Research Preview for Context-Aware Vulnerability Detection, Validation, and Patch Generation Across Codebases",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/06/openai-introduces-codex-security-in-research-preview-for-context-aware-vulnerability-detection-validation-and-patch-generation-across-codebases/",
-      "published_date": "2026-03-06T20:49:07+00:00",
-      "category": "Industry",
-      "description": "OpenAI has introduced Codex Security, an application security agent that analyzes a codebase, validates likely vulnerabilities, and proposes fixes that developers can review before patching. The product is now rolling out in research preview to ChatGPT Enterprise, Business, and Edu customers through Codex web. Why OpenAI Built Codex Security? The product is designed for a […] The post OpenAI Introduces Codex Security in Research Preview for Context-Aware Vulnerability Detection, Validation, and...",
-      "author": "Michal Sutter",
-      "content": "OpenAI has introduced Codex Security, an application security agent that analyzes a codebase, validates likely vulnerabilities, and proposes fixes that developers can review before patching. The product is now rolling out in research preview to ChatGPT Enterprise, Business, and Edu customers through Codex web. Why OpenAI Built Codex Security? The product is designed for a […] The post OpenAI Introduces Codex Security in Research Preview for Context-Aware Vulnerability Detection, Validation, and...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.885,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-07T08:32:13.803475+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-07T08:32:13.803477+00:00"
+        "timestamp": "2026-03-07T12:44:02.093933+00:00"
       },
       "article_type": "article"
     },
@@ -200,9 +138,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -234,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-07T08:32:13.797506+00:00"
+        "consensus_timestamp": "2026-03-07T12:44:02.089444+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,20 +183,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-07T08:32:13.797509+00:00"
+        "timestamp": "2026-03-07T12:44:02.089447+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7b27fa2b4d9db40e1b1260549fd15395",
-      "title": "AI Arms Race: The First Scoreboard Is Live",
-      "source": "nanonets_blog",
-      "url": "https://nanonets.com/blog/ai-warfare-operation-epic-fury-2026/",
-      "published_date": "2026-03-06T09:40:24+00:00",
-      "category": "Industry",
-      "description": "AI targeting systems executed 900 strikes in 12 hours, a pace that previously took weeks. Maven, Palantir, and frontier models are operational in active conflict. The Pentagon just banned Anthropic and switched to OpenAI while strikes continue. The arms race has numbers now.",
-      "author": "Vinit Mehta",
-      "content": "AI targeting systems executed 900 strikes in 12 hours, a pace that previously took weeks. Maven, Palantir, and frontier models are operational in active conflict. The Pentagon just banned Anthropic and switched to OpenAI while strikes continue. The arms race has numbers now.",
+      "article_id": "8e79bde42842997b53044415f7970c20",
+      "title": "NIH Proposes Embryonic Stem Cell Research Shift to Put Patients First",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-proposes-embryonic-stem-cell-research-shift-put-patients-first",
+      "published_date": "2026-03-07T12:40:52.703114+00:00",
+      "category": "Government",
+      "description": "Agency seeks public comment on the robustness of emerging biotechnologies to reduce or potentially replace remaining research reliance on human embryonic stem cells.",
+      "author": "",
+      "content": "Agency seeks public comment on the robustness of emerging biotechnologies to reduce or potentially replace remaining research reliance on human embryonic stem cells.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-07T08:32:13.803297+00:00"
+        "consensus_timestamp": "2026-03-07T12:44:02.089251+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-07T08:32:13.803300+00:00"
+        "timestamp": "2026-03-07T12:44:02.089255+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9684f5cff900e970245a409a0386ff27",
+      "title": "Cognitive speed training over weeks may delay the diagnosis of dementia over decades",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/cognitive-speed-training-over-weeks-may-delay-diagnosis-dementia-over-decades",
+      "published_date": "2026-03-07T12:40:52.702679+00:00",
+      "category": "Government",
+      "description": "NIH-funded effort finds positive outcomes with strategies that engaged mostly unconscious, rather than conscious, thinking.",
+      "author": "",
+      "content": "NIH-funded effort finds positive outcomes with strategies that engaged mostly unconscious, rather than conscious, thinking.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-07T12:44:02.088986+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-07T12:44:02.088990+00:00"
       },
       "article_type": "article"
     }
