@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-15T20:30:39.409018+00:00",
+  "generated_at": "2026-03-16T02:11:07.717126+00:00",
   "articles": [
     {
       "article_id": "9c8b38b6560542b780121703859ebe4b",
@@ -14,9 +14,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.82,
+        "overall_score": 0.8450000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -45,34 +45,96 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.374646+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.680005+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.374649+00:00"
+        "timestamp": "2026-03-16T02:11:07.680008+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "867c9b6e46047381ef399e7eb223f1ad",
-      "title": "WAXAL: A large-scale open resource for African language speech technology",
-      "source": "google_research_blog",
-      "url": "https://research.google/blog/waxal-a-large-scale-open-resource-for-african-language-speech-technology/",
-      "published_date": "2026-03-06T20:06:00+00:00",
+      "article_id": "6b6a7ee7fa8577ba543e9e5d138f3e5b",
+      "title": "From model to agent: Equipping the Responses API with a computer environment",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/equip-responses-api-computer-environment",
+      "published_date": "2026-03-11T11:00:00+00:00",
       "category": "Industry",
-      "description": "Natural Language Processing",
+      "description": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
       "author": "",
-      "content": "Natural Language Processing",
+      "content": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.98,
+        "novelty_score": 0.9,
+        "impact_score": 0.99,
+        "overall_score": 0.9530000000000001,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 1.0,
+        "confidence": 1.0,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.677600+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.8,
+        "combined_confidence": 0.8,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.677603+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bd54827b71cd9131de6797f97c3ddba0",
+      "title": "Run NVIDIA Nemotron 3 Nano as a fully managed serverless model on Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/run-nvidia-nemotron-3-nano-as-a-fully-managed-serverless-model-on-amazon-bedrock/",
+      "published_date": "2026-03-09T20:48:46+00:00",
+      "category": "Industry",
+      "description": "We are excited to announce that NVIDIA’s Nemotron 3 Nano is now available as a fully managed and serverless model in Amazon Bedrock. This follows our earlier announcement at AWS re:Invent supporting NVIDIA Nemotron 2 Nano 9B and NVIDIA Nemotron 2 Nano VL 12B models. This post explores the technical characteristics of the NVIDIA Nemotron 3 Nano model and discusses potential application use cases. Additionally, it provides technical guidance to help you get started using this model for your...",
+      "author": "Aris Tsakpinis",
+      "content": "We are excited to announce that NVIDIA’s Nemotron 3 Nano is now available as a fully managed and serverless model in Amazon Bedrock. This follows our earlier announcement at AWS re:Invent supporting NVIDIA Nemotron 2 Nano 9B and NVIDIA Nemotron 2 Nano VL 12B models. This post explores the technical characteristics of the NVIDIA Nemotron 3 Nano model and discusses potential application use cases. Additionally, it provides technical guidance to help you get started using this model for your...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -106,35 +168,159 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.376158+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.678666+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.376161+00:00"
+        "timestamp": "2026-03-16T02:11:07.678669+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "cb9ce6a458a34f96d6065089ca12fdbc",
-      "title": "New NVIDIA Nemotron 3 Super Delivers 5x Higher Throughput for Agentic AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nemotron-3-super-agentic-ai/",
-      "published_date": "2026-03-11T16:00:21+00:00",
+      "article_id": "fd143c54c5562e10fbcff2a729e43a37",
+      "title": "Designing AI agents to resist prompt injection",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+      "published_date": "2026-03-11T11:30:00+00:00",
       "category": "Industry",
-      "description": "Launched today, NVIDIA Nemotron 3 Super is a 120‑billion‑parameter open model with 12 billion active parameters designed to run complex agentic AI systems at scale. Available now, the model combines advanced reasoning capabilities to efficiently complete tasks with high accuracy for autonomous agents. AI-Native Companies: Perplexity offers its users access to Nemotron 3 Super for […]",
-      "author": "Kari Briski",
-      "content": "Launched today, NVIDIA Nemotron 3 Super is a 120‑billion‑parameter open model with 12 billion active parameters designed to run complex agentic AI systems at scale. Available now, the model combines advanced reasoning capabilities to efficiently complete tasks with high accuracy for autonomous agents. AI-Native Companies: Perplexity offers its users access to Nemotron 3 Super for […]",
+      "description": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+      "author": "",
+      "content": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9035,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.677506+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.677509+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e0cf923b64f9ab3e590bc53133ca01ab",
+      "title": "OpenAI to acquire Promptfoo",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-to-acquire-promptfoo",
+      "published_date": "2026-03-09T10:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI is acquiring Promptfoo, an AI security platform that helps enterprises identify and remediate vulnerabilities in AI systems during development.",
+      "author": "",
+      "content": "OpenAI is acquiring Promptfoo, an AI security platform that helps enterprises identify and remediate vulnerabilities in AI systems during development.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9035,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.677738+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.677741+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3a52fcdc4eaef1bf404eef152caa53ad",
+      "title": "Validate Kubernetes for GPU Infrastructure with Layered, Reproducible Recipes",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/validate-kubernetes-for-gpu-infrastructure-with-layered-reproducible-recipes/",
+      "published_date": "2026-03-12T16:30:00+00:00",
+      "category": "Industry",
+      "description": "Every AI cluster running on Kubernetes requires a full software stack that works together, from low-level driver and kernel settings to high-level operator and...",
+      "author": "Mark Chmarny",
+      "content": "Every AI cluster running on Kubernetes requires a full software stack that works together, from low-level driver and kernel settings to high-level operator and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -169,34 +355,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.373974+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.680737+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.373976+00:00"
+        "timestamp": "2026-03-16T02:11:07.680740+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "69a5df3afd8fa2dbd09f311bd6b7c685",
-      "title": "Embed Amazon Quick Suite chat agents in enterprise applications",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/embed-amazon-quick-suite-chat-agents-in-enterprise-applications/",
-      "published_date": "2026-03-04T21:20:58+00:00",
+      "article_id": "dd82d99a0f90f0ce350c756fad340aea",
+      "title": "Ensuring AI use in education leads to opportunity",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/ai-education-opportunity",
+      "published_date": "2026-03-05T09:00:00+00:00",
       "category": "Industry",
-      "description": "Organizations find it challenging to implement a secure embedded chat in their applications and can require weeks of development to build authentication, token validation, domain security, and global distribution infrastructure. In this post, we show you how to solve this with a one-click deployment solution to embed the chat agents using the Quick Suite Embedding SDK in enterprise portals.",
-      "author": "Satyanarayana Adimula",
-      "content": "Organizations find it challenging to implement a secure embedded chat in their applications and can require weeks of development to build authentication, token validation, domain security, and global distribution infrastructure. In this post, we show you how to solve this with a one-click deployment solution to embed the chat agents using the Quick Suite Embedding SDK in enterprise portals.",
+      "description": "OpenAI shares new tools, certifications, and measurement resources to help schools and universities close AI capability gaps and expand opportunity.",
+      "author": "",
+      "content": "OpenAI shares new tools, certifications, and measurement resources to help schools and universities close AI capability gaps and expand opportunity.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -231,83 +417,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.373146+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.678010+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.373157+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cb6edd161d0719d3eed3aed8f32ebcc4",
-      "title": "Operationalizing Agentic AI Part 1: A Stakeholder’s Guide",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/operationalizing-agentic-ai-part-1-a-stakeholders-guide/",
-      "published_date": "2026-03-11T20:52:23+00:00",
-      "category": "Industry",
-      "description": "The AWS Generative AI Innovation Center has helped 1,000+ customers move AI into production, delivering millions in documented productivity gains. In this post, we share guidance for leaders across the C-suite: CTOs, CISOs, CDOs, and Chief Data Science/AI officers, as well as business owners and compliance leads.",
-      "author": "Nav Bhasin",
-      "content": "The AWS Generative AI Innovation Center has helped 1,000+ customers move AI into production, delivering millions in documented productivity gains. In this post, we share guidance for leaders across the C-suite: CTOs, CISOs, CDOs, and Chief Data Science/AI officers, as well as business owners and compliance leads.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.372736+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.372740+00:00"
+        "timestamp": "2026-03-16T02:11:07.678013+00:00"
       },
       "article_type": "article"
     },
@@ -316,7 +440,7 @@
       "title": "NIH-supported trial reduces HIV incidence by 70% in rural populations",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-supported-trial-reduces-hiv-incidence-70-rural-populations",
-      "published_date": "2026-03-15T20:26:50.995688+00:00",
+      "published_date": "2026-03-16T02:07:11.290017+00:00",
       "category": "Government",
       "description": "Study&nbsp;used technology to extend reach of existing infrastructure, linking people to care.",
       "author": "",
@@ -358,7 +482,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.370293+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.675993+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,20 +493,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.370303+00:00"
+        "timestamp": "2026-03-16T02:11:07.675997+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fd143c54c5562e10fbcff2a729e43a37",
-      "title": "Designing AI agents to resist prompt injection",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
-      "published_date": "2026-03-11T11:30:00+00:00",
-      "category": "Industry",
-      "description": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+      "article_id": "600568d0ebc27bb3ff3e6fce2ae5c29f",
+      "title": "NIH-funded study clearly ties risk of dementia to severe CTE",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-study-clearly-ties-risk-dementia-severe-cte",
+      "published_date": "2026-03-16T02:07:11.290476+00:00",
+      "category": "Government",
+      "description": "Study provides clearest evidence to date to link severe CTE to dementia risk.",
       "author": "",
-      "content": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+      "content": "Study provides clearest evidence to date to link severe CTE to dementia risk.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -420,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.371411+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.676645+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,26 +555,212 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.371414+00:00"
+        "timestamp": "2026-03-16T02:11:07.676649+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "db7a6d68947ccef549860c64d6cd758e",
-      "title": "Improving instruction hierarchy in frontier LLMs",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/instruction-hierarchy-challenge",
-      "published_date": "2026-03-10T11:00:00+00:00",
+      "article_id": "f5068a309974c611764ba3173ec0d537",
+      "title": "Enhancing Distributed Inference Performance with the NVIDIA Inference Transfer Library",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/enhancing-distributed-inference-performance-with-the-nvidia-inference-transfer-library/",
+      "published_date": "2026-03-09T17:00:00+00:00",
       "category": "Industry",
-      "description": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.",
-      "author": "",
-      "content": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.",
+      "description": "Deploying large language models (LLMs) requires large-scale distributed inference, which spreads model computation and request handling across many GPUs and...",
+      "author": "Seonghee Lee",
+      "content": "Deploying large language models (LLMs) requires large-scale distributed inference, which spreads model computation and request handling across many GPUs and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.681050+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.681053+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "0bd51bc69014e1f3e862c17d240c5ded",
+      "title": "How to Minimize Game Runtime Inference Costs with Coding Agents",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-minimize-game-runtime-inference-costs-with-coding-agents/",
+      "published_date": "2026-03-03T19:49:57+00:00",
+      "category": "Industry",
+      "description": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
+      "author": "Brandon Rowlett",
+      "content": "NVIDIA ACE is a suite of technologies for building AI agents for gaming. ACE provides ready-to-integrate cloud and on-device AI models for every part of in-game...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.681227+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.681230+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3dc286f713a4fbe10bcd673e18b55179",
+      "title": "Protecting cities with AI-driven flash flood forecasting",
+      "source": "google_research_blog",
+      "url": "https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/",
+      "published_date": "2026-03-12T13:03:15+00:00",
+      "category": "Industry",
+      "description": "Climate & Sustainability",
+      "author": "",
+      "content": "Climate & Sustainability",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-16T02:11:07.681398+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-16T02:11:07.681402+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6941a6456a92cc541832cceefe30f8c9",
+      "title": "Introducing ChatGPT for Excel and new financial data integrations",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/chatgpt-for-excel",
+      "published_date": "2026-03-05T00:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI introduces ChatGPT for Excel and new financial app integrations, powered by GPT-5.4 to accelerate modeling, research, and analysis in regulated environments.",
+      "author": "",
+      "content": "OpenAI introduces ChatGPT for Excel and new financial app integrations, powered by GPT-5.4 to accelerate modeling, research, and analysis in regulated environments.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.9,
+        "impact_score": 0.96,
+        "overall_score": 0.8995,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -482,7 +792,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.371548+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.678055+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,206 +803,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.371551+00:00"
+        "timestamp": "2026-03-16T02:11:07.678058+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "be74fd0cbd25dc6a17123178d40916b6",
-      "title": "From games to biology and beyond: 10 years of AlphaGo’s impact",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/10-years-of-alphago/",
-      "published_date": "2026-03-09T13:52:36+00:00",
+      "article_id": "89c199f2de0c26891ed12d11c4917745",
+      "title": "Fine-tuning NVIDIA Nemotron Speech ASR on Amazon EC2 for domain adaptation",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/fine-tuning-nvidia-nemotron-speech-asr-on-amazon-ec2-for-domain-adaptation/",
+      "published_date": "2026-03-12T15:57:22+00:00",
       "category": "Industry",
-      "description": "Ten years since AlphaGo, we explore how it is catalyzing scientific discovery and paving a path to AGI.",
-      "author": "",
-      "content": "Ten years since AlphaGo, we explore how it is catalyzing scientific discovery and paving a path to AGI.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.376248+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.376250+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0e4904aad4285cf829abb9ab15cde873",
-      "title": "NVIDIA RTX Innovations Are Powering the Next Era of Game Development",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-rtx-innovations-are-powering-the-next-era-of-game-development/",
-      "published_date": "2026-03-10T15:30:00+00:00",
-      "category": "Industry",
-      "description": "NVIDIA RTX ray tracing and AI-powered neural rendering technologies are redefining how games are made, enabling a new standard for visuals and performance. At...",
-      "author": "Ike Nnoli",
-      "content": "NVIDIA RTX ray tracing and AI-powered neural rendering technologies are redefining how games are made, enabling a new standard for visuals and performance. At...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.375535+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.375538+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9c5958852e885295654746172190faeb",
-      "title": "Unlocking document understanding with Mistral Document AI in Microsoft Foundry",
-      "source": "azure_ai_blog",
-      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlocking-document-understanding-with-mistral-document-ai-in-microsoft-foundry/4495664",
-      "published_date": "2026-03-03T16:24:29+00:00",
-      "category": "Industry",
-      "description": "Enterprises today face a familiar yet formidable challenge: mountains of documents -contracts, invoices, reports, forms - remain locked in unstructured formats. Traditional OCR (optical character recognition) captures text, but often struggles with context, layout complexity, or multilingual content. The result? Slow workflows, error-prone manual reviews, and missed insights. The post Unlocking document understanding with Mistral Document AI in Microsoft Foundry appeared first on Microsoft...",
-      "author": "Naomi Moneypenny",
-      "content": "Enterprises today face a familiar yet formidable challenge: mountains of documents -contracts, invoices, reports, forms - remain locked in unstructured formats. Traditional OCR (optical character recognition) captures text, but often struggles with context, layout complexity, or multilingual content. The result? Slow workflows, error-prone manual reviews, and missed insights. The post Unlocking document understanding with Mistral Document AI in Microsoft Foundry appeared first on Microsoft...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.372366+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.372372+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a1f83e4d1ee06d1a8f46c8fc8959630e",
-      "title": "cuTile.jl Brings NVIDIA CUDA Tile-Based Programming to Julia",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/cutile-jl-brings-nvidia-cuda-tile-based-programming-to-julia/",
-      "published_date": "2026-03-03T19:48:16+00:00",
-      "category": "Industry",
-      "description": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
-      "author": "Tim Besard",
-      "content": "NVIDIA CUDA Tile is one of the most significant additions to NVIDIA CUDA programming and unlocks automatic access to tensor cores and other specialized...",
+      "description": "In this post, we explore how to fine-tune a leaderboard-topping, NVIDIA Nemotron Speech Automatic Speech Recognition (ASR) model; Parakeet TDT 0.6B V2. Using synthetic speech data to achieve superior transcription results for specialised applications, we'll walk through an end-to-end workflow that combines AWS infrastructure with the following popular open-source frameworks.",
+      "author": "Daniel Wirjo",
+      "content": "In this post, we explore how to fine-tune a leaderboard-topping, NVIDIA Nemotron Speech Automatic Speech Recognition (ASR) model; Parakeet TDT 0.6B V2. Using synthetic speech data to achieve superior transcription results for specialised applications, we'll walk through an end-to-end workflow that combines AWS infrastructure with the following popular open-source frameworks.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -730,7 +854,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.375940+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.678528+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,27 +865,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.375942+00:00"
+        "timestamp": "2026-03-16T02:11:07.678531+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c75df291a59e8361e29a4d3d218773e8",
-      "title": "Introducing the Adoption news channel",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-the-adoption-news-channel",
-      "published_date": "2026-03-05T00:00:00+00:00",
+      "article_id": "a86235d83368946827b4c9f972749e2b",
+      "title": "Drive organizational growth with Amazon Lex multi-developer CI/CD pipeline",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/drive-organizational-growth-with-amazon-lex-multi-developer-ci-cd-pipeline/",
+      "published_date": "2026-03-05T16:20:13+00:00",
       "category": "Industry",
-      "description": "Practical insights and frameworks to turn AI progress into business advantage",
-      "author": "",
-      "content": "Practical insights and frameworks to turn AI progress into business advantage",
+      "description": "In this post, we walk through a multi-developer CI/CD pipeline for Amazon Lex that enables isolated development environments, automated testing, and streamlined deployments. We show you how to set up the solution and share real-world results from teams using this approach.",
+      "author": "Grazia Russo Lassner",
+      "content": "In this post, we walk through a multi-developer CI/CD pipeline for Amazon Lex that enables isolated development environments, automated testing, and streamlined deployments. We show you how to set up the solution and share real-world results from teams using this approach.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -792,7 +916,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.371967+00:00"
+        "consensus_timestamp": "2026-03-16T02:11:07.678757+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -803,131 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-15T20:30:39.371970+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e903b9e7bcb5d6d86dedc6b03898d080",
-      "title": "Build safe generative AI applications like a Pro: Best Practices with Amazon Bedrock Guardrails",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-safe-generative-ai-applications-like-a-pro-best-practices-with-amazon-bedrock-guardrails/",
-      "published_date": "2026-03-02T18:48:25+00:00",
-      "category": "Industry",
-      "description": "In this post, we will show you how to configure Amazon Bedrock Guardrails for efficient performance, implement best practices to protect your applications, and monitor your deployment effectively to maintain the right balance between safety and user experience.",
-      "author": "Daniel Khain",
-      "content": "In this post, we will show you how to configure Amazon Bedrock Guardrails for efficient performance, implement best practices to protect your applications, and monitor your deployment effectively to maintain the right balance between safety and user experience.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.373823+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.373831+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c0f2f0b58f9023c6fdf0415e7e005a2e",
-      "title": "Tech companies must go 'above and beyond' to protect women and girls from online abuse or face further action",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/tech-companies-must-go-above-and-beyond-to-protect-women-and-girls-from-online-abuse-or-face-further-action",
-      "published_date": "2026-03-10T00:01:03+00:00",
-      "category": "Government",
-      "description": "Tech firms must do more to protect women and girls online or face further action, Tech Secretary Liz Kendall warns at major platform roundtable.",
-      "author": "",
-      "content": "Tech firms must do more to protect women and girls online or face further action, Tech Secretary Liz Kendall warns at major platform roundtable.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.6,
-        "impact_score": 0.95,
-        "overall_score": 0.8374999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-15T20:30:39.371127+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-15T20:30:39.371130+00:00"
+        "timestamp": "2026-03-16T02:11:07.678760+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 163.82873463630676,
+    "processing_time": 163.59284114837646,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 123,
+      "total_processed": 127,
       "candidates": {
-        "headlines": 4,
-        "articles": 119,
+        "headlines": 5,
+        "articles": 122,
         "research_papers": 0
       },
       "selected": {
