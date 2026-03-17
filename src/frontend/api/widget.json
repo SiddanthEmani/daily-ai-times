@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-17T05:25:38.774955+00:00",
+  "updated": "2026-03-17T09:10:11.189830+00:00",
   "top_stories": [
     {
       "article_id": "f8548b39246a820dd070d8e5ececd26a",
@@ -13,72 +13,10 @@
       "content": "The three plaintiffs are seeking to represent anyone who had real images of them as a minor altered into sexual content by Grok.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-17T05:25:38.731068+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-17T05:25:38.731071+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "a4923ce23ec53f6ca9d6f026b74ea7b6",
-      "title": "Introducing Groundsource: Turning news reports into data with Gemini",
-      "source": "google_research_blog",
-      "url": "https://research.google/blog/introducing-groundsource-turning-news-reports-into-data-with-gemini/",
-      "published_date": "2026-03-12T10:42:00+00:00",
-      "category": "Industry",
-      "description": "Climate & Sustainability",
-      "author": "",
-      "content": "Climate & Sustainability",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
         "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "novelty_score": 0.9,
+        "impact_score": 0.99,
+        "overall_score": 0.9305000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -107,23 +45,23 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-17T05:25:38.732656+00:00"
+        "consensus_timestamp": "2026-03-17T09:10:11.147377+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-17T05:25:38.732658+00:00"
+        "timestamp": "2026-03-17T09:10:11.147380+00:00"
       },
-      "article_type": "article"
+      "article_type": "headline"
     },
     {
       "article_id": "b4875ab475aade0455c1fe965d53bce3",
@@ -172,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-17T05:25:38.730270+00:00"
+        "consensus_timestamp": "2026-03-17T09:10:11.146588+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,26 +121,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-17T05:25:38.730273+00:00"
+        "timestamp": "2026-03-17T09:10:11.146590+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d604617bf7ea5561dbf36e01cc16f184",
-      "title": "Building custom model provider for Strands Agents with LLMs hosted on SageMaker AI endpoints",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/building-custom-model-provider-for-strands-agents-with-llms-hosted-on-sagemaker-ai-endpoints/",
-      "published_date": "2026-03-05T16:15:41+00:00",
+      "article_id": "8870652ffc59e2ab76feb7cc5e41ebdb",
+      "title": "CUDA 13.2 Introduces Enhanced CUDA Tile Support and New Python Features",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/cuda-13-2-introduces-enhanced-cuda-tile-support-and-new-python-features/",
+      "published_date": "2026-03-09T21:13:18+00:00",
       "category": "Industry",
-      "description": "This post demonstrates how to build custom model parsers for Strands agents when working with LLMs hosted on SageMaker that don't natively support the Bedrock Messages API format. We'll walk through deploying Llama 3.1 with SGLang on SageMaker using awslabs/ml-container-creator, then implementing a custom parser to integrate it with Strands agents.",
-      "author": "Dan Ferguson",
-      "content": "This post demonstrates how to build custom model parsers for Strands agents when working with LLMs hosted on SageMaker that don't natively support the Bedrock Messages API format. We'll walk through deploying Llama 3.1 with SGLang on SageMaker using awslabs/ml-container-creator, then implementing a custom parser to integrate it with Strands agents.",
+      "description": "CUDA 13.2 arrives with a major update: NVIDIA CUDA Tile is now supported on devices of compute capability 8.X architectures (NVIDIA Ampere and NVIDIA Ada), as...",
+      "author": "Jonathan Bentz",
+      "content": "CUDA 13.2 arrives with a major update: NVIDIA CUDA Tile is now supported on devices of compute capability 8.X architectures (NVIDIA Ampere and NVIDIA Ada), as...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.99,
-        "overall_score": 0.9179999999999999,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -234,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-17T05:25:38.730043+00:00"
+        "consensus_timestamp": "2026-03-17T09:10:11.148686+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,27 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-17T05:25:38.730046+00:00"
+        "timestamp": "2026-03-17T09:10:11.148689+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2484a66f2df10f9e58a80af472e44103",
-      "title": "P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/",
-      "published_date": "2026-03-13T19:27:04+00:00",
+      "article_id": "b16720fe4863ca2142c855d9d8841537",
+      "title": "AI Agent Hacks McKinsey: 5 Situations When You Should Not Deploy Agents",
+      "source": "nanonets_blog",
+      "url": "https://nanonets.com/blog/ai-agent-hacks-mckinsey/",
+      "published_date": "2026-03-14T12:04:36+00:00",
       "category": "Industry",
-      "description": "In this post, we explain how P-EAGLE works, how we integrated it into vLLM starting from v0.16.0 (PR#32887), and how to serve it with our pre-trained checkpoints.",
-      "author": "Xin Huang",
-      "content": "In this post, we explain how P-EAGLE works, how we integrated it into vLLM starting from v0.16.0 (PR#32887), and how to serve it with our pre-trained checkpoints.",
+      "description": "McKinsey hacked in 2 hours. 5 situations where AI agents will fail. Production permissions, regulated data, legacy systems—check before deploy.",
+      "author": "Vinit Mehta",
+      "content": "McKinsey hacked in 2 hours. 5 situations where AI agents will fail. Production permissions, regulated data, legacy systems—check before deploy.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -293,21 +231,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-17T05:25:38.729646+00:00"
+        "consensus_timestamp": "2026-03-17T09:10:11.149466+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-17T05:25:38.729649+00:00"
+        "timestamp": "2026-03-17T09:10:11.149469+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1d0110f449847697e80ee18b7e0850c3",
+      "title": "DARPA’s new X-76: the speed of a jet, the freedom of a helicopter",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter",
+      "published_date": "2026-03-03T20:06:06+00:00",
+      "category": "Government",
+      "description": "SPRINT’s experimental aircraft is now being built by Bell Textron, Inc. following a successful Critical Design Review.",
+      "author": "outreach@darpa.mil",
+      "content": "SPRINT’s experimental aircraft is now being built by Bell Textron, Inc. following a successful Critical Design Review.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-17T09:10:11.143816+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-17T09:10:11.143819+00:00"
       },
       "article_type": "article"
     }
