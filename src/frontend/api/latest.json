@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-03-23T13:05:55.639007+00:00",
+  "generated_at": "2026-03-23T16:59:18.023502+00:00",
   "articles": [
     {
-      "article_id": "27f0bd078b24082f766b12353b402342",
-      "title": "Elon Musk unveils chip manufacturing plans for SpaceX and Tesla",
+      "article_id": "5fb7fb9ae6b874988364de3e8fcba09a",
+      "title": "Cursor admits its new coding model was built on top of Moonshot AI’s Kimi",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/03/22/elon-musk-unveils-chip-manufacturing-plans-for-spacex-and-tesla/",
-      "published_date": "2026-03-22T16:20:00+00:00",
+      "url": "https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/",
+      "published_date": "2026-03-22T18:41:09+00:00",
       "category": "Industry",
-      "description": "Elon Musk recently outlined ambitious plans for a chip-building collaboration Tesla and SpaceX — but he has a history of overpromising.",
+      "description": "Building on top of a Chinese model feels particularly fraught right now.",
       "author": "Anthony Ha",
-      "content": "Elon Musk recently outlined ambitious plans for a chip-building collaboration Tesla and SpaceX — but he has a history of overpromising.",
+      "content": "Building on top of a Chinese model feels particularly fraught right now.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
+        "impact_score": 0.8,
+        "overall_score": 0.805,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,283 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.85,
+        "score": 0.75,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.607536+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.953560+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "weighted_score": 0.6499999999999999,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.607539+00:00"
+        "timestamp": "2026-03-23T16:59:17.953562+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "326b58a96ff490ac830527a64f99eed4",
-      "title": "Improve operational visibility for inference workloads on Amazon Bedrock with new CloudWatch metrics for TTFT and Estimated Quota Consumption",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/improve-operational-visibility-for-inference-workloads-on-amazon-bedrock-with-new-cloudwatch-metrics-for-ttft-and-estimated-quota-consumption/",
-      "published_date": "2026-03-12T21:20:17+00:00",
+      "article_id": "a51df73ad2821e3d2258e2fe3f05cb75",
+      "title": "Using Simulation to Build Robotic Systems for Hospital Automation",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/using-simulation-to-build-robotic-systems-for-hospital-automation/",
+      "published_date": "2026-03-16T22:00:00+00:00",
       "category": "Industry",
-      "description": "Today, we’re announcing two new Amazon CloudWatch metrics for Amazon Bedrock, TimeToFirstToken and EstimatedTPMQuotaUsage. In this post, we cover how these work and how to set alarms, establish baselines, and proactively manage capacity using them.",
-      "author": "Zohreh Norouzi",
-      "content": "Today, we’re announcing two new Amazon CloudWatch metrics for Amazon Bedrock, TimeToFirstToken and EstimatedTPMQuotaUsage. In this post, we cover how these work and how to set alarms, establish baselines, and proactively manage capacity using them.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.99,
-        "overall_score": 0.933,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.606572+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.606575+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f02a1ecbf483887ff88f951081e514e6",
-      "title": "Build an offline feature store using Amazon SageMaker Unified Studio and SageMaker Catalog",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-an-offline-feature-store-using-amazon-sagemaker-unified-studio-and-sagemaker-catalog/",
-      "published_date": "2026-03-16T14:42:46+00:00",
-      "category": "Industry",
-      "description": "This blog post provides step-by-step guidance on implementing an offline feature store using SageMaker Catalog within a SageMaker Unified Studio domain. By adopting a publish-subscribe pattern, data producers can use this solution to publish curated, versioned feature tables—while data consumers can securely discover, subscribe to, and reuse them for model development.",
-      "author": "Vijay Velpula",
-      "content": "This blog post provides step-by-step guidance on implementing an offline feature store using SageMaker Catalog within a SageMaker Unified Studio domain. By adopting a publish-subscribe pattern, data producers can use this solution to publish curated, versioned feature tables—while data consumers can securely discover, subscribe to, and reuse them for model development.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9035,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.606482+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.606485+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "32206e82ff2510c739fc8d745648a16f",
-      "title": "NVIDIA and Thinking Machines Lab Announce Long-Term Gigawatt-Scale Strategic Partnership",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-thinking-machines-lab/",
-      "published_date": "2026-03-10T13:00:11+00:00",
-      "category": "Industry",
-      "description": "NVIDIA and Thinking Machines Lab announced today a multiyear strategic partnership to deploy at least one gigawatt of next-generation NVIDIA Vera Rubin systems to support Thinking Machines’ frontier model training and platforms delivering customizable AI at scale. Deployment on the NVIDIA Vera Rubin platform is targeted for early next year. The partnership also includes an […]",
-      "author": "NVIDIA Newsroom",
-      "content": "NVIDIA and Thinking Machines Lab announced today a multiyear strategic partnership to deploy at least one gigawatt of next-generation NVIDIA Vera Rubin systems to support Thinking Machines’ frontier model training and platforms delivering customizable AI at scale. Deployment on the NVIDIA Vera Rubin platform is targeted for early next year. The partnership also includes an […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.607302+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.607305+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "be74fd0cbd25dc6a17123178d40916b6",
-      "title": "From games to biology and beyond: 10 years of AlphaGo’s impact",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/10-years-of-alphago/",
-      "published_date": "2026-03-09T13:52:36+00:00",
-      "category": "Industry",
-      "description": "Ten years since AlphaGo, we explore how it is catalyzing scientific discovery and paving a path to AGI.",
-      "author": "",
-      "content": "Ten years since AlphaGo, we explore how it is catalyzing scientific discovery and paving a path to AGI.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.609487+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.609489+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "1b037610c4ff24ea621f54c8bbd43b9b",
-      "title": "AWS and NVIDIA deepen strategic collaboration to accelerate AI from pilot to production",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-deepen-strategic-collaboration-to-accelerate-ai-from-pilot-to-production/",
-      "published_date": "2026-03-16T20:51:16+00:00",
-      "category": "Industry",
-      "description": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
-      "author": "David Brown",
-      "content": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
+      "description": "Healthcare faces a structural demand–capacity crisis: a projected global shortfall of ~10 million clinicians by 2030, billions of diagnostic exams annually...",
+      "author": "Mingxin Zheng",
+      "content": "Healthcare faces a structural demand–capacity crisis: a projected global shortfall of ~10 million clinicians by 2030, billions of diagnostic exams annually...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -355,34 +107,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.606285+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.955080+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.606288+00:00"
+        "timestamp": "2026-03-23T16:59:17.955083+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "389cd577bb37c368282d4762e308adae",
-      "title": "Building a Zero-Trust Architecture for Confidential AI Factories",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-a-zero-trust-architecture-for-confidential-ai-factories/",
-      "published_date": "2026-03-23T12:00:00+00:00",
+      "article_id": "fd5fc056e804424c672aeb4f20fbc169",
+      "title": "Why Wall Street wasn’t won over by Nvidia’s big conference",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/03/21/why-wall-street-wasnt-won-over-by-nvidias-big-conference/",
+      "published_date": "2026-03-21T16:28:00+00:00",
       "category": "Industry",
-      "description": "AI is moving from experimentation to production. However, most data enterprises need exists outside the public cloud. This includes sensitive information like...",
-      "author": "Hema Bontha",
-      "content": "AI is moving from experimentation to production. However, most data enterprises need exists outside the public cloud. This includes sensitive information like...",
+      "description": "Despite investor fears of an AI bubble, Nvidia's latest conference shows that most in the industry aren't concerned by that possibility.",
+      "author": "Rebecca Szkutak",
+      "content": "Despite investor fears of an AI bubble, Nvidia's latest conference shows that most in the industry aren't concerned by that possibility.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:17.954526+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:17.954529+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "0330cbdd09f72d6a3023e81f0d9d7f46",
+      "title": "TeleRay Appoints Saumay Kumar as New CEO",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/teleray-appoints-saumay-kumar-as-new-ceo/",
+      "published_date": "2026-03-23T10:45:00+00:00",
+      "category": "Industry",
+      "description": "Timothy Kelley Transitioning to Chairman and Chief Strategy Officer to Drive Innovation in Emerging Radiology and Virtual Care Markets TeleRay, a leading provider of cloud-based imaging collaboration and virtual care solutions, today announced the appointment of Saumay Kumar as Chief Executive Officer, effective March 10, 2026. Kumar began his tenure during the... The post TeleRay Appoints Saumay Kumar as New CEO first appeared on AI-Tech Park.",
+      "author": "PR Newswire",
+      "content": "Timothy Kelley Transitioning to Chairman and Chief Strategy Officer to Drive Innovation in Emerging Radiology and Virtual Care Markets TeleRay, a leading provider of cloud-based imaging collaboration and virtual care solutions, today announced the appointment of Saumay Kumar as Chief Executive Officer, effective March 10, 2026. Kumar began his tenure during the... The post TeleRay Appoints Saumay Kumar as New CEO first appeared on AI-Tech Park.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -420,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.608327+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:18.000444+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -431,151 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.608330+00:00"
+        "timestamp": "2026-03-23T16:59:18.000446+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "5e47d6b0b1188c394febd32f360957c9",
-      "title": "Are OpenAI and Google intentionally downgrading their models?",
-      "source": "nanonets_blog",
-      "url": "https://nanonets.com/blog/chatgpt-and-gemini-getting-dumber/",
-      "published_date": "2026-03-12T09:00:29+00:00",
+      "article_id": "1b037610c4ff24ea621f54c8bbd43b9b",
+      "title": "AWS and NVIDIA deepen strategic collaboration to accelerate AI from pilot to production",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-deepen-strategic-collaboration-to-accelerate-ai-from-pilot-to-production/",
+      "published_date": "2026-03-16T20:51:16+00:00",
       "category": "Industry",
-      "description": "Yes, OpenAI and Google degrade their models. OpenAI admitted silent updates after denying it. Gemini redirects models. With full evidence.",
-      "author": "Vinit Mehta",
-      "content": "Yes, OpenAI and Google degrade their models. OpenAI admitted silent updates after denying it. Gemini redirects models. With full evidence.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.610151+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.610154+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cb9ce6a458a34f96d6065089ca12fdbc",
-      "title": "New NVIDIA Nemotron 3 Super Delivers 5x Higher Throughput for Agentic AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nemotron-3-super-agentic-ai/",
-      "published_date": "2026-03-11T16:00:21+00:00",
-      "category": "Industry",
-      "description": "Launched today, NVIDIA Nemotron 3 Super is a 120‑billion‑parameter open model with 12 billion active parameters designed to run complex agentic AI systems at scale. Available now, the model combines advanced reasoning capabilities to efficiently complete tasks with high accuracy for autonomous agents. AI-Native Companies: Perplexity offers its users access to Nemotron 3 Super for […]",
-      "author": "Kari Briski",
-      "content": "Launched today, NVIDIA Nemotron 3 Super is a 120‑billion‑parameter open model with 12 billion active parameters designed to run complex agentic AI systems at scale. Available now, the model combines advanced reasoning capabilities to efficiently complete tasks with high accuracy for autonomous agents. AI-Native Companies: Perplexity offers its users access to Nemotron 3 Super for […]",
+      "description": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
+      "author": "David Brown",
+      "content": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.607125+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-23T13:05:55.607127+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d0221f411ff421bc8582922edc7dd2e5",
-      "title": "Xage Security Drives Growth with Zero Trust for AI Infrastructure",
-      "source": "ai_techpark",
-      "url": "https://ai-techpark.com/xage-security-drives-growth-with-zero-trust-for-ai-infrastructure/",
-      "published_date": "2026-03-23T12:00:00+00:00",
-      "category": "Industry",
-      "description": "Zero Trust leader reports 81% revenue growth, driven by a global shift from perimeter-based tools to identity-driven protection for AI infrastructure and critical systems Xage Security, a global leader in Zero Trust access and protection, today reported 81% year-over-year revenue growth and 102% year-over-year growth in number of customers, driven... The post Xage Security Drives Growth with Zero Trust for AI Infrastructure first appeared on AI-Tech Park.",
-      "author": "GlobeNewswire",
-      "content": "Zero Trust leader reports 81% revenue growth, driven by a global shift from perimeter-based tools to identity-driven protection for AI infrastructure and critical systems Xage Security, a global leader in Zero Trust access and protection, today reported 81% year-over-year revenue growth and 102% year-over-year growth in number of customers, driven... The post Xage Security Drives Growth with Zero Trust for AI Infrastructure first appeared on AI-Tech Park.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.99
+        "overall_score": 0.875,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -606,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.609838+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.952575+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -617,27 +307,151 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.609841+00:00"
+        "timestamp": "2026-03-23T16:59:17.952578+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "b4875ab475aade0455c1fe965d53bce3",
-      "title": "Roche Scales NVIDIA AI Factories Globally to Accelerate Drug Discovery, Diagnostic Solutions and Manufacturing Breakthroughs",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/roche-ai-factories-omniverse/",
-      "published_date": "2026-03-16T20:30:59+00:00",
+      "article_id": "8fcf4e00d62b876e06af3aa65fba5c7c",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
+      "published_date": "2026-03-17T16:03:47+00:00",
       "category": "Industry",
-      "description": "Roche's new deployment spans more than 3,500 NVIDIA Blackwell GPUs across its worldwide operations and embedded across the entire value chain, massively scaling R&D productivity, next-generation diagnostics and manufacturing efficiencies.",
-      "author": "Constantin Landers",
-      "content": "Roche's new deployment spans more than 3,500 NVIDIA Blackwell GPUs across its worldwide operations and embedded across the entire value chain, massively scaling R&D productivity, next-generation diagnostics and manufacturing efficiencies.",
+      "description": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "author": "",
+      "content": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8699999999999999,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:17.955937+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:17.955939+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "eba671a79d29a9b1c3b31dbbe467899a",
+      "title": "BigID Achieves FedRAMP Certification Partnering with Knox Systems",
+      "source": "ai_techpark",
+      "url": "https://ai-techpark.com/bigid-achieves-fedramp-certification-partnering-with-knox-systems/",
+      "published_date": "2026-03-23T11:45:00+00:00",
+      "category": "Industry",
+      "description": "Certification authorizes federal use of BigID’s platform to manage sensitive data, support Zero Trust, and govern AI under federal security requirements BigID, the leader in data security, privacy, and AI governance, today announced it has achieved Federal Risk and Authorization Management Program (FedRAMP) certification in partnership with Knox Systems (Knox), the largest... The post BigID Achieves FedRAMP Certification Partnering with Knox Systems first appeared on AI-Tech Park.",
+      "author": "PR Newswire",
+      "content": "Certification authorizes federal use of BigID’s platform to manage sensitive data, support Zero Trust, and govern AI under federal security requirements BigID, the leader in data security, privacy, and AI governance, today announced it has achieved Federal Risk and Authorization Management Program (FedRAMP) certification in partnership with Knox Systems (Knox), the largest... The post BigID Achieves FedRAMP Certification Partnering with Knox Systems first appeared on AI-Tech Park.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:18.000285+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:18.000287+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "50722c6f3e04d1049ac59df9769a720e",
+      "title": "Policy paper: DSIT cyber security newsletter - March 2026",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/dsit-cyber-security-newsletter-march-2026",
+      "published_date": "2026-03-12T07:30:05+00:00",
+      "category": "Government",
+      "description": "The March 2026 edition of the DSIT cyber security newsletter.",
+      "author": "",
+      "content": "The March 2026 edition of the DSIT cyber security newsletter.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -668,7 +482,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.606989+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.951133+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -679,7 +493,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.606991+00:00"
+        "timestamp": "2026-03-23T16:59:17.951136+00:00"
       },
       "article_type": "article"
     },
@@ -730,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.605434+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.951565+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,27 +555,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.605438+00:00"
+        "timestamp": "2026-03-23T16:59:17.951567+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "bd33d7676a9eb7aac1ed831e6e2c24df",
-      "title": "How agentic AI helps heal the systems we can&#8217;t replace",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/how-agentic-ai-helps-heal-the-systems-we-cant-replace",
-      "published_date": "2026-03-16T13:00:00+00:00",
+      "article_id": "2213ce69a192de21e4f543e7121ccb0e",
+      "title": "What happened at Nvidia GTC: NemoClaw, Robot Olaf, and a $1 trillion bet",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/video/what-happened-at-nvidia-gtc-nemoclaw-robot-olaf-and-a-1-trillion-bet/",
+      "published_date": "2026-03-20T20:02:35+00:00",
       "category": "Industry",
-      "description": "By learning the idiosyncrasies of accumulated layers of legacy systems, AI agents can preserve institutional knowledge and provide a unified interface to a range of services.",
-      "author": "Staff writer",
-      "content": "By learning the idiosyncrasies of accumulated layers of legacy systems, AI agents can preserve institutional knowledge and provide a unified interface to a range of services.",
+      "description": "CEO Jensen Huang took the stage at Nvidia’s GTC conference this week in his signature leather jacket to deliver a two-and-a-half-hour keynote, projecting $1 trillion in AI chip sales through 2027, declaring that every company needs an “OpenClaw strategy,” and closing with a rambling Olaf robot that had to get its mic cut. The message was hard to miss: Nvidia […]",
+      "author": "Theresa Loconsolo",
+      "content": "CEO Jensen Huang took the stage at Nvidia’s GTC conference this week in his signature leather jacket to deliver a two-and-a-half-hour keynote, projecting $1 trillion in AI chip sales through 2027, declaring that every company needs an “OpenClaw strategy,” and closing with a rambling Olaf robot that had to get its mic cut. The message was hard to miss: Nvidia […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
         "overall_score": 0.8725,
-        "confidence_mean": 0.98
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -788,35 +602,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.609622+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.954669+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.609625+00:00"
+        "timestamp": "2026-03-23T16:59:17.954672+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7d4d694a6c94d7c6331ac14297c89a62",
-      "title": "Notice: AI for Science Strategy: UK universities' joint statement",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/ai-for-science-strategy-uk-universities-joint-statement",
-      "published_date": "2026-03-20T10:42:17+00:00",
-      "category": "Government",
-      "description": "UK universities support on shared objectives and lessons learned on AI for science.",
+      "article_id": "e5537f9a6438977346d048fe1584c6de",
+      "title": "How we monitor internal coding agents for misalignment",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+      "published_date": "2026-03-19T10:00:00+00:00",
+      "category": "Industry",
+      "description": "How OpenAI uses chain-of-thought monitoring to study misalignment in internal coding agents—analyzing real-world deployments to detect risks and strengthen AI safety safeguards.",
       "author": "",
-      "content": "UK universities support on shared objectives and lessons learned on AI for science.",
+      "content": "How OpenAI uses chain-of-thought monitoring to study misalignment in internal coding agents—analyzing real-world deployments to detect risks and strengthen AI safety safeguards.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -854,7 +668,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.603941+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.951214+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -865,27 +679,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.603944+00:00"
+        "timestamp": "2026-03-23T16:59:17.951216+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "6464453dd2cabd95bc0e31db30bbff4d",
-      "title": "Use RAG for video generation using Amazon Bedrock and Amazon Nova Reel",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/use-rag-for-video-generation-using-amazon-bedrock-and-amazon-nova-reel/",
-      "published_date": "2026-03-19T16:45:50+00:00",
-      "category": "Industry",
-      "description": "In this post, we explore our approach to video generation through VRAG, transforming natural language text prompts and images into grounded, high-quality videos. Through this fully automated solution, you can generate realistic, AI-powered video sequences from structured text and image inputs, streamlining the video creation process.",
-      "author": "Nick Biso",
-      "content": "In this post, we explore our approach to video generation through VRAG, transforming natural language text prompts and images into grounded, high-quality videos. Through this fully automated solution, you can generate realistic, AI-powered video sequences from structured text and image inputs, streamlining the video creation process.",
+      "article_id": "7f6261b49b89d264a882fa8fe622a9a9",
+      "title": "UK’s \"Quantum leap\"  to help beat disease, deliver high-paid jobs, and strengthen national security, as first country in the world to roll out Quantum computers at scale",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/uks-quantum-leap-tohelp-beat-diseasedeliver-high-paid-jobs-and-strengthen-national-security-as-first-country-in-the-world-to-roll-out-quantum",
+      "published_date": "2026-03-17T00:01:04+00:00",
+      "category": "Government",
+      "description": "UK unveils new package of measures to become the first country in the world to roll out Quantum computers at scale.",
+      "author": "",
+      "content": "UK unveils new package of measures to become the first country in the world to roll out Quantum computers at scale.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -916,7 +730,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-23T13:05:55.605750+00:00"
+        "consensus_timestamp": "2026-03-23T16:59:17.950893+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -927,7 +741,193 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-23T13:05:55.605752+00:00"
+        "timestamp": "2026-03-23T16:59:17.950897+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f02a1ecbf483887ff88f951081e514e6",
+      "title": "Build an offline feature store using Amazon SageMaker Unified Studio and SageMaker Catalog",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-an-offline-feature-store-using-amazon-sagemaker-unified-studio-and-sagemaker-catalog/",
+      "published_date": "2026-03-16T14:42:46+00:00",
+      "category": "Industry",
+      "description": "This blog post provides step-by-step guidance on implementing an offline feature store using SageMaker Catalog within a SageMaker Unified Studio domain. By adopting a publish-subscribe pattern, data producers can use this solution to publish curated, versioned feature tables—while data consumers can securely discover, subscribe to, and reuse them for model development.",
+      "author": "Vijay Velpula",
+      "content": "This blog post provides step-by-step guidance on implementing an offline feature store using SageMaker Catalog within a SageMaker Unified Studio domain. By adopting a publish-subscribe pattern, data producers can use this solution to publish curated, versioned feature tables—while data consumers can securely discover, subscribe to, and reuse them for model development.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:17.952735+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:17.952738+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f99d7b4b76e9e0a2b09fba439dda8f04",
+      "title": "How to Build Deep Agents for Enterprise Search with NVIDIA AI-Q and LangChain",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-build-deep-agents-for-enterprise-search-with-nvidia-ai-q-and-langchain/",
+      "published_date": "2026-03-18T16:00:00+00:00",
+      "category": "Industry",
+      "description": "While consumer AI offers powerful capabilities, workplace tools often suffer from disjointed data and limited context. Built with LangChain, the NVIDIA AI-Q...",
+      "author": "Sean Lopp",
+      "content": "While consumer AI offers powerful capabilities, workplace tools often suffer from disjointed data and limited context. Built with LangChain, the NVIDIA AI-Q...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:17.955003+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:17.955005+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "368e0361388d12c71e4ae2e43b10265b",
+      "title": "Scaling Autonomous AI Agents and Workloads with NVIDIA DGX Spark",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-autonomous-ai-agents-and-workloads-with-nvidia-dgx-spark/",
+      "published_date": "2026-03-16T20:30:00+00:00",
+      "category": "Industry",
+      "description": "Autonomous AI agents are driving the next wave of AI innovation. These agents must often manage long-running tasks that use multiple communication channels and...",
+      "author": "Allen Bourgoyne",
+      "content": "Autonomous AI agents are driving the next wave of AI innovation. These agents must often manage long-running tasks that use multiple communication channels and...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-23T16:59:17.955194+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-23T16:59:17.955197+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 180.8497474193573,
+    "processing_time": 183.58393168449402,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,9 +953,9 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 141,
+      "total_processed": 142,
       "candidates": {
-        "headlines": 4,
+        "headlines": 5,
         "articles": 137,
         "research_papers": 0
       },
