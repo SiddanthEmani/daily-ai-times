@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T02:03:00.339513+00:00",
+  "generated_at": "2026-03-25T05:27:51.662945+00:00",
   "articles": [
     {
       "article_id": "27fcdcf0945a06555ea81781fb2a1273",
@@ -45,40 +45,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.304797+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.622786+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.304800+00:00"
+        "timestamp": "2026-03-25T05:27:51.622788+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "1c046bbf6c3605bc370833eceb88f302",
-      "title": "Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation between LangChain, AutoGen, and Claude Code",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/22/meet-gitagent-the-docker-for-ai-agents-that-is-finally-solving-the-fragmentation-between-langchain-autogen-and-claude-code/",
-      "published_date": "2026-03-22T21:21:48+00:00",
+      "article_id": "3a52fcdc4eaef1bf404eef152caa53ad",
+      "title": "Validate Kubernetes for GPU Infrastructure with Layered, Reproducible Recipes",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/validate-kubernetes-for-gpu-infrastructure-with-layered-reproducible-recipes/",
+      "published_date": "2026-03-12T16:30:00+00:00",
       "category": "Industry",
-      "description": "The current state of AI agent development is characterized by significant architectural fragmentation. Software devs building autonomous systems must generally commit to one of several competing ecosystems: LangChain, AutoGen, CrewAI, OpenAI Assistants, or the more recent Claude Code. Each of these ‘Five Frameworks’ utilizes a proprietary method for defining agent logic, memory persistence, and tool […] The post Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation...",
-      "author": "Michal Sutter",
-      "content": "The current state of AI agent development is characterized by significant architectural fragmentation. Software devs building autonomous systems must generally commit to one of several competing ecosystems: LangChain, AutoGen, CrewAI, OpenAI Assistants, or the more recent Claude Code. Each of these ‘Five Frameworks’ utilizes a proprietary method for defining agent logic, memory persistence, and tool […] The post Meet GitAgent: The Docker for AI Agents that is Finally Solving the Fragmentation...",
+      "description": "Every AI cluster running on Kubernetes requires a full software stack that works together, from low-level driver and kernel settings to high-level operator and...",
+      "author": "Mark Chmarny",
+      "content": "Every AI cluster running on Kubernetes requires a full software stack that works together, from low-level driver and kernel settings to high-level operator and...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.95,
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
         "impact_score": 0.95,
-        "overall_score": 0.9375,
+        "overall_score": 0.9225000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.307549+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.624149+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,193 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.307557+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2cedd016ff52dd73e6b79069aa714005",
-      "title": "How to Design a Production-Ready AI Agent That Automates Google Colab Workflows Using Colab-MCP, MCP Tools, FastMCP, and Kernel Execution",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/23/how-to-design-a-production-ready-ai-agent-that-automates-google-colab-workflows-using-colab-mcp-mcp-tools-fastmcp-and-kernel-execution/",
-      "published_date": "2026-03-23T18:33:06+00:00",
-      "category": "Industry",
-      "description": "In this tutorial, we build an advanced, hands-on tutorial around Google’s newly released colab-mcp, an open-source MCP (Model Context Protocol) server that lets any AI agent programmatically control Google Colab notebooks and runtimes. Across five self-contained snippets, we go from first principles to production-ready patterns. We start by constructing a minimal MCP tool registry from […] The post How to Design a Production-Ready AI Agent That Automates Google Colab Workflows Using Colab-MCP,...",
-      "author": "Asif Razzaq",
-      "content": "In this tutorial, we build an advanced, hands-on tutorial around Google’s newly released colab-mcp, an open-source MCP (Model Context Protocol) server that lets any AI agent programmatically control Google Colab notebooks and runtimes. Across five self-contained snippets, we go from first principles to production-ready patterns. We start by constructing a minimal MCP tool registry from […] The post How to Design a Production-Ready AI Agent That Automates Google Colab Workflows Using Colab-MCP,...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.307408+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-25T02:03:00.307411+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "931753665f6b157e886f00627333182d",
-      "title": "Polkadot (DOT) Price Prediction: 2025, 2026, 2030",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/money/polkadot-price-prediction",
-      "published_date": "2026-03-24T14:16:13+00:00",
-      "category": "Industry",
-      "description": "The post Polkadot (DOT) Price Prediction: 2025, 2026, 2030 by James Wells appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Polkadot (DOT) could reach $4.40 by 2030. Feeling confident about this DOT price prediction? You can trade Polkadot on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Polkadot (DOT) is a …...",
-      "author": "James Wells",
-      "content": "The post Polkadot (DOT) Price Prediction: 2025, 2026, 2030 by James Wells appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Polkadot (DOT) could reach $4.40 by 2030. Feeling confident about this DOT price prediction? You can trade Polkadot on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Polkadot (DOT) is a …...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8875000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.7,
-        "confidence": 0.9,
-        "recommendation": "REJECT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.306876+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.62,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-25T02:03:00.306879+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3f9eb4847ff4894c818a551fb7b68fa0",
-      "title": "This AI Paper Introduces TinyLoRA, A 13-Parameter Fine-Tuning Method That Reaches 91.8 Percent GSM8K on Qwen2.5-7B",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/24/this-ai-paper-introduces-tinylora-a-13-parameter-fine-tuning-method-that-reaches-91-8-percent-gsm8k-on-qwen2-5-7b/",
-      "published_date": "2026-03-24T18:49:40+00:00",
-      "category": "Industry",
-      "description": "Researchers from FAIR at Meta, Cornell University, and Carnegie Mellon University have demonstrated that large language models (LLMs) can learn to reason using a remarkably small number of trained parameters. The research team introduces TinyLoRA, a parameterization that can scale down to a single trainable parameter under extreme sharing settings. Using this method on a […] The post This AI Paper Introduces TinyLoRA, A 13-Parameter Fine-Tuning Method That Reaches 91.8 Percent GSM8K on...",
-      "author": "Asif Razzaq",
-      "content": "Researchers from FAIR at Meta, Cornell University, and Carnegie Mellon University have demonstrated that large language models (LLMs) can learn to reason using a remarkably small number of trained parameters. The research team introduces TinyLoRA, a parameterization that can scale down to a single trainable parameter under extreme sharing settings. Using this method on a […] The post This AI Paper Introduces TinyLoRA, A 13-Parameter Fine-Tuning Method That Reaches 91.8 Percent GSM8K on...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.307226+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-25T02:03:00.307229+00:00"
+        "timestamp": "2026-03-25T05:27:51.624152+00:00"
       },
       "article_type": "article"
     },
@@ -323,11 +137,73 @@
       "content": "Today at NVIDIA GTC 2026, AWS and NVIDIA announced an expanded collaboration with new technology integrations to support growing AI compute demand and help you build and run AI solutions that are production-ready.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
         "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-25T05:27:51.621845+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-25T05:27:51.621848+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "04e96017048104dd25cbeae088fac9db",
+      "title": "Claude for Finance Teams: Investment Banking, DCF Models, Reconciliation & Variance Analysis",
+      "source": "nanonets_blog",
+      "url": "https://nanonets.com/blog/claude-for-finance-teams-investment-banking-dcf-reconciliation/",
+      "published_date": "2026-03-23T15:09:01+00:00",
+      "category": "Industry",
+      "description": "A practical guide to using Claude for investment banking materials, comparable company analysis, DCF models, month-end reconciliation, and variance commentary, with screenshots, setup steps, and honest caveats.",
+      "author": "Vinit Mehta",
+      "content": "A practical guide to using Claude for investment banking materials, comparable company analysis, DCF models, month-end reconciliation, and variance commentary, with screenshots, setup steps, and honest caveats.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -358,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.303727+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.625150+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -369,131 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.303730+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "319254e9542edcc98b8134449c5dabca",
-      "title": "NIH scientists develop \"digital twin\" of eye cells to understand and treat age-related macular degeneration",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-scientists-develop-digital-twin-eye-cells-understand-treat-age-related-macular-degeneration",
-      "published_date": "2026-03-25T01:57:52.421087+00:00",
-      "category": "Government",
-      "description": "Breakthrough modeling technology reveals how cells lose their organization in leading cause of vision loss.",
-      "author": "",
-      "content": "Breakthrough modeling technology reveals how cells lose their organization in leading cause of vision loss.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.301473+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-25T02:03:00.301478+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "5e47d6b0b1188c394febd32f360957c9",
-      "title": "Are OpenAI and Google intentionally downgrading their models?",
-      "source": "nanonets_blog",
-      "url": "https://nanonets.com/blog/chatgpt-and-gemini-getting-dumber/",
-      "published_date": "2026-03-12T09:00:29+00:00",
-      "category": "Industry",
-      "description": "Yes, OpenAI and Google degrade their models. OpenAI admitted silent updates after denying it. Gemini redirects models. With full evidence.",
-      "author": "Vinit Mehta",
-      "content": "Yes, OpenAI and Google degrade their models. OpenAI admitted silent updates after denying it. Gemini redirects models. With full evidence.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.307012+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-25T02:03:00.307014+00:00"
+        "timestamp": "2026-03-25T05:27:51.625152+00:00"
       },
       "article_type": "article"
     },
@@ -540,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.305692+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.623649+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.305695+00:00"
+        "timestamp": "2026-03-25T05:27:51.623651+00:00"
       },
       "article_type": "article"
     },
@@ -603,40 +355,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.305877+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.623824+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.305879+00:00"
+        "timestamp": "2026-03-25T05:27:51.623827+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "dd7f05f3466fe17abe0e93277d495687",
-      "title": "From Simulation to Production: How to Build Robots With AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/build-robots-with-ai/",
-      "published_date": "2026-03-18T13:00:13+00:00",
+      "article_id": "269fc97b7fe8d1450af5d741345c3be0",
+      "title": "Optimizing LoRA target module selection for efficient fine tuning",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/optimizing-lora-target-module-selection-for-efficient-fine-tuning",
+      "published_date": "2026-03-19T14:39:23+00:00",
       "category": "Industry",
-      "description": "The latest open models and frameworks from NVIDIA bring together simulation, robot learning and embedded compute to accelerate cloud-to-robot workflows.",
-      "author": "Katie Washabaugh",
-      "content": "The latest open models and frameworks from NVIDIA bring together simulation, robot learning and embedded compute to accelerate cloud-to-robot workflows.",
+      "description": "Ablation study clarifies trade-offs between accuracy and efficiency when using low-rank adaptation (LoRA) to fine-tune AI models.",
+      "author": "Rushil Anirudh",
+      "content": "Ablation study clarifies trade-offs between accuracy and efficiency when using low-rank adaptation (LoRA) to fine-tune AI models.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8775000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -668,7 +420,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.304045+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.624518+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -679,26 +431,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.304048+00:00"
+        "timestamp": "2026-03-25T05:27:51.624521+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "03ea85223b02f520c33d5cc0ab57aa17",
-      "title": "Meta AI’s New Hyperagents Don’t Just Solve Tasks—They Rewrite the Rules of How They Learn",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/03/23/meta-ais-new-hyperagents-dont-just-solve-tasks-they-rewrite-the-rules-of-how-they-learn/",
-      "published_date": "2026-03-24T01:42:07+00:00",
+      "article_id": "bd8600b8eaadb858ae0dfc6e15412d3c",
+      "title": "Introducing V-RAG: revolutionizing AI-powered video production with Retrieval Augmented Generation",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-v-rag-revolutionizing-ai-powered-video-production-with-retrieval-augmented-generation/",
+      "published_date": "2026-03-19T16:45:42+00:00",
       "category": "Industry",
-      "description": "The dream of recursive self-improvement in AI—where a system doesn’t just get better at a task, but gets better at learning—has long been the ‘holy grail’ of the field. While theoretical models like the Gödel Machine have existed for decades, they remained largely impractical in real-world settings. That changed with the Darwin Gödel Machine (DGM), […] The post Meta AI’s New Hyperagents Don’t Just Solve Tasks—They Rewrite the Rules of How They Learn appeared first on MarkTechPost.",
-      "author": "Asif Razzaq",
-      "content": "The dream of recursive self-improvement in AI—where a system doesn’t just get better at a task, but gets better at learning—has long been the ‘holy grail’ of the field. While theoretical models like the Gödel Machine have existed for decades, they remained largely impractical in real-world settings. That changed with the Darwin Gödel Machine (DGM), […] The post Meta AI’s New Hyperagents Don’t Just Solve Tasks—They Rewrite the Rules of How They Learn appeared first on MarkTechPost.",
+      "description": "This post introduces Video Retrieval-Augmented Generation (V-RAG), an approach to help improve video content creation. By combining retrieval augmented generation with advanced video AI models, V-RAG offers an efficient, and reliable solution for generating AI videos.",
+      "author": "Nick Biso",
+      "content": "This post introduces Video Retrieval-Augmented Generation (V-RAG), an approach to help improve video content creation. By combining retrieval augmented generation with advanced video AI models, V-RAG offers an efficient, and reliable solution for generating AI videos.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-25T05:27:51.621390+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-25T05:27:51.621392+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1f8fd60b4786e690ca14b50f1767aaee",
+      "title": "More Than Meets the Eye: NVIDIA RTX-Accelerated Computers Now Connect Directly to Apple Vision Pro",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-cloudxr-apple-vision-pro/",
+      "published_date": "2026-03-17T17:00:58+00:00",
+      "category": "Industry",
+      "description": "NVIDIA and Apple’s collaboration brings native integration of NVIDIA CloudXR 6.0 to visionOS, securely delivering NVIDIA RTX-powered simulators and professional 3D graphics applications — like Immersive for Autodesk VRED on Innoactive’s XR streaming solutions — to Apple Vision Pro.",
+      "author": "Richard Kerris",
+      "content": "NVIDIA and Apple’s collaboration brings native integration of NVIDIA CloudXR 6.0 to visionOS, securely delivering NVIDIA RTX-powered simulators and professional 3D graphics applications — like Immersive for Autodesk VRED on Innoactive’s XR streaming solutions — to Apple Vision Pro.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
         "impact_score": 0.95,
-        "overall_score": 0.8699999999999999,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -730,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.307315+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.622167+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,26 +555,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.307318+00:00"
+        "timestamp": "2026-03-25T05:27:51.622170+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "802eafb640183083b8d911e1ee28f5bb",
-      "title": "How Reco transforms security alerts using Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-reco-transforms-security-alerts-using-amazon-bedrock/",
-      "published_date": "2026-03-23T16:46:54+00:00",
+      "article_id": "389cd577bb37c368282d4762e308adae",
+      "title": "Building a Zero-Trust Architecture for Confidential AI Factories",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/building-a-zero-trust-architecture-for-confidential-ai-factories/",
+      "published_date": "2026-03-23T12:00:00+00:00",
       "category": "Industry",
-      "description": "In this blog post, we show you how Reco implemented Amazon Bedrock to help transform security alerts and achieve significant improvements in incident response times.",
-      "author": "Tal Shapira, Tamir Friedman",
-      "content": "In this blog post, we show you how Reco implemented Amazon Bedrock to help transform security alerts and achieve significant improvements in incident response times.",
+      "description": "AI is moving from experimentation to production. However, most data enterprises need exists outside the public cloud. This includes sensitive information like...",
+      "author": "Hema Bontha",
+      "content": "AI is moving from experimentation to production. However, most data enterprises need exists outside the public cloud. This includes sensitive information like...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-25T05:27:51.623389+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-25T05:27:51.623392+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "977b72bf9fe21de8131d5d4a0cd4d9c4",
+      "title": "Study measuring changes in protein structure establishes new class of Alzheimer’s biomarkers",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/study-measuring-changes-protein-structure-establishes-new-class-alzheimers-biomarkers",
+      "published_date": "2026-03-25T05:22:41.699221+00:00",
+      "category": "Government",
+      "description": "NIH-funded insights into Alzheimer’s biology could help with early diagnosis, future clinical trials.",
+      "author": "",
+      "content": "NIH-funded insights into Alzheimer’s biology could help with early diagnosis, future clinical trials.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.86,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -792,7 +668,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.303044+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.619021+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -803,7 +679,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.303047+00:00"
+        "timestamp": "2026-03-25T05:27:51.619025+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "43f85f926b3dfcd32836681decc8f1b9",
+      "title": "Policy paper: Fixed Telecoms Modernisation Charter",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/fixed-telecoms-modernisation-charter",
+      "published_date": "2026-03-24T11:50:01+00:00",
+      "category": "Government",
+      "description": "This document sets out the steps that telecoms providers should follow when carrying out any current and future fixed telecoms modernisations.",
+      "author": "",
+      "content": "This document sets out the steps that telecoms providers should follow when carrying out any current and future fixed telecoms modernisations.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.5,
+        "impact_score": 0.9,
+        "overall_score": 0.8,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-25T05:27:51.620133+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-25T05:27:51.620136+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a373906e945dcd1a404994b3c12cc044",
+      "title": "Automated CT scan analysis could fast-track clinical assessments",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/automated-ct-scan-analysis-could-fast-track-clinical-assessments",
+      "published_date": "2026-03-25T05:22:41.699148+00:00",
+      "category": "Government",
+      "description": "NIH-funded research suggests AI-powered tool could streamline diagnoses and unveil early markers for chronic disease.",
+      "author": "",
+      "content": "NIH-funded research suggests AI-powered tool could streamline diagnoses and unveil early markers for chronic disease.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.82,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-25T05:27:51.618965+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-25T05:27:51.618969+00:00"
       },
       "article_type": "article"
     },
@@ -818,12 +818,12 @@
       "author": "Pranjali Joshi",
       "content": "The next generation of AI-driven robots like humanoids and autonomous vehicles depends on high-fidelity, physics-aware training data. Without diverse and...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.75,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.83,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -850,42 +850,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.85,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.306104+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.624052+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.306106+00:00"
+        "timestamp": "2026-03-25T05:27:51.624055+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8fcf4e00d62b876e06af3aa65fba5c7c",
-      "title": "Measuring progress toward AGI: A cognitive framework",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
-      "published_date": "2026-03-17T16:03:47+00:00",
+      "article_id": "9986cb58893fb0963e86545e0d0fe34b",
+      "title": "Introducing Fireworks AI on Microsoft Foundry: Bringing high performance, low latency open model inference to Azure",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/",
+      "published_date": "2026-03-11T07:00:00+00:00",
       "category": "Industry",
-      "description": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
-      "author": "",
-      "content": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "description": "We’re announcing the public preview of Fireworks AI on Microsoft Foundry, bringing high‑performance open model inference into Azure. This integration reflects Microsoft Foundry’s broader direction: providing a single place where developers can not only run open models efficiently but also customize and operationalize them as part of a complete enterprise‑ready AI lifecycle. The post Introducing Fireworks AI on Microsoft Foundry: Bringing high performance, low latency open model inference to...",
+      "author": "Yina Arenas",
+      "content": "We’re announcing the public preview of Fireworks AI on Microsoft Foundry, bringing high‑performance open model inference into Azure. This integration reflects Microsoft Foundry’s broader direction: providing a single place where developers can not only run open models efficiently but also customize and operationalize them as part of a complete enterprise‑ready AI lifecycle. The post Introducing Fireworks AI on Microsoft Foundry: Bringing high performance, low latency open model inference to...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -912,22 +912,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-25T02:03:00.306473+00:00"
+        "consensus_timestamp": "2026-03-25T05:27:51.620998+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-25T02:03:00.306475+00:00"
+        "timestamp": "2026-03-25T05:27:51.621000+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 220.58815145492554,
+    "processing_time": 227.0666060447693,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 134,
+      "total_processed": 129,
       "candidates": {
-        "headlines": 13,
-        "articles": 121,
+        "headlines": 15,
+        "articles": 114,
         "research_papers": 0
       },
       "selected": {
