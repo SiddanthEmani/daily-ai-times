@@ -1,22 +1,22 @@
 {
-  "updated": "2026-03-28T08:40:18.441279+00:00",
+  "updated": "2026-03-28T12:53:44.403022+00:00",
   "top_stories": [
     {
-      "article_id": "d7080db8e279babaafa079a0e681e72d",
-      "title": "Anthropic wins injunction against Trump administration over Defense Department saga",
+      "article_id": "2da2a58102494396e7979bebafff09fd",
+      "title": "OpenAI abandons yet another side quest: ChatGPT’s erotic mode",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/03/26/anthropic-wins-injunction-against-trump-administration-over-defense-department-saga/",
-      "published_date": "2026-03-27T01:18:38+00:00",
+      "url": "https://techcrunch.com/2026/03/26/openai-abandons-yet-another-side-quest-chatgpts-erotic-mode/",
+      "published_date": "2026-03-26T18:34:02+00:00",
       "category": "Industry",
-      "description": "A federal judge has ordered that the Trump administration rescind recent restrictions it placed on the AI company.",
+      "description": "It's only the latest of several side projects that the AI startup has ditched over the past week.",
       "author": "Lucas Ropek",
-      "content": "A federal judge has ordered that the Trump administration rescind recent restrictions it placed on the AI company.",
+      "content": "It's only the latest of several side projects that the AI startup has ditched over the past week.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,104 +44,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-28T08:40:18.404024+00:00"
+        "consensus_timestamp": "2026-03-28T12:53:44.368136+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-28T08:40:18.404026+00:00"
+        "timestamp": "2026-03-28T12:53:44.368139+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "2175b4785cb99b9b91b3d937007c1b00",
-      "title": "Evaluating AI agents for production: A practical guide to Strands Evals",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-for-production-a-practical-guide-to-strands-evals/",
-      "published_date": "2026-03-18T15:54:09+00:00",
-      "category": "Industry",
-      "description": "In this post, we show how to evaluate AI agents systematically using Strands Evals. We walk through the core concepts, built-in evaluators, multi-turn simulation capabilities and practical approaches and patterns for integration.",
-      "author": "Ishan Singh",
-      "content": "In this post, we show how to evaluate AI agents systematically using Strands Evals. We walk through the core concepts, built-in evaluators, multi-turn simulation capabilities and practical approaches and patterns for integration.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.95,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.9375,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-03-28T08:40:18.403293+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-03-28T08:40:18.403296+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c2726eb027e28e0dd8e20cb9a11974a8",
-      "title": "Accelerating LLM fine-tuning with unstructured data using SageMaker Unified Studio and S3",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/",
-      "published_date": "2026-03-26T17:20:26+00:00",
-      "category": "Industry",
-      "description": "Last year, AWS announced an integration between Amazon SageMaker Unified Studio and Amazon S3 general purpose buckets. This integration makes it straightforward for teams to use unstructured data stored in Amazon Simple Storage Service (Amazon S3) for machine learning (ML) and data analytics use cases. In this post, we show how to integrate S3 general purpose buckets with Amazon SageMaker Catalog to fine-tune Llama 3.2 11B Vision Instruct for visual question answering (VQA) using Amazon...",
-      "author": "Hazim Qudah",
-      "content": "Last year, AWS announced an integration between Amazon SageMaker Unified Studio and Amazon S3 general purpose buckets. This integration makes it straightforward for teams to use unstructured data stored in Amazon Simple Storage Service (Amazon S3) for machine learning (ML) and data analytics use cases. In this post, we show how to integrate S3 general purpose buckets with Amazon SageMaker Catalog to fine-tune Llama 3.2 11B Vision Instruct for visual question answering (VQA) using Amazon...",
+      "article_id": "71cc61fc14408392fb9f217730ee0b3c",
+      "title": "Official Statistics: UK Business Data Survey 2026",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/statistics/announcements/uk-business-data-survey-2026",
+      "published_date": "2026-03-24T12:52:57+00:00",
+      "category": "Government",
+      "description": "Official statistics on UK businesses covering the role and importance of personal and non-personal data, domestic and international transfers of data, activities and opinions relating to data protection legislation and policy.",
+      "author": "",
+      "content": "Official statistics on UK businesses covering the role and importance of personal and non-personal data, domestic and international transfers of data, activities and opinions relating to data protection legislation and policy.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.98
+        "overall_score": 0.9225000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +110,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-28T08:40:18.401773+00:00"
+        "consensus_timestamp": "2026-03-28T12:53:44.365420+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,7 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-28T08:40:18.401776+00:00"
+        "timestamp": "2026-03-28T12:53:44.365423+00:00"
       },
       "article_type": "article"
     },
@@ -198,12 +136,12 @@
       "author": "Paul Burchard, Igor Halperin",
       "content": "In this post, we’re excited to showcase how AWS ISV Partner Artificial Genius is using Amazon SageMaker AI and Amazon Nova to deliver a solution that is probabilistic on input but deterministic on output, helping to enable safe, enterprise-grade adoption.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -231,40 +169,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-28T08:40:18.402203+00:00"
+        "consensus_timestamp": "2026-03-28T12:53:44.366686+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-28T08:40:18.402205+00:00"
+        "timestamp": "2026-03-28T12:53:44.366689+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1f8fd60b4786e690ca14b50f1767aaee",
-      "title": "More Than Meets the Eye: NVIDIA RTX-Accelerated Computers Now Connect Directly to Apple Vision Pro",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-cloudxr-apple-vision-pro/",
-      "published_date": "2026-03-17T17:00:58+00:00",
+      "article_id": "e0a9b59bc2efd4fd876fdc952cfc08a8",
+      "title": "OpenAI to acquire Astral",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-to-acquire-astral",
+      "published_date": "2026-03-19T00:00:00+00:00",
       "category": "Industry",
-      "description": "NVIDIA and Apple’s collaboration brings native integration of NVIDIA CloudXR 6.0 to visionOS, securely delivering NVIDIA RTX-powered simulators and professional 3D graphics applications — like Immersive for Autodesk VRED on Innoactive’s XR streaming solutions — to Apple Vision Pro.",
-      "author": "Richard Kerris",
-      "content": "NVIDIA and Apple’s collaboration brings native integration of NVIDIA CloudXR 6.0 to visionOS, securely delivering NVIDIA RTX-powered simulators and professional 3D graphics applications — like Immersive for Autodesk VRED on Innoactive’s XR streaming solutions — to Apple Vision Pro.",
+      "description": "Accelerates Codex growth to power the next generation of Python developer tools",
+      "author": "",
+      "content": "Accelerates Codex growth to power the next generation of Python developer tools",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-03-28T08:40:18.403610+00:00"
+        "consensus_timestamp": "2026-03-28T12:53:44.365905+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-03-28T08:40:18.403613+00:00"
+        "timestamp": "2026-03-28T12:53:44.365908+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bd33d7676a9eb7aac1ed831e6e2c24df",
+      "title": "How agentic AI helps heal the systems we can&#8217;t replace",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/how-agentic-ai-helps-heal-the-systems-we-cant-replace",
+      "published_date": "2026-03-16T13:00:00+00:00",
+      "category": "Industry",
+      "description": "By learning the idiosyncrasies of accumulated layers of legacy systems, AI agents can preserve institutional knowledge and provide a unified interface to a range of services.",
+      "author": "Staff writer",
+      "content": "By learning the idiosyncrasies of accumulated layers of legacy systems, AI agents can preserve institutional knowledge and provide a unified interface to a range of services.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.9025000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-03-28T12:53:44.370005+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-03-28T12:53:44.370008+00:00"
       },
       "article_type": "article"
     }
