@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-16T02:31:22.423729+00:00",
+  "updated": "2026-04-16T06:05:48.189068+00:00",
   "top_stories": [
     {
       "article_id": "094932a8dfe5a4c894ff1070c01e9917",
@@ -12,11 +12,135 @@
       "author": "Connie Loizos",
       "content": "One investor who has backed both companies told the FT that justifying OpenAI's recent round required assuming an IPO valuation of $1.2 trillion or more — making Anthropic's current $380 billion valuation look like the relative bargain.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.86,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-04-16T06:05:48.149558+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-04-16T06:05:48.149560+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "8166235ba39463d0f5bc80bbe1d5db6f",
+      "title": "China has erased the US lead in AI, Stanford HAI’s 2026 AI index reveals",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/04/13/stanford-hais-2026-ai-index-reveals-china-u-s-now-neck-neck-race-global-dominance/",
+      "published_date": "2026-04-13T13:00:42+00:00",
+      "category": "Industry",
+      "description": "Stanford University researchers today released their highly anticipated 2026 AI Index Report, revealing a global landscape where artificial intelligence technology is being adopted at record-breaking pace, even as public trust in AI oversight and transparency hits new lows. The report by the Stanford Institute for Human-Centered Artificial Intelligence, known as Stanford HAI, is now into […] The post China has erased the US lead in AI, Stanford HAI’s 2026 AI index reveals appeared first on...",
+      "author": "Mike Wheatley",
+      "content": "Stanford University researchers today released their highly anticipated 2026 AI Index Report, revealing a global landscape where artificial intelligence technology is being adopted at record-breaking pace, even as public trust in AI oversight and transparency hits new lows. The report by the Stanford Institute for Human-Centered Artificial Intelligence, known as Stanford HAI, is now into […] The post China has erased the US lead in AI, Stanford HAI’s 2026 AI index reveals appeared first on...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.915,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-04-16T06:05:48.151942+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-04-16T06:05:48.151944+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "e4a233c47c515da62e7ff8cd030dd90a",
+      "title": "Introducing stateful MCP client capabilities on Amazon Bedrock AgentCore Runtime",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-stateful-mcp-client-capabilities-on-amazon-bedrock-agentcore-runtime/",
+      "published_date": "2026-04-09T14:47:57+00:00",
+      "category": "Industry",
+      "description": "In this post, you will learn how to build stateful MCP servers that request user input during execution, invoke LLM sampling for dynamic content generation, and stream progress updates for long-running tasks. You will see code examples for each capability and deploy a working stateful MCP server to Amazon Bedrock AgentCore Runtime.",
+      "author": "Evandro Franco",
+      "content": "In this post, you will learn how to build stateful MCP servers that request user input during execution, invoke LLM sampling for dynamic content generation, and stream progress updates for long-running tasks. You will see code examples for each capability and deploy a working stateful MCP server to Amazon Bedrock AgentCore Runtime.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-16T02:31:22.379924+00:00"
+        "consensus_timestamp": "2026-04-16T06:05:48.148608+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +183,9 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-16T02:31:22.379927+00:00"
+        "timestamp": "2026-04-16T06:05:48.148611+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "a1fb24f9e17ec70c194e46bc85bb4f99",
@@ -110,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-16T02:31:22.376923+00:00"
+        "consensus_timestamp": "2026-04-16T06:05:48.146470+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,150 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-16T02:31:22.376926+00:00"
+        "timestamp": "2026-04-16T06:05:48.146472+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "239acb51885359727621ce891cf3dc3b",
-      "title": "Research: Evaluation of the Medicines and Diagnostics Manufacturing Transformation Fund and the Life Sciences Innovative Manufacturing Fund",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/evaluation-of-the-medicines-and-diagnostics-manufacturing-transformation-fund-and-the-life-sciences-innovative-manufacturing-fund",
-      "published_date": "2026-04-13T23:01:02+00:00",
-      "category": "Government",
-      "description": "Findings from the early‑stage evaluation of the Medicines and Diagnostics Manufacturing Transformation Fund and its successor, the Life Sciences Innovative Manufacturing Fund.",
-      "author": "",
-      "content": "Findings from the early‑stage evaluation of the Medicines and Diagnostics Manufacturing Transformation Fund and its successor, the Life Sciences Innovative Manufacturing Fund.",
+      "article_id": "cbceb11cdf179c228948f69422f4f396",
+      "title": "Navigating the generative AI journey: The Path-to-Value framework from AWS",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/navigating-the-generative-ai-journey-the-path-to-value-framework-from-aws/",
+      "published_date": "2026-04-14T18:19:43+00:00",
+      "category": "Industry",
+      "description": "In this post, we introduce the Generative AI Path-to-Value (P2V) framework, a structured approach to help you move generative AI initiatives from concept to production and sustained value creation.",
+      "author": "Nitin Eusebius",
+      "content": "In this post, we introduce the Generative AI Path-to-Value (P2V) framework, a structured approach to help you move generative AI initiatives from concept to production and sustained value creation.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
         "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-04-16T02:31:22.377144+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-04-16T02:31:22.377146+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e0c3d178a8e5aa28edbf3e1a13c991d1",
-      "title": "Building Custom Atomistic Simulation Workflows for Chemistry and Materials Science with NVIDIA ALCHEMI Toolkit",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-custom-atomistic-simulation-workflows-for-chemistry-and-materials-science-with-nvidia-alchemi-toolkit/",
-      "published_date": "2026-04-14T16:30:00+00:00",
-      "category": "Industry",
-      "description": "For decades, computational chemistry has faced a tug-of-war between accuracy and speed. Ab initio methods like density functional theory (DFT) provide high...",
-      "author": "Erica Tsai",
-      "content": "For decades, computational chemistry has faced a tug-of-war between accuracy and speed. Ab initio methods like density functional theory (DFT) provide high...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-04-16T02:31:22.380182+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-04-16T02:31:22.380184+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "8973b0ce4fac6d9b6c434eef7722c5a8",
-      "title": "Running AI Workloads on Rack-Scale Supercomputers: From Hardware to Topology-Aware Scheduling",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/running-ai-workloads-on-rack-scale-supercomputers-from-hardware-to-topology-aware-scheduling/",
-      "published_date": "2026-04-07T18:51:01+00:00",
-      "category": "Industry",
-      "description": "The NVIDIA GB200 NVL72 and NVIDIA GB300 NVL72 systems, featuring NVIDIA Blackwell architecture, are rack-scale supercomputers. They’re designed with 18...",
-      "author": "Ryan Prout",
-      "content": "The NVIDIA GB200 NVL72 and NVIDIA GB300 NVL72 systems, featuring NVIDIA Blackwell architecture, are rack-scale supercomputers. They’re designed with 18...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-16T02:31:22.380538+00:00"
+        "consensus_timestamp": "2026-04-16T06:05:48.148219+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-16T02:31:22.380542+00:00"
+        "timestamp": "2026-04-16T06:05:48.148222+00:00"
       },
       "article_type": "article"
     }
