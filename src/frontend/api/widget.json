@@ -1,22 +1,22 @@
 {
-  "updated": "2026-04-17T06:07:51.199962+00:00",
+  "updated": "2026-04-17T09:20:28.618831+00:00",
   "top_stories": [
     {
-      "article_id": "85de77c93e92be141d44d21f89168c99",
-      "title": "OpenAI updates its Agents SDK to help enterprises build safer, more capable agents",
+      "article_id": "19f183e218cd180ba9789037522ee6d2",
+      "title": "OpenAI takes aim at Anthropic with beefed-up Codex that gives it more power over your desktop",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/",
-      "published_date": "2026-04-15T19:28:36+00:00",
+      "url": "https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/",
+      "published_date": "2026-04-16T19:18:41+00:00",
       "category": "Industry",
-      "description": "OpenAI has expanded the capabilities of its agent-building toolkit, as agentic AI continues to grow in popularity.",
+      "description": "OpenAI's agentic coding tool has gotten a major makeover, with a variety of new powers and abilities.",
       "author": "Lucas Ropek",
-      "content": "OpenAI has expanded the capabilities of its agent-building toolkit, as agentic AI continues to grow in popularity.",
+      "content": "OpenAI's agentic coding tool has gotten a major makeover, with a variety of new powers and abilities.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,148 +44,24 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-17T06:07:51.158694+00:00"
+        "consensus_timestamp": "2026-04-17T09:20:28.580040+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-17T06:07:51.158696+00:00"
+        "timestamp": "2026-04-17T09:20:28.580042+00:00"
       },
       "article_type": "headline"
-    },
-    {
-      "article_id": "8973b0ce4fac6d9b6c434eef7722c5a8",
-      "title": "Running AI Workloads on Rack-Scale Supercomputers: From Hardware to Topology-Aware Scheduling",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/running-ai-workloads-on-rack-scale-supercomputers-from-hardware-to-topology-aware-scheduling/",
-      "published_date": "2026-04-07T18:51:01+00:00",
-      "category": "Industry",
-      "description": "The NVIDIA GB200 NVL72 and NVIDIA GB300 NVL72 systems, featuring NVIDIA Blackwell architecture, are rack-scale supercomputers. They’re designed with 18...",
-      "author": "Ryan Prout",
-      "content": "The NVIDIA GB200 NVL72 and NVIDIA GB300 NVL72 systems, featuring NVIDIA Blackwell architecture, are rack-scale supercomputers. They’re designed with 18...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-04-17T06:07:51.159211+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-04-17T06:07:51.159214+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d26009b7563578cd9645b781eb5be539",
-      "title": "Accelerating decode-heavy LLM inference with speculative decoding on AWS Trainium and vLLM",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-decode-heavy-llm-inference-with-speculative-decoding-on-aws-trainium-and-vllm/",
-      "published_date": "2026-04-15T15:20:58+00:00",
-      "category": "Industry",
-      "description": "In this post, you will learn how speculative decoding works and why it helps reduce cost per generated token on AWS Trainium2.",
-      "author": "Yahav Biran",
-      "content": "In this post, you will learn how speculative decoding works and why it helps reduce cost per generated token on AWS Trainium2.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-04-17T06:07:51.156474+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-04-17T06:07:51.156477+00:00"
-      },
-      "article_type": "article"
     },
     {
       "article_id": "cba032544e82090784c3fe439aab341a",
@@ -200,6 +76,68 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.925,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-04-17T09:20:28.580695+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-04-17T09:20:28.580697+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2f0580e1259663493c8e280e82dbd7a3",
+      "title": "HPE accelerates quantum readiness ahead of Q-day",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/04/10/quantum-computing-market-hpe-hpeworldquantumday/",
+      "published_date": "2026-04-10T20:22:05+00:00",
+      "category": "Industry",
+      "description": "Enterprise tech is already preparing for “Q-day” — when quantum computing will be able to break today’s public-key cryptography. Although that date is still years away, staying ahead of the curve is a necessity if companies want to secure their infrastructure and incorporate quantum into the existing artificial intelligence and high-performance computing stack. Hewlett Packard Enterprise […] The post HPE accelerates quantum readiness ahead of Q-day appeared first on SiliconANGLE.",
+      "author": "Devony Hof",
+      "content": "Enterprise tech is already preparing for “Q-day” — when quantum computing will be able to break today’s public-key cryptography. Although that date is still years away, staying ahead of the curve is a necessity if companies want to secure their infrastructure and incorporate quantum into the existing artificial intelligence and high-performance computing stack. Hewlett Packard Enterprise […] The post HPE accelerates quantum readiness ahead of Q-day appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.98,
         "overall_score": 0.9059999999999999,
@@ -230,42 +168,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-17T06:07:51.158825+00:00"
+        "consensus_timestamp": "2026-04-17T09:20:28.581976+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-17T06:07:51.158828+00:00"
+        "timestamp": "2026-04-17T09:20:28.581978+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "4c52008d6b0a8b9a37a016e42db777cc",
-      "title": "Running Large-Scale GPU Workloads on Kubernetes with Slurm",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/running-large-scale-gpu-workloads-on-kubernetes-with-slurm/",
-      "published_date": "2026-04-09T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Slurm is an open source cluster management and job scheduling system for Linux. It manages job scheduling for over 65% of TOP500 systems. Most organizations...",
-      "author": "Anton Polyakov",
-      "content": "Slurm is an open source cluster management and job scheduling system for Linux. It manages job scheduling for over 65% of TOP500 systems. Most organizations...",
+      "article_id": "26b8d5459866ed41afd7d503a387c0c5",
+      "title": "NIH awards top scientific teams for innovations linking nutrition and autoimmune disease",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-awards-top-scientific-teams-innovations-linking-nutrition-autoimmune-disease",
+      "published_date": "2026-04-17T09:14:51.436477+00:00",
+      "category": "Government",
+      "description": "Competition&nbsp;sought bold ideas to better understand how dietary interventions could influence disease onset and symptom management.",
+      "author": "",
+      "content": "Competition&nbsp;sought bold ideas to better understand how dietary interventions could influence disease onset and symptom management.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +230,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-04-17T06:07:51.159040+00:00"
+        "consensus_timestamp": "2026-04-17T09:20:28.577254+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-04-17T06:07:51.159042+00:00"
+        "timestamp": "2026-04-17T09:20:28.577257+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1f81169f7a77c084d7e0d64c9149d023",
+      "title": "AI firms pioneering drug discovery, cheaper supercomputing and more get first backing through UK’s Sovereign AI",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/ai-firms-pioneering-drug-discovery-cheaper-supercomputing-and-more-get-first-backing-through-uks-sovereign-ai",
+      "published_date": "2026-04-16T17:30:06+00:00",
+      "category": "Government",
+      "description": "Sovereign AI is the UK’s £500 million bet to back homegrown AI founders, drive growth and create jobs across the UK.",
+      "author": "",
+      "content": "Sovereign AI is the UK’s £500 million bet to back homegrown AI founders, drive growth and create jobs across the UK.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-04-17T09:20:28.577603+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-04-17T09:20:28.577606+00:00"
       },
       "article_type": "article"
     }
