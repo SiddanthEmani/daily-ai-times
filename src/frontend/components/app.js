@@ -30,6 +30,7 @@ const state = {
     partitioned: null,
     sections: ['All'],
     mastheadClock: null,
+    openStory: null,
 };
 
 const TAIL_POOLS = [
@@ -135,19 +136,28 @@ function sectionCounts(all) {
     return counts;
 }
 
+// Stories actually rendered as grid cards — excludes briefing extras when the
+// "Also In The News" stack is showing. Used by both the renderer and keyboard
+// nav so focusIdx and card idx stay in lockstep.
+function visibleGridStories() {
+    const grid = filteredGrid();
+    const showAbove = state.section === 'All' && !state.query.trim();
+    if (!showAbove) return grid;
+    const extras = state.partitioned.extras;
+    return grid.filter(s => !extras.includes(s));
+}
+
 function buildPageMarkup() {
     const showAbove = state.section === 'All' && !state.query.trim();
     const grid = filteredGrid();
     const briefingExtras = showAbove ? state.partitioned.extras : [];
-    const gridStories = showAbove
-        ? grid.filter(s => !briefingExtras.includes(s))
-        : grid;
+    const gridStories = visibleGridStories();
 
     const cols = [[], [], [], []];
     gridStories.forEach((s, i) => cols[i % 4].push({ kind: 'story', story: s, idx: i }));
 
     if (showAbove) {
-        cols[3].unshift({ kind: 'raw', html: '<div id="audio-box" class="audio-box"></div>' });
+        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
         cols[3].splice(2, 0, { kind: 'raw', html: marketsBoxHTML() });
         cols[3].splice(4, 0, { kind: 'raw', html: weatherBoxHTML() });
         cols[3].push({ kind: 'raw', html: opinionBoxHTML() });
@@ -157,7 +167,7 @@ function buildPageMarkup() {
             cols[ci].push({ kind: 'raw', html: tailSectionHTML(TAIL_TITLES[ci], items, ci) });
         });
     } else {
-        cols[3].unshift({ kind: 'raw', html: '<div id="audio-box" class="audio-box"></div>' });
+        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
     }
 
     const counts = sectionCounts(state.partitioned.all);
@@ -214,7 +224,7 @@ function render() {
     if (!root) return;
     root.innerHTML = buildPageMarkup();
     wireTickerPause(root);
-    mountAudioOnce();
+    mountAudioBox();
     if (state.mastheadClock == null) state.mastheadClock = startMastheadClock(root);
     if (state.query) {
         const input = root.querySelector('.nav-search input');
@@ -226,11 +236,17 @@ function render() {
     }
 }
 
-function mountAudioOnce() {
-    const container = document.getElementById('audio-box');
-    if (!container) return;
-    if (container.dataset.mounted === '1') return;
-    container.dataset.mounted = '1';
+// The audio-box DOM is created once and kept alive across renders so the
+// underlying <audio> element (and any in-progress playback) survives
+// root.innerHTML resets. Each render inserts a placeholder; mountAudioBox
+// swaps the persistent element in.
+let audioBoxEl = null;
+
+function ensureAudioBox() {
+    if (audioBoxEl) return audioBoxEl;
+    audioBoxEl = document.createElement('div');
+    audioBoxEl.id = 'audio-box';
+    audioBoxEl.className = 'audio-box';
     try {
         const title = document.createElement('div');
         title.className = 'box-title';
@@ -241,20 +257,30 @@ function mountAudioOnce() {
         chip.textContent = 'LISTEN';
         title.appendChild(label);
         title.appendChild(chip);
-        container.appendChild(title);
+        audioBoxEl.appendChild(title);
         const host = document.createElement('div');
-        container.appendChild(host);
+        audioBoxEl.appendChild(host);
         new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${Date.now()}`, host);
     } catch (err) {
         console.warn('Audio player mount failed:', err);
     }
+    return audioBoxEl;
+}
+
+function mountAudioBox() {
+    const placeholder = document.getElementById('audio-placeholder');
+    if (!placeholder) return;
+    placeholder.replaceWith(ensureAudioBox());
 }
 
 function installEventDelegation() {
     const root = document.getElementById('root');
     if (!root) return;
 
-    root.addEventListener('click', (e) => {
+    // Click delegation sits on document.body so it also catches clicks inside
+    // #modal-root (a sibling of #root). Without this the modal's Save button
+    // would emit data-action="save" that never reaches the handler.
+    document.body.addEventListener('click', (e) => {
         const actionEl = e.target.closest?.('[data-action]');
         if (!actionEl) return;
         const action = actionEl.dataset.action;
@@ -273,6 +299,9 @@ function installEventDelegation() {
             e.stopPropagation();
             toggleSave(storyId);
             render();
+            if (state.openStory && state.openStory.id === storyId && isModalOpen()) {
+                openModal(state.openStory, { saved: state.savedIds.has(storyId) });
+            }
             return;
         }
         if (action === 'open' && storyId) {
@@ -329,6 +358,7 @@ function toggleSave(id) {
 }
 
 function openStory(story) {
+    state.openStory = story;
     openModal(story, { saved: state.savedIds.has(story.id) });
     try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
     catch { /* analytics is best-effort */ }
@@ -338,7 +368,9 @@ function installKeyboardNav() {
     window.addEventListener('keydown', (e) => {
         if (isModalOpen()) return;
         if (e.target?.tagName === 'INPUT') return;
-        const grid = filteredGrid();
+        // Nav walks only the grid cards that actually render; this matches the
+        // focused-outline target and the list card idx values.
+        const grid = visibleGridStories();
         if (e.key === 'j') {
             e.preventDefault();
             state.focusIdx = Math.min(grid.length - 1, state.focusIdx + 1);
@@ -359,7 +391,7 @@ function installKeyboardNav() {
 }
 
 function scrollFocused() {
-    const grid = filteredGrid();
+    const grid = visibleGridStories();
     const s = grid[state.focusIdx];
     if (!s) return;
     const el = document.querySelector(`[data-story-id="${s.id}"]`);

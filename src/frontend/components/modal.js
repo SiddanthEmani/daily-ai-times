@@ -10,6 +10,10 @@ function ensureRoot() {
     if (modalRoot) return modalRoot;
     modalRoot = document.createElement('div');
     modalRoot.id = 'modal-root';
+    modalRoot.addEventListener('click', (e) => {
+        const action = e.target?.closest?.('[data-action]')?.dataset?.action;
+        if (action === 'modal-close') closeModal();
+    });
     document.body.appendChild(modalRoot);
     return modalRoot;
 }
@@ -60,6 +64,7 @@ export function openModal(story, { saved = false } = {}) {
     const root = ensureRoot();
     root.innerHTML = renderModal(story, saved);
 
+    if (escHandler) window.removeEventListener('keydown', escHandler);
     escHandler = (e) => {
         if (e.key === 'Escape') {
             e.preventDefault();
@@ -67,11 +72,6 @@ export function openModal(story, { saved = false } = {}) {
         }
     };
     window.addEventListener('keydown', escHandler);
-
-    root.addEventListener('click', (e) => {
-        const action = e.target?.closest?.('[data-action]')?.dataset?.action;
-        if (action === 'modal-close') closeModal();
-    });
 }
 
 export function closeModal() {
