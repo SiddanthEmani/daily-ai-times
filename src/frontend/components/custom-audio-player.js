@@ -415,10 +415,8 @@ export class CustomAudioPlayer {
             });
         });
         
-        // Sticky audio player on scroll
-        this.setupStickyBehavior();
-        
-        // Auto-switch active tab based on scroll position
+        // Stickiness is handled by CSS (`position: sticky` on .audio-box) in the
+        // newspaper layout; no scroll listener required.
         this.setupScrollActiveTab();
     }
     
@@ -483,59 +481,6 @@ export class CustomAudioPlayer {
         }
     }
     
-    setupStickyBehavior() {
-        let isSticky = false;
-        let isTransitioning = false;
-        const originalRect = this.container.getBoundingClientRect();
-        const originalTop = originalRect.top + window.scrollY;
-        
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            const shouldBeSticky = currentScrollY > originalTop + 100; // Add some buffer
-            
-            if (shouldBeSticky && !isSticky && !isTransitioning) {
-                isTransitioning = true;
-                
-                // Add transition class for smooth animation
-                this.elements.container.classList.add('sticky-transition');
-                
-                // Small delay to ensure transition class is applied
-                requestAnimationFrame(() => {
-                    this.elements.container.classList.add('sticky-audio-player');
-                    isSticky = true;
-                    
-                    // Clean up transition class after animation
-                    setTimeout(() => {
-                        this.elements.container.classList.remove('sticky-transition');
-                        isTransitioning = false;
-                    }, 400);
-                });
-                
-            } else if (!shouldBeSticky && isSticky && !isTransitioning) {
-                isTransitioning = true;
-                
-                // Add transition class for smooth animation
-                this.elements.container.classList.add('sticky-transition');
-                
-                requestAnimationFrame(() => {
-                    this.elements.container.classList.remove('sticky-audio-player');
-                    isSticky = false;
-                    
-                    // Clean up transition class after animation
-                    setTimeout(() => {
-                        this.elements.container.classList.remove('sticky-transition');
-                        isTransitioning = false;
-                    }, 400);
-                });
-            }
-        };
-        
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        
-        // Store the function reference for cleanup
-        this.scrollHandler = handleScroll;
-    }
-    
     setupScrollActiveTab() {
         // Get the sections we want to observe
         const headlinesSection = document.querySelector('.news-grid');
@@ -591,15 +536,12 @@ export class CustomAudioPlayer {
     play() { this.audio.play(); this.isPlaying = true; this.elements.playBtn.textContent = '■'; }
     pause() { this.audio.pause(); this.isPlaying = false; this.elements.playBtn.textContent = '▶'; }
     setSource(src) { this.audio.src = src; }
-    destroy() { 
-        this.audio.pause(); 
-        this.audio.src = ''; 
-        if (this.scrollHandler) {
-            window.removeEventListener('scroll', this.scrollHandler);
-        }
+    destroy() {
+        this.audio.pause();
+        this.audio.src = '';
         if (this.sectionObserver) {
             this.sectionObserver.disconnect();
         }
-        this.container.innerHTML = ''; 
+        this.container.replaceChildren();
     }
 } 
