@@ -124,6 +124,17 @@ export class TextUtils {
     }
 }
 
+// Escape a string for safe interpolation into HTML attribute or text contexts.
+export function escapeHTML(value) {
+    if (value == null) return '';
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // Source formatting and icon utilities
 export class SourceUtils {
     // Replace icon with text prefix

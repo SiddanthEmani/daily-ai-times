@@ -19,11 +19,11 @@
     "workflow-logs": "gh run view --log",
     "trigger-workflow": "gh workflow run collect-news.yml",
     "debug-workflow": "gh workflow run collect-news.yml -f debug=true",
-    "test": "./scripts/test_architecture.sh",
-    "test-full": "./scripts/test_architecture.sh -t full",
-    "test-dry-run": "./scripts/test_architecture.sh -t dry-run",
-    "test-quick": "./scripts/test_architecture.sh -t quick",
-    "test-local": "python scripts/test_local_architecture.py"
+    "test": "npm run test:static && npm run test:contract && npm run test:deploy && npm run test:e2e",
+    "test:static": "node scripts/test_frontend_static.mjs",
+    "test:contract": "node scripts/test_frontend_contract.mjs",
+    "test:deploy": "bash scripts/test_deploy_sim.sh",
+    "test:e2e": "playwright test --config=tests/e2e/playwright.config.mjs"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "serverless",
     "news",
     "ai",
-    "aggregation", 
+    "aggregation",
     "github-actions",
     "github-pages",
     "automation",
@@ -56,11 +56,12 @@
     "cost": "$0/month"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "http-server": "^14.1.1"
   },
   "optionalDependencies": {
-    "typescript": "^4.9.0",
-    "@types/node": "^18.0.0"
+    "@types/node": "^18.0.0",
+    "typescript": "^4.9.0"
   },
   "serverless": {
     "provider": "github",

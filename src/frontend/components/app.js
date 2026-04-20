@@ -1,429 +1,440 @@
-import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
-import { ArticleRenderer, ArticleHandler } from './articles.js';
+// Daily AI Times — orchestrator for the newspaper frontend.
+// Fetches ./api/latest.json, normalizes articles, and renders the page as
+// chrome + above-fold + below-fold columns. All dynamic text/attrs passed
+// through escapeHTML before template interpolation; trusted-only assembly here.
+import { escapeHTML } from '../utils/utils.js';
 import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
 import { CustomAudioPlayer } from './custom-audio-player.js';
+import {
+    normalize, partition, tickerFromStories, sectionsFromStories,
+} from './article-mapper.js';
+import {
+    tickerHTML, mastheadHTML, startMastheadClock, navHTML, wireTickerPause,
+} from './chrome.js';
+import { briefingHTML, leadHTML, swingHTML } from './above.js';
+import {
+    storyCardHTML, tailSectionHTML,
+    marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
+    getOpinionStory,
+} from './below.js';
+import { openModal, isModalOpen } from './modal.js';
 
-// Main news application class
-export class NewsApp {
-    constructor() {
-        this.newsData = null;
-        this.isLoading = false;
-        this.appVersion = '2024.1.0'; // Increment this when you want to force cache refresh
-        try {
-            this.performance = new PerformanceMonitor();
-        } catch (error) {
-            console.warn('PerformanceMonitor not available:', error);
-            this.performance = {
-                mark: () => {},
-                report: () => {}
+const APP_VERSION = '2026.4.0';
+const SAVED_KEY = 'dat_saved';
+
+const state = {
+    section: 'All',
+    query: '',
+    savedIds: loadSavedIds(),
+    focusIdx: -1,
+    partitioned: null,
+    sections: ['All'],
+    mastheadClock: null,
+    openStory: null,
+};
+
+const TAIL_POOLS = [
+    [
+        'Post-training teams are the new status symbol inside frontier labs',
+        'A quiet move to smaller, specialist models at three major banks',
+        'Retrieval evaluations finally get a standardized benchmark suite',
+        'Open letter: senior researchers call for reproducibility covenants',
+        'Why inference cost curves are flattening sooner than expected',
+    ],
+    [
+        'Chip startups pitch vertical integration to skeptical buyers',
+        'A union push at one major lab fizzles, for now',
+        'The rise of the internal AI platform role, explained',
+        'Evaluation teams are hiring; researchers are not. A data note.',
+        'How three universities are rewriting their CS curricula',
+    ],
+    [
+        'Edge inference returns as latency SLAs tighten across the stack',
+        'Agents meet accounting: what the early deployments are teaching',
+        'A survey of formal verification in ML pipelines',
+        'Notes from a week inside a model-evaluation contractor',
+        'Why the data flywheel language is being retired, quietly',
+    ],
+];
+const TAIL_TITLES = ['In Other News', 'On The Wire', 'From The Desks'];
+
+function loadSavedIds() {
+    try { return new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || '[]')); }
+    catch { return new Set(); }
+}
+function persistSavedIds() {
+    localStorage.setItem(SAVED_KEY, JSON.stringify([...state.savedIds]));
+}
+
+function checkVersionAndRefresh() {
+    try {
+        const stored = localStorage.getItem('dat_app_version');
+        const lastRefresh = localStorage.getItem('dat_last_refresh');
+        const now = Date.now();
+        const oneHour = 60 * 60 * 1000;
+        const stale = !stored || stored !== APP_VERSION
+            || !lastRefresh || (now - parseInt(lastRefresh, 10)) > oneHour;
+        if (!stale) return false;
+        localStorage.setItem('dat_app_version', APP_VERSION);
+        localStorage.setItem('dat_last_refresh', String(now));
+        const veryRecent = lastRefresh && (now - parseInt(lastRefresh, 10)) < 5000;
+        if (!veryRecent) {
+            window.location.reload(true);
+            return true;
+        }
+    } catch (err) {
+        console.warn('Version check failed:', err);
+    }
+    return false;
+}
+
+function installCacheBustingFetch() {
+    const originalFetch = window.fetch;
+    window.fetch = function (url, options = {}) {
+        if (typeof url === 'string' && (!url.startsWith('http') || url.startsWith(window.location.origin))) {
+            options.headers = {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
+                ...options.headers,
             };
+            options.cache = 'no-store';
         }
-    }
+        return originalFetch.call(this, url, options);
+    };
+}
 
-    async initialize() {
-        try {
-            this.performance.mark('app_init_start');
-            
-            // Check for cached version and force refresh if needed
-            this.checkVersionAndRefresh();
-            
-            // Initialize analytics
-            try {
-                if (typeof Analytics !== 'undefined') {
-                    Analytics.init();
-                } else {
-                    console.warn('Analytics not available, skipping analytics initialization');
-                }
-            } catch (analyticsError) {
-                console.warn('Analytics initialization failed:', analyticsError);
-            }
-            
-            // No service worker registration - no caching
-            
-            // Show loading states
-            this.showLoadingStates();
-            
-            // Initialize article handlers
-            try {
-                if (typeof ArticleHandler !== 'undefined') {
-                    ArticleHandler.initializeTooltips();
-                } else {
-                    console.warn('ArticleHandler not available, skipping tooltip initialization');
-                }
-            } catch (handlerError) {
-                console.warn('Article handler initialization failed:', handlerError);
-            }
-            
-            // Initialize lazy loading
-            try {
-                if (typeof LazyLoader !== 'undefined') {
-                    LazyLoader.init();
-                } else {
-                    console.warn('LazyLoader not available, skipping lazy loading initialization');
-                }
-            } catch (lazyError) {
-                console.warn('Lazy loader initialization failed:', lazyError);
-            }
-            
-            // Add cache-busting to logo
-            this.addCacheBustingToAssets();
-            
-            // Load news data
-            await this.loadNews();
-            
-            this.performance.mark('app_init_complete');
-            this.performance.report();
-            
-            // Track page view
-            if (typeof Analytics !== 'undefined') {
-                Analytics.trackPageView('home');
-            }
-            
-        } catch (error) {
-            console.error('Failed to initialize news app:', error);
-            // Only track error if Analytics is available
-            if (typeof Analytics !== 'undefined') {
-                Analytics.trackError(error, { context: 'app_initialization' });
-            }
-            this.showErrorStates();
-        }
-    }
-
-
-
-    showLoadingStates() {
-        DOMUtils.showLoading('main-story');
-        DOMUtils.showLoading('news-column-1');
-        DOMUtils.showLoading('news-column-2');
-        DOMUtils.showLoading('research-column-1');
-        DOMUtils.showLoading('research-column-2');
-    }
-
-    addCacheBustingToAssets() {
-        // Add cache-busting timestamp to logo and other static assets
-        const timestamp = Date.now();
-        
-        // Update logo src with cache-busting parameter
-        const logoElement = document.getElementById('logo-icon');
-        if (logoElement) {
-            const originalSrc = logoElement.src.split('?')[0]; // Remove existing parameters
-            logoElement.src = `${originalSrc}?t=${timestamp}`;
-        }
-        
-        // Add cache-busting to favicon if needed
-        const favicon = document.querySelector('link[rel="icon"]');
-        if (favicon) {
-            const originalHref = favicon.href.split('?')[0];
-            favicon.href = `${originalHref}?t=${timestamp}`;
-        }
-        
-        // Add cache-busting to CSS files
-        const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
-        cssLinks.forEach(link => {
-            if (link.href && !link.href.includes('fonts.googleapis.com')) {
-                const originalHref = link.href.split('?')[0];
-                link.href = `${originalHref}?t=${timestamp}`;
-            }
-        });
-        
-        // Add cache-busting headers to all future fetch requests
-        const originalFetch = window.fetch;
-        window.fetch = function(url, options = {}) {
-            // Only add cache-busting to same-origin requests
-            if (typeof url === 'string' && (!url.startsWith('http') || url.startsWith(window.location.origin))) {
-                options.headers = {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache',
-                    'Expires': '0',
-                    ...options.headers
-                };
-                options.cache = 'no-store';
-            }
-            return originalFetch.call(this, url, options);
-        };
-    }
-
-    checkVersionAndRefresh() {
-        try {
-            const storedVersion = localStorage.getItem('daily_ai_times_app_version');
-            const lastRefreshTime = localStorage.getItem('daily_ai_times_last_refresh');
-            const currentTime = Date.now();
-            
-            // Force refresh if:
-            // 1. No stored version (first visit)
-            // 2. Version mismatch (app updated)
-            // 3. Last refresh was more than 1 hour ago (safety mechanism)
-            const oneHour = 60 * 60 * 1000;
-            const shouldForceRefresh = !storedVersion || 
-                                     storedVersion !== this.appVersion || 
-                                     (!lastRefreshTime || (currentTime - parseInt(lastRefreshTime)) > oneHour);
-            
-            if (shouldForceRefresh) {
-                console.log('🔄 Forcing cache refresh for fresh content...');
-                
-                // Store current version and refresh time
-                localStorage.setItem('daily_ai_times_app_version', this.appVersion);
-                localStorage.setItem('daily_ai_times_last_refresh', currentTime.toString());
-                
-                // Only force refresh if this isn't the first load after a refresh
-                // (prevent infinite refresh loop)
-                const isRecentRefresh = lastRefreshTime && (currentTime - parseInt(lastRefreshTime)) < 5000;
-                if (!isRecentRefresh) {
-                    // Force hard refresh silently
-                    window.location.reload(true); // Hard refresh
-                    return true; // Indicate refresh is happening
-                }
-            }
-            
-            return false; // No refresh needed
-        } catch (error) {
-            console.warn('Version check failed:', error);
-            return false;
-        }
-    }
-
-    showErrorStates() {
-        DOMUtils.showError('main-story', 'Unable to load main story');
-        DOMUtils.showError('news-column-1', 'Unable to load news');
-        DOMUtils.showError('news-column-2', 'Unable to load news');
-        DOMUtils.showError('research-column-1', 'Unable to load research papers');
-        DOMUtils.showError('research-column-2', 'Unable to load research papers');
-    }
-
-
-
-    async loadNews() {
-        if (this.isLoading) return;
-        
-        this.isLoading = true;
-        this.performance.mark('news_load_start');
-        
-                try {
-            // Simple fetch with cache-busting timestamp - no complex caching logic
-            const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}&v=${this.appVersion}`;
-            
-            // Fetch news data with timeout and no-cache headers
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-            
-            const response = await fetch(apiUrl, {
-                signal: controller.signal,
-                cache: 'no-store',
-                headers: {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache',
-                    'Expires': '0',
-                    'If-Modified-Since': 'Thu, 01 Jan 1970 00:00:00 GMT'
-                }
-            });
-            
-            clearTimeout(timeoutId);
-            
-            // Handle 304 (Not Modified) as success - just means content hasn't changed
-            if (!response.ok && response.status !== 304) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            // For 304, try to get JSON anyway (some servers still return content)
-            // If it fails, we'll catch it in the outer try-catch
-            this.newsData = await response.json();
-            this.performance.mark('news_fetch_complete');
-            
-            // Content freshness checked silently (no notifications)
-            
-            // Process and render news
-            this.processAndRenderNews();
-            this.performance.mark('news_render_complete');
-            
-        } catch (error) {
-            console.error('Error loading news:', error);
-            this.handleLoadError(error);
-        } finally {
-            this.isLoading = false;
-        }
-    }
-
-    processAndRenderNews() {
-        if (!this.newsData || !this.newsData.articles) {
-            throw new Error('Invalid news data format');
-        }
-
-        // All articles are already filtered to top 25, no need for additional quality filtering
-        const allArticles = this.newsData.articles;
-        const { headlineArticles, researchArticles, regularArticles } = ArticleUtils.categorizeArticles(allArticles);
-
-        // Update header with filtering info
-        this.updateHeader(allArticles.length, this.newsData.filter_type);
-
-        // Render collection summary if available
-        this.renderCollectionSummary(this.newsData.collection_summary);
-
-        // **FIX**: Render content with proper headline distinction
-        this.renderContent(headlineArticles, regularArticles, researchArticles);
-    }
-
-    updateHeader(totalArticles, filterType = 'keyword_based') {
-        try {
-            // Update date
-            const generatedDate = new Date(this.newsData.generated_at);
-            const formattedDate = DateUtils.formatHeaderDate(generatedDate);
-            DOMUtils.setElementContent('current-date', formattedDate);
-            
-            // Update edition info with custom audio player
-            const audioTimestamp = Date.now();
-            const editionInfo = `
-                <div class="edition-left">
-                    <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer" class="how-it-works-link">
-                        How was this news generated?
-                    </a>
-                    <span class="articles-count">${totalArticles} featured articles</span>
-                </div>
-                <div class="audio-player" id="custom-audio-container"></div>
-                <div class="edition-right">
-                    <span class="update-frequency">Updated every 4 hours</span>
-                    <br>
-                    <span class="last-updated">Last updated: ${DateUtils.formatLastUpdated(generatedDate)}</span>
-                </div>`;
-                
-            DOMUtils.setElementContent('edition-text', editionInfo);
-            
-            // Initialize custom audio player
-            setTimeout(() => {
-                const audioContainer = document.getElementById('custom-audio-container');
-                if (audioContainer) {
-                    new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${audioTimestamp}`, audioContainer);
-                }
-            }, 100);
-            
-        } catch (error) {
-            console.error('Error updating header:', error);
-        }
-    }
-
-    renderCollectionSummary(summaryData) {
-        const summarySection = document.getElementById('collection-summary');
-        const summaryContent = document.getElementById('summary-content');
-        
-        if (!summarySection || !summaryContent) return;
-        
-        if (summaryData && summaryData.summary) {
-            // Show and populate the summary section
-            summarySection.style.display = 'block';
-            
-            let summaryHtml = `<p class="summary-text">${summaryData.summary}</p>`;
-            
-            // Add key themes if available
-            if (summaryData.key_themes && summaryData.key_themes.length > 0) {
-                summaryHtml += `
-                    <div class="summary-themes">
-                        <div class="themes-title">Key Themes:</div>
-                        <div class="theme-tags">
-                            ${summaryData.key_themes.map(theme => `<span class="theme-tag">${theme}</span>`).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-            
-            summaryContent.innerHTML = summaryHtml;
-        } else {
-            // Hide the summary section if no summary available
-            summarySection.style.display = 'none';
-        }
-    }
-
-    renderContent(headlineArticles, regularArticles, researchArticles) {
-        try {
-            // Render designated headline as main story
-            if (headlineArticles.length > 0) {
-                console.log('Rendering headline as main story:', headlineArticles[0].title);
-                ArticleRenderer.renderMainStory(headlineArticles[0]);
-            } else {
-                console.error('No headline article found in API response');
-                throw new Error('No headline article available');
-            }
-            
-            // Render regular articles in news grid
-            ArticleRenderer.renderNewsGrid(regularArticles);
-            
-            // Render research papers separately
-            if (researchArticles.length > 0) {
-                ArticleRenderer.renderResearchGrid(researchArticles);
-            }
-            
-            // Log the final article distribution for debugging
-            console.log(`Article distribution: ${headlineArticles.length} headline, ${regularArticles.length} regular articles, ${researchArticles.length} research papers`);
-            
-        } catch (error) {
-            console.error('Error rendering content:', error);
-            this.showErrorStates();
-        }
-    }
-
-    handleLoadError(error) {
-        let errorMessage = 'Unable to load news';
-        let errorCode = 'UNKNOWN_ERROR';
-        
-        if (error.name === 'AbortError') {
-            errorMessage = 'Request timed out. Please check back later.';
-            errorCode = 'TIMEOUT_ERROR';
-        } else if (error.message.includes('HTTP error')) {
-            errorMessage = 'News service temporarily unavailable';
-            errorCode = 'HTTP_ERROR';
-        } else if (!navigator.onLine) {
-            errorMessage = 'No internet connection detected';
-            errorCode = 'OFFLINE_ERROR';
-        } else if (error.message.includes('Failed to fetch')) {
-            errorMessage = 'Network connection issue';
-            errorCode = 'NETWORK_ERROR';
-        }
-
-        // Track the error
-        if (typeof Analytics !== 'undefined') {
-            Analytics.trackError(error, { 
-                context: 'news_loading',
-                error_code: errorCode 
-            });
-        }
-
-        // Show fallback content in main story
-        const fallbackHTML = `
-            <div class="category-tag error">Error</div>
-            <h2 class="main-headline">Unable to Load News</h2>
-            <div class="decorative-line"></div>
-            <p class="main-description">
-                ${errorMessage}. Please check back later.
-            </p>
-        `;
-        
-        DOMUtils.setElementContent('main-story', fallbackHTML);
-        DOMUtils.showError('news-column-1', errorMessage);
-        DOMUtils.showError('news-column-2', errorMessage);
-        DOMUtils.showError('research-column-1', errorMessage);
-        DOMUtils.showError('research-column-2', errorMessage);
+async function loadStories() {
+    const url = `./api/latest.json?t=${Date.now()}&v=${APP_VERSION}`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok && res.status !== 304) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const raw = Array.isArray(data.articles) ? data.articles : [];
+        return raw.map((r, i) => normalize(r, i));
+    } finally {
+        clearTimeout(timer);
     }
 }
 
-// Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const app = new NewsApp();
-        await app.initialize();
-        
-        // Make app available globally for debugging
-        window.newsApp = app;
-        
-        console.log('✅ Daily AI Times app initialized successfully');
-    } catch (error) {
-        console.error('Failed to initialize news app:', error);
-        
-        // Show a basic error message to the user
-        const errorMessage = 'Failed to load the news application. Please check back later.';
-        document.body.innerHTML = `
-            <div style="padding: 20px; text-align: center; color: #333;">
-                <h1>Daily AI Times</h1>
-                <p style="color: #d32f2f;">${errorMessage}</p>
-            </div>
-        `;
+function filteredGrid() {
+    const q = state.query.trim().toLowerCase();
+    const matchesSection = (s) => state.section === 'All' || s.section === state.section;
+    const matchesQuery = (s) => {
+        if (!q) return true;
+        return [s.headline, s.deck, s.section, s.byline, s.source]
+            .filter(Boolean).join(' ').toLowerCase().includes(q);
+    };
+    return state.partitioned.grid.filter(s => matchesSection(s) && matchesQuery(s));
+}
+
+function sectionCounts(all) {
+    const counts = { All: all.length };
+    for (const s of all) counts[s.section] = (counts[s.section] || 0) + 1;
+    return counts;
+}
+
+// Stories actually rendered as grid cards — excludes briefing extras when the
+// "Also In The News" stack is showing. Used by both the renderer and keyboard
+// nav so focusIdx and card idx stay in lockstep.
+function visibleGridStories() {
+    const grid = filteredGrid();
+    const showAbove = state.section === 'All' && !state.query.trim();
+    if (!showAbove) return grid;
+    const extras = state.partitioned.extras;
+    return grid.filter(s => !extras.includes(s));
+}
+
+function buildPageMarkup() {
+    const showAbove = state.section === 'All' && !state.query.trim();
+    const grid = filteredGrid();
+    const briefingExtras = showAbove ? state.partitioned.extras : [];
+    const gridStories = visibleGridStories();
+
+    const cols = [[], [], [], []];
+    gridStories.forEach((s, i) => cols[i % 4].push({ kind: 'story', story: s, idx: i }));
+
+    if (showAbove) {
+        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
+        cols[3].splice(2, 0, { kind: 'raw', html: marketsBoxHTML() });
+        cols[3].splice(4, 0, { kind: 'raw', html: weatherBoxHTML() });
+        cols[3].push({ kind: 'raw', html: opinionBoxHTML() });
+        const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
+        if (savedHTML) cols[0].push({ kind: 'raw', html: savedHTML });
+        TAIL_POOLS.forEach((items, ci) => {
+            cols[ci].push({ kind: 'raw', html: tailSectionHTML(TAIL_TITLES[ci], items, ci) });
+        });
+    } else {
+        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
     }
-});
+
+    const counts = sectionCounts(state.partitioned.all);
+    const tickerItems = tickerFromStories(state.partitioned.all, 5);
+
+    const colsHTML = cols.map(col => {
+        const inner = col.map(item => item.kind === 'story'
+            ? storyCardHTML(item.story, item.idx, {
+                saved: state.savedIds.has(item.story.id),
+                focused: state.focusIdx === item.idx,
+            })
+            : item.html
+        ).join('');
+        return `<div class="col">${inner}</div>`;
+    }).join('');
+
+    const resultBar = showAbove ? '' : `
+        <div class="result-bar">
+            Showing <strong>${grid.length}</strong> stories
+            ${state.section !== 'All' ? ` in <strong class="accent">${escapeHTML(state.section)}</strong>` : ''}
+            ${state.query.trim() ? ` matching "<strong class="accent">${escapeHTML(state.query)}</strong>"` : ''}
+        </div>
+    `;
+
+    const aboveBlock = showAbove ? `
+        <div class="above">
+            ${briefingHTML(state.partitioned.briefing, briefingExtras)}
+            <div class="vrule"></div>
+            ${leadHTML(state.partitioned.lead)}
+            <div class="vrule"></div>
+            ${swingHTML(state.partitioned.swing)}
+        </div>
+    ` : '';
+
+    return `
+        ${tickerHTML(tickerItems)}
+        <div class="page">
+            ${mastheadHTML()}
+            ${navHTML({ section: state.section, query: state.query }, state.sections, counts)}
+            ${aboveBlock}
+            ${resultBar}
+            <div class="below">${colsHTML}</div>
+            <footer class="footer">
+                <div>© 2026 Daily AI Times · An AI-assisted publication</div>
+                <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
+                <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open · <strong>Esc</strong> to close</div>
+            </footer>
+        </div>
+    `;
+}
+
+function render() {
+    const root = document.getElementById('root');
+    if (!root) return;
+    root.innerHTML = buildPageMarkup();
+    wireTickerPause(root);
+    mountAudioBox();
+    if (state.mastheadClock == null) state.mastheadClock = startMastheadClock(root);
+    if (state.query) {
+        const input = root.querySelector('.nav-search input');
+        if (input && document.activeElement !== input) {
+            input.focus();
+            const len = input.value.length;
+            input.setSelectionRange(len, len);
+        }
+    }
+}
+
+// The audio-box DOM is created once and kept alive across renders so the
+// underlying <audio> element (and any in-progress playback) survives
+// root.innerHTML resets. Each render inserts a placeholder; mountAudioBox
+// swaps the persistent element in.
+let audioBoxEl = null;
+
+function ensureAudioBox() {
+    if (audioBoxEl) return audioBoxEl;
+    audioBoxEl = document.createElement('div');
+    audioBoxEl.id = 'audio-box';
+    audioBoxEl.className = 'audio-box';
+    try {
+        const title = document.createElement('div');
+        title.className = 'box-title';
+        const label = document.createElement('span');
+        label.textContent = "Today's Briefing";
+        const chip = document.createElement('span');
+        chip.className = 'chip';
+        chip.textContent = 'LISTEN';
+        title.appendChild(label);
+        title.appendChild(chip);
+        audioBoxEl.appendChild(title);
+        const host = document.createElement('div');
+        audioBoxEl.appendChild(host);
+        new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${Date.now()}`, host);
+    } catch (err) {
+        console.warn('Audio player mount failed:', err);
+    }
+    return audioBoxEl;
+}
+
+function mountAudioBox() {
+    const placeholder = document.getElementById('audio-placeholder');
+    if (!placeholder) return;
+    placeholder.replaceWith(ensureAudioBox());
+}
+
+function installEventDelegation() {
+    const root = document.getElementById('root');
+    if (!root) return;
+
+    // Click delegation sits on document.body so it also catches clicks inside
+    // #modal-root (a sibling of #root). Without this the modal's Save button
+    // would emit data-action="save" that never reaches the handler.
+    document.body.addEventListener('click', (e) => {
+        const actionEl = e.target.closest?.('[data-action]');
+        if (!actionEl) return;
+        const action = actionEl.dataset.action;
+        const storyId = actionEl.dataset.storyId;
+
+        if (action === 'section') {
+            const name = actionEl.dataset.section;
+            if (name && name !== state.section) {
+                state.section = name;
+                state.focusIdx = -1;
+                render();
+            }
+            return;
+        }
+        if (action === 'save' && storyId) {
+            e.stopPropagation();
+            toggleSave(storyId);
+            render();
+            if (state.openStory && state.openStory.id === storyId && isModalOpen()) {
+                openModal(state.openStory, { saved: state.savedIds.has(storyId) });
+            }
+            return;
+        }
+        if (action === 'open' && storyId) {
+            const story = findStory(storyId);
+            if (story) openStory(story);
+            return;
+        }
+        if (action === 'open-opinion') {
+            const story = getOpinionStory(actionEl.dataset.opinionId);
+            if (story) openStory(story);
+            return;
+        }
+        if (action === 'open-tail') {
+            openStory({
+                id: `tail-${actionEl.dataset.tailKey}`,
+                section: 'Briefs',
+                kicker: 'BRIEF',
+                headline: actionEl.dataset.tailHeadline || 'Brief',
+                deck: 'A brief from the newsroom. Follow-up reporting to come.',
+                byline: 'By STAFF',
+                body: ['A brief from the newsroom. Follow-up reporting to come.'],
+                time: 'today',
+                type: 'text',
+                url: '',
+                source: 'Daily AI Times',
+                score: 0,
+            });
+        }
+    });
+
+    root.addEventListener('input', (e) => {
+        if (e.target.matches?.('[data-action="search"]')) {
+            state.query = e.target.value;
+            state.focusIdx = -1;
+            scheduleRender();
+        }
+    });
+}
+
+let renderTimer = null;
+function scheduleRender() {
+    if (renderTimer) clearTimeout(renderTimer);
+    renderTimer = setTimeout(() => { renderTimer = null; render(); }, 120);
+}
+
+function findStory(id) {
+    return state.partitioned.all.find(s => s.id === id) || null;
+}
+
+function toggleSave(id) {
+    if (state.savedIds.has(id)) state.savedIds.delete(id);
+    else state.savedIds.add(id);
+    persistSavedIds();
+}
+
+function openStory(story) {
+    state.openStory = story;
+    openModal(story, { saved: state.savedIds.has(story.id) });
+    try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
+    catch { /* analytics is best-effort */ }
+}
+
+function installKeyboardNav() {
+    window.addEventListener('keydown', (e) => {
+        if (isModalOpen()) return;
+        if (e.target?.tagName === 'INPUT') return;
+        // Nav walks only the grid cards that actually render; this matches the
+        // focused-outline target and the list card idx values.
+        const grid = visibleGridStories();
+        if (e.key === 'j') {
+            e.preventDefault();
+            state.focusIdx = Math.min(grid.length - 1, state.focusIdx + 1);
+            render();
+            scrollFocused();
+        } else if (e.key === 'k') {
+            e.preventDefault();
+            state.focusIdx = Math.max(0, state.focusIdx - 1);
+            render();
+            scrollFocused();
+        } else if (e.key === 'Enter' && state.focusIdx >= 0) {
+            const s = grid[state.focusIdx];
+            if (s) openStory(s);
+        } else if (e.key === 'Escape') {
+            if (state.focusIdx >= 0) { state.focusIdx = -1; render(); }
+        }
+    });
+}
+
+function scrollFocused() {
+    const grid = visibleGridStories();
+    const s = grid[state.focusIdx];
+    if (!s) return;
+    const el = document.querySelector(`[data-story-id="${s.id}"]`);
+    el?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
+}
+
+async function main() {
+    const perf = new PerformanceMonitor();
+    perf.mark('app_init_start');
+    try { Analytics?.init?.(); } catch (err) { console.warn('Analytics init failed:', err); }
+    if (checkVersionAndRefresh()) return;
+    installCacheBustingFetch();
+
+    try {
+        const stories = await loadStories();
+        if (!stories.length) throw new Error('No articles in latest.json');
+        state.partitioned = partition(stories);
+        state.sections = sectionsFromStories(stories);
+        render();
+        installEventDelegation();
+        installKeyboardNav();
+        try { LazyLoader?.init?.(); } catch { /* lazy loader is optional */ }
+        perf.mark('app_ready');
+        perf.report();
+        try { Analytics?.trackPageView?.('home'); } catch { /* best-effort */ }
+    } catch (err) {
+        console.error('Daily AI Times failed to initialize:', err);
+        const root = document.getElementById('root');
+        if (root) {
+            const msg = document.createElement('div');
+            msg.style.cssText = "padding:40px;text-align:center;font-family:'Source Serif 4', serif";
+            const h1 = document.createElement('h1');
+            h1.style.cssText = "font-family:'Playfair Display', serif";
+            h1.textContent = 'Daily AI Times';
+            const p1 = document.createElement('p');
+            p1.style.color = '#a00';
+            p1.textContent = `Unable to load the paper: ${err.message || 'unknown error'}`;
+            const p2 = document.createElement('p');
+            p2.textContent = 'Please check back later.';
+            msg.appendChild(h1); msg.appendChild(p1); msg.appendChild(p2);
+            root.replaceChildren(msg);
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', main);

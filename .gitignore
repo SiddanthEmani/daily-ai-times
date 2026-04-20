@@ -338,6 +338,7 @@ runtime-config.json
 # ================== Testing & CI/CD ==================
 # Test results
 test-results/
+playwright-report/
 coverage/
 .coverage
 
@@ -471,3 +472,7 @@ src/services/mcp-server/build/
 # Deployment artifacts
 deploy/
 deployment/
+
+# Worktrees
+.worktrees/
+

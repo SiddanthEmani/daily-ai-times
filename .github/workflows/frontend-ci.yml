@@ -1,0 +1,63 @@
+name: Frontend CI
+
+on:
+  pull_request:
+    paths:
+      - 'src/frontend/**'
+      - 'scripts/test_frontend_*.mjs'
+      - 'scripts/test_deploy_sim.sh'
+      - 'tests/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/frontend-ci.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: frontend-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Static + contract + deploy sim
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Module graph + HTML refs + GA markers
+        run: node scripts/test_frontend_static.mjs
+      - name: latest.json schema + mapper round-trip
+        run: node scripts/test_frontend_contract.mjs
+      - name: Deploy simulation (mirrors collect-news.yml prepare-site)
+        run: bash scripts/test_deploy_sim.sh
+
+  e2e:
+    name: Playwright smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install npm dependencies
+        run: npm ci
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright
+        run: npx playwright test --config=tests/e2e/playwright.config.mjs
+      - name: Upload trace on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-trace
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7
