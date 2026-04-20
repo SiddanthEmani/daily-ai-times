@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily AI Times · Agentic Rebuild Architecture</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --panel: #12161b;
+    --border: #1f2933;
+    --text: #e5e9ef;
+    --muted: #8a95a5;
+    --accent: #7aa2f7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 24px 32px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { margin: 0 0 4px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); font-size: 13px; }
+  .toolbar {
+    display: flex; gap: 8px; padding: 12px 32px; border-bottom: 1px solid var(--border);
+    background: var(--panel); position: sticky; top: 0; z-index: 10;
+  }
+  .toolbar button {
+    background: transparent; color: var(--text); border: 1px solid var(--border);
+    padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px;
+  }
+  .toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+  .toolbar .spacer { flex: 1; }
+  .toolbar .hint { color: var(--muted); font-size: 12px; align-self: center; }
+  main {
+    padding: 24px 32px 48px;
+    overflow: auto;
+  }
+  .diagram-wrap {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    overflow: auto;
+  }
+  .mermaid { min-width: 900px; }
+  footer { padding: 16px 32px 24px; color: var(--muted); font-size: 12px; }
+  footer code { background: var(--panel); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Daily AI Times · Agentic Rebuild Architecture</h1>
+  <p>Claude Agent SDK orchestrator · provider-neutral compute pool · Skills / Tools / MCP oriented</p>
+</header>
+<div class="toolbar">
+  <button id="zoom-in">Zoom in</button>
+  <button id="zoom-out">Zoom out</button>
+  <button id="zoom-reset">Reset</button>
+  <button id="toggle-theme">Toggle theme</button>
+  <div class="spacer"></div>
+  <span class="hint">Scroll to pan · diagram renders client-side via Mermaid</span>
+</div>
+<main>
+  <div class="diagram-wrap">
+    <div class="mermaid" id="diagram">
+flowchart TB
+    entry["src/agent/main.py"] -->|"query + ClaudeAgentOptions"| loop[Claude Agent Loop]
+    subgraph skillsBox [".claude/skills (auto-invoked)"]
+        sk1[news-collection]
+        sk2[content-classification]
+        sk3[headline-ranking]
+        sk4[publish-verify]
+        sk5[pipeline-debug]
+    end
+    subgraph toolsBox ["src/tools in-process MCP server"]
+        t1[collect_sources]
+        t2[score_batch]
+        t3[classify_articles]
+        t4[rank_category]
+        t5[pick_headlines]
+        t6[publish_v2]
+        t7[validate_api]
+        t8[list_sources]
+        t9[update_source_config]
+    end
+    subgraph subBox ["Subagents via AgentDefinition"]
+        sa1[scorer]
+        sa2[classifier]
+    end
+    subgraph provBox ["src/providers compute pool"]
+        p1[Groq]
+        p2[Cerebras]
+        p3[OpenAI]
+        p4[Gemini]
+    end
+    subgraph pipeBox ["src/pipeline pure stages"]
+        pp1[collect]
+        pp2[normalize]
+        pp3[dedupe]
+        pp4[publish]
+        pp5[audio optional]
+    end
+    loop -->|Skill tool| skillsBox
+    loop -->|Agent tool| subBox
+    loop -->|mcp prefix tools| toolsBox
+    toolsBox --> pipeBox
+    t2 -->|ModelRef routing| provBox
+    sa1 -->|score_batch| provBox
+    loop -->|output_format json_schema| manifest["api/v2/manifest.json"]
+    </div>
+  </div>
+</main>
+<footer>
+  Served locally at <code>http://localhost:8765/docs/architecture-preview.html</code>. Close the terminal tab or press <code>Ctrl+C</code> to stop.
+</footer>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+  let currentTheme = 'dark';
+  mermaid.initialize({ startOnLoad: true, theme: currentTheme, securityLevel: 'loose', flowchart: { curve: 'basis', htmlLabels: true } });
+
+  let scale = 1;
+  const diagram = document.getElementById('diagram');
+  const apply = () => { diagram.style.transform = `scale(${scale})`; diagram.style.transformOrigin = 'top left'; };
+  document.getElementById('zoom-in').onclick = () => { scale = Math.min(3, scale + 0.1); apply(); };
+  document.getElementById('zoom-out').onclick = () => { scale = Math.max(0.4, scale - 0.1); apply(); };
+  document.getElementById('zoom-reset').onclick = () => { scale = 1; apply(); };
+  document.getElementById('toggle-theme').onclick = async () => {
+    currentTheme = currentTheme === 'dark' ? 'default' : 'dark';
+    const source = diagram.getAttribute('data-source') || diagram.textContent;
+    diagram.setAttribute('data-source', source);
+    diagram.removeAttribute('data-processed');
+    diagram.innerHTML = source;
+    mermaid.initialize({ startOnLoad: false, theme: currentTheme, securityLevel: 'loose', flowchart: { curve: 'basis', htmlLabels: true } });
+    await mermaid.run({ nodes: [diagram] });
+  };
+
+  diagram.setAttribute('data-source', diagram.textContent);
+</script>
+</body>
+</html>

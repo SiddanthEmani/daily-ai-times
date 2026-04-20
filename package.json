@@ -1,75 +1,26 @@
 {
-  "name": "daily-ai-times",
-  "version": "2.0.0",
-  "description": "🚀 Serverless AI-curated daily news aggregation platform - Daily AI Times powered by GitHub Actions + Pages",
+  "name": "daily-ai-times-frontend",
+  "version": "3.0.0",
+  "description": "Static newspaper-style frontend for Daily AI Times (Claude Agent SDK pipeline)",
+  "private": true,
   "main": "src/frontend/index.html",
   "homepage": "https://siddanthemani.github.io/daily-ai-times",
   "scripts": {
-    "dev": "python -m http.server 8000 --directory src/frontend",
-    "collect": "cd src/backend/collectors && python collect_news.py",
-    "generate-api": "python src/backend/api/generate_api.py",
-    "build": "npm run collect && npm run generate-api",
-    "start": "npm run build && npm run dev",
-    "monitor": "python serverless/monitor.py --url https://siddanthemani.github.io/daily-ai-times",
-    "monitor-json": "python serverless/monitor.py --url https://siddanthemani.github.io/daily-ai-times --json",
-    "health": "npm run monitor",
-    "deploy": "echo 'Deployment is automatic via GitHub Actions. Push to main branch or manually trigger workflow.'",
-    "install-backend": "cd src/backend && pip install -r requirements.txt",
-    "workflow-status": "gh run list --workflow=collect-news.yml --limit=5",
-    "workflow-logs": "gh run view --log",
-    "trigger-workflow": "gh workflow run collect-news.yml",
-    "debug-workflow": "gh workflow run collect-news.yml -f debug=true",
-    "test": "./scripts/test_architecture.sh",
-    "test-full": "./scripts/test_architecture.sh -t full",
-    "test-dry-run": "./scripts/test_architecture.sh -t dry-run",
-    "test-quick": "./scripts/test_architecture.sh -t quick",
-    "test-local": "python scripts/test_local_architecture.py"
+    "dev": "python3 -m http.server 8000 --directory src/frontend",
+    "build:v2": "python3 -m src.agent.main",
+    "test:e2e": "playwright test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/SiddanthEmani/daily-ai-times.git"
   },
-  "keywords": [
-    "serverless",
-    "news",
-    "ai",
-    "aggregation", 
-    "github-actions",
-    "github-pages",
-    "automation",
-    "rss",
-    "static-site",
-    "cdn"
-  ],
   "author": "Siddanth Emani",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=18.0.0",
     "python": ">=3.11.0"
   },
-  "architecture": {
-    "type": "serverless",
-    "backend": "github-actions",
-    "frontend": "github-pages",
-    "api": "static-json",
-    "cdn": "cloudflare",
-    "cost": "$0/month"
-  },
   "devDependencies": {
-    "http-server": "^14.1.1"
-  },
-  "optionalDependencies": {
-    "typescript": "^4.9.0",
-    "@types/node": "^18.0.0"
-  },
-  "serverless": {
-    "provider": "github",
-    "runtime": "python3.11",
-    "schedule": "rate(4 hours)",
-    "memory": "default",
-    "timeout": "15m",
-    "environment": {
-      "PYTHONUNBUFFERED": "1"
-    }
+    "@playwright/test": "^1.48.0"
   }
 }
