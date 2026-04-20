@@ -2,6 +2,7 @@ import { DateUtils, ArticleUtils, DOMUtils } from '../utils/utils.js';
 import { ArticleRenderer, ArticleHandler } from './articles.js';
 import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
 import { CustomAudioPlayer } from './custom-audio-player.js';
+import { apiUrl, isV2Enabled, banner as v2Banner } from '../utils/api-base.js';
 
 // Main news application class
 export class NewsApp {
@@ -23,7 +24,13 @@ export class NewsApp {
     async initialize() {
         try {
             this.performance.mark('app_init_start');
-            
+
+            if (isV2Enabled()) {
+                const el = v2Banner();
+                if (el) document.body.appendChild(el);
+                console.info('[daily-ai-times] v2 preview mode (Claude Agent SDK)');
+            }
+
             // Check for cached version and force refresh if needed
             this.checkVersionAndRefresh();
             
@@ -200,14 +207,13 @@ export class NewsApp {
         
                 try {
             // Simple fetch with cache-busting timestamp - no complex caching logic
-            const timestamp = Date.now();
-            const apiUrl = `./api/latest.json?t=${timestamp}&v=${this.appVersion}`;
+            const apiUrlString = `${apiUrl('/latest.json')}&v=${this.appVersion}`;
             
             // Fetch news data with timeout and no-cache headers
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
             
-            const response = await fetch(apiUrl, {
+            const response = await fetch(apiUrlString, {
                 signal: controller.signal,
                 cache: 'no-store',
                 headers: {

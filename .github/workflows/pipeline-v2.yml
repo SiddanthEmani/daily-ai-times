@@ -1,0 +1,96 @@
+name: Daily AI Times — v2 Pipeline (Claude Agent SDK)
+
+on:
+  schedule:
+    - cron: '30 */4 * * *'  # Offset 30 minutes from v1 so runs don't stack
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run fixture mode (no Anthropic / provider calls)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pipeline-v2
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: Collect → Score → Rank → Publish v2
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run v2 pipeline (fixture mode)
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        env:
+          DAT_FIXTURE: tests/fixtures/articles.jsonl
+          DAT_LOG_LEVEL: INFO
+        run: python -m src.agent.main
+
+      - name: Run v2 pipeline (live)
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DAT_LOG_LEVEL: INFO
+        run: python -m src.agent.main
+
+      - name: Verify v2 output contract
+        run: |
+          python -c "
+          from pathlib import Path
+          import orjson
+          v2 = Path('src/frontend/api/v2')
+          manifest = orjson.loads((v2 / 'manifest.json').read_bytes())
+          assert manifest['schema_version'] == '2.0', manifest
+          assert (v2 / 'latest.json').exists()
+          assert (v2 / 'widget.json').exists()
+          print('v2 contract: OK', manifest['counts'])
+          "
+
+      - name: Commit v2 API artifacts
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/frontend/api/v2
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 AI Pipeline Update (v2): refresh src/frontend/api/v2"
+            git push
+          fi
+
+      - name: Upload logs artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-v2-logs
+          path: |
+            src/frontend/api/v2/manifest.json
+            src/frontend/api/v2/stats.json
+          retention-days: 7
