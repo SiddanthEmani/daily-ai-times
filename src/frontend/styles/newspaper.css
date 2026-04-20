@@ -508,12 +508,9 @@ html[data-photos="off"] .lead-caption { display: none; }
   .lead-body { column-count: 1; }
 }
 
-/* ---------- Audio box (sticky within its column) ---------- */
+/* ---------- Audio box ---------- */
 .audio-box {
-  position: sticky;
-  top: 12px;
   margin: 16px 0;
-  z-index: 3;
 }
 .audio-box .box-title {
   font-family: "Playfair Display", serif; font-weight: 800;
@@ -525,12 +522,8 @@ html[data-photos="off"] .lead-caption { display: none; }
   font-family: "IBM Plex Mono", monospace; font-size: 9.5px; letter-spacing: 0.14em;
   color: var(--accent); font-weight: 700;
 }
-/* Disarm the old full-page sticky treatment; column sticky handles it now. */
+/* Disarm the old full-page sticky treatment. */
 .sticky-audio-player { position: static !important; box-shadow: none !important; }
-
-@media (max-width: 1020px) {
-  .audio-box { position: static; }
-}
 
 /* ---------- Filter result bar (shown when a section/query is active) ---------- */
 .result-bar {
