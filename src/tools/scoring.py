@@ -33,31 +33,38 @@ def _score_prompt(batch: list[Article]) -> str:
     )
 
 
+def _heuristic_scores(batch: list[Article]) -> list[ScoredArticle]:
+    return [
+        ScoredArticle(
+            article=a,
+            score=0.6,
+            confidence=0.4,
+            categories=[a.category],
+            model_used="heuristic",
+        )
+        for a in batch
+    ]
+
+
 async def _score_batch(batch: list[Article]) -> list[ScoredArticle]:
     registry = get_registry()
     if not registry.models:
-        # Fall back to heuristic scoring so offline runs still produce output.
-        return [
-            ScoredArticle(
-                article=a,
-                score=0.6,
-                confidence=0.4,
-                categories=[a.category],
-                model_used="heuristic",
-            )
-            for a in batch
-        ]
+        return _heuristic_scores(batch)
 
-    response = await registry.complete(
-        tier="bulk",
-        messages=[
-            Message(role="system", content="You output only valid JSON."),
-            Message(role="user", content=_score_prompt(batch)),
-        ],
-        response_format={"type": "json_object"},
-        max_tokens=1024,
-        temperature=0.2,
-    )
+    try:
+        response = await registry.complete(
+            tier="bulk",
+            messages=[
+                Message(role="system", content="You output only valid JSON."),
+                Message(role="user", content=_score_prompt(batch)),
+            ],
+            response_format={"type": "json_object"},
+            max_tokens=1024,
+            temperature=0.2,
+        )
+    except Exception as exc:  # noqa: BLE001
+        log.warning("provider pool unavailable (%s); using heuristic scores", exc)
+        return _heuristic_scores(batch)
     try:
         parsed = json.loads(response.text)
         if isinstance(parsed, dict) and "articles" in parsed:

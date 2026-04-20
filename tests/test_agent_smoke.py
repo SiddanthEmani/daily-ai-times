@@ -52,8 +52,8 @@ async def test_fixture_run_produces_v2_artifacts(tmp_path, monkeypatch):
     monkeypatch.setenv("DAT_FIXTURE", fixture_src)
     output = tmp_path / "v2"
 
-    import src.pipeline.publish as publish_mod
-    import src.tools.publishing as publishing_mod
+    publish_mod = importlib.import_module("src.pipeline.publish")
+    publishing_mod = importlib.import_module("src.tools.publishing")
 
     monkeypatch.setattr(publish_mod, "_FRONTEND_V2", output)
     monkeypatch.setattr(publishing_mod, "_FRONTEND_ROOT", tmp_path)

@@ -81,6 +81,9 @@ class TPMBucket:
     async def reserve(self, tokens: int) -> None:
         if self.limit == 0:
             return
+        # Clamp single reservations to the window limit; callers cannot be
+        # served in under 60 s otherwise, which would deadlock the pipeline.
+        tokens = min(tokens, self.limit)
         while True:
             async with self._lock:
                 now = time.monotonic()

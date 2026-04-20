@@ -1,0 +1,108 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, feat/*]
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    name: Schema + config contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -e ".[dev]"
+      - name: Validate YAML config files
+        run: |
+          python -c "
+          import yaml, pathlib
+          for p in pathlib.Path('src/config').rglob('*.yaml'):
+              yaml.safe_load(p.read_text())
+              print('ok:', p)
+          "
+      - name: Validate Pydantic schemas
+        run: |
+          python -c "
+          from src.agent.schemas import PIPELINE_RUN_JSON_SCHEMA, PipelineRunResult
+          assert PIPELINE_RUN_JSON_SCHEMA['schema']['type'] == 'object'
+          from src.pipeline.models import ApiBundle, Article, ScoredArticle
+          assert ApiBundle.model_json_schema()['type'] == 'object'
+          print('schemas ok')
+          "
+
+  unit:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -e ".[dev]"
+      - run: pytest -v --tb=short
+
+  mcp-smoke:
+    name: In-process MCP server loads
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -e ".[dev]"
+      - name: Enumerate tools
+        run: |
+          python -c "
+          from src.tools.server import ALLOWED_TOOL_NAMES, TOOLS
+          print(f'tools registered: {len(TOOLS)}')
+          for name in ALLOWED_TOOL_NAMES:
+              assert name.startswith('mcp__daily_ai__'), name
+              print(' ', name)
+          assert len(TOOLS) >= 10
+          "
+
+  frontend-smoke:
+    name: Frontend serves and toggles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Start static server
+        run: |
+          python -m http.server 8000 --directory src/frontend &
+          sleep 2
+      - name: Fetch index + api-base helper
+        run: |
+          curl -fsS http://localhost:8000/ > /dev/null
+          curl -fsS http://localhost:8000/utils/api-base.js | grep -q "isV2Enabled"
+      - name: Validate api-base is importable
+        run: |
+          node --check src/frontend/utils/api-base.js
+
+  parity:
+    name: Fixture parity (deterministic)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -e ".[dev]"
+      - name: Fixture parity vs golden manifest
+        env:
+          DAT_FIXTURE: tests/fixtures/articles.jsonl
+          DAT_LOG_LEVEL: WARNING
+        run: python tests/parity_runner.py

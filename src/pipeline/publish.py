@@ -48,12 +48,14 @@ def _atomic_write(path: Path, payload: dict) -> str:
 def publish(
     bundle: ApiBundle,
     *,
-    output_dir: Path = _FRONTEND_V2,
+    output_dir: Path | None = None,
 ) -> dict[str, str]:
     """Write latest.json, widget.json, categories/*.json, manifest.json.
 
     Returns {filename: sha256_hex}.
     """
+    # Resolve lazily so tests can monkeypatch _FRONTEND_V2 on this module.
+    output_dir = output_dir or _FRONTEND_V2
     digests: dict[str, str] = {}
     generated = bundle.generated_at.astimezone(timezone.utc).isoformat()
 
