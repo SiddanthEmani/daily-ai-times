@@ -27,6 +27,13 @@ test.describe('newspaper frontend smoke', () => {
                 window.localStorage.setItem('dat_last_refresh', String(Date.now()));
             } catch {}
         });
+        // Intercept window.open to capture the URL without opening a real tab.
+        // Returning a dummy object prevents the pop-up-blocked fallback in
+        // openStory (window.location.href) from navigating the test page away.
+        await page.addInitScript(() => {
+            window.__capturedOpenUrl = null;
+            window.open = (url) => { window.__capturedOpenUrl = url; return {}; };
+        });
     });
 
     test('loads with no console errors and renders page chrome', async ({ page }) => {
@@ -42,9 +49,9 @@ test.describe('newspaper frontend smoke', () => {
         // The ticker duplicates items for the seamless loop, so ≥2 items expected.
         expect(await page.locator('.ticker-item').count()).toBeGreaterThanOrEqual(2);
 
-        // Filter out benign third-party console noise (blocked GA/Clarity,
-        // font-preload warnings, favicon 404, SSL errors for external hosts in
-        // the sandboxed test environment).
+        // Filter out benign third-party noise: blocked GA/Clarity/ad scripts,
+        // font-preload warnings, favicon 404, and SSL errors from article source
+        // URLs opened in new tabs by the window.open interceptor in beforeEach.
         const material = errors.filter(e =>
             !/Google Analytics not configured/i.test(e) &&
             !/clarity/i.test(e) &&
@@ -65,15 +72,6 @@ test.describe('newspaper frontend smoke', () => {
     });
 
     test('clicking a grid story opens source URL in a new tab with no modal', async ({ page }) => {
-        // Capture the URL passed to window.open before the new tab navigates
-        // (in the sandboxed test env the external URL errors out before we can
-        // read newTab.url(), so we intercept at the call site instead).
-        await page.addInitScript(() => {
-            const _orig = window.open.bind(window);
-            window.__capturedOpenUrl = null;
-            window.open = (url, ...rest) => { window.__capturedOpenUrl = url; return _orig(url, ...rest); };
-        });
-
         await loadPage(page);
 
         // Modal root must never be injected into the DOM.
@@ -113,12 +111,6 @@ test.describe('newspaper frontend smoke', () => {
     });
 
     test('keyboard nav: j moves focus, Enter opens article URL in new tab', async ({ page }) => {
-        await page.addInitScript(() => {
-            const _orig = window.open.bind(window);
-            window.__capturedOpenUrl = null;
-            window.open = (url, ...rest) => { window.__capturedOpenUrl = url; return _orig(url, ...rest); };
-        });
-
         await loadPage(page);
 
         await page.keyboard.press('j');
@@ -132,6 +124,16 @@ test.describe('newspaper frontend smoke', () => {
 
         // Modal must never appear.
         await expect(page.locator('#modal-root')).not.toBeAttached();
+    });
+
+    test('keyboard nav: Esc clears focus highlight', async ({ page }) => {
+        await loadPage(page);
+
+        await page.keyboard.press('j');
+        await expect(page.locator('article.story[style*="outline"]').first()).toBeVisible();
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('article.story[style*="outline"]')).toHaveCount(0);
     });
 
     test('section filter narrows the grid and shows a result bar', async ({ page }) => {

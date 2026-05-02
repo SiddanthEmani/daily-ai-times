@@ -18,7 +18,6 @@ import {
     getOpinionStory,
 } from './below.js';
 
-
 const APP_VERSION = '2026.4.0';
 const SAVED_KEY = 'dat_saved';
 
@@ -310,22 +309,7 @@ function installEventDelegation() {
             if (story) openStory(story);
             return;
         }
-        if (action === 'open-tail') {
-            openStory({
-                id: `tail-${actionEl.dataset.tailKey}`,
-                section: 'Briefs',
-                kicker: 'BRIEF',
-                headline: actionEl.dataset.tailHeadline || 'Brief',
-                deck: 'A brief from the newsroom. Follow-up reporting to come.',
-                byline: 'By STAFF',
-                body: ['A brief from the newsroom. Follow-up reporting to come.'],
-                time: 'today',
-                type: 'text',
-                url: '',
-                source: 'Daily AI Times',
-                score: 0,
-            });
-        }
+        // open-tail: tail briefs have no source URL, nothing to open.
     });
 
     root.addEventListener('input', (e) => {
@@ -355,7 +339,9 @@ function toggleSave(id) {
 
 function openStory(story) {
     if (!story.url) return;
-    window.open(story.url, '_blank', 'noopener,noreferrer');
+    // Fall back to same-tab navigation if the browser blocks the pop-up.
+    const w = window.open(story.url, '_blank', 'noopener,noreferrer');
+    if (!w) window.location.href = story.url;
     try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
     catch { /* analytics is best-effort */ }
 }
