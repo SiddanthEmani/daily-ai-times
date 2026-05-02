@@ -43,11 +43,13 @@ test.describe('newspaper frontend smoke', () => {
         expect(await page.locator('.ticker-item').count()).toBeGreaterThanOrEqual(2);
 
         // Filter out benign third-party console noise (blocked GA/Clarity,
-        // font-preload warnings, favicon 404 on some servers).
+        // font-preload warnings, favicon 404, SSL errors for external hosts in
+        // the sandboxed test environment).
         const material = errors.filter(e =>
             !/Google Analytics not configured/i.test(e) &&
             !/clarity/i.test(e) &&
-            !/net::ERR_BLOCKED_BY_CLIENT/i.test(e)
+            !/net::ERR_BLOCKED_BY_CLIENT/i.test(e) &&
+            !/net::ERR_CERT_AUTHORITY_INVALID/i.test(e)
         );
         expect(material, `unexpected console errors:\n${material.join('\n')}`).toEqual([]);
     });
@@ -62,28 +64,31 @@ test.describe('newspaper frontend smoke', () => {
         expect(storyId, 'lead missing data-story-id').toBeTruthy();
     });
 
-    test('clicking a grid story opens modal with Open original CTA; Esc closes', async ({ page }) => {
+    test('clicking a grid story opens source URL in a new tab with no modal', async ({ page }) => {
+        // Capture the URL passed to window.open before the new tab navigates
+        // (in the sandboxed test env the external URL errors out before we can
+        // read newTab.url(), so we intercept at the call site instead).
+        await page.addInitScript(() => {
+            const _orig = window.open.bind(window);
+            window.__capturedOpenUrl = null;
+            window.open = (url, ...rest) => { window.__capturedOpenUrl = url; return _orig(url, ...rest); };
+        });
+
         await loadPage(page);
+
+        // Modal root must never be injected into the DOM.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
 
         const headline = page.locator('article.story .story-headline').first();
         await expect(headline).toBeVisible();
-        const expectedText = (await headline.textContent() || '').trim();
 
         await headline.click();
 
-        const modal = page.locator('#modal-root .modal');
-        await expect(modal).toBeVisible();
-        await expect(modal.locator('h2')).toHaveText(expectedText);
+        const openedUrl = await page.evaluate(() => window.__capturedOpenUrl);
+        expect(openedUrl, 'window.open should be called with a valid http URL').toMatch(/^https?:\/\//);
 
-        const cta = modal.locator('a', { hasText: 'Open original' });
-        await expect(cta).toBeVisible();
-        const href = await cta.getAttribute('href');
-        expect(href, 'Open original CTA href').toMatch(/^https?:\/\//);
-        await expect(cta).toHaveAttribute('target', '_blank');
-        await expect(cta).toHaveAttribute('rel', /noopener/);
-
-        await page.keyboard.press('Escape');
-        await expect(modal).toBeHidden();
+        // Modal root must remain absent after the click.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
     });
 
     test('save/unsave persists across reload', async ({ page }) => {
@@ -107,7 +112,13 @@ test.describe('newspaper frontend smoke', () => {
         expect(saved).toContain(storyId);
     });
 
-    test('keyboard nav: j moves focus, Enter opens modal, Esc closes', async ({ page }) => {
+    test('keyboard nav: j moves focus, Enter opens article URL in new tab', async ({ page }) => {
+        await page.addInitScript(() => {
+            const _orig = window.open.bind(window);
+            window.__capturedOpenUrl = null;
+            window.open = (url, ...rest) => { window.__capturedOpenUrl = url; return _orig(url, ...rest); };
+        });
+
         await loadPage(page);
 
         await page.keyboard.press('j');
@@ -115,10 +126,12 @@ test.describe('newspaper frontend smoke', () => {
         await expect(focused).toBeVisible();
 
         await page.keyboard.press('Enter');
-        await expect(page.locator('#modal-root .modal')).toBeVisible();
 
-        await page.keyboard.press('Escape');
-        await expect(page.locator('#modal-root .modal')).toBeHidden();
+        const openedUrl = await page.evaluate(() => window.__capturedOpenUrl);
+        expect(openedUrl, 'keyboard Enter should open a valid http URL').toMatch(/^https?:\/\//);
+
+        // Modal must never appear.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
     });
 
     test('section filter narrows the grid and shows a result bar', async ({ page }) => {

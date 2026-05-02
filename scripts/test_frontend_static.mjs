@@ -119,6 +119,7 @@ console.log('== deleted files stay deleted ==');
 const mustNotExist = [
     'components/articles.js',
     'components/magazine-layout.js',
+    'components/modal.js',
     'components/navigation.js',
     'components/section-band.js',
     'styles/main.css',
