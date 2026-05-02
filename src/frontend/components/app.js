@@ -17,7 +17,6 @@ import {
     marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
     getOpinionStory,
 } from './below.js';
-import { openModal, isModalOpen } from './modal.js';
 
 const APP_VERSION = '2026.4.0';
 const SAVED_KEY = 'dat_saved';
@@ -30,7 +29,6 @@ const state = {
     partitioned: null,
     sections: ['All'],
     mastheadClock: null,
-    openStory: null,
 };
 
 const TAIL_POOLS = [
@@ -213,7 +211,7 @@ function buildPageMarkup() {
             <footer class="footer">
                 <div>© 2026 Daily AI Times · An AI-assisted publication</div>
                 <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
-                <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open · <strong>Esc</strong> to close</div>
+                <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>
             </footer>
         </div>
     `;
@@ -299,9 +297,6 @@ function installEventDelegation() {
             e.stopPropagation();
             toggleSave(storyId);
             render();
-            if (state.openStory && state.openStory.id === storyId && isModalOpen()) {
-                openModal(state.openStory, { saved: state.savedIds.has(storyId) });
-            }
             return;
         }
         if (action === 'open' && storyId) {
@@ -314,22 +309,7 @@ function installEventDelegation() {
             if (story) openStory(story);
             return;
         }
-        if (action === 'open-tail') {
-            openStory({
-                id: `tail-${actionEl.dataset.tailKey}`,
-                section: 'Briefs',
-                kicker: 'BRIEF',
-                headline: actionEl.dataset.tailHeadline || 'Brief',
-                deck: 'A brief from the newsroom. Follow-up reporting to come.',
-                byline: 'By STAFF',
-                body: ['A brief from the newsroom. Follow-up reporting to come.'],
-                time: 'today',
-                type: 'text',
-                url: '',
-                source: 'Daily AI Times',
-                score: 0,
-            });
-        }
+        // open-tail: tail briefs have no source URL, nothing to open.
     });
 
     root.addEventListener('input', (e) => {
@@ -358,15 +338,16 @@ function toggleSave(id) {
 }
 
 function openStory(story) {
-    state.openStory = story;
-    openModal(story, { saved: state.savedIds.has(story.id) });
+    if (!story.url) return;
+    // Fall back to same-tab navigation if the browser blocks the pop-up.
+    const w = window.open(story.url, '_blank', 'noopener,noreferrer');
+    if (!w) window.location.href = story.url;
     try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
     catch { /* analytics is best-effort */ }
 }
 
 function installKeyboardNav() {
     window.addEventListener('keydown', (e) => {
-        if (isModalOpen()) return;
         if (e.target?.tagName === 'INPUT') return;
         // Nav walks only the grid cards that actually render; this matches the
         // focused-outline target and the list card idx values.

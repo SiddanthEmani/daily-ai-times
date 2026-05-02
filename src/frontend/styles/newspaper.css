@@ -401,56 +401,6 @@ body::before {
 .opinion-author { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px; }
 .opinion-excerpt { font-size: 12.5px; font-style: italic; color: var(--ink-soft); }
 
-/* ---------- Video modal ---------- */
-.modal-backdrop {
-  position: fixed; inset: 0; background: rgba(15, 13, 8, 0.85);
-  z-index: 50; display: flex; align-items: center; justify-content: center; padding: 40px;
-  animation: fadein 0.2s ease;
-}
-@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
-.modal {
-  background: var(--paper); border: 1px solid var(--ink);
-  max-width: 920px; width: 100%; max-height: 92vh; overflow: auto;
-  padding: 32px 40px; position: relative;
-  box-shadow: 0 20px 80px rgba(0,0,0,0.4);
-}
-.modal-close {
-  position: absolute; top: 14px; right: 16px; background: none; border: none;
-  font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-  cursor: pointer; color: var(--ink); padding: 6px 10px;
-}
-.modal-close:hover { background: var(--ink); color: var(--paper); }
-.modal h2 {
-  font-family: "Playfair Display", serif; font-weight: 800;
-  font-size: 34px; line-height: 1.05; margin: 18px 0 10px; text-wrap: balance;
-}
-.modal .kicker {
-  font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--accent); font-weight: 700;
-}
-.modal .body { column-count: 2; column-gap: 28px; column-rule: 1px solid var(--rule-soft); font-size: 15px; line-height: 1.6; text-align: justify; hyphens: auto; margin-top: 18px; }
-.modal .body p { margin: 0 0 12px; }
-.modal .video-surface {
-  aspect-ratio: 16/9; background: #000; border: 1px solid var(--ink); position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-}
-.modal .video-surface .playing-chip {
-  position: absolute; top: 10px; left: 10px; color: #fff; background: var(--accent);
-  font-family: "IBM Plex Mono", monospace; font-size: 10px; padding: 4px 8px; letter-spacing: 0.14em; text-transform: uppercase;
-  display: flex; align-items: center; gap: 6px;
-}
-.modal .video-surface .playing-chip::before { content: ""; width: 6px; height: 6px; background: #fff; border-radius: 50%; animation: pulse 1.2s infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-.modal .video-bars {
-  position: absolute; inset: 0; display: flex; align-items: flex-end; gap: 2px; padding: 20px;
-  opacity: 0.7;
-}
-.modal .video-bars span {
-  flex: 1; background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4));
-  height: 40%; animation: bar 1.6s ease-in-out infinite;
-}
-@keyframes bar { 0%, 100% { height: 30%; } 50% { height: 80%; } }
-
 /* ---------- Tweaks panel ---------- */
 .tweaks {
   position: fixed; right: 22px; bottom: 22px; z-index: 60;

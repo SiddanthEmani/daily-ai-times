@@ -27,6 +27,13 @@ test.describe('newspaper frontend smoke', () => {
                 window.localStorage.setItem('dat_last_refresh', String(Date.now()));
             } catch {}
         });
+        // Intercept window.open to capture the URL without opening a real tab.
+        // Returning a dummy object prevents the pop-up-blocked fallback in
+        // openStory (window.location.href) from navigating the test page away.
+        await page.addInitScript(() => {
+            window.__capturedOpenUrl = null;
+            window.open = (url) => { window.__capturedOpenUrl = url; return {}; };
+        });
     });
 
     test('loads with no console errors and renders page chrome', async ({ page }) => {
@@ -42,12 +49,14 @@ test.describe('newspaper frontend smoke', () => {
         // The ticker duplicates items for the seamless loop, so ≥2 items expected.
         expect(await page.locator('.ticker-item').count()).toBeGreaterThanOrEqual(2);
 
-        // Filter out benign third-party console noise (blocked GA/Clarity,
-        // font-preload warnings, favicon 404 on some servers).
+        // Filter out benign third-party noise: blocked GA/Clarity/ad scripts,
+        // font-preload warnings, favicon 404, and SSL errors from article source
+        // URLs opened in new tabs by the window.open interceptor in beforeEach.
         const material = errors.filter(e =>
             !/Google Analytics not configured/i.test(e) &&
             !/clarity/i.test(e) &&
-            !/net::ERR_BLOCKED_BY_CLIENT/i.test(e)
+            !/net::ERR_BLOCKED_BY_CLIENT/i.test(e) &&
+            !/net::ERR_CERT_AUTHORITY_INVALID/i.test(e)
         );
         expect(material, `unexpected console errors:\n${material.join('\n')}`).toEqual([]);
     });
@@ -62,28 +71,22 @@ test.describe('newspaper frontend smoke', () => {
         expect(storyId, 'lead missing data-story-id').toBeTruthy();
     });
 
-    test('clicking a grid story opens modal with Open original CTA; Esc closes', async ({ page }) => {
+    test('clicking a grid story opens source URL in a new tab with no modal', async ({ page }) => {
         await loadPage(page);
+
+        // Modal root must never be injected into the DOM.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
 
         const headline = page.locator('article.story .story-headline').first();
         await expect(headline).toBeVisible();
-        const expectedText = (await headline.textContent() || '').trim();
 
         await headline.click();
 
-        const modal = page.locator('#modal-root .modal');
-        await expect(modal).toBeVisible();
-        await expect(modal.locator('h2')).toHaveText(expectedText);
+        const openedUrl = await page.evaluate(() => window.__capturedOpenUrl);
+        expect(openedUrl, 'window.open should be called with a valid http URL').toMatch(/^https?:\/\//);
 
-        const cta = modal.locator('a', { hasText: 'Open original' });
-        await expect(cta).toBeVisible();
-        const href = await cta.getAttribute('href');
-        expect(href, 'Open original CTA href').toMatch(/^https?:\/\//);
-        await expect(cta).toHaveAttribute('target', '_blank');
-        await expect(cta).toHaveAttribute('rel', /noopener/);
-
-        await page.keyboard.press('Escape');
-        await expect(modal).toBeHidden();
+        // Modal root must remain absent after the click.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
     });
 
     test('save/unsave persists across reload', async ({ page }) => {
@@ -107,7 +110,7 @@ test.describe('newspaper frontend smoke', () => {
         expect(saved).toContain(storyId);
     });
 
-    test('keyboard nav: j moves focus, Enter opens modal, Esc closes', async ({ page }) => {
+    test('keyboard nav: j moves focus, Enter opens article URL in new tab', async ({ page }) => {
         await loadPage(page);
 
         await page.keyboard.press('j');
@@ -115,10 +118,22 @@ test.describe('newspaper frontend smoke', () => {
         await expect(focused).toBeVisible();
 
         await page.keyboard.press('Enter');
-        await expect(page.locator('#modal-root .modal')).toBeVisible();
+
+        const openedUrl = await page.evaluate(() => window.__capturedOpenUrl);
+        expect(openedUrl, 'keyboard Enter should open a valid http URL').toMatch(/^https?:\/\//);
+
+        // Modal must never appear.
+        await expect(page.locator('#modal-root')).not.toBeAttached();
+    });
+
+    test('keyboard nav: Esc clears focus highlight', async ({ page }) => {
+        await loadPage(page);
+
+        await page.keyboard.press('j');
+        await expect(page.locator('article.story[style*="outline"]').first()).toBeVisible();
 
         await page.keyboard.press('Escape');
-        await expect(page.locator('#modal-root .modal')).toBeHidden();
+        await expect(page.locator('article.story[style*="outline"]')).toHaveCount(0);
     });
 
     test('section filter narrows the grid and shows a result bar', async ({ page }) => {
