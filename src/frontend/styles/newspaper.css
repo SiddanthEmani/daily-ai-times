@@ -149,8 +149,10 @@ body::before {
 }
 .also-summary {
   font-size: 12.5px; line-height: 1.42; color: var(--ink-soft);
-  text-align: justify; hyphens: auto; margin-bottom: 6px;
+  text-align: justify; hyphens: auto; margin-bottom: 6px; display: none;
 }
+.also-item.expanded .also-summary { display: block; }
+.also-item.expanded .also-headline { color: var(--accent-ink); }
 .also-meta {
   font-family: "IBM Plex Mono", monospace;
   font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -223,8 +225,9 @@ body::before {
 .lead-deck {
   text-align: center; font-family: "Playfair Display", serif; font-style: italic;
   font-size: 17px; line-height: 1.35; color: var(--ink-soft);
-  max-width: 58ch; margin: 0 auto 18px; text-wrap: pretty;
+  max-width: 58ch; margin: 0 auto; text-wrap: pretty; display: none;
 }
+.lead-headline.expanded + .lead-deck { display: block; margin-bottom: 18px; }
 .lead-media {
   border: 1px solid var(--rule); position: relative; overflow: hidden;
   aspect-ratio: 16 / 9; background: var(--paper-deep);
@@ -298,7 +301,8 @@ body::before {
 .below > .col:first-child { padding-left: 0; }
 .below > .col:last-child { padding-right: 0; border-right: none; }
 
-.story { padding: 16px 0; border-bottom: 1px solid var(--rule-soft); }
+.story { padding: 16px 0; border-bottom: 1px solid var(--rule-soft); cursor: pointer; }
+.story:hover .story-headline { color: var(--accent-ink); }
 .story:first-child { padding-top: 0; }
 .story-section {
   font-family: "IBM Plex Mono", monospace;
@@ -313,7 +317,9 @@ body::before {
   cursor: pointer; transition: color 0.15s;
 }
 .story-headline:hover { color: var(--accent-ink); }
-.story-summary { font-size: 13.5px; line-height: 1.48; color: var(--ink); margin-bottom: 10px; text-align: justify; hyphens: auto; }
+.story-summary { font-size: 13.5px; line-height: 1.48; color: var(--ink); margin-bottom: 10px; text-align: justify; hyphens: auto; display: none; }
+.story.expanded .story-summary { display: block; }
+.story.expanded .story-headline { color: var(--accent-ink); }
 .story-meta {
   font-family: "IBM Plex Mono", monospace;
   font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;

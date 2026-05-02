@@ -40,7 +40,7 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
                 <span style="color:var(--ink-soft)">${escapeHTML(story.source || '')}</span>
             </div>
             ${media}
-            <h3 class="story-headline" data-action="open" data-story-id="${escapeHTML(story.id)}">${escapeHTML(story.headline)}</h3>
+            <h3 class="story-headline">${escapeHTML(story.headline)}</h3>
             <p class="story-summary">${escapeHTML(story.deck)}</p>
             <div class="story-meta">
                 <span class="byline">${escapeHTML(story.byline)}</span>
