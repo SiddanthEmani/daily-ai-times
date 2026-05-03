@@ -339,9 +339,7 @@ function toggleSave(id) {
 
 function openStory(story) {
     if (!story.url) return;
-    // Fall back to same-tab navigation if the browser blocks the pop-up.
-    const w = window.open(story.url, '_blank', 'noopener,noreferrer');
-    if (!w) window.location.href = story.url;
+    window.open(story.url, '_blank', 'noopener,noreferrer');
     try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
     catch { /* analytics is best-effort */ }
 }
