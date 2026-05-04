@@ -14,7 +14,7 @@ export function briefingHTML(briefing, extras) {
     `).join('');
 
     const extraCards = (extras || []).map(s => `
-        <article class="also-item" data-action="open" data-story-id="${escapeHTML(s.id)}">
+        <article class="also-item" data-story-id="${escapeHTML(s.id)}">
             <div class="also-section">${escapeHTML(s.section)}</div>
             <h4 class="also-headline">${escapeHTML(s.headline)}</h4>
             <div class="also-summary">${escapeHTML(s.deck)}</div>
@@ -43,7 +43,7 @@ export function leadHTML(story) {
     return `
         <section>
             <div class="lead-kicker">${escapeHTML(story.kicker)} · ${escapeHTML(story.section.toUpperCase())}</div>
-            <h1 class="lead-headline" data-action="open" data-story-id="${escapeHTML(story.id)}" style="cursor:pointer">
+            <h1 class="lead-headline" data-action="expand-deck" data-story-id="${escapeHTML(story.id)}" style="cursor:pointer">
                 ${escapeHTML(story.headline)}
             </h1>
             <p class="lead-deck">${escapeHTML(story.deck)}</p>

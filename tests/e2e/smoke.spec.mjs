@@ -77,15 +77,21 @@ test.describe('newspaper frontend smoke', () => {
         // Modal root must never be injected into the DOM.
         await expect(page.locator('#modal-root')).not.toBeAttached();
 
-        const headline = page.locator('article.story .story-headline').first();
-        await expect(headline).toBeVisible();
+        const card = page.locator('article.story').first();
+        await expect(card.locator('.story-headline')).toBeVisible();
 
-        await headline.click();
+        // First click expands the description — URL must NOT open yet.
+        await card.click();
+        await expect(card).toHaveClass(/expanded/);
+        await expect(card.locator('.story-summary')).toBeVisible();
+        expect(await page.evaluate(() => window.__capturedOpenUrl)).toBeNull();
 
+        // Second click on the expanded card opens the source URL.
+        await card.click();
         const openedUrl = await page.evaluate(() => window.__capturedOpenUrl);
         expect(openedUrl, 'window.open should be called with a valid http URL').toMatch(/^https?:\/\//);
 
-        // Modal root must remain absent after the click.
+        // Modal root must remain absent throughout.
         await expect(page.locator('#modal-root')).not.toBeAttached();
     });
 

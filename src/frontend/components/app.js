@@ -280,7 +280,47 @@ function installEventDelegation() {
     // would emit data-action="save" that never reaches the handler.
     document.body.addEventListener('click', (e) => {
         const actionEl = e.target.closest?.('[data-action]');
-        if (!actionEl) return;
+
+        // Save always wins — stop propagation so card expand/open doesn't also fire.
+        if (actionEl?.dataset.action === 'save') {
+            const storyId = actionEl.dataset.storyId;
+            if (!storyId) return;
+            e.stopPropagation();
+            toggleSave(storyId);
+            render();
+            return;
+        }
+
+        // Story cards and "Also In The News" items use a two-step interaction:
+        // first click expands the hidden description; second click opens the URL.
+        // We only enter this path when the click has no nearer [data-action]
+        // ancestor, so media-thumbs and other direct-open elements still work.
+        if (!actionEl) {
+            const storyEl = e.target.closest?.('.story[data-story-id]');
+            if (storyEl) {
+                if (!storyEl.classList.contains('expanded')) {
+                    storyEl.classList.add('expanded');
+                } else {
+                    const story = findStory(storyEl.dataset.storyId);
+                    if (story) openStory(story);
+                }
+                return;
+            }
+
+            const alsoEl = e.target.closest?.('.also-item[data-story-id]');
+            if (alsoEl) {
+                if (!alsoEl.classList.contains('expanded')) {
+                    alsoEl.classList.add('expanded');
+                } else {
+                    const story = findStory(alsoEl.dataset.storyId);
+                    if (story) openStory(story);
+                }
+                return;
+            }
+
+            return;
+        }
+
         const action = actionEl.dataset.action;
         const storyId = actionEl.dataset.storyId;
 
@@ -293,10 +333,14 @@ function installEventDelegation() {
             }
             return;
         }
-        if (action === 'save' && storyId) {
-            e.stopPropagation();
-            toggleSave(storyId);
-            render();
+        // Lead headline: expand deck on first click, open URL on second click.
+        if (action === 'expand-deck' && storyId) {
+            if (!actionEl.classList.contains('expanded')) {
+                actionEl.classList.add('expanded');
+            } else {
+                const story = findStory(storyId);
+                if (story) openStory(story);
+            }
             return;
         }
         if (action === 'open' && storyId) {
