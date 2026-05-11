@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-05-11T14:48:56.214916+00:00",
+  "generated_at": "2026-05-11T17:58:48.645383+00:00",
   "articles": [
     {
-      "article_id": "f857bb36248cd63d3aaef279cd5adff9",
-      "title": "NVIDIA AI Releases Star Elastic: One Checkpoint that Contains 30B, 23B, and 12B Reasoning Models with Zero-Shot Slicing",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/05/09/nvidia-ai-releases-star-elastic-one-checkpoint-that-contains-30b-23b-and-12b-reasoning-models-with-zero-shot-slicing/",
-      "published_date": "2026-05-09T22:24:23+00:00",
+      "article_id": "bfcf77d07a1f4774db4f7250db884665",
+      "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company",
+      "published_date": "2026-05-11T06:00:00+00:00",
       "category": "Industry",
-      "description": "NVIDIA researchers have introduced Star Elastic, a post-training method that embeds multiple nested reasoning models — at 30B, 23B, and 12B parameter scales — inside a single checkpoint, eliminating the need for separate training runs or stored model weights per variant. Built on the Nemotron Elastic framework and applied to Nemotron Nano v3, the method trains all three variants in a single 160B-token run, achieving a 360× token reduction compared to pretraining each model from scratch. Beyond...",
-      "author": "Asif Razzaq",
-      "content": "NVIDIA researchers have introduced Star Elastic, a post-training method that embeds multiple nested reasoning models — at 30B, 23B, and 12B parameter scales — inside a single checkpoint, eliminating the need for separate training runs or stored model weights per variant. Built on the Nemotron Elastic framework and applied to Nemotron Nano v3, the method trains all three variants in a single 160B-token run, achieving a 360× token reduction compared to pretraining each model from scratch. Beyond...",
+      "description": "OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.",
+      "author": "",
+      "content": "OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.95
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,35 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.194739+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.611600+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.194740+00:00"
+        "timestamp": "2026-05-11T17:58:48.611603+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "bdeda7269ce5e45aaf10b270bf212a04",
-      "title": "Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local",
-      "source": "azure_ai_blog",
-      "url": "https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/",
-      "published_date": "2026-04-27T18:00:00+00:00",
-      "category": "Industry",
-      "description": "Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations. The post Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local appeared first on Microsoft Azure Blog.",
-      "author": "Douglas Phillips",
-      "content": "Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations. The post Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local appeared first on Microsoft Azure Blog.",
+      "article_id": "cd8fa5b6057e2dbc8fe3b7bf8a2e7ab1",
+      "title": "Spaceflight from the UK",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/guidance/spaceflight-from-the-uk",
+      "published_date": "2026-05-08T08:42:48+00:00",
+      "category": "Government",
+      "description": "Information on how we are growing the UK’s satellite launch capability and spaceflight industry.",
+      "author": "",
+      "content": "Information on how we are growing the UK’s satellite launch capability and spaceflight industry.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -110,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192037+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.610837+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +121,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192039+00:00"
+        "timestamp": "2026-05-11T17:58:48.610840+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
-      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
-      "published_date": "2026-05-06T11:30:20+00:00",
+      "article_id": "31b1ed9b43421707753212c2dd7bbe42",
+      "title": "How Hapag-Lloyd uses Amazon Bedrock to transform customer feedback into actionable insights",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-hapag-lloyd-uses-amazon-bedrock-to-transform-customer-feedback-into-actionable-insights/",
+      "published_date": "2026-05-05T16:55:42+00:00",
       "category": "Industry",
-      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
-      "author": "Gilad Shainer",
-      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "description": "Hapag-Lloyd's Digital Customer Experience and Engineering team, distributed between Hamburg and Gdańsk, drives digital innovation by developing and maintaining customer-facing web and mobile products. In this post, we walk you through our generative AI–powered feedback analysis solution built using Amazon Bedrock, Elasticsearch, and open-source frameworks like LangChain and LangGraph",
+      "author": "Aamna Najmi",
+      "content": "Hapag-Lloyd's Digital Customer Experience and Engineering team, distributed between Hamburg and Gdańsk, drives digital innovation by developing and maintaining customer-facing web and mobile products. In this post, we walk you through our generative AI–powered feedback analysis solution built using Amazon Bedrock, Elasticsearch, and open-source frameworks like LangChain and LangGraph",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -172,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192761+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.612997+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,20 +183,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192763+00:00"
+        "timestamp": "2026-05-11T17:58:48.613000+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fd93e956c3b4aa2097d306623cd8515c",
-      "title": "The fax machine is the bottleneck in US healthcare, and VCs are starting to notice",
+      "article_id": "c23dee752829de0cb9dd115d26aa2e76",
+      "title": "The “people’s airline” and the enterprise AI gold rush",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/",
-      "published_date": "2026-05-08T04:42:29+00:00",
+      "url": "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/",
+      "published_date": "2026-05-08T15:46:17+00:00",
       "category": "Industry",
-      "description": "Like many AI companies automating work that humans currently do, Basata will eventually face a harder question about where the line is between augmenting workers and displacing them. For now, the founders say the administrative staff they work with aren't worried about that; they're more worried about drowning.",
-      "author": "Connie Loizos",
-      "content": "Like many AI companies automating work that humans currently do, Basata will eventually face a harder question about where the line is between augmenting workers and displacing them. For now, the founders say the administrative staff they work with aren't worried about that; they're more worried about drowning.",
+      "description": "Everyone wants a piece of the enterprise AI pie, and this week, we saw a string of companies making their moves. From Anthropic and OpenAI announcing new joint ventures targeting enterprise AI deployment to SAP dropping $1B on German AI startup Prior Labs, it’s becoming clear that if you’re a startup building enterprise tools, you’re likely an acquisition target. On this episode of TechCrunch’s Equity podcast, hosts Kirsten Korosec, Anthony […]",
+      "author": "Kirsten Korosec, Anthony Ha, Sean O'Kane, Theresa Loconsolo",
+      "content": "Everyone wants a piece of the enterprise AI pie, and this week, we saw a string of companies making their moves. From Anthropic and OpenAI announcing new joint ventures targeting enterprise AI deployment to SAP dropping $1B on German AI startup Prior Labs, it’s becoming clear that if you’re a startup building enterprise tools, you’re likely an acquisition target. On this episode of TechCrunch’s Equity podcast, hosts Kirsten Korosec, Anthony […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -230,42 +230,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.193310+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.615225+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.193312+00:00"
+        "timestamp": "2026-05-11T17:58:48.615228+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "667a128a811e614db10bb6c5220ea3d6",
-      "title": "NIH-funded AI model predicts cancer survival from single-cell tumor data",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-ai-model-predicts-cancer-survival-single-cell-tumor-data",
-      "published_date": "2026-05-11T14:43:20.697622+00:00",
-      "category": "Government",
-      "description": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
-      "author": "",
-      "content": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
+      "article_id": "0cd33d0ae708f0b66b5ed43cc3ba36f0",
+      "title": "Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/05/10/best-vector-databases-in-2026-pricing-scale-limits-and-architecture-tradeoffs-across-nine-leading-systems/",
+      "published_date": "2026-05-10T23:56:45+00:00",
+      "category": "Industry",
+      "description": "Vector databases are now core retrieval infrastructure for RAG and agentic AI. This guide compares nine production options on architecture, pricing, and scale. The post Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "Vector databases are now core retrieval infrastructure for RAG and agentic AI. This guide compares nine production options on architecture, pricing, and scale. The post Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190519+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.617075+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.190521+00:00"
+        "timestamp": "2026-05-11T17:58:48.617078+00:00"
       },
       "article_type": "article"
     },
@@ -355,40 +355,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190845+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.611167+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.190847+00:00"
+        "timestamp": "2026-05-11T17:58:48.611175+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fc9ab7849cab7b8910099c06f354d44b",
-      "title": "Advancing voice intelligence with new models in the API",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api",
-      "published_date": "2026-05-07T10:00:00+00:00",
+      "article_id": "959c36e2fb824c4c02f5d410558b6ebf",
+      "title": "Model Quantization: Post-Training Quantization Using NVIDIA Model Optimizer",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/",
+      "published_date": "2026-05-07T21:18:06+00:00",
       "category": "Industry",
-      "description": "Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.",
-      "author": "",
-      "content": "Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.",
+      "description": "Model quantization is an effective method to reduce VRAM usage and improve inference performance on consumer devices such as NVIDIA GeForce RTX GPUs. By...",
+      "author": "Ruixiang Wang",
+      "content": "Model quantization is an effective method to reduce VRAM usage and improve inference performance on consumer devices such as NVIDIA GeForce RTX GPUs. By...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -417,40 +417,102 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.191443+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.615713+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.191445+00:00"
+        "timestamp": "2026-05-11T17:58:48.615716+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "599d1d1c1d7fe33957e8eedaccef5079",
-      "title": "Agent-guided workflows to accelerate model customization in Amazon SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/agent-guided-workflows-to-accelerate-model-customization-in-amazon-sagemaker-ai/",
-      "published_date": "2026-05-04T17:10:46+00:00",
+      "article_id": "00e13b71cf166f2b5e8d2a7bb39b60ed",
+      "title": "Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5/",
+      "published_date": "2026-04-30T17:00:00+00:00",
       "category": "Industry",
-      "description": "Amazon SageMaker AI now offers an agentic experience that changes this. Developers describe their use case using natural language, and the AI coding agent streamlines the entire journey, from use case definition and data preparation through technique selection, evaluation, and deployment. In this post, we walk you through the model customization lifecycle using SageMaker AI agent skills.",
-      "author": "Lauren Mullennex",
-      "content": "Amazon SageMaker AI now offers an agentic experience that changes this. Developers describe their use case using natural language, and the AI coding agent streamlines the entire journey, from use case definition and data preparation through technique selection, evaluation, and deployment. In this post, we walk you through the model customization lifecycle using SageMaker AI agent skills.",
+      "description": "Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the second-generation...",
+      "author": "Phillip Singh",
+      "content": "Today, game developers can begin integrating NVIDIA DLSS 4.5 with Dynamic Multi Frame Generation, Multi Frame Generation 6X, and the second-generation...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-11T17:58:48.616012+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-11T17:58:48.616014+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "728b15e6c091e4a075c254f5ad6b2aed",
+      "title": "Amazon Quick: Accelerating the path from enterprise data to AI-powered decisions",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions/",
+      "published_date": "2026-05-11T15:56:33+00:00",
+      "category": "Industry",
+      "description": "Amazon Quick helps turn your large enterprise data into fast and accurate AI-powered decisions. In this post, you will learn about five new capabilities of Amazon Quick that accelerate how data professionals deliver trusted AI-powered insights at enterprise scale.",
+      "author": "Shekhar Kopuri",
+      "content": "Amazon Quick helps turn your large enterprise data into fast and accurate AI-powered decisions. In this post, you will learn about five new capabilities of Amazon Quick that accelerate how data professionals deliver trusted AI-powered insights at enterprise scale.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "overall_score": 0.86,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -482,7 +544,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192399+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.612732+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -493,20 +555,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192401+00:00"
+        "timestamp": "2026-05-11T17:58:48.612734+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8ce0cddfe74d77d9d449e02224306fd0",
-      "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/alphaevolve-impact/",
-      "published_date": "2026-05-06T10:43:49+00:00",
+      "article_id": "67058cef73b6ea3bc4094a0c03175044",
+      "title": "Preserving the privacy of AI training data",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/preserving-the-privacy-of-ai-training-data",
+      "published_date": "2026-04-29T17:59:07+00:00",
       "category": "Industry",
-      "description": "Explore how AlphaEvolve's Gemini-powered algorithms are driving impact across business, infrastructure, and science.",
+      "description": "How we reproduced three attacks that extract private training data from AI models and the cryptographic defenses that stop them.",
       "author": "",
-      "content": "Explore how AlphaEvolve's Gemini-powered algorithms are driving impact across business, infrastructure, and science.",
+      "content": "How we reproduced three attacks that extract private training data from AI models and the cryptographic defenses that stop them.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -540,42 +602,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.194233+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.616669+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.194235+00:00"
+        "timestamp": "2026-05-11T17:58:48.616671+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "eef2977ea49f7dfd68bc1b7010a95de6",
-      "title": "Building trust into AI",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/building-trust-into-ai",
-      "published_date": "2026-05-04T15:07:58+00:00",
+      "article_id": "d3cba9ef81d6fc5003a01e10653b4111",
+      "title": "Scaling Biomolecular Modeling Using Context Parallelism in NVIDIA BioNeMo",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-biomolecular-modeling-using-context-parallelism-in-nvidia-bionemo/",
+      "published_date": "2026-04-28T19:00:00+00:00",
       "category": "Industry",
-      "description": "Amazon scientists and policy experts discuss how the company’s responsible-AI pipeline embeds safety and values throughout the AI development lifecycle.",
-      "author": "",
-      "content": "Amazon scientists and policy experts discuss how the company’s responsible-AI pipeline embeds safety and values throughout the AI development lifecycle.",
+      "description": "For decades, computational biology has operated under a reductionist compromise. To fit complex biological systems into the limited memory of a single GPU,...",
+      "author": "Dejun Lin",
+      "content": "For decades, computational biology has operated under a reductionist compromise. To fit complex biological systems into the limited memory of a single GPU,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.85,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -602,22 +664,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.85,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.194368+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.616202+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.71,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.194370+00:00"
+        "timestamp": "2026-05-11T17:58:48.616205+00:00"
       },
       "article_type": "article"
     },
@@ -665,40 +727,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190949+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.611504+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.190951+00:00"
+        "timestamp": "2026-05-11T17:58:48.611508+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7392cea1b56bd9294cd87685c76b16bd",
-      "title": "From data lake to AI-ready analytics: Introducing new data source with S3 Tables in Amazon Quick",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/from-data-lake-to-ai-ready-analytics-introducing-direct-query-with-s3-tables-in-amazon-quick/",
-      "published_date": "2026-05-04T16:12:37+00:00",
+      "article_id": "58d730f4cdf35730745b8659c0c0b33e",
+      "title": "How ChatGPT learns about the world while protecting privacy",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/how-chatgpt-protects-privacy",
+      "published_date": "2026-05-06T08:00:00+00:00",
       "category": "Industry",
-      "description": "Amazon Quick introduces Amazon S3 Tables (Apache Iceberg tables) as a new data source. With this feature, customers can directly query and visualize Apache Iceberg tables stored in an Amazon S3 table bucket without the need for intermediate data layers. In this post, we explored how Amazon Quick’s new Amazon S3 Tables data source enables near real-time analytics while streamlining modern data architectures.",
-      "author": "Raji Sivasubramaniam",
-      "content": "Amazon Quick introduces Amazon S3 Tables (Apache Iceberg tables) as a new data source. With this feature, customers can directly query and visualize Apache Iceberg tables stored in an Amazon S3 table bucket without the need for intermediate data layers. In this post, we explored how Amazon Quick’s new Amazon S3 Tables data source enables near real-time analytics while streamlining modern data architectures.",
+      "description": "Learn how ChatGPT safeguards your privacy, reduces personal data in training, and gives you control over whether your conversations improve AI models.",
+      "author": "",
+      "content": "Learn how ChatGPT safeguards your privacy, reduces personal data in training, and gives you control over whether your conversations improve AI models.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.8,
-        "overall_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -726,35 +788,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192466+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.611967+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192467+00:00"
+        "timestamp": "2026-05-11T17:58:48.611969+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "42cc791e686f6797e1ae2b1ecbe63cb6",
-      "title": "Azure IaaS: Defense in depth built on secure-by-design principles",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/azure-iaas-defense-in-depth-built-on-secure-by-design-principles/",
-      "published_date": "2026-05-04T16:00:00+00:00",
+      "article_id": "de63cece318116ff815eda0f9ccc6910",
+      "title": "Overcoming reward signal challenges: Verifiable rewards-based reinforcement learning with GRPO on SageMaker AI",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learning-with-grpo-on-sagemaker-ai/",
+      "published_date": "2026-05-07T15:53:30+00:00",
       "category": "Industry",
-      "description": "Security for cloud infrastructure is no longer defined by a single control, product, or boundary. Modern threats target identity, software supply chains, control planes, networks, and data simultaneously. The post Azure IaaS: Defense in depth built on secure-by-design principles appeared first on Microsoft Azure Blog.",
-      "author": "Narayan Annamalai",
-      "content": "Security for cloud infrastructure is no longer defined by a single control, product, or boundary. Modern threats target identity, software supply chains, control planes, networks, and data simultaneously. The post Azure IaaS: Defense in depth built on secure-by-design principles appeared first on Microsoft Azure Blog.",
+      "description": "In this post, you will learn how to implement reinforcement learning with verifiable rewards (RLVR) to introduce verification and transparency into reward signals to improve training performance. This approach works best when outputs can be objectively verified for correctness, such as in mathematical reasoning, code generation, or symbolic manipulation tasks. You will also learn how to layer techniques like Group Relative Policy Optimization (GRPO) and few-shot examples to further improve...",
+      "author": "Surya Kari",
+      "content": "In this post, you will learn how to implement reinforcement learning with verifiable rewards (RLVR) to introduce verification and transparency into reward signals to improve training performance. This approach works best when outputs can be objectively verified for correctness, such as in mathematical reasoning, code generation, or symbolic manipulation tasks. You will also learn how to layer techniques like Group Relative Policy Optimization (GRPO) and few-shot examples to further improve...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -789,40 +851,40 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.191915+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.612867+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.191918+00:00"
+        "timestamp": "2026-05-11T17:58:48.612869+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "457a5393cfd8b5b7a6de39eebda1c302",
-      "title": "NIH researchers discover pain-relieving drug with minimal addictive properties",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-discover-pain-relieving-drug-minimal-addictive-properties",
-      "published_date": "2026-05-11T14:43:20.697803+00:00",
-      "category": "Government",
-      "description": "Positive safety profile of novel&nbsp;drug&nbsp;compound&nbsp;is surprise&nbsp;for&nbsp;class of synthetic opioids&nbsp;shelved&nbsp;years ago.",
-      "author": "",
-      "content": "Positive safety profile of novel&nbsp;drug&nbsp;compound&nbsp;is surprise&nbsp;for&nbsp;class of synthetic opioids&nbsp;shelved&nbsp;years ago.",
+      "article_id": "f51d6c5ccbf46dd8f7c273d6d5c7bb0c",
+      "title": "Beyond BI: How the Dataset Q&A feature of Amazon Quick powers the next generation of data decisions",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/beyond-bi-how-the-dataset-qa-feature-of-amazon-quick-powers-the-next-generation-of-data-decisions/",
+      "published_date": "2026-05-04T17:46:32+00:00",
+      "category": "Industry",
+      "description": "Business leaders across industries rely on operational dashboards as the shared source of truth that their teams execute against daily. But dashboards are built to answer known questions. When teams need to explore further, ad-hoc, multi-dimensional, or unforeseen questions, they hit a bottleneck. They wait hours or days for BI teams to build new views […]",
+      "author": "Salim Khan",
+      "content": "Business leaders across industries rely on operational dashboards as the shared source of truth that their teams execute against daily. But dashboards are built to answer known questions. When teams need to explore further, ad-hoc, multi-dimensional, or unforeseen questions, they hit a bottleneck. They wait hours or days for BI teams to build new views […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -854,7 +916,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190556+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.613239+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -865,69 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.190559+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "03be6e0bb44aa073add7c4a73ac01727",
-      "title": "Official Statistics: Bioscience and health technology sector statistics 2024 to 2025",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/statistics/announcements/bioscience-and-health-technology-sector-statistics-2024-to-2025",
-      "published_date": "2026-04-28T12:22:16+00:00",
-      "category": "Government",
-      "description": "Official statistics in development estimating the size and composition of the life sciences sector in the UK.",
-      "author": "",
-      "content": "Official statistics in development estimating the size and composition of the life sciences sector in the UK.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190881+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-11T14:48:56.190882+00:00"
+        "timestamp": "2026-05-11T17:58:48.613242+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 271.3875946998596,
+    "processing_time": 274.6860103607178,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 119,
+      "total_processed": 127,
       "candidates": {
         "headlines": 6,
-        "articles": 113,
+        "articles": 121,
         "research_papers": 0
       },
       "selected": {

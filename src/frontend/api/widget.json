@@ -1,23 +1,23 @@
 {
-  "updated": "2026-05-11T14:48:56.217223+00:00",
+  "updated": "2026-05-11T17:58:48.648294+00:00",
   "top_stories": [
     {
-      "article_id": "f857bb36248cd63d3aaef279cd5adff9",
-      "title": "NVIDIA AI Releases Star Elastic: One Checkpoint that Contains 30B, 23B, and 12B Reasoning Models with Zero-Shot Slicing",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/05/09/nvidia-ai-releases-star-elastic-one-checkpoint-that-contains-30b-23b-and-12b-reasoning-models-with-zero-shot-slicing/",
-      "published_date": "2026-05-09T22:24:23+00:00",
+      "article_id": "bfcf77d07a1f4774db4f7250db884665",
+      "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company",
+      "published_date": "2026-05-11T06:00:00+00:00",
       "category": "Industry",
-      "description": "NVIDIA researchers have introduced Star Elastic, a post-training method that embeds multiple nested reasoning models — at 30B, 23B, and 12B parameter scales — inside a single checkpoint, eliminating the need for separate training runs or stored model weights per variant. Built on the Nemotron Elastic framework and applied to Nemotron Nano v3, the method trains all three variants in a single 160B-token run, achieving a 360× token reduction compared to pretraining each model from scratch. Beyond...",
-      "author": "Asif Razzaq",
-      "content": "NVIDIA researchers have introduced Star Elastic, a post-training method that embeds multiple nested reasoning models — at 30B, 23B, and 12B parameter scales — inside a single checkpoint, eliminating the need for separate training runs or stored model weights per variant. Built on the Nemotron Elastic framework and applied to Nemotron Nano v3, the method trains all three variants in a single 160B-token run, achieving a 360× token reduction compared to pretraining each model from scratch. Beyond...",
+      "description": "OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.",
+      "author": "",
+      "content": "OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.95
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -44,35 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.194739+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.611600+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.194740+00:00"
+        "timestamp": "2026-05-11T17:58:48.611603+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "bdeda7269ce5e45aaf10b270bf212a04",
-      "title": "Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local",
-      "source": "azure_ai_blog",
-      "url": "https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/",
-      "published_date": "2026-04-27T18:00:00+00:00",
-      "category": "Industry",
-      "description": "Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations. The post Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local appeared first on Microsoft Azure Blog.",
-      "author": "Douglas Phillips",
-      "content": "Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations. The post Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local appeared first on Microsoft Azure Blog.",
+      "article_id": "cd8fa5b6057e2dbc8fe3b7bf8a2e7ab1",
+      "title": "Spaceflight from the UK",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/guidance/spaceflight-from-the-uk",
+      "published_date": "2026-05-08T08:42:48+00:00",
+      "category": "Government",
+      "description": "Information on how we are growing the UK’s satellite launch capability and spaceflight industry.",
+      "author": "",
+      "content": "Information on how we are growing the UK’s satellite launch capability and spaceflight industry.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -110,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192037+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.610837+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +121,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192039+00:00"
+        "timestamp": "2026-05-11T17:58:48.610840+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
-      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
-      "published_date": "2026-05-06T11:30:20+00:00",
+      "article_id": "31b1ed9b43421707753212c2dd7bbe42",
+      "title": "How Hapag-Lloyd uses Amazon Bedrock to transform customer feedback into actionable insights",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-hapag-lloyd-uses-amazon-bedrock-to-transform-customer-feedback-into-actionable-insights/",
+      "published_date": "2026-05-05T16:55:42+00:00",
       "category": "Industry",
-      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
-      "author": "Gilad Shainer",
-      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "description": "Hapag-Lloyd's Digital Customer Experience and Engineering team, distributed between Hamburg and Gdańsk, drives digital innovation by developing and maintaining customer-facing web and mobile products. In this post, we walk you through our generative AI–powered feedback analysis solution built using Amazon Bedrock, Elasticsearch, and open-source frameworks like LangChain and LangGraph",
+      "author": "Aamna Najmi",
+      "content": "Hapag-Lloyd's Digital Customer Experience and Engineering team, distributed between Hamburg and Gdańsk, drives digital innovation by developing and maintaining customer-facing web and mobile products. In this post, we walk you through our generative AI–powered feedback analysis solution built using Amazon Bedrock, Elasticsearch, and open-source frameworks like LangChain and LangGraph",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -172,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.192761+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.612997+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,20 +183,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.192763+00:00"
+        "timestamp": "2026-05-11T17:58:48.613000+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "fd93e956c3b4aa2097d306623cd8515c",
-      "title": "The fax machine is the bottleneck in US healthcare, and VCs are starting to notice",
+      "article_id": "c23dee752829de0cb9dd115d26aa2e76",
+      "title": "The “people’s airline” and the enterprise AI gold rush",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/",
-      "published_date": "2026-05-08T04:42:29+00:00",
+      "url": "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/",
+      "published_date": "2026-05-08T15:46:17+00:00",
       "category": "Industry",
-      "description": "Like many AI companies automating work that humans currently do, Basata will eventually face a harder question about where the line is between augmenting workers and displacing them. For now, the founders say the administrative staff they work with aren't worried about that; they're more worried about drowning.",
-      "author": "Connie Loizos",
-      "content": "Like many AI companies automating work that humans currently do, Basata will eventually face a harder question about where the line is between augmenting workers and displacing them. For now, the founders say the administrative staff they work with aren't worried about that; they're more worried about drowning.",
+      "description": "Everyone wants a piece of the enterprise AI pie, and this week, we saw a string of companies making their moves. From Anthropic and OpenAI announcing new joint ventures targeting enterprise AI deployment to SAP dropping $1B on German AI startup Prior Labs, it’s becoming clear that if you’re a startup building enterprise tools, you’re likely an acquisition target. On this episode of TechCrunch’s Equity podcast, hosts Kirsten Korosec, Anthony […]",
+      "author": "Kirsten Korosec, Anthony Ha, Sean O'Kane, Theresa Loconsolo",
+      "content": "Everyone wants a piece of the enterprise AI pie, and this week, we saw a string of companies making their moves. From Anthropic and OpenAI announcing new joint ventures targeting enterprise AI deployment to SAP dropping $1B on German AI startup Prior Labs, it’s becoming clear that if you’re a startup building enterprise tools, you’re likely an acquisition target. On this episode of TechCrunch’s Equity podcast, hosts Kirsten Korosec, Anthony […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -230,42 +230,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.193310+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.615225+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.193312+00:00"
+        "timestamp": "2026-05-11T17:58:48.615228+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "667a128a811e614db10bb6c5220ea3d6",
-      "title": "NIH-funded AI model predicts cancer survival from single-cell tumor data",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-ai-model-predicts-cancer-survival-single-cell-tumor-data",
-      "published_date": "2026-05-11T14:43:20.697622+00:00",
-      "category": "Government",
-      "description": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
-      "author": "",
-      "content": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
+      "article_id": "0cd33d0ae708f0b66b5ed43cc3ba36f0",
+      "title": "Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/05/10/best-vector-databases-in-2026-pricing-scale-limits-and-architecture-tradeoffs-across-nine-leading-systems/",
+      "published_date": "2026-05-10T23:56:45+00:00",
+      "category": "Industry",
+      "description": "Vector databases are now core retrieval infrastructure for RAG and agentic AI. This guide compares nine production options on architecture, pricing, and scale. The post Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "Vector databases are now core retrieval infrastructure for RAG and agentic AI. This guide compares nine production options on architecture, pricing, and scale. The post Best Vector Databases in 2026: Pricing, Scale Limits, and Architecture Tradeoffs Across Nine Leading Systems appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.9,
+        "score": 0.95,
+        "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-11T14:48:56.190519+00:00"
+        "consensus_timestamp": "2026-05-11T17:58:48.617075+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-11T14:48:56.190521+00:00"
+        "timestamp": "2026-05-11T17:58:48.617078+00:00"
       },
       "article_type": "article"
     }
