@@ -1,22 +1,22 @@
 {
-  "updated": "2026-05-14T14:09:14.779940+00:00",
+  "updated": "2026-05-14T17:53:41.432335+00:00",
   "top_stories": [
     {
-      "article_id": "8e55ad84162390883bf5689fb085f11e",
-      "title": "Clio’s $500M milestone arrives just as Anthropic ups the ante",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/05/13/clios-500m-milestone-arrives-just-as-anthropic-ups-the-ante/",
-      "published_date": "2026-05-14T05:24:39+00:00",
+      "article_id": "c193d2966aa90239ac6539ccec90c57e",
+      "title": "Nous Research Releases Token Superposition Training to Speed Up LLM Pre-Training by Up to 2.5x Across 270M to 10B Parameter Models",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/05/13/nous-research-releases-token-superposition-training-to-speed-up-llm-pre-training-by-up-to-2-5x-across-270m-to-10b-parameter-models/",
+      "published_date": "2026-05-14T05:46:32+00:00",
       "category": "Industry",
-      "description": "Legal tech startups, including Clio, which just hit $500 million in ARR, are seeing massive customer adoption.",
-      "author": "Marina Temkin",
-      "content": "Legal tech startups, including Clio, which just hit $500 million in ARR, are seeing massive customer adoption.",
+      "description": "Nous Research releases Token Superposition Training (TST), a two-phase pre-training method that cuts wall-clock training time by up to 2.5x at matched FLOPs by averaging contiguous token embeddings into bags during Phase 1 and reverting to standard next-token prediction in Phase 2 — without changing the model architecture, tokenizer, optimizer, or inference-time behavior. Validated at 270M, 600M, 3B dense, and 10B-A1B MoE scales. The post Nous Research Releases Token Superposition Training to...",
+      "author": "Asif Razzaq",
+      "content": "Nous Research releases Token Superposition Training (TST), a two-phase pre-training method that cuts wall-clock training time by up to 2.5x at matched FLOPs by averaging contiguous token embeddings into bags during Phase 1 and reverting to standard next-token prediction in Phase 2 — without changing the model architecture, tokenizer, optimizer, or inference-time behavior. Validated at 270M, 600M, 3B dense, and 10B-A1B MoE scales. The post Nous Research Releases Token Superposition Training to...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
+        "quality_score": 0.95,
         "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -44,41 +44,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-14T14:09:14.743444+00:00"
+        "consensus_timestamp": "2026-05-14T17:53:41.390179+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-14T14:09:14.743446+00:00"
+        "timestamp": "2026-05-14T17:53:41.390183+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "ef8f5a7fb94400e45795ee3a84e34573",
-      "title": "Exclusive: AirOps targets emerging AI search market with autonomous content optimization agent",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/05/13/exclusive-airops-targets-emerging-ai-search-market-autonomous-content-optimization-agent/",
-      "published_date": "2026-05-13T12:30:44+00:00",
+      "article_id": "c176382e9b45dd0e670011c46963f4e7",
+      "title": "Control where your AI agents can browse with Chrome enterprise policies on Amazon Bedrock AgentCore",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazon-bedrock-agentcore/",
+      "published_date": "2026-05-14T17:17:35+00:00",
       "category": "Industry",
-      "description": "AirOps, the business name of Rivington Labs Inc., today introduced Quill, an artificial intelligence agent designed to help brands maintain visibility in generative AI search engines by continuously monitoring, updating and creating content. The San Francisco-based startup is building its business on the broader shift from traditional search engine optimization to what is increasingly being […] The post Exclusive: AirOps targets emerging AI search market with autonomous content optimization...",
-      "author": "Paul Gillin",
-      "content": "AirOps, the business name of Rivington Labs Inc., today introduced Quill, an artificial intelligence agent designed to help brands maintain visibility in generative AI search engines by continuously monitoring, updating and creating content. The San Francisco-based startup is building its business on the broader shift from traditional search engine optimization to what is increasingly being […] The post Exclusive: AirOps targets emerging AI search market with autonomous content optimization...",
+      "description": "In this post, you will configure Chrome enterprise policies to restrict a browser agent to a specific website, observe the policy enforcement through session recording, and demonstrate custom root CA certificates using a public test site. The walkthrough produces a working solution that researches Amazon Bedrock AgentCore documentation while operating under enterprise browser restrictions.",
+      "author": "Sundar Raghavan",
+      "content": "In this post, you will configure Chrome enterprise policies to restrict a browser agent to a specific website, observe the policy enforcement through session recording, and demonstrate custom root CA certificates using a public test site. The walkthrough produces a working solution that researches Amazon Bedrock AgentCore documentation while operating under enterprise browser restrictions.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.95,
-        "novelty_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-14T17:53:41.387017+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-14T17:53:41.387019+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a93508ec727b20c919e5e519d1a420fd",
+      "title": "How ChatGPT adoption broadened in early 2026",
+      "source": "openai_blog",
+      "url": "https://openai.com/signals/research/2026q1-update",
+      "published_date": "2026-05-11T15:00:00+00:00",
+      "category": "Industry",
+      "description": "ChatGPT adoption surged in Q1 2026, with fastest growth among users over 35 and more balanced gender usage, signaling broader mainstream AI adoption.",
+      "author": "",
+      "content": "ChatGPT adoption surged in Q1 2026, with fastest growth among users over 35 and more balanced gender usage, signaling broader mainstream AI adoption.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9285000000000001,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -107,164 +169,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-14T14:09:14.745217+00:00"
+        "consensus_timestamp": "2026-05-14T17:53:41.385896+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-14T14:09:14.745219+00:00"
+        "timestamp": "2026-05-14T17:53:41.385899+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c0b1b281d8f8e82ed831682d8b0a4432",
-      "title": "NIH-funded study suggests that testosterone suppresses brain tumor growth in males",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-study-suggests-testosterone-suppresses-brain-tumor-growth-males",
-      "published_date": "2026-05-14T14:03:09.013383+00:00",
+      "article_id": "878f29ef6b26d4753392f866796837b0",
+      "title": "Research: 5G Innovation Regions programme and Smart Infrastructure Pilots Programme: evaluation reports",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/5g-innovation-regions-programme-and-smart-infrastructure-pilots-programme-evaluation-reports",
+      "published_date": "2026-05-13T08:27:00+00:00",
       "category": "Government",
-      "description": "Findings may warrant exploration of the hormones as glioblastoma treatment.",
+      "description": "Research reports that summarise the interim evaluation into the 5G Innovation Regions (5GIR) and Smart Infrastructure Pilots (SIPP) Programmes.",
       "author": "",
-      "content": "Findings may warrant exploration of the hormones as glioblastoma treatment.",
+      "content": "Research reports that summarise the interim evaluation into the 5G Innovation Regions (5GIR) and Smart Infrastructure Pilots (SIPP) Programmes.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.9,
         "impact_score": 0.9,
         "overall_score": 0.9,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-14T14:09:14.662176+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-14T14:09:14.662180+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e3a9742a5760421728b91d4c75fbc791",
-      "title": "NIH-funded study maps human pancreatic islet cells, offering new clues to diabetes risk",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-study-maps-human-pancreatic-islet-cells-offering-new-clues-diabetes-risk",
-      "published_date": "2026-05-14T14:03:09.013113+00:00",
-      "category": "Government",
-      "description": "Comprehensive characterization of islet cells facilitated by national organ donation program.",
-      "author": "",
-      "content": "Comprehensive characterization of islet cells facilitated by national organ donation program.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-14T14:09:14.662022+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-14T14:09:14.662027+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7469084e0e3aae371f301d38b72f7e27",
-      "title": "Real-Time Performance Monitoring and Faster Debugging with NCCL Inspector and Prometheus",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus/",
-      "published_date": "2026-05-07T16:02:58+00:00",
-      "category": "Industry",
-      "description": "Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL). When training slows down,...",
-      "author": "Ava Arnaz",
-      "content": "Distributed deep learning depends on fast, reliable GPU-to-GPU communication using the NVIDIA Collective Communication Library (NCCL). When training slows down,...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -292,22 +230,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-14T14:09:14.744380+00:00"
+        "consensus_timestamp": "2026-05-14T17:53:41.385039+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-14T14:09:14.744382+00:00"
+        "timestamp": "2026-05-14T17:53:41.385042+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "dd3fb2514c8541071816f08931f5720a",
+      "title": "Achieving Peak System and Workload Efficiency on NVIDIA GB200 NVL72 with Slurm Block Scheduling",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling/",
+      "published_date": "2026-05-07T21:20:14+00:00",
+      "category": "Industry",
+      "description": "NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This design enables...",
+      "author": "Felix Abecassis",
+      "content": "NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This design enables...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-14T17:53:41.389424+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-14T17:53:41.389427+00:00"
       },
       "article_type": "article"
     }
