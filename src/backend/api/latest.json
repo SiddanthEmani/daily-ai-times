@@ -1,146 +1,22 @@
 {
-  "generated_at": "2026-05-18T08:05:34.791148+00:00",
+  "generated_at": "2026-05-18T11:56:28.433623+00:00",
   "articles": [
     {
-      "article_id": "e4b1b8739d1a31f8fb94db5a0c5b08d9",
-      "title": "OpenAI co-founder Greg Brockman takes charge of product strategy",
+      "article_id": "a522104871ad04cb11d149a6c1bdfd3e",
+      "title": "TechCrunch Mobility: The AI skills arms race is coming for automotive",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/05/16/openai-co-founder-greg-brockman-reportedly-takes-charge-of-product-strategy/",
-      "published_date": "2026-05-16T15:33:33+00:00",
+      "url": "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/",
+      "published_date": "2026-05-17T16:05:00+00:00",
       "category": "Industry",
-      "description": "OpenAI's latest shakeup comes as the company reportedly plans to combine ChatGPT and its programming product Codex.",
-      "author": "Anthony Ha",
-      "content": "OpenAI's latest shakeup comes as the company reportedly plans to combine ChatGPT and its programming product Codex.",
+      "description": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
+      "author": "Kirsten Korosec",
+      "content": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
-        "novelty_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.761617+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-18T08:05:34.761620+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "de63cece318116ff815eda0f9ccc6910",
-      "title": "Overcoming reward signal challenges: Verifiable rewards-based reinforcement learning with GRPO on SageMaker AI",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learning-with-grpo-on-sagemaker-ai/",
-      "published_date": "2026-05-07T15:53:30+00:00",
-      "category": "Industry",
-      "description": "In this post, you will learn how to implement reinforcement learning with verifiable rewards (RLVR) to introduce verification and transparency into reward signals to improve training performance. This approach works best when outputs can be objectively verified for correctness, such as in mathematical reasoning, code generation, or symbolic manipulation tasks. You will also learn how to layer techniques like Group Relative Policy Optimization (GRPO) and few-shot examples to further improve...",
-      "author": "Surya Kari",
-      "content": "In this post, you will learn how to implement reinforcement learning with verifiable rewards (RLVR) to introduce verification and transparency into reward signals to improve training performance. This approach works best when outputs can be objectively verified for correctness, such as in mathematical reasoning, code generation, or symbolic manipulation tasks. You will also learn how to layer techniques like Group Relative Policy Optimization (GRPO) and few-shot examples to further improve...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.760862+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-18T08:05:34.760864+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7c3a00575058a71517942ef7ef34bc7d",
-      "title": "A Coding Implementation to Compress and Benchmark Instruction-Tuned LLMs with FP8, GPTQ, and SmoothQuant Quantization using llmcompressor",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/05/17/a-coding-implementation-to-compress-and-benchmark-instruction-tuned-llms-with-fp8-gptq-and-smoothquant-quantization-using-llmcompressor/",
-      "published_date": "2026-05-17T18:19:09+00:00",
-      "category": "Industry",
-      "description": "In this tutorial, we explore how to apply post-training quantization to an instruction-tuned language model using llmcompressor. We start with an FP16 baseline and then compare multiple compression strategies, including FP8 dynamic quantization, GPTQ W4A16, and SmoothQuant with GPTQ W8A8. Along the way, we benchmark each model variant for disk size, generation latency, throughput, perplexity, […] The post A Coding Implementation to Compress and Benchmark Instruction-Tuned LLMs with FP8, GPTQ,...",
-      "author": "Sana Hassan",
-      "content": "In this tutorial, we explore how to apply post-training quantization to an instruction-tuned language model using llmcompressor. We start with an FP16 baseline and then compare multiple compression strategies, including FP8 dynamic quantization, GPTQ W4A16, and SmoothQuant with GPTQ W8A8. Along the way, we benchmark each model variant for disk size, generation latency, throughput, perplexity, […] The post A Coding Implementation to Compress and Benchmark Instruction-Tuned LLMs with FP8, GPTQ,...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "overall_score": 0.8250000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -168,35 +44,35 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.764010+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.408340+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.764013+00:00"
+        "timestamp": "2026-05-18T11:56:28.408343+00:00"
       },
-      "article_type": "article"
+      "article_type": "headline"
     },
     {
-      "article_id": "aa27bc4a58909c8e1754a109cf457ad4",
-      "title": "Government steps up action to strengthen cyber defences as UK cyber industry continues to grow",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/news/government-steps-up-action-to-strengthen-cyber-defences-as-uk-cyber-industry-continues-to-grow",
-      "published_date": "2026-05-11T23:01:03+00:00",
-      "category": "Government",
-      "description": "UK businesses are being urged to strengthen their cyber defences against fast-evolving AI-enabled threats.",
-      "author": "",
-      "content": "UK businesses are being urged to strengthen their cyber defences against fast-evolving AI-enabled threats.",
+      "article_id": "99670e80593143744194beb1297b4e93",
+      "title": "Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and Persistent Session Management in Production",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/05/16/meet-litellm-agent-platform-a-kubernetes-based-self-hosted-infrastructure-layer-for-isolated-agent-sandboxes-and-persistent-session-management-in-production/",
+      "published_date": "2026-05-16T17:59:09+00:00",
+      "category": "Industry",
+      "description": "Running AI agents in a local script is straightforward. Running them reliably in production across teams, across restarts, with isolated environments per context is a different problem entirely. BerriAI, the company behind the LiteLLM AI Gateway, is now open-sourcing a purpose-built answer to that problem: the LiteLLM Agent Platform. The platform is described as a […] The post Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and...",
+      "author": "Asif Razzaq",
+      "content": "Running AI agents in a local script is straightforward. Running them reliably in production across teams, across restarts, with isolated environments per context is a different problem entirely. BerriAI, the company behind the LiteLLM AI Gateway, is now open-sourcing a purpose-built answer to that problem: the LiteLLM Agent Platform. The platform is described as a […] The post Meet LiteLLM Agent Platform: A Kubernetes-Based, Self-Hosted Infrastructure Layer for Isolated Agent Sandboxes and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -231,40 +107,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.758464+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.410935+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.758467+00:00"
+        "timestamp": "2026-05-18T11:56:28.410938+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "b6df060c9f0d75ae98ce316cc80e50c1",
-      "title": "Sea's View on the Future of Agentic Software Development with Codex",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/sea-david-chen",
-      "published_date": "2026-05-14T20:30:00+00:00",
-      "category": "Industry",
-      "description": "Sea Limited's CPO explains why the company is deploying Codex across engineering teams to accelerate AI-native software development in Asia.",
+      "article_id": "39d12f7d9b10b6dd90ab956e97f6c95d",
+      "title": "AI, open code and vulnerability risk in the public sector",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/guidance/ai-open-code-and-vulnerability-risk-in-the-public-sector",
+      "published_date": "2026-05-14T13:48:38+00:00",
+      "category": "Government",
+      "description": "Guidance for safely publishing source code in the open, and reducing the risk of AI-accelerated vulnerability discovery.",
       "author": "",
-      "content": "Sea Limited's CPO explains why the company is deploying Codex across engineering teams to accelerate AI-native software development in Asia.",
+      "content": "Guidance for safely publishing source code in the open, and reducing the risk of AI-accelerated vulnerability discovery.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -296,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.759010+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.405468+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.759013+00:00"
+        "timestamp": "2026-05-18T11:56:28.405471+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "dd3fb2514c8541071816f08931f5720a",
-      "title": "Achieving Peak System and Workload Efficiency on NVIDIA GB200 NVL72 with Slurm Block Scheduling",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling/",
-      "published_date": "2026-05-07T21:20:14+00:00",
+      "article_id": "d6ffa4dcb5663510c629e8c9d8840be4",
+      "title": "OpenAI is reportedly preparing legal action against Apple; it wouldn’t be the first partner to feel burned",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/",
+      "published_date": "2026-05-14T19:12:03+00:00",
       "category": "Industry",
-      "description": "NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This design enables...",
-      "author": "Felix Abecassis",
-      "content": "NVIDIA GB200 NVL72 introduces a fundamentally new way to build GPU clusters by extending NVIDIA NVLink coherence across an entire rack. This design enables...",
+      "description": "OpenAI is so frustrated with Apple over a ChatGPT integration that failed to deliver the subscribers and prominence it expected that the company is now actively exploring legal action against the iPhone maker.",
+      "author": "Connie Loizos",
+      "content": "OpenAI is so frustrated with Apple over a ChatGPT integration that failed to deliver the subscribers and prominence it expected that the company is now actively exploring legal action against the iPhone maker.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -354,41 +230,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.92,
-        "confidence": 0.95,
+        "score": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.762568+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.408716+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.762570+00:00"
+        "timestamp": "2026-05-18T11:56:28.408718+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "47d5cbe62cc24f1959604a5c62f5f883",
-      "title": "How to Eliminate Pipeline Friction in AI Model Serving",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-eliminate-pipeline-friction-in-ai-model-serving/",
-      "published_date": "2026-05-12T18:00:00+00:00",
-      "category": "Industry",
-      "description": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a...",
-      "author": "Lovina Dmello",
-      "content": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a...",
+      "article_id": "4eab4e31a849b8ddebc6a1b4aa7d53c9",
+      "title": "Research: Newton Fund Impact Evaluation",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/newton-fund-impact-evaluation",
+      "published_date": "2026-05-06T08:30:01+00:00",
+      "category": "Government",
+      "description": "Impact evaluation to assess the progress of the Newton Fund and recommendations for future research and innovation activities.",
+      "author": "",
+      "content": "Impact evaluation to assess the progress of the Newton Fund and recommendations for future research and innovation activities.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -417,34 +293,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.762386+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.406023+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.762389+00:00"
+        "timestamp": "2026-05-18T11:56:28.406026+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "0be71bbbdbd3e5c270553e518f403cbe",
-      "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/malta-chatgpt-plus-partnership",
-      "published_date": "2026-05-16T00:00:00+00:00",
+      "article_id": "84ab51b704a0b23c43fb4f2bba8a944a",
+      "title": "Cerebras raises $5.5B, then stock pops $108%, in the first huge tech IPO of 2026",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/05/14/cerebras-raises-5-5b-kicking-off-2026s-ipo-season-with-a-bang/",
+      "published_date": "2026-05-14T16:30:02+00:00",
       "category": "Industry",
-      "description": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
-      "author": "",
-      "content": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
+      "description": "A year ago, it looked like this day would never happen for Cerebras.",
+      "author": "Julie Bort",
+      "content": "A year ago, it looked like this day would never happen for Cerebras.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-18T11:56:28.408818+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-18T11:56:28.408821+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
+      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
+      "published_date": "2026-05-06T11:30:20+00:00",
+      "category": "Industry",
+      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "author": "Gilad Shainer",
+      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -479,34 +417,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.758777+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.408112+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.758780+00:00"
+        "timestamp": "2026-05-18T11:56:28.408114+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "873b7345489491fde955d3e2b9fa6f76",
-      "title": "Oral small-molecule GLP-1 drugs penetrate deep into the brain to suppress cravings",
+      "article_id": "0811b529d29609adc5e5205d252d9135",
+      "title": "Red Hat and Intel spotlight scalable AI inference as enterprises move beyond the GPU gold rush",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/05/13/scalable-ai-inference-focus-amid-move-beyond-gpus-rhsummit/",
+      "published_date": "2026-05-13T13:52:35+00:00",
+      "category": "Industry",
+      "description": "As companies move from testing AI to broader adoption, the biggest challenge is building scalable AI inference systems that perform without breaking the budget. The next wave of AI won’t be won on raw power alone — it will be decided by who can do more with less. When AI inference first took off, the […] The post Red Hat and Intel spotlight scalable AI inference as enterprises move beyond the GPU gold rush appeared first on SiliconANGLE.",
+      "author": "Ryan Stevens",
+      "content": "As companies move from testing AI to broader adoption, the biggest challenge is building scalable AI inference systems that perform without breaking the budget. The next wave of AI won’t be won on raw power alone — it will be decided by who can do more with less. When AI inference first took off, the […] The post Red Hat and Intel spotlight scalable AI inference as enterprises move beyond the GPU gold rush appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-18T11:56:28.411241+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-18T11:56:28.411244+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c7fbaaf0f58dc0ca56c1ea57114362cf",
+      "title": "Researchers identify first suite of human antibodies against measles virus",
       "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/oral-small-molecule-glp-1-drugs-penetrate-deep-into-brain-suppress-cravings",
-      "published_date": "2026-05-18T07:59:56.695402+00:00",
+      "url": "https://www.nih.gov/news-events/news-releases/researchers-identify-first-suite-human-antibodies-against-measles-virus",
+      "published_date": "2026-05-18T11:50:01.313811+00:00",
       "category": "Government",
-      "description": "NIH-funded research identifies new mechanism of action for next-generation weight-loss drugs.",
+      "description": "NIH-funded study lays foundation for antibody-based measles treatment.",
       "author": "",
-      "content": "NIH-funded research identifies new mechanism of action for next-generation weight-loss drugs.",
+      "content": "NIH-funded study lays foundation for antibody-based measles treatment.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -544,7 +544,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.757791+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.405108+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -555,20 +555,82 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.757795+00:00"
+        "timestamp": "2026-05-18T11:56:28.405112+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
-      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
-      "published_date": "2026-05-06T11:30:20+00:00",
+      "article_id": "0be71bbbdbd3e5c270553e518f403cbe",
+      "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/malta-chatgpt-plus-partnership",
+      "published_date": "2026-05-16T00:00:00+00:00",
       "category": "Industry",
-      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
-      "author": "Gilad Shainer",
-      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "description": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
+      "author": "",
+      "content": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-18T11:56:28.406101+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-18T11:56:28.406104+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5934e203b82cd27cc000ecee5c79f40f",
+      "title": "Introducing NVIDIA Fleet Intelligence for Real-Time GPU Fleet Visibility and Optimization",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization/",
+      "published_date": "2026-05-11T19:44:27+00:00",
+      "category": "Industry",
+      "description": "The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet these...",
+      "author": "Christian Shrauder",
+      "content": "The compute capability of large GPU fleets presents unprecedented opportunities to innovate and provide value to customers in record time. Yet these...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -603,34 +665,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.761223+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.409998+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.761225+00:00"
+        "timestamp": "2026-05-18T11:56:28.410002+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c7fbaaf0f58dc0ca56c1ea57114362cf",
-      "title": "Researchers identify first suite of human antibodies against measles virus",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-identify-first-suite-human-antibodies-against-measles-virus",
-      "published_date": "2026-05-18T07:59:56.695125+00:00",
-      "category": "Government",
-      "description": "NIH-funded study lays foundation for antibody-based measles treatment.",
+      "article_id": "318aecb12012de49ab758ce242932285",
+      "title": "How mechanism design theory helps optimize Amazon-vendor collaboration",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/how-mechanism-design-theory-helps-optimize-amazon-vendor-collaboration",
+      "published_date": "2026-05-05T13:11:23+00:00",
+      "category": "Industry",
+      "description": "Agentic mechanism enables Amazon and vendors to optimize supply chain management without disclosing private information.",
       "author": "",
-      "content": "NIH-funded study lays foundation for antibody-based measles treatment.",
+      "content": "Agentic mechanism enables Amazon and vendors to optimize supply chain management without disclosing private information.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-18T11:56:28.410525+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-18T11:56:28.410527+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f23871efc0d94a104c8350e9cf35b034",
+      "title": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/scaling-cloud-and-ai-microsoft-azures-commitment-to-europes-digital-future/",
+      "published_date": "2026-05-06T14:00:00+00:00",
+      "category": "Industry",
+      "description": "As demand for cloud and AI grows, Microsoft is expanding Azure across Europe to deliver scalable, resilient infrastructure that supports innovation, compliance, and performance. The post Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future appeared first on Microsoft Azure Blog.",
+      "author": "Jessica Hawk",
+      "content": "As demand for cloud and AI grows, Microsoft is expanding Azure across Europe to deliver scalable, resilient infrastructure that supports innovation, compliance, and performance. The post Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.8,
@@ -665,83 +789,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.757583+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.407059+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.757587+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "318aecb12012de49ab758ce242932285",
-      "title": "How mechanism design theory helps optimize Amazon-vendor collaboration",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/how-mechanism-design-theory-helps-optimize-amazon-vendor-collaboration",
-      "published_date": "2026-05-05T13:11:23+00:00",
-      "category": "Industry",
-      "description": "Agentic mechanism enables Amazon and vendors to optimize supply chain management without disclosing private information.",
-      "author": "",
-      "content": "Agentic mechanism enables Amazon and vendors to optimize supply chain management without disclosing private information.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.763028+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-18T08:05:34.763031+00:00"
+        "timestamp": "2026-05-18T11:56:28.407061+00:00"
       },
       "article_type": "article"
     },
@@ -789,21 +851,21 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.760356+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.407514+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.760358+00:00"
+        "timestamp": "2026-05-18T11:56:28.407517+00:00"
       },
       "article_type": "article"
     },
@@ -854,7 +916,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.760536+00:00"
+        "consensus_timestamp": "2026-05-18T11:56:28.407666+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -865,69 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-18T08:05:34.760538+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "636428a188b7521aceb84a02f03df0c6",
-      "title": "Nous Research Proposes Lighthouse Attention: A Training-Only Selection-Based Hierarchical Attention That Delivers 1.4–1.7× Pretraining Speedup at Long Context",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/05/16/nous-research-proposes-lighthouse-attention-a-training-only-selection-based-hierarchical-attention-that-delivers-1-4-1-7x-pretraining-speedup-at-long-context/",
-      "published_date": "2026-05-16T22:23:09+00:00",
-      "category": "Industry",
-      "description": "Nous Research has published Lighthouse Attention, a selection-based hierarchical attention mechanism that wraps around standard scaled dot-product attention during pretraining and is removed afterward. Unlike prior methods such as NSA and HISA that pool only keys and values, Lighthouse pools Q, K, and V symmetrically across a multi-resolution pyramid, reducing the attention call from O(N·S·d) to O(S²·d) and running stock FlashAttention on a small dense sub-sequence. Tested on a 530M...",
-      "author": "Asif Razzaq",
-      "content": "Nous Research has published Lighthouse Attention, a selection-based hierarchical attention mechanism that wraps around standard scaled dot-product attention during pretraining and is removed afterward. Unlike prior methods such as NSA and HISA that pool only keys and values, Lighthouse pools Q, K, and V symmetrically across a multi-resolution pyramid, reducing the attention call from O(N·S·d) to O(S²·d) and running stock FlashAttention on a small dense sub-sequence. Tested on a 530M...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-18T08:05:34.764153+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-18T08:05:34.764156+00:00"
+        "timestamp": "2026-05-18T11:56:28.407668+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 257.0090115070343,
+    "processing_time": 302.1028621196747,
     "components": [
       "collection",
       "bulk_scoring",
