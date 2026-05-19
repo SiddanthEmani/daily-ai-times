@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-05-19T11:05:11.137615+00:00",
+  "generated_at": "2026-05-19T14:59:42.308370+00:00",
   "articles": [
     {
-      "article_id": "a522104871ad04cb11d149a6c1bdfd3e",
-      "title": "TechCrunch Mobility: The AI skills arms race is coming for automotive",
+      "article_id": "bee9cd8f51bc0439195c9ecb572911f1",
+      "title": "Amazon’s new Alexa+ powered feature can generate podcast episodes",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/05/17/techcrunch-mobility-the-ai-skills-arms-race-is-coming-for-automotive/",
-      "published_date": "2026-05-17T16:05:00+00:00",
+      "url": "https://techcrunch.com/2026/05/18/amazons-new-alexa-powered-feature-can-generate-podcast-episodes/",
+      "published_date": "2026-05-18T14:56:47+00:00",
       "category": "Industry",
-      "description": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
-      "author": "Kirsten Korosec",
-      "content": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
+      "description": "Amazon’s Alexa+ can now generate custom AI podcasts on demand, as the company expands its assistant into a personalized AI content platform.",
+      "author": "Lauren Forristal",
+      "content": "Amazon’s Alexa+ can now generate custom AI podcasts on demand, as the company expands its assistant into a personalized AI content platform.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.75,
-        "novelty_score": 0.65,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.785,
-        "confidence_mean": 0.85
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.111596+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.280926+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,26 +59,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.111598+00:00"
+        "timestamp": "2026-05-19T14:59:42.280928+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "bea100baa75f0e5db71429897d7e3690",
-      "title": "How to Build In-Vehicle AI Agents with NVIDIA: From Cloud to Car",
+      "article_id": "368a2c862dd2c2d0e35f9d5f55566b6c",
+      "title": "How the NVIDIA Vera Rubin Platform is Solving Agentic AI’s Scale-Up Problem",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-to-build-in-vehicle-ai-agents-with-nvidia-from-cloud-to-car/",
-      "published_date": "2026-05-05T16:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem/",
+      "published_date": "2026-05-14T19:24:35+00:00",
       "category": "Industry",
-      "description": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and...",
-      "author": "Felix Friedmann",
-      "content": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and...",
+      "description": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,...",
+      "author": "Graham Steele",
+      "content": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.85,
-        "impact_score": 0.99,
-        "overall_score": 0.9205000000000001,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -106,104 +106,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.112499+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-19T11:05:11.112502+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6f157bc14f1c66da2da8a62e79b923e3",
-      "title": "Build custom code-based evaluators in Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-custom-code-based-evaluators-in-amazon-bedrock-agentcore/",
-      "published_date": "2026-05-18T15:07:15+00:00",
-      "category": "Industry",
-      "description": "In this post, you will implement four Lambda-based custom code evaluators for a financial market-intelligence agent, register each with AgentCore, and run them in on-demand and online modes. You will also see how to combine custom code-based evaluators with built-in evaluators and how to call other AWS services for grounded fact-checking, PII detection, and real-time alerting.",
-      "author": "Bharathi Srinivasan",
-      "content": "In this post, you will implement four Lambda-based custom code evaluators for a financial market-intelligence agent, register each with AgentCore, and run them in on-demand and online modes. You will also see how to combine custom code-based evaluators with built-in evaluators and how to call other AWS services for grounded fact-checking, PII detection, and real-time alerting.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.110195+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.281629+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.110198+00:00"
+        "timestamp": "2026-05-19T14:59:42.281632+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d6e8d9949d85445a63ed3f74d5355fe0",
-      "title": "Vera Arrives: NVIDIA’s First CPU Built for Agents Lands at Top AI Labs",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
-      "published_date": "2026-05-18T21:48:17+00:00",
+      "article_id": "4858e5219ded259e036582374290ed21",
+      "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/databricks",
+      "published_date": "2026-05-15T00:00:00+00:00",
       "category": "Industry",
-      "description": "The first NVIDIA Vera CPUs arrived at three of the world's leading AI labs on Friday — Anthropic in San Francisco, OpenAI in Mission Bay, SpaceXAI in Palo Alto — followed by a delivery to Oracle Cloud Infrastructure in Santa Clara on Monday. NVIDIA Vice President of Hyperscale and High-Performance Computing Ian Buck hand-delivered them.",
-      "author": "Ian Finder",
-      "content": "The first NVIDIA Vera CPUs arrived at three of the world's leading AI labs on Friday — Anthropic in San Francisco, OpenAI in Mission Bay, SpaceXAI in Palo Alto — followed by a delivery to Oracle Cloud Infrastructure in Santa Clara on Monday. NVIDIA Vice President of Hyperscale and High-Performance Computing Ian Buck hand-delivered them.",
+      "description": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
+      "author": "",
+      "content": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.98,
         "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.98
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.111030+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.277993+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,27 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.111032+00:00"
+        "timestamp": "2026-05-19T14:59:42.277996+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e6501ab1e3eaf47432ad8d5fd0ddcab3",
-      "title": "Securing AI agents: How AWS and Cisco AI Defense scale MCP and A2A deployments",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a-deployments/",
-      "published_date": "2026-05-13T17:33:16+00:00",
+      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
+      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
+      "published_date": "2026-05-06T11:30:20+00:00",
       "category": "Industry",
-      "description": "The Cisco and AWS partnership addresses three challenges enterprises face when scaling AI agents: visibility gaps, security bottlenecks, and compliance risks. In this post, we explore how you can overcome AI security challenges through automated scanning and unified governance.",
-      "author": "Amit Arora",
-      "content": "The Cisco and AWS partnership addresses three challenges enterprises face when scaling AI agents: visibility gaps, security bottlenecks, and compliance risks. In this post, we explore how you can overcome AI security challenges through automated scanning and unified governance.",
+      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "author": "Gilad Shainer",
+      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.110572+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.280718+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,69 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.110575+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "39d12f7d9b10b6dd90ab956e97f6c95d",
-      "title": "AI, open code and vulnerability risk in the public sector",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/guidance/ai-open-code-and-vulnerability-risk-in-the-public-sector",
-      "published_date": "2026-05-14T13:48:38+00:00",
-      "category": "Government",
-      "description": "Guidance for safely publishing source code in the open, and reducing the risk of AI-accelerated vulnerability discovery.",
-      "author": "",
-      "content": "Guidance for safely publishing source code in the open, and reducing the risk of AI-accelerated vulnerability discovery.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.92,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.108114+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-19T11:05:11.108117+00:00"
+        "timestamp": "2026-05-19T14:59:42.280721+00:00"
       },
       "article_type": "article"
     },
@@ -417,34 +293,158 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.109506+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.278300+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-19T14:59:42.278302+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6f157bc14f1c66da2da8a62e79b923e3",
+      "title": "Build custom code-based evaluators in Amazon Bedrock AgentCore",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-custom-code-based-evaluators-in-amazon-bedrock-agentcore/",
+      "published_date": "2026-05-18T15:07:15+00:00",
+      "category": "Industry",
+      "description": "In this post, you will implement four Lambda-based custom code evaluators for a financial market-intelligence agent, register each with AgentCore, and run them in on-demand and online modes. You will also see how to combine custom code-based evaluators with built-in evaluators and how to call other AWS services for grounded fact-checking, PII detection, and real-time alerting.",
+      "author": "Bharathi Srinivasan",
+      "content": "In this post, you will implement four Lambda-based custom code evaluators for a financial market-intelligence agent, register each with AgentCore, and run them in on-demand and online modes. You will also see how to combine custom code-based evaluators with built-in evaluators and how to call other AWS services for grounded fact-checking, PII detection, and real-time alerting.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-19T14:59:42.278928+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-19T14:59:42.278930+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "75bf0308d31306af8832e6a499f5a49f",
+      "title": "Uniswap (UNI) Price Prediction: 2025, 2026, 2030",
+      "source": "benzinga",
+      "url": "https://www.benzinga.com/money/uniswap-uni-price-prediction",
+      "published_date": "2026-05-19T14:16:04+00:00",
+      "category": "Industry",
+      "description": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
+      "author": "Margaret Jackson",
+      "content": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-19T14:59:42.282391+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.109509+00:00"
+        "timestamp": "2026-05-19T14:59:42.282393+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8a1ed7747c4c5bc338a5d0e04c2f26fb",
-      "title": "NVIDIA Spectrum-X — the Open, AI-Native Ethernet Fabric — Sets the Standard for Gigascale AI, Now With MRC",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/",
-      "published_date": "2026-05-06T11:30:20+00:00",
+      "article_id": "e6501ab1e3eaf47432ad8d5fd0ddcab3",
+      "title": "Securing AI agents: How AWS and Cisco AI Defense scale MCP and A2A deployments",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a-deployments/",
+      "published_date": "2026-05-13T17:33:16+00:00",
       "category": "Industry",
-      "description": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
-      "author": "Gilad Shainer",
-      "content": "The race to build the world’s most powerful AI factories demands networking that keeps pace with the ambitions of AI itself. NVIDIA Spectrum-X Ethernet scale-out infrastructure stands at the forefront of that race as the most advanced AI networking technology available today, deployed by industry leaders who can’t afford to compromise on performance, resilience or […]",
+      "description": "The Cisco and AWS partnership addresses three challenges enterprises face when scaling AI agents: visibility gaps, security bottlenecks, and compliance risks. In this post, we explore how you can overcome AI security challenges through automated scanning and unified governance.",
+      "author": "Amit Arora",
+      "content": "The Cisco and AWS partnership addresses three challenges enterprises face when scaling AI agents: visibility gaps, security bottlenecks, and compliance risks. In this post, we explore how you can overcome AI security challenges through automated scanning and unified governance.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
@@ -479,40 +479,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.111291+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.280075+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.111294+00:00"
+        "timestamp": "2026-05-19T14:59:42.280078+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "881a553ae0021df58b6976209cc8e444",
-      "title": "Guidance: DSIT compliance with official statistics",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/dsit-compliance-with-official-statistics",
-      "published_date": "2026-05-12T08:30:06+00:00",
-      "category": "Government",
-      "description": "Documents describing the corporate procedures and policies the Department for Science, Innovation and Technology (DSIT) follows to produce official statistics",
-      "author": "",
-      "content": "Documents describing the corporate procedures and policies the Department for Science, Innovation and Technology (DSIT) follows to produce official statistics",
+      "article_id": "bea100baa75f0e5db71429897d7e3690",
+      "title": "How to Build In-Vehicle AI Agents with NVIDIA: From Cloud to Car",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-build-in-vehicle-ai-agents-with-nvidia-from-cloud-to-car/",
+      "published_date": "2026-05-05T16:00:00+00:00",
+      "category": "Industry",
+      "description": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and...",
+      "author": "Felix Friedmann",
+      "content": "The automotive cockpit is undergoing a fundamental shift from rule-based interfaces to agentic, multimodal AI systems capable of reasoning, planning, and...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
         "impact_score": 0.9,
-        "overall_score": 0.87,
+        "overall_score": 0.865,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -540,42 +540,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.108439+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.282053+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.108442+00:00"
+        "timestamp": "2026-05-19T14:59:42.282055+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c043e80d02cb0e19e44ba23765501d32",
-      "title": "What Parameter Golf taught us about AI-assisted research",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/what-parameter-golf-taught-us",
-      "published_date": "2026-05-12T00:00:00+00:00",
-      "category": "Industry",
-      "description": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
+      "article_id": "667a128a811e614db10bb6c5220ea3d6",
+      "title": "NIH-funded AI model predicts cancer survival from single-cell tumor data",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-funded-ai-model-predicts-cancer-survival-single-cell-tumor-data",
+      "published_date": "2026-05-19T14:54:28.277406+00:00",
+      "category": "Government",
+      "description": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
       "author": "",
-      "content": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
+      "content": "Study links specific cell populations to patient risk in melanoma and liver cancer.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.96
+        "overall_score": 0.87,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -603,34 +603,96 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.109597+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.276887+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.109600+00:00"
+        "timestamp": "2026-05-19T14:59:42.276890+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "368a2c862dd2c2d0e35f9d5f55566b6c",
-      "title": "How the NVIDIA Vera Rubin Platform is Solving Agentic AI’s Scale-Up Problem",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem/",
-      "published_date": "2026-05-14T19:24:35+00:00",
+      "article_id": "d6e8d9949d85445a63ed3f74d5355fe0",
+      "title": "Vera Arrives: NVIDIA’s First CPU Built for Agents Lands at Top AI Labs",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+      "published_date": "2026-05-18T21:48:17+00:00",
       "category": "Industry",
-      "description": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,...",
-      "author": "Graham Steele",
-      "content": "Agentic inference has fundamentally changed the runtime dynamics of inference workloads by introducing non-deterministic trajectories—actions, observations,...",
+      "description": "The first NVIDIA Vera CPUs arrived at three of the world's leading AI labs on Friday — Anthropic in San Francisco, OpenAI in Mission Bay, SpaceXAI in Palo Alto — followed by a delivery to Oracle Cloud Infrastructure in Santa Clara on Monday. NVIDIA Vice President of Hyperscale and High-Performance Computing Ian Buck hand-delivered them.",
+      "author": "Ian Finder",
+      "content": "The first NVIDIA Vera CPUs arrived at three of the world's leading AI labs on Friday — Anthropic in San Francisco, OpenAI in Mission Bay, SpaceXAI in Palo Alto — followed by a delivery to Oracle Cloud Infrastructure in Santa Clara on Monday. NVIDIA Vice President of Hyperscale and High-Performance Computing Ian Buck hand-delivered them.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-19T14:59:42.280421+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-19T14:59:42.280424+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "47d5cbe62cc24f1959604a5c62f5f883",
+      "title": "How to Eliminate Pipeline Friction in AI Model Serving",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-eliminate-pipeline-friction-in-ai-model-serving/",
+      "published_date": "2026-05-12T18:00:00+00:00",
+      "category": "Industry",
+      "description": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a...",
+      "author": "Lovina Dmello",
+      "content": "The path from a trained AI model to production should be smooth, but rarely is. Many teams invest weeks fine-tuning models, only to discover that exporting to a...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -664,41 +726,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
+        "score": 0.9,
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.112140+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.281795+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
+        "weighted_score": 0.74,
         "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.112143+00:00"
+        "timestamp": "2026-05-19T14:59:42.281798+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "09d08034fd9cdf6b48174e61a9371b09",
-      "title": "Introducing Claude Platform on AWS: Anthropic’s native platform, through your AWS account",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/",
-      "published_date": "2026-05-11T18:43:03+00:00",
+      "article_id": "c043e80d02cb0e19e44ba23765501d32",
+      "title": "What Parameter Golf taught us about AI-assisted research",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/what-parameter-golf-taught-us",
+      "published_date": "2026-05-12T00:00:00+00:00",
       "category": "Industry",
-      "description": "Today, we're excited to announce the general availability of Claude Platform on AWS. Claude Platform on AWS is a new service that gives customers direct access to Anthropic's native Claude Platform experience through their AWS account, with no separate credentials, contracts, or billing relationships required. AWS is the first cloud provider to offer access to the native Claude Platform experience. In this post, we explore how Claude Platform on AWS works and how you can start using it today.",
-      "author": "Dani Mitchell",
-      "content": "Today, we're excited to announce the general availability of Claude Platform on AWS. Claude Platform on AWS is a new service that gives customers direct access to Anthropic's native Claude Platform experience through their AWS account, with no separate credentials, contracts, or billing relationships required. AWS is the first cloud provider to offer access to the native Claude Platform experience. In this post, we explore how Claude Platform on AWS works and how you can start using it today.",
+      "description": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
+      "author": "",
+      "content": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "novelty_score": 0.65,
+        "impact_score": 0.9,
+        "overall_score": 0.8250000000000001,
+        "confidence_mean": 0.96
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-05-19T14:59:42.278388+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-05-19T14:59:42.278391+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "6e6497d9ff1c08598f02a2b3fc85f50a",
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/building-codex-windows-sandbox",
+      "published_date": "2026-05-13T11:00:00+00:00",
+      "category": "Industry",
+      "description": "Learn how OpenAI built a secure sandbox for Codex on Windows, enabling safe, efficient coding agents with controlled file access and network restrictions.",
+      "author": "",
+      "content": "Learn how OpenAI built a secure sandbox for Codex on Windows, enabling safe, efficient coding agents with controlled file access and network restrictions.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.6,
+        "impact_score": 0.9,
+        "overall_score": 0.8125000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -730,7 +854,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.110801+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.278169+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -741,151 +865,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.110804+00:00"
+        "timestamp": "2026-05-19T14:59:42.278171+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1adc3785e2844b956c27dde4fc057332",
-      "title": "DARPA XRQ-73 demonstrates hybrid-electric flight",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2026/darpa-xrq-73-demonstrates-hybrid-electric-flight",
-      "published_date": "2026-05-06T12:29:45+00:00",
-      "category": "Government",
-      "description": "DARPA, in collaboration with the Air Force Research Laboratory and Northrop Grumman, flew the XRQ-73 as part of the SHEPARD program.",
-      "author": "outreach@darpa.mil",
-      "content": "DARPA, in collaboration with the Air Force Research Laboratory and Northrop Grumman, flew the XRQ-73 as part of the SHEPARD program.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.88,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.108018+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.728,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-19T11:05:11.108021+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "be18141898e919c26cd1e32276ad2d9b",
-      "title": "Promptimus: Improving already good LLM prompts with zero manual engineering",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/promptimus-improving-already-good-llm-prompts-with-zero-manual-engineering",
-      "published_date": "2026-05-14T13:47:45+00:00",
+      "article_id": "0be71bbbdbd3e5c270553e518f403cbe",
+      "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/malta-chatgpt-plus-partnership",
+      "published_date": "2026-05-16T00:00:00+00:00",
       "category": "Industry",
-      "description": "By focusing on specific failure points and suggesting targeted solutions, a new automated prompt-engineering framework improves prompt performance without compromising existing functionality.",
+      "description": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
       "author": "",
-      "content": "By focusing on specific failure points and suggesting targeted solutions, a new automated prompt-engineering framework improves prompt performance without compromising existing functionality.",
+      "content": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.112749+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-05-19T11:05:11.112752+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c8358b351880c6b14e0347bf3eda3c5b",
-      "title": "Aderant transforms cloud operations with Amazon Quick",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/aderant-transforms-cloud-operations-with-amazon-quick/",
-      "published_date": "2026-05-18T17:26:40+00:00",
-      "category": "Industry",
-      "description": "In this post, we share how Aderant used the AI-powered capabilities of Amazon Quick to unify search across six vendor systems and automate documentation workflows, achieving 90 percent faster search times and 75 percent documentation acceleration, and how others can apply these approaches to their operations.",
-      "author": "Angela Mapes, Adam Walker",
-      "content": "In this post, we share how Aderant used the AI-powered capabilities of Amazon Quick to unify search across six vendor systems and automate documentation workflows, achieving 90 percent faster search times and 75 percent documentation acceleration, and how others can apply these approaches to their operations.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.82,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -913,21 +913,21 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-05-19T11:05:11.110104+00:00"
+        "consensus_timestamp": "2026-05-19T14:59:42.277780+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-05-19T11:05:11.110107+00:00"
+        "timestamp": "2026-05-19T14:59:42.277782+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 240.00445294380188,
+    "processing_time": 248.82533812522888,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 122,
+      "total_processed": 114,
       "candidates": {
-        "headlines": 3,
-        "articles": 119,
+        "headlines": 6,
+        "articles": 108,
         "research_papers": 0
       },
       "selected": {
