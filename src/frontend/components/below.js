@@ -73,6 +73,19 @@ export function tailSectionHTML(title, items, colIdx) {
     `;
 }
 
+// Groups the brief lists (In Other News / On The Wire / From The Desks) under a
+// single "Also In The News" heading, rendered below the lead story instead of
+// scattered across the grid columns.
+export function alsoNewsHTML(titles, pools) {
+    const lists = titles.map((t, i) => tailSectionHTML(t, pools[i], i)).join('');
+    return `
+        <section class="also-news">
+            <h3 class="briefing-title">Also In The News</h3>
+            <div class="also-news-lists">${lists}</div>
+        </section>
+    `;
+}
+
 export function marketsBoxHTML() {
     const rows = MARKETS.map(r => `
         <div class="markets-row">

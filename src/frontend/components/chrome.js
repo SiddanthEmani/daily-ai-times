@@ -67,7 +67,7 @@ export function startMastheadClock(root = document) {
     return setInterval(tick, 30000);
 }
 
-export function navHTML({ section, query }, sections, counts) {
+export function navHTML({ section }, sections, counts) {
     const buttons = sections.map(s => {
         const count = counts[s];
         const active = s === section ? ' active' : '';
@@ -81,15 +81,6 @@ export function navHTML({ section, query }, sections, counts) {
     return `
         <nav class="nav" role="tablist">
             ${buttons}
-            <div class="nav-search">
-                <span>⌕</span>
-                <input
-                    data-action="search"
-                    placeholder="Search the paper"
-                    value="${escapeHTML(query || '')}"
-                    aria-label="Search articles"
-                />
-            </div>
         </nav>
     `;
 }

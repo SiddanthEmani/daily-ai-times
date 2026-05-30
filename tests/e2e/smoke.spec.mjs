@@ -156,17 +156,6 @@ test.describe('newspaper frontend smoke', () => {
         await expect(page.locator(`.nav-btn.active[data-section="${section}"]`)).toBeVisible();
     });
 
-    test('search filters grid stories and reflects the query in the result bar', async ({ page }) => {
-        await loadPage(page);
-
-        const firstHeadline = (await page.locator('article.story .story-headline').first().textContent() || '').trim();
-        const token = firstHeadline.split(/\s+/).find(w => w.length >= 4) || 'AI';
-
-        await page.locator('[data-action="search"]').fill(token);
-        await expect(page.locator('.result-bar')).toBeVisible();
-        await expect(page.locator('.result-bar .accent').last()).toHaveText(token);
-    });
-
     test('audio player mounts with the podcast source', async ({ page }) => {
         await loadPage(page);
         const audioBox = page.locator('#audio-box');

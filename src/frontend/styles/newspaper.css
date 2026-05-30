@@ -105,15 +105,14 @@ body::before {
 }
 .masthead-motto .dot { display: inline-block; width: 4px; height: 4px; background: var(--ink); border-radius: 50%; align-self: center; }
 
-/* ---------- Section nav ---------- */
+/* ---------- Section nav (sits below the briefing list) ---------- */
 .nav {
   display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
-  padding: 10px 32px;
-  background: var(--paper);
-  border-bottom: 1px solid var(--rule-soft);
+  padding: 14px 0 2px;
+  margin-top: 14px;
+  border-top: 1px solid var(--rule-soft);
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-  overflow-x: auto;
 }
 .nav-btn {
   background: transparent;
@@ -127,45 +126,16 @@ body::before {
 .nav-btn:hover { background: var(--paper-deep); border-color: var(--ink-muted); }
 .nav-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .nav-btn .count { opacity: 0.5; margin-left: 6px; font-size: 10px; }
-.nav-search { margin-left: auto; display: flex; align-items: center; gap: 8px; padding: 0; color: var(--ink-soft); }
-.nav-search input {
-  background: transparent; border: none; border-bottom: 1px solid var(--rule-soft);
-  font: inherit; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--ink); padding: 4px 0; width: 160px; outline: none;
-}
-.nav-search input:focus { border-bottom-color: var(--ink); }
 
-/* "Also In The News" stack under the briefing */
-.also-stack { display: flex; flex-direction: column; }
-.also-item {
-  padding: 12px 0; border-bottom: 1px solid var(--rule-soft); cursor: pointer;
+/* "Also In The News" — grouped brief lists below the lead story */
+.also-news { margin-top: 22px; }
+.also-news > .briefing-title { margin-bottom: 4px; }
+.also-news-lists .tail-section {
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--rule-soft);
 }
-.also-item:last-child { border-bottom: none; }
-.also-item:hover .also-headline { color: var(--accent-ink); }
-.also-section {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--accent-ink); margin-bottom: 4px; font-weight: 600;
+.also-news-lists .tail-section:first-child {
+  margin-top: 10px; padding-top: 0; border-top: none;
 }
-.also-headline {
-  font-family: "Playfair Display", serif; font-weight: 700;
-  font-size: 16px; line-height: 1.15; margin: 0 0 6px; text-wrap: balance;
-  transition: color 0.15s;
-}
-.also-summary {
-  font-size: 12.5px; line-height: 1.42; color: var(--ink-soft);
-  text-align: justify; hyphens: auto; margin-bottom: 6px; display: none;
-}
-.also-item.expanded .also-summary { display: block; }
-.also-item.expanded .also-headline { color: var(--accent-ink); }
-.also-meta {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ink-muted); display: flex; justify-content: space-between;
-}
-
-/* "In Other News" tail list */
-.tail-section { margin-top: 18px; padding-top: 14px; border-top: 3px double var(--ink); }
 .tail-title {
   font-family: "Playfair Display", serif; font-weight: 800; font-style: italic;
   font-size: 18px; margin: 0 0 10px;
@@ -467,6 +437,10 @@ html[data-photos="off"] .lead-caption { display: none; }
   .below { grid-template-columns: 1fr; }
   .below > .col { padding: 0; border-right: none; }
   .lead-body { column-count: 1; }
+  /* Calmer separators on small screens: section borders already divide the
+     stacked above-fold, so drop the heavy double rule beneath it. */
+  .above { border-bottom: none; }
+  .above > section:last-child { border-bottom: none; }
 }
 
 /* ---------- Audio box (sticky within its column) ---------- */
