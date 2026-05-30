@@ -202,9 +202,9 @@ function buildPageMarkup() {
 
     return `
         ${tickerHTML(tickerItems)}
+        ${navHTML({ section: state.section, query: state.query }, state.sections, counts)}
         <div class="page">
             ${mastheadHTML()}
-            ${navHTML({ section: state.section, query: state.query }, state.sections, counts)}
             ${aboveBlock}
             ${resultBar}
             <div class="below">${colsHTML}</div>
