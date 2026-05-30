@@ -13,7 +13,7 @@ import {
 } from './chrome.js';
 import { briefingHTML, leadHTML, swingHTML } from './above.js';
 import {
-    storyCardHTML, tailSectionHTML,
+    storyCardHTML, alsoNewsHTML,
     marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
     getOpinionStory,
 } from './below.js';
@@ -134,42 +134,32 @@ function sectionCounts(all) {
     return counts;
 }
 
-// Stories actually rendered as grid cards — excludes briefing extras when the
-// "Also In The News" stack is showing. Used by both the renderer and keyboard
-// nav so focusIdx and card idx stay in lockstep.
+// Stories rendered as grid cards. Shared by the renderer and keyboard nav so
+// focusIdx and card idx stay in lockstep.
 function visibleGridStories() {
-    const grid = filteredGrid();
-    const showAbove = state.section === 'All' && !state.query.trim();
-    if (!showAbove) return grid;
-    const extras = state.partitioned.extras;
-    return grid.filter(s => !extras.includes(s));
+    return filteredGrid();
 }
 
 function buildPageMarkup() {
     const showAbove = state.section === 'All' && !state.query.trim();
     const grid = filteredGrid();
-    const briefingExtras = showAbove ? state.partitioned.extras : [];
     const gridStories = visibleGridStories();
 
     const cols = [[], [], [], []];
     gridStories.forEach((s, i) => cols[i % 4].push({ kind: 'story', story: s, idx: i }));
 
+    cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
     if (showAbove) {
-        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
         cols[3].splice(2, 0, { kind: 'raw', html: marketsBoxHTML() });
         cols[3].splice(4, 0, { kind: 'raw', html: weatherBoxHTML() });
         cols[3].push({ kind: 'raw', html: opinionBoxHTML() });
         const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
         if (savedHTML) cols[0].push({ kind: 'raw', html: savedHTML });
-        TAIL_POOLS.forEach((items, ci) => {
-            cols[ci].push({ kind: 'raw', html: tailSectionHTML(TAIL_TITLES[ci], items, ci) });
-        });
-    } else {
-        cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
     }
 
     const counts = sectionCounts(state.partitioned.all);
     const tickerItems = tickerFromStories(state.partitioned.all, 5);
+    const navMarkup = navHTML({ section: state.section }, state.sections, counts);
 
     const colsHTML = cols.map(col => {
         const inner = col.map(item => item.kind === 'story'
@@ -192,9 +182,12 @@ function buildPageMarkup() {
 
     const aboveBlock = showAbove ? `
         <div class="above">
-            ${briefingHTML(state.partitioned.briefing, briefingExtras)}
+            ${briefingHTML(state.partitioned.briefing, navMarkup)}
             <div class="vrule"></div>
-            ${leadHTML(state.partitioned.lead)}
+            <section class="lead-col">
+                ${leadHTML(state.partitioned.lead)}
+                ${alsoNewsHTML(TAIL_TITLES, TAIL_POOLS)}
+            </section>
             <div class="vrule"></div>
             ${swingHTML(state.partitioned.swing)}
         </div>
@@ -202,10 +195,10 @@ function buildPageMarkup() {
 
     return `
         ${tickerHTML(tickerItems)}
-        ${navHTML({ section: state.section, query: state.query }, state.sections, counts)}
         <div class="page">
             ${mastheadHTML()}
             ${aboveBlock}
+            ${showAbove ? '' : navMarkup}
             ${resultBar}
             <div class="below">${colsHTML}</div>
             <footer class="footer">
@@ -224,14 +217,6 @@ function render() {
     wireTickerPause(root);
     mountAudioBox();
     if (state.mastheadClock == null) state.mastheadClock = startMastheadClock(root);
-    if (state.query) {
-        const input = root.querySelector('.nav-search input');
-        if (input && document.activeElement !== input) {
-            input.focus();
-            const len = input.value.length;
-            input.setSelectionRange(len, len);
-        }
-    }
 }
 
 // The audio-box DOM is created once and kept alive across renders so the
@@ -291,10 +276,10 @@ function installEventDelegation() {
             return;
         }
 
-        // Story cards and "Also In The News" items use a two-step interaction:
-        // first click expands the hidden description; second click opens the URL.
-        // We only enter this path when the click has no nearer [data-action]
-        // ancestor, so media-thumbs and other direct-open elements still work.
+        // Story cards use a two-step interaction: first click expands the hidden
+        // description; second click opens the URL. We only enter this path when the
+        // click has no nearer [data-action] ancestor, so media-thumbs and other
+        // direct-open elements still work.
         if (!actionEl) {
             const storyEl = e.target.closest?.('.story[data-story-id]');
             if (storyEl) {
@@ -302,17 +287,6 @@ function installEventDelegation() {
                     storyEl.classList.add('expanded');
                 } else {
                     const story = findStory(storyEl.dataset.storyId);
-                    if (story) openStory(story);
-                }
-                return;
-            }
-
-            const alsoEl = e.target.closest?.('.also-item[data-story-id]');
-            if (alsoEl) {
-                if (!alsoEl.classList.contains('expanded')) {
-                    alsoEl.classList.add('expanded');
-                } else {
-                    const story = findStory(alsoEl.dataset.storyId);
                     if (story) openStory(story);
                 }
                 return;
@@ -355,20 +329,6 @@ function installEventDelegation() {
         }
         // open-tail: tail briefs have no source URL, nothing to open.
     });
-
-    root.addEventListener('input', (e) => {
-        if (e.target.matches?.('[data-action="search"]')) {
-            state.query = e.target.value;
-            state.focusIdx = -1;
-            scheduleRender();
-        }
-    });
-}
-
-let renderTimer = null;
-function scheduleRender() {
-    if (renderTimer) clearTimeout(renderTimer);
-    renderTimer = setTimeout(() => { renderTimer = null; render(); }, 120);
 }
 
 function findStory(id) {

@@ -2,7 +2,9 @@
 import { escapeHTML } from '../utils/utils.js';
 import { paperImageSVG } from './chrome.js';
 
-export function briefingHTML(briefing, extras) {
+// The category nav lives here (passed in as navMarkup) so it renders directly
+// below the briefing list rather than as a full-width bar at the top of the page.
+export function briefingHTML(briefing, navMarkup = '') {
     const items = (briefing || []).map((s, i) => `
         <li data-action="open" data-story-id="${escapeHTML(s.id)}">
             <span class="briefing-num">${String(i + 1).padStart(2, '0')}</span>
@@ -13,26 +15,11 @@ export function briefingHTML(briefing, extras) {
         </li>
     `).join('');
 
-    const extraCards = (extras || []).map(s => `
-        <article class="also-item" data-story-id="${escapeHTML(s.id)}">
-            <div class="also-section">${escapeHTML(s.section)}</div>
-            <h4 class="also-headline">${escapeHTML(s.headline)}</h4>
-            <div class="also-summary">${escapeHTML(s.deck)}</div>
-            <div class="also-meta">
-                <span>${escapeHTML(s.byline)}</span>
-                <span>${escapeHTML(s.time)}</span>
-            </div>
-        </article>
-    `).join('');
-
     return `
         <section>
             <h3 class="briefing-title">This Morning's Briefing</h3>
             <ol class="briefing-list">${items}</ol>
-            ${extraCards ? `
-                <h3 class="briefing-title" style="margin-top:28px">Also In The News</h3>
-                <div class="also-stack">${extraCards}</div>
-            ` : ''}
+            ${navMarkup}
         </section>
     `;
 }
