@@ -105,6 +105,18 @@ jobs:
         pip install --cache-dir ~/.cache/pip \
           -r src/backend/requirements.txt
     
+    - name: 📈 Refresh reader-engagement weights
+      env:
+        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      run: |
+        echo "📈 Aggregating anonymous engagement into preference weights..."
+        # Pulls a rolling window from Workers Analytics Engine and writes
+        # engagement_weights.json. No-op (keeps existing file) when CF secrets
+        # are unset or there are no events, so the pipeline never breaks on it.
+        python3 src/backend/processors/engagement_aggregator.py || \
+          echo "⚠️ Engagement aggregation skipped (loop stays neutral)"
+
     - name: 🚀 Run AI News Processing Orchestrator
       id: process
       env:
@@ -162,8 +174,9 @@ jobs:
         rm -rf test_output/groq_* logs/ || true
         echo "🔒 Removed private usage reports from commit (available in artifacts)"
         
-        # Add API files, processed data, and generated audio
-        git add src/backend/api/ src/frontend/api/ src/frontend/assets/audio/
+        # Add API files, processed data, generated audio, and refreshed
+        # engagement weights so the preference loop persists across runs.
+        git add src/backend/api/ src/frontend/api/ src/frontend/assets/audio/ src/shared/config/engagement_weights.json
         
         if git diff --staged --quiet; then
           echo "ℹ️ No new content changes to commit"

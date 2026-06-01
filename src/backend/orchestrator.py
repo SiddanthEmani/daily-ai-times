@@ -28,6 +28,7 @@ from src.backend.processors.bulk_agent import BulkFilteringAgent
 from src.backend.processors.consensus_engine import ConsensusEngine
 from src.backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
 from src.backend.processors.final_consensus_engine import FinalConsensusEngine
+from src.backend.processors import engagement
 from src.backend.collectors.collectors import NewsCollector
 from src.shared.config.config_loader import ConfigLoader, get_swarm_config
 from src.shared.utils.logging_config import log_warning, log_error, log_step
@@ -174,6 +175,25 @@ class NewsProcessingPipeline:
         
         app_collection_config = self.app_config.get('collection', {})
         self.default_max_articles = app_collection_config.get('max_articles_to_collect', 100)
+
+        # Reader-engagement feedback (cookieless, aggregates-only). Neutral when
+        # the weights file is empty/missing, so this is cold-start safe and can
+        # be disabled instantly via ENGAGEMENT_LOOP_ENABLED=0.
+        self.engagement_enabled = engagement.is_enabled()
+        self.engagement_weights = engagement.load_weights()
+        if self.engagement_enabled:
+            buckets = sum(len(self.engagement_weights.get(k, {}))
+                          for k in ('categories', 'sources', 'topics', 'archetypes'))
+            logger.info(f"Engagement loop enabled (generated_at="
+                        f"{self.engagement_weights.get('generated_at')}, {buckets} weighted buckets)")
+        else:
+            logger.info("Engagement loop disabled via ENGAGEMENT_LOOP_ENABLED")
+
+    def _engagement_multiplier(self, article: Dict[str, Any]) -> float:
+        """Bounded reader-preference multiplier for ranking; 1.0 when disabled."""
+        if not getattr(self, 'engagement_enabled', False):
+            return 1.0
+        return engagement.engagement_multiplier(article, self.engagement_weights)
     
     def _initialize_agents(self):
         """Initialize all bulk filtering and deep intelligence agents."""
@@ -996,11 +1016,16 @@ class NewsProcessingPipeline:
         consensus_score = consensus.get('overall_score', 0.5)
         quality_score = consensus.get('quality_score', 0.5)
         relevance_score = consensus.get('relevance_score', 0.5)
-        
-        return (consensus_score * 0.4 + 
-                deep_intel * 0.3 + 
-                quality_score * 0.2 + 
-                relevance_score * 0.1)
+
+        editorial = (consensus_score * 0.4 +
+                     deep_intel * 0.3 +
+                     quality_score * 0.2 +
+                     relevance_score * 0.1)
+
+        # Reader engagement only re-orders already-quality-scored articles; the
+        # multiplier is bounded so it can nudge but never dominate the editorial
+        # signal, and quality gates upstream remain engagement-blind.
+        return editorial * self._engagement_multiplier(article)
 
     def _classify_articles(self, articles: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
         """
@@ -1085,6 +1110,35 @@ class NewsProcessingPipeline:
         sorted_articles = sorted(articles, key=get_article_score, reverse=True)
         return sorted_articles[:count]
 
+    def _select_with_exploration(self, articles: List[Dict[str, Any]], count: int) -> List[Dict[str, Any]]:
+        """Select `count` articles, reserving an exploration fraction for raw
+        novelty so the engagement loop can't collapse into a filter bubble.
+
+        ~(1-epsilon) of the slots go to the top engagement-adjusted articles;
+        the remaining ~epsilon go to the highest raw novelty_score among what's
+        left. Falls back to plain selection when the loop is disabled or there's
+        nothing to explore.
+        """
+        if not articles:
+            return []
+        epsilon = engagement.exploration_epsilon(self.engagement_weights) if getattr(self, 'engagement_enabled', False) else 0.0
+        explore_n = int(round(count * epsilon))
+        if explore_n <= 0 or len(articles) <= count:
+            return self._select_best_articles(articles, count)
+
+        exploit_n = count - explore_n
+        exploited = self._select_best_articles(articles, exploit_n)
+        chosen_ids = {id(a) for a in exploited}
+
+        def novelty(a):
+            return a.get('consensus_multi_dimensional_score', {}).get('novelty_score', 0.0)
+
+        remaining = [a for a in articles if id(a) not in chosen_ids]
+        explored = sorted(remaining, key=novelty, reverse=True)[:explore_n]
+        logger.info(f"Exploration: {exploit_n} by engagement-adjusted score + "
+                    f"{len(explored)} by raw novelty (epsilon={epsilon:.2f})")
+        return exploited + explored
+
     def classify_and_allocate_content(self, final_articles: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
         Post-process final articles into structured content types.
@@ -1093,9 +1147,11 @@ class NewsProcessingPipeline:
         # Step 1: Classify articles by type
         headlines, regular_articles, research_papers = self._classify_articles(final_articles)
         
-        # Step 2: Select best of each type
+        # Step 2: Select best of each type. The large articles bucket reserves an
+        # exploration fraction for novelty (serendipity); the single headline and
+        # the research set stay purely on merit.
         selected_headline = self._select_best_articles(headlines, 1)
-        selected_articles = self._select_best_articles(regular_articles, 14)
+        selected_articles = self._select_with_exploration(regular_articles, 14)
         selected_research = self._select_best_articles(research_papers, 10)
         
         # Phase 4: Enhanced logging with quality metrics

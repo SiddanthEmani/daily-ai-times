@@ -1,0 +1,13 @@
+name = "dat-collector"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Workers Analytics Engine dataset that receives anonymous engagement events.
+# The aggregator reads this dataset back via the Cloudflare GraphQL Analytics API.
+[[analytics_engine_datasets]]
+binding = "AE"
+dataset = "dat_events"
+
+[vars]
+# Restrict CORS to the site origin in production. Leave as "*" for local dev.
+ALLOWED_ORIGIN = "https://siddanthemani.github.io"
