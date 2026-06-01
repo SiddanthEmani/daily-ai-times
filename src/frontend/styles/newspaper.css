@@ -22,6 +22,20 @@
 html[data-tone="white"] { --paper: #faf7f0; --paper-deep: #f0ebe0; }
 html[data-tone="sepia"] { --paper: #ece0c8; --paper-deep: #e0d2b5; --ink: #2a200f; --rule: #3a2e19; }
 
+/* AMOLED black dark theme — re-points the variable palette to pure black.
+   data-theme is set on <html> by the inline boot script + the masthead toggle. */
+html[data-theme="dark"] {
+  --paper: #000000;        /* AMOLED true black */
+  --paper-deep: #0d0d0d;   /* slightly raised cards/boxes */
+  --ink: #f2ece0;          /* warm near-white text (inverts the cream ink) */
+  --ink-soft: #c9c3b6;
+  --ink-muted: #8c8576;
+  --rule: #e6e0d4;         /* bright newspaper rules read well on black */
+  --rule-soft: rgba(242, 236, 224, 0.16);
+  --accent: oklch(0.66 0.18 25);      /* brighter burnt-orange for contrast */
+  --accent-ink: oklch(0.75 0.17 25);  /* hover = lighter in dark mode */
+}
+
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
@@ -46,6 +60,14 @@ body::before {
   background-position: 0 0, 1px 2px;
   mix-blend-mode: multiply;
   z-index: 1;
+}
+/* On black, a multiply grain of dark dots vanishes — invert to a faint light
+   grain via screen blend so the texture survives in dark mode. */
+html[data-theme="dark"] body::before {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.014) 1px, transparent 1px);
+  mix-blend-mode: screen;
 }
 
 .page { max-width: 1240px; margin: 0 auto; padding: 18px 32px 80px; position: relative; z-index: 2; }
@@ -80,6 +102,23 @@ body::before {
 .masthead-topbar .center { text-align: center; }
 .mast-meta-line { display: flex; gap: 10px; align-items: center; }
 .mast-meta-line span + span::before { content: "·"; margin-right: 10px; color: var(--ink-muted); }
+
+/* Sun/moon dark-mode toggle, pinned to the right masthead cell. */
+.masthead-topbar .right { gap: 12px; }
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; flex: 0 0 auto;
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--rule-soft); border-radius: 50%;
+  cursor: pointer; padding: 0;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.theme-toggle:hover { background: var(--paper-deep); border-color: var(--ink-muted); }
+.theme-toggle svg { width: 16px; height: 16px; display: block; }
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .masthead-title {
   font-family: "Playfair Display", "Old Standard TT", serif;
@@ -368,6 +407,7 @@ body::before {
 .markets-row .t { font-weight: 700; }
 .markets-row .ch.up { color: #1f5a1f; }
 .markets-row .ch.down { color: var(--accent-ink); }
+html[data-theme="dark"] .markets-row .ch.up { color: #5cc46c; }
 
 .weather-row { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; padding: 6px 0; border-bottom: 1px dotted var(--rule-soft); font-size: 12px; }
 .weather-row:last-child { border-bottom: none; }
