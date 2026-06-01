@@ -46,6 +46,8 @@ run_scenario() {
         # remove-block path — mirror `sed -i '/<!-- __GOOGLE_ANALYTICS__ -->/,/<!-- __GOOGLE_ANALYTICS__ -->/d'`
         sed_delete_block '<!-- __GOOGLE_ANALYTICS__ -->' "$site/index.html"
     fi
+    # Mirror the collector-URL injection (blank when the secret is unset).
+    perl -i -pe "s|__COLLECTOR_URL__||g" "$site/index.html"
     echo "$site"
 }
 
@@ -61,6 +63,11 @@ if grep -q '__GOOGLE_ANALYTICS__' "$SITE_INJECT/index.html"; then
     fail "__GOOGLE_ANALYTICS__ placeholder still present after injection"
 else
     okmsg "no __GOOGLE_ANALYTICS__ placeholders remain"
+fi
+if grep -q '__COLLECTOR_URL__' "$SITE_INJECT/index.html"; then
+    fail "__COLLECTOR_URL__ placeholder still present after injection"
+else
+    okmsg "no __COLLECTOR_URL__ placeholders remain"
 fi
 
 echo "== scenario: GA removed =="

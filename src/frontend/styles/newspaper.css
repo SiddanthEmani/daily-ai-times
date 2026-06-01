@@ -479,3 +479,108 @@ html[data-photos="off"] .lead-caption { display: none; }
 }
 .result-bar strong { color: var(--ink); }
 .result-bar strong.accent { color: var(--accent); }
+
+/* ---------- Reading-time chip, reactions, scroll progress ---------- */
+.read-chip {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border: 1px solid var(--rule-soft);
+  border-radius: 3px;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+.story-section .read-chip { margin-left: auto; }
+
+.react-group { display: inline-flex; gap: 4px; align-items: center; }
+.react-btn {
+  border: 1px solid var(--rule-soft);
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 5px;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.react-btn:hover { opacity: 1; }
+.react-btn.active {
+  opacity: 1;
+  border-color: var(--accent);
+  background: color-mix(in oklch, var(--accent) 14%, transparent);
+}
+
+#read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 2000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ---------- "Today in 10 minutes" digest ---------- */
+.digest { padding: 18px 0 30px; }
+.digest-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+}
+.digest-intro {
+  font-family: "Source Serif 4", Georgia, serif;
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 10px 0 16px;
+  max-width: 60ch;
+}
+.digest-list { list-style: none; margin: 0; padding: 0; }
+.digest-item {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.digest-num {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent);
+  min-width: 34px;
+  text-align: right;
+}
+.digest-body { flex: 1; }
+.digest-headline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 6px;
+  cursor: pointer;
+}
+.digest-headline:hover { color: var(--accent-ink); }
+.digest-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.digest-tag { color: var(--accent); font-weight: 700; }
+@media (max-width: 640px) {
+  .digest-num { font-size: 22px; min-width: 26px; }
+  .digest-headline { font-size: 17px; }
+}

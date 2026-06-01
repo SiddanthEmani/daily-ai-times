@@ -29,23 +29,49 @@ function pickScore(raw) {
         ?? 0;
 }
 
+// Estimated minutes to read at ~200 wpm, from the text we actually show
+// (headline + deck + body). Floored at 1 so every card carries a budget.
+function readingMinutes(headline, deck, bodyParas) {
+    const text = [headline, deck, ...bodyParas].filter(Boolean).join(' ');
+    const words = text.split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words / 200));
+}
+
 export function normalize(raw, idx = 0) {
     const section = raw.category || 'News';
+    const deck = raw.description || '';
+    const body = bodyFromRaw(raw);
     return {
         id: raw.article_id ?? `article-${idx}`,
         section,
         kicker: section.toUpperCase(),
         headline: raw.title || 'Untitled',
-        deck: raw.description || '',
+        deck,
         byline: raw.author ? `By ${raw.author.toUpperCase()}` : 'By STAFF',
-        body: bodyFromRaw(raw),
+        body,
         time: relativeTime(raw.published_date),
         type: 'text',
         url: raw.url || '',
         source: raw.source || '',
         publishedAt: raw.published_date || null,
         score: pickScore(raw),
+        readMinutes: readingMinutes(raw.title || '', deck, body),
     };
+}
+
+// Pick the top stories whose cumulative reading time fits a budget (minutes).
+// Always returns at least one story so the digest is never empty.
+export function digestStories(rankedAll, budgetMin = 10) {
+    const out = [];
+    let total = 0;
+    for (const s of rankedAll) {
+        const m = s.readMinutes || 1;
+        if (out.length && total + m > budgetMin) continue;
+        out.push(s);
+        total += m;
+        if (total >= budgetMin) break;
+    }
+    return out.length ? out : rankedAll.slice(0, 1);
 }
 
 // Sort in place by score desc, then publishedAt desc as tiebreaker.

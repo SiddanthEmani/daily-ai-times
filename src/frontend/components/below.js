@@ -24,7 +24,23 @@ const OPINION = [
     { id: 'o3', title: 'Why I Stopped Trusting Model Cards', author: 'Priya Ramachandran', excerpt: 'The disclosure document we adopted in 2019 is no longer serving anyone.' },
 ];
 
-export function storyCardHTML(story, idx, { saved = false, focused = false } = {}) {
+// One-tap, anonymous 👍/👎 controls. The active tap is highlighted from the
+// locally-persisted reaction; the aggregate signal is sent via Analytics.
+export function reactionButtonsHTML(story, reaction = null) {
+    const id = escapeHTML(story.id);
+    return `
+        <span class="react-group" role="group" aria-label="React to this story">
+            <button class="react-btn${reaction === 'up' ? ' active' : ''}"
+                data-action="react" data-story-id="${id}" data-react="up"
+                title="More like this" aria-pressed="${reaction === 'up'}">👍</button>
+            <button class="react-btn${reaction === 'down' ? ' active' : ''}"
+                data-action="react" data-story-id="${id}" data-react="down"
+                title="Less like this" aria-pressed="${reaction === 'down'}">👎</button>
+        </span>
+    `;
+}
+
+export function storyCardHTML(story, idx, { saved = false, focused = false, reaction = null } = {}) {
     const hasMedia = story.type === 'video' || story.type === 'photo';
     const media = hasMedia ? `
         <div class="media-thumb" data-action="open" data-story-id="${escapeHTML(story.id)}">
@@ -32,12 +48,15 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
         </div>
     ` : '';
     const focusStyle = focused ? ' style="outline:2px solid var(--accent);outline-offset:4px"' : '';
+    const readChip = story.readMinutes
+        ? `<span class="read-chip" title="Estimated reading time">${story.readMinutes} min</span>` : '';
     return `
         <article class="story" data-story-id="${escapeHTML(story.id)}"${focusStyle}>
             <div class="story-section">
                 <span>${escapeHTML(story.section)}</span>
                 <span class="sep"></span>
                 <span style="color:var(--ink-soft)">${escapeHTML(story.source || '')}</span>
+                ${readChip}
             </div>
             ${media}
             <h3 class="story-headline">${escapeHTML(story.headline)}</h3>
@@ -46,6 +65,7 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
                 <span class="byline">${escapeHTML(story.byline)}</span>
                 <span style="display:flex;gap:10px;align-items:center">
                     <span>${escapeHTML(story.time)}</span>
+                    ${reactionButtonsHTML(story, reaction)}
                     <button
                         class="save-btn${saved ? ' saved' : ''}"
                         data-action="save"
@@ -55,6 +75,36 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
                 </span>
             </div>
         </article>
+    `;
+}
+
+// Compact, numbered "Today in 10 minutes" list. Reuses briefing/box styling so
+// it matches the newspaper aesthetic. Each row is openable and reactable.
+export function digestHTML(stories, reactions = {}, budgetMin = 10) {
+    const total = stories.reduce((n, s) => n + (s.readMinutes || 1), 0);
+    const rows = stories.map((s, i) => `
+        <li class="digest-item">
+            <span class="digest-num">${i + 1}</span>
+            <div class="digest-body">
+                <h4 class="digest-headline" data-action="open" data-story-id="${escapeHTML(s.id)}">${escapeHTML(s.headline)}</h4>
+                <div class="digest-meta">
+                    <span class="digest-tag">${escapeHTML(s.section)}</span>
+                    <span>${escapeHTML(s.source || '')}</span>
+                    <span class="read-chip">${s.readMinutes || 1} min</span>
+                    ${reactionButtonsHTML(s, reactions[s.id] || null)}
+                </div>
+            </div>
+        </li>
+    `).join('');
+    return `
+        <section class="digest">
+            <div class="digest-header">
+                <h2 class="briefing-title">Today in 10 Minutes</h2>
+                <span class="chip">${total} MIN READ · ${stories.length} STORIES</span>
+            </div>
+            <p class="digest-intro">The fastest way to catch up on AI today — the top stories, in order, sized to a ten-minute break.</p>
+            <ol class="digest-list">${rows}</ol>
+        </section>
     `;
 }
 

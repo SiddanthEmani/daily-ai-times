@@ -266,8 +266,24 @@ jobs:
             sed -i '/<!-- __GOOGLE_ANALYTICS__ -->/,/<!-- __GOOGLE_ANALYTICS__ -->/d' site/index.html
             echo "🧹 Google Analytics block removed (no secret configured)"
           fi
+
+          # First-party anonymous event collector (Cloudflare Worker). When the
+          # secret is unset the placeholder is blanked so the frontend simply
+          # skips network sends (capture stays inert, no errors).
+          if [ -n "${{ secrets.COLLECTOR_URL }}" ]; then
+            echo "📈 Configuring anonymous event collector endpoint"
+            sed -i "s|__COLLECTOR_URL__|${{ secrets.COLLECTOR_URL }}|g" site/index.html
+          else
+            echo "ℹ️ COLLECTOR_URL secret not set - first-party analytics disabled"
+            sed -i "s|__COLLECTOR_URL__||g" site/index.html
+          fi
         fi
-        
+
+        # Generate syndication artifacts (RSS/podcast feed, sitemap, robots)
+        # from the freshly integrated API content.
+        echo "🛰️ Generating feed.xml / sitemap.xml / robots.txt..."
+        python3 src/backend/api/generate_feed.py site || echo "⚠️ feed generation skipped"
+
         echo "✅ Deployment site prepared"
 
     - name: 🔍 Validate deployment

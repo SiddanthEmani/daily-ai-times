@@ -221,15 +221,72 @@ export class LazyLoader {
     }
 }
 
+// Collector endpoint for first-party anonymous events. Set on `window` by
+// index.html, where the build replaces the __COLLECTOR_URL__ placeholder at
+// deploy time (mirrors the __GOOGLE_ANALYTICS__ injection). When unset or left
+// as the placeholder we skip network sends and only mirror to GA/console.
+const COLLECTOR_URL = (typeof window !== 'undefined' && window.DAT_COLLECTOR_URL) || '';
+const CID_KEY = 'dat_cid';
+const OPTOUT_KEY = 'dat_optout';
+
+// Cookieless, no-login identity: a random UUID kept in localStorage. Not PII and
+// never combined with cross-site identifiers — used only to derive aggregate,
+// k-anonymized preference signals. Mirrors the dat_saved / dat_app_version keys.
+export function getClientId() {
+    try {
+        let cid = localStorage.getItem(CID_KEY);
+        if (!cid) {
+            cid = (typeof crypto !== 'undefined' && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+            localStorage.setItem(CID_KEY, cid);
+        }
+        return cid;
+    } catch {
+        return 'anon';
+    }
+}
+
+// Respect Do-Not-Track and an explicit local opt-out flag. When either is set we
+// capture nothing — no client id read, no network send.
+export function isTrackingAllowed() {
+    try {
+        const dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+        if (dnt === '1' || dnt === 'yes') return false;
+        if (localStorage.getItem(OPTOUT_KEY) === '1') return false;
+    } catch { /* localStorage/navigator may be unavailable */ }
+    return true;
+}
+
 // Enhanced Analytics with better error handling and batching
 export class Analytics {
     static eventQueue = [];
     static batchTimeout = null;
     static isInitialized = false;
+    static enabled = false;
+    static clientId = null;
+    static sessionId = null;
 
     static init() {
+        if (this.isInitialized) return;
         this.isInitialized = true;
-        
+        this.enabled = isTrackingAllowed();
+        if (this.enabled) {
+            this.clientId = getClientId();
+            // Per-load session id, in-memory only (never persisted).
+            this.sessionId = (typeof crypto !== 'undefined' && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : `s-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        }
+
+        // Flush any buffered events when the page is hidden or unloaded so we
+        // don't lose the tail of a session (esp. dwell on the final article).
+        const flushOnExit = () => this.flushEvents();
+        window.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') flushOnExit();
+        });
+        window.addEventListener('pagehide', flushOnExit);
+
         // Track page performance
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -260,10 +317,15 @@ export class Analytics {
             this.init();
         }
 
+        // Honor opt-out / DNT: do not capture or send anything.
+        if (!this.enabled) return;
+
         const event = {
             name: eventName,
             properties: {
                 ...properties,
+                cid: this.clientId,
+                sid: this.sessionId,
                 timestamp: Date.now(),
                 url: window.location.href,
                 userAgent: navigator.userAgent.substring(0, 100) // Truncate for privacy
@@ -297,17 +359,51 @@ export class Analytics {
     }
 
     static flushEvents() {
+        if (this.batchTimeout) {
+            clearTimeout(this.batchTimeout);
+            this.batchTimeout = null;
+        }
         if (this.eventQueue.length === 0) return;
 
-        // Here you would send batched events to your analytics service
-        // Only log in development mode to reduce console noise in production
-        if (window.location.hostname === 'localhost' || window.location.hostname.includes('127.0.0.1')) {
-            console.log('📊 Flushing analytics events:', this.eventQueue.length);
-        }
-        
-        // Clear the queue
+        const batch = this.eventQueue;
         this.eventQueue = [];
-        this.batchTimeout = null;
+
+        const isLocal = window.location.hostname === 'localhost'
+            || window.location.hostname.includes('127.0.0.1');
+        if (isLocal) {
+            console.log('📊 Flushing analytics events:', batch.length, batch);
+        }
+
+        // Ship the batch to the first-party collector (Cloudflare Worker). The
+        // URL placeholder is replaced at deploy time; if it was never replaced we
+        // skip the network send (GA mirroring in trackEvent still happens).
+        const configured = COLLECTOR_URL && !COLLECTOR_URL.includes('__COLLECTOR_URL__');
+        if (!this.enabled || !configured) return;
+
+        try {
+            const payload = JSON.stringify({
+                v: 1,
+                cid: this.clientId,
+                sid: this.sessionId,
+                events: batch,
+            });
+            // sendBeacon survives page unload; fall back to keepalive fetch.
+            if (navigator.sendBeacon) {
+                const blob = new Blob([payload], { type: 'application/json' });
+                const ok = navigator.sendBeacon(COLLECTOR_URL, blob);
+                if (!ok) throw new Error('sendBeacon rejected payload');
+            } else {
+                fetch(COLLECTOR_URL, {
+                    method: 'POST',
+                    body: payload,
+                    headers: { 'Content-Type': 'application/json' },
+                    keepalive: true,
+                    mode: 'cors',
+                }).catch(() => { /* best-effort */ });
+            }
+        } catch (e) {
+            if (isLocal) console.warn('Analytics flush failed:', e.message);
+        }
     }
 
     static trackPageView(page) {
@@ -348,5 +444,57 @@ export class Analytics {
             stack: error.stack?.substring(0, 500), // Truncate stack trace
             context: JSON.stringify(context).substring(0, 200)
         });
+    }
+
+    // --- Preference signal helpers --------------------------------------
+    // All take a minimal, anonymous "story view" {id, section, source, rank}.
+    // They never carry the article URL or any reader identity beyond cid/sid.
+
+    static trackImpression(view) {
+        this.trackEvent('impression', this._storyProps(view));
+    }
+
+    static trackCardExpand(view) {
+        this.trackEvent('card_expand', this._storyProps(view));
+    }
+
+    static trackCategoryNav(section) {
+        this.trackEvent('category_nav', { section });
+    }
+
+    static trackReaction(view, value) {
+        // value: 'up' | 'down' | 'clear'
+        this.trackEvent('reaction', { ...this._storyProps(view), value });
+    }
+
+    static trackShare(view, channel) {
+        this.trackEvent('share', { ...this._storyProps(view), channel });
+    }
+
+    static trackMoreLikeThis(view) {
+        this.trackEvent('more_like_this', this._storyProps(view));
+    }
+
+    static trackScrollDepth(percent) {
+        this.trackEvent('scroll_depth', { percent });
+    }
+
+    static trackDwell(view, ms) {
+        this.trackEvent('dwell', { ...this._storyProps(view), ms: Math.round(ms) });
+    }
+
+    static trackAudio(eventName, props = {}) {
+        // eventName: 'audio_play' | 'audio_complete'
+        this.trackEvent(eventName, props);
+    }
+
+    static _storyProps(view = {}) {
+        return {
+            id: view.id,
+            section: view.section,
+            source: view.source,
+            rank: view.rank,
+            archetype: view.archetype,
+        };
     }
 }

@@ -38,7 +38,16 @@ jobs:
           else
             sed -i '/<!-- __GOOGLE_ANALYTICS__ -->/,/<!-- __GOOGLE_ANALYTICS__ -->/d' site/index.html
           fi
+
+          if [ -n "${{ secrets.COLLECTOR_URL }}" ]; then
+            sed -i "s|__COLLECTOR_URL__|${{ secrets.COLLECTOR_URL }}|g" site/index.html
+          else
+            sed -i "s|__COLLECTOR_URL__||g" site/index.html
+          fi
         fi
+
+        # Refresh syndication artifacts from whatever API content is committed.
+        python3 src/backend/api/generate_feed.py site || echo "feed generation skipped"
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3

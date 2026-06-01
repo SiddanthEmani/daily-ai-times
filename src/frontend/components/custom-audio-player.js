@@ -1,3 +1,5 @@
+import { Analytics } from '../utils/performance.js';
+
 export class CustomAudioPlayer {
     constructor(src, container) {
         this.src = src;
@@ -337,6 +339,8 @@ export class CustomAudioPlayer {
         this.audio.addEventListener('ended', () => {
             this.isPlaying = false;
             this.elements.playBtn.textContent = '▶';
+            try { Analytics?.trackAudio?.('audio_complete', { duration: Math.round(this.duration || 0) }); }
+            catch { /* best-effort */ }
         });
         
         this.audio.addEventListener('error', () => {
@@ -434,6 +438,8 @@ export class CustomAudioPlayer {
             }
             this.audio.play();
             this.elements.playBtn.textContent = '■';
+            try { Analytics?.trackAudio?.('audio_play', { at: Math.round(this.currentTime || 0) }); }
+            catch { /* best-effort */ }
         }
         this.isPlaying = !this.isPlaying;
     }

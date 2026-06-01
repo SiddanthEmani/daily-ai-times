@@ -6,30 +6,51 @@ import { escapeHTML } from '../utils/utils.js';
 import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
 import { CustomAudioPlayer } from './custom-audio-player.js';
 import {
-    normalize, partition, tickerFromStories, sectionsFromStories,
+    normalize, partition, tickerFromStories, sectionsFromStories, digestStories,
 } from './article-mapper.js';
 import {
     tickerHTML, mastheadHTML, startMastheadClock, navHTML, wireTickerPause,
 } from './chrome.js';
 import { briefingHTML, leadHTML, swingHTML } from './above.js';
 import {
-    storyCardHTML, alsoNewsHTML,
+    storyCardHTML, alsoNewsHTML, digestHTML,
     marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
     getOpinionStory,
 } from './below.js';
 
 const APP_VERSION = '2026.4.0';
 const SAVED_KEY = 'dat_saved';
+const REACT_KEY = 'dat_reactions';
+// Pseudo-section used for the "Today in 10 minutes" digest view.
+const DIGEST_SECTION = '10 Minutes';
+const DIGEST_BUDGET_MIN = 10;
 
 const state = {
     section: 'All',
     query: '',
     savedIds: loadSavedIds(),
+    reactions: loadReactions(),
     focusIdx: -1,
     partitioned: null,
     sections: ['All'],
     mastheadClock: null,
 };
+
+// Records when a card was expanded so openStory can emit a "dwell" (consideration
+// time) signal. In-memory only; resets each load.
+const expandedAt = new Map();
+
+// Minimal anonymous view descriptor attached to preference events. Carries no
+// URL and no reader identity beyond the cid/sid added inside Analytics.
+function viewOf(story, rank) {
+    return {
+        id: story.id,
+        section: story.section,
+        source: story.source || '',
+        rank,
+        archetype: story.section === 'Research' ? 'research' : 'article',
+    };
+}
 
 const TAIL_POOLS = [
     [
@@ -62,6 +83,23 @@ function loadSavedIds() {
 }
 function persistSavedIds() {
     localStorage.setItem(SAVED_KEY, JSON.stringify([...state.savedIds]));
+}
+
+// Reactions: { [storyId]: 'up' | 'down' }. Persisted like saved ids so the UI
+// reflects prior taps; the aggregate signal is sent separately via Analytics.
+function loadReactions() {
+    try { return JSON.parse(localStorage.getItem(REACT_KEY) || '{}'); }
+    catch { return {}; }
+}
+function persistReactions() {
+    localStorage.setItem(REACT_KEY, JSON.stringify(state.reactions));
+}
+function toggleReaction(id, value) {
+    const current = state.reactions[id];
+    if (current === value) { delete state.reactions[id]; persistReactions(); return 'clear'; }
+    state.reactions[id] = value;
+    persistReactions();
+    return value;
 }
 
 function checkVersionAndRefresh() {
@@ -140,7 +178,27 @@ function visibleGridStories() {
     return filteredGrid();
 }
 
+function buildDigestMarkup() {
+    const counts = sectionCounts(state.partitioned.all);
+    const navMarkup = navHTML({ section: state.section }, state.sections, counts);
+    const stories = digestStories(state.partitioned.all, DIGEST_BUDGET_MIN);
+    const tickerItems = tickerFromStories(state.partitioned.all, 5);
+    return `
+        ${tickerHTML(tickerItems)}
+        <div class="page">
+            ${mastheadHTML()}
+            ${navMarkup}
+            ${digestHTML(stories, state.reactions, DIGEST_BUDGET_MIN)}
+            <footer class="footer">
+                <div>© 2026 Daily AI Times · An AI-assisted publication</div>
+                <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
+            </footer>
+        </div>
+    `;
+}
+
 function buildPageMarkup() {
+    if (state.section === DIGEST_SECTION) return buildDigestMarkup();
     const showAbove = state.section === 'All' && !state.query.trim();
     const grid = filteredGrid();
     const gridStories = visibleGridStories();
@@ -166,6 +224,7 @@ function buildPageMarkup() {
             ? storyCardHTML(item.story, item.idx, {
                 saved: state.savedIds.has(item.story.id),
                 focused: state.focusIdx === item.idx,
+                reaction: state.reactions[item.story.id] || null,
             })
             : item.html
         ).join('');
@@ -216,6 +275,7 @@ function render() {
     root.innerHTML = buildPageMarkup();
     wireTickerPause(root);
     mountAudioBox();
+    installImpressionTracking();
     if (state.mastheadClock == null) state.mastheadClock = startMastheadClock(root);
 }
 
@@ -271,7 +331,29 @@ function installEventDelegation() {
             const storyId = actionEl.dataset.storyId;
             if (!storyId) return;
             e.stopPropagation();
+            const willSave = !state.savedIds.has(storyId);
             toggleSave(storyId);
+            const story = findStory(storyId);
+            if (story) {
+                try { Analytics?.trackEvent?.('save_toggle', { ...viewOf(story), saved: willSave }); }
+                catch { /* best-effort */ }
+            }
+            render();
+            return;
+        }
+
+        // Reactions are anonymous one-tap signals; they also win over expand/open.
+        if (actionEl?.dataset.action === 'react') {
+            const storyId = actionEl.dataset.storyId;
+            const value = actionEl.dataset.react;
+            if (!storyId || !value) return;
+            e.stopPropagation();
+            const result = toggleReaction(storyId, value);
+            const story = findStory(storyId);
+            if (story) {
+                try { Analytics?.trackReaction?.(viewOf(story), result); }
+                catch { /* best-effort */ }
+            }
             render();
             return;
         }
@@ -283,10 +365,17 @@ function installEventDelegation() {
         if (!actionEl) {
             const storyEl = e.target.closest?.('.story[data-story-id]');
             if (storyEl) {
+                const id = storyEl.dataset.storyId;
                 if (!storyEl.classList.contains('expanded')) {
                     storyEl.classList.add('expanded');
+                    expandedAt.set(id, Date.now());
+                    const story = findStory(id);
+                    if (story) {
+                        try { Analytics?.trackCardExpand?.(viewOf(story)); }
+                        catch { /* best-effort */ }
+                    }
                 } else {
-                    const story = findStory(storyEl.dataset.storyId);
+                    const story = findStory(id);
                     if (story) openStory(story);
                 }
                 return;
@@ -303,6 +392,7 @@ function installEventDelegation() {
             if (name && name !== state.section) {
                 state.section = name;
                 state.focusIdx = -1;
+                try { Analytics?.trackCategoryNav?.(name); } catch { /* best-effort */ }
                 render();
             }
             return;
@@ -344,8 +434,17 @@ function toggleSave(id) {
 function openStory(story) {
     if (!story.url) return;
     window.open(story.url, '_blank', 'noopener,noreferrer');
-    try { Analytics?.trackEvent?.('article_open', { id: story.id, section: story.section }); }
-    catch { /* analytics is best-effort */ }
+    try {
+        const view = viewOf(story);
+        Analytics?.trackEvent?.('article_open', view);
+        // If the reader expanded the card first, the time they spent considering
+        // it before opening is a strong, clickbait-resistant interest signal.
+        const since = expandedAt.get(story.id);
+        if (since) {
+            Analytics?.trackDwell?.(view, Date.now() - since);
+            expandedAt.delete(story.id);
+        }
+    } catch { /* analytics is best-effort */ }
 }
 
 function installKeyboardNav() {
@@ -381,6 +480,63 @@ function scrollFocused() {
     el?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
 }
 
+// Thin top progress bar tied to scroll position; also emits scroll_depth
+// milestones (25/50/75/100%) as engagement signals. Milestones fire once per
+// load to avoid spamming the collector.
+function installScrollTracking() {
+    let bar = document.getElementById('read-progress');
+    if (!bar) {
+        bar = document.createElement('div');
+        bar.id = 'read-progress';
+        document.body.appendChild(bar);
+    }
+    const fired = new Set();
+    let ticking = false;
+    const update = () => {
+        ticking = false;
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - doc.clientHeight;
+        const pct = max > 0 ? Math.min(100, Math.round((doc.scrollTop / max) * 100)) : 0;
+        bar.style.width = `${pct}%`;
+        for (const m of [25, 50, 75, 100]) {
+            if (pct >= m && !fired.has(m)) {
+                fired.add(m);
+                try { Analytics?.trackScrollDepth?.(m); } catch { /* best-effort */ }
+            }
+        }
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+}
+
+// Per-article impressions: fire once when a card first becomes ~half visible.
+// Re-run after each render so newly inserted cards are observed.
+let impressionObserver = null;
+const seenImpressions = new Set();
+function installImpressionTracking() {
+    if (!('IntersectionObserver' in window)) return;
+    if (!impressionObserver) {
+        impressionObserver = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (!entry.isIntersecting) continue;
+                const id = entry.target.dataset.storyId;
+                if (!id || seenImpressions.has(id)) { impressionObserver.unobserve(entry.target); continue; }
+                seenImpressions.add(id);
+                impressionObserver.unobserve(entry.target);
+                const story = findStory(id);
+                if (story) {
+                    try { Analytics?.trackImpression?.(viewOf(story)); } catch { /* best-effort */ }
+                }
+            }
+        }, { threshold: 0.5 });
+    }
+    document.querySelectorAll('.story[data-story-id]').forEach(el => {
+        if (!seenImpressions.has(el.dataset.storyId)) impressionObserver.observe(el);
+    });
+}
+
 async function main() {
     const perf = new PerformanceMonitor();
     perf.mark('app_init_start');
@@ -392,10 +548,14 @@ async function main() {
         const stories = await loadStories();
         if (!stories.length) throw new Error('No articles in latest.json');
         state.partitioned = partition(stories);
-        state.sections = sectionsFromStories(stories);
+        // Surface the "Today in 10 minutes" digest as the second tab, right
+        // after All, so the fast-catch-up path is the first thing readers see.
+        const baseSections = sectionsFromStories(stories);
+        state.sections = ['All', DIGEST_SECTION, ...baseSections.filter(s => s !== 'All')];
         render();
         installEventDelegation();
         installKeyboardNav();
+        installScrollTracking();
         try { LazyLoader?.init?.(); } catch { /* lazy loader is optional */ }
         perf.mark('app_ready');
         perf.report();
