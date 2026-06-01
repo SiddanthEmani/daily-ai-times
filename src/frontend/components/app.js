@@ -178,6 +178,24 @@ function visibleGridStories() {
     return filteredGrid();
 }
 
+function isOptedOut() {
+    try { return localStorage.getItem('dat_optout') === '1'; } catch { return false; }
+}
+
+// Shared footer. Includes a plain-language privacy line and a one-click opt-out,
+// consistent with the cookieless / no-account posture (we also honor DNT).
+function footerHTML(showKeys) {
+    const optLabel = isOptedOut() ? 'Turn analytics back on' : 'Opt out of analytics';
+    return `
+        <footer class="footer">
+            <div>© 2026 Daily AI Times · An AI-assisted publication</div>
+            <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
+            <div class="privacy-note">No account, no cookies — only anonymous, aggregate analytics. <button class="linkish" data-action="optout">${optLabel}</button></div>
+            ${showKeys ? '<div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>' : ''}
+        </footer>
+    `;
+}
+
 function buildDigestMarkup() {
     const counts = sectionCounts(state.partitioned.all);
     const navMarkup = navHTML({ section: state.section }, state.sections, counts);
@@ -189,10 +207,7 @@ function buildDigestMarkup() {
             ${mastheadHTML()}
             ${navMarkup}
             ${digestHTML(stories, state.reactions, DIGEST_BUDGET_MIN)}
-            <footer class="footer">
-                <div>© 2026 Daily AI Times · An AI-assisted publication</div>
-                <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
-            </footer>
+            ${footerHTML(false)}
         </div>
     `;
 }
@@ -260,11 +275,7 @@ function buildPageMarkup() {
             ${showAbove ? '' : navMarkup}
             ${resultBar}
             <div class="below">${colsHTML}</div>
-            <footer class="footer">
-                <div>© 2026 Daily AI Times · An AI-assisted publication</div>
-                <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
-                <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>
-            </footer>
+            ${footerHTML(true)}
         </div>
     `;
 }
@@ -339,6 +350,23 @@ function installEventDelegation() {
                 catch { /* best-effort */ }
             }
             render();
+            return;
+        }
+
+        // Opt out / back in of anonymous analytics.
+        if (actionEl?.dataset.action === 'optout') {
+            e.stopPropagation();
+            try {
+                if (isOptedOut()) {
+                    localStorage.removeItem('dat_optout');
+                } else {
+                    localStorage.setItem('dat_optout', '1');
+                    Analytics.enabled = false;
+                    Analytics.eventQueue = [];
+                }
+            } catch { /* ignore storage errors */ }
+            // Reload so the (dis)enabled state takes effect cleanly everywhere.
+            window.location.reload();
             return;
         }
 
