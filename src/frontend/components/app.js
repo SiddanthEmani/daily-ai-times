@@ -20,6 +20,7 @@ import {
 
 const APP_VERSION = '2026.4.0';
 const SAVED_KEY = 'dat_saved';
+const THEME_KEY = 'dat_theme';
 
 const state = {
     section: 'All',
@@ -265,6 +266,17 @@ function installEventDelegation() {
     // would emit data-action="save" that never reaches the handler.
     document.body.addEventListener('click', (e) => {
         const actionEl = e.target.closest?.('[data-action]');
+
+        // Theme toggle: flip data-theme on <html> and persist. No render() needed —
+        // CSS variables + the icon-swap rule react instantly, and delegation here
+        // means the re-rendered masthead button keeps working.
+        if (actionEl?.dataset.action === 'theme-toggle') {
+            const next = document.documentElement.getAttribute('data-theme') === 'dark'
+                ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem(THEME_KEY, next); } catch { /* storage may be blocked */ }
+            return;
+        }
 
         // Save always wins — stop propagation so card expand/open doesn't also fire.
         if (actionEl?.dataset.action === 'save') {
