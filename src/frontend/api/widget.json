@@ -1,23 +1,85 @@
 {
-  "updated": "2026-06-03T03:50:03.329735+00:00",
+  "updated": "2026-06-03T08:57:41.668553+00:00",
   "top_stories": [
     {
-      "article_id": "08c1dd02ee66d3d8f5f7c038a823fdf0",
-      "title": "Florida sues OpenAI, Sam Altman, in first-of-its-kind lawsuit over violent incidents",
+      "article_id": "fc5010c1e90e0084626b3d0aa9520870",
+      "title": "Trump signs narrower executive order on AI oversight after industry objections",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/",
-      "published_date": "2026-06-01T20:03:40+00:00",
+      "url": "https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/",
+      "published_date": "2026-06-02T16:23:08+00:00",
       "category": "Industry",
-      "description": "The lawsuit partially revolves around a shooting at Florida State University last year, and ChatGPT's alleged role in the incident.",
-      "author": "Lucas Ropek",
-      "content": "The lawsuit partially revolves around a shooting at Florida State University last year, and ChatGPT's alleged role in the incident.",
+      "description": "After industry objections, President Trump signed a revised AI executive order requiring only voluntary prerelease government reviews of advanced models.",
+      "author": "Rebecca Bellan",
+      "content": "After industry objections, President Trump signed a revised AI executive order requiring only voluntary prerelease government reviews of advanced models.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-03T08:57:41.633828+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-03T08:57:41.633831+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "d88836e6a93cf92fa0775b30f24e227a",
+      "title": "Industrial Software Leaders Build Secure, Autonomous AI Engineers With NVIDIA NemoClaw",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/industrial-software-leaders-secure-autonomous-ai-engineers-nemoclaw/",
+      "published_date": "2026-06-02T22:00:58+00:00",
+      "category": "Industry",
+      "description": "Accelerated computing has revolutionized industrial engineering, compressing simulation times from weeks to hours. Today’s remaining challenges sit in the end-to-end workflow surrounding the simulations: computer-aided design, meshing, simulation setup and debugging, as well as post-processing and generating summary reports of these processes. At GTC Taipei at COMPUTEX, NVIDIA and more than a dozen engineering software […]",
+      "author": "Timothy Costa",
+      "content": "Accelerated computing has revolutionized industrial engineering, compressing simulation times from weeks to hours. Today’s remaining challenges sit in the end-to-end workflow surrounding the simulations: computer-aided design, meshing, simulation setup and debugging, as well as post-processing and generating summary reports of these processes. At GTC Taipei at COMPUTEX, NVIDIA and more than a dozen engineering software […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,34 +107,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T03:50:03.293272+00:00"
+        "consensus_timestamp": "2026-06-03T08:57:41.632983+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T03:50:03.293275+00:00"
+        "timestamp": "2026-06-03T08:57:41.632986+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "e0424d52f59fa7238a1961b753a166dc",
-      "title": "New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/",
-      "published_date": "2026-06-02T16:30:09+00:00",
-      "category": "Industry",
-      "description": "We are announcing the early access preview for Azure Cobalt 200 Arm-based Virtual Machines (VMs), designed for Linux-based agentic AI workloads. The post New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads appeared first on Microsoft Azure Blog.",
-      "author": "Arun Kishan and Selim Bilgin",
-      "content": "We are announcing the early access preview for Azure Cobalt 200 Arm-based Virtual Machines (VMs), designed for Linux-based agentic AI workloads. The post New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads appeared first on Microsoft Azure Blog.",
+      "article_id": "74d3611c2cadc31d0db151e209fef6cf",
+      "title": "Horizon Europe international matchmaking: privacy notice",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/guidance/horizon-europe-international-matchmaking-privacy-notice",
+      "published_date": "2026-05-29T08:30:00+00:00",
+      "category": "Government",
+      "description": "This privacy notice explains how we handle the personal data you provide through the Horizon Europe international matchmaking form.",
+      "author": "",
+      "content": "This privacy notice explains how we handle the personal data you provide through the Horizon Europe international matchmaking form.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -107,41 +169,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T03:50:03.290895+00:00"
+        "consensus_timestamp": "2026-06-03T08:57:41.630173+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T03:50:03.290898+00:00"
+        "timestamp": "2026-06-03T08:57:41.630176+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f25411cdaf38171b3b3d2575c89b0202",
-      "title": "Object detection with Amazon Nova 2 Lite",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/object-detection-with-amazon-nova-2-lite/",
-      "published_date": "2026-06-02T17:31:11+00:00",
-      "category": "Industry",
-      "description": "In this post, we'll walk through implementing object detection with Amazon Nova 2 Lite. You'll learn how to deploy an object detection application using Amazon Bedrock, AWS Lambda, and Amazon API Gateway. You'll also learn how to craft effective prompts, process structured JSON output, and visualize results. We explore practical applications across manufacturing, agriculture, and logistics.",
-      "author": "Robert Stolz",
-      "content": "In this post, we'll walk through implementing object detection with Amazon Nova 2 Lite. You'll learn how to deploy an object detection application using Amazon Bedrock, AWS Lambda, and Amazon API Gateway. You'll also learn how to craft effective prompts, process structured JSON output, and visualize results. We explore practical applications across manufacturing, agriculture, and logistics.",
+      "article_id": "4e4bcd49acd5f87eb597d0748ec92028",
+      "title": "G7 nations agree first-ever joint approach to protecting children online and drive safe AI growth that delivers for all",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/g7-nations-agree-first-ever-joint-approach-to-protecting-children-online-and-drive-safe-ai-growth-that-delivers-for-all",
+      "published_date": "2026-05-29T17:47:00+00:00",
+      "category": "Government",
+      "description": "G7 Digital Ministers have agreed a common approach to shielding children and young people from harm online for the first time.",
+      "author": "",
+      "content": "G7 Digital Ministers have agreed a common approach to shielding children and young people from harm online for the first time.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
-        "confidence_mean": 0.98
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T03:50:03.291189+00:00"
+        "consensus_timestamp": "2026-06-03T08:57:41.630007+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,7 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T03:50:03.291192+00:00"
+        "timestamp": "2026-06-03T08:57:41.630010+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +296,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T03:50:03.289791+00:00"
+        "consensus_timestamp": "2026-06-03T08:57:41.630416+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,69 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T03:50:03.289795+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4d1c36224f3429beca0527b867923a9c",
-      "title": "OpenAI, Grupo Folha and Grupo UOL announce strategic content partnership",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/grupo-folha-grupo-uol-partnership",
-      "published_date": "2026-05-25T00:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI partners with Grupo Folha and Grupo UOL to bring trusted Brazilian journalism to ChatGPT, expanding access to news with attribution and transparency.",
-      "author": "",
-      "content": "OpenAI partners with Grupo Folha and Grupo UOL to bring trusted Brazilian journalism to ChatGPT, expanding access to news with attribution and transparency.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T03:50:03.290713+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-03T03:50:03.290715+00:00"
+        "timestamp": "2026-06-03T08:57:41.630418+00:00"
       },
       "article_type": "article"
     }
