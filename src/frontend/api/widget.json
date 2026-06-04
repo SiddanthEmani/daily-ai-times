@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-03T22:32:30.065448+00:00",
+  "updated": "2026-06-04T03:45:42.040176+00:00",
   "top_stories": [
     {
-      "article_id": "f43e8055d345a94a2bef76f1c66a71f9",
-      "title": "Google rolls out fake call detection to protect against AI deepfake impersonation scams",
+      "article_id": "4f0811353c23847fc9b6cb9776d07934",
+      "title": "Uber caps employee AI spending after blowing through budget in 4 months",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams/",
-      "published_date": "2026-06-02T18:00:00+00:00",
+      "url": "https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/",
+      "published_date": "2026-06-02T19:11:48+00:00",
       "category": "Industry",
-      "description": "As people increasingly refuse to answer calls from unknown numbers, scammers are shifting their tactics by spoofing trusted phone numbers and using AI deepfake technology to sound like authority figures, family members, or employers.",
-      "author": "Aisha Malik",
-      "content": "As people increasingly refuse to answer calls from unknown numbers, scammers are shifting their tactics by spoofing trusted phone numbers and using AI deepfake technology to sound like authority figures, family members, or employers.",
+      "description": "Uber's cutback has occurred after the company had reportedly encouraged staff to use AI as much as possible.",
+      "author": "Lucas Ropek",
+      "content": "Uber's cutback has occurred after the company had reportedly encouraged staff to use AI as much as possible.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T22:32:30.028569+00:00"
+        "consensus_timestamp": "2026-06-04T03:45:42.006452+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,26 +59,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T22:32:30.028571+00:00"
+        "timestamp": "2026-06-04T03:45:42.006454+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "5864d72f563ad1e5e161f0ec97a5b492",
-      "title": "AI Factories: The New Infrastructure of Intelligence",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/ai-factories-the-new-infrastructure-of-intelligence/",
-      "published_date": "2026-05-27T16:00:36+00:00",
+      "article_id": "f7b57893ea8de73fc0121a65178dc5ab",
+      "title": "The next chapter in flood resilience: Open sourcing Google’s hydrology framework",
+      "source": "google_research_blog",
+      "url": "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework/",
+      "published_date": "2026-06-03T18:37:32+00:00",
       "category": "Industry",
-      "description": "AI factories are token factories, converting power into intelligence in real time. And as agentic AI scales and autonomous, always-on special agents are deployed in the enterprise, performance per watt and cost per token become the economics that matter.",
-      "author": "Jeremy Graybill",
-      "content": "AI factories are token factories, converting power into intelligence in real time. And as agentic AI scales and autonomous, always-on special agents are deployed in the enterprise, performance per watt and cost per token become the economics that matter.",
+      "description": "Climate & Sustainability",
+      "author": "",
+      "content": "Climate & Sustainability",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-04T03:45:42.007756+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-04T03:45:42.007758+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "593fcda683a65984b52a052a538209d1",
+      "title": "Extract More Kernel Performance with NVIDIA CompileIQ Auto-Tuning",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning/",
+      "published_date": "2026-05-26T22:08:56+00:00",
+      "category": "Industry",
+      "description": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific...",
+      "author": "Aditya Srikanth",
+      "content": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -110,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T22:32:30.027979+00:00"
+        "consensus_timestamp": "2026-06-04T03:45:42.007535+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,150 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T22:32:30.027982+00:00"
+        "timestamp": "2026-06-04T03:45:42.007538+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "593fcda683a65984b52a052a538209d1",
-      "title": "Extract More Kernel Performance with NVIDIA CompileIQ Auto-Tuning",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning/",
-      "published_date": "2026-05-26T22:08:56+00:00",
+      "article_id": "f99af3695dd9ce7b2f9533374447279c",
+      "title": "Azure NetApp Files for EDA workloads: From revolution to breakthrough at scale",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-netapp-files-for-eda-workloads-from-revolution-to-breakthrough-at-scale/",
+      "published_date": "2026-05-22T15:00:00+00:00",
       "category": "Industry",
-      "description": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific...",
-      "author": "Aditya Srikanth",
-      "content": "NVIDIA CompileIQ tackles one of the hardest problems in performance engineering: finding the compiler options that unlock the best performance for a specific...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T22:32:30.029595+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-03T22:32:30.029597+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "f7b57893ea8de73fc0121a65178dc5ab",
-      "title": "The next chapter in flood resilience: Open sourcing Google’s hydrology framework",
-      "source": "google_research_blog",
-      "url": "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework/",
-      "published_date": "2026-06-03T18:37:32+00:00",
-      "category": "Industry",
-      "description": "Climate & Sustainability",
-      "author": "",
-      "content": "Climate & Sustainability",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T22:32:30.029840+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-03T22:32:30.029842+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "74d3611c2cadc31d0db151e209fef6cf",
-      "title": "Horizon Europe international matchmaking: privacy notice",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/guidance/horizon-europe-international-matchmaking-privacy-notice",
-      "published_date": "2026-05-29T08:30:00+00:00",
-      "category": "Government",
-      "description": "This privacy notice explains how we handle the personal data you provide through the Horizon Europe international matchmaking form.",
-      "author": "",
-      "content": "This privacy notice explains how we handle the personal data you provide through the Horizon Europe international matchmaking form.",
+      "description": "Azure NetApp Files is redefining what’s possible for EDA in the cloud—delivering scalable, high-performance storage that supports massive concurrency, low latency, and consistent production performance. With independent benchmark validation and real-world adoption, organizations can now run EDA workloads at scale without traditional storage bottlenecks. The post Azure NetApp Files for EDA workloads: From revolution to breakthrough at scale appeared first on Microsoft Azure Blog.",
+      "author": "Aung Oo",
+      "content": "Azure NetApp Files is redefining what’s possible for EDA in the cloud—delivering scalable, high-performance storage that supports massive concurrency, low latency, and consistent production performance. With independent benchmark validation and real-world adoption, organizations can now run EDA workloads at scale without traditional storage bottlenecks. The post Azure NetApp Files for EDA workloads: From revolution to breakthrough at scale appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-03T22:32:30.025442+00:00"
+        "consensus_timestamp": "2026-06-04T03:45:42.004527+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-03T22:32:30.025444+00:00"
+        "timestamp": "2026-06-04T03:45:42.004530+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "439cf6558e56082476c55b7e1b7519d6",
+      "title": "Strengthening societal resilience with Rosalind Biodefense",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense",
+      "published_date": "2026-05-29T03:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing biodefense, public health, and pandemic preparedness through frontier AI.",
+      "author": "",
+      "content": "OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing biodefense, public health, and pandemic preparedness through frontier AI.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-04T03:45:42.004129+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-04T03:45:42.004132+00:00"
       },
       "article_type": "article"
     }
