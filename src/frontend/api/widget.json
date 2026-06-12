@@ -1,140 +1,16 @@
 {
-  "updated": "2026-06-12T18:10:09.553664+00:00",
+  "updated": "2026-06-12T21:35:32.029855+00:00",
   "top_stories": [
     {
-      "article_id": "2471ea4309136c111682ee447ce93c64",
-      "title": "DARPA celebrates 20 years of Young Faculty Awards, announces Director’s Fellows",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2026/darpa-celebrates-20-years-young-faculty-awards",
-      "published_date": "2026-06-11T15:01:44+00:00",
-      "category": "Government",
-      "description": "The YFA program has supported over 500 rising research stars from more than 60 institutions.",
-      "author": "outreach@darpa.mil",
-      "content": "The YFA program has supported over 500 rising research stars from more than 60 institutions.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-12T18:10:09.518952+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-12T18:10:09.518954+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "bd98ff7938d162b7eccc59c9ed040c76",
-      "title": "How memory tools can make AI models worse",
+      "article_id": "6a64cd82749275478f3bd229e16791b6",
+      "title": "DoorDash’s new AI chatbot lets you order with prompts and photos",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/10/how-memory-tools-can-make-ai-models-worse/",
-      "published_date": "2026-06-10T16:11:08+00:00",
+      "url": "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/",
+      "published_date": "2026-06-11T14:23:43+00:00",
       "category": "Industry",
-      "description": "New research suggests that AI memory systems can degrade model performance and encourage sycophantic tendencies.",
-      "author": "Russell Brandom",
-      "content": "New research suggests that AI memory systems can degrade model performance and encourage sycophantic tendencies.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-12T18:10:09.522851+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-12T18:10:09.522853+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b10371aa9a66a162c4cd9e8018930a50",
-      "title": "Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-microphone-required/",
-      "published_date": "2026-06-08T15:57:45+00:00",
-      "category": "Industry",
-      "description": "In this post, we walk you through the Nova Sonic Test Harness, an open source framework that we built to solve both problems. It serves as a rapid iteration tool for tuning system prompts and tool configurations (run a conversation, see results, adjust, repeat) and as a comprehensive evaluation framework for validating voice agent quality at scale. It runs complete multi-turn conversations with Amazon Nova Sonic automatically, evaluates them using LLM-as-judge techniques, and can even detect...",
-      "author": "Osman Ipek",
-      "content": "In this post, we walk you through the Nova Sonic Test Harness, an open source framework that we built to solve both problems. It serves as a rapid iteration tool for tuning system prompts and tool configurations (run a conversation, see results, adjust, repeat) and as a comprehensive evaluation framework for validating voice agent quality at scale. It runs complete multi-turn conversations with Amazon Nova Sonic automatically, evaluates them using LLM-as-judge techniques, and can even detect...",
+      "description": "The new chatbot, called Ask DoorDash, allows users to search the app for what they're looking for in their own words instead of having to scroll through restaurants and stores to build a cart.",
+      "author": "Aisha Malik",
+      "content": "The new chatbot, called Ask DoorDash, allows users to search the app for what they're looking for in their own words instead of having to scroll through restaurants and stores to build a cart.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -172,7 +48,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-12T18:10:09.521067+00:00"
+        "consensus_timestamp": "2026-06-12T21:35:31.993055+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,27 +59,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-12T18:10:09.521069+00:00"
+        "timestamp": "2026-06-12T21:35:31.993057+00:00"
       },
-      "article_type": "article"
+      "article_type": "headline"
     },
     {
-      "article_id": "241eea4bc2f34e4d607c15beedc630c1",
-      "title": "Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access",
+      "article_id": "6c84eaeba137d0c9adf4b536f7c0a49b",
+      "title": "Better decisions at scale: How mathematical optimization delivers where intuition fails",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-inference-for-eu-data-processing-and-model-access/",
-      "published_date": "2026-06-08T16:40:34+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/better-decisions-at-scale-how-mathematical-optimization-delivers-where-intuition-fails/",
+      "published_date": "2026-06-08T16:31:17+00:00",
       "category": "Industry",
-      "description": "With access to the latest generative AI models and high-performance accelerated compute in high global demand, AWS customers need tools to take advantage of model availability and capacity across multiple AWS Regions, while still meeting their security and privacy requirements. cross-Region Inference (CRIS) on Amazon Bedrock meets these needs by automatically routing requests across multiple […]",
-      "author": "Hamza Usmani",
-      "content": "With access to the latest generative AI models and high-performance accelerated compute in high global demand, AWS customers need tools to take advantage of model availability and capacity across multiple AWS Regions, while still meeting their security and privacy requirements. cross-Region Inference (CRIS) on Amazon Bedrock meets these needs by automatically routing requests across multiple […]",
+      "description": "In this post, we introduce mathematical optimization, explain how it fits within the broader AI landscape, and showcase real-world success stories where the Innovation Center has partnered with customers to deliver concrete results.",
+      "author": "Sri Elaprolu",
+      "content": "In this post, we introduce mathematical optimization, explain how it fits within the broader AI landscape, and showcase real-world success stories where the Innovation Center has partnered with customers to deliver concrete results.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -231,34 +107,158 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-12T18:10:09.520933+00:00"
+        "consensus_timestamp": "2026-06-12T21:35:31.991654+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-12T18:10:09.520935+00:00"
+        "timestamp": "2026-06-12T21:35:31.991657+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d4f16776af7d661106078074383c9fce",
-      "title": "NVIDIA Confidential Computing to Help Expand Apple’s Private Cloud Compute",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/",
-      "published_date": "2026-06-09T22:34:27+00:00",
+      "article_id": "7fac5b74a7357e48419dca89af55d02a",
+      "title": "Guidance: How to create, bind and share attributes (1.0)",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/how-to-create-bind-and-share-attributes-1-0",
+      "published_date": "2026-06-09T15:51:12+00:00",
+      "category": "Government",
+      "description": "Guidance on creating, binding, scoring and sharing attributes for organisations certified against the UK digital verification services trust framework as an attribute service provider, or interested in understanding more about attributes.",
+      "author": "",
+      "content": "Guidance on creating, binding, scoring and sharing attributes for organisations certified against the UK digital verification services trust framework as an attribute service provider, or interested in understanding more about attributes.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-12T21:35:31.989785+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-12T21:35:31.989787+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2d3b7bc969ad0397785f3a37daddd70b",
+      "title": "Evaluate Clinical ASR Models Faster with Agent Skills and NVIDIA Nemotron Speech",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/evaluate-clinical-asr-models-faster-with-agent-skills-and-nvidia-nemotron-speech/",
+      "published_date": "2026-06-09T15:00:00+00:00",
       "category": "Industry",
-      "description": "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC), as it expands beyond Apple’s data centers to Google Cloud. Unveiled during Apple’s annual WWDC gathering for developers from around the globe, NVIDIA GPUs will support server-side inference for Apple Foundation Models, custom-built by Apple and Google, leveraging […]",
-      "author": "Avinash Ahuja",
-      "content": "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC), as it expands beyond Apple’s data centers to Google Cloud. Unveiled during Apple’s annual WWDC gathering for developers from around the globe, NVIDIA GPUs will support server-side inference for Apple Foundation Models, custom-built by Apple and Google, leveraging […]",
+      "description": "Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like Acetaminophen, Amlodipine,...",
+      "author": "John Jahanipour",
+      "content": "Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like Acetaminophen, Amlodipine,...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-12T21:35:31.993628+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-12T21:35:31.993630+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b89db58127a0b87bc52dee63e8effb8f",
+      "title": "Policy paper: Digital and Technologies Sector Plan: Year One Update",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/digital-and-technologies-sector-plan-year-one-update",
+      "published_date": "2026-06-10T08:31:00+00:00",
+      "category": "Government",
+      "description": "One-year progress update on the UK's Digital and Technologies sector plan.",
+      "author": "",
+      "content": "One-year progress update on the UK's Digital and Technologies sector plan.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -293,21 +293,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-12T18:10:09.521237+00:00"
+        "consensus_timestamp": "2026-06-12T21:35:31.989656+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-12T18:10:09.521239+00:00"
+        "timestamp": "2026-06-12T21:35:31.989658+00:00"
       },
       "article_type": "article"
     }
