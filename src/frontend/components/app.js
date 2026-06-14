@@ -17,6 +17,7 @@ import {
     marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
     getOpinionStory,
 } from './below.js';
+import { loadSourcesData, sourcesModalHTML } from './sources.js';
 
 const APP_VERSION = '2026.4.0';
 const SAVED_KEY = 'dat_saved';
@@ -30,6 +31,7 @@ const state = {
     partitioned: null,
     sections: ['All'],
     mastheadClock: null,
+    sourcesData: null,
 };
 
 const TAIL_POOLS = [
@@ -204,7 +206,7 @@ function buildPageMarkup() {
             <div class="below">${colsHTML}</div>
             <footer class="footer">
                 <div>© 2026 Daily AI Times · An AI-assisted publication</div>
-                <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
+                <div><a href="#" data-action="open-sources" role="button">Our Sources</a> · Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
                 <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>
             </footer>
         </div>
@@ -265,6 +267,13 @@ function installEventDelegation() {
     // #modal-root (a sibling of #root). Without this the modal's Save button
     // would emit data-action="save" that never reaches the handler.
     document.body.addEventListener('click', (e) => {
+        // Backdrop click (outside the dialog) closes the sources modal. Checked
+        // before data-action lookup so clicks inside the dialog don't close it.
+        if (e.target?.classList?.contains('modal-backdrop')) {
+            closeSourcesModal();
+            return;
+        }
+
         const actionEl = e.target.closest?.('[data-action]');
 
         // Theme toggle: flip data-theme on <html> and persist. No render() needed —
@@ -275,6 +284,19 @@ function installEventDelegation() {
                 ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
             try { localStorage.setItem(THEME_KEY, next); } catch { /* storage may be blocked */ }
+            return;
+        }
+
+        // Sources modal: open lazily (fetch once, cache), close on backdrop/×.
+        // Rendered into #modal-root so it survives root.innerHTML re-renders.
+        if (actionEl?.dataset.action === 'open-sources') {
+            e.preventDefault();
+            openSourcesModal();
+            return;
+        }
+        if (actionEl?.dataset.action === 'close-sources') {
+            e.preventDefault();
+            closeSourcesModal();
             return;
         }
 
@@ -347,6 +369,39 @@ function findStory(id) {
     return state.partitioned.all.find(s => s.id === id) || null;
 }
 
+function modalRoot() {
+    return document.getElementById('modal-root');
+}
+
+function isSourcesModalOpen() {
+    return !!modalRoot()?.querySelector('.sources-modal');
+}
+
+async function openSourcesModal() {
+    const root = modalRoot();
+    if (!root) return;
+    // Loading placeholder while the data is fetched the first time.
+    root.innerHTML = sourcesModalHTML(state.sourcesData || {}, { loading: !state.sourcesData });
+    if (!state.sourcesData) {
+        try {
+            state.sourcesData = await loadSourcesData();
+            // Only repaint if the modal is still open (user may have closed it).
+            if (isSourcesModalOpen()) root.innerHTML = sourcesModalHTML(state.sourcesData);
+        } catch (err) {
+            console.warn('Failed to load sources:', err);
+            if (isSourcesModalOpen()) {
+                root.innerHTML = sourcesModalHTML({}, { error: true });
+            }
+        }
+    }
+    try { Analytics?.trackEvent?.('sources_open'); } catch { /* best-effort */ }
+}
+
+function closeSourcesModal() {
+    const root = modalRoot();
+    if (root) root.innerHTML = '';
+}
+
 function toggleSave(id) {
     if (state.savedIds.has(id)) state.savedIds.delete(id);
     else state.savedIds.add(id);
@@ -363,6 +418,12 @@ function openStory(story) {
 function installKeyboardNav() {
     window.addEventListener('keydown', (e) => {
         if (e.target?.tagName === 'INPUT') return;
+        // Esc closes the sources modal first if it's open.
+        if (e.key === 'Escape' && isSourcesModalOpen()) {
+            e.preventDefault();
+            closeSourcesModal();
+            return;
+        }
         // Nav walks only the grid cards that actually render; this matches the
         // focused-outline target and the list card idx values.
         const grid = visibleGridStories();
