@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-15T10:27:15.907811+00:00",
+  "updated": "2026-06-15T17:16:09.375827+00:00",
   "top_stories": [
     {
-      "article_id": "d63df1b65216da94ff1c9a7be4f178b2",
-      "title": "Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand",
+      "article_id": "471db19ead549e6a64e14ca653aee04b",
+      "title": "A satellite just learned to find things on its own — here’s what that means",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/",
-      "published_date": "2026-06-14T00:03:49+00:00",
+      "url": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
+      "published_date": "2026-06-15T12:00:00+00:00",
       "category": "Industry",
-      "description": "Meta starts dismantling its $2 billion Manus acquisition after Beijing ordered the deal reversed.",
-      "author": "Kate Park",
-      "content": "Meta starts dismantling its $2 billion Manus acquisition after Beijing ordered the deal reversed.",
+      "description": "In April, for the first time ever, an Earth observation satellite found what it was looking for, all on its own.",
+      "author": "Tim Fernholz",
+      "content": "In April, for the first time ever, an Earth observation satellite found what it was looking for, all on its own.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.75,
-        "novelty_score": 0.65,
-        "impact_score": 0.9,
-        "overall_score": 0.785,
-        "confidence_mean": 0.85
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,96 +45,34 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-15T10:27:15.875664+00:00"
+        "consensus_timestamp": "2026-06-15T17:16:09.337971+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-15T10:27:15.875666+00:00"
+        "timestamp": "2026-06-15T17:16:09.337974+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "c1c76a4022a988e00f11002dda4e2cc7",
-      "title": "It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-amazon-bedrock-agentcore/",
-      "published_date": "2026-06-08T16:35:02+00:00",
-      "category": "Industry",
-      "description": "Amazon Bedrock AgentCore Runtime gives each agent session its own isolated microVM with a persistent workspace, secure tool access through Gateway, and built-in observability—so you can run Claude Code, Codex, Kiro, and Cursor in parallel without sharing secrets, ports, or filesystems. Close the lid, go to dinner, and pick up where you left off tomorrow.",
-      "author": "Evandro Franco",
-      "content": "Amazon Bedrock AgentCore Runtime gives each agent session its own isolated microVM with a persistent workspace, secure tool access through Gateway, and built-in observability—so you can run Claude Code, Codex, Kiro, and Cursor in parallel without sharing secrets, ports, or filesystems. Close the lid, go to dinner, and pick up where you left off tomorrow.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-15T10:27:15.874596+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-15T10:27:15.874598+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "178953c7a3de4352c1b27633e13cb9e3",
-      "title": "How frontier teams are reinventing AI-native development",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/",
-      "published_date": "2026-06-11T00:54:42+00:00",
-      "category": "Industry",
-      "description": "Frontier teams are not just using AI to code faster. They’re redesigning how software gets built. The result is 4.5x productivity gains, in some cases more than 10x.",
-      "author": "Swami Sivasubramanian",
-      "content": "Frontier teams are not just using AI to code faster. They’re redesigning how software gets built. The result is 4.5x productivity gains, in some cases more than 10x.",
+      "article_id": "5825cc0ff024815ce4ab3181a732223d",
+      "title": "AI to speed up cancer diagnosis for millions of NHS patients",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/news/ai-to-speed-up-cancer-diagnosis-for-millions-of-nhs-patients",
+      "published_date": "2026-06-10T21:31:00+00:00",
+      "category": "Government",
+      "description": "Government invests in artificial intelligence (AI) technologies to modernise the NHS and reduce waiting times.",
+      "author": "",
+      "content": "Government invests in artificial intelligence (AI) technologies to modernise the NHS and reduce waiting times.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -169,21 +107,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-15T10:27:15.874292+00:00"
+        "consensus_timestamp": "2026-06-15T17:16:09.333916+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-15T10:27:15.874295+00:00"
+        "timestamp": "2026-06-15T17:16:09.333919+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +172,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-15T10:27:15.875174+00:00"
+        "consensus_timestamp": "2026-06-15T17:16:09.337510+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-15T10:27:15.875177+00:00"
+        "timestamp": "2026-06-15T17:16:09.337513+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "bad5a1e85df2080190214a6acce1869d",
-      "title": "Meta’s months-old AI unit is a soul-crushing gulag, say the engineers stuck inside it",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/12/metas-months-old-ai-unit-is-a-soul-crushing-gulag-say-the-engineers-stuck-inside-it/",
-      "published_date": "2026-06-12T23:00:54+00:00",
+      "article_id": "51b06f1c6a73e8615338513fa7a37716",
+      "title": "Announcing Microsoft Discovery general availability and Microsoft Discovery app preview",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/",
+      "published_date": "2026-06-02T18:15:00+00:00",
       "category": "Industry",
-      "description": "A new report suggests the unit, which employs 6,500 people, is on the verge of revolt.",
-      "author": "Connie Loizos",
-      "content": "A new report suggests the unit, which employs 6,500 people, is on the verge of revolt.",
+      "description": "At Microsoft Build, we are announcing that Microsoft Discovery is now generally available for all organizations, providing a comprehensive platform for building and governing agentic AI workflows. The post Announcing Microsoft Discovery general availability and Microsoft Discovery app preview appeared first on Microsoft Azure Blog.",
+      "author": "Aseem Datar",
+      "content": "At Microsoft Build, we are announcing that Microsoft Discovery is now generally available for all organizations, providing a comprehensive platform for building and governing agentic AI workflows. The post Announcing Microsoft Discovery general availability and Microsoft Discovery app preview appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -292,22 +230,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
+        "score": 0.9,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-15T10:27:15.875963+00:00"
+        "consensus_timestamp": "2026-06-15T17:16:09.335220+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
+        "weighted_score": 0.74,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-15T10:27:15.875965+00:00"
+        "timestamp": "2026-06-15T17:16:09.335223+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b75b8878823071f43ec4ac70b1e44d48",
+      "title": "For Robotaxis, Safety Must Be Built In, Not Bolted On",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/",
+      "published_date": "2026-06-10T19:00:12+00:00",
+      "category": "Industry",
+      "description": "A car pulls up to the curb. The app says, “Your ride is here.” No one’s in the driver’s seat. For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality. The robotaxi industry has moved from prototype milestones to commercial operations, with an expanding ecosystem […]",
+      "author": "Riccardo Mariani",
+      "content": "A car pulls up to the curb. The app says, “Your ride is here.” No one’s in the driver’s seat. For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality. The robotaxi industry has moved from prototype milestones to commercial operations, with an expanding ecosystem […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-15T17:16:09.336404+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-15T17:16:09.336406+00:00"
       },
       "article_type": "article"
     }
