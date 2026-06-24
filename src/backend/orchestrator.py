@@ -1198,11 +1198,19 @@ class NewsProcessingPipeline:
             with open(widget_file_frontend, 'w', encoding='utf-8') as f:
                 json.dump(widget_data, f, indent=2, ensure_ascii=False)
             
+            # Refresh the public source list (sources.json) so the frontend
+            # "Our Sources" modal always reflects the live YAML config.
+            try:
+                from src.backend.api.generate_sources import write_sources_api
+                write_sources_api(frontend_api_dir, backend_api_dir)
+            except Exception as e:
+                log_warning(logger, f"Failed to generate sources.json: {e}")
+
             logger.info(f"✅ API files saved:")
             logger.info(f"   - Backend: {latest_file_backend}")
             logger.info(f"   - Frontend: {latest_file_frontend}")
             logger.info(f"   - Widget: {widget_file_frontend}")
-            
+
             return True
             
         except Exception as e:
