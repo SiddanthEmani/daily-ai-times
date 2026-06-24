@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-24T07:42:29.745030+00:00",
+  "updated": "2026-06-24T10:51:27.885207+00:00",
   "top_stories": [
     {
-      "article_id": "3a1de536fcf81d90bc50b6e8f2ec7689",
-      "title": "Prime Intellect Releases prime-rl 0.6.0 to Train Trillion-Parameter MoE Models on Agentic RL Workloads",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/06/23/prime-intellect-releases-prime-rl-0-6-0-to-train-trillion-parameter-moe-models-on-agentic-rl-workloads/",
-      "published_date": "2026-06-23T07:20:44+00:00",
+      "article_id": "b88481852cfcad6acdc4aa71b99acbf4",
+      "title": "SpaceX inks compute deal with Reflection AI, an open source AI lab",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/",
+      "published_date": "2026-06-22T16:51:29+00:00",
       "category": "Industry",
-      "description": "Prime Intellect has released prime-rl 0.6.0, an open framework for asynchronous reinforcement learning on trillion-parameter Mixture-of-Experts models. It trained GLM-5 on SWE tasks at up to 131k sequence length, with sub-5-minute step times and 256 rollouts, on 28 H200 nodes. This breakdown covers the inference and training optimizations behind those numbers — FP8 inference, Wide Expert Parallelism, prefill/decode disaggregation, router replay, and 3-D parallelism (FSDP, EP, CP). The post...",
-      "author": "Asif Razzaq",
-      "content": "Prime Intellect has released prime-rl 0.6.0, an open framework for asynchronous reinforcement learning on trillion-parameter Mixture-of-Experts models. It trained GLM-5 on SWE tasks at up to 131k sequence length, with sub-5-minute step times and 256 rollouts, on 28 H200 nodes. This breakdown covers the inference and training optimizations behind those numbers — FP8 inference, Wide Expert Parallelism, prefill/decode disaggregation, router replay, and 3-D parallelism (FSDP, EP, CP). The post...",
+      "description": "Reflection AI will pay $150 million a month beginning July 1, 2026 through 2029 for immediate access to Nvidia's latest GB300 AI chips and supporting hardware across SpaceX's Colossus 2 data center near Memphis, Tennessee.",
+      "author": "Kirsten Korosec",
+      "content": "Reflection AI will pay $150 million a month beginning July 1, 2026 through 2029 for immediate access to Nvidia's latest GB300 AI chips and supporting hardware across SpaceX's Colossus 2 data center near Memphis, Tennessee.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.915,
-        "confidence_mean": 0.99
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -45,226 +45,40 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-24T07:42:29.717299+00:00"
+        "consensus_timestamp": "2026-06-24T10:51:27.851794+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-24T07:42:29.717301+00:00"
+        "timestamp": "2026-06-24T10:51:27.851796+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "5fcfaccdd51a61ecc11ed8ba5cad088e",
-      "title": "Embed the world: Multimodal AI for searchable aerial imagery at scale",
+      "article_id": "d4380150b84aff0f4c13ac4ba3401449",
+      "title": "Amazon Bedrock AgentCore harness is now generally available: Go from idea to production-grade agent in minutes",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/embed-the-world-multimodal-ai-for-searchable-aerial-imagery-at-scale/",
-      "published_date": "2026-06-22T16:32:15+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-is-now-generally-available-go-from-idea-to-production-grade-agent-in-minutes/",
+      "published_date": "2026-06-18T17:32:22+00:00",
       "category": "Industry",
-      "description": "In this post, we walk through the problem space, our architecture on Amazon Bedrock and Amazon OpenSearch Serverless, the evaluation methodology we built on OpenStreetMap ground truth, four experiments that compared embedding models, fusion strategies, captioning, and search methods, and the practical guidance you can apply when building a similar system. You’ll learn which design choices move the needle for geospatial semantic search, including why Amazon Nova Multimodal Embeddings delivered...",
-      "author": "Gilbert V Lepadatu",
-      "content": "In this post, we walk through the problem space, our architecture on Amazon Bedrock and Amazon OpenSearch Serverless, the evaluation methodology we built on OpenStreetMap ground truth, four experiments that compared embedding models, fusion strategies, captioning, and search methods, and the practical guidance you can apply when building a similar system. You’ll learn which design choices move the needle for geospatial semantic search, including why Amazon Nova Multimodal Embeddings delivered...",
+      "description": "Today, Amazon Bedrock AgentCore harness is generally available. Two API calls (CreateHarness to define an agent, and InvokeHarness to run it), and you have an agent running in seconds. The agent runs in its own isolated environment with a filesystem and shell, so it can read files, run commands, and write code safely. It remembers users and conversations across sessions, picks up skills you point it at (including the AWS-curated catalog), browses the web, calls your tools through gateway or...",
+      "author": "Kosti Vasilakakis",
+      "content": "Today, Amazon Bedrock AgentCore harness is generally available. Two API calls (CreateHarness to define an agent, and InvokeHarness to run it), and you have an agent running in seconds. The agent runs in its own isolated environment with a filesystem and shell, so it can read files, run commands, and write code safely. It remembers users and conversations across sessions, picks up skills you point it at (including the AWS-curated catalog), browses the web, calls your tools through gateway or...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-24T07:42:29.714466+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-24T07:42:29.714468+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c33d109366ff00826a63ea9460393ba1",
-      "title": "EC2&#8217;s formally verified &#8220;isolation engine&#8221; provides mathematical assurance of virtual-machine isolation",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/ec2s-formally-verified-isolation-engine-provides-mathematical-assurance-of-virtual-machine-isolation",
-      "published_date": "2026-06-10T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Splitting the “separation kernel” off from the rest of the Nitro security system and using only a subset of the Rust programming language to code it enabled its formal verification.",
-      "author": "",
-      "content": "Splitting the “separation kernel” off from the rest of the Nitro security system and using only a subset of the Rust programming language to code it enabled its formal verification.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9125000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-24T07:42:29.716892+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-24T07:42:29.716894+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c2f9d2d3b6444b1a54b55555481657c9",
-      "title": "How an astrophysicist uses Codex to help simulate black holes",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
-      "published_date": "2026-06-11T00:00:00+00:00",
-      "category": "Industry",
-      "description": "Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.",
-      "author": "",
-      "content": "Discover how astrophysicist Chi-kwan Chan uses Codex to build black hole simulations, helping scientists study extreme physics and test Einstein’s theory of general relativity.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-24T07:42:29.714232+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-24T07:42:29.714234+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "61723eb70bfda818621616ed67bfa525",
-      "title": "Get back hours every day with autonomous agents in Amazon Quick",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/get-back-hours-every-day-with-autonomous-agents-in-amazon-quick/",
-      "published_date": "2026-06-17T20:35:39+00:00",
-      "category": "Industry",
-      "description": "Today, Quick gets even more powerful: new autonomous agents that work continuously on your behalf, an activity feed that helps you prioritize your most important work, and the ability to find insights across every data source your business runs on from a single question.",
-      "author": "Spencer Martenson",
-      "content": "Today, Quick gets even more powerful: new autonomous agents that work continuously on your behalf, an activity feed that helps you prioritize your most important work, and the ability to find insights across every data source your business runs on from a single question.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8999999999999999,
+        "overall_score": 0.8975,
         "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
@@ -296,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-24T07:42:29.714711+00:00"
+        "consensus_timestamp": "2026-06-24T10:51:27.850189+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +121,193 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-24T07:42:29.714713+00:00"
+        "timestamp": "2026-06-24T10:51:27.850192+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2bc230c6dc707550a05c0af0fb938bcf",
+      "title": "Maximize AI Factory Energy Efficiency Through Full-Stack Inference and Training Optimizations",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/maximize-ai-factory-energy-efficiency-through-full-stack-inference-and-training-optimizations/",
+      "published_date": "2026-06-23T16:30:00+00:00",
+      "category": "Industry",
+      "description": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating...",
+      "author": "Sachin Idgunji",
+      "content": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-24T10:51:27.852134+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-24T10:51:27.852136+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9e5e243cb7793d8de3d00c65f1681be1",
+      "title": "Mistral OCR 4 Brings Citation-Ready Structured Output to RAG, Agentic, and Enterprise Search Pipelines",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/06/23/mistral-ocr-4/",
+      "published_date": "2026-06-23T23:43:43+00:00",
+      "category": "Industry",
+      "description": "Mistral AI released OCR 4 on June 23, 2026, moving from clean text extraction to structured document output. Each block returns a bounding box, a typed classification, and per-page and per-word confidence scores. The model supports 170 languages, runs in a single self-hosted container, and feeds citation-ready inputs into RAG, agentic, and enterprise search pipelines through one API endpoint. The post Mistral OCR 4 Brings Citation-Ready Structured Output to RAG, Agentic, and Enterprise Search...",
+      "author": "Asif Razzaq",
+      "content": "Mistral AI released OCR 4 on June 23, 2026, moving from clean text extraction to structured document output. Each block returns a bounding box, a typed classification, and per-page and per-word confidence scores. The model supports 170 languages, runs in a single self-hosted container, and feeds citation-ready inputs into RAG, agentic, and enterprise search pipelines through one API endpoint. The post Mistral OCR 4 Brings Citation-Ready Structured Output to RAG, Agentic, and Enterprise Search...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-24T10:51:27.853602+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-24T10:51:27.853604+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "52bd57a60d16027cb38bc3d3e4ef4489",
+      "title": "Helping build shared standards for advanced AI",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+      "published_date": "2026-06-23T13:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+      "author": "",
+      "content": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8775000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-24T10:51:27.848843+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-24T10:51:27.848846+00:00"
       },
       "article_type": "article"
     }
