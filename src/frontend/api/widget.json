@@ -1,23 +1,85 @@
 {
-  "updated": "2026-06-27T17:11:30.081735+00:00",
+  "updated": "2026-06-27T21:03:48.881399+00:00",
   "top_stories": [
     {
-      "article_id": "ea7c283e8572b4b8bfd970bdc6325d0d",
-      "title": "DeepSeek Releases DSpark, a Speculative Decoding Framework That Accelerates DeepSeek-V4 Per-User Generation 60–85% Over MTP-1",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/",
-      "published_date": "2026-06-27T16:59:58+00:00",
+      "article_id": "cc9abcde0fd7efaf9d3e12751c1523df",
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "published_date": "2026-06-26T17:43:22+00:00",
       "category": "Industry",
-      "description": "DeepSeek open-sourced DSpark, a speculative decoding framework that attaches a draft module to existing DeepSeek-V4 weights. It pairs a parallel draft backbone with a lightweight Markov head to cut suffix decay, then adds confidence-scheduled verification that tailors how many tokens get checked to real-time GPU load. Offline, accepted length rises 16–31% over DFlash and Eagle3; in production it speeds per-user generation 57–85% over the MTP-1 baseline, losslessly. The training repo, DeepSpec,...",
-      "author": "Asif Razzaq",
-      "content": "DeepSeek open-sourced DSpark, a speculative decoding framework that attaches a draft module to existing DeepSeek-V4 weights. It pairs a parallel draft backbone with a lightweight Markov head to cut suffix decay, then adds confidence-scheduled verification that tailors how many tokens get checked to real-time GPU load. Offline, accepted length rises 16–31% over DFlash and Eagle3; in production it speeds per-user generation 57–85% over the MTP-1 baseline, losslessly. The training repo, DeepSpec,...",
+      "description": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a […]",
+      "author": "Theresa Loconsolo",
+      "content": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.864140+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.864165+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "4fec5dcfec734a0a657b48136d3ccdde",
+      "title": "Q&amp;A: How KRAFTON Built PUBG Ally, a Co-Playable Character Powered by NVIDIA ACE",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace/",
+      "published_date": "2026-06-25T16:38:18+00:00",
+      "category": "Industry",
+      "description": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI...",
+      "author": "Elizabeth Goodman",
+      "content": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
+        "quality_score": 0.95,
         "novelty_score": 0.9,
-        "impact_score": 0.7,
-        "overall_score": 0.8350000000000001,
-        "confidence_mean": 0.8
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.053745+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.864531+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,131 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.053747+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "859b4a91a33119cf811236137d3de151",
-      "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
-      "published_date": "2026-06-23T09:00:38+00:00",
-      "category": "Industry",
-      "description": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
-      "author": "Chris Porter",
-      "content": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.99
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051385+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051388+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "75bf0308d31306af8832e6a499f5a49f",
-      "title": "Uniswap (UNI) Price Prediction: 2025, 2026, 2030",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/money/uniswap-uni-price-prediction",
-      "published_date": "2026-06-27T14:20:06+00:00",
-      "category": "Industry",
-      "description": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
-      "author": "Margaret Jackson",
-      "content": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8875000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.053665+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.053667+00:00"
+        "timestamp": "2026-06-27T21:03:48.864532+00:00"
       },
       "article_type": "article"
     },
@@ -231,41 +169,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.049499+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.862703+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.049502+00:00"
+        "timestamp": "2026-06-27T21:03:48.862704+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d929b75175d9730f1b4d6fe32e6cdb27",
-      "title": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/",
-      "published_date": "2026-06-25T16:41:47+00:00",
+      "article_id": "859b4a91a33119cf811236137d3de151",
+      "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+      "published_date": "2026-06-23T09:00:38+00:00",
       "category": "Industry",
-      "description": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for your model size (1B to 64B parameters), and apply activation checkpointing strategically. By the end, you have a practical framework for tuning your training configuration and launching distributed training jobs on P6-B200...",
-      "author": "Andrea Gallo",
-      "content": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for your model size (1B to 64B parameters), and apply activation checkpointing strategically. By the end, you have a practical framework for tuning your training configuration and launching distributed training jobs on P6-B200...",
+      "description": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
+      "author": "Chris Porter",
+      "content": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.050643+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.863636+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +245,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.050645+00:00"
+        "timestamp": "2026-06-27T21:03:48.863638+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "2ee68e7cfe439742749c86981c05b317",
+      "title": "Daybreak: Tools for securing every organization in the world",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/daybreak-securing-the-world",
+      "published_date": "2026-06-22T10:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+      "author": "",
+      "content": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.862822+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.862823+00:00"
       },
       "article_type": "article"
     }

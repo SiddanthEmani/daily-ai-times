@@ -1,23 +1,85 @@
 {
-  "generated_at": "2026-06-27T17:11:30.078943+00:00",
+  "generated_at": "2026-06-27T21:03:48.879716+00:00",
   "articles": [
     {
-      "article_id": "ea7c283e8572b4b8bfd970bdc6325d0d",
-      "title": "DeepSeek Releases DSpark, a Speculative Decoding Framework That Accelerates DeepSeek-V4 Per-User Generation 60–85% Over MTP-1",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/",
-      "published_date": "2026-06-27T16:59:58+00:00",
+      "article_id": "cc9abcde0fd7efaf9d3e12751c1523df",
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "published_date": "2026-06-26T17:43:22+00:00",
       "category": "Industry",
-      "description": "DeepSeek open-sourced DSpark, a speculative decoding framework that attaches a draft module to existing DeepSeek-V4 weights. It pairs a parallel draft backbone with a lightweight Markov head to cut suffix decay, then adds confidence-scheduled verification that tailors how many tokens get checked to real-time GPU load. Offline, accepted length rises 16–31% over DFlash and Eagle3; in production it speeds per-user generation 57–85% over the MTP-1 baseline, losslessly. The training repo, DeepSpec,...",
-      "author": "Asif Razzaq",
-      "content": "DeepSeek open-sourced DSpark, a speculative decoding framework that attaches a draft module to existing DeepSeek-V4 weights. It pairs a parallel draft backbone with a lightweight Markov head to cut suffix decay, then adds confidence-scheduled verification that tailors how many tokens get checked to real-time GPU load. Offline, accepted length rises 16–31% over DFlash and Eagle3; in production it speeds per-user generation 57–85% over the MTP-1 baseline, losslessly. The training repo, DeepSpec,...",
+      "description": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a […]",
+      "author": "Theresa Loconsolo",
+      "content": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending. OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a growing list of companies building their way out of single-supplier risk. The goal is less of a […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.864140+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.864165+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "4fec5dcfec734a0a657b48136d3ccdde",
+      "title": "Q&amp;A: How KRAFTON Built PUBG Ally, a Co-Playable Character Powered by NVIDIA ACE",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace/",
+      "published_date": "2026-06-25T16:38:18+00:00",
+      "category": "Industry",
+      "description": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI...",
+      "author": "Elizabeth Goodman",
+      "content": "AI companions in games have long been constrained by fixed dialogue. PUBG Ally is a different kind of system. Built by KRAFTON for PUBG: BATTLEGROUNDS, this AI...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.8,
+        "quality_score": 0.95,
         "novelty_score": 0.9,
-        "impact_score": 0.7,
-        "overall_score": 0.8350000000000001,
-        "confidence_mean": 0.8
+        "impact_score": 0.95,
+        "overall_score": 0.9225000000000001,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +110,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.053745+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.864531+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,131 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.053747+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "859b4a91a33119cf811236137d3de151",
-      "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
-      "published_date": "2026-06-23T09:00:38+00:00",
-      "category": "Industry",
-      "description": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
-      "author": "Chris Porter",
-      "content": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.99
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051385+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051388+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "75bf0308d31306af8832e6a499f5a49f",
-      "title": "Uniswap (UNI) Price Prediction: 2025, 2026, 2030",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/money/uniswap-uni-price-prediction",
-      "published_date": "2026-06-27T14:20:06+00:00",
-      "category": "Industry",
-      "description": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
-      "author": "Margaret Jackson",
-      "content": "The post Uniswap (UNI) Price Prediction: 2025, 2026, 2030 by Margaret Jackson appeared first on Benzinga. Visit Benzinga to get more great content like this. Analysts are forecasting that Uniswap (UNI) could reach $22.82 by 2030. Feeling confident about this UNI price prediction? You can trade Uniswap on Coinbase—and if you’re new to the platform, you could earn up to $400 in rewards by completing a few quick educational lessons and making your first qualifying trade. Uniswap (UNI) is a …...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8875000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.053665+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.053667+00:00"
+        "timestamp": "2026-06-27T21:03:48.864532+00:00"
       },
       "article_type": "article"
     },
@@ -231,41 +169,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.049499+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.862703+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.049502+00:00"
+        "timestamp": "2026-06-27T21:03:48.862704+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d929b75175d9730f1b4d6fe32e6cdb27",
-      "title": "Optimize model training on Amazon SageMaker AI with NVIDIA Blackwell",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/",
-      "published_date": "2026-06-25T16:41:47+00:00",
+      "article_id": "859b4a91a33119cf811236137d3de151",
+      "title": "NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+      "published_date": "2026-06-23T09:00:38+00:00",
       "category": "Industry",
-      "description": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for your model size (1B to 64B parameters), and apply activation checkpointing strategically. By the end, you have a practical framework for tuning your training configuration and launching distributed training jobs on P6-B200...",
-      "author": "Andrea Gallo",
-      "content": "This post shows you how to configure training jobs on Amazon SageMaker AI to get the most out of Blackwell’s architecture on AWS. You learn how to select batch sizes and sequence lengths that take advantage of Blackwell’s expanded memory, choose the right precision format for your model size (1B to 64B parameters), and apply activation checkpointing strategically. By the end, you have a practical framework for tuning your training configuration and launching distributed training jobs on P6-B200...",
+      "description": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
+      "author": "Chris Porter",
+      "content": "NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +234,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.050643+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.863636+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.050645+00:00"
+        "timestamp": "2026-06-27T21:03:48.863638+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "742c8da9d681a4be704eae07a8bc9fdc",
-      "title": "Build Your Own Transaction Foundation Model for Financial Intelligence",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/build-your-own-transaction-foundation-model-for-financial-intelligence/",
-      "published_date": "2026-06-16T20:30:08+00:00",
+      "article_id": "2ee68e7cfe439742749c86981c05b317",
+      "title": "Daybreak: Tools for securing every organization in the world",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/daybreak-securing-the-world",
+      "published_date": "2026-06-22T10:00:00+00:00",
       "category": "Industry",
-      "description": "Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest signals an...",
-      "author": "Benjamin Wu",
-      "content": "Every swipe, transfer, and payment on a modern financial network encodes a pattern of human behavior. Transaction data is one of the richest signals an...",
+      "description": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+      "author": "",
+      "content": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8799999999999999,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -354,42 +292,166 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.92,
-        "confidence": 0.96,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.053017+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.862822+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.776,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.053019+00:00"
+        "timestamp": "2026-06-27T21:03:48.862823+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "69341e9db3326edff7940a7e2d14bf89",
-      "title": "Inside NVIDIA Halos for Robotics: A Full-Stack Functional Safety System for Physical AI",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/inside-nvidia-halos-for-robotics-a-full-stack-functional-safety-system-for-physical-ai/",
-      "published_date": "2026-06-22T13:00:00+00:00",
+      "article_id": "ac819c3f5c4d32595b8078b2d4cc43b6",
+      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
+      "published_date": "2026-06-18T08:00:00+00:00",
       "category": "Industry",
-      "description": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional...",
-      "author": "Suhas Hariharapura Sheshadri",
-      "content": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional...",
+      "description": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
+      "author": "",
+      "content": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.862936+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.862938+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a06caf467c318d10558a1f0832fe848f",
+      "title": "How FERC’s Large-Load Interconnection Actions Help Address Grid Stress, Improve Affordability",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/ferc-large-load-interconnection/",
+      "published_date": "2026-06-18T20:00:27+00:00",
+      "category": "Industry",
+      "description": "In a consequential grid infrastructure decision, the Federal Energy Regulatory Commission (FERC) today issued a major milestone on large-load interconnection impacting how those building AI factories, semiconductor fabrication support systems and advanced manufacturing facilities can connect to the grid. In the era of AI, which NVIDIA founder and CEO Jensen Huang has described as a […]",
+      "author": "Vladimir Troy",
+      "content": "In a consequential grid infrastructure decision, the Federal Energy Regulatory Commission (FERC) today issued a major milestone on large-load interconnection impacting how those building AI factories, semiconductor fabrication support systems and advanced manufacturing facilities can connect to the grid. In the era of AI, which NVIDIA founder and CEO Jensen Huang has described as a […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.92,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.863803+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.752,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.863804+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b5303b4d6c6d2151b53f8021ca7f97a5",
+      "title": "Building agentic AI applications with a modern data mesh strategy on AWS",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/building-agentic-ai-applications-with-a-modern-data-mesh-strategy-on-aws/",
+      "published_date": "2026-06-25T16:35:07+00:00",
+      "category": "Industry",
+      "description": "This post shows how to build a governed, serverless data mesh on AWS that provides the secure, scalable data foundation production agentic AI requires.",
+      "author": "Venkata Sistla",
+      "content": "This post shows how to build a governed, serverless data mesh on AWS that provides the secure, scalable data foundation production agentic AI requires.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8699999999999999,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -417,40 +479,102 @@
           }
         },
         "score": 0.95,
-        "confidence": 0.98,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.052936+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.863306+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.052939+00:00"
+        "timestamp": "2026-06-27T21:03:48.863308+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c7153b27efe8788f2cd2cca28140c28f",
-      "title": "Spark a connection with DARPA’s Multi X Office",
-      "source": "darpa_ai_research",
-      "url": "https://www.darpa.mil/news/2026/mxo-spark-tank-pitch-day",
-      "published_date": "2026-06-26T12:48:05+00:00",
-      "category": "Government",
-      "description": "Innovators and out-of-the-box thinkers invited to engage at MXO Spark Tank and Pitch Day.",
-      "author": "outreach@darpa.mil",
-      "content": "Innovators and out-of-the-box thinkers invited to engage at MXO Spark Tank and Pitch Day.",
+      "article_id": "2bc230c6dc707550a05c0af0fb938bcf",
+      "title": "Maximize AI Factory Energy Efficiency Through Full-Stack Inference and Training Optimizations",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/maximize-ai-factory-energy-efficiency-through-full-stack-inference-and-training-optimizations/",
+      "published_date": "2026-06-23T16:30:00+00:00",
+      "category": "Industry",
+      "description": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating...",
+      "author": "Sachin Idgunji",
+      "content": "Power can account for 40% of the operating expenses (OpEx) to run an AI factory. Each watt can be spent on overhead, data ingestion, training, or generating...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "overall_score": 0.86,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.92,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.864605+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.752,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.864607+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c22cebff70e99e1227446bcb5c8a60d3",
+      "title": "Running ComfyUI workflows on Amazon SageMaker AI processing jobs",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/running-comfyui-workflows-on-amazon-sagemaker-ai-processing-jobs/",
+      "published_date": "2026-06-22T16:28:46+00:00",
+      "category": "Industry",
+      "description": "In this post, we walk you through how to deploy ComfyUI workflows on Amazon SageMaker AI processing jobs to generate hundreds of high-quality images in a single batch. You learn how to set up the infrastructure using AWS Cloud Development Kit (AWS CDK), configure GPU-accelerated processing, and automate image generation at scale. You can then adapt this solution to your ComfyUI workflows specific to your needs. We will guide you through a practical, step-by-step process to automate ComfyUI...",
+      "author": "Nick Biso",
+      "content": "In this post, we walk you through how to deploy ComfyUI workflows on Amazon SageMaker AI processing jobs to generate hundreds of high-quality images in a single batch. You learn how to set up the infrastructure using AWS Cloud Development Kit (AWS CDK), configure GPU-accelerated processing, and automate image generation at scale. You can then adapt this solution to your ComfyUI workflows specific to your needs. We will guide you through a practical, step-by-step process to automate ComfyUI...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -478,42 +602,228 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.8,
-        "confidence": 0.8,
+        "score": 0.9,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.048689+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.863475+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.048704+00:00"
+        "timestamp": "2026-06-27T21:03:48.863476+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "177b149e4055c604a00c54c52b736351",
-      "title": "Introducing Web Search on Amazon Bedrock AgentCore",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-agentcore/",
-      "published_date": "2026-06-19T14:15:24+00:00",
+      "article_id": "657aa66a4d6b1daea466bb1a3ca1767f",
+      "title": "The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/the-performance-dividend-optimizing-postgresql-on-azure-directly-in-visual-studio-code/",
+      "published_date": "2026-06-26T17:00:00+00:00",
       "category": "Industry",
-      "description": "Web Search on Amazon Bedrock AgentCore is now generally available. In this post, we walk through what makes Web Search on Amazon Bedrock AgentCore different, why it matters, and how to wire it in with a few lines of code.",
-      "author": "Veda Raman",
-      "content": "Web Search on Amazon Bedrock AgentCore is now generally available. In this post, we walk through what makes Web Search on Amazon Bedrock AgentCore different, why it matters, and how to wire it in with a few lines of code.",
+      "description": "Poor database performance is never just a database problem. In enterprise teams, it shows up as missed SLAs, delayed releases, frustrated development teams, and rising operational risk. The performance problem compounds further in business impact, often resulting in frustrated customers, retention and conversion risk, and lost revenue. The post The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code appeared first on Microsoft Azure Blog.",
+      "author": "Jesse Sullivan",
+      "content": "Poor database performance is never just a database problem. In enterprise teams, it shows up as missed SLAs, delayed releases, frustrated development teams, and rising operational risk. The performance problem compounds further in business impact, often resulting in frustrated customers, retention and conversion risk, and lost revenue. The post The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code appeared first on Microsoft Azure Blog.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.863052+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.863054+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "26bc0e99c212b88a6c87b04b9c96ed57",
+      "title": "How to Optimize Transformer-Based Models for Low-Precision Training",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/",
+      "published_date": "2026-06-16T16:00:00+00:00",
+      "category": "Industry",
+      "description": "Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size, training runs consume more GPU...",
+      "author": "Jonathan Mitchell",
+      "content": "Transformer architectures are the backbone of many modern large language and generative AI models. As these models grow in size, training runs consume more GPU...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.864864+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.864865+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "604c32c0b95d3a2e8af76cda98a54ad0",
+      "title": "From pixels to planning: Earth AI for nature restoration",
+      "source": "google_research_blog",
+      "url": "https://research.google/blog/from-pixels-to-planning-earth-ai-for-nature-restoration/",
+      "published_date": "2026-06-16T17:30:00+00:00",
+      "category": "Industry",
+      "description": "Climate & Sustainability",
+      "author": "",
+      "content": "Climate & Sustainability",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-06-27T21:03:48.864960+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-06-27T21:03:48.864962+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "90136b5a207b2501306b1702cdf123d2",
+      "title": "Build On-Device AI Companions with the NVIDIA ACE Game Agent SDK and Unreal Engine 5 Plugins",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/",
+      "published_date": "2026-06-16T17:00:00+00:00",
+      "category": "Industry",
+      "description": "NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS Unreal Engine plugin. This...",
+      "author": "Phillip Singh",
+      "content": "NVIDIA RTX technologies are deeply integrated into Unreal Engine 5 through the NVIDIA RTX Branch of Unreal Engine and the NVIDIA DLSS Unreal Engine plugin. This...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.85,
         "quality_score": 0.9,
         "novelty_score": 0.7,
-        "impact_score": 0.85,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.845,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -541,350 +851,40 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.9,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051177+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.864840+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.051179+00:00"
+        "timestamp": "2026-06-27T21:03:48.864841+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7948d79cddfa20454a5e1ce2c3a60aae",
-      "title": "Shared infrastructure, isolated tenants: Pool model multi-tenancy with Amazon Bedrock AgentCore",
+      "article_id": "9acba731e1b773e2f2ba7116c49d10c8",
+      "title": "Retrofit, don’t rebuild: Agentic overlays for transforming legacy enterprise services",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/",
-      "published_date": "2026-06-23T15:43:59+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/retrofit-dont-rebuild-agentic-overlays-for-transforming-legacy-enterprise-services/",
+      "published_date": "2026-06-25T17:55:10+00:00",
       "category": "Industry",
-      "description": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals.",
-      "author": "Ashley Chen",
-      "content": "In this post, you will learn patterns for implementing production-ready multi-tenant systems using Amazon Bedrock AgentCore. You will see these patterns demonstrated through healthcare AI agents that serve multiple clinics and hospitals.",
+      "description": "In this technical collaboration between AWS and the authors, we present a pragmatic solution: agentic overlays. Agentic overlays are thin wrapper layers that transform traditional REST-based services into agents capable of participating in A2A interactions. They also expose REST APIs as tools compatible with the Model Context Protocol (MCP). Together, they let enterprises add A2A capabilities to existing REST services without rewriting business logic, without duplicating code, and without...",
+      "author": "Renuka Kumar",
+      "content": "In this technical collaboration between AWS and the authors, we present a pragmatic solution: agentic overlays. Agentic overlays are thin wrapper layers that transform traditional REST-based services into agents capable of participating in A2A interactions. They also expose REST APIs as tools compatible with the Model Context Protocol (MCP). Together, they let enterprises add A2A capabilities to existing REST services without rewriting business logic, without duplicating code, and without...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8375,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051008+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051010+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "afcf5c25ea598348a802c9d66f5dafcd",
-      "title": "Previewing GPT-5.6 Sol: a next-generation model",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
-      "published_date": "2026-06-26T10:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
-      "author": "",
-      "content": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.8,
-        "overall_score": 0.8250000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.049403+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.049406+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9449af7fdf173ff0b494138cc769c302",
-      "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
-      "published_date": "2026-06-24T00:05:37+00:00",
-      "category": "Industry",
-      "description": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
-      "author": "Josiah Byers",
-      "content": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051304+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051307+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "58e13258fe1720ea880bf0cafbdfb641",
-      "title": "Hotter Than a Hot Tub: The 45°C Breakthrough to Cool AI’s Biggest Machines",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
-      "published_date": "2026-06-22T05:00:22+00:00",
-      "category": "Industry",
-      "description": "Hot tubs sit at about 38 to 40 degrees Celsius, warm enough that most people can only soak for about 15 minutes. NVIDIA’s newest AI servers can run their cooling liquid even hotter — up to 45 degrees Celsius, or 113 degrees Fahrenheit. That higher temperature limit is precisely what makes them more energy efficient. […]",
-      "author": "Josh Parker",
-      "content": "Hot tubs sit at about 38 to 40 degrees Celsius, warm enough that most people can only soak for about 15 minutes. NVIDIA’s newest AI servers can run their cooling liquid even hotter — up to 45 degrees Celsius, or 113 degrees Fahrenheit. That higher temperature limit is precisely what makes them more energy efficient. […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051663+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051665+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "729895262a6d95507cbc4e13568e26a7",
-      "title": "Hands Free, AIs Forward: NVIDIA XR AI Brings Agents to AR Glasses",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-xr-ai/",
-      "published_date": "2026-06-16T22:30:41+00:00",
-      "category": "Industry",
-      "description": "NVIDIA XR AI is now available in public beta, giving developers a framework for building multimodal AI agents for AR glasses and XR devices.",
-      "author": "David Chu",
-      "content": "NVIDIA XR AI is now available in public beta, giving developers a framework for building multimodal AI agents for AR glasses and XR devices.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.051821+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-06-27T17:11:30.051824+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3bceefb316639e216b38c879502eb3bc",
-      "title": "Adobe acquires image and video enhancement tool maker Topaz Labs",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/",
-      "published_date": "2026-06-25T13:30:00+00:00",
-      "category": "Industry",
-      "description": "Adobe said that it will integrate Topaz Labs' tools across its apps.",
-      "author": "Ivan Mehta",
-      "content": "Adobe said that it will integrate Topaz Labs' tools across its apps.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.835,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -916,7 +916,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-06-27T17:11:30.052453+00:00"
+        "consensus_timestamp": "2026-06-27T21:03:48.863211+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -927,7 +927,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-06-27T17:11:30.052455+00:00"
+        "timestamp": "2026-06-27T21:03:48.863212+00:00"
       },
       "article_type": "article"
     }
@@ -935,7 +935,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 216.10313963890076,
+    "processing_time": 218.41896271705627,
     "components": [
       "collection",
       "bulk_scoring",
@@ -953,10 +953,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 108,
+      "total_processed": 111,
       "candidates": {
-        "headlines": 8,
-        "articles": 100,
+        "headlines": 7,
+        "articles": 104,
         "research_papers": 0
       },
       "selected": {
