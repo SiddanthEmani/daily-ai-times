@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T07:04:34.165610+00:00",
+  "updated": "2026-07-03T10:38:00.503753+00:00",
   "top_stories": [
     {
       "article_id": "3865223c19e48da7ba6252a2bf34a881",
@@ -48,7 +48,7 @@
         "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-03T07:04:34.136242+00:00"
+        "consensus_timestamp": "2026-07-03T10:38:00.472717+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,82 +59,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-03T07:04:34.136245+00:00"
+        "timestamp": "2026-07-03T10:38:00.472720+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "9449af7fdf173ff0b494138cc769c302",
-      "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
-      "published_date": "2026-06-24T00:05:37+00:00",
+      "article_id": "1142ff8b126590073b891f9837ac854c",
+      "title": "CCCL Runtime: A Modern C++ Runtime for CUDA",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/cccl-runtime-a-modern-c-runtime-for-cuda/",
+      "published_date": "2026-06-22T16:00:00+00:00",
       "category": "Industry",
-      "description": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
-      "author": "Josiah Byers",
-      "content": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
-        "confidence_mean": 0.98
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-03T07:04:34.135945+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-03T07:04:34.135947+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ca1011ea7e64ced2943d94611017ae65",
-      "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-      "published_date": "2026-06-24T06:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
-      "author": "",
-      "content": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+      "description": "The NVIDIA CUDA Core Compute Libraries (CCCL) provides delightful and efficient abstractions for CUDA developers in C++ and Python. It features: Parallel...",
+      "author": "Piotr Ciolkosz",
+      "content": "The NVIDIA CUDA Core Compute Libraries (CCCL) provides delightful and efficient abstractions for CUDA developers in C++ and Python. It features: Parallel...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -172,7 +110,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-03T07:04:34.134302+00:00"
+        "consensus_timestamp": "2026-07-03T10:38:00.474085+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,20 +121,82 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-03T07:04:34.134304+00:00"
+        "timestamp": "2026-07-03T10:38:00.474088+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "97afb2250179bf9d66861eaed622b3f3",
-      "title": "Samsung Electronics brings ChatGPT and Codex to employees",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
-      "published_date": "2026-06-21T23:00:00+00:00",
+      "article_id": "08970d854e6029ca072976a0866de73b",
+      "title": "The Google Health API Got a CLI: ghealth is an Open-Source Tool for Your Fitbit Air Data",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/07/02/the-google-health-api-got-a-cli-ghealth-is-an-open-source-tool-for-your-fitbit-air-data/",
+      "published_date": "2026-07-02T08:46:56+00:00",
       "category": "Industry",
-      "description": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI’s largest enterprise AI rollouts.",
-      "author": "",
-      "content": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI’s largest enterprise AI rollouts.",
+      "description": "The Google Health API now has an open-source CLI. ghealth is a single Go binary that exposes 40 data types as agent-ready JSON. It is a community project, not an official Google release. Here's how it works, and what to check before granting OAuth access. The post The Google Health API Got a CLI: ghealth is an Open-Source Tool for Your Fitbit Air Data appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "The Google Health API now has an open-source CLI. ghealth is a single Go binary that exposes 40 data types as agent-ready JSON. It is a community project, not an official Google release. Here's how it works, and what to check before granting OAuth access. The post The Google Health API Got a CLI: ghealth is an Open-Source Tool for Your Fitbit Air Data appeared first on MarkTechPost.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-03T10:38:00.474733+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-03T10:38:00.474736+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9449af7fdf173ff0b494138cc769c302",
+      "title": "NVIDIA and AWS Collaborate to Bring AI to Production at Scale",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-aws-ai-production-scale/",
+      "published_date": "2026-06-24T00:05:37+00:00",
+      "category": "Industry",
+      "description": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
+      "author": "Josiah Byers",
+      "content": "Building AI systems at scale is demanding, requiring low-latency inference, fast vector search, strong GPU price-performance and infrastructure that can grow without multiplying operational complexity. NVIDIA’s latest work with Amazon Web Services (AWS) addresses each of those constraints. Across Amazon OpenSearch and Amazon EC2, NVIDIA AI infrastructure is giving enterprises more practical paths to deploy […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
@@ -234,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-03T07:04:34.134683+00:00"
+        "consensus_timestamp": "2026-07-03T10:38:00.472412+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,27 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-03T07:04:34.134686+00:00"
+        "timestamp": "2026-07-03T10:38:00.472415+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "816c9cd5ee0115e44dd60198bde3ead1",
-      "title": "How Telcos Build Autonomous Networks with Agentic AI",
+      "article_id": "2ae3e6776591a7f3e88281158ea1b354",
+      "title": "Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/how-telcos-build-autonomous-networks-with-agentic-ai/",
-      "published_date": "2026-06-23T06:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support/",
+      "published_date": "2026-06-25T16:43:48+00:00",
       "category": "Industry",
-      "description": "Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the journey to autonomy. In...",
-      "author": "Amogh Dendukuri",
-      "content": "Telecom operators are adopting AI across network operations, customer care, and back-office workflows, but most are still early in the journey to autonomy. In...",
+      "description": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
+      "author": "Peter Kisfaludi",
+      "content": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "impact_score": 0.98,
+        "overall_score": 0.8935,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-03T07:04:34.137516+00:00"
+        "consensus_timestamp": "2026-07-03T10:38:00.473755+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-03T07:04:34.137518+00:00"
+        "timestamp": "2026-07-03T10:38:00.473758+00:00"
       },
       "article_type": "article"
     }
