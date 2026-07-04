@@ -30,6 +30,7 @@ const state = {
     partitioned: null,
     sections: ['All'],
     mastheadClock: null,
+    masthead: null,
 };
 
 const TAIL_POOLS = [
@@ -112,6 +113,7 @@ async function loadStories() {
         if (!res.ok && res.status !== 304) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         const raw = Array.isArray(data.articles) ? data.articles : [];
+        state.masthead = data.masthead || null;
         return raw.map((r, i) => normalize(r, i));
     } finally {
         clearTimeout(timer);
@@ -139,6 +141,14 @@ function sectionCounts(all) {
 // focusIdx and card idx stay in lockstep.
 function visibleGridStories() {
     return filteredGrid();
+}
+
+// Falls back to the static default when latest.json has no masthead block yet
+// (e.g. cached responses from before this field existed).
+function mastheadVolumeLabel() {
+    const m = state.masthead;
+    if (!m || !m.volume_roman || !m.issue_number) return undefined;
+    return `Vol. ${m.volume_roman} · No. ${m.issue_number.toLocaleString('en-US')}`;
 }
 
 function buildPageMarkup() {
@@ -197,7 +207,7 @@ function buildPageMarkup() {
     return `
         ${tickerHTML(tickerItems)}
         <div class="page">
-            ${mastheadHTML()}
+            ${mastheadHTML({ volume: mastheadVolumeLabel() })}
             ${aboveBlock}
             ${showAbove ? '' : navMarkup}
             ${resultBar}

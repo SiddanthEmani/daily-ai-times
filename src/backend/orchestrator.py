@@ -101,6 +101,52 @@ class NewsProcessingPipeline:
     def _get_scripts_test_output_dir() -> Path:
         """Get the scripts/test_output directory path."""
         return Path(__file__).parent.parent.parent / "scripts" / "test_output"
+
+    # Masthead epoch: Volume I began in 2015, so the roman-numeral volume
+    # ticks up once a year (2026 -> XII, matching the paper's prior static default).
+    MASTHEAD_EPOCH_YEAR = 2014
+    MASTHEAD_FALLBACK_ISSUE = 1508
+
+    @staticmethod
+    def _to_roman(number: int) -> str:
+        """Convert a positive integer to a roman numeral string."""
+        values = [
+            (1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'),
+            (100, 'C'), (90, 'XC'), (50, 'L'), (40, 'XL'),
+            (10, 'X'), (9, 'IX'), (5, 'V'), (4, 'IV'), (1, 'I'),
+        ]
+        result = []
+        for value, numeral in values:
+            count, number = divmod(number, value)
+            result.append(numeral * count)
+        return ''.join(result)
+
+    def _next_masthead_info(self) -> Dict[str, Any]:
+        """Compute the next Volume/Issue for the masthead.
+
+        Volume rolls up once a year off a fixed epoch. The issue number
+        increments by one on every pipeline run, continuing from whatever
+        was last committed to src/frontend/api/latest.json.
+        """
+        now = datetime.now(timezone.utc)
+        volume_number = now.year - self.MASTHEAD_EPOCH_YEAR
+
+        project_root = Path(__file__).parent.parent.parent
+        previous_path = project_root / "src" / "frontend" / "api" / "latest.json"
+        previous_issue = None
+        try:
+            with open(previous_path, 'r', encoding='utf-8') as f:
+                previous_issue = json.load(f).get('masthead', {}).get('issue_number')
+        except (FileNotFoundError, json.JSONDecodeError, AttributeError):
+            previous_issue = None
+
+        issue_number = (previous_issue + 1) if isinstance(previous_issue, int) else self.MASTHEAD_FALLBACK_ISSUE
+
+        return {
+            'volume_number': volume_number,
+            'volume_roman': self._to_roman(volume_number),
+            'issue_number': issue_number,
+        }
     
     @staticmethod
     def _create_progress_bar(description: str, total: int, transient: bool = True) -> Progress:
@@ -1160,6 +1206,7 @@ class NewsProcessingPipeline:
             # Create main API response
             api_response = {
                 'generated_at': self._get_current_timestamp(),
+                'masthead': self._next_masthead_info(),
                 'articles': normalized_articles,
                 'count': len(normalized_articles),
                 'pipeline_info': {
