@@ -38,6 +38,9 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+/* .below-bleed intentionally spans 100vw to break out of .page's max-width;
+   this guards against the sub-pixel horizontal scrollbar that vw can introduce. */
+html, body { overflow-x: hidden; }
 body {
   background: var(--paper);
   color: var(--ink);
@@ -302,7 +305,23 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .swing-body p { margin: 0 0 9px; font-size: 14px; line-height: 1.5; text-align: justify; hyphens: auto; }
 
 /* ---------- Below the fold grid ---------- */
+/* On wide viewports .page's 1240px reading column leaves large empty
+   margins. .below-bleed escapes that cap and re-centers .below at a wider
+   max-width, so the outer story column drifts toward the left margin and
+   the sidebar column (audio/markets/opinion) drifts toward the right
+   margin, using up the gap instead of stacking everything in the middle.
+   At viewports narrower than .page's max-width this is a no-op: both
+   .below-bleed and .below simply track the viewport, same as .page does. */
+.below-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .below {
+  max-width: 1960px;
+  margin: 0 auto;
+  padding-left: 32px; padding-right: 32px;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
   padding-top: 28px;
 }
