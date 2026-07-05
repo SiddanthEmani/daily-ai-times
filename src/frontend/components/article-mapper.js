@@ -59,11 +59,11 @@ function rankByScore(stories) {
 }
 
 // Partition ranked stories into frontpage slots.
-//   lead: highest-scoring
-//   swing: 2nd highest
-//   briefing: next 5 (shown as a numbered list under the briefing)
-//   extras: next 3 (shown as "Also In The News" under the briefing)
-//   grid: everything remaining
+//   lead: highest-scoring, shown above the fold
+//   swing/briefing/extras: computed for the contract but not rendered as
+//     separate blocks in the current layout — the 2nd-ranked story and on
+//     appear as ordinary grid cards instead (see grid below).
+//   grid: everything but the lead
 export function partition(stories) {
     const ranked = rankByScore(stories);
     return {
@@ -71,7 +71,7 @@ export function partition(stories) {
         swing:    ranked[1] || null,
         briefing: ranked.slice(2, 7),
         extras:   ranked.slice(7, 10),
-        grid:     ranked.slice(2),
+        grid:     ranked.slice(1),
         all:      ranked,
     };
 }
