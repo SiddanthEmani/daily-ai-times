@@ -18,10 +18,10 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy_1.outputs.page_url || steps.deploy_2.outputs.page_url || steps.deploy_3.outputs.page_url }}
 
     steps:
     - name: Checkout repository
@@ -45,8 +45,37 @@ jobs:
       with:
         path: site
 
-    - name: Deploy to GitHub Pages
-      id: deployment
+    # actions/deploy-pages intermittently fails with "Deployment failed, try
+    # again later" — a transient error from GitHub's Pages backend on that
+    # specific deployment ID, not something a retried status poll can recover
+    # from. Each attempt below creates a brand-new deployment, which is what
+    # actually resolves it.
+    - name: Deploy to GitHub Pages (attempt 1)
+      id: deploy_1
+      uses: actions/deploy-pages@v4
+      continue-on-error: true
+      with:
+        timeout: 600000
+
+    - name: Wait before retry 1
+      if: steps.deploy_1.outcome == 'failure'
+      run: sleep 15
+
+    - name: Deploy to GitHub Pages (attempt 2)
+      id: deploy_2
+      if: steps.deploy_1.outcome == 'failure'
+      uses: actions/deploy-pages@v4
+      continue-on-error: true
+      with:
+        timeout: 600000
+
+    - name: Wait before retry 2
+      if: steps.deploy_1.outcome == 'failure' && steps.deploy_2.outcome == 'failure'
+      run: sleep 30
+
+    - name: Deploy to GitHub Pages (attempt 3)
+      id: deploy_3
+      if: steps.deploy_1.outcome == 'failure' && steps.deploy_2.outcome == 'failure'
       uses: actions/deploy-pages@v4
       with:
         timeout: 600000
