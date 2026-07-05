@@ -211,7 +211,7 @@ function buildPageMarkup() {
             ${aboveBlock}
             ${showAbove ? '' : navMarkup}
             ${resultBar}
-            <div class="below">${colsHTML}</div>
+            <div class="below-bleed"><div class="below">${colsHTML}</div></div>
             <footer class="footer">
                 <div>© 2026 Daily AI Times · An AI-assisted publication</div>
                 <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
