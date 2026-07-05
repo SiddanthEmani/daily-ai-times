@@ -6,19 +6,18 @@ import { escapeHTML } from '../utils/utils.js';
 import { PerformanceMonitor, Analytics, LazyLoader } from '../utils/performance.js';
 import { CustomAudioPlayer } from './custom-audio-player.js';
 import {
-    normalize, partition, tickerFromStories, sectionsFromStories,
+    normalize, partition, sectionsFromStories,
 } from './article-mapper.js';
 import {
-    tickerHTML, mastheadHTML, startMastheadClock, navHTML, wireTickerPause,
+    tickerHTML, mastheadHTML, utilityRowHTML, sourcesOverlayHTML,
+    startMastheadClock, navHTML, wireTickerPause,
 } from './chrome.js';
-import { briefingHTML, leadHTML, swingHTML } from './above.js';
+import { leadHTML, audioBriefingSlotHTML } from './above.js';
 import {
-    storyCardHTML, alsoNewsHTML,
-    marketsBoxHTML, weatherBoxHTML, opinionBoxHTML, savedBoxHTML,
-    getOpinionStory,
+    storyCardHTML, benchmarksChartHTML, capexChartHTML, savedBoxHTML,
 } from './below.js';
 
-const APP_VERSION = '2026.4.0';
+const APP_VERSION = '2026.5.0';
 const SAVED_KEY = 'dat_saved';
 const THEME_KEY = 'dat_theme';
 
@@ -31,32 +30,8 @@ const state = {
     sections: ['All'],
     mastheadClock: null,
     masthead: null,
+    sourcesOpen: false,
 };
-
-const TAIL_POOLS = [
-    [
-        'Post-training teams are the new status symbol inside frontier labs',
-        'A quiet move to smaller, specialist models at three major banks',
-        'Retrieval evaluations finally get a standardized benchmark suite',
-        'Open letter: senior researchers call for reproducibility covenants',
-        'Why inference cost curves are flattening sooner than expected',
-    ],
-    [
-        'Chip startups pitch vertical integration to skeptical buyers',
-        'A union push at one major lab fizzles, for now',
-        'The rise of the internal AI platform role, explained',
-        'Evaluation teams are hiring; researchers are not. A data note.',
-        'How three universities are rewriting their CS curricula',
-    ],
-    [
-        'Edge inference returns as latency SLAs tighten across the stack',
-        'Agents meet accounting: what the early deployments are teaching',
-        'A survey of formal verification in ML pipelines',
-        'Notes from a week inside a model-evaluation contractor',
-        'Why the data flywheel language is being retired, quietly',
-    ],
-];
-const TAIL_TITLES = ['In Other News', 'On The Wire', 'From The Desks'];
 
 function loadSavedIds() {
     try { return new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || '[]')); }
@@ -156,32 +131,33 @@ function buildPageMarkup() {
     const grid = filteredGrid();
     const gridStories = visibleGridStories();
 
-    const cols = [[], [], [], []];
-    gridStories.forEach((s, i) => cols[i % 4].push({ kind: 'story', story: s, idx: i }));
+    const cols = [[], []];
+    gridStories.forEach((s, i) => cols[i % 2].push({ kind: 'story', story: s, idx: i }));
 
-    cols[3].unshift({ kind: 'raw', html: '<div id="audio-placeholder"></div>' });
+    const sidebarItems = [];
+    // The audio player holds a persistent <audio> element (see mountAudioBox);
+    // when the lead/audio slot above the fold isn't rendered (filtered view),
+    // give it a home in the sidebar instead so playback isn't orphaned.
+    if (!showAbove) sidebarItems.push({ kind: 'raw', html: '<div id="audio-placeholder" class="audio-box"></div>' });
     if (showAbove) {
-        cols[3].splice(2, 0, { kind: 'raw', html: marketsBoxHTML() });
-        cols[3].splice(4, 0, { kind: 'raw', html: weatherBoxHTML() });
-        cols[3].push({ kind: 'raw', html: opinionBoxHTML() });
-        const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
-        if (savedHTML) cols[0].push({ kind: 'raw', html: savedHTML });
+        sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML() });
+        sidebarItems.push({ kind: 'raw', html: capexChartHTML() });
     }
+    const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
+    if (savedHTML) sidebarItems.push({ kind: 'raw', html: savedHTML });
 
     const counts = sectionCounts(state.partitioned.all);
-    const tickerItems = tickerFromStories(state.partitioned.all, 5);
     const navMarkup = navHTML({ section: state.section }, state.sections, counts);
 
-    const colsHTML = cols.map(col => {
-        const inner = col.map(item => item.kind === 'story'
-            ? storyCardHTML(item.story, item.idx, {
-                saved: state.savedIds.has(item.story.id),
-                focused: state.focusIdx === item.idx,
-            })
-            : item.html
-        ).join('');
+    const storyColumnsHTML = cols.map(col => {
+        const inner = col.map(item => storyCardHTML(item.story, item.idx, {
+            saved: state.savedIds.has(item.story.id),
+            focused: state.focusIdx === item.idx,
+        })).join('');
         return `<div class="col">${inner}</div>`;
     }).join('');
+
+    const sidebarHTML = sidebarItems.map(item => item.html).join('');
 
     const resultBar = showAbove ? '' : `
         <div class="result-bar">
@@ -193,41 +169,50 @@ function buildPageMarkup() {
 
     const aboveBlock = showAbove ? `
         <div class="above">
-            ${briefingHTML(state.partitioned.briefing, navMarkup)}
+            ${leadHTML(state.partitioned.lead)}
             <div class="vrule"></div>
-            <section class="lead-col">
-                ${leadHTML(state.partitioned.lead)}
-                ${alsoNewsHTML(TAIL_TITLES, TAIL_POOLS)}
-            </section>
-            <div class="vrule"></div>
-            ${swingHTML(state.partitioned.swing)}
+            ${audioBriefingSlotHTML()}
         </div>
     ` : '';
 
     return `
-        ${tickerHTML(tickerItems)}
+        ${tickerHTML()}
         <div class="page">
-            ${mastheadHTML({ volume: mastheadVolumeLabel() })}
+            ${mastheadHTML({ volume: mastheadVolumeLabel(), query: state.query })}
+            ${utilityRowHTML()}
+            ${navMarkup}
             ${aboveBlock}
-            ${showAbove ? '' : navMarkup}
             ${resultBar}
-            <div class="below-bleed"><div class="below">${colsHTML}</div></div>
+            <div class="content-layout">
+                <div class="story-columns">${storyColumnsHTML}</div>
+                <div class="sidebar-rail">${sidebarHTML}</div>
+            </div>
             <footer class="footer">
                 <div>© 2026 Daily AI Times · An AI-assisted publication</div>
                 <div>Source code: <a href="https://github.com/SiddanthEmani/daily-ai-times" target="_blank" rel="noopener noreferrer">github.com/SiddanthEmani/daily-ai-times</a></div>
                 <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>
             </footer>
         </div>
+        ${state.sourcesOpen ? sourcesOverlayHTML() : ''}
     `;
 }
 
 function render() {
     const root = document.getElementById('root');
     if (!root) return;
+    const activeIsSearch = document.activeElement && document.activeElement.id === 'search-input';
+    const caret = activeIsSearch ? document.activeElement.selectionStart : null;
     root.innerHTML = buildPageMarkup();
     wireTickerPause(root);
     mountAudioBox();
     if (state.mastheadClock == null) state.mastheadClock = startMastheadClock(root);
+    if (activeIsSearch) {
+        const input = document.getElementById('search-input');
+        if (input) {
+            input.focus();
+            if (caret != null) input.setSelectionRange(caret, caret);
+        }
+    }
 }
 
 // The audio-box DOM is created once and kept alive across renders so the
@@ -242,19 +227,9 @@ function ensureAudioBox() {
     audioBoxEl.id = 'audio-box';
     audioBoxEl.className = 'audio-box';
     try {
-        const title = document.createElement('div');
-        title.className = 'box-title';
-        const label = document.createElement('span');
-        label.textContent = "Today's Briefing";
-        const chip = document.createElement('span');
-        chip.className = 'chip';
-        chip.textContent = 'LISTEN';
-        title.appendChild(label);
-        title.appendChild(chip);
-        audioBoxEl.appendChild(title);
-        const host = document.createElement('div');
-        audioBoxEl.appendChild(host);
-        new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${Date.now()}`, host);
+        // CustomAudioPlayer renders its own "Today's Briefing" title bar
+        // (mockup's .audio-briefing card), so audioBoxEl is just the mount host.
+        new CustomAudioPlayer(`assets/audio/latest-podcast.wav?t=${Date.now()}`, audioBoxEl);
     } catch (err) {
         console.warn('Audio player mount failed:', err);
     }
@@ -272,8 +247,8 @@ function installEventDelegation() {
     if (!root) return;
 
     // Click delegation sits on document.body so it also catches clicks inside
-    // #modal-root (a sibling of #root). Without this the modal's Save button
-    // would emit data-action="save" that never reaches the handler.
+    // the sources overlay, which renders as a sibling of #root's content
+    // after a re-render (see buildPageMarkup).
     document.body.addEventListener('click', (e) => {
         const actionEl = e.target.closest?.('[data-action]');
 
@@ -297,6 +272,20 @@ function installEventDelegation() {
             render();
             return;
         }
+
+        if (actionEl?.dataset.action === 'sources') {
+            state.sourcesOpen = true;
+            render();
+            return;
+        }
+        if (actionEl?.dataset.action === 'close-sources') {
+            state.sourcesOpen = false;
+            render();
+            return;
+        }
+        // Swallows clicks inside the sources card so they don't bubble to the
+        // overlay backdrop's close-sources action.
+        if (actionEl?.dataset.action === 'none') return;
 
         // Story cards use a two-step interaction: first click expands the hidden
         // description; second click opens the URL. We only enter this path when the
@@ -344,12 +333,15 @@ function installEventDelegation() {
             if (story) openStory(story);
             return;
         }
-        if (action === 'open-opinion') {
-            const story = getOpinionStory(actionEl.dataset.opinionId);
-            if (story) openStory(story);
-            return;
-        }
-        // open-tail: tail briefs have no source URL, nothing to open.
+    });
+
+    // Search input filters the grid as the user types; render() preserves
+    // focus/caret across the innerHTML reset (see render()).
+    document.body.addEventListener('input', (e) => {
+        if (e.target?.id !== 'search-input') return;
+        state.query = e.target.value;
+        state.focusIdx = -1;
+        render();
     });
 }
 
@@ -390,7 +382,8 @@ function installKeyboardNav() {
             const s = grid[state.focusIdx];
             if (s) openStory(s);
         } else if (e.key === 'Escape') {
-            if (state.focusIdx >= 0) { state.focusIdx = -1; render(); }
+            if (state.sourcesOpen) { state.sourcesOpen = false; render(); }
+            else if (state.focusIdx >= 0) { state.focusIdx = -1; render(); }
         }
     });
 }
