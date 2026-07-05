@@ -477,11 +477,12 @@ html[data-photos="off"] .media-thumb { display: none; }
 
 /* responsive fallback */
 @media (max-width: 1020px) {
-  .above { grid-template-columns: 1fr; }
+  .above { grid-template-columns: 1fr; border-bottom: none; }
   .above .vrule { display: none; }
   .above > section { padding: 20px 0; border-bottom: 1px solid var(--rule-soft); }
+  .above > section:last-child { border-bottom: none; }
   .content-layout { grid-template-columns: 1fr; }
-  .sidebar-rail { order: -1; }
+  .sidebar-rail { order: -1; margin-bottom: 28px; }
   .utility-row { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 @media (max-width: 640px) {
