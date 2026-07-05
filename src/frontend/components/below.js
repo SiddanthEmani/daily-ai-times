@@ -2,22 +2,6 @@
 import { escapeHTML } from '../utils/utils.js';
 import { paperImageSVG } from './chrome.js';
 
-// Illustrative static figures shipped with the redesign (not pipeline data).
-const BENCHMARKS = [
-    { label: 'GPT-5.2', value: 81.4 },
-    { label: 'Claude Opus 5', value: 79.8 },
-    { label: 'Gemini 3 Ultra', value: 78.2 },
-    { label: 'Llama 5 405B', value: 71.6 },
-    { label: 'DeepSeek V4', value: 69.9 },
-];
-
-const CAPEX = [
-    { label: 'Amazon', value: 78 },
-    { label: 'Microsoft', value: 64 },
-    { label: 'Google', value: 52 },
-    { label: 'Meta', value: 40 },
-];
-
 export function storyCardHTML(story, idx, { saved = false, focused = false } = {}) {
     const hasMedia = story.type === 'video' || story.type === 'photo';
     const media = hasMedia ? `
@@ -52,7 +36,9 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
     `;
 }
 
-function barChartHTML(title, chip, rows) {
+function barChartHTML(title, chip, data) {
+    const rows = data?.entries || [];
+    if (!rows.length) return '';
     const max = Math.max(...rows.map(r => r.value), 1);
     const barRows = rows.map((r, i) => `
         <div class="bar-row">
@@ -63,20 +49,25 @@ function barChartHTML(title, chip, rows) {
             <span class="bar-value">${r.value}</span>
         </div>
     `).join('');
+    // These figures are curated by hand (see src/shared/config/benchmarks.yaml),
+    // not refreshed by the news pipeline, so the source/date caveat is shown
+    // rather than implying they're as fresh as the article feed.
+    const caption = data?.source ? `<div class="chart-caption">${escapeHTML(data.source)}</div>` : '';
     return `
         <aside class="box chart-box">
             <div class="box-title"><span>${escapeHTML(title)}</span><span class="chip">${escapeHTML(chip)}</span></div>
             <div class="bar-chart">${barRows}</div>
+            ${caption}
         </aside>
     `;
 }
 
-export function benchmarksChartHTML() {
-    return barChartHTML('Benchmark Leaderboard', 'REASONING INDEX', BENCHMARKS);
+export function benchmarksChartHTML(data) {
+    return barChartHTML('Benchmark Leaderboard', data?.metric || 'BENCHMARK', data);
 }
 
-export function capexChartHTML() {
-    return barChartHTML('Trailing 12-Mo. Data Center Capex', '$ BILLIONS', CAPEX);
+export function capexChartHTML(data) {
+    return barChartHTML('Trailing 12-Mo. Data Center Capex', data?.metric || '$ BILLIONS', data);
 }
 
 export function savedBoxHTML(savedIds, allStories) {

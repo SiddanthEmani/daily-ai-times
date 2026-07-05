@@ -38,6 +38,7 @@ run_scenario() {
     local site="$TMPDIR/$scenario"
     mkdir -p "$site"
     cp -r src/frontend/* "$site/"
+    rm -rf "$site/prototypes"
 
     if [[ -n "$ga_id" ]]; then
         # inject path — mirror `sed -i "s|__GOOGLE_ANALYTICS__|$ID|g" site/index.html`
@@ -76,6 +77,13 @@ if grep -q 'clarity.ms/tag' "$SITE_REMOVE/index.html"; then
     okmsg "MS Clarity script preserved across GA removal"
 else
     fail "Clarity script was collateral damage of GA block removal"
+fi
+
+echo "== prototypes excluded from deploy =="
+if [[ -e "$SITE_INJECT/prototypes" ]]; then
+    fail "prototypes/ present in prepared site (design mockup would ship to production)"
+else
+    okmsg "prototypes/ absent from prepared site"
 fi
 
 echo "== API content =="

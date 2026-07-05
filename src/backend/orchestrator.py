@@ -29,7 +29,10 @@ from src.backend.processors.consensus_engine import ConsensusEngine
 from src.backend.processors.deep_intelligence_agent import DeepIntelligenceAgent
 from src.backend.processors.final_consensus_engine import FinalConsensusEngine
 from src.backend.collectors.collectors import NewsCollector
+from src.backend.collectors.market_data import fetch_market_quotes
 from src.shared.config.config_loader import ConfigLoader, get_swarm_config
+from src.shared.config.sources_loader import get_sources_loader
+import yaml
 from src.shared.utils.logging_config import log_warning, log_error, log_step
 from google import genai
 from google.genai import types
@@ -714,9 +717,10 @@ class NewsProcessingPipeline:
         
         # Step 9: Generate API files for frontend consumption
         pipeline_info = self.get_pipeline_info()
-        api_saved = self._save_api_files(classified_content, pipeline_info, processing_duration)
-        if api_saved:
+        api_response = self._save_api_files(classified_content, pipeline_info, processing_duration)
+        if api_response:
             logger.info("✅ API files generated successfully for frontend deployment")
+            await self._save_supplementary_api_files(api_response)
             self.generate_audio()
         else:
             log_warning(logger, "⚠️ Failed to generate API files - frontend may not update")
@@ -1183,7 +1187,7 @@ class NewsProcessingPipeline:
             }
         }
 
-    def _save_api_files(self, classified_content: Dict[str, Any], pipeline_info: Dict[str, Any], processing_time: float) -> bool:
+    def _save_api_files(self, classified_content: Dict[str, Any], pipeline_info: Dict[str, Any], processing_time: float) -> Optional[Dict[str, Any]]:
         """Save API files for frontend consumption in required directories."""
         try:
             project_root = Path(__file__).parent.parent.parent
@@ -1249,12 +1253,134 @@ class NewsProcessingPipeline:
             logger.info(f"   - Backend: {latest_file_backend}")
             logger.info(f"   - Frontend: {latest_file_frontend}")
             logger.info(f"   - Widget: {widget_file_frontend}")
-            
-            return True
-            
+
+            return api_response
+
         except Exception as e:
             log_error(logger, f"Failed to save API files: {e}")
-            return False
+            return None
+
+    async def _save_supplementary_api_files(self, api_response: Dict[str, Any]) -> None:
+        """Generate market.json, sources.json, benchmarks.json, and archives.json.
+
+        These are independent of article scoring/consensus, so a failure in
+        any one of them is logged and skipped rather than failing the run —
+        the article feed (already saved by _save_api_files) is what matters.
+        """
+        project_root = Path(__file__).parent.parent.parent
+        backend_api_dir = project_root / "src" / "backend" / "api"
+        frontend_api_dir = project_root / "src" / "frontend" / "api"
+
+        await self._save_market_quotes(backend_api_dir, frontend_api_dir)
+        self._save_sources_json(backend_api_dir, frontend_api_dir)
+        self._save_benchmarks_json(backend_api_dir, frontend_api_dir)
+        self._save_archives_json(backend_api_dir, frontend_api_dir, api_response)
+
+    async def _save_market_quotes(self, backend_api_dir: Path, frontend_api_dir: Path) -> None:
+        """Fetch real daily quotes for the header ticker (see market_data.py).
+        Falls back to the previous run's file if the fetch comes back empty,
+        so a transient Stooq outage doesn't blank the ticker."""
+        frontend_file = frontend_api_dir / "market.json"
+        try:
+            quotes = await fetch_market_quotes()
+            if not quotes:
+                raise ValueError("No market quotes fetched")
+            data = {"updated": self._get_current_timestamp(), "quotes": quotes}
+            for target in (backend_api_dir / "market.json", frontend_file):
+                with open(target, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info(f"✅ Saved market.json with {len(quotes)} quotes")
+        except Exception as e:
+            log_warning(logger, f"Market quotes fetch failed, keeping previous market.json: {e}")
+
+    def _save_sources_json(self, backend_api_dir: Path, frontend_api_dir: Path) -> None:
+        """Generate sources.json (real feed names grouped by category) from
+        src/shared/config/sources/*.yaml, replacing the frontend's hardcoded
+        source list."""
+        try:
+            loader = get_sources_loader()
+            categories: Dict[str, List[str]] = {}
+            # Group by each source's own `category:` field rather than its
+            # YAML filename — a few sources declare a category (e.g.
+            # "Startups") that differs from the file they live in.
+            for name, cfg in loader.get_sources(enabled_only=True).items():
+                category = cfg.get("category", "Other")
+                categories.setdefault(category, []).append(cfg.get("description", name))
+            for names in categories.values():
+                names.sort()
+
+            data = {"updated": self._get_current_timestamp(), "categories": categories}
+            for target_dir in (backend_api_dir, frontend_api_dir):
+                with open(target_dir / "sources.json", 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info(f"✅ Saved sources.json with {sum(len(v) for v in categories.values())} sources")
+        except Exception as e:
+            log_warning(logger, f"Failed to generate sources.json: {e}")
+
+    def _save_benchmarks_json(self, backend_api_dir: Path, frontend_api_dir: Path) -> None:
+        """Emit the manually-curated benchmark leaderboard/capex figures from
+        src/shared/config/benchmarks.yaml as JSON for the sidebar widgets."""
+        try:
+            config_path = Path(__file__).parent.parent / "shared" / "config" / "benchmarks.yaml"
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = yaml.safe_load(f)
+
+            data = {
+                "updated": config.get("updated"),
+                "benchmarks": {
+                    "metric": config["benchmarks"]["metric"],
+                    "source": config["benchmarks"]["source"],
+                    "entries": config["benchmarks"]["entries"],
+                },
+                "capex": {
+                    "metric": config["capex"]["metric"],
+                    "source": config["capex"]["source"],
+                    "entries": config["capex"]["entries"],
+                },
+            }
+            for target_dir in (backend_api_dir, frontend_api_dir):
+                with open(target_dir / "benchmarks.json", 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=2, ensure_ascii=False)
+            logger.info("✅ Saved benchmarks.json")
+        except Exception as e:
+            log_warning(logger, f"Failed to generate benchmarks.json: {e}")
+
+    ARCHIVE_HISTORY_DAYS = 90
+
+    def _save_archives_json(self, backend_api_dir: Path, frontend_api_dir: Path, api_response: Dict[str, Any]) -> None:
+        """Append a daily snapshot of the pipeline output to archives.json,
+        keyed by UTC date so multiple runs on the same day update (rather
+        than duplicate) that day's entry, capped to ARCHIVE_HISTORY_DAYS."""
+        frontend_file = frontend_api_dir / "archives.json"
+        try:
+            try:
+                with open(frontend_file, 'r', encoding='utf-8') as f:
+                    archives = json.load(f)
+                if not isinstance(archives, list):
+                    archives = []
+            except (FileNotFoundError, json.JSONDecodeError):
+                archives = []
+
+            articles = api_response.get('articles', [])
+            today = self._get_current_timestamp()[:10]
+            entry = {
+                "date": today,
+                "generated_at": api_response.get('generated_at'),
+                "count": api_response.get('count', len(articles)),
+                "top_headline": articles[0].get('title') if articles else None,
+            }
+
+            archives = [a for a in archives if a.get('date') != today]
+            archives.append(entry)
+            archives.sort(key=lambda a: a.get('date', ''), reverse=True)
+            archives = archives[:self.ARCHIVE_HISTORY_DAYS]
+
+            for target_dir in (backend_api_dir, frontend_api_dir):
+                with open(target_dir / "archives.json", 'w', encoding='utf-8') as f:
+                    json.dump(archives, f, indent=2, ensure_ascii=False)
+            logger.info(f"✅ Saved archives.json with {len(archives)} daily entries")
+        except Exception as e:
+            log_warning(logger, f"Failed to update archives.json: {e}")
 
     def _normalize_articles_for_frontend(self, articles: List[Dict[str, Any]], classified_content: Dict[str, Any]) -> List[Dict[str, Any]]:
         """

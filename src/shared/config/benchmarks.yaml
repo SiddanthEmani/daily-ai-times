@@ -1,0 +1,39 @@
+# Manually-curated figures for the sidebar "Benchmark Leaderboard" and "Data
+# Center Capex" widgets. Unlike sources/*.yaml, these aren't consumed live by
+# any free public API (no stable free API for LLM arena rankings or
+# quarterly capex exists), so this file has to be refreshed by hand.
+#
+# When updating "benchmarks": check https://lmarena.ai (Chatbot Arena Elo) or
+# https://artificialanalysis.ai/leaderboards/models for current standings.
+# When updating "capex": check the most recent 10-Q/10-K capex disclosures or
+# a tracker such as https://www.visualcapitalist.com for the four hyperscalers.
+
+updated: "2026-07-05"
+
+benchmarks:
+  metric: "Chatbot Arena Elo"
+  source: "LMArena (Chatbot Arena) leaderboard, July 2026"
+  entries:
+    - label: "GPT-5"
+      value: 1561
+    - label: "Claude Opus 4.6"
+      value: 1552
+    - label: "Gemini 3.1 Pro"
+      value: 1541
+    - label: "Grok 4"
+      value: 1495
+    - label: "DeepSeek V3.2"
+      value: 1462
+
+capex:
+  metric: "USD billions, FY2025 capital expenditures"
+  source: "Company FY2025 earnings disclosures, aggregated via Visual Capitalist / Tom's Hardware, reported Q1 2026"
+  entries:
+    - label: "Amazon"
+      value: 103
+    - label: "Microsoft"
+      value: 80
+    - label: "Google"
+      value: 75
+    - label: "Meta"
+      value: 62

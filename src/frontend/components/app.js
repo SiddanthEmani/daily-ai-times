@@ -31,6 +31,10 @@ const state = {
     mastheadClock: null,
     masthead: null,
     sourcesOpen: false,
+    market: [],
+    sources: {},
+    benchmarks: null,
+    capex: null,
 };
 
 function loadSavedIds() {
@@ -95,6 +99,31 @@ async function loadStories() {
     }
 }
 
+// Fetches the small pipeline-generated sidebar/ticker widgets. These are
+// non-critical — a fetch failure just means that widget renders empty,
+// it must never block the article feed from loading.
+async function fetchJSON(path) {
+    try {
+        const res = await fetch(`./api/${path}?t=${Date.now()}`);
+        if (!res.ok) return null;
+        return await res.json();
+    } catch {
+        return null;
+    }
+}
+
+async function loadExtras() {
+    const [market, sources, benchmarks] = await Promise.all([
+        fetchJSON('market.json'),
+        fetchJSON('sources.json'),
+        fetchJSON('benchmarks.json'),
+    ]);
+    state.market = market?.quotes || [];
+    state.sources = sources?.categories || {};
+    state.benchmarks = benchmarks?.benchmarks || null;
+    state.capex = benchmarks?.capex || null;
+}
+
 function filteredGrid() {
     const q = state.query.trim().toLowerCase();
     const matchesSection = (s) => state.section === 'All' || s.section === state.section;
@@ -140,8 +169,8 @@ function buildPageMarkup() {
     // give it a home in the sidebar instead so playback isn't orphaned.
     if (!showAbove) sidebarItems.push({ kind: 'raw', html: '<div id="audio-placeholder" class="audio-box"></div>' });
     if (showAbove) {
-        sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML() });
-        sidebarItems.push({ kind: 'raw', html: capexChartHTML() });
+        sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML(state.benchmarks) });
+        sidebarItems.push({ kind: 'raw', html: capexChartHTML(state.capex) });
     }
     const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
     if (savedHTML) sidebarItems.push({ kind: 'raw', html: savedHTML });
@@ -176,7 +205,7 @@ function buildPageMarkup() {
     ` : '';
 
     return `
-        ${tickerHTML()}
+        ${tickerHTML(state.market)}
         <div class="page">
             ${mastheadHTML({ volume: mastheadVolumeLabel(), query: state.query })}
             ${utilityRowHTML()}
@@ -193,7 +222,7 @@ function buildPageMarkup() {
                 <div>Keys: <strong>J</strong>/<strong>K</strong> to move · <strong>Enter</strong> to open in new tab</div>
             </footer>
         </div>
-        ${state.sourcesOpen ? sourcesOverlayHTML() : ''}
+        ${state.sourcesOpen ? sourcesOverlayHTML(state.sources) : ''}
     `;
 }
 
@@ -404,7 +433,7 @@ async function main() {
     installCacheBustingFetch();
 
     try {
-        const stories = await loadStories();
+        const [stories] = await Promise.all([loadStories(), loadExtras()]);
         if (!stories.length) throw new Error('No articles in latest.json');
         state.partitioned = partition(stories);
         state.sections = sectionsFromStories(stories);
