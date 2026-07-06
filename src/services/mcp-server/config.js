@@ -28,6 +28,9 @@ export const config = {
     workflowId: 'collect-news.yml',
     apiVersion: '2022-11-28'
   },
+  site: {
+    url: process.env.SITE_URL || 'https://www.dailyai.wtf'
+  },
   server: {
     name: 'daily-ai-times-mcp',
     version: '1.0.0',

@@ -340,7 +340,7 @@ export const toolImplementations = {
         validators.integer(args.limit, 'limit', { min: 1, max: 50 });
       }
 
-      const url = `https://${config.github.owner}.github.io/${config.github.repo}/api/latest.json`;
+      const url = `${config.site.url}/api/latest.json`;
       const data = await httpGet(url, { cacheTTL: 180000 }); // 3-minute cache
 
       let articles = data.articles || [];
@@ -495,7 +495,7 @@ export const toolImplementations = {
       // Parallel fetching of archived data
       for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
         const dateStr = d.toISOString().split('T')[0];
-        const url = `https://${config.github.owner}.github.io/${config.github.repo}/api/archive/${dateStr}.json`;
+        const url = `${config.site.url}/api/archive/${dateStr}.json`;
         
         fetchPromises.push(
           httpGet(url, { skipCache: false })
