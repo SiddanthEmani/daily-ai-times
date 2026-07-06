@@ -4,7 +4,7 @@ Modern serverless AI-powered news aggregation platform with advanced multi-agent
 
 ## Live Demo
 
-**Production Site**: [https://siddanthemani.github.io/daily-ai-times](https://siddanthemani.github.io/daily-ai-times)
+**Production Site**: [https://www.dailyai.wtf](https://www.dailyai.wtf)
 
 ![Demo](./src/frontend/assets/images/demo.png)
 
