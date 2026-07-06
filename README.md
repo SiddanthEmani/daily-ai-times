@@ -10,8 +10,6 @@ Modern serverless AI-powered news aggregation platform with advanced multi-agent
 
 ## Architecture
 
-![Architecture Diagram](./docs/diagrams/Architecture.excalidraw.svg)
-
 **Serverless Backend (GitHub Actions)** → **Static Frontend (GitHub Pages)**
 
 ```
