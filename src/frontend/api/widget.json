@@ -1,22 +1,146 @@
 {
-  "updated": "2026-07-08T14:01:18.667658+00:00",
+  "updated": "2026-07-08T17:31:56.564758+00:00",
   "top_stories": [
     {
-      "article_id": "33f4cb238c45d6a71b73630f2a0e42f7",
-      "title": "Vercel CEO Guillermo Rauch on the fight to split off models from agents",
+      "article_id": "14293e726fbf1112d6798204eac68aa7",
+      "title": "Why the rise of open source AI isn’t hurting Anthropic … yet",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/",
-      "published_date": "2026-07-06T19:49:10+00:00",
+      "url": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
+      "published_date": "2026-07-07T20:04:32+00:00",
       "category": "Industry",
-      "description": "\"The reality is, when you're optimizing for production, you start looking at a price/performance,\" Guillermo Rauch tells TechCrunch.",
+      "description": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
       "author": "Russell Brandom",
-      "content": "\"The reality is, when you're optimizing for production, you start looking at a price/performance,\" Guillermo Rauch tells TechCrunch.",
+      "content": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.525071+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.525073+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "2ae3e6776591a7f3e88281158ea1b354",
+      "title": "Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support/",
+      "published_date": "2026-06-25T16:43:48+00:00",
+      "category": "Industry",
+      "description": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
+      "author": "Peter Kisfaludi",
+      "content": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.526299+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.526302+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "663dc9cd04c58226194f4b292c1abf97",
+      "title": "Context Graphs vs Vector RAG vs Raw Context - Agentic memory benchmark",
+      "source": "nanonets_blog",
+      "url": "https://nanonets.com/blog/context-graphs-vs-vector-rag-vs-raw-context/",
+      "published_date": "2026-07-01T14:50:58+00:00",
+      "category": "Industry",
+      "description": "We benchmark context graphs against other methods of agentic memory, and discuss what each method got right and wrong.",
+      "author": "Karan",
+      "content": "We benchmark context graphs against other methods of agentic memory, and discuss what each method got right and wrong.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +172,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626058+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.526649+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,69 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.626060+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "48316e3536c38669ad214c69fe48ddd6",
-      "title": "How Nations Are Deploying AI for Strategic Priorities",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/",
-      "published_date": "2026-07-06T15:00:25+00:00",
-      "category": "Industry",
-      "description": "Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, entertainment and healthcare. AI, the most important technology of our time, is turbocharging innovation across every facet of society. Countries are investing in AI capabilities so […]",
-      "author": "Calista Redmond",
-      "content": "Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, entertainment and healthcare. AI, the most important technology of our time, is turbocharging innovation across every facet of society. Countries are investing in AI capabilities so […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.625049+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.625052+00:00"
+        "timestamp": "2026-07-08T17:31:56.526652+00:00"
       },
       "article_type": "article"
     },
@@ -136,11 +198,11 @@
       "author": "",
       "content": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.895,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -172,7 +234,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.623567+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.522846+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.623570+00:00"
+        "timestamp": "2026-07-08T17:31:56.522851+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e0106aeccdbb5c1b523b05d5d4452cec",
-      "title": "Microsoft launches AI-focused professional services business with $2.5B investment",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/07/02/microsoft-launches-ai-focused-professional-services-business-2-5b-investment/",
-      "published_date": "2026-07-02T20:52:31+00:00",
+      "article_id": "596dabfff763b2211b0574e2f507d837",
+      "title": "NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/",
+      "published_date": "2026-06-30T17:00:38+00:00",
       "category": "Industry",
-      "description": "Microsoft Corp. has formed a new business that will help organizations build and manage artificial intelligence applications. The Microsoft Frontier Company, as the venture is called, launched today with an initial $2.5 billion investment from the tech giant. It’s staffed by 6,000 “industry and engineering experts.” The group is led by Microsoft Corp. executive Rodrigo […] The post Microsoft launches AI-focused professional services business with $2.5B investment appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "Microsoft Corp. has formed a new business that will help organizations build and manage artificial intelligence applications. The Microsoft Frontier Company, as the venture is called, launched today with an initial $2.5 billion investment from the tech giant. It’s staffed by 6,000 “industry and engineering experts.” The group is led by Microsoft Corp. executive Rodrigo […] The post Microsoft launches AI-focused professional services business with $2.5B investment appeared first on SiliconANGLE.",
+      "description": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterate faster. This week, Anthropic announced Claude Science, an AI workbench for science […]",
+      "author": "Anthony Costa",
+      "content": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterate faster. This week, Anthropic announced Claude Science, an AI workbench for science […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.8935,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -230,84 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.95,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.628120+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.524503+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.77,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.628123+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "218c62a081e958ca9e18046493f39e90",
-      "title": "NVIDIA Vera CPU Boosts AI Factory Throughput to Accelerate Agentic Workloads",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-boosts-ai-factory-throughput-to-accelerate-agentic-workloads/",
-      "published_date": "2026-07-07T15:10:10+00:00",
-      "category": "Industry",
-      "description": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and...",
-      "author": "Michelle Horton",
-      "content": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626505+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.626507+00:00"
+        "timestamp": "2026-07-08T17:31:56.524506+00:00"
       },
       "article_type": "article"
     }

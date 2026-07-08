@@ -1,27 +1,151 @@
 {
-  "generated_at": "2026-07-08T14:01:18.664198+00:00",
+  "generated_at": "2026-07-08T17:31:56.561523+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1534
+    "issue_number": 1535
   },
   "articles": [
     {
-      "article_id": "33f4cb238c45d6a71b73630f2a0e42f7",
-      "title": "Vercel CEO Guillermo Rauch on the fight to split off models from agents",
+      "article_id": "14293e726fbf1112d6798204eac68aa7",
+      "title": "Why the rise of open source AI isn’t hurting Anthropic … yet",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/",
-      "published_date": "2026-07-06T19:49:10+00:00",
+      "url": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
+      "published_date": "2026-07-07T20:04:32+00:00",
       "category": "Industry",
-      "description": "\"The reality is, when you're optimizing for production, you start looking at a price/performance,\" Guillermo Rauch tells TechCrunch.",
+      "description": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
       "author": "Russell Brandom",
-      "content": "\"The reality is, when you're optimizing for production, you start looking at a price/performance,\" Guillermo Rauch tells TechCrunch.",
+      "content": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.525071+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.525073+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "2ae3e6776591a7f3e88281158ea1b354",
+      "title": "Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support/",
+      "published_date": "2026-06-25T16:43:48+00:00",
+      "category": "Industry",
+      "description": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
+      "author": "Peter Kisfaludi",
+      "content": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.98,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.526299+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.788,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.526302+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "663dc9cd04c58226194f4b292c1abf97",
+      "title": "Context Graphs vs Vector RAG vs Raw Context - Agentic memory benchmark",
+      "source": "nanonets_blog",
+      "url": "https://nanonets.com/blog/context-graphs-vs-vector-rag-vs-raw-context/",
+      "published_date": "2026-07-01T14:50:58+00:00",
+      "category": "Industry",
+      "description": "We benchmark context graphs against other methods of agentic memory, and discuss what each method got right and wrong.",
+      "author": "Karan",
+      "content": "We benchmark context graphs against other methods of agentic memory, and discuss what each method got right and wrong.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -53,7 +177,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626058+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.526649+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,69 +188,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.626060+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "48316e3536c38669ad214c69fe48ddd6",
-      "title": "How Nations Are Deploying AI for Strategic Priorities",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/",
-      "published_date": "2026-07-06T15:00:25+00:00",
-      "category": "Industry",
-      "description": "Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, entertainment and healthcare. AI, the most important technology of our time, is turbocharging innovation across every facet of society. Countries are investing in AI capabilities so […]",
-      "author": "Calista Redmond",
-      "content": "Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, entertainment and healthcare. AI, the most important technology of our time, is turbocharging innovation across every facet of society. Countries are investing in AI capabilities so […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.625049+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.625052+00:00"
+        "timestamp": "2026-07-08T17:31:56.526652+00:00"
       },
       "article_type": "article"
     },
@@ -141,11 +203,11 @@
       "author": "",
       "content": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.895,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -177,7 +239,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.623567+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.522846+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -188,26 +250,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.623570+00:00"
+        "timestamp": "2026-07-08T17:31:56.522851+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e0106aeccdbb5c1b523b05d5d4452cec",
-      "title": "Microsoft launches AI-focused professional services business with $2.5B investment",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/07/02/microsoft-launches-ai-focused-professional-services-business-2-5b-investment/",
-      "published_date": "2026-07-02T20:52:31+00:00",
+      "article_id": "596dabfff763b2211b0574e2f507d837",
+      "title": "NVIDIA BioNeMo Agent Toolkit Brings Accelerated AI to Life Sciences Researchers in Claude Science",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/",
+      "published_date": "2026-06-30T17:00:38+00:00",
       "category": "Industry",
-      "description": "Microsoft Corp. has formed a new business that will help organizations build and manage artificial intelligence applications. The Microsoft Frontier Company, as the venture is called, launched today with an initial $2.5 billion investment from the tech giant. It’s staffed by 6,000 “industry and engineering experts.” The group is led by Microsoft Corp. executive Rodrigo […] The post Microsoft launches AI-focused professional services business with $2.5B investment appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "Microsoft Corp. has formed a new business that will help organizations build and manage artificial intelligence applications. The Microsoft Frontier Company, as the venture is called, launched today with an initial $2.5 billion investment from the tech giant. It’s staffed by 6,000 “industry and engineering experts.” The group is led by Microsoft Corp. executive Rodrigo […] The post Microsoft launches AI-focused professional services business with $2.5B investment appeared first on SiliconANGLE.",
+      "description": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterate faster. This week, Anthropic announced Claude Science, an AI workbench for science […]",
+      "author": "Anthony Costa",
+      "content": "Life sciences has entered an era of computational scale, and for more than a decade, NVIDIA has built the full GPU-accelerated computing stack — spanning hardware, frameworks, libraries, models, microservices and domain-specific tools — to help researchers run more sophisticated workflows and iterate faster. This week, Anthropic announced Claude Science, an AI workbench for science […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
+        "overall_score": 0.8935,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -235,166 +297,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.95,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.628120+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.524503+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.77,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.628123+00:00"
+        "timestamp": "2026-07-08T17:31:56.524506+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "218c62a081e958ca9e18046493f39e90",
-      "title": "NVIDIA Vera CPU Boosts AI Factory Throughput to Accelerate Agentic Workloads",
+      "article_id": "b43fecd4492a45b4669b70be575f2c00",
+      "title": "Running Low-Latency Analytical Workloads with GPU-Accelerated Presto on NVIDIA GB200 NVL72",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-boosts-ai-factory-throughput-to-accelerate-agentic-workloads/",
-      "published_date": "2026-07-07T15:10:10+00:00",
+      "url": "https://developer.nvidia.com/blog/running-low-latency-analytical-workloads-with-gpu-accelerated-presto-on-nvidia-gb200-nvl72/",
+      "published_date": "2026-07-08T16:05:25+00:00",
       "category": "Industry",
-      "description": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and...",
-      "author": "Michelle Horton",
-      "content": "Agentic systems turn model reasoning into action through multi-step workflows that combine inference, tool use, code execution, retrieval, orchestration, and...",
+      "description": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance...",
+      "author": "Tanya Lenz",
+      "content": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626505+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.626507+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cf18ef2f8e5c65d42287e9f3e29bf18f",
-      "title": "Hardware-Rooted AI Security That Won’t Slow You Down",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down/",
-      "published_date": "2026-07-02T21:25:42+00:00",
-      "category": "Industry",
-      "description": "AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be impeded by concerns...",
-      "author": "Elizabeth Goodman",
-      "content": "AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be impeded by concerns...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626590+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.626593+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2ae3e6776591a7f3e88281158ea1b354",
-      "title": "Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support/",
-      "published_date": "2026-06-25T16:43:48+00:00",
-      "category": "Industry",
-      "description": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
-      "author": "Peter Kisfaludi",
-      "content": "Generative AI workloads are rapidly outgrowing the memory and compute budget of single GPUs. For inference developers building media generation pipelines, the...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -425,7 +363,7 @@
         "confidence": 0.98,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.626968+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.525633+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -436,150 +374,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.626971+00:00"
+        "timestamp": "2026-07-08T17:31:56.525636+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "e0512ec60eaff6c02f14e695f6d5d0cb",
-      "title": "The fuel of the future is already here: Why TRISO matters",
-      "source": "amazon_science",
-      "url": "https://www.amazon.science/blog/the-fuel-of-the-future-is-already-here-why-triso-matters",
-      "published_date": "2026-06-24T19:57:09+00:00",
+      "article_id": "89d3b75923abae8d8ead4d470c52dfcd",
+      "title": "Synthetic Sciences Releases OpenScience: An Open-Source, Model-Agnostic AI Workbench for Machine Learning, Biology, Physics, and Chemistry Research",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/07/05/synthetic-sciences-releases-openscience-an-open-source-model-agnostic-ai-workbench-for-machine-learning-biology-physics-and-chemistry-research/",
+      "published_date": "2026-07-06T05:07:12+00:00",
       "category": "Industry",
-      "description": "Millimeter-scale particles of nuclear-reactor fuel are encased in four layers of different materials that act as a “miniature containment system”.",
-      "author": "",
-      "content": "Millimeter-scale particles of nuclear-reactor fuel are encased in four layers of different materials that act as a “miniature containment system”.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.627225+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.627228+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "cfb74e454128b5a5622ef7bf8b4c7ed7",
-      "title": "NIST Launches Center to Drive the Manufacture of Quantum Technologies",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2026/06/nist-launches-center-drive-manufacture-quantum-technologies",
-      "published_date": "2026-06-29T12:00:00+00:00",
-      "category": "Government",
-      "description": "NIST has announced an agreement with SRI International to establish the Quantum Manufacturing Engineering Center (QMEC).",
-      "author": "Sarah Henderson",
-      "content": "NIST has announced an agreement with SRI International to establish the Quantum Manufacturing Engineering Center (QMEC).",
+      "description": "Synthetic Sciences has released OpenScience, an Apache-2.0 AI workbench for scientific research. It works with any frontier or open-weight model, using your own API keys. It runs the full loop across machine learning, biology, physics, and chemistry. It ships 250+ editable skills and queryable scientific databases, and it runs on your own infrastructure. The post Synthetic Sciences Releases OpenScience: An Open-Source, Model-Agnostic AI Workbench for Machine Learning, Biology, Physics, and...",
+      "author": "Asif Razzaq",
+      "content": "Synthetic Sciences has released OpenScience, an Apache-2.0 AI workbench for scientific research. It works with any frontier or open-weight model, using your own API keys. It runs the full loop across machine learning, biology, physics, and chemistry. It ships 250+ editable skills and queryable scientific databases, and it runs on your own infrastructure. The post Synthetic Sciences Releases OpenScience: An Open-Source, Model-Agnostic AI Workbench for Machine Learning, Biology, Physics, and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.622412+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.622416+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "115aaf324390ab85d2441f091568764e",
-      "title": "Claude in Microsoft Foundry is now generally available",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/",
-      "published_date": "2026-06-29T17:00:00+00:00",
-      "category": "Industry",
-      "description": "Claude in Microsoft Foundry is now generally available, hosted on Azure, and running on NVIDIA GB300 Blackwell Ultra, giving teams a faster path from agent experimentation to production. The post Claude in Microsoft Foundry is now generally available appeared first on Microsoft Azure Blog.",
-      "author": "Steve Sweetman",
-      "content": "Claude in Microsoft Foundry is now generally available, hosted on Azure, and running on NVIDIA GB300 Blackwell Ultra, giving teams a faster path from agent experimentation to production. The post Claude in Microsoft Foundry is now generally available appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -611,7 +425,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.623955+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.527029+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -622,7 +436,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.623958+00:00"
+        "timestamp": "2026-07-08T17:31:56.527032+00:00"
       },
       "article_type": "article"
     },
@@ -637,12 +451,12 @@
       "author": "Ian Buck",
       "content": "Max single-threaded CPUs at scale are a new category of CPUs built for the agentic AI era. Across the creation and deployment of an agentic system, the CPU is on the critical path for reasoning, response time and learning. CPUs are the processor which executes the work the AI model commands: the tool calling, code […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "novelty_score": 0.75,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -670,96 +484,34 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.624922+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.524232+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.624924+00:00"
+        "timestamp": "2026-07-08T17:31:56.524234+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "086fd13e24dedcf4c3ef1d97514fdf97",
-      "title": "Building a future tech sector that works for everyone",
+      "article_id": "98e7cd4a4c2bef6957dc2e9a834cf6b6",
+      "title": "Guidance: Manchester Prize",
       "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/calls-for-evidence/building-a-future-tech-sector-that-works-for-everyone",
-      "published_date": "2026-07-05T23:01:03+00:00",
+      "url": "https://www.gov.uk/government/publications/manchester-prize",
+      "published_date": "2026-07-08T13:30:17+00:00",
       "category": "Government",
-      "description": "Women In Tech Taskforce are seeking evidence on the interventions needed to help build a tech sector that works for everyone.",
+      "description": "A landmark challenge prize representing a decade-long UK commitment to AI for public good innovation.",
       "author": "",
-      "content": "Women In Tech Taskforce are seeking evidence on the interventions needed to help build a tech sector that works for everyone.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.622950+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.622952+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dfd6fc9b053de9c2419c0c65dbbcea46",
-      "title": "Guidance: Data Models for Vulnerability",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/data-models-for-vulnerability",
-      "published_date": "2026-07-08T12:43:14+00:00",
-      "category": "Government",
-      "description": "A Concept and Logical Data Model to find and support people who may be at risk of a vulnerability.",
-      "author": "",
-      "content": "A Concept and Logical Data Model to find and support people who may be at risk of a vulnerability.",
+      "content": "A landmark challenge prize representing a decade-long UK commitment to AI for public good innovation.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
@@ -794,21 +546,207 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.622620+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.521745+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.521749+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "0b7028435b79e1dc9003f1b51eb7ff88",
+      "title": "Introducing GPT-Live",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "published_date": "2026-07-08T00:00:00+00:00",
+      "category": "Industry",
+      "description": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
+      "author": "",
+      "content": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.522595+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.622624+00:00"
+        "timestamp": "2026-07-08T17:31:56.522598+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1abefc8d400fbca47296720ab62e95e4",
+      "title": "Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/powering-scientific-discovery-byokg-and-graphrag-for-intelligent-pharmaceutical-research/",
+      "published_date": "2026-07-08T16:57:12+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore how Graph-based Retrieval Augmented Generation (GraphRAG) is transforming scientific research by combining graph databases with generative AI. With this approach, you can accelerate discovery processes without compromising scientific integrity.",
+      "author": "Jasmine Rasheed Syed",
+      "content": "In this post, we explore how Graph-based Retrieval Augmented Generation (GraphRAG) is transforming scientific research by combining graph databases with generative AI. With this approach, you can accelerate discovery processes without compromising scientific integrity.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.8375,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.8,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.523345+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.6799999999999999,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.523348+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5f349a3328b2a0ff10a7b3e9c4305630",
+      "title": "How ChatGPT adoption has expanded",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+      "published_date": "2026-06-30T09:00:00+00:00",
+      "category": "Industry",
+      "description": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
+      "author": "",
+      "content": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
+        "impact_score": 0.85,
+        "overall_score": 0.8400000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.522729+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.522732+00:00"
       },
       "article_type": "article"
     },
@@ -824,10 +762,134 @@
       "content": "In this post, we present a multi-step pipeline directed by Amazon Nova, which uses its contextual vision reasoning to coordinate complementary tools, including Meta’s open-source Segment Anything Model (SAM 3) deployed on Amazon SageMaker AI for pixel-level segmentation, and Amazon Textract for optical character recognition (OCR). This pipeline is designed to provide comprehensive and compliant PII redaction even for challenging edge cases such as fingerprints, ID cards, or license plates in...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.524098+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.524101+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5b3f6b58c4591191803b2c83fbd8276c",
+      "title": "NVIDIA Unlocks AI Compute at Scale, Inviting Partners to Power the AI Infrastructure Buildout",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
+      "published_date": "2026-07-02T03:34:48+00:00",
+      "category": "Industry",
+      "description": "As AI moves from model development to production inference, compute demand is accelerating and shifting toward continuously operating AI factories that generate tokens at scale. This shift requires access to large‑scale, multi‑tenant accelerated computing that can come online quickly, stay highly utilized and support the economics of token‑scale AI services. Emerging AI companies historically have […]",
+      "author": "Raj Mirpuri",
+      "content": "As AI moves from model development to production inference, compute demand is accelerating and shifting toward continuously operating AI factories that generate tokens at scale. This shift requires access to large‑scale, multi‑tenant accelerated computing that can come online quickly, stay highly utilized and support the economics of token‑scale AI services. Emerging AI companies historically have […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-08T17:31:56.524414+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-08T17:31:56.524417+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d47d9472c0151240a76b678ac66bbe0e",
+      "title": "Into the Omniverse: Three Workflows for Improving Vision AI Agent Accuracy With Synthetic Data and Fine-Tuning",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/",
+      "published_date": "2026-06-30T13:00:27+00:00",
+      "category": "Industry",
+      "description": "Editor’s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners, and enterprises can transform their workflows using the latest advances in OpenUSD and NVIDIA Omniverse. Vision AI agents are becoming a practical way to automatically turn video data from the physical world into operational intelligence in factories, […]",
+      "author": "Esther Lee",
+      "content": "Editor’s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners, and enterprises can transform their workflows using the latest advances in OpenUSD and NVIDIA Omniverse. Vision AI agents are becoming a practical way to automatically turn video data from the physical world into operational intelligence in factories, […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.835,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -856,83 +918,21 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.95,
+        "confidence": 0.8,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.624625+00:00"
+        "consensus_timestamp": "2026-07-08T17:31:56.524639+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "combined_confidence": 0.6799999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-08T14:01:18.624628+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "1bbd88af53df301a43d49fb00368062f",
-      "title": "Monitoring discriminative ML models using Amazon SageMaker AI with MLflow",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/monitoring-discriminative-ml-models-using-amazon-sagemaker-ai-with-mlflow/",
-      "published_date": "2026-07-07T16:49:09+00:00",
-      "category": "Industry",
-      "description": "Implementing a data and model monitoring solution is necessary to maintain prediction accuracy and help achieve the best outcome for your machine learning use case. This post shows how you can use open source Evidently together with Amazon SageMaker AI to generate monitoring reports, organize and compare the results in MLflow, scale through pipelines, and trigger drift notifications.",
-      "author": "Sandeep Raveesh-Babu",
-      "content": "Implementing a data and model monitoring solution is necessary to maintain prediction accuracy and help achieve the best outcome for your machine learning use case. This post shows how you can use open source Evidently together with Amazon SageMaker AI to generate monitoring reports, organize and compare the results in MLflow, scale through pipelines, and trigger drift notifications.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-08T14:01:18.624364+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-08T14:01:18.624366+00:00"
+        "timestamp": "2026-07-08T17:31:56.524642+00:00"
       },
       "article_type": "article"
     }
@@ -940,7 +940,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 234.2778697013855,
+    "processing_time": 249.59401488304138,
     "components": [
       "collection",
       "bulk_scoring",
@@ -958,10 +958,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 124,
+      "total_processed": 122,
       "candidates": {
-        "headlines": 17,
-        "articles": 107,
+        "headlines": 14,
+        "articles": 108,
         "research_papers": 0
       },
       "selected": {
