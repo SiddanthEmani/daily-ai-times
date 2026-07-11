@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - main
+  # update-ticker.yml commits straight to main using the default GITHUB_TOKEN,
+  # and pushes authenticated that way don't trigger other workflows' `push`
+  # events (GitHub suppresses it to avoid recursive runs). Without this,
+  # fresh ticker.json data lands on main but the site never redeploys with
+  # it. workflow_run isn't subject to that suppression, so it picks up the
+  # gap.
+  workflow_run:
+    workflows:
+      - Update Market Ticker
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -17,6 +28,7 @@ concurrency:
 jobs:
   deploy:
     name: Deploy to GitHub Pages
+    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     environment:
@@ -26,6 +38,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        ref: main
 
     - name: Prepare site
       run: |
