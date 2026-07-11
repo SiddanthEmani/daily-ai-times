@@ -1,26 +1,27 @@
 // Ticker, masthead, nav, and the newsprint SVG placeholder.
 import { escapeHTML } from '../utils/utils.js';
 
-// Illustrative static market quotes (not pipeline data — the site has no
-// market feed). Ported from the redesign mockup.
-const MARKET_QUOTES = [
-    { ticker: 'NVDA',  px: '1,184.22', ch: '+2.4%', up: true  },
-    { ticker: 'MSFT',  px: '498.10',   ch: '+0.8%', up: true  },
-    { ticker: 'GOOGL', px: '214.67',   ch: '-0.3%', up: false },
-    { ticker: 'META',  px: '722.94',   ch: '+1.1%', up: true  },
-    { ticker: 'AMD',   px: '208.55',   ch: '-1.6%', up: false },
-    { ticker: 'TSM',   px: '241.08',   ch: '+0.9%', up: true  },
-    { ticker: 'AMZN',  px: '231.40',   ch: '+0.5%', up: true  },
-    { ticker: 'AAPL',  px: '241.83',   ch: '-0.2%', up: false },
+// Fallback shown before the first live fetch resolves, or if api/ticker.json
+// is ever missing/malformed — keeps the ticker from ever rendering blank.
+const FALLBACK_QUOTES = [
+    { symbol: 'NVDA',  price: '1,184.22', change_percent: '+2.4%', up: true  },
+    { symbol: 'MSFT',  price: '498.10',   change_percent: '+0.8%', up: true  },
+    { symbol: 'GOOGL', price: '214.67',   change_percent: '-0.3%', up: false },
+    { symbol: 'META',  price: '722.94',   change_percent: '+1.1%', up: true  },
+    { symbol: 'AMD',   price: '208.55',   change_percent: '-1.6%', up: false },
+    { symbol: 'TSM',   price: '241.08',   change_percent: '+0.9%', up: true  },
+    { symbol: 'AMZN',  price: '231.40',   change_percent: '+0.5%', up: true  },
+    { symbol: 'AAPL',  price: '241.83',   change_percent: '-0.2%', up: false },
 ];
 
-export function tickerHTML() {
-    const strip = [...MARKET_QUOTES, ...MARKET_QUOTES]; // duplicate for seamless loop
+export function tickerHTML(quotes) {
+    const data = Array.isArray(quotes) && quotes.length ? quotes : FALLBACK_QUOTES;
+    const strip = [...data, ...data]; // duplicate for seamless loop
     const spans = strip.map(q => `
         <span class="ticker-item ticker-market">
-            <span class="ticker-tag">${escapeHTML(q.ticker)}</span>
-            <span>${escapeHTML(q.px)}</span>
-            <span class="ticker-ch ${q.up ? 'up' : 'down'}">${q.up ? '▲' : '▼'} ${escapeHTML(q.ch)}</span>
+            <span class="ticker-tag">${escapeHTML(q.symbol)}</span>
+            <span>${escapeHTML(q.price)}</span>
+            <span class="ticker-ch ${q.up ? 'up' : 'down'}">${q.up ? '▲' : '▼'} ${escapeHTML(q.change_percent)}</span>
             <span class="ticker-dot"></span>
         </span>
     `).join('');

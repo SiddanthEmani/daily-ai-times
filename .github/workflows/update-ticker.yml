@@ -1,0 +1,50 @@
+name: Update Market Ticker
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # Every 12 hours - stays within Alpha Vantage's free-tier daily cap
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ticker
+  cancel-in-progress: false
+
+jobs:
+  update-ticker:
+    name: 📈 Refresh Market Ticker
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+    - name: 📦 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 📈 Fetch market quotes
+      env:
+        ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+      run: python3 src/backend/collectors/ticker_collector.py
+
+    - name: 💾 Commit ticker data
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
+        if [ -f src/frontend/api/ticker.json ]; then
+          git add src/frontend/api/ticker.json
+        fi
+
+        if git diff --staged --quiet; then
+          echo "ℹ️ No ticker changes to commit"
+        else
+          git commit -m "📈 Update market ticker - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
+          echo "✅ Ticker data committed and pushed"
+        fi
