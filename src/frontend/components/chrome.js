@@ -96,12 +96,82 @@ export function utilityRowHTML() {
     `;
 }
 
-const SOURCE_LIST = ['Reuters', 'Bloomberg', 'The Information', 'Axios', 'AP'];
+// Full list of configured RSS sources, grouped by category as defined in
+// src/shared/config/sources/*.yaml. Keep in sync with that config — it is
+// the source of truth for which feeds the pipeline actually collects from.
+const SOURCE_GROUPS = [
+    {
+        category: 'Media',
+        sources: [
+            'Import AI (Substack)', 'The Conversation', 'ProPublica', 'AI News', 'ZDNet',
+            'Forbes AI', 'The Gradient', 'AI Now Institute', 'MIT AI News', 'IEEE Spectrum',
+            'IEEE Automaton', 'Ars Technica', 'DEV Community', 'Digital Journal', 'Hacker Noon',
+            'HealthTech Magazine', 'InfoQ', 'KDnuggets', 'Last Week in AI', 'New Scientist',
+            'Product Hunt', 'Quanta Magazine', 'Rest of World', 'Scientific American',
+            'Tech.eu (Deep Tech)', 'Tech.eu (Robotics)', 'MIT Technology Review', 'TechRepublic',
+            'Tech Xplore', 'Phys.org', 'The Decoder', 'The Guardian', 'The Next Web (Neural)',
+            'The Register', 'The Verge', 'WIRED',
+        ],
+    },
+    {
+        category: 'Industry',
+        sources: [
+            'OpenAI', 'Microsoft AI Blog', 'Azure AI Blog', 'AWS Machine Learning Blog',
+            'NVIDIA Blog', 'DataRobot Blog', 'TechCrunch AI', 'Replicate Blog',
+            'NVIDIA Developer Blog', 'Google Research Blog', 'DeepMind', 'Amazon Science',
+            'Google AI Blog', 'Anaconda Blog', 'AI-TechPark', 'Analytics India Magazine',
+            'Benzinga', 'DagsHub Blog', 'Dataconomy', 'Nanonets Blog', 'MarkTechPost',
+            'SiliconANGLE (AI)', 'SiliconANGLE (Big Data)', 'Synced', 'AI Accelerator Institute',
+        ],
+    },
+    {
+        category: 'Startups',
+        sources: [
+            'TechCrunch Startups', 'Crunchbase News', 'VentureBeat AI', 'Crunchbase AI',
+            'Sequoia Capital',
+        ],
+    },
+    {
+        category: 'Open Source',
+        sources: [
+            'Hugging Face', 'PyTorch', 'TensorFlow', 'Creative Commons', 'MLOps Community',
+            'AI Weirdness', 'AIhub', 'Berkeley AI Research (BAIR)', 'Python Insider',
+            'Nicholas Carlini', 'CMU Machine Learning Blog', 'David Stutz', 'Deep & Shallow',
+            'Elastic Blog', 'Explosion AI', 'fast.ai', 'Gradient Flow', 'Chip Huyen',
+            'Machine Intelligence Research Institute', 'Import AI', 'JMLR',
+            'Machine Learning Mastery', 'Samuele Mazzanti', 'Max Woolf', 'Neptune.ai',
+            'Paperspace Blog', 'PyImageSearch', 'Python PEPs', 'R-bloggers',
+            'ScienceDaily (Neural Interfaces)', 'ScienceDaily (Robotics)', 'ScienceDaily (AI)',
+            'Stanford AI Lab', 'AI Summer', 'Towards AI', 'Weights & Biases',
+        ],
+    },
+    {
+        category: 'Research',
+        sources: [
+            'arXiv', 'Nature Machine Learning', 'Science', 'Journal of AI Research (JAIR)',
+            'ACM Communications', 'AAAI AI Magazine', 'Distill', 'arXiv (cs.LG)',
+            'arXiv (stat.ML)',
+        ],
+    },
+    {
+        category: 'Government',
+        sources: [
+            'NIST', 'NIH', 'DARPA', 'UK Dept. for Science, Innovation & Technology',
+            'UK Government AI Blog',
+        ],
+    },
+];
 
 // Deliberately not #modal-root — the e2e suite asserts that id is never
 // attached to the DOM, so this overlay lives inside #root under its own id.
 export function sourcesOverlayHTML() {
-    const items = SOURCE_LIST.map(s => `<li>${escapeHTML(s)}</li>`).join('');
+    const groups = SOURCE_GROUPS.map(({ category, sources }) => {
+        const items = sources.map(s => `<li>${escapeHTML(s)}</li>`).join('');
+        return `
+            <li class="sources-group-heading">${escapeHTML(category)}</li>
+            ${items}
+        `;
+    }).join('');
     return `
         <div class="sources-overlay" id="sources-overlay" data-action="close-sources">
             <div class="sources-card" data-action="none">
@@ -109,7 +179,7 @@ export function sourcesOverlayHTML() {
                     <span>Sources</span>
                     <button class="sources-close" data-action="close-sources" type="button">✕</button>
                 </div>
-                <ul class="sources-list">${items}</ul>
+                <ul class="sources-list">${groups}</ul>
             </div>
         </div>
     `;
