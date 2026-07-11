@@ -717,7 +717,11 @@ class NewsProcessingPipeline:
         api_saved = self._save_api_files(classified_content, pipeline_info, processing_duration)
         if api_saved:
             logger.info("✅ API files generated successfully for frontend deployment")
-            self.generate_audio()
+            self.audio_generated = self.generate_audio()
+            if self.audio_generated:
+                logger.info("✅ Podcast audio: fresh audio generated this run")
+            else:
+                log_error(logger, "❌ Podcast audio generation FAILED — stale audio from a previous run will be redeployed")
         else:
             log_warning(logger, "⚠️ Failed to generate API files - frontend may not update")
         
@@ -1339,14 +1343,14 @@ class NewsProcessingPipeline:
         return normalized_articles
 
     def generate_audio(self):
-        """Generate podcast audio using Gemini 2.5 TTS with correct format."""
+        """Generate podcast audio using Gemini 3.1 Flash TTS with correct format."""
         # Check if GEMINI_API_KEY is available
         gemini_api_key = os.getenv('GEMINI_API_KEY')
         if not gemini_api_key:
             logger.info("ℹ️ GEMINI_API_KEY not available - skipping audio generation")
             logger.info("   💡 For local development: Set GEMINI_API_KEY in .env.local")
             logger.info("   🚀 Audio generation works automatically in GitHub Actions")
-            return
+            return False
         
         def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
             """Create a proper WAV file with correct headers."""
@@ -1422,7 +1426,7 @@ class NewsProcessingPipeline:
             
             # Generate TTS audio from script using correct format
             tts_response = client.models.generate_content(
-                model='gemini-2.5-flash-preview-tts',
+                model='gemini-3.1-flash-tts-preview',
                 contents=tts_prompt,
                 config=types.GenerateContentConfig(
                     response_modalities=["AUDIO"],
@@ -1483,10 +1487,12 @@ class NewsProcessingPipeline:
                 raise ValueError(f"Generated audio file too small: {file_size} bytes")
             
             logger.info(f"✅ Podcast audio generated successfully: {audio_file} ({file_size:,} bytes)")
-            
+            return True
+
         except Exception as e:
             log_error(logger, f"Failed to generate podcast audio: {e}")
             logger.debug(f"TTS generation error details: {traceback.format_exc()}")
+            return False
 
 
 async def main():
@@ -1554,7 +1560,8 @@ async def _save_and_display_results(pipeline, classified_content, duration, logg
                 'total': total_count
             },
             'processing_time_seconds': duration,
-            'timestamp': NewsProcessingPipeline._get_current_timestamp()
+            'timestamp': NewsProcessingPipeline._get_current_timestamp(),
+            'audio_generated': getattr(pipeline, 'audio_generated', False)
         },
         'classified_content': classified_content
     }

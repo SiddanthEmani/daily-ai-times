@@ -133,15 +133,22 @@ jobs:
             # Get processing time from orchestrator results
             results_file=$(ls test_output/orchestrator_results_*.json | head -1)
             processing_time=$(jq '.results_summary.processing_time_seconds // 0' "$results_file")
-            
+            audio_generated=$(jq -r '.results_summary.audio_generated // false' "$results_file")
+
             echo "has_articles=true" >> $GITHUB_OUTPUT
             echo "article_count=$article_count" >> $GITHUB_OUTPUT
             echo "pipeline_version=$pipeline_version" >> $GITHUB_OUTPUT
             echo "processing_time=$processing_time" >> $GITHUB_OUTPUT
-            
+
             echo "✅ Processed $article_count articles with $pipeline_version"
             echo "📅 Generated at: $generated_at"
             echo "⏱️ Processing time: ${processing_time}s"
+
+            if [ "$audio_generated" = "true" ]; then
+              echo "✅ Podcast audio: fresh audio generated this run"
+            else
+              echo "::warning::Podcast audio generation failed this run — stale audio will be redeployed. Check orchestrator logs for the TTS error."
+            fi
           else
             echo "❌ Missing required output files"
             ls -la src/frontend/api/ test_output/ || true
