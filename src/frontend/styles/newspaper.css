@@ -224,7 +224,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   border-bottom: 3px double var(--ink);
 }
 .above .vrule { background: var(--rule-soft); }
-.above > section { padding: 0 28px; }
+.above > section { padding: 0 28px; min-width: 0; }
 .above > section:first-child { padding-left: 0; }
 .above > section:last-child  { padding-right: 0; }
 
@@ -275,8 +275,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 30px;
+  min-width: 0;
 }
-.sidebar-rail { display: flex; flex-direction: column; }
+.sidebar-rail { display: flex; flex-direction: column; min-width: 0; }
 
 .story { padding: 14px 0; border-bottom: 1px solid var(--rule-soft); display: flex; flex-direction: column; cursor: pointer; }
 .story:hover .story-headline { color: var(--accent-ink); }
