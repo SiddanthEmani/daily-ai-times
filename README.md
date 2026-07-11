@@ -73,6 +73,7 @@ python src/backend/orchestrator.py
 2. **Configure GitHub Secrets**:
    - `GROQ_API_KEY` - Required for AI processing
    - `GOOGLE_ANALYTICS_ID` - Optional analytics
+   - `ALPHA_VANTAGE_API_KEY` - Optional, powers the live masthead ticker (falls back to static placeholder quotes if unset)
 3. **Enable GitHub Pages** with "GitHub Actions" source
 4. **Test locally** before pushing changes
 5. **Push changes** - Automatic deployment via workflow

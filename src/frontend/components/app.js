@@ -31,6 +31,7 @@ const state = {
     mastheadClock: null,
     masthead: null,
     sourcesOpen: false,
+    tickerQuotes: null,
 };
 
 function loadSavedIds() {
@@ -90,6 +91,25 @@ async function loadStories() {
         const raw = Array.isArray(data.articles) ? data.articles : [];
         state.masthead = data.masthead || null;
         return raw.map((r, i) => normalize(r, i));
+    } finally {
+        clearTimeout(timer);
+    }
+}
+
+// The ticker is decorative — any failure here falls back to chrome.js's
+// static FALLBACK_QUOTES rather than breaking page load.
+async function loadTicker() {
+    const url = `./api/ticker.json?t=${Date.now()}`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        return Array.isArray(data.quotes) ? data.quotes : null;
+    } catch (err) {
+        console.warn('Ticker load failed, using fallback quotes:', err);
+        return null;
     } finally {
         clearTimeout(timer);
     }
@@ -176,7 +196,7 @@ function buildPageMarkup() {
     ` : '';
 
     return `
-        ${tickerHTML()}
+        ${tickerHTML(state.tickerQuotes)}
         <div class="page">
             ${mastheadHTML({ volume: mastheadVolumeLabel(), query: state.query })}
             ${utilityRowHTML()}
@@ -404,8 +424,9 @@ async function main() {
     installCacheBustingFetch();
 
     try {
-        const stories = await loadStories();
+        const [stories, tickerQuotes] = await Promise.all([loadStories(), loadTicker()]);
         if (!stories.length) throw new Error('No articles in latest.json');
+        state.tickerQuotes = tickerQuotes;
         state.partitioned = partition(stories);
         state.sections = sectionsFromStories(stories);
         render();
