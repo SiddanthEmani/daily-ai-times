@@ -1,22 +1,208 @@
 {
-  "updated": "2026-07-17T13:26:56.722814+00:00",
+  "updated": "2026-07-17T17:14:51.573088+00:00",
   "top_stories": [
     {
-      "article_id": "044d213e72a9d7d6d9d7bfad1490cc24",
-      "title": "Moonshot’s upcoming Kimi 3 is expected to close the gap with Anthropic’s Opus 4.8",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
-      "published_date": "2026-07-16T14:26:29+00:00",
+      "article_id": "ce19d1275966e35f9463a7d511b3ea1e",
+      "title": "NVIDIA AI Releases Nemotron 3 Embed: An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
+      "published_date": "2026-07-17T07:53:02+00:00",
       "category": "Industry",
-      "description": "The FT reports Kimi K3 will be the largest open AI model from China, with a parameter count between 2 trillion and 3 trillion.",
-      "author": "Dominic-Madori Davis",
-      "content": "The FT reports Kimi K3 will be the largest open AI model from China, with a parameter count between 2 trillion and 3 trillion.",
+      "description": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS+MSE distillation from the 8B teacher. NVFP4 retains 99%+ of BF16 retrieval accuracy at up to 2x Blackwell throughput. All three run 32,768-token inputs under OpenMDW-1.1. The post NVIDIA AI Releases Nemotron 3 Embed:...",
+      "author": "Asif Razzaq",
+      "content": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS+MSE distillation from the 8B teacher. NVFP4 retains 99%+ of BF16 retrieval accuracy at up to 2x Blackwell throughput. All three run 32,768-token inputs under OpenMDW-1.1. The post NVIDIA AI Releases Nemotron 3 Embed:...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "quality_score": 0.95,
+        "novelty_score": 0.6,
+        "impact_score": 0.8,
+        "overall_score": 0.8175000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.535744+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.535747+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "b30989c99f862b17333a693bdd9b138e",
+      "title": "A Practical Guide to GPU-Initiated Communication for Molecular Dynamics at Scale",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/a-practical-guide-to-gpu-initiated-communication-for-molecular-dynamics-at-scale/",
+      "published_date": "2026-07-09T17:15:04+00:00",
+      "category": "Industry",
+      "description": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in...",
+      "author": "Michelle Horton",
+      "content": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.535219+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.535221+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "cd5b3797581e35270a8db78c72024fbd",
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "published_date": "2026-07-09T13:00:00+00:00",
+      "category": "Industry",
+      "description": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+      "author": "",
+      "content": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.531960+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.531963+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7d6c9aaab4f3ba3f1ad6de2a5b5fa80d",
+      "title": "The US is advancing AI safety through state and federal action",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "published_date": "2026-07-15T12:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "author": "",
+      "content": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
         "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "overall_score": 0.9,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -45,103 +231,41 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.687799+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.531651+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
-        "combined_confidence": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.687802+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "d96b21fcbef14a09ab9974f1a089e5da",
-      "title": "Why Performance per Watt Is the Ultimate Metric for AI Infrastructure Efficiency",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/",
-      "published_date": "2026-07-14T15:00:20+00:00",
-      "category": "Industry",
-      "description": "Power is AI infrastructure’s inescapable constraint. How many tokens an AI factory can generate within a fixed power budget determines its revenue and profitability. Because of this, performance per watt — a metric that can’t be gamed, only earned through real-world results — is the foundation for AI factories. As agentic AI drives token demand […]",
-      "author": "Shruti Koparkar",
-      "content": "Power is AI infrastructure’s inescapable constraint. How many tokens an AI factory can generate within a fixed power budget determines its revenue and profitability. Because of this, performance per watt — a metric that can’t be gamed, only earned through real-world results — is the foundation for AI factories. As agentic AI drives token demand […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.687129+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.687131+00:00"
+        "timestamp": "2026-07-17T17:14:51.531661+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "eb5ac0c329e22a571e82f3fbc4dc7d08",
-      "title": "Policy paper: British Sign Language (BSL) 5-year plan: Department for Science, Innovation and Technology",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/british-sign-language-5-year-plan-department-for-science-innovation-and-technology",
-      "published_date": "2026-07-15T11:12:55+00:00",
+      "article_id": "59d663906b7710f1d43b531a23e09621",
+      "title": "Arvind Raman Confirmed as the 18th NIST Director",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2026/07/arvind-raman-confirmed-18th-nist-director",
+      "published_date": "2026-07-06T12:00:00+00:00",
       "category": "Government",
-      "description": "This plan sets out how Department for Science, Innovation and Technology plans to improve the use of BSL in its communications in the next 5 years. Includes an annual progress update.",
-      "author": "",
-      "content": "This plan sets out how Department for Science, Innovation and Technology plans to improve the use of BSL in its communications in the next 5 years. Includes an annual progress update.",
+      "description": "Raman comes to NIST from Purdue University, where he was the dean of engineering.",
+      "author": "Sarah Henderson",
+      "content": "Raman comes to NIST from Purdue University, where he was the dean of engineering.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.95,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +296,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.684382+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.530348+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,131 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.684387+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d4d2f504a037f10c418aea9388b30025",
-      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300X",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/",
-      "published_date": "2026-07-13T19:00:00+00:00",
-      "category": "Industry",
-      "description": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
-      "author": "Elizabeth Goodman",
-      "content": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688632+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.688636+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "eb896e4f89faf92ee43f9d90813f0f7e",
-      "title": "AI Model Co-Design: Hardware-Friendly LLM Design",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design/",
-      "published_date": "2026-07-10T16:36:02+00:00",
-      "category": "Industry",
-      "description": "AI performance comes down to three dimensions: Accuracy: How well the model reasons and produces outputs Throughput: How many tokens per second a...",
-      "author": "Elizabeth Goodman",
-      "content": "AI performance comes down to three dimensions: Accuracy: How well the model reasons and produces outputs Throughput: How many tokens per second a...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688875+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.688877+00:00"
+        "timestamp": "2026-07-17T17:14:51.530353+00:00"
       },
       "article_type": "article"
     }

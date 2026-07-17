@@ -1,27 +1,585 @@
 {
-  "generated_at": "2026-07-17T13:26:56.719391+00:00",
+  "generated_at": "2026-07-17T17:14:51.569900+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1588
+    "issue_number": 1589
   },
   "articles": [
     {
-      "article_id": "044d213e72a9d7d6d9d7bfad1490cc24",
-      "title": "Moonshot’s upcoming Kimi 3 is expected to close the gap with Anthropic’s Opus 4.8",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
-      "published_date": "2026-07-16T14:26:29+00:00",
+      "article_id": "ce19d1275966e35f9463a7d511b3ea1e",
+      "title": "NVIDIA AI Releases Nemotron 3 Embed: An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
+      "published_date": "2026-07-17T07:53:02+00:00",
       "category": "Industry",
-      "description": "The FT reports Kimi K3 will be the largest open AI model from China, with a parameter count between 2 trillion and 3 trillion.",
-      "author": "Dominic-Madori Davis",
-      "content": "The FT reports Kimi K3 will be the largest open AI model from China, with a parameter count between 2 trillion and 3 trillion.",
+      "description": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS+MSE distillation from the 8B teacher. NVFP4 retains 99%+ of BF16 retrieval accuracy at up to 2x Blackwell throughput. All three run 32,768-token inputs under OpenMDW-1.1. The post NVIDIA AI Releases Nemotron 3 Embed:...",
+      "author": "Asif Razzaq",
+      "content": "NVIDIA released Nemotron 3 Embed on July 15 and 16, 2026. The collection has three open checkpoints: Nemotron-3-Embed-8B-BF16, Nemotron-3-Embed-1B-BF16, and Nemotron-3-Embed-1B-NVFP4. The 8B ranks #1 on RTEB at 78.46 average NDCG@10. The 1B came from ModelOpt NAS pruning plus COS+MSE distillation from the 8B teacher. NVFP4 retains 99%+ of BF16 retrieval accuracy at up to 2x Blackwell throughput. All three run 32,768-token inputs under OpenMDW-1.1. The post NVIDIA AI Releases Nemotron 3 Embed:...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.6,
+        "impact_score": 0.8,
+        "overall_score": 0.8175000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.535744+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.535747+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "b30989c99f862b17333a693bdd9b138e",
+      "title": "A Practical Guide to GPU-Initiated Communication for Molecular Dynamics at Scale",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/a-practical-guide-to-gpu-initiated-communication-for-molecular-dynamics-at-scale/",
+      "published_date": "2026-07-09T17:15:04+00:00",
+      "category": "Industry",
+      "description": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in...",
+      "author": "Michelle Horton",
+      "content": "Molecular dynamics (MD) simulations are among the most demanding workloads in computational science. Using them, researchers can observe atomic behavior in...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.535219+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.535221+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "cd5b3797581e35270a8db78c72024fbd",
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "published_date": "2026-07-09T13:00:00+00:00",
+      "category": "Industry",
+      "description": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+      "author": "",
+      "content": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.531960+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.531963+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "7d6c9aaab4f3ba3f1ad6de2a5b5fa80d",
+      "title": "The US is advancing AI safety through state and federal action",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "published_date": "2026-07-15T12:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "author": "",
+      "content": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.531651+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.531661+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "59d663906b7710f1d43b531a23e09621",
+      "title": "Arvind Raman Confirmed as the 18th NIST Director",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2026/07/arvind-raman-confirmed-18th-nist-director",
+      "published_date": "2026-07-06T12:00:00+00:00",
+      "category": "Government",
+      "description": "Raman comes to NIST from Purdue University, where he was the dean of engineering.",
+      "author": "Sarah Henderson",
+      "content": "Raman comes to NIST from Purdue University, where he was the dean of engineering.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.530348+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.530353+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9385e8bd773a22b7599fe9e93f6abc75",
+      "title": "Researchers discover single-cell brain activity that underlies human speech",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/researchers-discover-single-cell-brain-activity-underlies-human-speech",
+      "published_date": "2026-07-17T17:08:53.350898+00:00",
+      "category": "Government",
+      "description": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
+      "author": "",
+      "content": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.530468+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.530473+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5508e532567852179332a3774a73c465",
+      "title": "Real-time dental image verification with Amazon SageMaker AI at Henry Schein One",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/real-time-dental-image-verification-with-amazon-sagemaker-ai-at-henry-schein-one/",
+      "published_date": "2026-07-10T15:33:47+00:00",
+      "category": "Industry",
+      "description": "This post describes how Henry Schein One closed that gap by building Image Verify, an AI-powered quality verification system on Amazon SageMaker AI that evaluates dental X-ray quality at the point of capture, in real time, across thousands of locations. The system went from concept to over 10,000 active locations within months and has already processed over 11 million X-rays and growing at 1.5 million per week. Henry Schein One is now scaling toward 40,000 locations globally across four regions.",
+      "author": "Troy Miller",
+      "content": "This post describes how Henry Schein One closed that gap by building Image Verify, an AI-powered quality verification system on Amazon SageMaker AI that evaluates dental X-ray quality at the point of capture, in real time, across thousands of locations. The system went from concept to over 10,000 active locations within months and has already processed over 11 million X-rays and growing at 1.5 million per week. Henry Schein One is now scaling toward 40,000 locations globally across four regions.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.533425+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.533427+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1871fd252f90bc559c3cd4af7fff6944",
+      "title": "Data regulation in the age of AI and other data‑intensive technologies",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/calls-for-evidence/data-regulation-in-the-age-of-ai-and-other-data-intensive-technologies",
+      "published_date": "2026-07-15T09:00:04+00:00",
+      "category": "Government",
+      "description": "This call for evidence asks for examples of how data regulation interacts with AI and data-intensive technologies, and how technological progress may change data use in the economy.",
+      "author": "",
+      "content": "This call for evidence asks for examples of how data regulation interacts with AI and data-intensive technologies, and how technological progress may change data use in the economy.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.7,
+        "impact_score": 0.9,
+        "overall_score": 0.85,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.8,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.531287+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.531290+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4ef5e4b381d7e73a806bca44107d19ab",
+      "title": "Introducing Grok on Amazon Bedrock",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/",
+      "published_date": "2026-07-16T19:29:26+00:00",
+      "category": "Industry",
+      "description": "This post covers what makes Grok 4.3 a great fit for agentic and enterprise workloads, how you access it through Amazon Bedrock, and how to use the capabilities most teams reach for first: a basic chat request, configurable reasoning effort, tool calling, structured output, image input, and stateful multi-turn conversations.",
+      "author": "Melanie Li",
+      "content": "This post covers what makes Grok 4.3 a great fit for agentic and enterprise workloads, how you access it through Amazon Bedrock, and how to use the capabilities most teams reach for first: a basic chat request, configurable reasoning effort, tool calling, structured output, image input, and stateful multi-turn conversations.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.532732+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.532735+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "d15f74006029f4ff41ad3e984fb8ec58",
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "published_date": "2026-07-08T15:00:27+00:00",
+      "category": "Industry",
+      "description": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "author": "Adel El Hallak",
+      "content": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -53,7 +611,7 @@
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.687799+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.533758+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,89 +622,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.687802+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "d96b21fcbef14a09ab9974f1a089e5da",
-      "title": "Why Performance per Watt Is the Ultimate Metric for AI Infrastructure Efficiency",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/",
-      "published_date": "2026-07-14T15:00:20+00:00",
-      "category": "Industry",
-      "description": "Power is AI infrastructure’s inescapable constraint. How many tokens an AI factory can generate within a fixed power budget determines its revenue and profitability. Because of this, performance per watt — a metric that can’t be gamed, only earned through real-world results — is the foundation for AI factories. As agentic AI drives token demand […]",
-      "author": "Shruti Koparkar",
-      "content": "Power is AI infrastructure’s inescapable constraint. How many tokens an AI factory can generate within a fixed power budget determines its revenue and profitability. Because of this, performance per watt — a metric that can’t be gamed, only earned through real-world results — is the foundation for AI factories. As agentic AI drives token demand […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.98,
-        "overall_score": 0.931,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.687129+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.687131+00:00"
+        "timestamp": "2026-07-17T17:14:51.533761+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "eb5ac0c329e22a571e82f3fbc4dc7d08",
-      "title": "Policy paper: British Sign Language (BSL) 5-year plan: Department for Science, Innovation and Technology",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/british-sign-language-5-year-plan-department-for-science-innovation-and-technology",
-      "published_date": "2026-07-15T11:12:55+00:00",
+      "article_id": "d48a477486052128423d04af6758b10f",
+      "title": "DARPA and U.S. Air Force fly AI-controlled F-16, paving the way for autonomous air combat",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+      "published_date": "2026-07-16T13:42:00+00:00",
       "category": "Government",
-      "description": "This plan sets out how Department for Science, Innovation and Technology plans to improve the use of BSL in its communications in the next 5 years. Includes an annual progress update.",
-      "author": "",
-      "content": "This plan sets out how Department for Science, Innovation and Technology plans to improve the use of BSL in its communications in the next 5 years. Includes an annual progress update.",
+      "description": "Historic VENOM milestone demonstrates scalable AI development capabilities for the operational fleet.",
+      "author": "outreach@darpa.mil",
+      "content": "Historic VENOM milestone demonstrates scalable AI development capabilities for the operational fleet.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.95
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -177,7 +673,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.684382+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.530815+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -188,26 +684,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.684387+00:00"
+        "timestamp": "2026-07-17T17:14:51.530818+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d4d2f504a037f10c418aea9388b30025",
-      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300X",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/",
-      "published_date": "2026-07-13T19:00:00+00:00",
+      "article_id": "2e143b4895ee13b6b975ca2f132b4179",
+      "title": "Scaling medical content review at Flo Health with Amazon Bedrock – Part 2",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-with-amazon-bedrock-part-2/",
+      "published_date": "2026-07-14T16:33:08+00:00",
       "category": "Industry",
-      "description": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
-      "author": "Elizabeth Goodman",
-      "content": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
+      "description": "In this post, we share how Flo Health’s engineering team turned a proof of concept (PoC) from the AWS Generative AI Innovation Center into a production-grade, AI-powered medical content review and generation system built on Amazon Bedrock. T",
+      "author": "Konstantin Lekh",
+      "content": "In this post, we share how Flo Health’s engineering team turned a proof of concept (PoC) from the AWS Generative AI Innovation Center into a production-grade, AI-powered medical content review and generation system built on Amazon Bedrock. T",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "overall_score": 0.8474999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -235,22 +731,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.8,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688632+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.533083+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.688636+00:00"
+        "timestamp": "2026-07-17T17:14:51.533085+00:00"
       },
       "article_type": "article"
     },
@@ -265,12 +761,12 @@
       "author": "Elizabeth Goodman",
       "content": "AI performance comes down to three dimensions: Accuracy: How well the model reasons and produces outputs Throughput: How many tokens per second a...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
+        "novelty_score": 0.7,
         "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.95
+        "overall_score": 0.8474999999999999,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -301,7 +797,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688875+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.535086+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -312,578 +808,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.688877+00:00"
+        "timestamp": "2026-07-17T17:14:51.535088+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "4f7d22f09a05d8f29d59e54af1fd0f60",
-      "title": "NVIDIA Introduces New Jetson Thor Computers to Advance Mainstream Robotics and Edge AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
-      "published_date": "2026-07-15T23:00:54+00:00",
-      "category": "Industry",
-      "description": "General-purpose robots and autonomous machines are moving from research labs to real-world mass-market deployment, creating demand for compact, power-efficient AI supercomputers capable of running foundation models at the edge. To meet that need, NVIDIA today introduced the T3000 and T2000, new modules based on the NVIDIA Thor architecture that enable mass-market robotics and edge AI […]",
-      "author": "Chen Su",
-      "content": "General-purpose robots and autonomous machines are moving from research labs to real-world mass-market deployment, creating demand for compact, power-efficient AI supercomputers capable of running foundation models at the edge. To meet that need, NVIDIA today introduced the T3000 and T2000, new modules based on the NVIDIA Thor architecture that enable mass-market robotics and edge AI […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.686990+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.686992+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7ee3541dc56f23193044750f1acde4f7",
-      "title": "Building Faster Cryptography with Carryless Multiplication in NVIDIA CUDA 13.3",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-faster-cryptography-with-carryless-multiplication-in-nvidia-cuda-13-3/",
-      "published_date": "2026-07-15T17:37:12+00:00",
-      "category": "Industry",
-      "description": "For over fifteen years, x86 CPUs have shipped with a dedicated hardware instruction for carryless multiplication. It’s a small but stubborn primitive that...",
-      "author": "Michelle Horton",
-      "content": "For over fifteen years, x86 CPUs have shipped with a dedicated hardware instruction for carryless multiplication. It’s a small but stubborn primitive that...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688413+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.688416+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "256bfc0b998ecc13773b389ca8f6fcd0",
-      "title": "How Open Models Are Driving AI Research",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/open-models-icml-2026/",
-      "published_date": "2026-07-06T16:00:00+00:00",
-      "category": "Industry",
-      "description": "Every year, the International Conference on Machine Learning (ICML) reveals where thousands of AI researchers have decided to put their work. This year’s accepted papers reveal a clear direction: open frontier models and open AI infrastructure have become foundational to how modern AI science gets done. NVIDIA had 74 papers accepted at ICML 2026. Approximately […]",
-      "author": "JJ Kim",
-      "content": "Every year, the International Conference on Machine Learning (ICML) reveals where thousands of AI researchers have decided to put their work. This year’s accepted papers reveal a clear direction: open frontier models and open AI infrastructure have become foundational to how modern AI science gets done. NVIDIA had 74 papers accepted at ICML 2026. Approximately […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.687354+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.687357+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "65fad627558344255e98015c9ef4ef6e",
-      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/deutsche-telekom",
-      "published_date": "2026-07-10T07:00:00+00:00",
-      "category": "Industry",
-      "description": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
+      "article_id": "41dd9a9fe03b7c45ec22c2ec2ed4ae06",
+      "title": "NIH research establishes new framework for the role of senescence in aging",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-research-establishes-new-framework-role-senescence-aging",
+      "published_date": "2026-07-17T17:08:53.351196+00:00",
+      "category": "Government",
+      "description": "First large-scale atlas of senescent cells could help inform future therapies for age-related diseases.",
       "author": "",
-      "content": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.685307+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.685310+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e32f0f0af963d47aaf4e4c0b50b93046",
-      "title": "External key management for Azure Managed HSM is now in public preview",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/",
-      "published_date": "2026-07-07T16:00:00+00:00",
-      "category": "Industry",
-      "description": "Azure Key Vault Managed Hardware Security Module (HSM) provides strong sovereignty over your encryption keys. Keys are generated and stored in a single-tenant, FIPS 140-3 Level 3 HSM that only you control: Microsoft has no access to your key material, and you govern who can use each key. The post External key management for Azure Managed HSM is now in public preview appeared first on Microsoft Azure Blog.",
-      "author": "Salim Chawro",
-      "content": "Azure Key Vault Managed Hardware Security Module (HSM) provides strong sovereignty over your encryption keys. Keys are generated and stored in a single-tenant, FIPS 140-3 Level 3 HSM that only you control: Microsoft has no access to your key material, and you govern who can use each key. The post External key management for Azure Managed HSM is now in public preview appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.686008+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.686011+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ad45c0810eaf6c4b6a65bbb6adced2ce",
-      "title": "How to manage AI investments in the agentic era",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
-      "published_date": "2026-07-14T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
-      "author": "",
-      "content": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.685161+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.685164+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "5a02ce601b2d4d84e0adc47e1b828b2a",
-      "title": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/",
-      "published_date": "2026-07-13T21:01:20+00:00",
-      "category": "Industry",
-      "description": "Today, GPT-5.6 Sol, Terra, and Luna from OpenAI are generally available on Amazon Bedrock, bringing the smartest family of models from OpenAI yet to Amazon Bedrock’s next-generation inference engine built for high-performance, security and reliability.",
-      "author": "Tanvi Girinath",
-      "content": "Today, GPT-5.6 Sol, Terra, and Luna from OpenAI are generally available on Amazon Bedrock, bringing the smartest family of models from OpenAI yet to Amazon Bedrock’s next-generation inference engine built for high-performance, security and reliability.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.686624+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.686629+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b8f6505c2cd24cd967931df4e906dc2c",
-      "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield/",
-      "published_date": "2026-07-16T16:00:00+00:00",
-      "category": "Industry",
-      "description": "Agentic AI changes the infrastructure pattern for AI factories. One request can trigger many model calls, tool calls, memory lookups, policy checks, storage...",
-      "author": "Michelle Horton",
-      "content": "Agentic AI changes the infrastructure pattern for AI factories. One request can trigger many model calls, tool calls, memory lookups, policy checks, storage...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.8,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.688278+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.688281+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b43fecd4492a45b4669b70be575f2c00",
-      "title": "Running Low-Latency Analytical Workloads with GPU-Accelerated Presto on NVIDIA GB200 NVL72",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/running-low-latency-analytical-workloads-with-gpu-accelerated-presto-on-nvidia-gb200-nvl72/",
-      "published_date": "2026-07-08T16:05:25+00:00",
-      "category": "Industry",
-      "description": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance...",
-      "author": "Tanya Lenz",
-      "content": "Presto is an open source, distributed SQL engine for running fast, interactive queries on very large datasets. On NVIDIA GPUs, Presto delivers peak performance...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.689055+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-17T13:26:56.689058+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3633877b3b6c36f8f6cee97c146a2bce",
-      "title": "Partnering with Sable: Closing the Diffusion Gap",
-      "source": "sequoia_ai",
-      "url": "https://sequoiacap.com/article/partnering-with-sable-closing-the-diffusion-gap/",
-      "published_date": "2026-07-16T16:00:02+00:00",
-      "category": "Startups",
-      "description": "The post Partnering with Sable: Closing the Diffusion Gap appeared first on Sequoia Capital.",
-      "author": "sbarry",
-      "content": "The post Partnering with Sable: Closing the Diffusion Gap appeared first on Sequoia Capital.",
+      "content": "First large-scale atlas of senescent cells could help inform future therapies for age-related diseases.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -921,7 +859,7 @@
         "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-17T13:26:56.689147+00:00"
+        "consensus_timestamp": "2026-07-17T17:14:51.530656+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -932,7 +870,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-17T13:26:56.689150+00:00"
+        "timestamp": "2026-07-17T17:14:51.530659+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "23b0463b4a77f5e7b9922debbb2be5ea",
+      "title": "A scorecard for the AI age",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "published_date": "2026-07-17T10:00:00+00:00",
+      "category": "Industry",
+      "description": "Sarah Friar, CFO of OpenaAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
+      "author": "",
+      "content": "Sarah Friar, CFO of OpenaAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8500000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-17T17:14:51.531423+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-17T17:14:51.531426+00:00"
       },
       "article_type": "article"
     }
@@ -940,7 +940,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 230.27997469902039,
+    "processing_time": 291.472953081131,
     "components": [
       "collection",
       "bulk_scoring",
@@ -958,10 +958,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 119,
+      "total_processed": 117,
       "candidates": {
-        "headlines": 11,
-        "articles": 108,
+        "headlines": 10,
+        "articles": 107,
         "research_papers": 0
       },
       "selected": {
