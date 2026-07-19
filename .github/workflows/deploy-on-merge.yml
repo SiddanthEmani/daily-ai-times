@@ -4,15 +4,16 @@ on:
   push:
     branches:
       - main
-  # update-ticker.yml commits straight to main using the default GITHUB_TOKEN,
-  # and pushes authenticated that way don't trigger other workflows' `push`
-  # events (GitHub suppresses it to avoid recursive runs). Without this,
-  # fresh ticker.json data lands on main but the site never redeploys with
-  # it. workflow_run isn't subject to that suppression, so it picks up the
-  # gap.
+  # The data-only collectors (update-ticker.yml, update-leaderboard.yml) commit
+  # straight to main using the default GITHUB_TOKEN, and pushes authenticated
+  # that way don't trigger other workflows' `push` events (GitHub suppresses it
+  # to avoid recursive runs). Without this, fresh ticker.json / leaderboard.json
+  # data lands on main but the site never redeploys with it. workflow_run isn't
+  # subject to that suppression, so it picks up the gap.
   workflow_run:
     workflows:
       - Update Market Ticker
+      - Update Benchmark Leaderboard
     types:
       - completed
 
