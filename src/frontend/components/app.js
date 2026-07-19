@@ -32,6 +32,8 @@ const state = {
     masthead: null,
     sourcesOpen: false,
     tickerQuotes: null,
+    leaderboard: null,
+    leaderboardChip: null,
 };
 
 function loadSavedIds() {
@@ -115,6 +117,28 @@ async function loadTicker() {
     }
 }
 
+// The benchmark leaderboard is decorative — any failure falls back to
+// below.js's static BENCHMARKS rather than breaking page load.
+async function loadLeaderboard() {
+    const url = `./api/leaderboard.json?t=${Date.now()}`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        return {
+            models: Array.isArray(data.models) ? data.models : null,
+            chip: typeof data.chip === 'string' ? data.chip : null,
+        };
+    } catch (err) {
+        console.warn('Leaderboard load failed, using fallback figures:', err);
+        return { models: null, chip: null };
+    } finally {
+        clearTimeout(timer);
+    }
+}
+
 function filteredGrid() {
     const q = state.query.trim().toLowerCase();
     const matchesSection = (s) => state.section === 'All' || s.section === state.section;
@@ -160,7 +184,7 @@ function buildPageMarkup() {
     // give it a home in the sidebar instead so playback isn't orphaned.
     if (!showAbove) sidebarItems.push({ kind: 'raw', html: '<div id="audio-placeholder" class="audio-box"></div>' });
     if (showAbove) {
-        sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML() });
+        sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML(state.leaderboard, state.leaderboardChip) });
         sidebarItems.push({ kind: 'raw', html: capexChartHTML() });
     }
     const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
@@ -424,9 +448,11 @@ async function main() {
     installCacheBustingFetch();
 
     try {
-        const [stories, tickerQuotes] = await Promise.all([loadStories(), loadTicker()]);
+        const [stories, tickerQuotes, leaderboard] = await Promise.all([loadStories(), loadTicker(), loadLeaderboard()]);
         if (!stories.length) throw new Error('No articles in latest.json');
         state.tickerQuotes = tickerQuotes;
+        state.leaderboard = leaderboard.models;
+        state.leaderboardChip = leaderboard.chip;
         state.partitioned = partition(stories);
         state.sections = sectionsFromStories(stories);
         render();

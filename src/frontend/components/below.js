@@ -2,7 +2,8 @@
 import { escapeHTML } from '../utils/utils.js';
 import { paperImageSVG } from './chrome.js';
 
-// Illustrative static figures shipped with the redesign (not pipeline data).
+// Fallback figures used only when the live leaderboard feed (api/leaderboard.json,
+// produced by leaderboard_collector.py) is unavailable.
 const BENCHMARKS = [
     { label: 'GPT-5.2', value: 81.4 },
     { label: 'Claude Opus 5', value: 79.8 },
@@ -71,8 +72,9 @@ function barChartHTML(title, chip, rows) {
     `;
 }
 
-export function benchmarksChartHTML() {
-    return barChartHTML('Benchmark Leaderboard', 'REASONING INDEX', BENCHMARKS);
+export function benchmarksChartHTML(rows, chip) {
+    const data = Array.isArray(rows) && rows.length ? rows : BENCHMARKS;
+    return barChartHTML('Benchmark Leaderboard', chip || 'REASONING INDEX', data);
 }
 
 export function capexChartHTML() {
