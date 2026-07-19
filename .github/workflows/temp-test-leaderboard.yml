@@ -1,0 +1,40 @@
+name: TEMP Test Leaderboard Collector
+
+# Temporary workflow to validate the leaderboard collector against the live
+# Artificial Analysis API with the real secret. Runs on push to the feature
+# branch (push-triggered workflows run from any branch and get repo secrets).
+# Deleted once the collector is confirmed working.
+
+on:
+  push:
+    branches: [claude/benchmark-scraping-leaderboard-dgrlva]
+
+permissions:
+  contents: read
+
+jobs:
+  test-collector:
+    name: 🧪 Run leaderboard collector against live API
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - name: Run collector (fail if it produces no data)
+      env:
+        ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
+      run: |
+        # Remove the committed seed so a passing run must regenerate it from
+        # the live API — distinguishes a real success from a silent no-op.
+        rm -f src/frontend/api/leaderboard.json
+        python3 src/backend/collectors/leaderboard_collector.py
+        echo "-------------------------------------------"
+        if [ -f src/frontend/api/leaderboard.json ]; then
+          echo "✅ Collector wrote leaderboard.json from the live API:"
+          cat src/frontend/api/leaderboard.json
+        else
+          echo "❌ Collector produced no file — API key missing or field mapping is off."
+          exit 1
+        fi

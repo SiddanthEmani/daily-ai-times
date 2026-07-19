@@ -17,6 +17,7 @@ frontend chart falls back to its static built-in figures.
 import json
 import logging
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -88,6 +89,20 @@ def _extract_score(model: dict) -> float | None:
         return None
 
 
+def _base_label(name: str) -> str:
+    """Strip trailing parenthetical qualifiers so model variants collapse to a
+    single readable name, e.g. 'GPT-5.6 Sol (max)' -> 'GPT-5.6 Sol' and
+    'Claude Fable 5 (Adaptive Reasoning, Max Effort)' -> 'Claude Fable 5'.
+    Falls back to the original name if stripping would empty it."""
+    trimmed = name.strip()
+    while trimmed.endswith(')'):
+        stripped = re.sub(r'\s*\([^()]*\)\s*$', '', trimmed).strip()
+        if not stripped or stripped == trimmed:
+            break
+        trimmed = stripped
+    return trimmed or name.strip()
+
+
 def _extract_creator(model: dict) -> str | None:
     creator = _first(model, CREATOR_KEYS)
     if isinstance(creator, dict):
@@ -122,7 +137,9 @@ def fetch_models(api_key: str) -> list | None:
 
 def build_rows(models: list) -> list:
     """Transform raw model records into the chart's {label, value, creator}
-    rows, sorted by score descending and capped at MAX_MODELS."""
+    rows: labels are shortened to their base model name, near-duplicate
+    variants of the same model are collapsed to the highest-scoring one, and
+    the result is sorted by score descending and capped at MAX_MODELS."""
     rows = []
     for model in models:
         if not isinstance(model, dict):
@@ -131,14 +148,24 @@ def build_rows(models: list) -> list:
         score = _extract_score(model)
         if not isinstance(name, str) or not name.strip() or score is None:
             continue
-        row = {'label': name.strip(), 'value': score}
+        row = {'label': _base_label(name), 'value': score}
         creator = _extract_creator(model)
         if creator:
             row['creator'] = creator
         rows.append(row)
 
+    # Highest score first, then keep only the first (best) row per base label so
+    # e.g. GPT-5.6 Sol (max/xhigh/high) collapses to a single distinct entry.
     rows.sort(key=lambda r: r['value'], reverse=True)
-    return rows[:MAX_MODELS]
+    deduped = []
+    seen = set()
+    for row in rows:
+        key = row['label'].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(row)
+    return deduped[:MAX_MODELS]
 
 
 def main() -> int:
