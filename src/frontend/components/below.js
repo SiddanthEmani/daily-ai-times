@@ -12,11 +12,17 @@ const BENCHMARKS = [
     { label: 'DeepSeek V4', value: 69.9 },
 ];
 
+// Fallback figures used only when the live capex feed (api/capex.json, produced
+// by capex_collector.py) is unavailable. Annualized data center / AI-infra spend
+// in $ billions; every entry is an estimate here, so all carry the est. marker.
 const CAPEX = [
-    { label: 'Amazon', value: 78 },
-    { label: 'Microsoft', value: 64 },
-    { label: 'Google', value: 52 },
-    { label: 'Meta', value: 40 },
+    { label: 'Amazon', value: 110, estimated: true },
+    { label: 'Microsoft', value: 88, estimated: true },
+    { label: 'Alphabet', value: 85, estimated: true },
+    { label: 'Meta', value: 66, estimated: true },
+    { label: 'OpenAI', value: 50, estimated: true },
+    { label: 'Oracle', value: 30, estimated: true },
+    { label: 'Anthropic', value: 15, estimated: true },
 ];
 
 export function storyCardHTML(story, idx, { saved = false, focused = false } = {}) {
@@ -77,8 +83,17 @@ export function benchmarksChartHTML(rows, chip) {
     return barChartHTML('Benchmark Leaderboard', chip || 'REASONING INDEX', data);
 }
 
-export function capexChartHTML() {
-    return barChartHTML('Trailing 12-Mo. Data Center Capex', '$ BILLIONS', CAPEX);
+// rows come from the live capex feed (app.js loadCapex → api/capex.json); any
+// failure falls back to the static CAPEX figures above. Estimated entries
+// (private-company guidance, or seed values) get a trailing "*" and the chip
+// notes what it means.
+export function capexChartHTML(rows, chip) {
+    const data = Array.isArray(rows) && rows.length ? rows : CAPEX;
+    const marked = data.map(r => (r.estimated ? { ...r, label: `${r.label} *` } : r));
+    const hasEstimate = data.some(r => r.estimated);
+    let chipText = chip || '$B / YR';
+    if (hasEstimate && !/EST/i.test(chipText)) chipText += ' · * EST.';
+    return barChartHTML('AI Data Center Buildout', chipText, marked);
 }
 
 export function savedBoxHTML(savedIds, allStories) {

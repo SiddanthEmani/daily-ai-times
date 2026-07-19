@@ -1,0 +1,28 @@
+{
+  "_comment": "Curation source-of-truth for the 'AI Data Center Buildout' sidebar chart, consumed by capex_collector.py. Ordering here is only a hint; the collector re-sorts by value descending. For public:true companies the collector fetches trailing-12-mo capex live from SEC EDGAR (no override needed); add value/estimated/source/basis/as_of to override the live figure (e.g. to show a data-center-only estimate). For public:false companies (private labs with no SEC filings) the value MUST be set here, as an annualized $B figure, with a source URL and as_of date. Keep private figures current as guidance changes.",
+  "companies": [
+    { "label": "Amazon", "cik": "0001018724", "public": true },
+    { "label": "Microsoft", "cik": "0000789019", "public": true },
+    { "label": "Alphabet", "cik": "0001652044", "public": true },
+    { "label": "Meta", "cik": "0001326801", "public": true },
+    { "label": "Oracle", "cik": "0001341439", "public": true },
+    {
+      "label": "OpenAI",
+      "public": false,
+      "value": 50,
+      "estimated": true,
+      "source": "https://opentools.ai/news/openai-50-billion-compute-spending-2026",
+      "basis": "2026 compute-spend guidance (Greg Brockman)",
+      "as_of": "2026-01"
+    },
+    {
+      "label": "Anthropic",
+      "public": false,
+      "value": 15,
+      "estimated": true,
+      "source": "https://www.cnbc.com/2025/11/12/anthropic-ai-data-centers-texas-new-york.html",
+      "basis": "annualized share of announced $50B multi-year US build-out",
+      "as_of": "2025-11"
+    }
+  ]
+}
