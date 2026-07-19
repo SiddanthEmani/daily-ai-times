@@ -1,3 +1,7 @@
+# Refreshes the slow-changing sidebar chart data: the benchmark leaderboard
+# (Artificial Analysis API) and the data center capex chart (keyless SEC EDGAR
+# API + committed curated figures). Kept in one workflow because both are daily,
+# lightweight, stdlib-only collectors that commit JSON under src/frontend/api/.
 name: Update Benchmark Leaderboard
 
 on:
@@ -32,19 +36,22 @@ jobs:
         ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
       run: python3 src/backend/collectors/leaderboard_collector.py
 
-    - name: 💾 Commit leaderboard data
+    - name: 🏢 Fetch data center capex
+      run: python3 src/backend/collectors/capex_collector.py
+
+    - name: 💾 Commit chart data
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
 
-        if [ -f src/frontend/api/leaderboard.json ]; then
-          git add src/frontend/api/leaderboard.json
-        fi
+        for f in src/frontend/api/leaderboard.json src/frontend/api/capex.json; do
+          [ -f "$f" ] && git add "$f"
+        done
 
         if git diff --staged --quiet; then
-          echo "ℹ️ No leaderboard changes to commit"
+          echo "No chart data changes to commit"
         else
-          git commit -m "🏆 Update benchmark leaderboard - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "📊 Update sidebar chart data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push
-          echo "✅ Leaderboard data committed and pushed"
+          echo "Chart data committed and pushed"
         fi
