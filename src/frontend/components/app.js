@@ -34,6 +34,8 @@ const state = {
     tickerQuotes: null,
     leaderboard: null,
     leaderboardChip: null,
+    capex: null,
+    capexChip: null,
 };
 
 function loadSavedIds() {
@@ -139,6 +141,28 @@ async function loadLeaderboard() {
     }
 }
 
+// The data-center capex chart is decorative — any failure falls back to
+// below.js's static CAPEX rather than breaking page load.
+async function loadCapex() {
+    const url = `./api/capex.json?t=${Date.now()}`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        return {
+            companies: Array.isArray(data.companies) ? data.companies : null,
+            chip: typeof data.chip === 'string' ? data.chip : null,
+        };
+    } catch (err) {
+        console.warn('Capex load failed, using fallback figures:', err);
+        return { companies: null, chip: null };
+    } finally {
+        clearTimeout(timer);
+    }
+}
+
 function filteredGrid() {
     const q = state.query.trim().toLowerCase();
     const matchesSection = (s) => state.section === 'All' || s.section === state.section;
@@ -185,7 +209,7 @@ function buildPageMarkup() {
     if (!showAbove) sidebarItems.push({ kind: 'raw', html: '<div id="audio-placeholder" class="audio-box"></div>' });
     if (showAbove) {
         sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML(state.leaderboard, state.leaderboardChip) });
-        sidebarItems.push({ kind: 'raw', html: capexChartHTML() });
+        sidebarItems.push({ kind: 'raw', html: capexChartHTML(state.capex, state.capexChip) });
     }
     const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
     if (savedHTML) sidebarItems.push({ kind: 'raw', html: savedHTML });
@@ -448,11 +472,13 @@ async function main() {
     installCacheBustingFetch();
 
     try {
-        const [stories, tickerQuotes, leaderboard] = await Promise.all([loadStories(), loadTicker(), loadLeaderboard()]);
+        const [stories, tickerQuotes, leaderboard, capex] = await Promise.all([loadStories(), loadTicker(), loadLeaderboard(), loadCapex()]);
         if (!stories.length) throw new Error('No articles in latest.json');
         state.tickerQuotes = tickerQuotes;
         state.leaderboard = leaderboard.models;
         state.leaderboardChip = leaderboard.chip;
+        state.capex = capex.companies;
+        state.capexChip = capex.chip;
         state.partitioned = partition(stories);
         state.sections = sectionsFromStories(stories);
         render();

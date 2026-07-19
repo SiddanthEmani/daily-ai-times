@@ -40,6 +40,15 @@ Modern serverless AI-powered news aggregation platform with advanced multi-agent
 - **Offline Support** - Service worker caching for offline access
 - **Performance Optimized** - Minimal JavaScript, fast loading
 
+#### Sidebar data charts
+The sidebar bar charts pull from small, independently-refreshed JSON feeds under `src/frontend/api/`, each with a static in-code fallback so the page never breaks if a feed is missing:
+
+- **AI Data Center Buildout** (`capex.json`, via `capex_collector.py`, workflow **Update Data Center Capex**) — annualized data center / AI-infrastructure spend, `$B`. A **hybrid** feed with no API key required:
+  - **Public companies** (Amazon, Microsoft, Alphabet, Meta, Oracle) — trailing-12-month capital expenditure fetched live from the keyless [SEC EDGAR](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) XBRL API.
+  - **Private companies** (OpenAI, Anthropic) — file nothing with the SEC, so their figures come from `src/backend/collectors/capex_curated.json`, a committed, source-cited file. These are flagged as estimates (a `*` on the chart).
+  - Note: no filing breaks out *data-center-only* capex, so public figures are total company capex (overwhelmingly AI/data-center spend for these firms). To show a data-center-only estimate for any company, add a `value` + `source`/`basis` override to that company in `capex_curated.json`.
+- **Benchmark Leaderboard** (`leaderboard.json`) and the masthead **Ticker** (`ticker.json`) follow the same collector → JSON → fallback pattern.
+
 ### Benefits
 - **Zero hosting costs** - GitHub Pages + Actions free tier
 - **Global CDN** - Automatic scaling and edge distribution
@@ -75,6 +84,7 @@ python src/backend/orchestrator.py
    - `GOOGLE_ANALYTICS_ID` - Optional analytics
    - `ALPHA_VANTAGE_API_KEY` - Optional, powers the live masthead ticker (falls back to static placeholder quotes if unset)
    - `ARTIFICIAL_ANALYSIS_API_KEY` - Optional, powers the live benchmark leaderboard chart via the [Artificial Analysis API](https://artificialanalysis.ai/api) (falls back to static placeholder figures if unset)
+   - _No secret is needed for the **Data Center Capex** chart — it uses the keyless [SEC EDGAR API](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) plus a committed curated file (see below)._
 3. **Enable GitHub Pages** with "GitHub Actions" source
 4. **Test locally** before pushing changes
 5. **Push changes** - Automatic deployment via workflow
