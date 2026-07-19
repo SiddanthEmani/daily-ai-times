@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   update-capex:
-    name: 🏗️ Refresh Data Center Capex
+    name: 🏢 Refresh Data Center Capex
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -27,7 +27,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: 🏗️ Fetch data center capex
+    - name: 🏢 Fetch data center capex
       run: python3 src/backend/collectors/capex_collector.py
 
     - name: 💾 Commit capex data
