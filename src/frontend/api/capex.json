@@ -1,35 +1,21 @@
 {
-  "generated_at": "2026-07-19T17:49:46.838671+00:00",
+  "generated_at": "2026-07-20T09:50:00.400793+00:00",
   "metric": "Annualized data center / AI-infrastructure spend",
   "chip": "$B / YR",
   "companies": [
     {
-      "label": "Amazon",
-      "value": 110.0,
-      "estimated": true,
-      "source": "SEC EDGAR 10-Q/10-K",
-      "basis": "approx. trailing-12-mo capex (seed; refreshed weekly from SEC)"
-    },
-    {
       "label": "Microsoft",
-      "value": 88.0,
-      "estimated": true,
+      "value": 96.9,
+      "estimated": false,
       "source": "SEC EDGAR 10-Q/10-K",
-      "basis": "approx. trailing-12-mo capex (seed; refreshed weekly from SEC)"
+      "basis": "trailing-12-mo capex"
     },
     {
       "label": "Alphabet",
-      "value": 85.0,
-      "estimated": true,
+      "value": 71.2,
+      "estimated": false,
       "source": "SEC EDGAR 10-Q/10-K",
-      "basis": "approx. trailing-12-mo capex (seed; refreshed weekly from SEC)"
-    },
-    {
-      "label": "Meta",
-      "value": 66.0,
-      "estimated": true,
-      "source": "SEC EDGAR 10-Q/10-K",
-      "basis": "approx. trailing-12-mo capex (seed; refreshed weekly from SEC)"
+      "basis": "trailing-12-mo capex"
     },
     {
       "label": "OpenAI",
@@ -40,11 +26,11 @@
       "as_of": "2026-01"
     },
     {
-      "label": "Oracle",
-      "value": 30.0,
-      "estimated": true,
+      "label": "Meta",
+      "value": 45.2,
+      "estimated": false,
       "source": "SEC EDGAR 10-Q/10-K",
-      "basis": "approx. trailing-12-mo capex (seed; refreshed weekly from SEC)"
+      "basis": "trailing-12-mo capex"
     },
     {
       "label": "Anthropic",
@@ -53,6 +39,20 @@
       "source": "https://www.cnbc.com/2025/11/12/anthropic-ai-data-centers-texas-new-york.html",
       "basis": "annualized share of announced $50B multi-year US build-out",
       "as_of": "2025-11"
+    },
+    {
+      "label": "Oracle",
+      "value": 13.8,
+      "estimated": false,
+      "source": "SEC EDGAR 10-Q/10-K",
+      "basis": "trailing-12-mo capex"
+    },
+    {
+      "label": "Amazon",
+      "value": 6.6,
+      "estimated": false,
+      "source": "SEC EDGAR 10-Q/10-K",
+      "basis": "trailing-12-mo capex"
     }
   ]
 }
