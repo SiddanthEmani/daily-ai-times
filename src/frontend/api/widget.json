@@ -1,23 +1,23 @@
 {
-  "updated": "2026-07-21T17:19:47.942708+00:00",
+  "updated": "2026-07-21T21:10:11.213374+00:00",
   "top_stories": [
     {
-      "article_id": "cf62c6a4d83f38d8b5067ab29e61cdbb",
-      "title": "YouTube clarifies policies around AI slop and upsetting videos",
+      "article_id": "0a4d00be569fbc5a58367c20472be513",
+      "title": "US threatens sanctions against Chinese AI models over IP theft",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
-      "published_date": "2026-07-20T15:23:06+00:00",
+      "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/",
+      "published_date": "2026-07-21T15:37:05+00:00",
       "category": "Industry",
-      "description": "YouTube has updated its monetization policies to more clearly define the kinds of AI-generated and low-quality videos that can’t earn ad revenue.",
-      "author": "Sarah Perez",
-      "content": "YouTube has updated its monetization policies to more clearly define the kinds of AI-generated and low-quality videos that can’t earn ad revenue.",
+      "description": "Treasury Secretary Scott Bessent said the U.S. could sanction Chinese open AI models over alleged IP theft, expanding the Trump administration's campaign to slow China's AI advances.",
+      "author": "Rebecca Bellan",
+      "content": "Treasury Secretary Scott Bessent said the U.S. could sanction Chinese open AI models over alleged IP theft, expanding the Trump administration's campaign to slow China's AI advances.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-21T17:19:47.899201+00:00"
+        "consensus_timestamp": "2026-07-21T21:10:11.175389+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +59,71 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-21T17:19:47.899204+00:00"
+        "timestamp": "2026-07-21T21:10:11.175391+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "7ee3541dc56f23193044750f1acde4f7",
+      "title": "Building Faster Cryptography with Carryless Multiplication in NVIDIA CUDA 13.3",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/building-faster-cryptography-with-carryless-multiplication-in-nvidia-cuda-13-3/",
+      "published_date": "2026-07-15T17:37:12+00:00",
+      "category": "Industry",
+      "description": "For over fifteen years, x86 CPUs have shipped with a dedicated hardware instruction for carryless multiplication. It’s a small but stubborn primitive that...",
+      "author": "Michelle Horton",
+      "content": "For over fifteen years, x86 CPUs have shipped with a dedicated hardware instruction for carryless multiplication. It’s a small but stubborn primitive that...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.99,
+        "overall_score": 0.9079999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-21T21:10:11.176349+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-21T21:10:11.176351+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "4d76baaebe907d506b61a63f551e15ae",
@@ -77,9 +139,9 @@
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.89,
-        "confidence_mean": 0.95
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-21T17:19:47.895423+00:00"
+        "consensus_timestamp": "2026-07-21T21:10:11.173021+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,69 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-21T17:19:47.895425+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2340ab7ec761a51f1ddf71767edf6fcb",
-      "title": "NVIDIA Vera CPU: Olympus Cores Built for Maximum Single-Thread Performance in Agentic AI",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/inside-nvidia-vera-cpu-olympus-cores-built-for-maximum-single-threaded-performance-in-agentic-ai/",
-      "published_date": "2026-07-21T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Agentic AI shifts more of the critical execution path onto the CPU. Agents operate in sandboxes to execute code, invoke tools, retrieve context, interact with...",
-      "author": "Michelle Horton",
-      "content": "Agentic AI shifts more of the critical execution path onto the CPU. Agents operate in sandboxes to execute code, invoke tools, retrieve context, interact with...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-21T17:19:47.899561+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-21T17:19:47.899563+00:00"
+        "timestamp": "2026-07-21T21:10:11.173024+00:00"
       },
       "article_type": "article"
     },
@@ -192,7 +192,7 @@
       "title": "New Alzheimer’s blood test may tell when symptoms are around the corner",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/new-alzheimers-blood-test-may-tell-when-symptoms-are-around-corner",
-      "published_date": "2026-07-21T17:14:37.556235+00:00",
+      "published_date": "2026-07-21T21:05:02.776741+00:00",
       "category": "Government",
       "description": "A novel biomarker beats the leading diagnostic blood test at predicting disease progression.",
       "author": "",
@@ -234,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-21T17:19:47.894380+00:00"
+        "consensus_timestamp": "2026-07-21T21:10:11.172185+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,20 +245,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-21T17:19:47.894384+00:00"
+        "timestamp": "2026-07-21T21:10:11.172188+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9c64608ce57180df5ed728e8698f0f2e",
-      "title": "Kimi: Threat or menace?",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
-      "published_date": "2026-07-18T18:51:07+00:00",
-      "category": "Industry",
-      "description": "Chinese company Moonshot AI released a new version of its Kimi model this week, prompting concern about \"full AI communism.\"",
-      "author": "Anthony Ha",
-      "content": "Chinese company Moonshot AI released a new version of its Kimi model this week, prompting concern about \"full AI communism.\"",
+      "article_id": "d48a477486052128423d04af6758b10f",
+      "title": "DARPA and U.S. Air Force fly AI-controlled F-16, paving the way for autonomous air combat",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16",
+      "published_date": "2026-07-16T13:42:00+00:00",
+      "category": "Government",
+      "description": "Historic VENOM milestone demonstrates scalable AI development capabilities for the operational fleet.",
+      "author": "outreach@darpa.mil",
+      "content": "Historic VENOM milestone demonstrates scalable AI development capabilities for the operational fleet.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-21T17:19:47.899387+00:00"
+        "consensus_timestamp": "2026-07-21T21:10:11.172411+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-21T17:19:47.899389+00:00"
+        "timestamp": "2026-07-21T21:10:11.172416+00:00"
       },
       "article_type": "article"
     }
