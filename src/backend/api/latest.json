@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-07-24T06:28:24.957879+00:00",
+  "generated_at": "2026-07-24T10:19:05.470091+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1628
+    "issue_number": 1629
   },
   "articles": [
     {
-      "article_id": "ff145b71aca353a04c36ec38bed19ac5",
-      "title": "NIH launches new office to advance human-based research and reduce animal use",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-new-office-advance-human-based-research-reduce-animal-use",
-      "published_date": "2026-07-24T06:23:00.711373+00:00",
-      "category": "Government",
-      "description": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
-      "author": "",
-      "content": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
+      "article_id": "6fa846847d53859e69f2ae202b90f9b6",
+      "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
+      "source": "techcrunch_ai",
+      "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+      "published_date": "2026-07-23T18:38:34+00:00",
+      "category": "Industry",
+      "description": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
+      "author": "Marina Temkin",
+      "content": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -53,7 +53,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.912368+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.436717+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,26 +64,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.912372+00:00"
+        "timestamp": "2026-07-24T10:19:05.436720+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "dca48333195205d28f7170ba951330d6",
-      "title": "NVIDIA Vera Rubin Maximizes Intelligence per Dollar for Post-Training Workloads — a Key Metric for Agentic AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
-      "published_date": "2026-07-17T15:00:14+00:00",
+      "article_id": "d4d2f504a037f10c418aea9388b30025",
+      "title": "NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300x",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/",
+      "published_date": "2026-07-13T19:00:00+00:00",
       "category": "Industry",
-      "description": "Lowest cost per token from extreme codesign maximizes intelligence per dollar for post-training in the agentic era.",
-      "author": "Kirthi Develeker",
-      "content": "Lowest cost per token from extreme codesign maximizes intelligence per dollar for post-training in the agentic era.",
+      "description": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
+      "author": "Elizabeth Goodman",
+      "content": "Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.95,
+        "novelty_score": 0.9,
+        "impact_score": 0.95,
+        "overall_score": 0.9375,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.437963+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.437965+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "681f3e6f73feaaab81c87ae5162b6c05",
+      "title": "Best practices for applying Amazon Bedrock Guardrails to code generation workflows",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-applying-amazon-bedrock-guardrails-to-code-generation-workflows/",
+      "published_date": "2026-07-23T23:03:44+00:00",
+      "category": "Industry",
+      "description": "In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.",
+      "author": "Sandeep Singh",
+      "content": "In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.99,
-        "overall_score": 0.9079999999999999,
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -115,7 +177,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.915718+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.435060+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -126,20 +188,144 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.915720+00:00"
+        "timestamp": "2026-07-24T10:19:05.435063+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "826c762cef18d7b40653a442175b8176",
-      "title": "Custom OS installation now available on AWS DeepRacer devices",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/custom-os-installation-now-available-on-aws-deepracer-devices/",
-      "published_date": "2026-07-20T17:25:24+00:00",
+      "article_id": "6216afa330c488af906c84434f800044",
+      "title": "Amazon and University of Michigan give robots a sense of touch",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/amazon-and-university-of-michigan-give-robots-a-sense-of-touch",
+      "published_date": "2026-07-10T17:13:31+00:00",
       "category": "Industry",
-      "description": "With the stock firmware and software, developers couldn't modify their AWS DeepRacer devices to use the latest operating systems. Now, developers can upgrade or install a custom operating system (OS) by using a newly released bootloader, which extends the life of these hardware devices. In this post, we introduce the bootloader, discuss how to use it, and share links to a community distribution that uses it.",
-      "author": "Don Barber",
-      "content": "With the stock firmware and software, developers couldn't modify their AWS DeepRacer devices to use the latest operating systems. Now, developers can upgrade or install a custom operating system (OS) by using a newly released bootloader, which extends the life of these hardware devices. In this post, we introduce the bootloader, discuss how to use it, and share links to a community distribution that uses it.",
+      "description": "HydroShear, a new physics-based simulator, teaches robots how to use their sense of touch to perform complex manipulation tasks, in a way that transfers seamlessly to the real world.",
+      "author": "",
+      "content": "HydroShear, a new physics-based simulator, teaches robots how to use their sense of touch to perform complex manipulation tasks, in a way that transfers seamlessly to the real world.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.438398+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.438400+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "23cf4f5879af468a2a797ab13c04c839",
+      "title": "Debugging Ray Tracing Applications Using NVIDIA OptiX Toolkit",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/debugging-ray-tracing-applications-using-nvidia-optix-toolkit/",
+      "published_date": "2026-07-23T16:07:03+00:00",
+      "category": "Industry",
+      "description": "NVIDIA OptiX ray tracing engine is an application framework for achieving optimal ray tracing performance on the GPU. Applications using OptiX can fail in ways...",
+      "author": "Tanya Lenz",
+      "content": "NVIDIA OptiX ray tracing engine is an application framework for achieving optimal ray tracing performance on the GPU. Applications using OptiX can fail in ways...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8999999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.95,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.437237+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.77,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.437240+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9385e8bd773a22b7599fe9e93f6abc75",
+      "title": "Researchers discover single-cell brain activity that underlies human speech",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/researchers-discover-single-cell-brain-activity-underlies-human-speech",
+      "published_date": "2026-07-24T10:13:44.937134+00:00",
+      "category": "Government",
+      "description": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
+      "author": "",
+      "content": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -177,7 +363,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.914742+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.433095+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -188,20 +374,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.914745+00:00"
+        "timestamp": "2026-07-24T10:19:05.433098+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9f2bef2c9339c7395d26aec2bb1b65fa",
-      "title": "Introducing OpenAI Presence",
+      "article_id": "f90c5223ba7dc9e86651cd8dfb293d84",
+      "title": "Introducing the ChatGPT for small business program",
       "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-openai-presence",
-      "published_date": "2026-07-22T05:30:00+00:00",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "published_date": "2026-07-21T17:00:00+00:00",
       "category": "Industry",
-      "description": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "description": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
       "author": "",
-      "content": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "content": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -239,7 +425,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.913612+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.434401+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -250,89 +436,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.913615+00:00"
+        "timestamp": "2026-07-24T10:19:05.434404+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "180890b917895be8dae9328eee7b1fd8",
-      "title": "Detecting silent agent failures with Amazon Bedrock AgentCore optimization",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/",
-      "published_date": "2026-07-23T16:38:34+00:00",
-      "category": "Industry",
-      "description": "Amazon Bedrock AgentCore optimization surfaces silent behavioral failures in production AI agents: the ones that pass every health check but still deliver wrong outcomes. Learn how insights discovers, explains, and ranks failure patterns across sessions so you can fix the highest-impact issues first.",
-      "author": "Vivek Singh",
-      "content": "Amazon Bedrock AgentCore optimization surfaces silent behavioral failures in production AI agents: the ones that pass every health check but still deliver wrong outcomes. Learn how insights discovers, explains, and ranks failure patterns across sessions so you can fix the highest-impact issues first.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.914564+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.914567+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "2340ab7ec761a51f1ddf71767edf6fcb",
-      "title": "NVIDIA Vera CPU: Olympus Cores Built for Maximum Single-Thread Performance in Agentic AI",
+      "article_id": "647855e793f04c35f5e49e1496629e07",
+      "title": "Lessons From the Leaderboard: What 5,000+ Kagglers Taught Us About Improving AI Reasoning",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/inside-nvidia-vera-cpu-olympus-cores-built-for-maximum-single-threaded-performance-in-agentic-ai/",
-      "published_date": "2026-07-21T18:00:00+00:00",
+      "url": "https://developer.nvidia.com/blog/lessons-from-the-leaderboard-what-5000-kagglers-taught-us-about-improving-ai-reasoning/",
+      "published_date": "2026-07-14T18:20:32+00:00",
       "category": "Industry",
-      "description": "Agentic AI shifts more of the critical execution path onto the CPU. Agents operate in sandboxes to execute code, invoke tools, retrieve context, interact with...",
-      "author": "Praveen Menon",
-      "content": "Agentic AI shifts more of the critical execution path onto the CPU. Agents operate in sandboxes to execute code, invoke tools, retrieve context, interact with...",
+      "description": "The NVIDIA Nemotron Model Reasoning Challenge invited the Kaggle community to explore a focused question: What techniques can improve reasoning accuracy when...",
+      "author": "Elizabeth Goodman",
+      "content": "The NVIDIA Nemotron Model Reasoning Challenge invited the Kaggle community to explore a focused question: What techniques can improve reasoning accuracy when...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -359,103 +483,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.95,
-        "confidence": 0.98,
+        "score": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.917116+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.437803+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.917119+00:00"
+        "timestamp": "2026-07-24T10:19:05.437806+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "65fad627558344255e98015c9ef4ef6e",
-      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/deutsche-telekom",
-      "published_date": "2026-07-10T07:00:00+00:00",
+      "article_id": "477abb8e5534b970656843f54b55d0ec",
+      "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
+      "published_date": "2026-07-16T21:29:14+00:00",
       "category": "Industry",
-      "description": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
-      "author": "",
-      "content": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
+      "description": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.",
+      "author": "Dani Mitchell",
+      "content": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.98,
-        "overall_score": 0.881,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.914289+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.914292+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9385e8bd773a22b7599fe9e93f6abc75",
-      "title": "Researchers discover single-cell brain activity that underlies human speech",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/researchers-discover-single-cell-brain-activity-underlies-human-speech",
-      "published_date": "2026-07-24T06:23:00.711220+00:00",
-      "category": "Government",
-      "description": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
-      "author": "",
-      "content": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.87,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -487,7 +549,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.912264+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.435715+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -498,7 +560,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.912268+00:00"
+        "timestamp": "2026-07-24T10:19:05.435718+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "35a81546b924196eae9f1fb7a14fc985",
+      "title": "Towards a quantum computer that learns from its errors",
+      "source": "google_research_blog",
+      "url": "https://research.google/blog/towards-a-quantum-computer-that-learns-from-its-errors/",
+      "published_date": "2026-07-22T18:40:21+00:00",
+      "category": "Industry",
+      "description": "Machine Intelligence",
+      "author": "",
+      "content": "Machine Intelligence",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.438162+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.438164+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "cec5e9412ec059e1ab9d4f03f18520a2",
+      "title": "Introducing Gemini 3.5 Flash Cyber",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+      "published_date": "2026-07-17T15:00:11+00:00",
+      "category": "Industry",
+      "description": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "author": "",
+      "content": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.95,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.438279+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.438281+00:00"
       },
       "article_type": "article"
     },
@@ -549,7 +735,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.912722+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.433367+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -560,7 +746,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.912725+00:00"
+        "timestamp": "2026-07-24T10:19:05.433370+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9f2bef2c9339c7395d26aec2bb1b65fa",
+      "title": "Introducing OpenAI Presence",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "published_date": "2026-07-22T05:30:00+00:00",
+      "category": "Industry",
+      "description": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "author": "",
+      "content": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.434319+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.434322+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "ebdc87d8e099be515105f6d2ff715d71",
+      "title": "Exploring self-distilled reasoning for supervised fine-tuning with Amazon Nova",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova/",
+      "published_date": "2026-07-21T16:23:12+00:00",
+      "category": "Industry",
+      "description": "In this post, we explore an idea for generating thinking tokens for datasets that lack reasoning traces in SFT customization. We first examine the reasoning suppression problem, then introduce Self-Distilled Reasoning (SDR), validate it across three benchmarks, and provide practical recommendations.",
+      "author": "Rushil Anirudh",
+      "content": "In this post, we explore an idea for generating thinking tokens for datasets that lack reasoning traces in SFT customization. We first examine the reasoning suppression problem, then introduce Self-Distilled Reasoning (SDR), validate it across three benchmarks, and provide practical recommendations.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.95,
+        "overall_score": 0.8600000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-24T10:19:05.435344+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-24T10:19:05.435347+00:00"
       },
       "article_type": "article"
     },
@@ -611,7 +921,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.912627+00:00"
+        "consensus_timestamp": "2026-07-24T10:19:05.433324+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -622,317 +932,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-24T06:28:24.912630+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3a8d18aa8a902e2554b2e5b188e9a7a1",
-      "title": "Independent report: Children's wellbeing online: social media quantitative and qualitative report",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/childrens-wellbeing-online-social-media-quantitative-and-qualitative-report",
-      "published_date": "2026-07-15T11:20:37+00:00",
-      "category": "Government",
-      "description": "Research into parents' and children's views on social media use, potential restrictions, and the possible introduction of an under-16 ban.",
-      "author": "",
-      "content": "Research into parents' and children's views on social media use, potential restrictions, and the possible introduction of an under-16 ban.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.8,
-        "overall_score": 0.85,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.913372+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.913375+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "d7cbcb2f35764155db6172b933b6503a",
-      "title": "Built in Fort Worth: Wistron Opens Advanced Manufacturing Plant to Produce NVIDIA AI Systems",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/wistron-manufacturing-texas/",
-      "published_date": "2026-07-21T22:35:45+00:00",
-      "category": "Industry",
-      "description": "The AI era runs on AI infrastructure. Many of these advanced systems are built and tested in Texas. Wistron opened its first U.S. manufacturing facility today in Fort Worth — a 324,000-square-foot greenfield plant producing superchips at the heart of some of the world’s most capable AI systems. In front of an audience of Wistron […]",
-      "author": "NVIDIA Writers",
-      "content": "The AI era runs on AI infrastructure. Many of these advanced systems are built and tested in Texas. Wistron opened its first U.S. manufacturing facility today in Fort Worth — a 324,000-square-foot greenfield plant producing superchips at the heart of some of the world’s most capable AI systems. In front of an audience of Wistron […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.915445+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.915448+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "08b9c8851c29af9bce4842722269d78d",
-      "title": "NIST Receives New Patent for Microbe-Killing Water Heater",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2026/07/nist-receives-new-patent-microbe-killing-water-heater",
-      "published_date": "2026-07-14T12:00:00+00:00",
-      "category": "Government",
-      "description": "Warm water in household pipes can be a breeding ground for harmful bacteria.",
-      "author": "Sarah Henderson",
-      "content": "Warm water in household pipes can be a breeding ground for harmful bacteria.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.911976+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.911988+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "41dd9a9fe03b7c45ec22c2ec2ed4ae06",
-      "title": "NIH research establishes new framework for the role of senescence in aging",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-research-establishes-new-framework-role-senescence-aging",
-      "published_date": "2026-07-24T06:23:00.711514+00:00",
-      "category": "Government",
-      "description": "First large-scale atlas of senescent cells could help inform future therapies for age-related diseases.",
-      "author": "",
-      "content": "First large-scale atlas of senescent cells could help inform future therapies for age-related diseases.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.912478+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.912482+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "23cf4f5879af468a2a797ab13c04c839",
-      "title": "Debugging Ray Tracing Applications Using NVIDIA OptiX Toolkit",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/debugging-ray-tracing-applications-using-nvidia-optix-toolkit/",
-      "published_date": "2026-07-23T16:07:03+00:00",
-      "category": "Industry",
-      "description": "NVIDIA OptiX ray tracing engine is an application framework for achieving optimal ray tracing performance on the GPU. Applications using OptiX can fail in ways...",
-      "author": "Tanya Lenz",
-      "content": "NVIDIA OptiX ray tracing engine is an application framework for achieving optimal ray tracing performance on the GPU. Applications using OptiX can fail in ways...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.8,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-24T06:28:24.916888+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.6799999999999999,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-24T06:28:24.916891+00:00"
+        "timestamp": "2026-07-24T10:19:05.433327+00:00"
       },
       "article_type": "article"
     }
@@ -940,7 +940,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 262.5016391277313,
+    "processing_time": 257.1060161590576,
     "components": [
       "collection",
       "bulk_scoring",
@@ -958,10 +958,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 129,
+      "total_processed": 123,
       "candidates": {
-        "headlines": 14,
-        "articles": 115,
+        "headlines": 11,
+        "articles": 112,
         "research_papers": 0
       },
       "selected": {
