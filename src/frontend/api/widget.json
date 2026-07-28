@@ -1,16 +1,16 @@
 {
-  "updated": "2026-07-28T17:29:25.444846+00:00",
+  "updated": "2026-07-28T21:11:11.535515+00:00",
   "top_stories": [
     {
-      "article_id": "b38610463caf9abc167f87d4761764f9",
-      "title": "This $9 key physically locks your most addictive apps",
+      "article_id": "c6b5a6de04e0c29dab3fa625b1dc5062",
+      "title": "Recursive Superintelligence signs $410M compute deal with Amazon",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/07/27/this-9-key-physically-locks-your-most-addictive-apps/",
-      "published_date": "2026-07-27T15:25:37+00:00",
+      "url": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
+      "published_date": "2026-07-28T13:19:17+00:00",
       "category": "Industry",
-      "description": "This $9 NFC key requires you to physically scan it to unlock distracting apps on your phone.",
-      "author": "Lauren Forristal",
-      "content": "This $9 NFC key requires you to physically scan it to unlock distracting apps on your phone.",
+      "description": "Recursive’s emphasis on self-improving AI systems means much of the budget that would traditionally go toward headcount and operations is put straight into compute, as the company seeks to automate its own product development process.",
+      "author": "Russell Brandom",
+      "content": "Recursive’s emphasis on self-improving AI systems means much of the budget that would traditionally go toward headcount and operations is put straight into compute, as the company seeks to automate its own product development process.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -24,15 +24,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,166 +44,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-28T17:29:25.405158+00:00"
+        "consensus_timestamp": "2026-07-28T21:11:11.497419+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-28T17:29:25.405160+00:00"
+        "timestamp": "2026-07-28T21:11:11.497422+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "c50e860dad0551e1e586dc35f386d631",
-      "title": "Advancing the next era of national science",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
-      "published_date": "2026-07-22T12:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
-      "author": "",
-      "content": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-28T17:29:25.401445+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-28T17:29:25.401447+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "eb1b339abd256b2191a4c2d0fdc82598",
-      "title": "How Couchbase built a multi-model AI architecture for Capella iQ with Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/",
-      "published_date": "2026-07-20T16:58:52+00:00",
-      "category": "Industry",
-      "description": "This post describes how Couchbase adopted Amazon Bedrock to power Capella iQ with Anthropic’s Claude family of models, the architectural decisions behind their multi-model approach, and the operational benefits realized in production.",
-      "author": "Tushar Madaan",
-      "content": "This post describes how Couchbase adopted Amazon Bedrock to power Capella iQ with Anthropic’s Claude family of models, the architectural decisions behind their multi-model approach, and the operational benefits realized in production.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.9059999999999999,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-28T17:29:25.402717+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-28T17:29:25.402720+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "412e45ac2b2c1d5b7b94fb77f0f03ccb",
-      "title": "NIH's All of Us Research Program is now the largest integrated genomics and health database in the world",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nihs-all-us-research-program-now-largest-integrated-genomics-health-database-world",
-      "published_date": "2026-07-28T17:24:09.263638+00:00",
+      "article_id": "4d76baaebe907d506b61a63f551e15ae",
+      "title": "Guidance: AI Research Resource",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/ai-research-resource",
+      "published_date": "2026-07-17T15:00:03+00:00",
       "category": "Government",
-      "description": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
+      "description": "The AI Research Resource (AIRR) is a suite of advanced supercomputers that provides AI-specialised compute capacity to researchers, academia, and industry.",
       "author": "",
-      "content": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
+      "content": "The AI Research Resource (AIRR) is a suite of advanced supercomputers that provides AI-specialised compute capacity to researchers, academia, and industry.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
+        "quality_score": 0.95,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8975,
+        "confidence_mean": 0.98
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-28T17:29:25.400165+00:00"
+        "consensus_timestamp": "2026-07-28T21:11:11.494546+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,7 +121,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-28T17:29:25.400169+00:00"
+        "timestamp": "2026-07-28T21:11:11.494549+00:00"
       },
       "article_type": "article"
     },
@@ -296,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-28T17:29:25.400604+00:00"
+        "consensus_timestamp": "2026-07-28T21:11:11.493907+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +183,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-28T17:29:25.400606+00:00"
+        "timestamp": "2026-07-28T21:11:11.493909+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f82e8e45c41bfdf3bc5bb657c1b7ef56",
+      "title": "Guidance: TechFirst Local",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/techlocal",
+      "published_date": "2026-07-21T15:06:31+00:00",
+      "category": "Government",
+      "description": "Details of the TechFirst local grant funding programme to boost digital skills and support people into tech jobs.",
+      "author": "",
+      "content": "Details of the TechFirst local grant funding programme to boost digital skills and support people into tech jobs.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-28T21:11:11.494038+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-28T21:11:11.494041+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "aa0303f4b04a081a237bf6a9a2c76233",
+      "title": "Integrating Context-Aware Video AI Agents Into Enterprise Workflows",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/integrating-context-aware-video-ai-agents-into-enterprise-workflows/",
+      "published_date": "2026-07-16T16:03:35+00:00",
+      "category": "Industry",
+      "description": "A video analytics AI agent that can perceive, reason, and act based on massive amounts of video footage must be integrated with existing workflows and...",
+      "author": "Tanya Lenz",
+      "content": "A video analytics AI agent that can perceive, reason, and act based on massive amounts of video footage must be integrated with existing workflows and...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.9,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-28T21:11:11.498591+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.74,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-28T21:11:11.498594+00:00"
       },
       "article_type": "article"
     }
