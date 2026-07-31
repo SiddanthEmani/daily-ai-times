@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T10:41:25.109369+00:00",
+  "updated": "2026-07-31T14:02:46.046826+00:00",
   "top_stories": [
     {
       "article_id": "5b74062fb86923715fb1db206287dd75",
@@ -12,11 +12,11 @@
       "author": "Lorenzo Franceschi-Bicchierai",
       "content": "As experts have warned for the last two years, some companies — like Microsoft and now Google — are finding and patching an exponential number of bugs in their products, thanks to the use of LLMs and AI tools.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.98,
+        "overall_score": 0.9185000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-31T10:41:25.069354+00:00"
+        "consensus_timestamp": "2026-07-31T14:02:46.003513+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,27 +59,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-31T10:41:25.069357+00:00"
+        "timestamp": "2026-07-31T14:02:46.003516+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "e165ea75ff5add7420538eb4e8c6ae72",
-      "title": "Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS",
+      "article_id": "ac6f9f9dbff57758348696dff78db725",
+      "title": "New Alzheimer’s blood test may tell when symptoms are around the corner",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/new-alzheimers-blood-test-may-tell-when-symptoms-are-around-corner",
+      "published_date": "2026-07-31T13:57:10.270269+00:00",
+      "category": "Government",
+      "description": "A novel biomarker beats the leading diagnostic blood test at predicting disease progression.",
+      "author": "",
+      "content": "A novel biomarker beats the leading diagnostic blood test at predicting disease progression.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-07-31T14:02:45.999900+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-07-31T14:02:45.999904+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "91d7b767173a11967226514a8dd0e0fb",
+      "title": "Inference meta-monitoring for Amazon SageMaker AI endpoints with Amazon Quick",
       "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/",
-      "published_date": "2026-07-27T16:11:32+00:00",
+      "url": "https://aws.amazon.com/blogs/machine-learning/inference-meta-monitoring-for-amazon-sagemaker-ai-endpoints-with-amazon-quick/",
+      "published_date": "2026-07-30T16:10:10+00:00",
       "category": "Industry",
-      "description": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
-      "author": "Dhananjay Karanjkar",
-      "content": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
+      "description": "Learn how to build an inference meta-monitoring system for Amazon SageMaker AI endpoints using Amazon Quick. This governance layer sits above production ML inference pipelines to continuously track prediction and data quality, detect drift, integrate delayed ground truth, and surface automated performance dashboards.",
+      "author": "Sunita Koppar",
+      "content": "Learn how to build an inference meta-monitoring system for Amazon SageMaker AI endpoints using Amazon Quick. This governance layer sits above production ML inference pipelines to continuously track prediction and data quality, detect drift, integrate delayed ground truth, and surface automated performance dashboards.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-31T10:41:25.068164+00:00"
+        "consensus_timestamp": "2026-07-31T14:02:46.001771+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,27 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-31T10:41:25.068167+00:00"
+        "timestamp": "2026-07-31T14:02:46.001774+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1b83b595a521fe650f8997fc432089b6",
-      "title": "NVIDIA Open Sources First GPU-Accelerated Medical Physics Simulation Framework",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/",
-      "published_date": "2026-07-22T13:00:11+00:00",
-      "category": "Industry",
-      "description": "Before a healthcare robot can be useful in the real world, it has to learn how the physical world pushes back. Anatomy varies. Instruments bend, press, slip and interact with tissue. Imaging can be noisy or incomplete. And the rare, edge scenarios developers most need to understand don’t appear on schedule. That creates one of […]",
-      "author": "David Niewolny",
-      "content": "Before a healthcare robot can be useful in the real world, it has to learn how the physical world pushes back. Anatomy varies. Instruments bend, press, slip and interact with tissue. Imaging can be noisy or incomplete. And the rare, edge scenarios developers most need to understand don’t appear on schedule. That creates one of […]",
+      "article_id": "48e9684c096cb586a17516f1173d094c",
+      "title": "A child’s language may predict the arrival of depression and anxiety disorders years before onset",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/childs-language-may-predict-arrival-depression-anxiety-disorders-years-before-onset",
+      "published_date": "2026-07-31T13:57:10.269785+00:00",
+      "category": "Government",
+      "description": "NIH-funded,&nbsp;AI-powered&nbsp;analysis of&nbsp;interviews suggests&nbsp;that&nbsp;a&nbsp;youth’s&nbsp;framing of stressful events&nbsp;is&nbsp;a strong&nbsp;indicator&nbsp;of&nbsp;risk for&nbsp;future&nbsp;disorders.",
+      "author": "",
+      "content": "NIH-funded,&nbsp;AI-powered&nbsp;analysis of&nbsp;interviews suggests&nbsp;that&nbsp;a&nbsp;youth’s&nbsp;framing of stressful events&nbsp;is&nbsp;a strong&nbsp;indicator&nbsp;of&nbsp;risk for&nbsp;future&nbsp;disorders.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-31T10:41:25.068779+00:00"
+        "consensus_timestamp": "2026-07-31T14:02:45.999720+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,69 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-31T10:41:25.068782+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dca48333195205d28f7170ba951330d6",
-      "title": "NVIDIA Vera Rubin Maximizes Intelligence per Dollar for Post-Training Workloads — a Key Metric for Agentic AI",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
-      "published_date": "2026-07-17T15:00:14+00:00",
-      "category": "Industry",
-      "description": "Lowest cost per token from extreme codesign maximizes intelligence per dollar for post-training in the agentic era.",
-      "author": "Kirthi Develeker",
-      "content": "Lowest cost per token from extreme codesign maximizes intelligence per dollar for post-training in the agentic era.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-07-31T10:41:25.069085+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-07-31T10:41:25.069087+00:00"
+        "timestamp": "2026-07-31T14:02:45.999725+00:00"
       },
       "article_type": "article"
     },
@@ -261,11 +261,11 @@
       "content": "Expression of interest to host the UK’s next AI supercomputer.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
-        "confidence_mean": 0.95
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-07-31T10:41:25.066537+00:00"
+        "consensus_timestamp": "2026-07-31T14:02:46.000230+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-07-31T10:41:25.066540+00:00"
+        "timestamp": "2026-07-31T14:02:46.000233+00:00"
       },
       "article_type": "article"
     }
