@@ -1,22 +1,84 @@
 {
-  "updated": "2026-08-01T10:00:29.441028+00:00",
+  "updated": "2026-08-01T13:16:53.687939+00:00",
   "top_stories": [
     {
-      "article_id": "df947d0f33c26eb1c79a27a6f05bf913",
-      "title": "Sam Altman isn’t the only one who wants to pump the brakes on AI",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/",
-      "published_date": "2026-07-31T17:26:32+00:00",
-      "category": "Industry",
-      "description": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
-      "author": "Theresa Loconsolo",
-      "content": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
+      "article_id": "ff145b71aca353a04c36ec38bed19ac5",
+      "title": "NIH launches new office to advance human-based research and reduce animal use",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-new-office-advance-human-based-research-reduce-animal-use",
+      "published_date": "2026-08-01T13:11:59.907224+00:00",
+      "category": "Government",
+      "description": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
+      "author": "",
+      "content": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.639247+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.639253+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "e0dd1f31a41ff2b5db066aea08f41bf4",
+      "title": "Introducing Claude Opus 5 on AWS: Anthropic’s most capable Opus model",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/",
+      "published_date": "2026-07-24T17:59:03+00:00",
+      "category": "Industry",
+      "description": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
+      "author": "Aamna Najmi",
+      "content": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.408716+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641963+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,20 +121,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.408719+00:00"
+        "timestamp": "2026-08-01T13:16:53.641965+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "e3f155a13ab6886cf75c68b726f1f0e1",
-      "title": "NVIDIA Video Codec SDK 13.1: Zero-Copy Transcode, AV1 B-Frames, and Frame-Accurate Seek",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-video-codec-sdk-13-1-zero-copy-transcode-av1-b-frames-and-frame-accurate-seek/",
-      "published_date": "2026-07-31T15:13:02+00:00",
+      "article_id": "deb5eafa5ac91722a788a22957b27843",
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "published_date": "2026-07-30T15:00:59+00:00",
       "category": "Industry",
-      "description": "The demand for high-quality video continues to accelerate across industries, powering everything from immersive streaming experiences to remote collaboration,...",
-      "author": "Elizabeth Goodman",
-      "content": "The demand for high-quality video continues to accelerate across industries, powering everything from immersive streaming experiences to remote collaboration,...",
+      "description": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
+      "author": "",
+      "content": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -107,145 +169,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.409384+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.645755+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.645760+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bb2fde3ad0f67e0a4d41bd98768d1216",
+      "title": "A new benchmark for evaluating patient-facing health AI agents",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents",
+      "published_date": "2026-07-29T15:16:52+00:00",
+      "category": "Industry",
+      "description": "PatientAgentBench generates a synthetic patient health record, a realistic clinical vignette, and a patient agent that converses with the AI system under evaluation, to capture what a patient-facing agent actually has to do.",
+      "author": "",
+      "content": "PatientAgentBench generates a synthetic patient health record, a realistic clinical vignette, and a patient agent that converses with the AI system under evaluation, to capture what a patient-facing agent actually has to do.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.645970+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.409388+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "412e45ac2b2c1d5b7b94fb77f0f03ccb",
-      "title": "NIH's All of Us Research Program is now the largest integrated genomics and health database in the world",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nihs-all-us-research-program-now-largest-integrated-genomics-health-database-world",
-      "published_date": "2026-08-01T09:55:44.451259+00:00",
-      "category": "Government",
-      "description": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
-      "author": "",
-      "content": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.405450+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.405453+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "27be516785f1edfb31f8f2d967edbbac",
-      "title": "Notice: Expression of Interest: AIRR Heterogeneous Supercomputer Host Site Selection",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/expression-of-interest-airr-heterogeneous-supercomputer-host-site-selection",
-      "published_date": "2026-07-29T13:26:52+00:00",
-      "category": "Government",
-      "description": "Expression of interest to host the UK’s next AI supercomputer.",
-      "author": "",
-      "content": "Expression of interest to host the UK’s next AI supercomputer.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.405729+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.405732+00:00"
+        "timestamp": "2026-08-01T13:16:53.645975+00:00"
       },
       "article_type": "article"
     },
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.407750+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641731+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.407754+00:00"
+        "timestamp": "2026-08-01T13:16:53.641734+00:00"
       },
       "article_type": "article"
     }

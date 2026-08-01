@@ -1,27 +1,89 @@
 {
-  "generated_at": "2026-08-01T10:00:29.438305+00:00",
+  "generated_at": "2026-08-01T13:16:53.684400+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1677
+    "issue_number": 1678
   },
   "articles": [
     {
-      "article_id": "df947d0f33c26eb1c79a27a6f05bf913",
-      "title": "Sam Altman isn’t the only one who wants to pump the brakes on AI",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/",
-      "published_date": "2026-07-31T17:26:32+00:00",
-      "category": "Industry",
-      "description": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
-      "author": "Theresa Loconsolo",
-      "content": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
+      "article_id": "ff145b71aca353a04c36ec38bed19ac5",
+      "title": "NIH launches new office to advance human-based research and reduce animal use",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/nih-launches-new-office-advance-human-based-research-reduce-animal-use",
+      "published_date": "2026-08-01T13:11:59.907224+00:00",
+      "category": "Government",
+      "description": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
+      "author": "",
+      "content": "New office will coordinate efforts to develop, validate and scale animal-free research models.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.8975,
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.639247+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.639253+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "e0dd1f31a41ff2b5db066aea08f41bf4",
+      "title": "Introducing Claude Opus 5 on AWS: Anthropic’s most capable Opus model",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/",
+      "published_date": "2026-07-24T17:59:03+00:00",
+      "category": "Industry",
+      "description": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
+      "author": "Aamna Najmi",
+      "content": "This post covers Opus 5’s improvements and practical guidance for AI engineers integrating the model into agentic systems and production inference workloads on Amazon Bedrock. See the documentation for Claude Platform on AWS.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -53,7 +115,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.408716+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641963+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,20 +126,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.408719+00:00"
+        "timestamp": "2026-08-01T13:16:53.641965+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
-      "article_id": "e3f155a13ab6886cf75c68b726f1f0e1",
-      "title": "NVIDIA Video Codec SDK 13.1: Zero-Copy Transcode, AV1 B-Frames, and Frame-Accurate Seek",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-video-codec-sdk-13-1-zero-copy-transcode-av1-b-frames-and-frame-accurate-seek/",
-      "published_date": "2026-07-31T15:13:02+00:00",
+      "article_id": "deb5eafa5ac91722a788a22957b27843",
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "published_date": "2026-07-30T15:00:59+00:00",
       "category": "Industry",
-      "description": "The demand for high-quality video continues to accelerate across industries, powering everything from immersive streaming experiences to remote collaboration,...",
-      "author": "Elizabeth Goodman",
-      "content": "The demand for high-quality video continues to accelerate across industries, powering everything from immersive streaming experiences to remote collaboration,...",
+      "description": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
+      "author": "",
+      "content": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -112,145 +174,83 @@
           }
         },
         "score": 0.9,
-        "confidence": 0.9,
+        "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.409384+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.645755+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.74,
+        "combined_confidence": 0.77,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.645760+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bb2fde3ad0f67e0a4d41bd98768d1216",
+      "title": "A new benchmark for evaluating patient-facing health AI agents",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/a-new-benchmark-for-evaluating-patient-facing-health-ai-agents",
+      "published_date": "2026-07-29T15:16:52+00:00",
+      "category": "Industry",
+      "description": "PatientAgentBench generates a synthetic patient health record, a realistic clinical vignette, and a patient agent that converses with the AI system under evaluation, to capture what a patient-facing agent actually has to do.",
+      "author": "",
+      "content": "PatientAgentBench generates a synthetic patient health record, a realistic clinical vignette, and a patient agent that converses with the AI system under evaluation, to capture what a patient-facing agent actually has to do.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.98,
+        "overall_score": 0.9059999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.645970+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.409388+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "412e45ac2b2c1d5b7b94fb77f0f03ccb",
-      "title": "NIH's All of Us Research Program is now the largest integrated genomics and health database in the world",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nihs-all-us-research-program-now-largest-integrated-genomics-health-database-world",
-      "published_date": "2026-08-01T09:55:44.451259+00:00",
-      "category": "Government",
-      "description": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
-      "author": "",
-      "content": "Data from more than 747,000 participants&nbsp;is&nbsp;now available to&nbsp;scientists, powering next-generation discoveries in precision medicine.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.405450+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.405453+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "27be516785f1edfb31f8f2d967edbbac",
-      "title": "Notice: Expression of Interest: AIRR Heterogeneous Supercomputer Host Site Selection",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/expression-of-interest-airr-heterogeneous-supercomputer-host-site-selection",
-      "published_date": "2026-07-29T13:26:52+00:00",
-      "category": "Government",
-      "description": "Expression of interest to host the UK’s next AI supercomputer.",
-      "author": "",
-      "content": "Expression of interest to host the UK’s next AI supercomputer.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.9,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.405729+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.405732+00:00"
+        "timestamp": "2026-08-01T13:16:53.645975+00:00"
       },
       "article_type": "article"
     },
@@ -301,7 +301,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.407750+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641731+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -312,7 +312,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.407754+00:00"
+        "timestamp": "2026-08-01T13:16:53.641734+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c50e860dad0551e1e586dc35f386d631",
+      "title": "Advancing the next era of national science",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
+      "published_date": "2026-07-22T12:00:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+      "author": "",
+      "content": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.640930+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.640933+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "9385e8bd773a22b7599fe9e93f6abc75",
+      "title": "Researchers discover single-cell brain activity that underlies human speech",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/researchers-discover-single-cell-brain-activity-underlies-human-speech",
+      "published_date": "2026-08-01T13:11:59.907039+00:00",
+      "category": "Government",
+      "description": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
+      "author": "",
+      "content": "With neuronal data, AI models predicted grammar, meaning, and context of spoken sentences.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.639185+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.639191+00:00"
       },
       "article_type": "article"
     },
@@ -363,7 +487,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.407559+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641548+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -374,7 +498,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.407562+00:00"
+        "timestamp": "2026-08-01T13:16:53.641551+00:00"
       },
       "article_type": "article"
     },
@@ -425,7 +549,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.409898+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.645308+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -436,20 +560,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.409900+00:00"
+        "timestamp": "2026-08-01T13:16:53.645311+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "881635c1e809ea3b0c72ac00206ed985",
-      "title": "NVIDIA NVLink: The Scale-Up Network for AI Factories",
+      "article_id": "c983467a9916163b63dc5f56b5f960d7",
+      "title": "Integrate NVIDIA Omniverse RTX Sensor Simulation Into Existing Apps",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-nvlink-the-scale-up-network-for-ai-factories/",
-      "published_date": "2026-07-20T15:46:28+00:00",
+      "url": "https://developer.nvidia.com/blog/integrate-nvidia-omniverse-rtx-sensor-simulation-into-existing-apps/",
+      "published_date": "2026-07-20T15:00:00+00:00",
       "category": "Industry",
-      "description": "The demand for AI continues to accelerate. Workloads are getting larger, models are becoming more complex, and there is mounting pressure to deploy AI compute...",
-      "author": "Elizabeth Goodman",
-      "content": "The demand for AI continues to accelerate. Workloads are getting larger, models are becoming more complex, and there is mounting pressure to deploy AI compute...",
+      "description": "Developers building 3D, design, simulation, robotics, and industrial digital twin applications need ways to bring physical AI capabilities into the tools and...",
+      "author": "Tanya Lenz",
+      "content": "Developers building 3D, design, simulation, robotics, and industrial digital twin applications need ways to bring physical AI capabilities into the tools and...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.9,
@@ -483,41 +607,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.92,
-        "confidence": 0.95,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.410005+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.645547+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.752,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.410008+00:00"
+        "timestamp": "2026-08-01T13:16:53.645551+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "1aef82be740655c16d0201d9b196a3ab",
-      "title": "How AI is expanding what people do at work",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
-      "published_date": "2026-07-27T03:30:00+00:00",
+      "article_id": "150973901ad2a86ce90dd52ac542fac4",
+      "title": "NVIDIA Harnesses Vera CPU to Speed Up Design of Next-Generation CPUs and GPUs",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
+      "published_date": "2026-07-27T00:45:42+00:00",
       "category": "Industry",
-      "description": "New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.",
-      "author": "",
-      "content": "New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.",
+      "description": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI systems. To help meet that challenge, NVIDIA is collaborating with industry leaders Cadence and Synopsys to optimize critical electronic design automation (EDA) applications for the NVIDIA Vera CPU. NVIDIA is now deploying Vera across […]",
+      "author": "Ivan Goldwasser",
+      "content": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI systems. To help meet that challenge, NVIDIA is collaborating with industry leaders Cadence and Synopsys to optimize critical electronic design automation (EDA) applications for the NVIDIA Vera CPU. NVIDIA is now deploying Vera across […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.8725,
+        "overall_score": 0.8875,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-01T13:16:53.642405+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-01T13:16:53.642407+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c42d41aeacd03b4faf093e2e51692417",
+      "title": "NVIDIA and Partners Build in America, for America",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
+      "published_date": "2026-07-21T13:00:47+00:00",
+      "category": "Industry",
+      "description": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
+      "author": "NVIDIA",
+      "content": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.85,
+        "novelty_score": 0.75,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -549,7 +735,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.406911+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.642783+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -560,27 +746,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.406913+00:00"
+        "timestamp": "2026-08-01T13:16:53.642786+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c50e860dad0551e1e586dc35f386d631",
-      "title": "Advancing the next era of national science",
+      "article_id": "f9e2201e0e3c04850c59b45f2ee2bccf",
+      "title": "Disrupting a Criminal Scam Operation",
       "source": "openai_blog",
-      "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
-      "published_date": "2026-07-22T12:00:00+00:00",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+      "published_date": "2026-07-31T00:00:00+00:00",
       "category": "Industry",
-      "description": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+      "description": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
       "author": "",
-      "content": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+      "content": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
         "overall_score": 0.8725,
-        "confidence_mean": 0.95
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -611,7 +797,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.407060+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.640404+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -622,20 +808,20 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.407063+00:00"
+        "timestamp": "2026-08-01T13:16:53.640408+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "bc92995c29d15cdf9d1a7a3db51d9dd2",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "published_date": "2026-07-22T13:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+      "article_id": "ac6f9f9dbff57758348696dff78db725",
+      "title": "New Alzheimer’s blood test may tell when symptoms are around the corner",
+      "source": "nih_ai_news",
+      "url": "https://www.nih.gov/news-events/news-releases/new-alzheimers-blood-test-may-tell-when-symptoms-are-around-corner",
+      "published_date": "2026-08-01T13:11:59.906875+00:00",
+      "category": "Government",
+      "description": "A novel biomarker beats the leading diagnostic blood test at predicting disease progression.",
       "author": "",
-      "content": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+      "content": "A novel biomarker beats the leading diagnostic blood test at predicting disease progression.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
         "quality_score": 0.9,
@@ -673,7 +859,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.406984+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.639030+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -684,7 +870,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.406986+00:00"
+        "timestamp": "2026-08-01T13:16:53.639034+00:00"
       },
       "article_type": "article"
     },
@@ -701,195 +887,9 @@
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.407281+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.407283+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9da5d8076d0d63f090e5756a49ad0e66",
-      "title": "ModelExpress: Distributing Model Artifacts at the Speed of Light",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/",
-      "published_date": "2026-07-24T16:45:00+00:00",
-      "category": "Industry",
-      "description": "Every byte moved has a cost. As model checkpoints grow to hundreds of gigabytes or even a terabyte, that cost adds up quickly. To make things even worse, moving...",
-      "author": "Elizabeth Goodman",
-      "content": "Every byte moved has a cost. As model checkpoints grow to hundreds of gigabytes or even a terabyte, that cost adds up quickly. To make things even worse, moving...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8600000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.95,
-        "confidence": 0.98,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.409721+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.77,
-        "combined_confidence": 0.788,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.409723+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6faa01dddd06bce6da30b2d0a42bf090",
-      "title": "Brain immunity may undergo a major midlife overhaul",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/brain-immunity-may-undergo-major-midlife-overhaul",
-      "published_date": "2026-08-01T09:55:44.451143+00:00",
-      "category": "Government",
-      "description": "NIH-supported findings identify a new aspect of human brain aging that may contribute to age-related cognitive decline and dementia risk.",
-      "author": "",
-      "content": "NIH-supported findings identify a new aspect of human brain aging that may contribute to age-related cognitive decline and dementia risk.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.405347+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-01T10:00:29.405351+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3ca4a7c03ee08b882624a6667cfb777d",
-      "title": "Policy paper: Fixed Telecoms Modernisation Charter",
-      "source": "uk_dsit_ai",
-      "url": "https://www.gov.uk/government/publications/fixed-telecoms-modernisation-charter",
-      "published_date": "2026-07-21T15:05:11+00:00",
-      "category": "Government",
-      "description": "This document sets out the steps that telecoms providers should follow when carrying out any current and future fixed telecoms modernisations.",
-      "author": "",
-      "content": "This document sets out the steps that telecoms providers should follow when carrying out any current and future fixed telecoms modernisations.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.82,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -921,7 +921,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-01T10:00:29.406349+00:00"
+        "consensus_timestamp": "2026-08-01T13:16:53.641252+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -932,7 +932,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-01T10:00:29.406352+00:00"
+        "timestamp": "2026-08-01T13:16:53.641255+00:00"
       },
       "article_type": "article"
     }
@@ -940,7 +940,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 232.7801902294159,
+    "processing_time": 231.60842990875244,
     "components": [
       "collection",
       "bulk_scoring",
@@ -958,10 +958,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 118,
+      "total_processed": 119,
       "candidates": {
-        "headlines": 14,
-        "articles": 104,
+        "headlines": 13,
+        "articles": 106,
         "research_papers": 0
       },
       "selected": {
