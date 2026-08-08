@@ -43,7 +43,7 @@ Modern serverless AI-powered news aggregation platform with advanced multi-agent
 #### Sidebar data charts
 The sidebar bar charts pull from small, independently-refreshed JSON feeds under `src/frontend/api/`, each with a static in-code fallback so the page never breaks if a feed is missing:
 
-- **AI Data Center Buildout** (`capex.json`, via `capex_collector.py`, workflow **Update Data Center Capex**) — annualized data center / AI-infrastructure spend, `$B`. A **hybrid** feed with no API key required:
+- **AI Data Center Buildout** (`capex.json`, via `capex_collector.py`, refreshed by the **Update Benchmark Leaderboard** workflow alongside the leaderboard) — annualized data center / AI-infrastructure spend, `$B`. A **hybrid** feed with no API key required:
   - **Public companies** (Amazon, Microsoft, Alphabet, Meta, Oracle) — trailing-12-month capital expenditure fetched live from the keyless [SEC EDGAR](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) XBRL API.
   - **Private companies** (OpenAI, Anthropic) — file nothing with the SEC, so their figures come from `src/backend/collectors/capex_curated.json`, a committed, source-cited file. These are flagged as estimates (a `*` on the chart).
   - Note: no filing breaks out *data-center-only* capex, so public figures are total company capex (overwhelmingly AI/data-center spend for these firms). To show a data-center-only estimate for any company, add a `value` + `source`/`basis` override to that company in `capex_curated.json`.
