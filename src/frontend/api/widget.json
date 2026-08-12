@@ -1,16 +1,16 @@
 {
-  "updated": "2026-08-12T13:06:24.810266+00:00",
+  "updated": "2026-08-12T17:00:36.477988+00:00",
   "top_stories": [
     {
-      "article_id": "39c026db8f432a45d07a5341f4796bd0",
-      "title": "As AI-led attacks multiply, OpenAI launches a new cyber model",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
-      "published_date": "2026-08-10T23:56:15+00:00",
+      "article_id": "dbd41237f1f52e1a43b1b48d942e22a6",
+      "title": "NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/",
+      "published_date": "2026-08-12T06:59:40+00:00",
       "category": "Industry",
-      "description": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.",
-      "author": "Lucas Ropek",
-      "content": "OpenAI is expanding its AI cybersecurity defense program Daybreak, and rolling out a new cyber-trained AI model with it.",
+      "description": "NVIDIA's open 30B MoE targets the agent execution layer, with Switchyard routing each step to the cheapest capable model. The post NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router appeared first on MarkTechPost.",
+      "author": "Asif Razzaq",
+      "content": "NVIDIA's open 30B MoE targets the agent execution layer, with Switchyard routing each step to the cheapest capable model. The post NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
@@ -24,15 +24,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,24 +44,86 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-12T13:06:24.770607+00:00"
+        "consensus_timestamp": "2026-08-12T17:00:36.440860+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-12T13:06:24.770609+00:00"
+        "timestamp": "2026-08-12T17:00:36.440862+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "0331252b100316d8154deb33e505516e",
+      "title": "Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model That Runs on One Consumer GPU",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/08/10/meta-ai-releases-muse-glimmer/",
+      "published_date": "2026-08-10T15:11:51+00:00",
+      "category": "Industry",
+      "description": "Meta's Muse Glimmer is a 30B open-weights agentic model under Apache 2.0. It fits 24 GB VRAM and decodes 3.1x faster with DFlash speculation. The post Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model That Runs on One Consumer GPU appeared first on MarkTechPost.",
+      "author": "Asif Razzaq",
+      "content": "Meta's Muse Glimmer is a 30B open-weights agentic model under Apache 2.0. It fits 24 GB VRAM and decodes 3.1x faster with DFlash speculation. The post Meta AI Releases Muse Glimmer: A 30B Open-Weights Agentic Model That Runs on One Consumer GPU appeared first on MarkTechPost.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-12T17:00:36.441132+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-12T17:00:36.441134+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "927f7ece4fcf49cdd177a69def018e60",
@@ -110,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-12T13:06:24.768967+00:00"
+        "consensus_timestamp": "2026-08-12T17:00:36.437923+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,69 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-12T13:06:24.768969+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "857a4bfeb42aea2b19ee031a5c26307e",
-      "title": "Daybreak models are now available on AWS",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
-      "published_date": "2026-08-11T10:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI and AWS are making Daybreak cybersecurity capabilities available through Amazon Bedrock to support enterprise security workflows.",
-      "author": "",
-      "content": "OpenAI and AWS are making Daybreak cybersecurity capabilities available through Amazon Bedrock to support enterprise security workflows.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-12T13:06:24.768214+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-12T13:06:24.768216+00:00"
+        "timestamp": "2026-08-12T17:00:36.437926+00:00"
       },
       "article_type": "article"
     },
@@ -234,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-12T13:06:24.767858+00:00"
+        "consensus_timestamp": "2026-08-12T17:00:36.436412+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-12T13:06:24.767862+00:00"
+        "timestamp": "2026-08-12T17:00:36.436417+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c42d41aeacd03b4faf093e2e51692417",
-      "title": "NVIDIA and Partners Build in America, for America",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
-      "published_date": "2026-08-05T13:00:47+00:00",
-      "category": "Industry",
-      "description": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
-      "author": "NVIDIA",
-      "content": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discovery, stronger industrial productivity and global technology leadership.",
+      "article_id": "37c36871caceb2381cefc8f5d446b811",
+      "title": "It’s about time for quantum manufacturing",
+      "source": "darpa_ai_research",
+      "url": "https://www.darpa.mil/news/2026/its-about-time",
+      "published_date": "2026-08-05T19:48:55+00:00",
+      "category": "Government",
+      "description": "Piloting a pipeline to build and integrate optical clocks at scale.",
+      "author": "outreach@darpa.mil",
+      "content": "Piloting a pipeline to build and integrate optical clocks at scale.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.8875000000000001,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-12T13:06:24.770083+00:00"
+        "consensus_timestamp": "2026-08-12T17:00:36.436585+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-12T13:06:24.770085+00:00"
+        "timestamp": "2026-08-12T17:00:36.436589+00:00"
       },
       "article_type": "article"
     }
