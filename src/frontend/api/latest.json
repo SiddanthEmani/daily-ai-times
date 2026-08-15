@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-15T04:30:30.772469+00:00",
+  "generated_at": "2026-08-15T08:28:21.947913+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1758
+    "issue_number": 1759
   },
   "articles": [
     {
@@ -53,7 +53,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.742728+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.922302+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,9 +64,71 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.742730+00:00"
+        "timestamp": "2026-08-15T08:28:21.922304+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "8ccaf6371595fc8cf2efe24a9e4baf2b",
+      "title": "Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool",
+      "source": "aws_ml_blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/",
+      "published_date": "2026-08-13T15:56:07+00:00",
+      "category": "Industry",
+      "description": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
+      "author": "Salman Moghal",
+      "content": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.98,
+        "overall_score": 0.931,
+        "confidence_mean": 0.98
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-15T08:28:21.920743+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-15T08:28:21.920746+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "5aa49eee6545ad50fcd89702cd899d26",
@@ -115,7 +177,7 @@
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.743718+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.922967+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -126,69 +188,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.743720+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "75a76441a05812b30b91418e2fef8a19",
-      "title": "NVIDIA JetPack 7.2.1 Adds Agentic Video Skills and T3000 Emulation",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-jetpack-7-2-1-adds-agentic-video-skills-and-t3000-emulation/",
-      "published_date": "2026-08-11T19:00:00+00:00",
-      "category": "Industry",
-      "description": "Video is a core data path across NVIDIA Jetson applications, from robotics and intelligent video analytics to industrial automation, healthcare, media...",
-      "author": "Elizabeth Goodman",
-      "content": "Video is a core data path across NVIDIA Jetson applications, from robotics and intelligent video analytics to industrial automation, healthcare, media...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.98,
-        "overall_score": 0.8935,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.9,
-        "confidence": 0.95,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.743387+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-15T04:30:30.743389+00:00"
+        "timestamp": "2026-08-15T08:28:21.922970+00:00"
       },
       "article_type": "article"
     },
@@ -206,8 +206,8 @@
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8875,
+        "impact_score": 0.99,
+        "overall_score": 0.8955,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -239,7 +239,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.741480+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.921933+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -250,26 +250,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.741482+00:00"
+        "timestamp": "2026-08-15T08:28:21.921935+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "c5975aebcae47327ea13e257c944871c",
-      "title": "Snowflake moves enterprise AI beyond fragmented data pipelines",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/08/11/data-interoperability-ai-pipelines-awsmarketplaceseries/",
-      "published_date": "2026-08-11T20:20:51+00:00",
+      "article_id": "1464256169e93aa85aab6e75598c4674",
+      "title": "How to Choose Full-Stack Observability for NVIDIA AI Factories",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/",
+      "published_date": "2026-08-12T16:13:47+00:00",
       "category": "Industry",
-      "description": "Data interoperability is quickly becoming a practical requirement for companies trying to move artificial intelligence into production. Picking the right model or adding computing capacity is only part of the job. Companies also need reliable data that carries the right business meaning and remains protected as it moves between systems. Snowflake Inc. is building its […] The post Snowflake moves enterprise AI beyond fragmented data pipelines appeared first on SiliconANGLE.",
-      "author": "Chad Wilson",
-      "content": "Data interoperability is quickly becoming a practical requirement for companies trying to move artificial intelligence into production. Picking the right model or adding computing capacity is only part of the job. Companies also need reliable data that carries the right business meaning and remains protected as it moves between systems. Snowflake Inc. is building its […] The post Snowflake moves enterprise AI beyond fragmented data pipelines appeared first on SiliconANGLE.",
+      "description": "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications. When performance degrades, identifying the...",
+      "author": "Jorge Cardoso",
+      "content": "AI infrastructure spans multiple layers, from compute and networking to storage, orchestration, and applications. When performance degrades, identifying the...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.85,
         "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.875,
+        "impact_score": 0.98,
+        "overall_score": 0.881,
         "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
@@ -297,84 +297,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.92,
         "confidence": 0.95,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.744554+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.922602+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.752,
         "combined_confidence": 0.77,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.744556+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e3cd2a868987401ae56830204130439a",
-      "title": "What building an AI-native finance function taught me",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/building-an-ai-native-finance-function",
-      "published_date": "2026-08-10T17:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
-      "author": "",
-      "content": "OpenAI CFO Sarah Friar shares five lessons for building an AI-native finance function, from automated forecasting to stronger controls and AI ROI.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8699999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.739751+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-15T04:30:30.739753+00:00"
+        "timestamp": "2026-08-15T08:28:21.922605+00:00"
       },
       "article_type": "article"
     },
@@ -425,7 +363,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.740193+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.920288+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -436,27 +374,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.740195+00:00"
+        "timestamp": "2026-08-15T08:28:21.920292+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "8ccaf6371595fc8cf2efe24a9e4baf2b",
-      "title": "Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/",
-      "published_date": "2026-08-13T15:56:07+00:00",
+      "article_id": "944339cba662446db18f1ce0a625e33c",
+      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/",
+      "published_date": "2026-08-06T15:00:00+00:00",
       "category": "Industry",
-      "description": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
-      "author": "Salman Moghal",
-      "content": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
+      "description": "GitHub Copilot and Azure are helping organizations modernize legacy applications, reduce technical debt, and prepare for AI innovation. The post Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools appeared first on Microsoft Azure Blog.",
+      "author": "Mike Hulme",
+      "content": "GitHub Copilot and Azure are helping organizations modernize legacy applications, reduce technical debt, and prepare for AI innovation. The post Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
         "overall_score": 0.8725,
-        "confidence_mean": 0.9
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -487,7 +425,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.740581+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.920572+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -498,7 +436,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.740583+00:00"
+        "timestamp": "2026-08-15T08:28:21.920575+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "acd6c9d4b06313ec10d90579ee1be0b5",
+      "title": "NVIDIA and Local AI Community Fuel Open Source Models and Intelligent Agents",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/local-ai-open-source-models-agents-nemotron/",
+      "published_date": "2026-08-11T13:00:25+00:00",
+      "category": "Industry",
+      "description": "The open source ecosystem is making it easier for AI enthusiasts and developers to build, customize and run increasingly capable agents locally. Throughout August, NVIDIA is celebrating the partners and open source communities moving local AI forward, along with the models, applications and tools emerging across the ecosystem. That includes NVIDIA’s latest open models, software […]",
+      "author": "NVIDIA Writers",
+      "content": "The open source ecosystem is making it easier for AI enthusiasts and developers to build, customize and run increasingly capable agents locally. Throughout August, NVIDIA is celebrating the partners and open source communities moving local AI forward, along with the models, applications and tools emerging across the ecosystem. That includes NVIDIA’s latest open models, software […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-15T08:28:21.921581+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-15T08:28:21.921583+00:00"
       },
       "article_type": "article"
     },
@@ -545,208 +545,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.95,
+        "score": 0.65,
+        "confidence": 0.6,
+        "recommendation": "REJECT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-15T08:28:21.923164+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5900000000000001,
+        "combined_confidence": 0.56,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-15T08:28:21.923167+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3888481df42191adffa0d3433726d7ba",
+      "title": "Vibe coding startup Lovable doubles valuation to $13.3B with $400M raise",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/08/12/vibe-coding-startup-lovable-doubles-valuation-13-3b-400m-raise/",
+      "published_date": "2026-08-12T22:33:15+00:00",
+      "category": "Industry",
+      "description": "Lovable Labs Inc. said today it has raised $400 million in Series C funding at a $13.3 billion valuation. The Swedish artificial intelligence coding startup was worth $6.6 billion in December. The company sells a vibe coding service. Users describe what they want in plain language and the platform builds it. Hosting is included. Chief […] The post Vibe coding startup Lovable doubles valuation to $13.3B with $400M raise appeared first on SiliconANGLE.",
+      "author": "Duncan Riley",
+      "content": "Lovable Labs Inc. said today it has raised $400 million in Series C funding at a $13.3 billion valuation. The Swedish artificial intelligence coding startup was worth $6.6 billion in December. The company sells a vibe coding service. Users describe what they want in plain language and the platform builds it. Hosting is included. Chief […] The post Vibe coding startup Lovable doubles valuation to $13.3B with $400M raise appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.8,
+        "overall_score": 0.85,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.743909+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.923245+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.743912+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a0fd0f2f7ba443574b62dcca4bb9269e",
-      "title": "‘Spooky’ Particles Transit DC Suburbs, a Step Toward a Quantum Network",
-      "source": "nist_ai_news",
-      "url": "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network",
-      "published_date": "2026-08-05T12:00:00+00:00",
-      "category": "Government",
-      "description": "The achievement shows that fragile quantum entanglement can survive even in tough, real-world conditions.",
-      "author": "Sarah Henderson",
-      "content": "The achievement shows that fragile quantum entanglement can survive even in tough, real-world conditions.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.8,
-        "novelty_score": 0.9,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.739064+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-15T04:30:30.739068+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "764052258094eb627489dadf9522ccfb",
-      "title": "Testing ads in ChatGPT",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/testing-ads-in-chatgpt",
-      "published_date": "2026-08-11T10:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-      "author": "",
-      "content": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.739591+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-15T04:30:30.739593+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "944339cba662446db18f1ce0a625e33c",
-      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/",
-      "published_date": "2026-08-06T15:00:00+00:00",
-      "category": "Industry",
-      "description": "GitHub Copilot and Azure are helping organizations modernize legacy applications, reduce technical debt, and prepare for AI innovation. The post Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools appeared first on Microsoft Azure Blog.",
-      "author": "Mike Hulme",
-      "content": "GitHub Copilot and Azure are helping organizations modernize legacy applications, reduce technical debt, and prepare for AI innovation. The post Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.95,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.740429+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-15T04:30:30.740431+00:00"
+        "timestamp": "2026-08-15T08:28:21.923248+00:00"
       },
       "article_type": "article"
     },
@@ -793,22 +669,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.95,
+        "score": 0.89,
+        "confidence": 0.93,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.743599+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.922846+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.77,
+        "weighted_score": 0.734,
+        "combined_confidence": 0.758,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.743602+00:00"
+        "timestamp": "2026-08-15T08:28:21.922849+00:00"
       },
       "article_type": "article"
     },
@@ -859,7 +735,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.738946+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.919048+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -870,7 +746,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.738979+00:00"
+        "timestamp": "2026-08-15T08:28:21.919062+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a0fd0f2f7ba443574b62dcca4bb9269e",
+      "title": "‘Spooky’ Particles Transit DC Suburbs, a Step Toward a Quantum Network",
+      "source": "nist_ai_news",
+      "url": "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network",
+      "published_date": "2026-08-05T12:00:00+00:00",
+      "category": "Government",
+      "description": "The achievement shows that fragile quantum entanglement can survive even in tough, real-world conditions.",
+      "author": "Sarah Henderson",
+      "content": "The achievement shows that fragile quantum entanglement can survive even in tough, real-world conditions.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.8,
+        "novelty_score": 0.9,
+        "impact_score": 0.8,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.8
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-15T08:28:21.919128+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-15T08:28:21.919133+00:00"
       },
       "article_type": "article"
     },
@@ -888,8 +826,8 @@
         "relevance_score": 0.8,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
+        "impact_score": 0.8,
+        "overall_score": 0.8250000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -921,7 +859,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-15T04:30:30.739211+00:00"
+        "consensus_timestamp": "2026-08-15T08:28:21.919281+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -932,7 +870,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-15T04:30:30.739214+00:00"
+        "timestamp": "2026-08-15T08:28:21.919285+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4a2c89052b8bbc1d3c55f74615dee7dc",
+      "title": "AWS Trainium Frontier competition: Co-design models and kernels on purpose-built AI chips",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/news/aws-trainium-frontier-competition-co-design-models-and-kernels-on-purpose-built-ai-chips",
+      "published_date": "2026-08-10T20:23:04+00:00",
+      "category": "Industry",
+      "description": "A competition with a finalist ceremony during NeurIPS 2026, challenging researchers to train language models from scratch on Trainium, exploring what optimal architectures look like when the hardware changes.",
+      "author": "",
+      "content": "A competition with a finalist ceremony during NeurIPS 2026, challenging researchers to train language models from scratch on Trainium, exploring what optimal architectures look like when the hardware changes.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.92,
+        "overall_score": 0.8265000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-15T08:28:21.923046+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-15T08:28:21.923048+00:00"
       },
       "article_type": "article"
     }
@@ -940,7 +940,7 @@
   "count": 15,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 185.9892840385437,
+    "processing_time": 219.4184718132019,
     "components": [
       "collection",
       "bulk_scoring",
@@ -958,10 +958,10 @@
       "research_papers": 0
     },
     "classification_metadata": {
-      "total_processed": 108,
+      "total_processed": 106,
       "candidates": {
-        "headlines": 12,
-        "articles": 96,
+        "headlines": 7,
+        "articles": 99,
         "research_papers": 0
       },
       "selected": {
