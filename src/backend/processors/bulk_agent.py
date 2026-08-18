@@ -155,11 +155,11 @@ class BulkFilteringAgent:
         self.cached_agent_variance = zlib.crc32(self.model_name.encode()) % 100 / 1000.0
         
         # Model-specific optimizations with cached delay values
-        if model_name == 'meta-llama/llama-4-scout-17b-16e-instruct':
+        if model_name.startswith('groq/compound'):
             self.safety_margin = 0.90
             self.inter_batch_delay = 5.0
             self.jitter_range = (0, 0.5)  # Cached jitter calculation
-        elif model_name == 'llama-3.1-8b-instant':
+        elif model_name.startswith('openai/gpt-oss') or model_name.startswith('qwen/'):
             self.safety_margin = 0.85
             self.inter_batch_delay = 4.0
             self.jitter_range = (0, 0.2)
@@ -230,12 +230,13 @@ class BulkFilteringAgent:
     def _get_model_limits(self, model_name: str) -> Dict[str, Any]:
         """Get model-specific rate limits from GROQ API documentation."""
         model_limits = {
-            'llama-3.1-8b-instant': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
-            'meta-llama/llama-4-scout-17b-16e-instruct': {'rpm': 30, 'tpm': 30000, 'daily_tokens': -1},
-            'llama-3.3-70b-versatile': {'rpm': 30, 'tpm': 12000, 'daily_tokens': 100000},
-            'deepseek-r1-distill-llama-70b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
-            'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
-            'mistral-saba-24b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
+            'openai/gpt-oss-120b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'openai/gpt-oss-20b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'openai/gpt-oss-safeguard-20b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'qwen/qwen3.6-27b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'groq/compound': {'rpm': 30, 'tpm': 70000, 'daily_tokens': -1},
+            'groq/compound-mini': {'rpm': 30, 'tpm': 70000, 'daily_tokens': -1},
+            'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
         }
         
         # Default limits for unknown models

@@ -26,16 +26,17 @@ pipeline:
     max_processing_time_minutes: 15
     enable_error_recovery: true
     bulk_intelligence_models:
-      - llama-3.1-8b-instant
-      - meta-llama/llama-4-scout-17b-16e-instruct
+      - openai/gpt-oss-20b
+      - qwen/qwen3.6-27b
+      - openai/gpt-oss-120b
     deep_intelligence_models:
-      - meta-llama/llama-4-scout-17b-16e-instruct
-      - llama-3.3-70b-versatile
-    consensus_model: meta-llama/llama-4-maverick-17b-128e-instruct
+      - openai/gpt-oss-120b
+      - qwen/qwen3.6-27b
+    consensus_model: openai/gpt-oss-120b
   legacy_fallback:
     enabled: true
     stage1:
-      model: meta-llama/llama-4-scout-17b-16e-instruct
+      model: openai/gpt-oss-20b
       target_pass_rate: 0.65
       time_budget_minutes: 15
       batch_size: 5
@@ -60,19 +61,19 @@ pipeline:
         title_max_length: 100
         description_max_length: 200
     stage2:
-      model: llama-3.1-8b-instant
+      model: qwen/qwen3.6-27b
       target_pass_rate: 0.30
       time_budget_minutes: 8
       max_requests_per_cycle: 25
       batch_size: 10
     stage3:
-      model: llama-3.1-8b-instant
+      model: qwen/qwen3.6-27b
       target_pass_rate: 0.35
       time_budget_minutes: 10
       max_requests_per_cycle: 15
       batch_size: 4
     stage4:
-      model: meta-llama/llama-4-maverick-17b-128e-instruct
+      model: openai/gpt-oss-120b
       final_count: 25
       time_budget_minutes: 20
       max_requests_per_cycle: 25

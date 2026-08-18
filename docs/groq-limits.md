@@ -1,94 +1,76 @@
-# GROQ LLM API Rate Limits Reference
+# GROQ API Rate Limits Reference
 
-This document outlines the rate limits for various Language Model APIs and services offered by GROQ.
+Current limits for the account backing `GROQ_API_KEY`. Every model the pipeline
+references must appear in this list — a model that is not here has been
+decommissioned, and calls against it fail silently, causing the pipeline to
+reject every article that agent was assigned.
 
-## Chat Completion Models
+## Chat Completions
 
-### High-Performance Models
+| Model | RPM | Requests/day | TPM | Tokens/day |
+|---|---|---|---|---|
+| `allam-2-7b` | 30 | 7K | 6K | 500K |
+| `groq/compound` | 30 | 250 | 70K | No limit |
+| `groq/compound-mini` | 30 | 250 | 70K | No limit |
+| `meta-llama/llama-prompt-guard-2-22m` | 30 | 14.4K | 15K | 500K |
+| `meta-llama/llama-prompt-guard-2-86m` | 30 | 14.4K | 15K | 500K |
+| `openai/gpt-oss-120b` | 30 | 1K | 8K | 200K |
+| `openai/gpt-oss-20b` | 30 | 1K | 8K | 200K |
+| `openai/gpt-oss-safeguard-20b` | 30 | 1K | 8K | 200K |
+| `qwen/qwen3.6-27b` | 30 | 1K | 8K | 200K |
 
-**Large Parameter Models**
-- **deepseek-r1-distill-llama-70b**: 30 requests/minute, 1,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
-- **llama-3.3-70b-versatile**: 30 requests/minute, 1,000 requests/day, 12,000 tokens/minute, 100,000 tokens/day
+### Which of these the pipeline can actually use
 
-### Standard Models
+- **`openai/gpt-oss-20b`, `openai/gpt-oss-120b`, `qwen/qwen3.6-27b`** — general
+  chat models with JSON mode. These carry the bulk and deep intelligence swarms.
+- **`openai/gpt-oss-safeguard-20b`** — safety classification, not general
+  scoring. Not used.
+- **`meta-llama/llama-prompt-guard-2-*`** — prompt-injection classifiers, not
+  chat models. Cannot produce scoring JSON.
+- **`allam-2-7b`** — Arabic-centric. Large daily budget (500K) but a quality
+  risk for English AI news scoring. Held in reserve.
+- **`groq/compound` / `compound-mini`** — agentic systems with built-in tool
+  use. Unlimited daily tokens would suit bulk scoring, but JSON-mode support is
+  unverified. Not used.
 
-**Llama Family**
-- **llama-3.1-8b-instant**: 30 requests/minute, 14,400 requests/day, 6,000 tokens/minute, 500,000 tokens/day
+## Daily token budget
 
-**Specialized Models**
-- **allam-2-7b**: 30 requests/minute, 7,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
-- **mistral-saba-24b**: 30 requests/minute, 1,000 requests/day, 6,000 tokens/minute, 500,000 tokens/day
+The bulk swarm scores every collected article (~630/run). Measured cost is
+~43 input tokens per article plus a ~460-token system prompt per batch, and
+~45 output tokens per article — roughly **27K tokens per agent per run**.
 
-### Experimental Models
+At 6 runs/day (`cron: 0 */4 * * *`) that is ~160K/day per bulk agent against a
+200K/day cap, before deep intelligence is counted. Two agents also serve the
+deep intelligence swarm, which pushes them over. See the note in
+`.github/workflows/collect-news.yml` on run frequency.
 
-**Llama 4 Series**
-- **meta-llama/llama-4-maverick-17b-128e-instruct**: 30 requests/minute, 1,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
-- **meta-llama/llama-4-scout-17b-16e-instruct**: 30 requests/minute, 1,000 requests/day, 30,000 tokens/minute, unlimited daily tokens
+## Decommissioned Models
 
-**Qwen Models**
-- **qwen-qwq-32b**: 30 requests/minute, 1,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
-- **qwen/qwen3-32b**: 60 requests/minute, 1,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
+Retired from this account. Do not reference them in `swarm.yaml` or `app.yaml`.
 
-### Safety and Guard Models
+| Retired model | Replacement used here |
+|---|---|
+| `gemma2-9b-it` | `openai/gpt-oss-20b` |
+| `llama3-8b-8192` | `openai/gpt-oss-20b` |
+| `llama-3.1-8b-instant` | `qwen/qwen3.6-27b` |
+| `llama3-70b-8192` | `openai/gpt-oss-120b` |
+| `llama-3.3-70b-versatile` | `openai/gpt-oss-120b` |
+| `meta-llama/llama-4-scout-17b-16e-instruct` | `openai/gpt-oss-120b` |
+| `meta-llama/llama-4-maverick-17b-128e-instruct` | `openai/gpt-oss-120b` |
 
-**Meta Guard Models**
-- **llama-guard-3-8b**: 30 requests/minute, 14,400 requests/day, 15,000 tokens/minute, 500,000 tokens/day
-- **meta-llama/llama-guard-4-12b**: 30 requests/minute, 14,400 requests/day, 15,000 tokens/minute, 500,000 tokens/day
-
-**Prompt Guard Models**
-- **meta-llama/llama-prompt-guard-2-22m**: 30 requests/minute, 14,400 requests/day, 15,000 tokens/minute, unlimited daily tokens
-- **meta-llama/llama-prompt-guard-2-86m**: 30 requests/minute, 14,400 requests/day, 15,000 tokens/minute, unlimited daily tokens
+See https://console.groq.com/docs/deprecations for the current list.
 
 ## Speech Services
 
 ### Speech To Text
-
-All speech-to-text models share the same rate limits:
 - **Requests**: 20 per minute, 2,000 per day
 - **Audio Processing**: 7,200 seconds per hour, 28,800 seconds per day
-
-**Available Models:**
-- **distil-whisper-large-v3-en**: English-optimized Whisper model
-- **whisper-large-v3**: Standard Whisper large model
-- **whisper-large-v3-turbo**: Faster Whisper variant
+- Models: `distil-whisper-large-v3-en`, `whisper-large-v3`, `whisper-large-v3-turbo`
 
 ### Text To Speech
-
-All text-to-speech models share the same rate limits:
 - **Requests**: 10 per minute, 100 per day
 - **Tokens**: 1,200 per minute, 3,600 per day
-
-**Available Models:**
-- **playai-tts**: Standard text-to-speech
-- **playai-tts-arabic**: Arabic language support
-
-## Usage Guidelines
-
-### Planning Your Usage
-- Monitor both request and token limits to avoid hitting quotas
-- Consider using faster models for development and testing
-- Reserve high-capacity models for production workloads
-
-### Rate Limit Considerations
-- Models with unlimited daily tokens are better for batch processing
-- Higher requests-per-minute limits support real-time applications
-- Speech services have lower limits and should be used judiciously
-
-### Model Selection Tips
-- Consider token limits when processing large documents
-
-## Decommissioned Models
-
-Do not reference these in `swarm.yaml` or `app.yaml` - calls against them fail, and
-the pipeline silently rejects every article the dead agent was assigned.
-
-| Retired model | Replacement |
-|---|---|
-| `llama3-8b-8192` | `llama-3.1-8b-instant` |
-| `llama3-70b-8192` | `llama-3.3-70b-versatile` |
-| `gemma2-9b-it` | `llama-3.1-8b-instant` |
-
-See https://console.groq.com/docs/deprecations for the current list.
+- Models: `playai-tts`, `playai-tts-arabic`
 
 ---
 Last updated : August 18 2026

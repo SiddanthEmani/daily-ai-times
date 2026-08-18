@@ -65,10 +65,13 @@ class GroqUsageTracker:
         
         # Groq pricing (as of 2025) - approximate values
         self.pricing = {
-            'llama-3.1-8b-instant': {'input': 0.00000010, 'output': 0.00000010},
-            'meta-llama/llama-4-scout-17b-16e-instruct': {'input': 0.00000011, 'output': 0.00000034},
-            'llama-3.3-70b-versatile': {'input': 0.00000059, 'output': 0.00000079},
-            'deepseek-r1-distill-llama-70b': {'input': 0.00000059, 'output': 0.00000079},
+            'openai/gpt-oss-20b': {'input': 0.00000010, 'output': 0.00000050},
+            'openai/gpt-oss-120b': {'input': 0.00000015, 'output': 0.00000075},
+            'openai/gpt-oss-safeguard-20b': {'input': 0.00000010, 'output': 0.00000050},
+            'qwen/qwen3.6-27b': {'input': 0.00000029, 'output': 0.00000059},
+            'groq/compound': {'input': 0.00000015, 'output': 0.00000075},
+            'groq/compound-mini': {'input': 0.00000010, 'output': 0.00000050},
+            'allam-2-7b': {'input': 0.00000010, 'output': 0.00000010},
             'default': {'input': 0.00000050, 'output': 0.00000050}  # Default fallback
         }
     
@@ -232,12 +235,13 @@ class GroqUsageTracker:
         
         # Model-specific limits (from groq-limits.md - updated July 2025)
         model_limits = {
-            'llama-3.1-8b-instant': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
-            'meta-llama/llama-4-scout-17b-16e-instruct': {'rpm': 30, 'tpm': 30000, 'daily_tokens': -1},
-            'llama-3.3-70b-versatile': {'rpm': 30, 'tpm': 12000, 'daily_tokens': 100000},
-            'deepseek-r1-distill-llama-70b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
-            'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
-            'mistral-saba-24b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
+            'openai/gpt-oss-120b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'openai/gpt-oss-20b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'openai/gpt-oss-safeguard-20b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'qwen/qwen3.6-27b': {'rpm': 30, 'tpm': 8000, 'daily_tokens': 200000},
+            'groq/compound': {'rpm': 30, 'tpm': 70000, 'daily_tokens': -1},
+            'groq/compound-mini': {'rpm': 30, 'tpm': 70000, 'daily_tokens': -1},
+            'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
         }
         
         limits = model_limits.get(primary_model, {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000})

@@ -81,23 +81,23 @@ class DeepIntelligenceAgent:
         
         # Model-specific limits from groq-limits.md
         model_limits = {
-            "meta-llama/llama-4-scout-17b-16e-instruct": {
-                "rpm": 30, "tokens_per_minute": 30000, "daily_requests": 1000
+            "openai/gpt-oss-120b": {
+                "rpm": 30, "tokens_per_minute": 8000, "daily_requests": 1000
             },
-            "meta-llama/llama-4-maverick-17b-128e-instruct": {
-                "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 1000
+            "openai/gpt-oss-20b": {
+                "rpm": 30, "tokens_per_minute": 8000, "daily_requests": 1000
             },
-            "llama-3.3-70b-versatile": {
-                "rpm": 30, "tokens_per_minute": 12000, "daily_requests": 1000
+            "openai/gpt-oss-safeguard-20b": {
+                "rpm": 30, "tokens_per_minute": 8000, "daily_requests": 1000
             },
-            "llama-3.1-8b-instant": {
-                "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 14400
+            "qwen/qwen3.6-27b": {
+                "rpm": 30, "tokens_per_minute": 8000, "daily_requests": 1000
             },
-            "qwen/qwen3-32b": {
-                "rpm": 60, "tokens_per_minute": 6000, "daily_requests": 1000
+            "groq/compound": {
+                "rpm": 30, "tokens_per_minute": 70000, "daily_requests": 250
             },
-            "qwen-qwq-32b": {
-                "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 1000
+            "groq/compound-mini": {
+                "rpm": 30, "tokens_per_minute": 70000, "daily_requests": 250
             }
         }
         

@@ -40,12 +40,13 @@ logger = logging.getLogger(__name__)
 
 # Constants for model TPM limits and processing delays
 MODEL_TPM_LIMITS = {
-    'meta-llama/llama-4-scout-17b-16e-instruct': 30000,
-    'meta-llama/llama-4-maverick-17b-128e-instruct': 6000,
-    'llama-3.3-70b-versatile': 12000,
-    'qwen/qwen3-32b': 6000,
-    'qwen-qwq-32b': 6000,
-    'llama-3.1-8b-instant': 6000
+    'openai/gpt-oss-120b': 8000,
+    'openai/gpt-oss-20b': 8000,
+    'openai/gpt-oss-safeguard-20b': 8000,
+    'qwen/qwen3.6-27b': 8000,
+    'groq/compound': 70000,
+    'groq/compound-mini': 70000,
+    'allam-2-7b': 6000
 }
 
 SUPPRESSED_LOGGERS = [
@@ -429,13 +430,10 @@ class NewsProcessingPipeline:
         """Get delay and timeout settings for agent based on TPM limits."""
         agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
         
-        # Fixed timeout logic: Higher capacity models get longer timeouts
-        if 'llama-4-scout' in agent_name:
-            return 1.5, 60.0  # 30K TPM → longest timeout for highest capacity
-        elif agent_name == 'llama-3.3-70b-versatile':
-            return 2.0, 45.0  # 12K TPM → medium timeout
-        elif agent_name == 'qwen/qwen3-32b':
-            return 1.0, 30.0  # 6K TPM → shorter timeout but still reasonable
+        # Higher capacity models get longer timeouts. Keyed on TPM rather than
+        # model name so a roster change cannot silently fall through to defaults.
+        if agent_tpm >= 30000:
+            return 1.5, 60.0  # Highest capacity
         elif agent_tpm >= 15000:
             return 1.5, 45.0  # High capacity models get longer timeouts
         elif agent_tpm >= 12000:
@@ -630,31 +628,20 @@ class NewsProcessingPipeline:
         num_articles = len(articles)
         
         # Get the slowest agent (determines overall timeout)
-        # Based on token limits: Scout (30k) > Versatile (12k) > Qwen (6k)
         slowest_agent_time = 0.0
         
         for agent_name in self.deep_intelligence_agents.keys():
-            if 'llama-4-scout' in agent_name.lower():
-                # High capacity: ~3 batches/min, batch size 15
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 14) // 15  # 15 per batch
-                time_needed = batches_needed * 20.0  # 20 seconds per batch
-            elif 'llama-3.3-70b-versatile' in agent_name.lower():
-                # Medium capacity: ~1 batch/min, batch size 8
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 7) // 8   # 8 per batch
-                time_needed = batches_needed * 60.0  # 60 seconds per batch
-            elif 'qwen' in agent_name.lower():
-                # Low capacity: ~0.6 batches/min, batch size 3
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 2) // 3   # 3 per batch
-                time_needed = batches_needed * 100.0  # 100 seconds per batch
+            # Derive throughput from the agent's TPM budget rather than its name.
+            agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
+            if agent_tpm >= 30000:
+                batch, seconds_per_batch = 15, 20.0
+            elif agent_tpm >= 12000:
+                batch, seconds_per_batch = 8, 60.0
             else:
-                # Default conservative estimate
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 4) // 5   # 5 per batch
-                time_needed = batches_needed * 45.0  # 45 seconds per batch
-            
+                batch, seconds_per_batch = 3, 100.0
+            articles_for_agent = num_articles // len(self.deep_intelligence_agents)
+            batches_needed = (articles_for_agent + batch - 1) // batch
+            time_needed = batches_needed * seconds_per_batch
             slowest_agent_time = max(slowest_agent_time, time_needed)
         
         # Add 50% buffer and ensure reasonable bounds
