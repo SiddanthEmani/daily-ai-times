@@ -43,12 +43,9 @@ MODEL_TPM_LIMITS = {
     'meta-llama/llama-4-scout-17b-16e-instruct': 30000,
     'meta-llama/llama-4-maverick-17b-128e-instruct': 6000,
     'llama-3.3-70b-versatile': 12000,
-    'llama3-70b-8192': 6000,
     'qwen/qwen3-32b': 6000,
     'qwen-qwq-32b': 6000,
-    'gemma2-9b-it': 15000,
-    'llama-3.1-8b-instant': 6000,
-    'llama3-8b-8192': 6000
+    'llama-3.1-8b-instant': 6000
 }
 
 SUPPRESSED_LOGGERS = [
@@ -66,16 +63,17 @@ def suppress_logging():
     original_handler_levels = [handler.level for handler in root_logger.handlers]
     original_levels = {}
     
-    # Suppress root logger and handlers
+    # Quiet down INFO/DEBUG chatter so the progress bars stay readable, but keep
+    # WARNING and above: agent API failures must never be invisible.
     for handler in root_logger.handlers:
-        handler.setLevel(logging.CRITICAL + 1)
-    root_logger.setLevel(logging.CRITICAL + 1)
+        handler.setLevel(logging.WARNING)
+    root_logger.setLevel(logging.WARNING)
     
     # Suppress specific loggers
     for logger_name in SUPPRESSED_LOGGERS:
         log_instance = logging.getLogger(logger_name)
         original_levels[logger_name] = log_instance.level
-        log_instance.setLevel(logging.CRITICAL + 1)
+        log_instance.setLevel(logging.WARNING)
     
     try:
         yield
@@ -148,6 +146,17 @@ class NewsProcessingPipeline:
             'issue_number': issue_number,
         }
     
+    @staticmethod
+    def _published_article_count() -> int:
+        """Number of articles in the currently published latest.json (0 if unreadable)."""
+        project_root = Path(__file__).parent.parent.parent
+        published = project_root / "src" / "frontend" / "api" / "latest.json"
+        try:
+            with open(published, 'r', encoding='utf-8') as f:
+                return len(json.load(f).get('articles', []))
+        except (FileNotFoundError, json.JSONDecodeError, AttributeError, TypeError):
+            return 0
+
     @staticmethod
     def _create_progress_bar(description: str, total: int, transient: bool = True) -> Progress:
         """Create a standardized progress bar configuration."""
@@ -346,6 +355,25 @@ class NewsProcessingPipeline:
         total_accepted = sum(sum(1 for _, accepted, _ in results if accepted) for results in agent_results.values())
         total_processed = sum(len(results) for results in agent_results.values())
         logger.info(f"Distributed bulk intelligence complete: {total_processed} articles processed, {total_accepted} accepted")
+        
+        # Report per-agent scoring health. An agent that returns no real scores is
+        # not "strict" - it is broken (decommissioned model, bad key, rate limited),
+        # and every article it was handed is silently rejected downstream.
+        for agent_name, results in agent_results.items():
+            scored = sum(1 for article, _, _ in results if 'multi_dimensional_score' in article)
+            accepted = sum(1 for _, accepted, _ in results if accepted)
+            if results and scored == 0:
+                logger.error(
+                    f"Agent {agent_name} scored 0 of {len(results)} assigned articles - "
+                    f"every one was rejected by default. Check that the model is still "
+                    f"available on Groq and that GROQ_API_KEY is valid.")
+            else:
+                logger.info(f"Agent {agent_name}: {scored}/{len(results)} scored, {accepted} accepted")
+        
+        if total_processed and total_accepted == 0:
+            logger.error(
+                f"No article out of {total_processed} was accepted by any bulk agent. "
+                f"This is a pipeline failure, not an empty news day.")
         
         self._save_bulk_agent_results(agent_results, articles)
         return agent_results
@@ -1202,6 +1230,16 @@ class NewsProcessingPipeline:
             
             # **FIX**: Normalize articles for frontend compatibility
             normalized_articles = self._normalize_articles_for_frontend(all_articles, classified_content)
+            
+            # Never replace a good edition with an empty one. A run that yields no
+            # articles is a pipeline failure (dead model, rate limiting, API outage),
+            # not a legitimately empty news day - publishing it takes the site down.
+            if not normalized_articles and self._published_article_count() > 0:
+                logger.error(
+                    "Refusing to publish an empty edition: pipeline produced 0 articles "
+                    "but the live latest.json still has %d. Keeping the existing edition.",
+                    self._published_article_count())
+                return False
             
             # Create main API response
             api_response = {

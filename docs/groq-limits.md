@@ -9,16 +9,11 @@ This document outlines the rate limits for various Language Model APIs and servi
 **Large Parameter Models**
 - **deepseek-r1-distill-llama-70b**: 30 requests/minute, 1,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
 - **llama-3.3-70b-versatile**: 30 requests/minute, 1,000 requests/day, 12,000 tokens/minute, 100,000 tokens/day
-- **llama3-70b-8192**: 30 requests/minute, 14,400 requests/day, 6,000 tokens/minute, 500,000 tokens/day
 
 ### Standard Models
 
 **Llama Family**
 - **llama-3.1-8b-instant**: 30 requests/minute, 14,400 requests/day, 6,000 tokens/minute, 500,000 tokens/day
-- **llama3-8b-8192**: 30 requests/minute, 14,400 requests/day, 6,000 tokens/minute, 500,000 tokens/day
-
-**Gemma Models**
-- **gemma2-9b-it**: 30 requests/minute, 14,400 requests/day, 15,000 tokens/minute, 500,000 tokens/day
 
 **Specialized Models**
 - **allam-2-7b**: 30 requests/minute, 7,000 requests/day, 6,000 tokens/minute, unlimited daily tokens
@@ -82,5 +77,18 @@ All text-to-speech models share the same rate limits:
 ### Model Selection Tips
 - Consider token limits when processing large documents
 
+## Decommissioned Models
+
+Do not reference these in `swarm.yaml` or `app.yaml` - calls against them fail, and
+the pipeline silently rejects every article the dead agent was assigned.
+
+| Retired model | Replacement |
+|---|---|
+| `llama3-8b-8192` | `llama-3.1-8b-instant` |
+| `llama3-70b-8192` | `llama-3.3-70b-versatile` |
+| `gemma2-9b-it` | `llama-3.1-8b-instant` |
+
+See https://console.groq.com/docs/deprecations for the current list.
+
 ---
-Last updated : June 19 2025
+Last updated : August 18 2026

@@ -90,17 +90,8 @@ class DeepIntelligenceAgent:
             "llama-3.3-70b-versatile": {
                 "rpm": 30, "tokens_per_minute": 12000, "daily_requests": 1000
             },
-            "llama3-70b-8192": {
-                "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 14400
-            },
             "llama-3.1-8b-instant": {
                 "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 14400
-            },
-            "llama3-8b-8192": {
-                "rpm": 30, "tokens_per_minute": 6000, "daily_requests": 14400
-            },
-            "gemma2-9b-it": {
-                "rpm": 30, "tokens_per_minute": 15000, "daily_requests": 14400
             },
             "qwen/qwen3-32b": {
                 "rpm": 60, "tokens_per_minute": 6000, "daily_requests": 1000

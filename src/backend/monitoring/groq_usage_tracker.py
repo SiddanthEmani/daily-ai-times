@@ -65,11 +65,10 @@ class GroqUsageTracker:
         
         # Groq pricing (as of 2025) - approximate values
         self.pricing = {
-            'gemma2-9b-it': {'input': 0.00000027, 'output': 0.00000027},  # $0.27 per 1M tokens
-            'llama3-8b-8192': {'input': 0.00000010, 'output': 0.00000010},  # $0.10 per 1M tokens
             'llama-3.1-8b-instant': {'input': 0.00000010, 'output': 0.00000010},
-            'llama3-70b-8192': {'input': 0.00000059, 'output': 0.00000079},  # $0.59/$0.79 per 1M tokens
-            'deepseek-r1-distill-llama-70b': {'input': 0.00000059, 'output': 0.00000079},  # Similar to llama3-70b-8192
+            'meta-llama/llama-4-scout-17b-16e-instruct': {'input': 0.00000011, 'output': 0.00000034},
+            'llama-3.3-70b-versatile': {'input': 0.00000059, 'output': 0.00000079},
+            'deepseek-r1-distill-llama-70b': {'input': 0.00000059, 'output': 0.00000079},
             'default': {'input': 0.00000050, 'output': 0.00000050}  # Default fallback
         }
     
@@ -233,10 +232,8 @@ class GroqUsageTracker:
         
         # Model-specific limits (from groq-limits.md - updated July 2025)
         model_limits = {
-            'gemma2-9b-it': {'rpm': 30, 'tpm': 15000, 'daily_tokens': 500000},
-            'llama3-8b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
             'llama-3.1-8b-instant': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
-            'llama3-70b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
+            'meta-llama/llama-4-scout-17b-16e-instruct': {'rpm': 30, 'tpm': 30000, 'daily_tokens': -1},
             'llama-3.3-70b-versatile': {'rpm': 30, 'tpm': 12000, 'daily_tokens': 100000},
             'deepseek-r1-distill-llama-70b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
             'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},

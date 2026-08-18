@@ -142,6 +142,15 @@ jobs:
             echo "✅ Processed $article_count articles with $pipeline_version"
             echo "📅 Generated at: $generated_at"
             echo "⏱️ Processing time: ${processing_time}s"
+
+            # A run that publishes zero articles is a failure, not a success.
+            # Reporting it green is what let the paper sit broken for three runs.
+            if [ "$article_count" -eq 0 ]; then
+              echo "::error::Pipeline produced 0 articles - the published edition would be empty."
+              echo "Check the per-agent scoring lines above: an agent reporting 0 scored articles"
+              echo "usually means its Groq model was decommissioned or GROQ_API_KEY is invalid."
+              exit 1
+            fi
           else
             echo "❌ Missing required output files"
             ls -la src/frontend/api/ test_output/ || true

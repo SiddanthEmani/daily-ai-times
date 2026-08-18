@@ -39,7 +39,7 @@ Key Benefits:
 9. OPTIMIZED: Faster initialization and processing with cached calculations
 """
 
-import os, logging, asyncio, time, random, json, re
+import os, logging, asyncio, time, random, json, re, zlib
 from typing import Dict, List, Optional, Any, Tuple
 from pydantic import BaseModel, Field
 from groq import AsyncGroq
@@ -148,15 +148,18 @@ class BulkFilteringAgent:
         self.requests_per_minute = self.model_limits['rpm']
         self.daily_tokens_limit = self.model_limits['daily_tokens']
         
-        # OPTIMIZED: Pre-calculate agent variance (used in _get_default_scores)
-        self.cached_agent_variance = hash(self.model_name) % 100 / 1000.0
+        # Pre-calculate agent variance (used in _get_default_scores).
+        # Must use a stable hash: Python randomizes str.__hash__ per process, so
+        # hash() here made the default scores - and therefore whether unscored
+        # articles cleared the 0.5 decision threshold - differ between runs.
+        self.cached_agent_variance = zlib.crc32(self.model_name.encode()) % 100 / 1000.0
         
         # Model-specific optimizations with cached delay values
-        if model_name == 'gemma2-9b-it':
+        if model_name == 'meta-llama/llama-4-scout-17b-16e-instruct':
             self.safety_margin = 0.90
             self.inter_batch_delay = 5.0
             self.jitter_range = (0, 0.5)  # Cached jitter calculation
-        elif model_name in ['llama3-8b-8192', 'llama-3.1-8b-instant']:
+        elif model_name == 'llama-3.1-8b-instant':
             self.safety_margin = 0.85
             self.inter_batch_delay = 4.0
             self.jitter_range = (0, 0.2)
@@ -227,10 +230,8 @@ class BulkFilteringAgent:
     def _get_model_limits(self, model_name: str) -> Dict[str, Any]:
         """Get model-specific rate limits from GROQ API documentation."""
         model_limits = {
-            'gemma2-9b-it': {'rpm': 30, 'tpm': 15000, 'daily_tokens': 500000},
-            'llama3-8b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
             'llama-3.1-8b-instant': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
-            'llama3-70b-8192': {'rpm': 30, 'tpm': 6000, 'daily_tokens': 500000},
+            'meta-llama/llama-4-scout-17b-16e-instruct': {'rpm': 30, 'tpm': 30000, 'daily_tokens': -1},
             'llama-3.3-70b-versatile': {'rpm': 30, 'tpm': 12000, 'daily_tokens': 100000},
             'deepseek-r1-distill-llama-70b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
             'allam-2-7b': {'rpm': 30, 'tpm': 6000, 'daily_tokens': -1},
@@ -247,12 +248,7 @@ class BulkFilteringAgent:
     def _calculate_optimal_batch_size(self) -> int:
         """Calculate optimal batch size based on model-specific token limits - SPEED OPTIMIZED."""
         # Model-specific optimizations - MAXIMIZED for GitHub Actions speed
-        if self.model_name == 'gemma2-9b-it':
-            # Gemma2 has issues with large batches in JSON mode - limit to smaller, reliable batches
-            # The model tends to only return 10 scores regardless of batch size, so keep it manageable
-            return 10  # Fixed batch size that the model can reliably handle
-        
-        elif self.tokens_per_minute_limit <= 6000:
+        if self.tokens_per_minute_limit <= 6000:
             # 6k token/min models - larger batches for speed
             max_tokens_per_batch = int(self.tokens_per_minute_limit * 0.90 / 10)  # 10 batches per minute
             optimal_size = max_tokens_per_batch // self.estimated_tokens_per_article
@@ -390,13 +386,8 @@ Required JSON format:
     }"""
             
         if article_count > 2:
-            # Model-specific instructions for handling larger batches
-            if self.model_name == 'gemma2-9b-it':
-                base_prompt += f"""
+            base_prompt += f"""
     ... (continue this pattern for ALL {article_count} articles - do not stop until you have {article_count} complete entries)"""
-            else:
-                base_prompt += f"""
-    ... (continue for all {article_count} articles)"""
         
         base_prompt += """
   ]
@@ -404,9 +395,7 @@ Required JSON format:
 
 IMPORTANT: The "articles" array must contain EXACTLY """ + str(article_count) + """ entries, one for each article provided."""
         
-        # Model-specific additional instructions (only where genuinely needed)
-        if self.model_name == 'gemma2-9b-it':
-            base_prompt += f"""
+        base_prompt += f"""
 
 MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "articles" array. Count them: 1, 2, 3... up to {article_count}."""
         
@@ -586,12 +575,9 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         start_time = time.time()
 
         try:
-            # Model-specific token limits
-            if self.model_name == 'gemma2-9b-it':
-                # Give gemma2 more tokens to complete the JSON response properly
-                max_tokens = min(len(messages[1]['content'].split()) * 3, 2000)  # More generous limit
-            else:
-                max_tokens = min(self.max_tokens_per_article * 20, 1000)
+            # Allow enough output budget for the full JSON array of per-article scores.
+            max_tokens = max(min(len(messages[1]['content'].split()) * 3, 2000),
+                             min(self.max_tokens_per_article * 20, 1000))
                 
             # Use Groq's JSON mode for guaranteed structured output
             completion = await self.groq_client.chat.completions.create(
@@ -652,11 +638,11 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
             return None
             
         except groq.APIStatusError as e:
-            # Special handling for gemma2-9b-it JSON validation errors
-            if self.model_name == 'gemma2-9b-it' and e.status_code == 400:
+            # Salvage scores from Groq JSON-mode validation failures (HTTP 400).
+            if e.status_code == 400:
                 error_details = str(e)
                 if 'json_validate_failed' in error_details and 'failed_generation' in error_details:
-                    logger.warning(f"gemma2-9b-it JSON validation failed, attempting to extract scores from failed generation")
+                    logger.warning(f"{self.model_name} JSON validation failed, attempting to extract scores from failed generation")
                     
                     # Try to extract the failed generation JSON
                     try:

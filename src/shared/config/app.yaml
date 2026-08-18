@@ -27,8 +27,7 @@ pipeline:
     enable_error_recovery: true
     bulk_intelligence_models:
       - llama-3.1-8b-instant
-      - gemma2-9b-it
-      - llama3-8b-8192
+      - meta-llama/llama-4-scout-17b-16e-instruct
     deep_intelligence_models:
       - meta-llama/llama-4-scout-17b-16e-instruct
       - llama-3.3-70b-versatile
@@ -61,7 +60,7 @@ pipeline:
         title_max_length: 100
         description_max_length: 200
     stage2:
-      model: gemma2-9b-it
+      model: llama-3.1-8b-instant
       target_pass_rate: 0.30
       time_budget_minutes: 8
       max_requests_per_cycle: 25
