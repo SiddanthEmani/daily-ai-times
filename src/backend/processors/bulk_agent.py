@@ -461,7 +461,14 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
             # Ensure we have exactly the right number of scores
             scores_to_use = batch_response.articles[:len(articles)]
             
-            # Pad with default scores if needed
+            # Pad with default scores if needed. Default scores sit below the
+            # decision threshold, so every padded article is rejected - say so
+            # rather than letting a short response quietly shrink the paper.
+            if len(scores_to_use) < len(articles):
+                logger.warning(
+                    f"{self.model_name} returned {len(scores_to_use)} scores for "
+                    f"{len(articles)} articles; padding {len(articles) - len(scores_to_use)} "
+                    f"with defaults, which will be rejected")
             while len(scores_to_use) < len(articles):
                 defaults = self._get_default_scores()
                 default_score = ArticleScores(**defaults)
@@ -576,20 +583,31 @@ MANDATORY REQUIREMENT: Return exactly {article_count} score objects in the "arti
         start_time = time.time()
 
         try:
-            # Allow enough output budget for the full JSON array of per-article scores.
-            max_tokens = max(min(len(messages[1]['content'].split()) * 3, 2000),
-                             min(self.max_tokens_per_article * 20, 1000))
-                
-            # Use Groq's JSON mode for guaranteed structured output
-            completion = await self.groq_client.chat.completions.create(
-                model=self.model_name,
-                messages=messages,  # type: ignore
-                temperature=self.temperature,
-                top_p=self.top_p,
-                max_tokens=max_tokens,
-                response_format={"type": "json_object"},  # Enable JSON mode
-                stream=False
-            )
+            # Budget the completion for the whole JSON array, not a fixed cap.
+            # Every model on the current roster is a reasoning model: reasoning
+            # tokens are drawn from the completion budget before any JSON is
+            # emitted, so a cap sized only for the answer truncates mid-array and
+            # Groq rejects the call with json_validate_failed. One line of user
+            # content per article, ~90 tokens of JSON each, plus reasoning
+            # headroom.
+            articles_in_batch = messages[1]['content'].count('\n') + 1
+            max_tokens = min(8000, articles_in_batch * 90 + 1500)
+
+            request_kwargs = {
+                'model': self.model_name,
+                'messages': messages,
+                'temperature': self.temperature,
+                'top_p': self.top_p,
+                'max_tokens': max_tokens,
+                'response_format': {"type": "json_object"},  # Enable JSON mode
+                'stream': False,
+            }
+            # Only the gpt-oss models accept reasoning_effort. Keeping it low
+            # leaves the budget for the scores themselves and cuts latency.
+            if self.model_name.startswith('openai/gpt-oss'):
+                request_kwargs['reasoning_effort'] = 'low'
+
+            completion = await self.groq_client.chat.completions.create(**request_kwargs)  # type: ignore
             
             processing_time = time.time() - start_time
             

@@ -24,7 +24,10 @@ agents:
         tokens_per_minute: 8000
         tokens_per_day: 200000
         specialization: relevance_scoring
-        batch_size: 12
+        # Smaller batches than the gpt-oss agents: qwen reasons before
+        # answering and has no reasoning_effort control on Groq, so it needs a
+        # larger share of the completion budget for thinking per request.
+        batch_size: 8
         consensus_weight: 0.35
         fallback_agents:
           - openai/gpt-oss-20b
