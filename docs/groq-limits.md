@@ -35,14 +35,29 @@ reject every article that agent was assigned.
 
 ## Daily token budget
 
-The bulk swarm scores every collected article (~630/run). Measured cost is
-~43 input tokens per article plus a ~460-token system prompt per batch, and
-~45 output tokens per article — roughly **27K tokens per agent per run**.
+Every usable model is capped at **200K tokens/day**. That is the binding
+constraint on how often the pipeline can run.
 
-At 6 runs/day (`cron: 0 */4 * * *`) that is ~160K/day per bulk agent against a
-200K/day cap, before deep intelligence is counted. Two agents also serve the
-deep intelligence swarm, which pushes them over. See the note in
-`.github/workflows/collect-news.yml` on run frequency.
+Measured cost: ~43 input tokens per article, a ~460-token system prompt per
+batch of 12, and ~45 output tokens per article. With ~630 articles split three
+ways, that is **~27K tokens per bulk agent per run**. The two agents that also
+serve the deep intelligence swarm add **~12K per run** each.
+
+| Runs/day | Cron | gpt-oss-20b | qwen3.6-27b | gpt-oss-120b | |
+|---|---|---|---|---|---|
+| 6 | `0 */4 * * *` | 160K | 230K | 230K | over cap |
+| 4 | `0 */6 * * *` | 107K | 153K | 153K | current |
+| 3 | `0 */8 * * *` | 80K | 115K | 115K | extra headroom |
+
+The workflow runs every 6 hours for this reason. Raising the frequency without
+either shrinking the scored corpus or adding daily token capacity will exhaust
+the two dual-role agents part-way through the day — at which point they reject
+every article they are handed and the paper publishes empty.
+
+If more frequent runs are needed, the options are: pre-filter the corpus before
+bulk scoring, add `allam-2-7b` (500K/day) as a fourth bulk agent, or move bulk
+scoring to `groq/compound-mini` (no daily token cap) if its JSON-mode support
+proves adequate.
 
 ## Decommissioned Models
 

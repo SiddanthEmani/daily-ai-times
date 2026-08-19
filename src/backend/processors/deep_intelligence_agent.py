@@ -109,6 +109,8 @@ class DeepIntelligenceAgent:
         # Apply optimized buffer (90% of limits for better utilization)
         self.requests_per_minute = min(base_rpm, int(limits["rpm"] * 0.9))
         self.tokens_per_minute = int(limits["tokens_per_minute"] * 0.9)
+        # Raw budget, before the safety margin, used to pick capacity tiers.
+        self.model_tokens_per_minute = limits["tokens_per_minute"]
         self.daily_requests_limit = limits["daily_requests"]
         
         # Calculate optimal batch sizes
@@ -252,12 +254,7 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
         
         if not can_request:
             # Enhanced wait time prediction for different models
-            if 'llama-3.3-70b-versatile' in self.model_name.lower():
-                max_wait_time = 90.0  # More generous for 70b model
-            elif 'qwen' in self.model_name.lower():
-                max_wait_time = 30.0  # Keep short for qwen
-            else:
-                max_wait_time = 60.0  # Default
+            max_wait_time = 90.0 if self._tokens_per_minute() < 8000 else 60.0
                 
             wait_time = min(wait_time, max_wait_time)
             
@@ -268,30 +265,17 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
             # Re-check after waiting with model-specific timeout
             can_request, additional_wait = self._can_make_request(estimated_total_tokens)
             if not can_request and additional_wait > 0:
-                if 'llama-3.3-70b-versatile' in self.model_name.lower():
-                    additional_wait = min(additional_wait, 30.0)  # More patient for 70b
-                else:
-                    additional_wait = min(additional_wait, 15.0)  # Standard for others
+                additional_wait = min(additional_wait, 15.0)
                 
                 logger.info(f"Additional rate limit wait: {additional_wait:.1f}s for {self.model_name}")
                 await asyncio.sleep(additional_wait)
         
         self.request_count += 1
         
-        # Enhanced logging for 70b model debugging
-        if 'llama-3.3-70b-versatile' in self.model_name.lower():
-            logger.info(f"70b model: Starting API request #{self.request_count} with {estimated_total_tokens} tokens")
         
         try:
             # Aligned API timeout with model capacity - aggressive for 70b
-            if 'llama-4-scout' in self.model_name.lower():
-                timeout_duration = 90.0  # Highest capacity model gets longest API timeout
-            elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-                timeout_duration = 60.0  # Aggressive timeout to detect hangs early
-            elif 'qwen' in self.model_name.lower():
-                timeout_duration = 60.0  # Shorter timeout for QWEN
-            else:
-                timeout_duration = 75.0  # Default timeout
+            timeout_duration = 90.0 if self._tokens_per_minute() >= 30000 else 75.0
             
             # Add timeout to prevent hanging on individual requests
             response = await asyncio.wait_for(
@@ -322,12 +306,6 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
             self._record_request(actual_tokens)
             
             self.success_count += 1
-            
-            # Enhanced logging for 70b model debugging
-            if 'llama-3.3-70b-versatile' in self.model_name.lower():
-                response_content = response.choices[0].message.content
-                logger.info(f"70b model: API request #{self.request_count} completed, response length: {len(response_content)}")
-                return response_content
             
             return response.choices[0].message.content
             
@@ -491,12 +469,8 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
         Returns: (article_with_analysis, recommendation_accept, confidence_score)
         """
         # Aligned timeouts with orchestrator configuration - aggressive for 70b individual processing
-        if 'llama-4-scout' in self.model_name.lower():
+        if self._tokens_per_minute() >= 30000:
             timeout_duration = 60.0  # Highest capacity model
-        elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-            timeout_duration = 90.0  # More time for individual processing
-        elif 'qwen' in self.model_name.lower():
-            timeout_duration = 30.0  # Lower capacity but still reasonable
         else:
             timeout_duration = 45.0  # Default for other models
         
@@ -647,10 +621,6 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
                 # **OPTIMIZATION 2**: Use realistic per-batch timeout
                 batch_timeout = self._get_per_batch_timeout()
                 
-                # Special handling for first batch to detect hanging early
-                if batch_num == 1 and 'llama-3.3-70b-versatile' in self.model_name.lower():
-                    logger.info(f"First batch for {self.model_name} - monitoring for early timeout detection")
-                
                 # Add heartbeat logging for long-running batches
                 async def analyze_with_heartbeat():
                     """Wrapper to add heartbeat logging during batch analysis."""
@@ -767,16 +737,10 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
         if not articles:
             return []
         
-        # Enhanced logging for 70b model debugging
-        if 'llama-3.3-70b-versatile' in self.model_name.lower():
-            logger.info(f"70b model: Starting batch analysis for {len(articles)} articles")
         
         # Create batch analysis prompt
         prompt = self._create_batch_analysis_prompt(articles)
         
-        # Enhanced logging for 70b model debugging
-        if 'llama-3.3-70b-versatile' in self.model_name.lower():
-            logger.info(f"70b model: Batch prompt created, length: {len(prompt)}")
         
         response = await self._make_api_request(prompt)
         
@@ -784,16 +748,10 @@ Target: 70-80% acceptance rate. Default ACCEPT for pre-filtered articles unless 
             logger.error(f"No response from {self.model_name} for batch of {len(articles)} articles")
             raise RuntimeError("No response from model for batch analysis")
         
-        # Enhanced logging for 70b model debugging
-        if 'llama-3.3-70b-versatile' in self.model_name.lower():
-            logger.info(f"70b model: Received response, starting parsing...")
         
         # Parse batch response
         parsed_results = self._parse_batch_analysis_response(response, articles)
         
-        # Enhanced logging for 70b model debugging
-        if 'llama-3.3-70b-versatile' in self.model_name.lower():
-            logger.info(f"70b model: Parsing completed, returning {len(parsed_results)} results")
         
         return parsed_results
     
@@ -1017,22 +975,28 @@ Analyze all {len(articles)} articles. Default ACCEPT for pre-filtered unless ser
         
         return sorted_articles
 
+    def _tokens_per_minute(self) -> int:
+        """Raw TPM budget for this model, used to select capacity tiers.
+
+        Tiering on capacity rather than model name means a roster change
+        cannot silently drop an agent onto an unrelated default.
+        """
+        return self.model_tokens_per_minute
+
     def _get_optimal_batch_size(self, total_articles: int) -> int:
         """Get optimal batch size based on model's token capacity (OPTIMIZATION 1)."""
         
-        # Model-specific batch sizes based on Groq token limits
-        if 'llama-4-scout' in self.model_name.lower():
-            # 30,000 tokens/min - can handle large batches
+        # Batch size follows the agent's token budget, so a roster change
+        # cannot silently drop it to an unrelated default.
+        tpm = self._tokens_per_minute()
+        if tpm >= 30000:
             base_batch_size = 15
-        elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-            # 12,000 tokens/min - medium batches for efficient processing
+        elif tpm >= 12000:
             base_batch_size = 8
-        elif 'qwen' in self.model_name.lower():
-            # 6,000 tokens/min - small batches
-            base_batch_size = 3
-        else:
-            # Default for other models
+        elif tpm >= 8000:
             base_batch_size = 5
+        else:
+            base_batch_size = 3
         
         # Cap based on total articles available
         optimal_size = min(base_batch_size, total_articles)
@@ -1048,19 +1012,16 @@ Analyze all {len(articles)} articles. Default ACCEPT for pre-filtered unless ser
         # Calculate batches needed
         total_batches = (total_articles + batch_size - 1) // batch_size
         
-        # Model-specific processing time per batch (based on token limits)
-        if 'llama-4-scout' in self.model_name.lower():
-            # High capacity - 3 batches per minute
+        # Processing time per batch follows the agent's token budget.
+        tpm = self._tokens_per_minute()
+        if tpm >= 30000:
             seconds_per_batch = 20.0
-        elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-            # Medium capacity - 2 batches per minute with batch size 8
+        elif tpm >= 12000:
             seconds_per_batch = 30.0
-        elif 'qwen' in self.model_name.lower():
-            # Low capacity - 0.6 batches per minute
-            seconds_per_batch = 100.0
-        else:
-            # Default conservative estimate
+        elif tpm >= 8000:
             seconds_per_batch = 45.0
+        else:
+            seconds_per_batch = 100.0
         
         # Calculate total time needed + 50% buffer
         estimated_time = total_batches * seconds_per_batch
@@ -1077,26 +1038,28 @@ Analyze all {len(articles)} articles. Default ACCEPT for pre-filtered unless ser
     def _get_per_batch_timeout(self) -> float:
         """Get timeout for individual batch processing based on model capacity."""
         
-        if 'llama-4-scout' in self.model_name.lower():
+        tpm = self._tokens_per_minute()
+        if tpm >= 30000:
             return 120.0  # 2 minutes per batch for high capacity
-        elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-            return 60.0  # 1 minute per batch for efficient batch processing
-        elif 'qwen' in self.model_name.lower():
-            return 240.0  # 4 minutes per batch for low capacity
+        elif tpm >= 12000:
+            return 60.0   # 1 minute per batch
+        elif tpm >= 8000:
+            return 150.0  # 2.5 minutes
         else:
-            return 150.0  # Default 2.5 minutes
+            return 240.0  # 4 minutes per batch for low capacity
 
     def _get_inter_batch_delay(self) -> float:
         """Get delay between batches based on model token limits."""
         
-        if 'llama-4-scout' in self.model_name.lower():
+        tpm = self._tokens_per_minute()
+        if tpm >= 30000:
             return 1.0   # Short delay for high capacity
-        elif 'llama-3.3-70b-versatile' in self.model_name.lower():
-            return 3.0   # Medium delay 
-        elif 'qwen' in self.model_name.lower():
-            return 5.0   # Longer delay for token limit compliance
-        else:
+        elif tpm >= 12000:
+            return 3.0   # Medium delay
+        elif tpm >= 8000:
             return 2.0   # Default delay
+        else:
+            return 5.0   # Longer delay for token limit compliance
     
     def get_agent_info(self) -> Dict[str, Any]:
         """Get agent information for monitoring and debugging."""
