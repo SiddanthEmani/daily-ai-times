@@ -40,15 +40,13 @@ logger = logging.getLogger(__name__)
 
 # Constants for model TPM limits and processing delays
 MODEL_TPM_LIMITS = {
-    'meta-llama/llama-4-scout-17b-16e-instruct': 30000,
-    'meta-llama/llama-4-maverick-17b-128e-instruct': 6000,
-    'llama-3.3-70b-versatile': 12000,
-    'llama3-70b-8192': 6000,
-    'qwen/qwen3-32b': 6000,
-    'qwen-qwq-32b': 6000,
-    'gemma2-9b-it': 15000,
-    'llama-3.1-8b-instant': 6000,
-    'llama3-8b-8192': 6000
+    'openai/gpt-oss-120b': 8000,
+    'openai/gpt-oss-20b': 8000,
+    'openai/gpt-oss-safeguard-20b': 8000,
+    'qwen/qwen3.6-27b': 8000,
+    'groq/compound': 70000,
+    'groq/compound-mini': 70000,
+    'allam-2-7b': 6000
 }
 
 SUPPRESSED_LOGGERS = [
@@ -66,16 +64,17 @@ def suppress_logging():
     original_handler_levels = [handler.level for handler in root_logger.handlers]
     original_levels = {}
     
-    # Suppress root logger and handlers
+    # Quiet down INFO/DEBUG chatter so the progress bars stay readable, but keep
+    # WARNING and above: agent API failures must never be invisible.
     for handler in root_logger.handlers:
-        handler.setLevel(logging.CRITICAL + 1)
-    root_logger.setLevel(logging.CRITICAL + 1)
+        handler.setLevel(logging.WARNING)
+    root_logger.setLevel(logging.WARNING)
     
     # Suppress specific loggers
     for logger_name in SUPPRESSED_LOGGERS:
         log_instance = logging.getLogger(logger_name)
         original_levels[logger_name] = log_instance.level
-        log_instance.setLevel(logging.CRITICAL + 1)
+        log_instance.setLevel(logging.WARNING)
     
     try:
         yield
@@ -148,6 +147,17 @@ class NewsProcessingPipeline:
             'issue_number': issue_number,
         }
     
+    @staticmethod
+    def _published_article_count() -> int:
+        """Number of articles in the currently published latest.json (0 if unreadable)."""
+        project_root = Path(__file__).parent.parent.parent
+        published = project_root / "src" / "frontend" / "api" / "latest.json"
+        try:
+            with open(published, 'r', encoding='utf-8') as f:
+                return len(json.load(f).get('articles', []))
+        except (FileNotFoundError, json.JSONDecodeError, AttributeError, TypeError):
+            return 0
+
     @staticmethod
     def _create_progress_bar(description: str, total: int, transient: bool = True) -> Progress:
         """Create a standardized progress bar configuration."""
@@ -347,6 +357,25 @@ class NewsProcessingPipeline:
         total_processed = sum(len(results) for results in agent_results.values())
         logger.info(f"Distributed bulk intelligence complete: {total_processed} articles processed, {total_accepted} accepted")
         
+        # Report per-agent scoring health. An agent that returns no real scores is
+        # not "strict" - it is broken (decommissioned model, bad key, rate limited),
+        # and every article it was handed is silently rejected downstream.
+        for agent_name, results in agent_results.items():
+            scored = sum(1 for article, _, _ in results if 'multi_dimensional_score' in article)
+            accepted = sum(1 for _, accepted, _ in results if accepted)
+            if results and scored == 0:
+                logger.error(
+                    f"Agent {agent_name} scored 0 of {len(results)} assigned articles - "
+                    f"every one was rejected by default. Check that the model is still "
+                    f"available on Groq and that GROQ_API_KEY is valid.")
+            else:
+                logger.info(f"Agent {agent_name}: {scored}/{len(results)} scored, {accepted} accepted")
+        
+        if total_processed and total_accepted == 0:
+            logger.error(
+                f"No article out of {total_processed} was accepted by any bulk agent. "
+                f"This is a pipeline failure, not an empty news day.")
+        
         self._save_bulk_agent_results(agent_results, articles)
         return agent_results
     
@@ -401,13 +430,10 @@ class NewsProcessingPipeline:
         """Get delay and timeout settings for agent based on TPM limits."""
         agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
         
-        # Fixed timeout logic: Higher capacity models get longer timeouts
-        if 'llama-4-scout' in agent_name:
-            return 1.5, 60.0  # 30K TPM → longest timeout for highest capacity
-        elif agent_name == 'llama-3.3-70b-versatile':
-            return 2.0, 45.0  # 12K TPM → medium timeout
-        elif agent_name == 'qwen/qwen3-32b':
-            return 1.0, 30.0  # 6K TPM → shorter timeout but still reasonable
+        # Higher capacity models get longer timeouts. Keyed on TPM rather than
+        # model name so a roster change cannot silently fall through to defaults.
+        if agent_tpm >= 30000:
+            return 1.5, 60.0  # Highest capacity
         elif agent_tpm >= 15000:
             return 1.5, 45.0  # High capacity models get longer timeouts
         elif agent_tpm >= 12000:
@@ -602,31 +628,20 @@ class NewsProcessingPipeline:
         num_articles = len(articles)
         
         # Get the slowest agent (determines overall timeout)
-        # Based on token limits: Scout (30k) > Versatile (12k) > Qwen (6k)
         slowest_agent_time = 0.0
         
         for agent_name in self.deep_intelligence_agents.keys():
-            if 'llama-4-scout' in agent_name.lower():
-                # High capacity: ~3 batches/min, batch size 15
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 14) // 15  # 15 per batch
-                time_needed = batches_needed * 20.0  # 20 seconds per batch
-            elif 'llama-3.3-70b-versatile' in agent_name.lower():
-                # Medium capacity: ~1 batch/min, batch size 8
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 7) // 8   # 8 per batch
-                time_needed = batches_needed * 60.0  # 60 seconds per batch
-            elif 'qwen' in agent_name.lower():
-                # Low capacity: ~0.6 batches/min, batch size 3
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 2) // 3   # 3 per batch
-                time_needed = batches_needed * 100.0  # 100 seconds per batch
+            # Derive throughput from the agent's TPM budget rather than its name.
+            agent_tpm = MODEL_TPM_LIMITS.get(agent_name, 6000)
+            if agent_tpm >= 30000:
+                batch, seconds_per_batch = 15, 20.0
+            elif agent_tpm >= 12000:
+                batch, seconds_per_batch = 8, 60.0
             else:
-                # Default conservative estimate
-                articles_for_agent = num_articles // len(self.deep_intelligence_agents)
-                batches_needed = (articles_for_agent + 4) // 5   # 5 per batch
-                time_needed = batches_needed * 45.0  # 45 seconds per batch
-            
+                batch, seconds_per_batch = 3, 100.0
+            articles_for_agent = num_articles // len(self.deep_intelligence_agents)
+            batches_needed = (articles_for_agent + batch - 1) // batch
+            time_needed = batches_needed * seconds_per_batch
             slowest_agent_time = max(slowest_agent_time, time_needed)
         
         # Add 50% buffer and ensure reasonable bounds
@@ -1202,6 +1217,16 @@ class NewsProcessingPipeline:
             
             # **FIX**: Normalize articles for frontend compatibility
             normalized_articles = self._normalize_articles_for_frontend(all_articles, classified_content)
+            
+            # Never replace a good edition with an empty one. A run that yields no
+            # articles is a pipeline failure (dead model, rate limiting, API outage),
+            # not a legitimately empty news day - publishing it takes the site down.
+            if not normalized_articles and self._published_article_count() > 0:
+                logger.error(
+                    "Refusing to publish an empty edition: pipeline produced 0 articles "
+                    "but the live latest.json still has %d. Keeping the existing edition.",
+                    self._published_article_count())
+                return False
             
             # Create main API response
             api_response = {

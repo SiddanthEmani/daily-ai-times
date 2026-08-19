@@ -2,7 +2,13 @@ name: Daily AI Times - Modern Serverless News Pipeline
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours - Fresh news cycle
+    # Every 6 hours. Not arbitrary: each usable Groq model is capped at
+    # 200K tokens/day, and a run costs ~27K tokens per bulk agent plus
+    # ~12K for the two agents that also serve deep intelligence. Six runs
+    # a day would need ~230K/day on those two and exhaust them mid-day,
+    # which rejects every article. Four runs/day lands at ~153K.
+    # See docs/groq-limits.md before raising this.
+    - cron: '0 */6 * * *'  # Every 6 hours - fits the Groq daily token budget
   workflow_dispatch:
     inputs:
       sources:
@@ -142,6 +148,15 @@ jobs:
             echo "✅ Processed $article_count articles with $pipeline_version"
             echo "📅 Generated at: $generated_at"
             echo "⏱️ Processing time: ${processing_time}s"
+
+            # A run that publishes zero articles is a failure, not a success.
+            # Reporting it green is what let the paper sit broken for three runs.
+            if [ "$article_count" -eq 0 ]; then
+              echo "::error::Pipeline produced 0 articles - the published edition would be empty."
+              echo "Check the per-agent scoring lines above: an agent reporting 0 scored articles"
+              echo "usually means its Groq model was decommissioned or GROQ_API_KEY is invalid."
+              exit 1
+            fi
           else
             echo "❌ Missing required output files"
             ls -la src/frontend/api/ test_output/ || true

@@ -7,42 +7,42 @@ agents:
     description: "High-volume parallel processing with specialized expertise"
     architecture: distributed_network
     agents:
-      llama-3.1-8b-instant:
-        daily_limit: 14400
-        tokens_per_minute: 6000
-        tokens_per_day: 500000
+      openai/gpt-oss-20b:
+        daily_limit: 1000
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         specialization: content_quality_analysis
         batch_size: 12
         consensus_weight: 0.35
         fallback_agents:
-          - gemma2-9b-it
-          - llama3-8b-8192
+          - openai/gpt-oss-120b
         expertise_domains:
           - content_assessment
           - quality_scoring
-      gemma2-9b-it:
-        daily_limit: 14400
-        tokens_per_minute: 15000
-        tokens_per_day: 500000
+      qwen/qwen3.6-27b:
+        daily_limit: 1000
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         specialization: relevance_scoring
-        batch_size: 20
+        # Smaller batches than the gpt-oss agents: qwen reasons before
+        # answering and has no reasoning_effort control on Groq, so it needs a
+        # larger share of the completion budget for thinking per request.
+        batch_size: 8
         consensus_weight: 0.35
         fallback_agents:
-          - llama-3.1-8b-instant
-          - llama3-8b-8192
+          - openai/gpt-oss-20b
         expertise_domains:
           - relevance_analysis
           - topic_matching
-      llama3-8b-8192:
-        daily_limit: 14400
-        tokens_per_minute: 6000
-        tokens_per_day: 500000
+      openai/gpt-oss-120b:
+        daily_limit: 1000
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         specialization: category_classification
         batch_size: 12
         consensus_weight: 0.30
         fallback_agents:
-          - llama-3.1-8b-instant
-          - gemma2-9b-it
+          - openai/gpt-oss-20b
         expertise_domains:
           - categorization
           - topic_classification
@@ -51,10 +51,10 @@ agents:
     description: "Complex reasoning and collaborative analysis with enhanced capabilities"
     architecture: hierarchical_teams
     agents:
-      meta-llama/llama-4-scout-17b-16e-instruct:
+      openai/gpt-oss-120b:
         daily_limit: 1000
-        tokens_per_minute: 30000
-        tokens_per_day: unlimited
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         requests_per_minute: 30
         specialization: comprehensive_fact_analysis
         focus_areas:
@@ -71,11 +71,11 @@ agents:
         temperature: 0.3
         max_tokens: 4000
         fallback_agents:
-          - llama-3.3-70b-versatile
-      llama-3.3-70b-versatile:
+          - qwen/qwen3.6-27b
+      qwen/qwen3.6-27b:
         daily_limit: 1000
-        tokens_per_minute: 12000
-        tokens_per_day: 100000
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         requests_per_minute: 30
         specialization: bias_detection_and_impact_analysis
         focus_areas:
@@ -92,27 +92,27 @@ agents:
         temperature: 0.3
         max_tokens: 4000
         fallback_agents:
-          - meta-llama/llama-4-scout-17b-16e-instruct
+          - openai/gpt-oss-120b
 
 
   consensus_orchestration_swarm:
     description: "Multi-agent democratic decision-making with expert validation"
     architecture: agent_supervisor
     agents:
-      meta-llama/llama-4-maverick-17b:
+      openai/gpt-oss-120b:
         daily_limit: 1000
-        tokens_per_minute: 12000
-        tokens_per_day: unlimited
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         role: consensus_coordinator
         specialization: conflict_resolution
         consensus_algorithms:
           - weighted_voting
           - semantic_clustering
           - expertise_ranking
-      llama-3.3-70b-versatile:
+      qwen/qwen3.6-27b:
         daily_limit: 1000
-        tokens_per_minute: 12000
-        tokens_per_day: 100000
+        tokens_per_minute: 8000
+        tokens_per_day: 200000
         role: expert_validator
         specialization: final_quality_assurance
         validation_criteria:
