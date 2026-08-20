@@ -14,17 +14,15 @@ import {
 } from './chrome.js';
 import { leadHTML, audioBriefingSlotHTML } from './above.js';
 import {
-    storyCardHTML, benchmarksChartHTML, capexChartHTML, savedBoxHTML,
+    storyCardHTML, benchmarksChartHTML, capexChartHTML,
 } from './below.js';
 
 const APP_VERSION = '2026.5.0';
-const SAVED_KEY = 'dat_saved';
 const THEME_KEY = 'dat_theme';
 
 const state = {
     section: 'All',
     query: '',
-    savedIds: loadSavedIds(),
     focusIdx: -1,
     partitioned: null,
     sections: ['All'],
@@ -37,14 +35,6 @@ const state = {
     capex: null,
     capexChip: null,
 };
-
-function loadSavedIds() {
-    try { return new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || '[]')); }
-    catch { return new Set(); }
-}
-function persistSavedIds() {
-    localStorage.setItem(SAVED_KEY, JSON.stringify([...state.savedIds]));
-}
 
 function checkVersionAndRefresh() {
     try {
@@ -211,15 +201,12 @@ function buildPageMarkup() {
         sidebarItems.push({ kind: 'raw', html: benchmarksChartHTML(state.leaderboard, state.leaderboardChip) });
         sidebarItems.push({ kind: 'raw', html: capexChartHTML(state.capex, state.capexChip) });
     }
-    const savedHTML = savedBoxHTML(state.savedIds, state.partitioned.all);
-    if (savedHTML) sidebarItems.push({ kind: 'raw', html: savedHTML });
 
     const counts = sectionCounts(state.partitioned.all);
     const navMarkup = navHTML({ section: state.section }, state.sections, counts);
 
     const storyColumnsHTML = cols.map(col => {
         const inner = col.map(item => storyCardHTML(item.story, item.idx, {
-            saved: state.savedIds.has(item.story.id),
             focused: state.focusIdx === item.idx,
         })).join('');
         return `<div class="col">${inner}</div>`;
@@ -331,16 +318,6 @@ function installEventDelegation() {
             return;
         }
 
-        // Save always wins — stop propagation so card expand/open doesn't also fire.
-        if (actionEl?.dataset.action === 'save') {
-            const storyId = actionEl.dataset.storyId;
-            if (!storyId) return;
-            e.stopPropagation();
-            toggleSave(storyId);
-            render();
-            return;
-        }
-
         if (actionEl?.dataset.action === 'sources') {
             state.sourcesOpen = true;
             render();
@@ -415,12 +392,6 @@ function installEventDelegation() {
 
 function findStory(id) {
     return state.partitioned.all.find(s => s.id === id) || null;
-}
-
-function toggleSave(id) {
-    if (state.savedIds.has(id)) state.savedIds.delete(id);
-    else state.savedIds.add(id);
-    persistSavedIds();
 }
 
 function openStory(story) {

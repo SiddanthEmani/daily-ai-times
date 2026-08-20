@@ -12,18 +12,11 @@ async function loadPage(page) {
 
 test.describe('newspaper frontend smoke', () => {
     test.beforeEach(async ({ page }) => {
-        // Init script runs on every navigation, including reloads. Clear the
-        // save key only on the first nav (gated by a sessionStorage flag that
-        // survives reloads within the same context) so save-persistence tests
-        // can actually observe persistence. Always pre-seed `dat_last_refresh`
-        // so checkVersionAndRefresh() in app.js classifies the session as
-        // veryRecent and skips its forced reload.
+        // Init script runs on every navigation, including reloads. Pre-seed
+        // `dat_last_refresh` so checkVersionAndRefresh() in app.js classifies
+        // the session as veryRecent and skips its forced reload.
         await page.addInitScript(() => {
             try {
-                if (!sessionStorage.getItem('_e2e_init_done')) {
-                    sessionStorage.setItem('_e2e_init_done', '1');
-                    window.localStorage.removeItem('dat_saved');
-                }
                 window.localStorage.setItem('dat_last_refresh', String(Date.now()));
             } catch {}
         });
@@ -93,27 +86,6 @@ test.describe('newspaper frontend smoke', () => {
 
         // Modal root must remain absent throughout.
         await expect(page.locator('#modal-root')).not.toBeAttached();
-    });
-
-    test('save/unsave persists across reload', async ({ page }) => {
-        await loadPage(page);
-
-        const card = page.locator('article.story').first();
-        const storyId = await card.getAttribute('data-story-id');
-        expect(storyId).toBeTruthy();
-        const expectedText = (await card.locator('.story-headline').textContent() || '').trim();
-
-        await card.locator('.save-btn').click();
-
-        await page.reload({ waitUntil: 'domcontentloaded' });
-        await page.locator('.lead-headline').first().waitFor({ timeout: 15_000 });
-
-        const clippingsBox = page.locator('.box', { hasText: 'Your Clippings' });
-        await expect(clippingsBox).toBeVisible();
-        await expect(clippingsBox.getByText(expectedText, { exact: false })).toBeVisible();
-
-        const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('dat_saved') || '[]'));
-        expect(saved).toContain(storyId);
     });
 
     test('keyboard nav: j moves focus, Enter opens article URL in new tab', async ({ page }) => {
