@@ -1,23 +1,23 @@
 {
-  "updated": "2026-08-25T18:48:18.099549+00:00",
+  "updated": "2026-08-26T01:00:01.477408+00:00",
   "top_stories": [
     {
-      "article_id": "4936a887cb6956e41fbac3a5fcf6046a",
-      "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+      "article_id": "974fc79e14ef582cc02878964a930ae7",
+      "title": "Hugging Face reportedly in talks to be acquired for $13B",
       "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
-      "published_date": "2026-08-24T15:00:00+00:00",
+      "url": "https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/",
+      "published_date": "2026-08-24T13:47:26+00:00",
       "category": "Industry",
-      "description": "Inside the frontier lab’s push to bring AI agents from software engineers to the masses.",
-      "author": "Tim Fernholz",
-      "content": "Inside the frontier lab’s push to bring AI agents from software engineers to the masses.",
+      "description": "Hugging Face has reportedly been fielding acquisition offers that would value the company at around $13B. But with the founders' feeling of responsibility to community, doubts arise as to whether a sale will happen.",
+      "author": "Rebecca Bellan",
+      "content": "Hugging Face has reportedly been fielding acquisition offers that would value the company at around $13B. But with the founders' feeling of responsibility to community, doubts arise as to whether a sale will happen.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.87,
-        "quality_score": 0.8,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8285000000000001,
-        "confidence_mean": 0.85
+        "relevance_score": 0.88,
+        "quality_score": 0.84,
+        "novelty_score": 0.8,
+        "impact_score": 0.92,
+        "overall_score": 0.858,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-25T18:48:17.982830+00:00"
+        "consensus_timestamp": "2026-08-26T01:00:01.347660+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +59,195 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-25T18:48:17.982832+00:00"
+        "timestamp": "2026-08-26T01:00:01.347663+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "124ccf5c0d4641b7f5ebbdd862d90660",
+      "title": "Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/",
+      "published_date": "2026-08-12T18:23:13+00:00",
+      "category": "Industry",
+      "description": "Alibaba released the open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), its largest open-weight model, bringing near-frontier capabilities to the open...",
+      "author": "Michelle Horton",
+      "content": "Alibaba released the open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), its largest open-weight model, bringing near-frontier capabilities to the open...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.86,
+        "novelty_score": 0.82,
+        "impact_score": 0.94,
+        "overall_score": 0.8779999999999999,
+        "confidence_mean": 0.89
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-26T01:00:01.349151+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-26T01:00:01.349157+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "55a48b9129e9394590cbba58ef674559",
+      "title": "OpenAI's first custom chip \"Jalapeño\" reportedly beats Nvidia's Blackwell and Rubin in inference benchmarks",
+      "source": "the_decoder",
+      "url": "https://the-decoder.com/openais-first-custom-chip-jalapeno-reportedly-beats-nvidias-blackwell-and-rubin-in-inference-benchmarks/",
+      "published_date": "2026-08-25T18:00:50+00:00",
+      "category": "Media",
+      "description": "OpenAI showed off \"Jalapeño,\" its first in-house inference chip, with benchmarks at the Hot Chips conference. According to SemiAnalysis tests, the chip beats Nvidia's Blackwell and even Rubin in throughput and energy efficiency. \"Usually first generation chips aren't competitive, but OpenAI is beating Nvidia Blackwell and even Rubin,\" SemiAnalysis CEO Dylan Patel said. The article OpenAI's first custom chip \"Jalapeño\" reportedly beats Nvidia's Blackwell and Rubin in inference benchmarks...",
+      "author": "Matthias Bastian",
+      "content": "OpenAI showed off \"Jalapeño,\" its first in-house inference chip, with benchmarks at the Hot Chips conference. According to SemiAnalysis tests, the chip beats Nvidia's Blackwell and even Rubin in throughput and energy efficiency. \"Usually first generation chips aren't competitive, but OpenAI is beating Nvidia Blackwell and even Rubin,\" SemiAnalysis CEO Dylan Patel said. The article OpenAI's first custom chip \"Jalapeño\" reportedly beats Nvidia's Blackwell and Rubin in inference benchmarks...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.84,
+        "impact_score": 0.94,
+        "overall_score": 0.8805000000000001,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-26T01:00:01.357284+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-26T01:00:01.357289+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "0677f244ed7e56074a9caa2d8a26205c",
+      "title": "NVIDIA AVO Reaches 100% on ARC-AGI-3, Demonstrating a Frontier-Level General-Purpose Architecture for Long-Horizon Autonomous Agents",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+      "published_date": "2026-08-21T13:00:00+00:00",
+      "category": "Industry",
+      "description": "A frontier language model is only one component of an AI agent. The surrounding agent system—often called a harness—determines how the model receives...",
+      "author": "Tanya Lenz",
+      "content": "A frontier language model is only one component of an AI agent. The surrounding agent system—often called a harness—determines how the model receives...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-08-26T01:00:01.348583+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-08-26T01:00:01.348585+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "8a84fae232deefe136c08fe3fccffa5e",
@@ -75,196 +261,10 @@
       "content": "Amazon plans to expand its Prime Air drone delivery service to nearly 500 cities and towns across the US by the end of 2026. That build-out amounts to six times the number of locations Prime Air serves today, extending the option to communities with tens of millions of customers, according to Amazon. Reaching that many […] The post Amazon’s Prime Air autonomous drones to reach 500 US cities appeared first on AI News.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.93,
-        "novelty_score": 0.88,
-        "impact_score": 0.96,
-        "overall_score": 0.9145000000000001,
-        "confidence_mean": 0.94
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-25T18:48:17.986846+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-25T18:48:17.986848+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9bd0f3903b713e4146e27cb9c8871d6a",
-      "title": "The accountability vacuum: Agentic AI in high-stakes domains",
-      "source": "aihub",
-      "url": "https://aihub.org/2026/08/24/the-accountability-vacuum-agentic-ai-in-high-stakes-domains/",
-      "published_date": "2026-08-24T11:00:57+00:00",
-      "category": "Open Source",
-      "description": "Elise Racine / Static / Licenced by CC-BY 4.0 This cross-post from AI Matters is co-authored by Prof. Larry Medsker and Sumit Virmani. It outlines the current accountability vacuum faced by the deployment of agentic AI systems into an unprepared regulatory and legal landscape, and suggests actions that can close the gap. With thanks to […]",
-      "author": "AI Matters",
-      "content": "Elise Racine / Static / Licenced by CC-BY 4.0 This cross-post from AI Matters is co-authored by Prof. Larry Medsker and Sumit Virmani. It outlines the current accountability vacuum faced by the deployment of agentic AI systems into an unprepared regulatory and legal landscape, and suggests actions that can close the gap. With thanks to […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.92,
-        "overall_score": 0.9065000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-25T18:48:17.991324+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-25T18:48:17.991326+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "36156b9c6da6703f07d01a3d4d0c2534",
-      "title": "XPENG IRON humanoid robot draws record physical AI funding",
-      "source": "ai_news",
-      "url": "https://www.artificialintelligence-news.com/news/xpeng-iron-humanoid-robot-draws-record-physical-ai-funding/",
-      "published_date": "2026-08-24T15:53:53+00:00",
-      "category": "Media",
-      "description": "XPENG’s physical AI unit has secured over $900 million at a $6.3 billion valuation to scale its IRON humanoid robot platform. The Chinese electric vehicle maker announced the funding round for its robotics business through a set of share purchase agreements with multiple investors. XPENG says the deal represents the largest single-round private capital raise […] The post XPENG IRON humanoid robot draws record physical AI funding appeared first on AI News.",
-      "author": "Ryan Daws",
-      "content": "XPENG’s physical AI unit has secured over $900 million at a $6.3 billion valuation to scale its IRON humanoid robot platform. The Chinese electric vehicle maker announced the funding round for its robotics business through a set of share purchase agreements with multiple investors. XPENG says the deal represents the largest single-round private capital raise […] The post XPENG IRON humanoid robot draws record physical AI funding appeared first on AI News.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.92,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9025000000000001,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-08-25T18:48:17.986762+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-08-25T18:48:17.986764+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "80d20560ff251c8042f18c7dc62a4dc2",
-      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/jalapeno-first-results",
-      "published_date": "2026-08-25T07:00:00+00:00",
-      "category": "Industry",
-      "description": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
-      "author": "",
-      "content": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
         "impact_score": 0.95,
-        "overall_score": 0.891,
+        "overall_score": 0.8725,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -272,15 +272,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -292,22 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.78,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-08-25T18:48:17.980224+00:00"
+        "consensus_timestamp": "2026-08-26T01:00:01.354815+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6679999999999999,
-        "combined_confidence": 0.71,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-08-25T18:48:17.980227+00:00"
+        "timestamp": "2026-08-26T01:00:01.354818+00:00"
       },
       "article_type": "article"
     }
