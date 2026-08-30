@@ -1,4 +1,4 @@
-// Below-the-fold: story cards, sidebar chart boxes, and the saved-clippings box.
+// Below-the-fold: story cards and sidebar chart boxes.
 import { escapeHTML } from '../utils/utils.js';
 import { paperImageSVG } from './chrome.js';
 
@@ -25,7 +25,7 @@ const CAPEX = [
     { label: 'Anthropic', value: 15, estimated: true },
 ];
 
-export function storyCardHTML(story, idx, { saved = false, focused = false } = {}) {
+export function storyCardHTML(story, idx, { focused = false } = {}) {
     const hasMedia = story.type === 'video' || story.type === 'photo';
     const media = hasMedia ? `
         <div class="media-thumb" data-action="open" data-story-id="${escapeHTML(story.id)}">
@@ -45,15 +45,7 @@ export function storyCardHTML(story, idx, { saved = false, focused = false } = {
             <p class="story-summary">${escapeHTML(story.deck)}</p>
             <div class="story-meta">
                 <span class="byline">${escapeHTML(story.byline)}</span>
-                <span style="display:flex;gap:10px;align-items:center">
-                    <span>${escapeHTML(story.time)}</span>
-                    <button
-                        class="save-btn${saved ? ' saved' : ''}"
-                        data-action="save"
-                        data-story-id="${escapeHTML(story.id)}"
-                        title="${saved ? 'Remove from saved' : 'Save for later'}"
-                    >${saved ? '★ Saved' : '☆ Save'}</button>
-                </span>
+                <span>${escapeHTML(story.time)}</span>
             </div>
         </article>
     `;
@@ -94,28 +86,4 @@ export function capexChartHTML(rows, chip) {
     let chipText = chip || '$B / YR';
     if (hasEstimate && !/EST/i.test(chipText)) chipText += ' · * EST.';
     return barChartHTML('AI Data Center Buildout', chipText, marked);
-}
-
-export function savedBoxHTML(savedIds, allStories) {
-    if (!savedIds || savedIds.size === 0) return '';
-    const saved = allStories.filter(s => savedIds.has(s.id));
-    if (saved.length === 0) return '';
-    const rows = saved.map(s => `
-        <div class="opinion-item">
-            <h4 class="opinion-title" data-action="open" data-story-id="${escapeHTML(s.id)}">${escapeHTML(s.headline)}</h4>
-            <div class="opinion-author">
-                ${escapeHTML(s.section)}
-                <button class="save-btn saved" style="float:right" data-action="save" data-story-id="${escapeHTML(s.id)}">REMOVE</button>
-            </div>
-        </div>
-    `).join('');
-    return `
-        <aside class="box" style="border-color:var(--accent)">
-            <div class="box-title" style="border-bottom-color:var(--accent)">
-                <span>Your Clippings</span>
-                <span class="chip">${savedIds.size} SAVED</span>
-            </div>
-            ${rows}
-        </aside>
-    `;
 }
