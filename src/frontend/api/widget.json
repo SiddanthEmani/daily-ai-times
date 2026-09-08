@@ -1,23 +1,23 @@
 {
-  "updated": "2026-09-07T21:17:19.743422+00:00",
+  "updated": "2026-09-08T02:09:01.205670+00:00",
   "top_stories": [
     {
-      "article_id": "d2081ad8ccbd4fa60cc3dd224652c592",
-      "title": "H Company Releases NeoMME: A Family of 260M and 800M Single-Tower Multimodal Encoders That Drop the Vision Tower and Causal Decoder",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/09/06/h-company-releases-neomme-a-family-of-260m-and-800m-single-tower-multimodal-encoders-that-drop-the-vision-tower-and-causal-decoder/",
-      "published_date": "2026-09-06T21:06:41+00:00",
-      "category": "Industry",
-      "description": "We look at NeoMME, a family of 260M and 800M bidirectional encoders from H Company. Unlike ColPali-style retrievers, it processes multilingual text tokens and raw 32×32 image patches in a single Transformer, with no pretrained vision tower and no causal decoder. We cover the masked discrete-diffusion pretraining objective, the dual dense and late-interaction retrieval heads, and the ViDoRe v3 results where the 260M model reaches 0.523 nDCG@10. We also break down the 255× index compression, the...",
-      "author": "Asif Razzaq",
-      "content": "We look at NeoMME, a family of 260M and 800M bidirectional encoders from H Company. Unlike ColPali-style retrievers, it processes multilingual text tokens and raw 32×32 image patches in a single Transformer, with no pretrained vision tower and no causal decoder. We cover the masked discrete-diffusion pretraining objective, the dual dense and late-interaction retrieval heads, and the ViDoRe v3 results where the 260M model reaches 0.523 nDCG@10. We also break down the 255× index compression, the...",
+      "article_id": "82eb09b423d7a8ad29c6789cb5a8d23a",
+      "title": "Seattle Times and Newsday sue OpenAI and Microsoft for infringement",
+      "source": "the_verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft",
+      "published_date": "2026-09-06T23:36:04+00:00",
+      "category": "Media",
+      "description": "The Seattle Times and Newsday are just the latest plaintiffs to take OpenAI to court, alleging copyright infringement. The two outlets say the company used their journalism as training data for its AI models without permission and often reproduces passages from their reporting in response to user queries. This is similar to lawsuits filed by […]",
+      "author": "Terrence O’Brien",
+      "content": "The Seattle Times and Newsday are just the latest plaintiffs to take OpenAI to court, alleging copyright infringement. The two outlets say the company used their journalism as training data for its AI models without permission and often reproduces passages from their reporting in response to user queries. This is similar to lawsuits filed by […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.85,
-        "quality_score": 0.78,
-        "novelty_score": 0.72,
+        "quality_score": 0.8,
+        "novelty_score": 0.78,
         "impact_score": 0.88,
-        "overall_score": 0.806,
-        "confidence_mean": 0.82
+        "overall_score": 0.8260000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-07T21:17:19.650172+00:00"
+        "consensus_timestamp": "2026-09-08T02:09:01.089356+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +59,71 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-07T21:17:19.650173+00:00"
+        "timestamp": "2026-09-08T02:09:01.089358+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "63df633ac9f83f3249068ad75e6ce6a0",
+      "title": "NVIDIA to Acquire Hugging Face",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "published_date": "2026-09-03T11:56:49+00:00",
+      "category": "Industry",
+      "description": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide. Over the past decade, Clem, Julien, Thomas and the team at Hugging Face have built something remarkable: a vibrant home for […]",
+      "author": "黄仁勋",
+      "content": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide. Over the past decade, Clem, Julien, Thomas and the team at Hugging Face have built something remarkable: a vibrant home for […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.92,
+        "novelty_score": 0.88,
+        "impact_score": 0.97,
+        "overall_score": 0.929,
+        "confidence_mean": 0.93
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-08T02:09:01.082441+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-08T02:09:01.082444+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "bdbf7ef3a8cd259adae318e2b9980851",
@@ -74,12 +136,12 @@
       "author": "",
       "content": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instability about 200 milliseconds before it appeared and adjusted the plasma to stop it from forming.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.94,
-        "novelty_score": 0.88,
-        "impact_score": 0.95,
-        "overall_score": 0.921,
-        "confidence_mean": 0.94
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.9025000000000001,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-07T21:17:19.657550+00:00"
+        "consensus_timestamp": "2026-09-08T02:09:01.092631+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,7 +183,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-07T21:17:19.657552+00:00"
+        "timestamp": "2026-09-08T02:09:01.092633+00:00"
       },
       "article_type": "article"
     },
@@ -136,12 +198,74 @@
       "author": "",
       "content": "MIT researchers have created bacterial “transistors” that can be wired together into living circuits capable of performing calculations and directing chemical signals. One day, these biological computers could coat plant roots or leaves, detecting environmental threats and automatically triggering defenses.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
+        "relevance_score": 0.9,
         "quality_score": 0.9,
+        "novelty_score": 0.9,
+        "impact_score": 0.9,
+        "overall_score": 0.9,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-08T02:09:01.092587+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-08T02:09:01.092590+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "bafe81cd915dc58c0160a3f5e7f84313",
+      "title": "Nvidia confirms $12.9B acquisition of AI hosting platform Hugging Face",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/09/03/nvidia-confirms-12-9b-acquisition-of-ai-hosting-platform-hugging-face/",
+      "published_date": "2026-09-03T20:25:34+00:00",
+      "category": "Industry",
+      "description": "Nvidia Corp. today confirmed that it has agreed to buy Hugging Face Inc. for just over $12.93 billion. CNBC reported that the acquisition talks began a few weeks ago. Rumors that a deal was in the works surfaced last Monday, when sources tipped off Business Insider about the discussions. Two days later, The Information reported […] The post Nvidia confirms $12.9B acquisition of AI hosting platform Hugging Face appeared first on SiliconANGLE.",
+      "author": "Maria Deutscher",
+      "content": "Nvidia Corp. today confirmed that it has agreed to buy Hugging Face Inc. for just over $12.93 billion. CNBC reported that the acquisition talks began a few weeks ago. Rumors that a deal was in the works surfaced last Monday, when sources tipped off Business Insider about the discussions. Two days later, The Information reported […] The post Nvidia confirms $12.9B acquisition of AI hosting platform Hugging Face appeared first on SiliconANGLE.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.93,
+        "quality_score": 0.88,
         "novelty_score": 0.85,
-        "impact_score": 0.92,
-        "overall_score": 0.8855000000000001,
-        "confidence_mean": 0.92
+        "impact_score": 0.95,
+        "overall_score": 0.9015,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-07T21:17:19.657515+00:00"
+        "consensus_timestamp": "2026-09-08T02:09:01.085581+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,131 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-07T21:17:19.657517+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "721e774e5f8692a84b54e98bd9dfa4c5",
-      "title": "NVIDIA to acquire Hugging Face for $12.93B",
-      "source": "ai_news",
-      "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
-      "published_date": "2026-09-03T15:50:31+00:00",
-      "category": "Media",
-      "description": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure investment, aiming to expand AI access for enterprise developers, software engineers, and research institutions globally. Built over the past decade by Clem Delangue, Julien Chaumond, Thomas Wolf, and their […] The post NVIDIA to acquire Hugging Face for $12.93B appeared first on AI News.",
-      "author": "Ryan Daws",
-      "content": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure investment, aiming to expand AI access for enterprise developers, software engineers, and research institutions globally. Built over the past decade by Clem Delangue, Julien Chaumond, Thomas Wolf, and their […] The post NVIDIA to acquire Hugging Face for $12.93B appeared first on AI News.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-07T21:17:19.651920+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-07T21:17:19.651921+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "51e50c1c45409b96feb3b1e518315f9c",
-      "title": "ChatGPT Ads passes $1B run rate in 200 days",
-      "source": "ai_news",
-      "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/",
-      "published_date": "2026-09-01T16:05:27+00:00",
-      "category": "Media",
-      "description": "ChatGPT Ads has hit $1 billion in annualised revenue run rate in under 200 days, and OpenAI is expanding self-service ads to new regions. Tens of thousands of advertisers now use the platform and self-service access through Ads Manager is launching today in India, Europe, the Middle East, and North Africa. According to OpenAI, people […] The post ChatGPT Ads passes $1B run rate in 200 days appeared first on AI News.",
-      "author": "Ryan Daws",
-      "content": "ChatGPT Ads has hit $1 billion in annualised revenue run rate in under 200 days, and OpenAI is expanding self-service ads to new regions. Tens of thousands of advertisers now use the platform and self-service access through Ads Manager is launching today in India, Europe, the Middle East, and North Africa. According to OpenAI, people […] The post ChatGPT Ads passes $1B run rate in 200 days appeared first on AI News.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.95
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-07T21:17:19.651981+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-07T21:17:19.651983+00:00"
+        "timestamp": "2026-09-08T02:09:01.085584+00:00"
       },
       "article_type": "article"
     }
