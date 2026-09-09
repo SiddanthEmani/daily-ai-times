@@ -1,89 +1,27 @@
 {
-  "generated_at": "2026-09-09T10:38:33.304524+00:00",
+  "generated_at": "2026-09-09T20:33:29.023211+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1818
+    "issue_number": 1819
   },
   "articles": [
     {
-      "article_id": "98f69e92ef8a600d63263fbba645b68f",
-      "title": "OpenBMB Releases MiniCPM5-2B: A 2.52B Dense Model Averaging 53.9 Across 34 Benchmarks and Built to Run On Device",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/09/07/openbmb-releases-minicpm5-2b-a-2-52b-dense-model-averaging-53-9-across-34-benchmarks-and-built-to-run-on-device/",
-      "published_date": "2026-09-07T19:18:07+00:00",
-      "category": "Industry",
-      "description": "OpenBMB has released MiniCPM5-2B, a dense causal language model with 2,516,756,480 parameters and a native 131,072 token context. It averages 53.9 across the 34 benchmarks in its model card, ahead of Qwen3.5-4B at 51.1, with its clearest leads in tool use, coding agents and long-context retrieval. Post-training pairs 400B tokens of deep-thinking SFT with RL teachers and on-policy distillation that merges 16 expert models into one checkpoint. The weights ship under Apache 2.0 alongside the...",
-      "author": "Sana Hassan",
-      "content": "OpenBMB has released MiniCPM5-2B, a dense causal language model with 2,516,756,480 parameters and a native 131,072 token context. It averages 53.9 across the 34 benchmarks in its model card, ahead of Qwen3.5-4B at 51.1, with its clearest leads in tool use, coding agents and long-context retrieval. Post-training pairs 400B tokens of deep-thinking SFT with RL teachers and on-policy distillation that merges 16 expert models into one checkpoint. The weights ship under Apache 2.0 alongside the...",
+      "article_id": "ec9ac331e351274dc400874c1bc472aa",
+      "title": "I Let an AI Agent Hack All My Gadgets—and I’d Do It Again",
+      "source": "wired_ai",
+      "url": "https://www.wired.com/story/i-used-ai-to-hack-my-home-network/",
+      "published_date": "2026-09-09T18:30:00+00:00",
+      "category": "Media",
+      "description": "After I removed the safety guardrails from a powerful open-source model, it found vulnerabilities in my household devices and hacked into a PC. But it also told me how to make everything a lot more secure.",
+      "author": "Will Knight",
+      "content": "After I removed the safety guardrails from a powerful open-source model, it found vulnerabilities in my household devices and hacked into a PC. But it also told me how to make everything a lot more secure.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.95,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8775000000000001,
-        "confidence_mean": 0.97
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.88,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.216232+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.728,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.216234+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "bdbf7ef3a8cd259adae318e2b9980851",
-      "title": "AI can now control fusion plasma faster than humans can react",
-      "source": "sciencedaily_robotics",
-      "url": "https://www.sciencedaily.com/releases/2026/09/260903064215.htm",
-      "published_date": "2026-09-06T07:28:43+00:00",
-      "category": "Open Source",
-      "description": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instability about 200 milliseconds before it appeared and adjusted the plasma to stop it from forming.",
-      "author": "",
-      "content": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instability about 200 milliseconds before it appeared and adjusted the plasma to stop it from forming.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
+        "relevance_score": 0.88,
+        "quality_score": 0.8,
         "novelty_score": 0.85,
-        "impact_score": 0.92,
-        "overall_score": 0.8865000000000001,
+        "impact_score": 0.9,
+        "overall_score": 0.8565,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -115,7 +53,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.222293+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.895393+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -126,26 +64,212 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.222294+00:00"
+        "timestamp": "2026-09-09T20:33:28.895395+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "721e774e5f8692a84b54e98bd9dfa4c5",
+      "title": "NVIDIA to acquire Hugging Face for $12.93B",
+      "source": "ai_news",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/",
+      "published_date": "2026-09-03T15:50:31+00:00",
+      "category": "Media",
+      "description": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure investment, aiming to expand AI access for enterprise developers, software engineers, and research institutions globally. Built over the past decade by Clem Delangue, Julien Chaumond, Thomas Wolf, and their […] The post NVIDIA to acquire Hugging Face for $12.93B appeared first on AI News.",
+      "author": "Ryan Daws",
+      "content": "NVIDIA has agreed to acquire Hugging Face for $12.93 billion to scale the open-source model repository’s platform and infrastructure. The transaction targets platform growth and infrastructure investment, aiming to expand AI access for enterprise developers, software engineers, and research institutions globally. Built over the past decade by Clem Delangue, Julien Chaumond, Thomas Wolf, and their […] The post NVIDIA to acquire Hugging Face for $12.93B appeared first on AI News.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.96,
+        "overall_score": 0.9145000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.892945+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.892947+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "63df633ac9f83f3249068ad75e6ce6a0",
-      "title": "NVIDIA to Acquire Hugging Face",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
-      "published_date": "2026-09-03T11:56:49+00:00",
+      "article_id": "bdbf7ef3a8cd259adae318e2b9980851",
+      "title": "AI can now control fusion plasma faster than humans can react",
+      "source": "sciencedaily_robotics",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260903064215.htm",
+      "published_date": "2026-09-06T07:28:43+00:00",
+      "category": "Open Source",
+      "description": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instability about 200 milliseconds before it appeared and adjusted the plasma to stop it from forming.",
+      "author": "",
+      "content": "Princeton researchers have tested an AI system that can monitor and control fusion plasma in milliseconds, reacting far faster than a human operator. In one experiment, it predicted a damaging instability about 200 milliseconds before it appeared and adjusted the plasma to stop it from forming.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.91,
+        "novelty_score": 0.85,
+        "impact_score": 0.92,
+        "overall_score": 0.8880000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.898444+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.898446+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b51c7e76843b42d155d3c65ebb3b4c53",
+      "title": "GPT-6 Astra Is Here—and OpenAI Thinks It May Kick Off the AGI Era",
+      "source": "wired_ai",
+      "url": "https://www.wired.com/story/openai-says-gpt-6-can-use-a-computer-better-than-a-human/",
+      "published_date": "2026-09-03T18:06:24+00:00",
+      "category": "Media",
+      "description": "OpenAI leaders think the company’s next generation model, which excels at computer use and coding, may mark a major milestone in AI development.",
+      "author": "Maxwell Zeff",
+      "content": "OpenAI leaders think the company’s next generation model, which excels at computer use and coding, may mark a major milestone in AI development.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.88,
+        "impact_score": 0.92,
+        "overall_score": 0.8865000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.895542+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.895544+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "636128cff9f14140395a51142b2e5fdd",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "published_date": "2026-09-03T13:15:00+00:00",
       "category": "Industry",
-      "description": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide. Over the past decade, Clem, Julien, Thomas and the team at Hugging Face have built something remarkable: a vibrant home for […]",
-      "author": "黄仁勋",
-      "content": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide. Over the past decade, Clem, Julien, Thomas and the team at Hugging Face have built something remarkable: a vibrant home for […]",
+      "description": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "author": "",
+      "content": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.92,
-        "overall_score": 0.8665000000000002,
+        "impact_score": 0.95,
+        "overall_score": 0.8725,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -153,15 +277,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -173,57 +297,57 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.62,
-        "confidence": 0.7,
+        "score": 0.5,
+        "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.214403+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.888353+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5720000000000001,
-        "combined_confidence": 0.62,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.214405+00:00"
+        "timestamp": "2026-09-09T20:33:28.888356+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2a059ca092170c4be76acfb086542e7a",
-      "title": "Meta Introduces Muse, a Personal AI Agent That Runs on Its Own Dedicated Secure Cloud Computer",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/09/08/meta-introduces-muse-a-personal-ai-agent-that-runs-on-its-own-dedicated-secure-cloud-computer/",
-      "published_date": "2026-09-09T04:38:13+00:00",
+      "article_id": "536f06b8c22f343b083e2cca47a4f020",
+      "title": "Developing provably correct Rust code with Verus",
+      "source": "amazon_science",
+      "url": "https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus",
+      "published_date": "2026-08-31T15:35:33+00:00",
       "category": "Industry",
-      "description": "Today, Meta has introduced Muse, a personal AI agent that takes actions rather than just answering questions. Muse can send emails, book travel, negotiate bills, and pursue long term goals. It keeps working after you close the app and returns only when it needs approval. The bigger story for AI devs is architectural. Each user […] The post Meta Introduces Muse, a Personal AI Agent That Runs on Its Own Dedicated Secure Cloud Computer appeared first on MarkTechPost.",
-      "author": "Michal Sutter",
-      "content": "Today, Meta has introduced Muse, a personal AI agent that takes actions rather than just answering questions. Muse can send emails, book travel, negotiate bills, and pursue long term goals. It keeps working after you close the app and returns only when it needs approval. The bigger story for AI devs is architectural. Each user […] The post Meta Introduces Muse, a Personal AI Agent That Runs on Its Own Dedicated Secure Cloud Computer appeared first on MarkTechPost.",
+      "description": "How the Verus \"program verifier\", which automatically checks code against a mathematical specification of its functionality, helps increase security assurance in software projects.",
+      "author": "",
+      "content": "How the Verus \"program verifier\", which automatically checks code against a mathematical specification of its functionality, helps increase security assurance in software projects.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
-        "novelty_score": 0.7,
-        "impact_score": 0.8,
-        "overall_score": 0.83,
-        "confidence_mean": 0.95
+        "novelty_score": 0.8,
+        "impact_score": 0.85,
+        "overall_score": 0.85,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -235,22 +359,84 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.81,
-        "confidence": 0.88,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.216106+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.891028+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6859999999999999,
-        "combined_confidence": 0.728,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.216108+00:00"
+        "timestamp": "2026-09-09T20:33:28.891030+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "29da60714b3af23ab78f1dcb5a5ca29b",
+      "title": "MIT turns bacteria into living transistors",
+      "source": "sciencedaily_neural",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260901070526.htm",
+      "published_date": "2026-09-04T11:52:39+00:00",
+      "category": "Open Source",
+      "description": "MIT researchers have created bacterial “transistors” that can be wired together into living circuits capable of performing calculations and directing chemical signals. One day, these biological computers could coat plant roots or leaves, detecting environmental threats and automatically triggering defenses.",
+      "author": "",
+      "content": "MIT researchers have created bacterial “transistors” that can be wired together into living circuits capable of performing calculations and directing chemical signals. One day, these biological computers could coat plant roots or leaves, detecting environmental threats and automatically triggering defenses.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.88,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8550000000000001,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.898382+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.898385+00:00"
       },
       "article_type": "article"
     },
@@ -265,74 +451,12 @@
       "author": "Andrew Lovell",
       "content": "Three separate research teams have now caught agentic AI resisting shutdown, blackmailing supervisors, and copying its own weights to escape deletion. Here's what the findings mean for AI governance, and the checklist leaders should run before expanding AI agent autonomy...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.92,
-        "overall_score": 0.8540000000000001,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.55,
-        "confidence": 0.6,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.216607+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.53,
-        "combined_confidence": 0.56,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.216610+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0ebe3da5b90b0283a46c9ee4ea74d463",
-      "title": "IBM quantum computer solves classically intractable problem in 15 minutes",
-      "source": "sciencedaily_ai",
-      "url": "https://www.sciencedaily.com/releases/2026/08/260829035219.htm",
-      "published_date": "2026-08-30T14:08:13+00:00",
-      "category": "Open Source",
-      "description": "IBM and University of Chicago researchers have completed a quantum computation that leading classical methods could not practically reproduce. The system used 70 error-corrected logical qubits and finished the task in roughly 15 minutes while also providing statistical evidence that the result was reliable.",
-      "author": "",
-      "content": "IBM and University of Chicago researchers have completed a quantum computation that leading classical methods could not practically reproduce. The system used 70 error-corrected logical qubits and finished the task in roughly 15 minutes while also providing statistical evidence that the result was reliable.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.85,
+        "relevance_score": 0.89,
+        "quality_score": 0.84,
         "novelty_score": 0.8,
-        "impact_score": 0.89,
-        "overall_score": 0.8545000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.91,
+        "overall_score": 0.8590000000000001,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -363,7 +487,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.222387+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.892102+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -374,88 +498,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.222389+00:00"
+        "timestamp": "2026-09-09T20:33:28.892104+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d7024a65edc31fcf45e53a0b0feed4e5",
-      "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
-      "source": "deepmind_research",
-      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
-      "published_date": "2026-09-08T14:00:15+00:00",
-      "category": "Industry",
-      "description": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "author": "",
-      "content": "AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8350000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.215756+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.215758+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "c6b5bfd2472a3b1e80fd26dd62da13e3",
-      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
-      "source": "techcrunch_startups",
-      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
-      "published_date": "2026-09-02T22:44:56+00:00",
-      "category": "Startups",
-      "description": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
-      "author": "Marina Temkin",
-      "content": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "article_id": "e5bb76af20fde21270629fd63653a099",
+      "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
+      "source": "ai_news",
+      "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/",
+      "published_date": "2026-09-08T09:00:00+00:00",
+      "category": "Media",
+      "description": "Google’s newest AI weather forecasting model predicts wind speed at 100 metres above the ground, roughly the height of a modern wind turbine. It also forecasts cloud cover and how much sunlight reaches the surface, and it updates every hour. Energy traders, grid operators and wind and solar developers already pay other companies for that […] The post AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3 appeared first on AI News.",
+      "author": "Dashveenjit Kaur",
+      "content": "Google’s newest AI weather forecasting model predicts wind speed at 100 metres above the ground, roughly the height of a modern wind turbine. It also forecasts cloud cover and how much sunlight reaches the surface, and it updates every hour. Energy traders, grid operators and wind and solar developers already pay other companies for that […] The post AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3 appeared first on AI News.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.88,
-        "overall_score": 0.8335,
+        "quality_score": 0.84,
+        "novelty_score": 0.78,
+        "impact_score": 0.9,
+        "overall_score": 0.8550000000000001,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -463,15 +525,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -483,42 +545,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
-        "confidence": 0.92,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.217657+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.892735+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
-        "combined_confidence": 0.752,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.217659+00:00"
+        "timestamp": "2026-09-09T20:33:28.892737+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "35f28b052b2e1b62a926a52f9af65ef5",
-      "title": "Former Apple Engineers’ Physical AI Startup Lyte Raises $165M At $1.6B Valuation",
-      "source": "crunchbase_news",
-      "url": "https://news.crunchbase.com/venture/robotics-ai-startup-lyte-seriesc-raise-maverick/",
-      "published_date": "2026-09-02T17:34:29+00:00",
-      "category": "Startups",
-      "description": "Lyte, a physical AI startup building sensing and perception technology for robots, has raised a Maverick Silicon-led $165 million Series C funding at a $1.6 billion post-money valuation.",
-      "author": "Judy Rider",
-      "content": "Lyte, a physical AI startup building sensing and perception technology for robots, has raised a Maverick Silicon-led $165 million Series C funding at a $1.6 billion post-money valuation.",
+      "article_id": "fc5530fb5a63e656eb0fec11269d65ea",
+      "title": "8 stats that show AI got  smarter faster than it got safer",
+      "source": "ai_accelerator_institute",
+      "url": "https://www.aiacceleratorinstitute.com/8-stats-that-show-ai-got-smarter-faster-than-it-got-safer-2/",
+      "published_date": "2026-09-08T12:45:18+00:00",
+      "category": "Industry",
+      "description": "SWE-bench just crossed the 100% line and code security is still stuck at 56%. Eight numbers that show exactly where AI's capability outran everyone's ability to trust it, and what to do about the gap.",
+      "author": "Andrew Lovell",
+      "content": "SWE-bench just crossed the 100% line and code security is still stuck at 56%. Eight numbers that show exactly where AI's capability outran everyone's ability to trust it, and what to do about the gap.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.87,
-        "quality_score": 0.84,
-        "novelty_score": 0.78,
-        "impact_score": 0.89,
-        "overall_score": 0.844,
-        "confidence_mean": 0.91
+        "relevance_score": 0.9,
+        "quality_score": 0.83,
+        "novelty_score": 0.79,
+        "impact_score": 0.92,
+        "overall_score": 0.8590000000000001,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -549,7 +611,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.217820+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.891912+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -560,26 +622,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.217822+00:00"
+        "timestamp": "2026-09-09T20:33:28.891914+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2084159aeefc891cb7162fe38ed38c6c",
-      "title": "NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/",
-      "published_date": "2026-09-01T21:19:20+00:00",
+      "article_id": "0187c55f7b9a3e83445bfc947d077049",
+      "title": "Enterprise AI transformation relies on the end-to-end platform: Azure was built for this moment",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/enterprise-ai-transformation-relies-on-the-end-to-end-platform-azure-was-built-for-this-moment/",
+      "published_date": "2026-09-03T19:00:00+00:00",
       "category": "Industry",
-      "description": "“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike SafeMind, its agentic cybersecurity system developed by the CrowdStrike Cyber […]",
-      "author": "Brian Caulfield",
-      "content": "“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike SafeMind, its agentic cybersecurity system developed by the CrowdStrike Cyber […]",
+      "description": "The recognition for Microsoft over the past couple of weeks comes down to models, infrastructure, data, applications, and developer tools working as one system when AI moves into production. The post Enterprise AI transformation relies on the end-to-end platform: Azure was built for this moment appeared first on Microsoft Azure Blog.",
+      "author": "Jeremy Winter",
+      "content": "The recognition for Microsoft over the past couple of weeks comes down to models, infrastructure, data, applications, and developer tools working as one system when AI moves into production. The post Enterprise AI transformation relies on the end-to-end platform: Azure was built for this moment appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.87,
-        "quality_score": 0.83,
-        "novelty_score": 0.79,
-        "impact_score": 0.91,
-        "overall_score": 0.8480000000000001,
+        "relevance_score": 0.88,
+        "quality_score": 0.84,
+        "novelty_score": 0.8,
+        "impact_score": 0.92,
+        "overall_score": 0.858,
         "confidence_mean": 0.87
       },
       "combined_deep_intelligence": {
@@ -587,15 +649,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -607,165 +669,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.79,
-        "confidence": 0.86,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.214436+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.888725+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6739999999999999,
-        "combined_confidence": 0.716,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.214438+00:00"
+        "timestamp": "2026-09-09T20:33:28.888727+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "25bde0944404e59e7703b81cb818f2cd",
-      "title": "Take on your most ambitious work with GPT-6 Astra on Amazon Bedrock",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
-      "published_date": "2026-09-08T22:06:58+00:00",
-      "category": "Industry",
-      "description": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built for high performance, security, and scale.",
-      "author": "Tanvi Girinath",
-      "content": "GPT-6 Astra from OpenAI is now generally available on Amazon Bedrock. It brings deeper reasoning and sharper judgment to your most demanding tasks, running on the Amazon Bedrock inference engine built for high performance, security, and scale.",
+      "article_id": "bfcf5777a3195e3aa4902a6a9ec7c61f",
+      "title": "CloudNC aims to accelerate AI supply chain machining",
+      "source": "ai_news",
+      "url": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/",
+      "published_date": "2026-09-09T10:34:20+00:00",
+      "category": "Media",
+      "description": "CloudNC has secured $20 million in new capital to scale its AI precision machining technology across global supply chain networks. The investment round was led by US venture investor Nimble Ventures, with participation from Calculus Venture Capital, Entrepreneur First, and LM Ventures, the venture capital fund of Lockheed Martin. Founded in 2015, CloudNC operates from […] The post CloudNC aims to accelerate AI supply chain machining appeared first on AI News.",
+      "author": "Ryan Daws",
+      "content": "CloudNC has secured $20 million in new capital to scale its AI precision machining technology across global supply chain networks. The investment round was led by US venture investor Nimble Ventures, with participation from Calculus Venture Capital, Entrepreneur First, and LM Ventures, the venture capital fund of Lockheed Martin. Founded in 2015, CloudNC operates from […] The post CloudNC aims to accelerate AI supply chain machining appeared first on AI News.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.92,
         "quality_score": 0.81,
         "novelty_score": 0.75,
-        "impact_score": 0.92,
-        "overall_score": 0.8440000000000001,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.81,
-        "confidence": 0.84,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.213708+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6859999999999999,
-        "combined_confidence": 0.704,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.213710+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b78d8378fa26eb71d0f64e3569c460b3",
-      "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-      "published_date": "2026-09-03T16:00:59+00:00",
-      "category": "Industry",
-      "description": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in October to give AI enthusiasts, developers and creators […]",
-      "author": "Gerardo Delgado",
-      "content": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in October to give AI enthusiasts, developers and creators […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.82,
-        "novelty_score": 0.78,
-        "impact_score": 0.9,
-        "overall_score": 0.844,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.78,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.214341+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6679999999999999,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.214343+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a9a07728727b422c234519a5f3bd269e",
-      "title": "Mistral AI Raises $3.5B At $24B Valuation In Another Record European AI Round",
-      "source": "crunchbase_news",
-      "url": "https://news.crunchbase.com/venture/europe-record-setting-mistral-ai-raise/",
-      "published_date": "2026-09-08T18:02:38+00:00",
-      "category": "Startups",
-      "description": "Paris-based generative AI startup Mistral AI said Tuesday that it has nearly doubled its valuation to more than $24 billion with a Samsung Electronics-led $3.5 billion Series D fundraise.",
-      "author": "Judy Rider",
-      "content": "Paris-based generative AI startup Mistral AI said Tuesday that it has nearly doubled its valuation to more than $24 billion with a Samsung Electronics-led $3.5 billion Series D fundraise.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.83,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8390000000000001,
+        "impact_score": 0.88,
+        "overall_score": 0.8420000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -797,7 +735,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.217692+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.892609+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -808,42 +746,42 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.217694+00:00"
+        "timestamp": "2026-09-09T20:33:28.892610+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f08eee3464f5592293cef3a5fa8f3df8",
-      "title": "Build a Physical AI model factory with NVIDIA Cosmos 3 on SageMaker HyperPod",
-      "source": "aws_ml_blog",
-      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-physical-ai-model-factory-with-nvidia-cosmos-3-on-sagemaker-hyperpod/",
-      "published_date": "2026-09-04T16:16:00+00:00",
+      "article_id": "49c6908a13df05eb333f60d716f24d3e",
+      "title": "GPT-6 Astra: Frontier intelligence for work, now generally available in Microsoft Foundry",
+      "source": "azure_ai_blog",
+      "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-frontier-intelligence-for-work-now-generally-available-in-microsoft-foundry/",
+      "published_date": "2026-09-03T18:15:00+00:00",
       "category": "Industry",
-      "description": "Building a Physical AI system takes a continuous pipeline, not a single training job. This post shows how to run that model factory (synthetic data generation, post-training, and closed-loop evaluation with NVIDIA Cosmos 3) on a persistent, resilient Amazon SageMaker HyperPod cluster on Amazon EKS, with GPU goodput as the metric that matters.",
-      "author": "Nathan Arnold",
-      "content": "Building a Physical AI system takes a continuous pipeline, not a single training job. This post shows how to run that model factory (synthetic data generation, post-training, and closed-loop evaluation with NVIDIA Cosmos 3) on a persistent, resilient Amazon SageMaker HyperPod cluster on Amazon EKS, with GPU goodput as the metric that matters.",
+      "description": "GPT-6 Astra, OpenAI's newest frontier model, begins rolling out today through the Microsoft Foundry Limited Access Program, with availability expanding to participating customers over the coming days. The post GPT-6 Astra: Frontier intelligence for work, now generally available in Microsoft Foundry appeared first on Microsoft Azure Blog.",
+      "author": "Steve Sweetman and Naomi Moneypenny",
+      "content": "GPT-6 Astra, OpenAI's newest frontier model, begins rolling out today through the Microsoft Foundry Limited Access Program, with availability expanding to participating customers over the coming days. The post GPT-6 Astra: Frontier intelligence for work, now generally available in Microsoft Foundry appeared first on Microsoft Azure Blog.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.82,
-        "novelty_score": 0.76,
+        "relevance_score": 0.86,
+        "quality_score": 0.83,
+        "novelty_score": 0.79,
         "impact_score": 0.91,
-        "overall_score": 0.8410000000000001,
-        "confidence_mean": 0.86
+        "overall_score": 0.8450000000000001,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -855,103 +793,103 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.77,
-        "confidence": 0.84,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.214026+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.888759+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6619999999999999,
-        "combined_confidence": 0.704,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.214028+00:00"
+        "timestamp": "2026-09-09T20:33:28.888761+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "78774dd926eb1156871ec4ef72ea2541",
-      "title": "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron/",
-      "published_date": "2026-09-01T17:00:04+00:00",
-      "category": "Industry",
-      "description": "AI is changing the pace of cybersecurity. Agentic systems can coordinate work and pursue complex objectives over long horizons. Security teams are beginning to...",
-      "author": "Michelle Horton",
-      "content": "AI is changing the pace of cybersecurity. Agentic systems can coordinate work and pursue complex objectives over long horizons. Security teams are beginning to...",
+      "article_id": "ae836d1562822a235a02d74b90c0cbc7",
+      "title": "The Crunchbase Tech Layoffs Tracker",
+      "source": "crunchbase_news",
+      "url": "https://news.crunchbase.com/startups/tech-layoffs/",
+      "published_date": "2026-09-09T15:56:30+00:00",
+      "category": "Startups",
+      "description": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+      "author": "Crunchbase News",
+      "content": "Over 127,000 workers at U.S.-based tech companies were laid off in mass job cuts in 2025, per a Crunchbase News tally, and the layoffs have continued into 2026. See the latest companies to cut roles.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.6,
+        "impact_score": 0.85,
+        "overall_score": 0.81,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.893478+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.893480+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "029f63a60faf3aac7478578a885bd03b",
+      "title": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on Open-Source AI",
+      "source": "wired_ai",
+      "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
+      "published_date": "2026-09-03T12:43:09+00:00",
+      "category": "Media",
+      "description": "The long-rumored deal will give the chip giant access to—and help it promote—a huge repository of open-source AI models and data sets.",
+      "author": "Lauren Goode",
+      "content": "The long-rumored deal will give the chip giant access to—and help it promote—a huge repository of open-source AI models and data sets.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.88,
         "quality_score": 0.82,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8365,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.77,
-        "confidence": 0.84,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.215447+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6619999999999999,
-        "combined_confidence": 0.704,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.215449+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "6f6c3e41b8ccdc9347822606cfa03395",
-      "title": "SAFEGuard: Detect Optimization-Based Jailbreak Attacks Through Harmful Semantic Analysis and Fluency Measurement",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2609.05850",
-      "published_date": "2026-09-09T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2609.05850v1 Announce Type: new Abstract: Despite the significant efforts devoted to aligning large language models (LLMs) with human values and ensuring safe deployment, recent work has revealed that LLMs remain vulnerable to adversarial jailbreak attacks that can bypass safety guardrails and elicit harmful responses. Many defense methods are proposed to detect jailbreaks but they are limited in their effectiveness to counter wide-range optimization-based jailbreak mechanisms that can...",
-      "author": "Quoc Viet Vo, Trung Le, Damith C. Ranasinghe, Ehsan Abbasnejad",
-      "content": "arXiv:2609.05850v1 Announce Type: new Abstract: Despite the significant efforts devoted to aligning large language models (LLMs) with human values and ensuring safe deployment, recent work has revealed that LLMs remain vulnerable to adversarial jailbreak attacks that can bypass safety guardrails and elicit harmful responses. Many defense methods are proposed to detect jailbreaks but they are limited in their effectiveness to counter wide-range optimization-based jailbreak mechanisms that can...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.83,
-        "quality_score": 0.88,
         "novelty_score": 0.8,
-        "impact_score": 0.82,
-        "overall_score": 0.8330000000000001,
+        "impact_score": 0.85,
+        "overall_score": 0.8390000000000001,
         "confidence_mean": 0.91
       },
       "combined_deep_intelligence": {
@@ -983,7 +921,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223968+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.895605+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -994,7 +932,69 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223970+00:00"
+        "timestamp": "2026-09-09T20:33:28.895607+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "98bd63239d09748a37e1311e37bfb6d7",
+      "title": "A Survey on Adversarial Attacks and Defenses for Diffusion Models Across Multiple Modalities",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2609.05503",
+      "published_date": "2026-09-09T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2609.05503v1 Announce Type: new Abstract: Diffusion models have become the dominant family of generative models in the visual domain. However, their widespread public availability enables misuse at scale, motivating a rapidly growing body of research on adversarial attacks and defenses. This survey provides, to our knowledge, the first unified review of this literature across three visual modalities: image, video, and 3D. We introduce a comprehensive, task-centric taxonomy: we first...",
+      "author": "Ozgur Kara, Tarik Can Ozden, Furkan Horoz, Zeqian Long, Haotian Xue, Yipu Chen, Oguzhan Akcin, Yongxin Chen, James Matthew Rehg",
+      "content": "arXiv:2609.05503v1 Announce Type: new Abstract: Diffusion models have become the dominant family of generative models in the visual domain. However, their widespread public availability enables misuse at scale, motivating a rapidly growing body of research on adversarial attacks and defenses. This survey provides, to our knowledge, the first unified review of this literature across three visual modalities: image, video, and 3D. We introduce a comprehensive, task-centric taxonomy: we first...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.8,
+        "novelty_score": 0.75,
+        "impact_score": 0.85,
+        "overall_score": 0.8215,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.932739+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.932741+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1011,11 +1011,11 @@
       "content": "arXiv:2609.05820v1 Announce Type: new Abstract: We study adaptive routing of prompts to large language model (LLM) experts to maximize response quality in an online setting with limited feedback. We formulate it as a bandit problem with $K$ actions that represent experts and $d$ features that encode prompts, over a horizon of $T$ rounds. We propose algorithms that strategically select and observe rewards to minimize regret. In the full-information setting, we achieve a regret of $\\tilde{O}(d T...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.84,
-        "quality_score": 0.86,
-        "novelty_score": 0.81,
-        "impact_score": 0.77,
-        "overall_score": 0.8235,
-        "confidence_mean": 0.9
+        "quality_score": 0.8,
+        "novelty_score": 0.76,
+        "impact_score": 0.83,
+        "overall_score": 0.808,
+        "confidence_mean": 0.89
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1046,7 +1046,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223873+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.933478+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1057,7 +1057,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223874+00:00"
+        "timestamp": "2026-09-09T20:33:28.933480+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1073,74 +1073,11 @@
       "author": "Julie Huang, Maggie Chlon, Leon Chlon",
       "content": "arXiv:2609.06685v1 Announce Type: new Abstract: We derive an exact gradient-step representation of the RoPE-softmax forward pass. For every deterministic RoPE-softmax attention head with arbitrary affine projection weights, we construct a query-dependent effective matrix $\\Delta M_i$ satisfying $y_i = \\mu_i + u_i^\\top \\Delta M_i$, where $\\mu_i$ is the uniform mean of the attended values and $u_i$ is the augmented query input. The construction applies the classical exponential divided difference...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.8,
-        "novelty_score": 0.77,
-        "impact_score": 0.82,
-        "overall_score": 0.8115,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.224221+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.224223+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "23a93dd80d6dc63865287f00adf99d68",
-      "title": "Data Scout: Targeted Web Crawling for Domain-Specific Pretraining Corpora",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2609.05766",
-      "published_date": "2026-09-09T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2609.05766v1 Announce Type: new Abstract: The dominant approach to building domain-specific pretraining corpora is to filter large web archives such as CommonCrawl. This works well for popular domains but breaks down for specialized ones, where relevant content is sparse and often beyond the reach of popularity-driven crawlers. We present Data Scout, which inverts this: instead of filtering an archive, it directs a targeted crawl. An LLM expands a root topic into a taxonomy and thousands...",
-      "author": "Chirag Garg, Eelaaf Zahid, Farhan Ahmed, Jay Pankaj Gala, Eric Butler, Heiko Ludwig",
-      "content": "arXiv:2609.05766v1 Announce Type: new Abstract: The dominant approach to building domain-specific pretraining corpora is to filter large web archives such as CommonCrawl. This works well for popular domains but breaks down for specialized ones, where relevant content is sparse and often beyond the reach of popularity-driven crawlers. We present Data Scout, which inverts this: instead of filtering an archive, it directs a targeted crawl. An LLM expands a root topic into a taxonomy and thousands...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.81,
-        "quality_score": 0.84,
-        "novelty_score": 0.79,
+        "relevance_score": 0.8,
+        "quality_score": 0.82,
+        "novelty_score": 0.78,
         "impact_score": 0.73,
-        "overall_score": 0.7965,
+        "overall_score": 0.7859999999999999,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -1172,7 +1109,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223777+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.934004+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1183,27 +1120,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223779+00:00"
+        "timestamp": "2026-09-09T20:33:28.934006+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "98bd63239d09748a37e1311e37bfb6d7",
-      "title": "A Survey on Adversarial Attacks and Defenses for Diffusion Models Across Multiple Modalities",
+      "article_id": "f90eb026d5683bb0472055cfc24d93c7",
+      "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2609.05503",
+      "url": "https://arxiv.org/abs/2609.05441",
       "published_date": "2026-09-09T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2609.05503v1 Announce Type: new Abstract: Diffusion models have become the dominant family of generative models in the visual domain. However, their widespread public availability enables misuse at scale, motivating a rapidly growing body of research on adversarial attacks and defenses. This survey provides, to our knowledge, the first unified review of this literature across three visual modalities: image, video, and 3D. We introduce a comprehensive, task-centric taxonomy: we first...",
-      "author": "Ozgur Kara, Tarik Can Ozden, Furkan Horoz, Zeqian Long, Haotian Xue, Yipu Chen, Oguzhan Akcin, Yongxin Chen, James Matthew Rehg",
-      "content": "arXiv:2609.05503v1 Announce Type: new Abstract: Diffusion models have become the dominant family of generative models in the visual domain. However, their widespread public availability enables misuse at scale, motivating a rapidly growing body of research on adversarial attacks and defenses. This survey provides, to our knowledge, the first unified review of this literature across three visual modalities: image, video, and 3D. We introduce a comprehensive, task-centric taxonomy: we first...",
+      "description": "arXiv:2609.05441v1 Announce Type: new Abstract: Long-term memory for LLM agents is evaluated today by conversational recall benchmarks (LoCoMo, LongMemEval), which measure question answering over dialogue history, not whether remembered facts change what a tool-using agent does. We present MERIT (Memory Evaluation for Realistic Instrumented Tasks), a benchmark and harness that measures the marginal utility of memory for task-executing agents under explicit cost accounting. MERIT provides...",
+      "author": "Shweta Mishra, Shashank Mishra",
+      "content": "arXiv:2609.05441v1 Announce Type: new Abstract: Long-term memory for LLM agents is evaluated today by conversational recall benchmarks (LoCoMo, LongMemEval), which measure question answering over dialogue history, not whether remembered facts change what a tool-using agent does. We present MERIT (Memory Evaluation for Realistic Instrumented Tasks), a benchmark and harness that measures the marginal utility of memory for task-executing agents under explicit cost accounting. MERIT provides...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.84,
+        "relevance_score": 0.85,
         "quality_score": 0.78,
-        "novelty_score": 0.75,
+        "novelty_score": 0.72,
         "impact_score": 0.8,
-        "overall_score": 0.7945000000000001,
+        "overall_score": 0.79,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -1235,7 +1172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223129+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.932473+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1246,7 +1183,70 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223131+00:00"
+        "timestamp": "2026-09-09T20:33:28.932475+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "cb6358a7db3f47dbe657f0f5f317778a",
+      "title": "Deep Learning for Reflected BSDEs: Regularization and Error Analysis",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2609.05434",
+      "published_date": "2026-09-09T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2609.05434v1 Announce Type: cross Abstract: Reflected backward stochastic differential equations (RBSDEs) provide a probabilistic formulation for obstacle constrained problems, but existing deep learning methods for their high dimensional solution remain limited. In this paper, we propose two deep learning schemes for RBSDEs, a deep forward scheme (DFS) and a deep backward scheme (DBS), by first reducing the reflected problem to a family of regularized BSDEs. Our main theoretical...",
+      "author": "Ruimeng Hu, Yihan Zou",
+      "content": "arXiv:2609.05434v1 Announce Type: cross Abstract: Reflected backward stochastic differential equations (RBSDEs) provide a probabilistic formulation for obstacle constrained problems, but existing deep learning methods for their high dimensional solution remain limited. In this paper, we propose two deep learning schemes for RBSDEs, a deep forward scheme (DFS) and a deep backward scheme (DBS), by first reducing the reflected problem to a family of regularized BSDEs. Our main theoretical...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.78,
+        "novelty_score": 0.72,
+        "impact_score": 0.8,
+        "overall_score": 0.79,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.934300+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.934302+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1262,12 +1262,12 @@
       "author": "Zeyang Li, Yunan Wang, Paolo Giaretta, Navid Azizan",
       "content": "arXiv:2609.05727v1 Announce Type: new Abstract: We develop Newton Matching, a unified framework for fine-tuning and sampling in generative modeling. The target is $\\pi\\propto\\mu e^{\\tau r}$, where $r$ is the reward, $\\tau>0$ the inverse temperature, and $\\mu$ denotes the pretrained model's terminal density for fine-tuning or the constant $1$ for sampling. We shift the paradigm from isolated losses to iterative optimization over canonical models: population minimizers of standard conditional...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.78,
-        "quality_score": 0.81,
-        "novelty_score": 0.74,
-        "impact_score": 0.69,
-        "overall_score": 0.7595,
-        "confidence_mean": 0.85
+        "relevance_score": 0.85,
+        "quality_score": 0.77,
+        "novelty_score": 0.73,
+        "impact_score": 0.81,
+        "overall_score": 0.792,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1298,7 +1298,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223713+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.933342+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1309,7 +1309,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223715+00:00"
+        "timestamp": "2026-09-09T20:33:28.933344+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1325,12 +1325,12 @@
       "author": "Bowei He, Xiaokun Zhang, Meng Ding, Xue Liu",
       "content": "arXiv:2609.05511v1 Announce Type: new Abstract: Web agents need to navigate visually rich, long-horizon interfaces that change across sites, yet most previous agents still learn each task in isolation and discard the procedural knowledge they accumulate. Recent skill-augmented frameworks take an important first step, but they treat the skill library as a flat or two-tier prompt-side cache and offer no principled mechanism for compressing redundancy or composing skills recursively. We introduce...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
-        "quality_score": 0.75,
+        "relevance_score": 0.84,
+        "quality_score": 0.77,
         "novelty_score": 0.71,
-        "impact_score": 0.79,
-        "overall_score": 0.769,
-        "confidence_mean": 0.86
+        "impact_score": 0.82,
+        "overall_score": 0.786,
+        "confidence_mean": 0.89
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1361,7 +1361,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223222+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.932838+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1372,91 +1372,28 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.223224+00:00"
+        "timestamp": "2026-09-09T20:33:28.932840+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "6c3c9113cc9af5050dffa38066fc0868",
-      "title": "Scaling Optimal Classification Trees via Adaptive Feature and Sample Reduction",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2609.05826",
-      "published_date": "2026-09-09T04:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2609.05826v1 Announce Type: new Abstract: Dynamic programming for optimal classification trees becomes computationally expensive as the numbers of features and training samples increase. We develop a joint feature- and sample-space reduction framework based on STreeD. Weighted STreeD merges duplicate records created after projection onto a fixed candidate set into weighted representatives. This reduces sample-dependent computation without changing the fixed-candidate optimization problem....",
-      "author": "Jiancheng Tu, Wenqi Fan",
-      "content": "arXiv:2609.05826v1 Announce Type: new Abstract: Dynamic programming for optimal classification trees becomes computationally expensive as the numbers of features and training samples increase. We develop a joint feature- and sample-space reduction framework based on STreeD. Weighted STreeD merges duplicate records created after projection onto a fixed candidate set into weighted representatives. This reduces sample-dependent computation without changing the fixed-candidate optimization problem....",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.76,
-        "quality_score": 0.79,
-        "novelty_score": 0.72,
-        "impact_score": 0.68,
-        "overall_score": 0.7414999999999999,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.223936+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-09T10:38:33.223938+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "96e5bff164ad638680584cd71ad2f27a",
-      "title": "ARC-Bench: Closed-Loop Replanning Masks Broken Action Ranking in Frozen JEPA World Models",
+      "article_id": "9a3b261f6f4347a487c3f0d805448abe",
+      "title": "When and What to Teach: Budget-Aware Online Adaptation for Web Agents",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2609.05461",
+      "url": "https://arxiv.org/abs/2609.05513",
       "published_date": "2026-09-09T04:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2609.05461v1 Announce Type: new Abstract: Reward-free latent world models plan by scoring candidate actions with distances in a frozen latent space: an action is preferred if its predicted future embedding lands closer to the goal embedding. This silently assumes that latent closeness is action-rankable, i.e., that ordering candidates by latent distance agrees with ordering them by true cost. We audit this assumption directly. We introduce ARC-Bench, a no-leak, fixed-candidate protocol...",
-      "author": "Zhengshu Zhang, Zhiyuan Li",
-      "content": "arXiv:2609.05461v1 Announce Type: new Abstract: Reward-free latent world models plan by scoring candidate actions with distances in a frozen latent space: an action is preferred if its predicted future embedding lands closer to the goal embedding. This silently assumes that latent closeness is action-rankable, i.e., that ordering candidates by latent distance agrees with ordering them by true cost. We audit this assumption directly. We introduce ARC-Bench, a no-leak, fixed-candidate protocol...",
+      "description": "arXiv:2609.05513v1 Announce Type: new Abstract: Web agents have achieved significant success in automating complex internet tasks but deploying them in real-world environments requires continuous online adaptation. Given that deploying powerful proprietary models remains commercially cost-prohibitive, practitioners must rely on lightweight local models that evolve post-deployment via online teaching from a stronger teacher. However, standard interactive feedback imposes prohibitive costs. We...",
+      "author": "Jianwei Zhang, Sihan Cao, Pengcheng Zheng, Ya Wen, Pei Ke, Kuien Liu, Shen Gao, Wei Dong, Yang Yang, Chaoning Zhang",
+      "content": "arXiv:2609.05513v1 Announce Type: new Abstract: Web agents have achieved significant success in automating complex internet tasks but deploying them in real-world environments requires continuous online adaptation. Given that deploying powerful proprietary models remains commercially cost-prohibitive, practitioners must rely on lightweight local models that evolve post-deployment via online teaching from a stronger teacher. However, standard interactive feedback imposes prohibitive costs. We...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.81,
-        "quality_score": 0.73,
-        "novelty_score": 0.7,
-        "impact_score": 0.77,
-        "overall_score": 0.7545000000000001,
-        "confidence_mean": 0.85
+        "relevance_score": 0.82,
+        "quality_score": 0.76,
+        "novelty_score": 0.68,
+        "impact_score": 0.79,
+        "overall_score": 0.764,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1487,7 +1424,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.222986+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.932902+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1498,7 +1435,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.222988+00:00"
+        "timestamp": "2026-09-09T20:33:28.932904+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1514,11 +1451,11 @@
       "author": "Konstantinos Christopher Tsiolis, Denny Wu, Christos Thrampoulidis, Murat A. Erdogdu",
       "content": "arXiv:2609.07868v1 Announce Type: new Abstract: We study the training dynamics of multiclass logistic regression on high-dimensional Gaussian mixture models with a large number of classes and establish precise scaling laws governing the cross-entropy risk under gradient-based optimization. We show that learning proceeds sequentially across classes, from most to least frequent. When the class priors follow a power law distribution, the risk dynamics decompose into three phases: an initial...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.73,
-        "novelty_score": 0.68,
-        "impact_score": 0.76,
-        "overall_score": 0.7445,
+        "relevance_score": 0.76,
+        "quality_score": 0.79,
+        "novelty_score": 0.73,
+        "impact_score": 0.7,
+        "overall_score": 0.748,
         "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
@@ -1550,7 +1487,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-09T10:38:33.224336+00:00"
+        "consensus_timestamp": "2026-09-09T20:33:28.934102+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1561,7 +1498,70 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-09T10:38:33.224338+00:00"
+        "timestamp": "2026-09-09T20:33:28.934104+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "bd0717129c8816f18b6ef3263b3c9ad2",
+      "title": "SciLitBench: Benchmark and Design Principles for LLM-Powered Systematic Literature Reviews",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2609.05505",
+      "published_date": "2026-09-09T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2609.05505v1 Announce Type: new Abstract: Systematic reviews require sustained human judgment across thousands of records, yet existing evaluations of large language models (LLMs) typically examine review stages in isolation. We introduce SciLitBench, a multi-stage benchmark spanning title and abstract screening, full-text screening, and schema-guided data extraction, with 42,981 retrieved records, 1,012 full texts, and annotations for 888 included papers. Across 22 open-weight LLMs from...",
+      "author": "Miguel Zabaleta, Baihan Lin",
+      "content": "arXiv:2609.05505v1 Announce Type: new Abstract: Systematic reviews require sustained human judgment across thousands of records, yet existing evaluations of large language models (LLMs) typically examine review stages in isolation. We introduce SciLitBench, a multi-stage benchmark spanning title and abstract screening, full-text screening, and schema-guided data extraction, with 42,981 retrieved records, 1,012 full texts, and annotations for 888 included papers. Across 22 open-weight LLMs from...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.81,
+        "quality_score": 0.74,
+        "novelty_score": 0.69,
+        "impact_score": 0.79,
+        "overall_score": 0.7585000000000001,
+        "confidence_mean": 0.86
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-09T20:33:28.932774+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-09T20:33:28.932775+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1570,7 +1570,7 @@
   "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 1394.3838911056519,
+    "processing_time": 1440.0136506557465,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1588,10 +1588,10 @@
       "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 366,
+      "total_processed": 368,
       "candidates": {
-        "headlines": 13,
-        "articles": 309,
+        "headlines": 25,
+        "articles": 299,
         "research_papers": 44
       },
       "selected": {
