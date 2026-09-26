@@ -1,23 +1,23 @@
 {
-  "updated": "2026-09-25T21:12:49.590853+00:00",
+  "updated": "2026-09-26T02:36:08.733128+00:00",
   "top_stories": [
     {
-      "article_id": "4179486c360c2ed1279a8b3f30ac6b06",
-      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
-      "published_date": "2026-09-25T18:33:59+00:00",
-      "category": "Industry",
-      "description": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout.",
-      "author": "Marina Temkin",
-      "content": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout.",
+      "article_id": "4ac2db02ab64b748d422df093f2dc3de",
+      "title": "One company is at the center of a wave of rogue AI attacks",
+      "source": "the_verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
+      "published_date": "2026-09-25T15:39:48+00:00",
+      "category": "Media",
+      "description": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numerous AI models trickled out over the past few […]",
+      "author": "Robert Hart",
+      "content": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numerous AI models trickled out over the past few […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8375,
-        "confidence_mean": 0.92
+        "relevance_score": 0.92,
+        "quality_score": 0.78,
+        "novelty_score": 0.85,
+        "impact_score": 0.88,
+        "overall_score": 0.8595,
+        "confidence_mean": 0.81
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-25T21:12:49.486388+00:00"
+        "consensus_timestamp": "2026-09-26T02:36:08.550894+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,27 +59,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-25T21:12:49.486391+00:00"
+        "timestamp": "2026-09-26T02:36:08.550897+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "01cf33676e220d09bc2c13a6d133913f",
-      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "article_id": "d0a7226448b72bb4e3b57a6045402861",
+      "title": "NVIDIA Brings AI Agents to Robotics With Isaac ROS 5.0",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-nvidia-isaac-ros-5-ai-agents-robotics/",
+      "published_date": "2026-09-24T09:40:37+00:00",
+      "category": "Media",
+      "description": "NVIDIA Isaac ROS 5.0 adds agent-ready tools, Ubuntu 24.04 support, and GPU acceleration to help developers build and test robotics software faster. The post NVIDIA Brings AI Agents to Robotics With Isaac ROS 5.0 appeared first on TechRepublic.",
+      "author": "Eric Mboizi",
+      "content": "NVIDIA Isaac ROS 5.0 adds agent-ready tools, Ubuntu 24.04 support, and GPU acceleration to help developers build and test robotics software faster. The post NVIDIA Brings AI Agents to Robotics With Isaac ROS 5.0 appeared first on TechRepublic.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8885000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-26T02:36:08.548444+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-26T02:36:08.548447+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1a88837952447d509ccf29ebd4e308c9",
+      "title": "Sam Altman’s remarks at the United Nations Security Council",
       "source": "openai_blog",
-      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-      "published_date": "2026-09-23T13:00:00+00:00",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "published_date": "2026-09-23T12:00:00+00:00",
       "category": "Industry",
-      "description": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+      "description": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
       "author": "",
-      "content": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+      "content": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.94,
-        "overall_score": 0.8779999999999999,
-        "confidence_mean": 0.88
+        "novelty_score": 0.85,
+        "impact_score": 0.93,
+        "overall_score": 0.8885000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -106,104 +168,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.81,
-        "confidence": 0.88,
+        "score": 0.85,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-25T21:12:49.483543+00:00"
+        "consensus_timestamp": "2026-09-26T02:36:08.540271+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6859999999999999,
-        "combined_confidence": 0.728,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-25T21:12:49.483547+00:00"
+        "timestamp": "2026-09-26T02:36:08.540277+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "bb22808e3fcec1d15d01b0308e3e1f9b",
-      "title": "When compression techniques don’t just add up: Interaction effects in hybrid LLM compression",
-      "source": "aihub",
-      "url": "https://aihub.org/2026/09/25/when-compression-techniques-dont-just-add-up-interaction-effects-in-hybrid-llm-compression/",
-      "published_date": "2026-09-25T13:26:03+00:00",
+      "article_id": "0bdb2fd0ed58916a9b68529272d888e4",
+      "title": "PEP 849: More Expressive Type Expressions",
+      "source": "python_peps",
+      "url": "https://peps.python.org/pep-0849/",
+      "published_date": "2026-09-20T00:00:00+00:00",
       "category": "Open Source",
-      "description": "What happens when you shrink a language model twice — once by removing some of its weights, once by storing what’s left with fewer bits? You’d guess the damage just adds up. It doesn’t. The problem: does compression just add up? Small language models are increasingly used for on-device apps that need to run in […]",
-      "author": "Iheb Bouriel",
-      "content": "What happens when you shrink a language model twice — once by removing some of its weights, once by storing what’s left with fewer bits? You’d guess the damage just adds up. It doesn’t. The problem: does compression just add up? Small language models are increasingly used for on-device apps that need to run in […]",
+      "description": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
+      "author": "Imogen Hergeth (python at imogen.tech)",
+      "content": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.86,
-        "overall_score": 0.862,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-25T21:12:49.495089+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-25T21:12:49.495092+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "403ef0addb9b3daaf82ad7fee6e0f549",
-      "title": "At UN, tech chiefs urge caution in AI development",
-      "source": "tech_xplore",
-      "url": "https://techxplore.com/news/2026-09-tech-chiefs-urge-caution-ai.html",
-      "published_date": "2026-09-24T09:40:02+00:00",
-      "category": "Media",
-      "description": "Leaders of major AI firms told the U.N. Security Council on Wednesday that the technology calls for heightened vigilance, with Anthropic's CEO pledging to slow down where needed to ensure the safety of new releases.",
-      "author": "",
-      "content": "Leaders of major AI firms told the U.N. Security Council on Wednesday that the technology calls for heightened vigilance, with Anthropic's CEO pledging to slow down where needed to ensure the safety of new releases.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.92,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
+        "novelty_score": 0.78,
         "impact_score": 0.88,
-        "overall_score": 0.8460000000000001,
-        "confidence_mean": 0.88
+        "overall_score": 0.8595,
+        "confidence_mean": 0.93
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -234,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-25T21:12:49.492227+00:00"
+        "consensus_timestamp": "2026-09-26T02:36:08.553355+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,26 +245,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-25T21:12:49.492229+00:00"
+        "timestamp": "2026-09-26T02:36:08.553358+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "389fa8090c9a48bf80f233253821deb4",
-      "title": "Dense vs. MoE Models: Active Parameters, Throughput, and When to Choose Each",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each/",
-      "published_date": "2026-09-15T17:00:11+00:00",
-      "category": "Industry",
-      "description": "How can a 30B-parameter model activate only 3B parameters per token, and still use the capacity of the larger model? Nemotron 3.5 Lightning illustrates the...",
-      "author": "Elizabeth Goodman",
-      "content": "How can a 30B-parameter model activate only 3B parameters per token, and still use the capacity of the larger model? Nemotron 3.5 Lightning illustrates the...",
+      "article_id": "6e214c9f2e2263ebe09c9f1884ce13ed",
+      "title": "GPT-6 Sol vs. Claude Opus 5.5: What the Actual Benchmark Numbers Say",
+      "source": "towards_ai",
+      "url": "https://pub.towardsai.net/gpt-6-sol-vs-claude-opus-5-5-what-the-actual-benchmark-numbers-say-07c91d0dba07?source=rss----98111c9905da---4",
+      "published_date": "2026-09-25T21:01:02+00:00",
+      "category": "Open Source",
+      "description": "Both models launched back to back, aimed squarely at coding and agentic workloads. One is cheaper. The other wins more benchmarks. The…Continue reading on Towards AI »",
+      "author": "CodeInsights",
+      "content": "Both models launched back to back, aimed squarely at coding and agentic workloads. One is cheaper. The other wins more benchmarks. The…Continue reading on Towards AI »",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.87,
-        "quality_score": 0.84,
-        "novelty_score": 0.77,
-        "impact_score": 0.91,
-        "overall_score": 0.8455,
+        "relevance_score": 0.92,
+        "quality_score": 0.85,
+        "novelty_score": 0.78,
+        "impact_score": 0.88,
+        "overall_score": 0.8595,
         "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-25T21:12:49.488809+00:00"
+        "consensus_timestamp": "2026-09-26T02:36:08.554591+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-25T21:12:49.488811+00:00"
+        "timestamp": "2026-09-26T02:36:08.554594+00:00"
       },
       "article_type": "article"
     }
