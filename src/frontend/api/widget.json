@@ -1,22 +1,84 @@
 {
-  "updated": "2026-09-29T22:01:47.964846+00:00",
+  "updated": "2026-09-30T03:03:26.961502+00:00",
   "top_stories": [
     {
-      "article_id": "305e3076f4e1ba445e87825c86a67963",
-      "title": "Nvidia unveils security platform to rein in AI agents and $150bn stock buyback",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2026/sep/28/nvidia-ai-agent-security-platform-stock-buyback",
-      "published_date": "2026-09-28T19:24:07+00:00",
+      "article_id": "30ffe635b4921a71df1b491e1ce8bad6",
+      "title": "OpenAI Delays Release of Latest Model Over Safety Concerns",
+      "source": "wired_ai",
+      "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
+      "published_date": "2026-09-29T10:36:22+00:00",
       "category": "Media",
-      "description": "Chipmaker says new system was designed to prevent AI agents from going rogue amid incidents at top companiesNvidia on Monday unveiled a new security platform that the chipmaker said can stop artificial intelligence agents from going rogue.The company announced a $150bn stock buyback the same day, the largest in US corporate history. Continue reading...",
-      "author": "Guardian staff and agencies",
-      "content": "Chipmaker says new system was designed to prevent AI agents from going rogue amid incidents at top companiesNvidia on Monday unveiled a new security platform that the chipmaker said can stop artificial intelligence agents from going rogue.The company announced a $150bn stock buyback the same day, the largest in US corporate history. Continue reading...",
+      "description": "The company said its latest Astra model would undergo more work to meet safety standards, and issued an apology for the way it handled the hacking of an Australian government website.",
+      "author": "Isabella Ward",
+      "content": "The company said its latest Astra model would undergo more work to meet safety standards, and issued an apology for the way it handled the hacking of an Australian government website.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
+        "relevance_score": 0.92,
         "quality_score": 0.89,
-        "novelty_score": 0.82,
-        "impact_score": 0.91,
-        "overall_score": 0.8945,
+        "novelty_score": 0.73,
+        "impact_score": 0.85,
+        "overall_score": 0.8510000000000001,
+        "confidence_mean": 0.91
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-30T03:03:26.845647+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-30T03:03:26.845651+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "ce0d45223a4f9391adca2a67485e70d3",
+      "title": "Quantum computing’s “dark horse” just proved it can go universal",
+      "source": "sciencedaily_ai",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260924020403.htm",
+      "published_date": "2026-09-25T12:45:04+00:00",
+      "category": "Open Source",
+      "description": "Researchers have shown that exotic quantum particles called non-Abelian anyons can perform the full range of operations needed for universal quantum computing. Using 54 qubits on Quantinuum’s H2 processor, they combined braiding and fusion to unlock capabilities that braiding alone could not provide.",
+      "author": "",
+      "content": "Researchers have shown that exotic quantum particles called non-Abelian anyons can perform the full range of operations needed for universal quantum computing. Using 54 qubits on Quantinuum’s H2 processor, they combined braiding and fusion to unlock capabilities that braiding alone could not provide.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.89,
+        "novelty_score": 0.84,
+        "impact_score": 0.88,
+        "overall_score": 0.8845000000000001,
         "confidence_mean": 0.93
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-29T22:01:47.799095+00:00"
+        "consensus_timestamp": "2026-09-30T03:03:26.849733+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,213 +121,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-29T22:01:47.799098+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "0bdb2fd0ed58916a9b68529272d888e4",
-      "title": "PEP 849: More Expressive Type Expressions",
-      "source": "python_peps",
-      "url": "https://peps.python.org/pep-0849/",
-      "published_date": "2026-09-20T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
-      "author": "Imogen Hergeth (python at imogen.tech)",
-      "content": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.89,
-        "novelty_score": 0.85,
-        "impact_score": 0.88,
-        "overall_score": 0.8870000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-29T22:01:47.802196+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-29T22:01:47.802198+00:00"
+        "timestamp": "2026-09-30T03:03:26.849736+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "5fcaac02a6679ba3db486c2d8e121c13",
-      "title": "NVIDIA Launches DSX Ready to Qualify Power and Cooling Products for AI Factories",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/",
-      "published_date": "2026-09-21T18:00:07+00:00",
+      "article_id": "b0ca256add6ba45a0b067b2753493639",
+      "title": "Introducing GPT-6.1 Sol",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "published_date": "2026-09-29T10:00:00+00:00",
       "category": "Industry",
-      "description": "Every AI factory needs power and cooling that fit its computing architecture. As AI infrastructure expands, power, cooling, water, site and grid constraints are shaping what builders can deploy. Choosing products that fit the complete factory design helps builders turn computing capacity into useful AI output. To help builders make those decisions, NVIDIA is introducing […]",
-      "author": "Vishal Ganeriwala",
-      "content": "Every AI factory needs power and cooling that fit its computing architecture. As AI infrastructure expands, power, cooling, water, site and grid constraints are shaping what builders can deploy. Choosing products that fit the complete factory design helps builders turn computing capacity into useful AI output. To help builders make those decisions, NVIDIA is introducing […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.75,
-        "impact_score": 0.94,
-        "overall_score": 0.8714999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-29T22:01:47.791108+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-29T22:01:47.791110+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dce1b51358a016d2bbad68337b7fe877",
-      "title": "‘Now We Can Know Everything and Do Anything,’ Jensen Huang Says at Dreamforce",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/",
-      "published_date": "2026-09-15T22:24:34+00:00",
-      "category": "Industry",
-      "description": "Know everything. Do anything. That was the message NVIDIA founder and CEO Jensen Huang brought to Salesforce Dreamforce Tuesday, joining CEO Marc Benioff onstage in an appearance that coincided with the announcement of Koa — Salesforce’s first CRM reasoning model, built on NVIDIA Nemotron 3 Super. Huang didn’t just take the stage. He walked into […]",
-      "author": "Brian Caulfield",
-      "content": "Know everything. Do anything. That was the message NVIDIA founder and CEO Jensen Huang brought to Salesforce Dreamforce Tuesday, joining CEO Marc Benioff onstage in an appearance that coincided with the announcement of Koa — Salesforce’s first CRM reasoning model, built on NVIDIA Nemotron 3 Super. Huang didn’t just take the stage. He walked into […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.91,
-        "quality_score": 0.89,
-        "novelty_score": 0.74,
-        "impact_score": 0.93,
-        "overall_score": 0.8665000000000002,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-29T22:01:47.791542+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-29T22:01:47.791544+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "947ff526524a36a423401cdf629e4420",
-      "title": "NVIDIA Releases Open Viral Protein Dataset and BioNeMo Pipeline",
-      "source": "techrepublic_ai",
-      "url": "https://www.techrepublic.com/article/news-nvidia-viral-protein-dataset-bionemo-pipeline/",
-      "published_date": "2026-09-25T19:09:11+00:00",
-      "category": "Media",
-      "description": "NVIDIA released AI-predicted protein structures for more than 2,800 viruses and an open BioNeMo pipeline to help researchers prepare for future outbreaks. The post NVIDIA Releases Open Viral Protein Dataset and BioNeMo Pipeline appeared first on TechRepublic.",
-      "author": "Eric Mboizi",
-      "content": "NVIDIA released AI-predicted protein structures for more than 2,800 viruses and an open BioNeMo pipeline to help researchers prepare for future outbreaks. The post NVIDIA Releases Open Viral Protein Dataset and BioNeMo Pipeline appeared first on TechRepublic.",
+      "description": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "author": "",
+      "content": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.87,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8635,
-        "confidence_mean": 0.86
+        "impact_score": 0.9,
+        "overall_score": 0.8750000000000001,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-29T22:01:47.796955+00:00"
+        "consensus_timestamp": "2026-09-30T03:03:26.831674+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +183,131 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-29T22:01:47.796957+00:00"
+        "timestamp": "2026-09-30T03:03:26.831677+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "da15dc66f2d6d755570915743306e19f",
+      "title": "OpenAI scraps release of new model over safety concerns in internal testing",
+      "source": "guardian_ai",
+      "url": "https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped",
+      "published_date": "2026-09-29T11:16:31+00:00",
+      "category": "Media",
+      "description": "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafeAs AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should youBusiness live – latest updatesOpenAI is scrapping the release of a next-generation ⁠AI model after researchers raised safety concerns ⁠during internal testing.The model, GPT-6.1 Astra, was expected to appear in ChatGPT and ⁠Codex in October, designed to handle more complex tasks...",
+      "author": "Julia Kollewe and Dan Milmo",
+      "content": "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafeAs AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should youBusiness live – latest updatesOpenAI is scrapping the release of a next-generation ⁠AI model after researchers raised safety concerns ⁠during internal testing.The model, GPT-6.1 Astra, was expected to appear in ChatGPT and ⁠Codex in October, designed to handle more complex tasks...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.75,
+        "impact_score": 0.89,
+        "overall_score": 0.8555,
+        "confidence_mean": 0.87
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-30T03:03:26.844591+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-30T03:03:26.844594+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "88b2fb1699ef16c2f463a3557d4f24fc",
+      "title": "DevDay 2026 Recap",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "published_date": "2026-09-29T10:00:00+00:00",
+      "category": "Industry",
+      "description": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "author": "",
+      "content": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.88,
+        "novelty_score": 0.75,
+        "impact_score": 0.88,
+        "overall_score": 0.8385,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-30T03:03:26.831725+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-30T03:03:26.831728+00:00"
       },
       "article_type": "article"
     }
