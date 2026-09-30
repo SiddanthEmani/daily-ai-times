@@ -1,38 +1,38 @@
 {
-  "updated": "2026-09-30T03:03:26.961502+00:00",
+  "updated": "2026-09-30T11:45:52.411736+00:00",
   "top_stories": [
     {
-      "article_id": "30ffe635b4921a71df1b491e1ce8bad6",
-      "title": "OpenAI Delays Release of Latest Model Over Safety Concerns",
-      "source": "wired_ai",
-      "url": "https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/",
-      "published_date": "2026-09-29T10:36:22+00:00",
-      "category": "Media",
-      "description": "The company said its latest Astra model would undergo more work to meet safety standards, and issued an apology for the way it handled the hacking of an Australian government website.",
-      "author": "Isabella Ward",
-      "content": "The company said its latest Astra model would undergo more work to meet safety standards, and issued an apology for the way it handled the hacking of an Australian government website.",
+      "article_id": "4dce50745a621b8b37fbc8aa8da770f3",
+      "title": "OpenAI Launches dots: Always-On GPT-6 Astra Agents That Work From Their Own Cloud Computers",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/09/29/openai-launches-dots-always-on-gpt-6-astra-agents-that-work-from-their-own-cloud-computers/",
+      "published_date": "2026-09-29T18:30:13+00:00",
+      "category": "Industry",
+      "description": "OpenAI just introduced dots at their DevDay today. Dots are persistent AI agents powered by GPT-6 Astra. Each dot gets its own cloud computer and browser. It works across 4,000+ apps through ChatGPT plugins and keeps going after you log off. Is it deployable today? Yes, as a managed product. Dots are rolling out in […] The post OpenAI Launches dots: Always-On GPT-6 Astra Agents That Work From Their Own Cloud Computers appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "OpenAI just introduced dots at their DevDay today. Dots are persistent AI agents powered by GPT-6 Astra. Each dot gets its own cloud computer and browser. It works across 4,000+ apps through ChatGPT plugins and keeps going after you log off. Is it deployable today? Yes, as a managed product. Dots are rolling out in […] The post OpenAI Launches dots: Always-On GPT-6 Astra Agents That Work From Their Own Cloud Computers appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.89,
-        "novelty_score": 0.73,
-        "impact_score": 0.85,
-        "overall_score": 0.8510000000000001,
-        "confidence_mean": 0.91
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.92,
+        "overall_score": 0.8665000000000002,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,42 +44,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.72,
+        "confidence": 0.78,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-30T03:03:26.845647+00:00"
+        "consensus_timestamp": "2026-09-30T11:45:52.273312+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.632,
+        "combined_confidence": 0.6679999999999999,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-30T03:03:26.845651+00:00"
+        "timestamp": "2026-09-30T11:45:52.273314+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "ce0d45223a4f9391adca2a67485e70d3",
-      "title": "Quantum computing’s “dark horse” just proved it can go universal",
-      "source": "sciencedaily_ai",
-      "url": "https://www.sciencedaily.com/releases/2026/09/260924020403.htm",
-      "published_date": "2026-09-25T12:45:04+00:00",
+      "article_id": "0bdb2fd0ed58916a9b68529272d888e4",
+      "title": "PEP 849: More Expressive Type Expressions",
+      "source": "python_peps",
+      "url": "https://peps.python.org/pep-0849/",
+      "published_date": "2026-09-20T00:00:00+00:00",
       "category": "Open Source",
-      "description": "Researchers have shown that exotic quantum particles called non-Abelian anyons can perform the full range of operations needed for universal quantum computing. Using 54 qubits on Quantinuum’s H2 processor, they combined braiding and fusion to unlock capabilities that braiding alone could not provide.",
-      "author": "",
-      "content": "Researchers have shown that exotic quantum particles called non-Abelian anyons can perform the full range of operations needed for universal quantum computing. Using 54 qubits on Quantinuum’s H2 processor, they combined braiding and fusion to unlock capabilities that braiding alone could not provide.",
+      "description": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
+      "author": "Imogen Hergeth (python at imogen.tech)",
+      "content": "Currently, the Python interpreter allows any expression to be used as an annotation. But their most popular usage, type annotations, are restricted to only a small subset of possible expressions. This is because type annotations need to be introspectable at runtime and many valid expressions produce values where that is not possible. This greatly limits which expressions can be assigned a meaning within the typing spec and limits the expressiveness and ease of use of type annotations.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.92,
-        "quality_score": 0.89,
-        "novelty_score": 0.84,
-        "impact_score": 0.88,
-        "overall_score": 0.8845000000000001,
-        "confidence_mean": 0.93
+        "quality_score": 0.88,
+        "novelty_score": 0.9,
+        "impact_score": 0.89,
+        "overall_score": 0.899,
+        "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-30T03:03:26.849733+00:00"
+        "consensus_timestamp": "2026-09-30T11:45:52.282940+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +121,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-30T03:03:26.849736+00:00"
+        "timestamp": "2026-09-30T11:45:52.282943+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "b0ca256add6ba45a0b067b2753493639",
-      "title": "Introducing GPT-6.1 Sol",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "published_date": "2026-09-29T10:00:00+00:00",
+      "article_id": "e8d8962974fb73c06c27c9fecefa256d",
+      "title": "Perplexity Introduces Photon: A Rust-Based Retrieval Engine That Cuts p99 Latency From 800 ms to 65 ms",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/09/30/perplexity-introduces-photon-a-rust-based-retrieval-engine-that-cuts-p99-latency-from-800-ms-to-65-ms/",
+      "published_date": "2026-09-30T08:26:52+00:00",
       "category": "Industry",
-      "description": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-      "author": "",
-      "content": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "description": "Perplexity has released Photon, an in-house retrieval and ranking engine written in Rust. It replaces an open-source engine Perplexity had forked for its AI-native search stack. Photon now handles retrieval and ranking for all production traffic. It also powers a new Fast Search mode in the Perplexity Search API. Perplexity reports single-call latency of 160 […] The post Perplexity Introduces Photon: A Rust-Based Retrieval Engine That Cuts p99 Latency From 800 ms to 65 ms appeared first on...",
+      "author": "Asif Razzaq",
+      "content": "Perplexity has released Photon, an in-house retrieval and ranking engine written in Rust. It replaces an open-source engine Perplexity had forked for its AI-native search stack. Photon now handles retrieval and ranking for all production traffic. It also powers a new Fast Search mode in the Perplexity Search API. Perplexity reports single-call latency of 160 […] The post Perplexity Introduces Photon: A Rust-Based Retrieval Engine That Cuts p99 Latency From 800 ms to 65 ms appeared first on...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "impact_score": 0.92,
+        "overall_score": 0.8665000000000002,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.81,
+        "confidence": 0.88,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-09-30T11:45:52.273129+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6859999999999999,
+        "combined_confidence": 0.728,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-09-30T11:45:52.273132+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "5bdd0a8f502499627fb39defa2c474c7",
+      "title": "Google, OpenAI, Anthropic Reportedly Plan AI Safety Standards Body",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-google-openai-anthropic-ai-safety-standards-body/",
+      "published_date": "2026-09-25T19:03:33+00:00",
+      "category": "Media",
+      "description": "Google, OpenAI and Anthropic reportedly plan an AI safety standards body. See what the proposed testing and audits could mean for enterprise IT buyers. The post Google, OpenAI, Anthropic Reportedly Plan AI Safety Standards Body appeared first on TechRepublic.",
+      "author": "Aminu Abdullahi",
+      "content": "Google, OpenAI and Anthropic reportedly plan an AI safety standards body. See what the proposed testing and audits could mean for enterprise IT buyers. The post Google, OpenAI, Anthropic Reportedly Plan AI Safety Standards Body appeared first on TechRepublic.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.85,
+        "novelty_score": 0.78,
+        "impact_score": 0.88,
+        "overall_score": 0.8595,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -172,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-30T03:03:26.831674+00:00"
+        "consensus_timestamp": "2026-09-30T11:45:52.277807+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,89 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-30T03:03:26.831677+00:00"
+        "timestamp": "2026-09-30T11:45:52.277810+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "da15dc66f2d6d755570915743306e19f",
-      "title": "OpenAI scraps release of new model over safety concerns in internal testing",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped",
-      "published_date": "2026-09-29T11:16:31+00:00",
+      "article_id": "3e9c521a1446bc0909998b284fd3db14",
+      "title": "AI Agents Are About to Flood the Workforce. No One’s Ready for It",
+      "source": "wired_ai",
+      "url": "https://www.wired.com/story/ai-agents-are-about-to-flood-the-workforce-no-ones-ready-for-it/",
+      "published_date": "2026-09-28T10:00:00+00:00",
       "category": "Media",
-      "description": "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafeAs AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should youBusiness live – latest updatesOpenAI is scrapping the release of a next-generation ⁠AI model after researchers raised safety concerns ⁠during internal testing.The model, GPT-6.1 Astra, was expected to appear in ChatGPT and ⁠Codex in October, designed to handle more complex tasks...",
-      "author": "Julia Kollewe and Dan Milmo",
-      "content": "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafeAs AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should youBusiness live – latest updatesOpenAI is scrapping the release of a next-generation ⁠AI model after researchers raised safety concerns ⁠during internal testing.The model, GPT-6.1 Astra, was expected to appear in ChatGPT and ⁠Codex in October, designed to handle more complex tasks...",
+      "description": "Your next coworker might well be an AI agent—and will require a whole new model of workplace interactions.",
+      "author": "Kate Taylor",
+      "content": "Your next coworker might well be an AI agent—and will require a whole new model of workplace interactions.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.75,
-        "impact_score": 0.89,
-        "overall_score": 0.8555,
-        "confidence_mean": 0.87
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-09-30T03:03:26.844591+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-09-30T03:03:26.844594+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "88b2fb1699ef16c2f463a3557d4f24fc",
-      "title": "DevDay 2026 Recap",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "published_date": "2026-09-29T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "author": "",
-      "content": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.88,
-        "novelty_score": 0.75,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.88,
-        "overall_score": 0.8385,
-        "confidence_mean": 0.92
+        "overall_score": 0.8585000000000002,
+        "confidence_mean": 0.93
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-09-30T03:03:26.831725+00:00"
+        "consensus_timestamp": "2026-09-30T11:45:52.281017+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-09-30T03:03:26.831728+00:00"
+        "timestamp": "2026-09-30T11:45:52.281020+00:00"
       },
       "article_type": "article"
     }
