@@ -151,6 +151,18 @@ def _clean_script(text: str) -> str:
     return '\n'.join(lines) or text.strip()
 
 
+def _speaker_parts(script: str) -> types.Content:
+    """One text part per dialogue line, tagged with its speaker."""
+    parts = []
+    for line in script.splitlines():
+        m = re.match(r'^(Jane|Joe)\s*:\s*(.+)$', line)
+        if m:
+            parts.append(types.Part(text=m.group(2), speech_metadata=types.SpeechMetadata(speaker=m.group(1))))
+    if not parts:
+        raise ValueError("Script has no Jane/Joe lines to synthesize")
+    return types.Content(role='user', parts=parts)
+
+
 def _sample_rate(mime_type: Optional[str]) -> int:
     m = re.search(r'rate=(\d+)', mime_type or '')
     return int(m.group(1)) if m else 24000
@@ -192,11 +204,20 @@ def generate_podcast(api_key: str, latest_json: Path = LATEST_JSON, audio_file: 
             ]))
     tts_prompt = f"TTS the following conversation between Jane and Joe:\n{script}"
 
+    tts_config = types.GenerateContentConfig(response_modalities=["AUDIO"], speech_config=speech_config)
+
     def synthesize(model):
-        response = client.models.generate_content(
-            model=model,
-            contents=tts_prompt,
-            config=types.GenerateContentConfig(response_modalities=["AUDIO"], speech_config=speech_config))
+        # Gemini 3.8+ TTS wants each line as its own part tagged with the speaker;
+        # older models take the whole dialogue as one prompt.
+        tagged = _version(model) >= 3.8
+        try:
+            response = client.models.generate_content(
+                model=model, contents=_speaker_parts(script) if tagged else tts_prompt, config=tts_config)
+        except Exception as e:
+            if 'speech_metadata' not in str(e):
+                raise
+            response = client.models.generate_content(
+                model=model, contents=tts_prompt if tagged else _speaker_parts(script), config=tts_config)
         for candidate in (response.candidates or [])[:1]:
             for part in (candidate.content.parts if candidate.content else None) or []:
                 if part.inline_data and part.inline_data.data:

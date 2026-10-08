@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install Gemini SDK
-        run: pip install google-genai
+        run: pip install "google-genai>=2.29.0"
       - name: Generate podcast from current headlines
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
