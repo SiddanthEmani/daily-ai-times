@@ -9,8 +9,9 @@ merged, because no single free API exposes this cleanly:
 
   * Public companies (Amazon, Microsoft, Alphabet, Meta, Oracle) - fetched live
     and keyless from the SEC EDGAR XBRL "companyconcept" API. The displayed value
-    is trailing-12-month capital expenditure (sum of the last four quarterly
-    filings). SEC filings do not break out data-center-only capex, so this is
+    is trailing-12-month capital expenditure (latest fiscal year + current
+    year-to-date - prior-year year-to-date, since cash-flow filings are
+    cumulative). SEC filings do not break out data-center-only capex, so this is
     total company capex, which for these firms is overwhelmingly AI/data-center
     spend today.
 
@@ -34,7 +35,7 @@ import logging
 import sys
 import urllib.error
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -58,11 +59,19 @@ CAPEX_TAGS = (
     'PaymentsToAcquireProductiveAssets',
 )
 
-# Quarterly filings span ~3 months; annual ~12. These windows separate true
-# per-quarter datapoints from the 6-/9-month year-to-date cumulatives that also
-# appear in the same USD series (which would double-count if summed).
-QUARTER_MIN_DAYS, QUARTER_MAX_DAYS = 80, 100
+# Cash-flow statements are cumulative: a 10-Q reports year-to-date capex (3-, 6-
+# or 9-month spans) and the 10-K reports the full year. Only Q1 ever appears as
+# a standalone ~3-month figure, so summing "the last four 3-month datapoints"
+# would add up Q1s from four different years. Instead TTM is derived as
+#   latest full year + current YTD - prior-year YTD of the same length.
 ANNUAL_MIN_DAYS, ANNUAL_MAX_DAYS = 350, 380
+# Tolerance when matching period boundaries across fiscal calendars (52/53-week
+# years, month-end drift).
+MATCH_TOLERANCE_DAYS = 10
+# A series whose newest datapoint is older than this is a tag the company has
+# stopped using (e.g. Amazon's PaymentsToAcquirePropertyPlantAndEquipment, last
+# filed years ago) and must not be shown as current spend.
+MAX_STALENESS_DAYS = 200
 
 BILLION = 1_000_000_000
 
@@ -109,43 +118,75 @@ def _usd_entries(document: dict) -> list:
     return entries if isinstance(entries, list) else []
 
 
-def _ttm_capex_billions(entries: list) -> float | None:
-    """Trailing-12-month capex in $B from a company's USD datapoints.
-
-    Prefers the sum of the four most recent distinct quarterly (~3-month)
-    filings, which naturally spans one year regardless of fiscal calendar. Falls
-    back to the single most recent annual (~12-month) filing when fewer than four
-    quarters are available (e.g. a company that only files annual capex)."""
-    quarterly, annual = [], []
+def _periods(entries: list) -> dict:
+    """Map (start, end) -> value for well-formed USD datapoints, latest filing
+    winning when the same period is reported more than once (restatements)."""
+    rows = []
     for entry in entries:
         if not isinstance(entry, dict):
             continue
         start, end = _parse_date(entry.get('start')), _parse_date(entry.get('end'))
         val = entry.get('val')
-        if start is None or end is None or not isinstance(val, (int, float)):
+        if start is None or end is None or end <= start or not isinstance(val, (int, float)):
             continue
-        span = (end - start).days
-        if QUARTER_MIN_DAYS <= span <= QUARTER_MAX_DAYS:
-            quarterly.append((end, float(val)))
-        elif ANNUAL_MIN_DAYS <= span <= ANNUAL_MAX_DAYS:
-            annual.append((end, float(val)))
+        rows.append((str(entry.get('filed') or ''), start, end, abs(float(val))))
+    periods: dict[tuple[date, date], float] = {}
+    for _, start, end, val in sorted(rows):
+        periods[(start, end)] = val
+    return periods
 
-    # One value per period end (latest-filed wins via dict overwrite on sorted
-    # order), newest first.
-    def _dedupe_latest(rows: list) -> list:
-        by_end: dict[date, float] = {}
-        for end, val in sorted(rows, key=lambda r: r[0]):
-            by_end[end] = val
-        return sorted(by_end.items(), key=lambda r: r[0], reverse=True)
 
-    quarters = _dedupe_latest(quarterly)
-    if len(quarters) >= 4:
-        total = sum(abs(val) for _, val in quarters[:4])
-        return round(total / BILLION, 1)
+def _near(a: date, b: date) -> bool:
+    return abs((a - b).days) <= MATCH_TOLERANCE_DAYS
 
-    annuals = _dedupe_latest(annual)
-    if annuals:
-        return round(abs(annuals[0][1]) / BILLION, 1)
+
+def _ttm_capex(entries: list, today: date | None = None) -> tuple[float, date] | None:
+    """Trailing-12-month capex in $B plus the period end it is current to, or
+    None when the series is empty or stale.
+
+    If the newest period is a full fiscal year, that is the TTM. Otherwise the
+    newest period is a year-to-date span and TTM = previous full year + this
+    YTD - the same YTD span one year earlier. Falls back to the latest full
+    year when the prior-year YTD comparative can't be found."""
+    today = today or date.today()
+    periods = _periods(entries)
+    if not periods:
+        return None
+    latest_end = max(end for _, end in periods)
+    if (today - latest_end).days > MAX_STALENESS_DAYS:
+        return None
+
+    annuals = sorted(
+        ((start, end, val) for (start, end), val in periods.items()
+         if ANNUAL_MIN_DAYS <= (end - start).days <= ANNUAL_MAX_DAYS),
+        key=lambda r: r[1], reverse=True,
+    )
+    if annuals and _near(annuals[0][1], latest_end):
+        return round(annuals[0][2] / BILLION, 1), annuals[0][1]
+
+    # Newest YTD period: the longest sub-annual span ending at latest_end.
+    ytd_candidates = [
+        (start, val) for (start, end), val in periods.items()
+        if end == latest_end and (end - start).days < ANNUAL_MIN_DAYS
+    ]
+    if ytd_candidates:
+        ytd_start, ytd_val = min(ytd_candidates, key=lambda r: r[0])
+        span = (latest_end - ytd_start).days
+        prior_annual = next(
+            (val for start, end, val in annuals if _near(end, ytd_start - timedelta(days=1))),
+            None,
+        )
+        prior_ytd = next(
+            (val for (start, end), val in periods.items()
+             if _near(end, latest_end - timedelta(days=365))
+             and abs((end - start).days - span) <= MATCH_TOLERANCE_DAYS),
+            None,
+        )
+        if prior_annual is not None and prior_ytd is not None:
+            return round((prior_annual + ytd_val - prior_ytd) / BILLION, 1), latest_end
+
+    if annuals and (today - annuals[0][1]).days <= MAX_STALENESS_DAYS + 180:
+        return round(annuals[0][2] / BILLION, 1), annuals[0][1]
     return None
 
 
@@ -156,17 +197,24 @@ def _public_row(company: dict) -> dict | None:
     if not cik.strip('0'):
         logger.warning('Public company %s missing CIK - skipping', company.get('label'))
         return None
+    # Try every tag and keep the freshest series: companies switch tags over
+    # time and the abandoned one still returns (stale) historical data.
+    best = None
     for tag in CAPEX_TAGS:
         document = _fetch_concept(cik, tag)
-        value = _ttm_capex_billions(_usd_entries(document)) if document else None
-        if value is not None:
-            return {
-                'label': company['label'],
-                'value': value,
-                'estimated': False,
-                'source': 'SEC EDGAR 10-Q/10-K',
-                'basis': 'trailing-12-mo capex',
-            }
+        result = _ttm_capex(_usd_entries(document)) if document else None
+        if result is not None and (best is None or result[1] > best[1]):
+            best = result
+    if best is not None:
+        value, as_of = best
+        return {
+            'label': company['label'],
+            'value': value,
+            'estimated': False,
+            'source': 'SEC EDGAR 10-Q/10-K',
+            'basis': 'trailing-12-mo capex',
+            'as_of': as_of.isoformat(),
+        }
     logger.warning('No capex resolved for %s (CIK %s)', company.get('label'), cik)
     return None
 
