@@ -1,0 +1,35 @@
+name: Podcast Audio Check
+
+# Runs only the podcast step against the real Gemini API, so model changes
+# can be verified in about a minute without running the full news pipeline.
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths:
+      - 'src/backend/podcast.py'
+      - '.github/workflows/podcast-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  podcast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Gemini SDK
+        run: pip install google-genai
+      - name: Generate podcast from current headlines
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m src.backend.podcast
+      - uses: actions/upload-artifact@v4
+        with:
+          name: podcast-audio
+          path: src/frontend/assets/audio/latest-podcast.wav
+          retention-days: 3
