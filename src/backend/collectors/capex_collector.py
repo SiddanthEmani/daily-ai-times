@@ -15,11 +15,15 @@ merged, because no single free API exposes this cleanly:
     total company capex, which for these firms is overwhelmingly AI/data-center
     spend today.
 
-  * Private companies (OpenAI, Anthropic) - have no SEC filings, so their figures
-    come from a committed, human-curated file (capex_curated.json) with a source
-    URL and as_of date, and are flagged estimated=true in the output.
+  * Curated rows - a company with no SEC filings can be added to
+    capex_curated.json with a value, source URL and as_of date; it is flagged
+    estimated=true in the output. Private labs (OpenAI, Anthropic) are
+    deliberately left out: they publish only multi-year commitments, not annual
+    spend, and mostly rent compute from the companies above, so charting them
+    would double-count capex already in those bars (same practice as Epoch AI
+    and most hyperscaler-capex coverage).
 
-The roster, CIKs, and private figures all live in capex_curated.json. A curator
+The roster and CIKs live in capex_curated.json. A curator
 may also add an explicit value/estimated/source/basis to a public company there
 to override its live SEC figure (e.g. to show a data-center-only estimate).
 
