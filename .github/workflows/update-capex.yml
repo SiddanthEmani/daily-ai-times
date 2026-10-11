@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 7 * * 1'  # Weekly (Monday) - SEC filings are quarterly and the curated figures change occasionally, so a weekly refresh is plenty
   workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:  # regenerate immediately when the collector logic or curated figures change
+      - 'src/backend/collectors/capex_collector.py'
+      - 'src/backend/collectors/capex_curated.json'
 
 permissions:
   contents: write
