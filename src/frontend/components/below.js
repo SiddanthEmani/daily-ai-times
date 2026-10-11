@@ -5,11 +5,11 @@ import { paperImageSVG } from './chrome.js';
 // Fallback figures used only when the live leaderboard feed (api/leaderboard.json,
 // produced by leaderboard_collector.py) is unavailable.
 const BENCHMARKS = [
-    { label: 'GPT-5.2', value: 81.4 },
-    { label: 'Claude Opus 5', value: 79.8 },
-    { label: 'Gemini 3 Ultra', value: 78.2 },
-    { label: 'Llama 5 405B', value: 71.6 },
-    { label: 'DeepSeek V4', value: 69.9 },
+    { label: 'Claude Opus 5.5', value: 57.6 },
+    { label: 'Claude Sonnet 5.5', value: 56 },
+    { label: 'Claude Fable 5.1', value: 53.4 },
+    { label: 'GPT-6 Astra', value: 52.7 },
+    { label: 'Gemini 4 Argon', value: 52.6 },
 ];
 
 // Fallback figures used only when the live capex feed (api/capex.json, produced
@@ -51,28 +51,37 @@ export function storyCardHTML(story, idx, { focused = false } = {}) {
     `;
 }
 
+// Vertical column chart. Labels sit under each column, rotated 45° when the
+// box is narrow (sidebar, phones) and wrapped flat when there's room. The
+// rotated labels hang down-left from their column's centre, so the chart
+// reserves height for the longest label and left padding for the first one
+// (both in `ch` of the monospace label font).
 function barChartHTML(title, chip, rows) {
     const max = Math.max(...rows.map(r => r.value), 1);
-    const barRows = rows.map((r, i) => `
-        <div class="bar-row">
-            <span class="bar-label">${escapeHTML(r.label)}</span>
-            <div class="bar-track">
-                <div class="bar-fill${i === 0 ? ' lead' : ''}" style="width:${(r.value / max * 100)}%"></div>
+    const maxLen = Math.max(...rows.map(r => String(r.label).length), 1);
+    const firstLen = rows.length ? String(rows[0].label).length : 0;
+    const cols = rows.map((r, i) => `
+        <div class="col">
+            <span class="col-value">${r.value}</span>
+            <div class="col-track">
+                <div class="col-fill${i === 0 ? ' lead' : ''}" style="height:${(r.value / max * 100)}%"></div>
             </div>
-            <span class="bar-value">${r.value}</span>
+            <span class="col-label" title="${escapeHTML(r.label)}"><span>${escapeHTML(r.label)}</span></span>
         </div>
     `).join('');
     return `
         <aside class="box chart-box">
             <div class="box-title"><span>${escapeHTML(title)}</span><span class="chip">${escapeHTML(chip)}</span></div>
-            <div class="bar-chart">${barRows}</div>
+            <div class="col-chart-wrap">
+                <div class="col-chart" style="--n:${rows.length};--max-len:${maxLen};--first-len:${firstLen}">${cols}</div>
+            </div>
         </aside>
     `;
 }
 
 export function benchmarksChartHTML(rows, chip) {
     const data = Array.isArray(rows) && rows.length ? rows : BENCHMARKS;
-    return barChartHTML('Benchmark Leaderboard', chip || 'REASONING INDEX', data);
+    return barChartHTML('Benchmark Leaderboard', chip || 'INTELLIGENCE INDEX', data);
 }
 
 // rows come from the live capex feed (app.js loadCapex → api/capex.json); any
