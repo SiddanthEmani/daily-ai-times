@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T20:35:15.304542+00:00",
+  "updated": "2026-10-17T02:09:20.011691+00:00",
   "top_stories": [
     {
       "article_id": "984b3c61627ada8a8cd2f2ad344ed604",
@@ -12,12 +12,12 @@
       "author": "Agence France-Presse",
       "content": "Meta says Muse excels at ‘multi-step reasoning’ and ‘complex software engineering’ as it races to catch up to Chinese rivalsMeta on Thursday launched a new open-weight AI model which it claims rivals, and in some cases outperforms, similar products from leading Chinese developers.Muse Spark Open “is the most capable US open-weight model to date,” Meta’s chief of AI Alexandr Wang wrote on X. Continue reading...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.85,
-        "novelty_score": 0.78,
-        "impact_score": 0.88,
-        "overall_score": 0.8595,
-        "confidence_mean": 0.9
+        "relevance_score": 0.88,
+        "quality_score": 0.8,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8565,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-10-16T20:35:15.182727+00:00"
+        "consensus_timestamp": "2026-10-17T02:09:19.883327+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +59,133 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-10-16T20:35:15.182730+00:00"
+        "timestamp": "2026-10-17T02:09:19.883329+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "76dbbb760ec666eac4e3c325209e8bec",
+      "title": "Google Drops Gemini 4 Argon: Everything You Need to Know",
+      "source": "towards_ai",
+      "url": "https://pub.towardsai.net/google-drops-gemini-4-argon-everything-you-need-to-know-5b791591bd64?source=rss----98111c9905da---4",
+      "published_date": "2026-10-16T22:01:02+00:00",
+      "category": "Open Source",
+      "description": "Google recently launched their new frontier model, Gemini 4 Argon, which is rolling out to a set of trusted cyber defenders through Google’s Fairwind Program. Built to sustain deep reasoning across complex, long-horizon workflows, Argon is fundamentally changing the way they work and build says Google. It delivers frontier performance to help in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.Safely releasing...",
+      "author": "Pradeep Kumar Muthukamatchi",
+      "content": "Google recently launched their new frontier model, Gemini 4 Argon, which is rolling out to a set of trusted cyber defenders through Google’s Fairwind Program. Built to sustain deep reasoning across complex, long-horizon workflows, Argon is fundamentally changing the way they work and build says Google. It delivers frontier performance to help in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense.Safely releasing...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8815000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-10-17T02:09:19.887405+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-10-17T02:09:19.887408+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "090eff24ad6fe493b20512eedded3a96",
+      "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2610.20637",
+      "published_date": "2026-10-16T04:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2610.20637v1 Announce Type: new Abstract: We expand the exponential kernel of attention into a truncated Taylor series of $n$ terms and factorize each term into a tensor-power inner product, which collapses the causal history into exactly $n$ recurrent states, each updated by one rank-one outer product per token and independent of context length $N$. The recursion is lossless with respect to the truncated kernel ($2.2 \\times 10^{-16}$ in float64), and the states are additive across chunks...",
+      "author": "Zicong Huang",
+      "content": "arXiv:2610.20637v1 Announce Type: new Abstract: We expand the exponential kernel of attention into a truncated Taylor series of $n$ terms and factorize each term into a tensor-power inner product, which collapses the causal history into exactly $n$ recurrent states, each updated by one rank-one outer product per token and independent of context length $N$. The recursion is lossless with respect to the truncated kernel ($2.2 \\times 10^{-16}$ in float64), and the states are additive across chunks...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.88,
+        "impact_score": 0.87,
+        "overall_score": 0.8765000000000001,
+        "confidence_mean": 0.86
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-10-17T02:09:19.888228+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-10-17T02:09:19.888231+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "ba3b6ac8f428d857082ce054fe78763f",
@@ -74,12 +198,12 @@
       "author": "Hanxin Zhang",
       "content": "arXiv:2610.20682v1 Announce Type: new Abstract: We introduce TurboMamba, a language-model architecture for faster inference, faster training, and better token prediction. A global Mamba-3 model runs once per completed token block. A small Transformer uses this global context and earlier tokens within the block to predict the next token. Three lightweight additions improve local predictions: direct access to the previous block's last token, a small correction to next-token scores, and a learned...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
+        "relevance_score": 0.82,
         "quality_score": 0.9,
         "novelty_score": 0.88,
-        "impact_score": 0.91,
-        "overall_score": 0.903,
-        "confidence_mean": 0.93
+        "impact_score": 0.86,
+        "overall_score": 0.863,
+        "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-10-16T20:35:15.188272+00:00"
+        "consensus_timestamp": "2026-10-17T02:09:19.889140+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,7 +245,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-10-16T20:35:15.188275+00:00"
+        "timestamp": "2026-10-17T02:09:19.889143+00:00"
       },
       "article_type": "article"
     },
@@ -137,72 +261,10 @@
       "content": "The award cites Ye’s achievement in “transformative, widely applicable advances in the control of ultracold atomic systems.”",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.85,
-        "impact_score": 0.92,
-        "overall_score": 0.8865000000000001,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-10-16T20:35:15.169781+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-10-16T20:35:15.169785+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9e1d12f1a312bdb87e2578aac3c15a0c",
-      "title": "These Researchers Made AI Drive a Toyota Corolla to Get In-N-Out",
-      "source": "wired_ai",
-      "url": "https://www.wired.com/story/ai-is-driving-cars-now-oh-boy/",
-      "published_date": "2026-10-07T18:45:00+00:00",
-      "category": "Media",
-      "description": "Three engineers put GPT, Claude, and Grok in charge of a real car. Only one of them was successful.",
-      "author": "Will Knight",
-      "content": "Three engineers put GPT, Claude, and Grok in charge of a real car. Only one of them was successful.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
         "quality_score": 0.85,
-        "novelty_score": 0.88,
-        "impact_score": 0.9,
-        "overall_score": 0.8885000000000001,
+        "novelty_score": 0.8,
+        "impact_score": 0.92,
+        "overall_score": 0.8665000000000002,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -210,15 +272,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -230,84 +292,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.88,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-10-16T20:35:15.184171+00:00"
+        "consensus_timestamp": "2026-10-17T02:09:19.870885+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.728,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-10-16T20:35:15.184174+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "41024231f3f24d09843dd90df2cf627b",
-      "title": "Could AI ‘change the stakes’ in the development of bioweapons?",
-      "source": "guardian_ai",
-      "url": "https://www.theguardian.com/technology/2026/oct/14/could-ai-change-the-stakes-in-the-development-of-bioweapons",
-      "published_date": "2026-10-14T17:34:14+00:00",
-      "category": "Media",
-      "description": "Experts say the technology could help terrorists and nation states with production but that significant hurdles remainIn his annual speech on threats to the nation, Sir Ken McCallum, the head of the UK’s intelligence service, MI5, warned that AI had the potential to “change the stakes” on existing and even new bioweapons. Here we look at how AI might help in the development of bioweapons and the hurdles that remain. Continue reading...",
-      "author": "Ian Sample Science editor",
-      "content": "Experts say the technology could help terrorists and nation states with production but that significant hurdles remainIn his annual speech on threats to the nation, Sir Ken McCallum, the head of the UK’s intelligence service, MI5, warned that AI had the potential to “change the stakes” on existing and even new bioweapons. Here we look at how AI might help in the development of bioweapons and the hurdles that remain. Continue reading...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.86,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-10-16T20:35:15.183076+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-10-16T20:35:15.183079+00:00"
+        "timestamp": "2026-10-17T02:09:19.870890+00:00"
       },
       "article_type": "article"
     }
