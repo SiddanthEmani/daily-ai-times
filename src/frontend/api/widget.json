@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-05T04:22:00.384044+00:00",
+  "updated": "2026-11-05T13:52:28.626474+00:00",
   "top_stories": [
     {
       "article_id": "716c60bbbabcf890c3a93aa5ce239b3e",
       "title": "NIH announces record number of grants to support early career investigators, launches new recruitment initiative for intramural research",
       "source": "nih_ai_news",
       "url": "https://www.nih.gov/news-events/news-releases/nih-announces-record-number-grants-support-early-career-investigators-launches-new-recruitment-initiative-intramural-research",
-      "published_date": "2026-11-05T03:54:37.559308+00:00",
+      "published_date": "2026-11-05T13:36:32.418349+00:00",
       "category": "Government",
       "description": "NIH highlights actions to strengthen American biomedical science at White House Science: A New Golden Age Summit.",
       "author": "",
@@ -24,15 +24,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,41 +44,227 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.88,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-05T04:22:00.240911+00:00"
+        "consensus_timestamp": "2026-11-05T13:52:28.474879+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.728,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-05T04:22:00.240916+00:00"
+        "timestamp": "2026-11-05T13:52:28.474884+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "6892b538734adcc02633713dad3378cd",
-      "title": "PyTorch 2.15 Release Blog",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/pytorch-2-15-release-blog/",
-      "published_date": "2026-10-28T17:44:20+00:00",
+      "article_id": "58fbdd1bd8fea6b15081b67d23e69d7c",
+      "title": "AI detects “invisible” signs of pancreatic cancer years before diagnosis",
+      "source": "sciencedaily_robotics",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261024222031.htm",
+      "published_date": "2026-10-26T09:25:21+00:00",
       "category": "Open Source",
-      "description": "We are excited to announce the release of PyTorch® 2.15 (release notes)! The PyTorch 2.15 release features the following changes: Rewritten NCCL backend becomes the default, with a flight recorder... The post PyTorch 2.15 Release Blog appeared first on PyTorch.",
-      "author": "PyTorch Foundation",
-      "content": "We are excited to announce the release of PyTorch® 2.15 (release notes)! The PyTorch 2.15 release features the following changes: Rewritten NCCL backend becomes the default, with a flight recorder... The post PyTorch 2.15 Release Blog appeared first on PyTorch.",
+      "description": "A powerful new AI system could help doctors detect pancreatic cancer years before it becomes visible on conventional scans. The technology, called REDMOD, identified hidden warning signs an average of 475 days before diagnosis and was nearly twice as sensitive as experienced radiologists. By spotting cancer-related changes at their earliest stages, it could dramatically improve the chances of successful treatment for one of the deadliest forms of cancer.",
+      "author": "",
+      "content": "A powerful new AI system could help doctors detect pancreatic cancer years before it becomes visible on conventional scans. The technology, called REDMOD, identified hidden warning signs an average of 475 days before diagnosis and was nearly twice as sensitive as experienced radiologists. By spotting cancer-related changes at their earliest stages, it could dramatically improve the chances of successful treatment for one of the deadliest forms of cancer.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.9,
+        "novelty_score": 0.88,
+        "impact_score": 0.94,
+        "overall_score": 0.909,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-05T13:52:28.490182+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-05T13:52:28.490185+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "88140d474909cfaff586fd47865bcfc2",
+      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+      "source": "max_woolf",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
+      "published_date": "2026-10-25T21:00:00+00:00",
+      "category": "Open Source",
+      "description": "What is “the true cost of a token”?",
+      "author": "",
+      "content": "What is “the true cost of a token”?",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
-        "quality_score": 0.91,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.94,
+        "overall_score": 0.8979999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-05T13:52:28.489089+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-05T13:52:28.489092+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b44beecbabd63beb492732aa74a4c098",
+      "title": "AI-powered malware ‘highly likely’ to be used to hack UK infrastructure by 2028",
+      "source": "guardian_ai",
+      "url": "https://www.theguardian.com/technology/2026/nov/03/ai-powered-malware-artificial-intelligence-hacking-critical-uk-infrastructure",
+      "published_date": "2026-11-03T00:01:32+00:00",
+      "category": "Media",
+      "description": "National Cyber Security Centre expects attacks on critical facilities such as power stations, airports and hospitalsAI-powered malicious software is “highly likely” to be used in hacking attacks against the UK’s power stations, airports and hospitals by 2028, according to the state cybersecurity body.The National Cyber Security Centre (NCSC) said AI will probably enable a ransomware attack against critical national infrastructure [CNI] between now and 2028. The UK’s definition of CNI covers a...",
+      "author": "Dan Milmo Global technology editor",
+      "content": "National Cyber Security Centre expects attacks on critical facilities such as power stations, airports and hospitalsAI-powered malicious software is “highly likely” to be used in hacking attacks against the UK’s power stations, airports and hospitals by 2028, according to the state cybersecurity body.The National Cyber Security Centre (NCSC) said AI will probably enable a ransomware attack against critical national infrastructure [CNI] between now and 2028. The UK’s definition of CNI covers a...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.9,
+        "novelty_score": 0.78,
+        "impact_score": 0.95,
+        "overall_score": 0.8859999999999999,
+        "confidence_mean": 0.93
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-05T13:52:28.486587+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-05T13:52:28.486591+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "62e82c701b88ec5893f7a36209a1bd04",
+      "title": "Speculative Decoding Explained: How to Get 3× Faster Inference from Any LLM",
+      "source": "machine_learning_mastery",
+      "url": "https://machinelearningmastery.com/speculative-decoding-explained-how-to-get-3x-faster-inference-from-any-llm/",
+      "published_date": "2026-10-23T11:00:00+00:00",
+      "category": "Open Source",
+      "description": "In this article, you will learn how speculative decoding works, why it produces real speed gains at the hardware level, and what modern implementations look...",
+      "author": "Vinod Chugani",
+      "content": "In this article, you will learn how speculative decoding works, why it produces real speed gains at the hardware level, and what modern implementations look...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.91,
+        "quality_score": 0.88,
         "novelty_score": 0.84,
-        "impact_score": 0.89,
-        "overall_score": 0.9005,
+        "impact_score": 0.9,
+        "overall_score": 0.883,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -110,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-05T04:22:00.256041+00:00"
+        "consensus_timestamp": "2026-11-05T13:52:28.489041+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,193 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-05T04:22:00.256044+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "fc6ba7dd4ba532835cecc5a5c4d47eab",
-      "title": "GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights",
-      "source": "the_decoder",
-      "url": "https://the-decoder.com/gpt-6-astra-sees-the-matrix-and-reprograms-other-ai-models-directly-through-their-weights/",
-      "published_date": "2026-11-04T15:44:44+00:00",
-      "category": "Media",
-      "description": "MIT researchers show that OpenAI's GPT-6 Astra can read and deliberately rewrite the weights of other AI models without traditional training. In one experiment, Astra boosted a Qwen model's math accuracy from 7.9 to 48.1 percent by changing just 0.016 percent of its weights. The approach could fundamentally simplify AI optimization but still hits clear limits. The article GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights appeared first on The Decoder.",
-      "author": "Maximilian Schreiner",
-      "content": "MIT researchers show that OpenAI's GPT-6 Astra can read and deliberately rewrite the weights of other AI models without traditional training. In one experiment, Astra boosted a Qwen model's math accuracy from 7.9 to 48.1 percent by changing just 0.016 percent of its weights. The approach could fundamentally simplify AI optimization but still hits clear limits. The article GPT-6 Astra sees the matrix and reprograms other AI models directly through their weights appeared first on The Decoder.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.9,
-        "impact_score": 0.95,
-        "overall_score": 0.911,
-        "confidence_mean": 0.94
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-05T04:22:00.253769+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-05T04:22:00.253772+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "88140d474909cfaff586fd47865bcfc2",
-      "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
-      "source": "max_woolf",
-      "url": "https://minimaxir.com/2026/10/cheap-llms/",
-      "published_date": "2026-10-25T21:00:00+00:00",
-      "category": "Open Source",
-      "description": "What is “the true cost of a token”?",
-      "author": "",
-      "content": "What is “the true cost of a token”?",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.93,
-        "quality_score": 0.88,
-        "novelty_score": 0.85,
-        "impact_score": 0.9,
-        "overall_score": 0.8915000000000001,
-        "confidence_mean": 0.91
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-05T04:22:00.257748+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-05T04:22:00.257751+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "69ff4b7233539b39bd6e87439e04f32b",
-      "title": "Mistral Releases 1-Trillion-Parameter AI Model for Cybersecurity",
-      "source": "techrepublic_ai",
-      "url": "https://www.techrepublic.com/article/news-mistral-large-4-ai-cybersecurity-open-weights/",
-      "published_date": "2026-10-30T16:10:30+00:00",
-      "category": "Media",
-      "description": "Mistral releases Large 4, a 1-trillion-parameter open-weight AI model targeting cybersecurity. Here's what IT teams should know about costs and deployment. The post Mistral Releases 1-Trillion-Parameter AI Model for Cybersecurity appeared first on TechRepublic.",
-      "author": "Aminu Abdullahi",
-      "content": "Mistral releases Large 4, a 1-trillion-parameter open-weight AI model targeting cybersecurity. Here's what IT teams should know about costs and deployment. The post Mistral Releases 1-Trillion-Parameter AI Model for Cybersecurity appeared first on TechRepublic.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.81,
-        "impact_score": 0.86,
-        "overall_score": 0.8705,
-        "confidence_mean": 0.91
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-05T04:22:00.252427+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-05T04:22:00.252430+00:00"
+        "timestamp": "2026-11-05T13:52:28.489045+00:00"
       },
       "article_type": "article"
     }
