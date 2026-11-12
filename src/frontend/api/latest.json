@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-12T00:02:53.679025+00:00",
+  "generated_at": "2026-11-12T04:59:40.613602+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1991
+    "issue_number": 1992
   },
   "articles": [
     {
@@ -29,15 +29,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -49,227 +49,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.86,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.523762+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.463048+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.716,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.523768+00:00"
+        "timestamp": "2026-11-12T04:59:40.463050+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "349efa7a9fc0a2e22558ac93679e73d9",
-      "title": "TSMC October Revenue Hits Record $17.81 Bn on Skyrocketing AI Chip Demand",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news/tsmc-october-revenue-hits-record-1781-bn-on-skyrocketing-ai-chip-demand",
-      "published_date": "2026-11-10T11:59:13+00:00",
-      "category": "Industry",
-      "description": "TSMC's October revenue rose 59.7% year-on-year, as demand for advanced semiconductor manufacturing continues to drive growth, contrasting with recent volatility",
-      "author": "Kileuna Haralu",
-      "content": "TSMC's October revenue rose 59.7% year-on-year, as demand for advanced semiconductor manufacturing continues to drive growth, contrasting with recent volatility",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.93,
-        "novelty_score": 0.8,
-        "impact_score": 0.97,
-        "overall_score": 0.9115,
-        "confidence_mean": 0.94
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.521652+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.521655+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a607b8b2aff994197a9b8101e2d82b7b",
-      "title": "AI100 longitudinal study examines how AI has entered the mainstream",
-      "source": "aihub",
-      "url": "https://aihub.org/2026/11/10/ai100-longitudinal-study-examines-how-ai-has-entered-the-mainstream/",
-      "published_date": "2026-11-10T14:08:25+00:00",
-      "category": "Open Source",
-      "description": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
-      "author": "Lucy Smith",
-      "content": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
+      "article_id": "8031c0a06558b62ff95e4bb6763a2fe3",
+      "title": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
+      "source": "the_decoder",
+      "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+      "published_date": "2026-11-11T18:18:25+00:00",
+      "category": "Media",
+      "description": "Google Deepmind's AlphaProof Code mathematically verified Signal's cryptographic core code in four weeks, a process that typically takes years. AI agents powered by Gemini Carbon wrote more than six million lines of proof code and flagged only about one percent for human review. Deepmind plans to extend the method to critical infrastructure like power grids and medical devices. The article Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years...",
+      "author": "Manuel Uth",
+      "content": "Google Deepmind's AlphaProof Code mathematically verified Signal's cryptographic core code in four weeks, a process that typically takes years. AI agents powered by Gemini Carbon wrote more than six million lines of proof code and flagged only about one percent for human review. Deepmind plans to extend the method to critical infrastructure like power grids and medical devices. The article Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.92,
         "quality_score": 0.88,
-        "novelty_score": 0.85,
-        "impact_score": 0.9,
-        "overall_score": 0.8885000000000001,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.531904+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.531906+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "7a5062ef80dd8d3ce150d4c1af4a9c15",
-      "title": "Elastic Stack 8.19.25 released",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-stack-8-19-25-released",
-      "published_date": "2026-11-10T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Version 8.19.25 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.25 over the previous versions 8.19.x For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.",
-      "author": "Julien Mailleret",
-      "content": "Version 8.19.25 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.25 over the previous versions 8.19.x For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.82,
-        "impact_score": 0.92,
-        "overall_score": 0.8715,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.532462+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.532464+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "428db80be38bd32b58fb44ce61512b74",
-      "title": "Anthropic Seeks Up to $64.4 Bn at $1.4 Tn Valuation With IPO",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news/anthropic-seeks-up-to-644-bn-at-14-tn-valuation-with-ipo",
-      "published_date": "2026-11-11T06:12:45+00:00",
-      "category": "Industry",
-      "description": "Anthropic is offering 825 million shares of Class A common stock at an indicative price range of $70–78 per share. The company plans to list on the Nasdaq Globa",
-      "author": "Supreeth Koundinya",
-      "content": "Anthropic is offering 825 million shares of Class A common stock at an indicative price range of $70–78 per share. The company plans to list on the Nasdaq Globa",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.7,
-        "impact_score": 0.92,
-        "overall_score": 0.8490000000000001,
+        "novelty_score": 0.81,
+        "impact_score": 0.85,
+        "overall_score": 0.8685,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -277,15 +91,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -297,103 +111,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.82,
-        "confidence": 0.84,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.521367+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.466948+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.704,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.521370+00:00"
+        "timestamp": "2026-11-12T04:59:40.466951+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "20bfffe3d8ce0c6e474a38f85ba3b01e",
-      "title": "NVIDIA CUDA 13.5 Brings NVIDIA Vera Rubin GA Support",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/",
-      "published_date": "2026-11-04T18:46:07+00:00",
-      "category": "Industry",
-      "description": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
-      "author": "Jonathan Bentz",
-      "content": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8625000000000002,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.78,
-        "confidence": 0.85,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.519329+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6679999999999999,
-        "combined_confidence": 0.71,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.519335+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e4c7f8bd6b6d60f03f133d1dc528de46",
-      "title": "PEP 852: Asynchronous functions in the C API",
-      "source": "python_peps",
-      "url": "https://peps.python.org/pep-0852/",
-      "published_date": "2026-11-02T00:00:00+00:00",
+      "article_id": "8733cd3c1f66af90e7522b2ef55d58bd",
+      "title": "The AI Agent Memory Stack: Building Blocks, Patterns, and Frameworks",
+      "source": "machine_learning_mastery",
+      "url": "https://machinelearningmastery.com/the-ai-agent-memory-stack-building-blocks-patterns-and-frameworks/",
+      "published_date": "2026-11-02T11:00:00+00:00",
       "category": "Open Source",
-      "description": "This PEP describes a new suite of functions in the C API to interact with coroutines. For example:",
-      "author": "Peter Bierma (peter@python.org)",
-      "content": "This PEP describes a new suite of functions in the C API to interact with coroutines. For example:",
+      "description": "In this article, you will learn how agent memory works, what types of memory exist, and how different frameworks approach storage, retrieval, and memory management...",
+      "author": "Bala Priya C",
+      "content": "In this article, you will learn how agent memory works, what types of memory exist, and how different frameworks approach storage, retrieval, and memory management...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8585000000000002,
+        "relevance_score": 0.88,
+        "quality_score": 0.9,
+        "novelty_score": 0.78,
+        "impact_score": 0.85,
+        "overall_score": 0.854,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -425,7 +177,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.533290+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.469813+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -436,27 +188,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.533292+00:00"
+        "timestamp": "2026-11-12T04:59:40.469815+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "9c1cf38cf2508041f64b1f21880a4803",
-      "title": "AI Is Speeding Up the Teams Building AI",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/metr-anthropic-2026/",
-      "published_date": "2026-11-06T12:00:47+00:00",
+      "article_id": "a607b8b2aff994197a9b8101e2d82b7b",
+      "title": "AI100 longitudinal study examines how AI has entered the mainstream",
+      "source": "aihub",
+      "url": "https://aihub.org/2026/11/10/ai100-longitudinal-study-examines-how-ai-has-entered-the-mainstream/",
+      "published_date": "2026-11-10T14:08:25+00:00",
       "category": "Open Source",
-      "description": "Between August and October 2026, a small team from METR spent 11 weeks examining whether AI was accelerating research and development at Anthropic. They reviewed internal performance data for released and unreleased models, training compute, staffing data, and employee surveys. They also interviewed roughly 15 employees. Their assessment estimates that Anthropic is improving its models on […] The post AI Is Speeding Up the Teams Building AI appeared first on Gradient Flow.",
-      "author": "Ben Lorica",
-      "content": "Between August and October 2026, a small team from METR spent 11 weeks examining whether AI was accelerating research and development at Anthropic. They reviewed internal performance data for released and unreleased models, training compute, staffing data, and employee surveys. They also interviewed roughly 15 employees. Their assessment estimates that Anthropic is improving its models on […] The post AI Is Speeding Up the Teams Building AI appeared first on Gradient Flow.",
+      "description": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
+      "author": "Lucy Smith",
+      "content": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.78,
-        "impact_score": 0.88,
-        "overall_score": 0.8535,
-        "confidence_mean": 0.9
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -487,7 +239,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.532740+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.468865+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -498,27 +250,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.532742+00:00"
+        "timestamp": "2026-11-12T04:59:40.468867+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "2bae266cd358b4513246e5e061ccc332",
-      "title": "NIH joins effort to build SI-ready data for predictive models of human biology",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-joins-effort-build-si-ready-data-predictive-models-human-biology",
-      "published_date": "2026-11-11T23:46:49.126370+00:00",
-      "category": "Government",
-      "description": "NIH-led Bio Genesis Mission will leverage existing biomedical data resources to accelerate SI-enabled discovery and improve human health.",
-      "author": "",
-      "content": "NIH-led Bio Genesis Mission will leverage existing biomedical data resources to accelerate SI-enabled discovery and improve human health.",
+      "article_id": "349efa7a9fc0a2e22558ac93679e73d9",
+      "title": "TSMC October Revenue Hits Record $17.81 Bn on Skyrocketing AI Chip Demand",
+      "source": "analytics_india_magazine",
+      "url": "https://analyticsindiamag.com/ai-news/tsmc-october-revenue-hits-record-1781-bn-on-skyrocketing-ai-chip-demand",
+      "published_date": "2026-11-10T11:59:13+00:00",
+      "category": "Industry",
+      "description": "TSMC's October revenue rose 59.7% year-on-year, as demand for advanced semiconductor manufacturing continues to drive growth, contrasting with recent volatility",
+      "author": "Kileuna Haralu",
+      "content": "TSMC's October revenue rose 59.7% year-on-year, as demand for advanced semiconductor manufacturing continues to drive growth, contrasting with recent volatility",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.9,
+        "relevance_score": 0.88,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.92,
+        "overall_score": 0.8605000000000002,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -549,7 +301,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.512583+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.462450+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -560,7 +312,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.512590+00:00"
+        "timestamp": "2026-11-12T04:59:40.462452+00:00"
       },
       "article_type": "article"
     },
@@ -580,254 +332,6 @@
         "novelty_score": 0.74,
         "impact_score": 0.91,
         "overall_score": 0.8465000000000001,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.84,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.523975+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.704,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.523978+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "ef5e35ccbe3ab2fbf4fbfbbfd8bb8f74",
-      "title": "OpenAI reportedly raises $11B in new funding at $1.25T valuation",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/11/06/openai-reportedly-raises-11b-in-new-funding-at-1-25t-valuation/",
-      "published_date": "2026-11-06T23:43:40+00:00",
-      "category": "Industry",
-      "description": "OpenAI Group PBC has reportedly raised $11 billion as part of a funding round that could nearly double in size over the coming weeks, as sources told Bloomberg that investors wired the funds to the company today. The tipsters didn’t name the backers. The list of possible participants includes Microsoft Corp., which contributed to at […] The post OpenAI reportedly raises $11B in new funding at $1.25T valuation appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "OpenAI Group PBC has reportedly raised $11 billion as part of a funding round that could nearly double in size over the coming weeks, as sources told Bloomberg that investors wired the funds to the company today. The tipsters didn’t name the backers. The list of possible participants includes Microsoft Corp., which contributed to at […] The post OpenAI reportedly raises $11B in new funding at $1.25T valuation appeared first on SiliconANGLE.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.92,
-        "overall_score": 0.8480000000000001,
-        "confidence_mean": 0.87
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.82,
-        "confidence": 0.88,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.525262+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.728,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.525268+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a879418fcb75239ddb1fd114c44b9790",
-      "title": "Setting a new standard for responsible AI infrastructure",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "published_date": "2026-11-05T02:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
-      "author": "",
-      "content": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.68,
-        "impact_score": 0.92,
-        "overall_score": 0.8365000000000001,
-        "confidence_mean": 0.84
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.79,
-        "confidence": 0.86,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.514686+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6739999999999999,
-        "combined_confidence": 0.716,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.514690+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4bc20c8623b1467ab3b22347059b38c9",
-      "title": "Azure Cloud HSM Hardware Audit Logging: Verifiable audit trails for security and compliance",
-      "source": "azure_ai_blog",
-      "url": "https://azure.microsoft.com/en-us/blog/azure-cloud-hsm-hardware-audit-logging-verifiable-audit-trails-for-security-and-compliance/",
-      "published_date": "2026-10-29T16:00:00+00:00",
-      "category": "Industry",
-      "description": "Security, compliance, and operations teams can use this hardware-originated evidence for monitoring, compliance reporting, and forensic investigations. The post Azure Cloud HSM Hardware Audit Logging: Verifiable audit trails for security and compliance appeared first on Microsoft Azure Blog.",
-      "author": "Salim Chawro",
-      "content": "Security, compliance, and operations teams can use this hardware-originated evidence for monitoring, compliance reporting, and forensic investigations. The post Azure Cloud HSM Hardware Audit Logging: Verifiable audit trails for security and compliance appeared first on Microsoft Azure Blog.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.89,
-        "quality_score": 0.83,
-        "novelty_score": 0.74,
-        "impact_score": 0.94,
-        "overall_score": 0.8474999999999999,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.81,
-        "confidence": 0.87,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.515123+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6859999999999999,
-        "combined_confidence": 0.722,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.515129+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "38a7441ef8654f90558472f6b5dca0ec",
-      "title": "Mistral Says Its AI Model ‘Le Chonk’ Has Leapfrogged China in the Open-Weight Race",
-      "source": "wired_ai",
-      "url": "https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/",
-      "published_date": "2026-10-29T14:00:00+00:00",
-      "category": "Media",
-      "description": "The French AI lab claims its latest release matches or outperforms even the best models from DeepSeek and Z.ai in coding and cybersecurity.",
-      "author": "Joel Khalili",
-      "content": "The French AI lab claims its latest release matches or outperforms even the best models from DeepSeek and Z.ai in coding and cybersecurity.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.82,
-        "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8450000000000001,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -859,7 +363,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.531643+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.463224+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -870,214 +374,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.531646+00:00"
+        "timestamp": "2026-11-12T04:59:40.463227+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "849e33e71713f03a7356d067c088c5f6",
-      "title": "Cognizant Commits 25,000 Professionals to Deploy Claude in Enterprises",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-news/cognizant-commits-25000-professionals-to-deploy-claude-in-enterprises",
-      "published_date": "2026-11-11T05:13:10+00:00",
-      "category": "Industry",
-      "description": "The offering combines licensed access to Claude, dedicated personnel, and proprietary software to manage AI systems in enterprise production environments.",
-      "author": "Mukundan Sivaraj",
-      "content": "The offering combines licensed access to Claude, dedicated personnel, and proprietary software to manage AI systems in enterprise production environments.",
+      "article_id": "dcfe8a92d0343c8b194cc80d2b0e7b5c",
+      "title": "Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic",
+      "source": "the_decoder",
+      "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+      "published_date": "2026-11-11T12:12:47+00:00",
+      "category": "Media",
+      "description": "OpenAI grew its quarterly revenue 50 percent to $10 billion but is still burning more cash than it brings in. Adjusted operating losses climbed to $10.9 billion, while rival Anthropic operates far more efficiently on $17 billion in revenue. To close the gap, OpenAI is now fueling a price war for enterprise customers. The article Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic appeared first on The Decoder.",
+      "author": "Maximilian Schreiner",
+      "content": "OpenAI grew its quarterly revenue 50 percent to $10 billion but is still burning more cash than it brings in. Adjusted operating losses climbed to $10.9 billion, while rival Anthropic operates far more efficiently on $17 billion in revenue. To close the gap, OpenAI is now fueling a price war for enterprise customers. The article Enterprise sales push OpenAI's quarterly revenue to $10 billion, though it still trails Anthropic appeared first on The Decoder.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.84,
-        "novelty_score": 0.72,
-        "impact_score": 0.9,
-        "overall_score": 0.834,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.521586+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.521591+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "e6077459c2d802c2a27fbe9f3ba29727",
-      "title": "Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.12901",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12901v1 Announce Type: new Abstract: Recent advancements in multimodal diffusion language models (MDLMs) have exhibited strong global modeling capabilities through iterative refinement. We observe that mask uncertainty follows an overall downward trend during iterative denoising, while a few denoising steps exhibit localized entropy spikes closely associated with hallucinations. We argue that anomalous steps can be identified by measuring the entropy deviation of each denoising step...",
-      "author": "Zhongxing Xu, Zhonghua Wang, Zhe Qian, Shiyan Su, Ming Hu, Xiaocheng Zou, Wei Feng, Mingquan Lin, Yuyin Zhou, Yifan Peng, Hamid Rezatofighi, Zongyuan Ge",
-      "content": "arXiv:2611.12901v1 Announce Type: new Abstract: Recent advancements in multimodal diffusion language models (MDLMs) have exhibited strong global modeling capabilities through iterative refinement. We observe that mask uncertainty follows an overall downward trend during iterative denoising, while a few denoising steps exhibit localized entropy spikes closely associated with hallucinations. We argue that anomalous steps can be identified by measuring the entropy deviation of each denoising step...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.88,
-        "novelty_score": 0.73,
-        "impact_score": 0.8,
-        "overall_score": 0.8175,
-        "confidence_mean": 0.87
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.534713+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.534717+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "e3dbbab8ad9578b6c091cdef932f6516",
-      "title": "Third Eye: Beyond Immediate Gains in Recursive Self-Improvement",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12988",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12988v1 Announce Type: new Abstract: Does a useful self-update remain useful after the model updates again? Third Eye separates immediate performance from the outcome of a further native update. We evaluate five 3-8B backbones on math and code: 64 fresh runs, three candidates per run, and three continuations per candidate. Selection and final scoring use disjoint items. In the balanced Qwen3-4B/Llama-3.2-3B comparison, immediate-selected utility is near zero, but continuation reduces...",
-      "author": "Sujato Dutta, Padala Indira Sneha, Kypu Mahitha, Shashank Vanga, Neeraj Choudhary",
-      "content": "arXiv:2611.12988v1 Announce Type: new Abstract: Does a useful self-update remain useful after the model updates again? Third Eye separates immediate performance from the outcome of a further native update. We evaluate five 3-8B backbones on math and code: 64 fresh runs, three candidates per run, and three continuations per candidate. Selection and final scoring use disjoint items. In the balanced Qwen3-4B/Llama-3.2-3B comparison, immediate-selected utility is near zero, but continuation reduces...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.82,
-        "novelty_score": 0.74,
-        "impact_score": 0.9,
-        "overall_score": 0.834,
-        "confidence_mean": 0.94
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535898+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.535901+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "b6ea9910584df136d022d4da9a28df8f",
-      "title": "Predictive Surprise as Self-Grounding Concept Bottleneck for Interpretable Time Series",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12955",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12955v1 Announce Type: new Abstract: Time-series classifiers deployed in risk-sensitive domains must be (1) accurate, (2) interpretable, and (3) able to abstain when evidence is weak. Existing methods do not deliver all 3 at once, and the obstacle is structural, rather than logistical. Meaningful temporal patterns cannot be defined without knowing segment boundaries, yet meaningful boundaries cannot be placed without knowing which patterns to expect. Existing approaches break this...",
-      "author": "Sachith Abeywickrama, Emadeldeen Eldele, Min Wu, Xiaoli Li, Chau Yuen",
-      "content": "arXiv:2611.12955v1 Announce Type: new Abstract: Time-series classifiers deployed in risk-sensitive domains must be (1) accurate, (2) interpretable, and (3) able to abstain when evidence is weak. Existing methods do not deliver all 3 at once, and the obstacle is structural, rather than logistical. Meaningful temporal patterns cannot be defined without knowing segment boundaries, yet meaningful boundaries cannot be placed without knowing which patterns to expect. Existing approaches break this...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
+        "relevance_score": 0.9,
+        "quality_score": 0.83,
+        "novelty_score": 0.79,
         "impact_score": 0.88,
-        "overall_score": 0.806,
+        "overall_score": 0.8510000000000001,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -1109,7 +425,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535677+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.467213+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1120,153 +436,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.535680+00:00"
+        "timestamp": "2026-11-12T04:59:40.467216+00:00"
       },
-      "research_quality_score": 0.8,
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "679a24ca23ffb14a50ebf9201c0afa3e",
-      "title": "StatPrompt-LLM: A Lightweight Statistical Refinement for Foundation-Style Time-Series Forecasting",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12974",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12974v1 Announce Type: new Abstract: Time-series forecasting has recently seen a paradigm shift with the introduction of foundation-style models that adapt large pretrained language architectures to sequential data. However, effectively exposing fundamental temporal structures, such as trend, scale, and temporal dependence, to these models remains an open challenge, particularly when the available observations are limited. In this paper, we conduct an exploratory empirical study...",
-      "author": "Aniket Sinha, Veronica W. Tsou",
-      "content": "arXiv:2611.12974v1 Announce Type: new Abstract: Time-series forecasting has recently seen a paradigm shift with the introduction of foundation-style models that adapt large pretrained language architectures to sequential data. However, effectively exposing fundamental temporal structures, such as trend, scale, and temporal dependence, to these models remains an open challenge, particularly when the available observations are limited. In this paper, we conduct an exploratory empirical study...",
+      "article_id": "2f7c25f056f2e364c96fbcbb21f380f9",
+      "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
+      "source": "the_decoder",
+      "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+      "published_date": "2026-11-11T14:25:20+00:00",
+      "category": "Media",
+      "description": "Anthropic claims it used AI itself to breach Nvidia's CUDA moat. The company's in-house model Mythos reportedly ported Claude to AMD GPUs in just three days, with almost no human intervention. Anthropic now runs Claude on four chip families and aims to cut costs and reduce vendor dependencies. The article Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days appeared first on The Decoder.",
+      "author": "Matthias Bastian",
+      "content": "Anthropic claims it used AI itself to breach Nvidia's CUDA moat. The company's in-house model Mythos reportedly ported Claude to AMD GPUs in just three days, with almost no human intervention. Anthropic now runs Claude on four chip families and aims to cut costs and reduce vendor dependencies. The article Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days appeared first on The Decoder.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.84,
-        "quality_score": 0.79,
-        "novelty_score": 0.72,
-        "impact_score": 0.86,
-        "overall_score": 0.8015,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535803+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.535806+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "fbc04efca9df4ef6018f825535719cc2",
-      "title": "Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2611.13545",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.13545v1 Announce Type: cross Abstract: BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to...",
-      "author": "Mahdi Nazemi, Oleg Rybakov, Tijmen Blankevoort, Asit Mishra, Carlo del Mundo",
-      "content": "arXiv:2611.13545v1 Announce Type: cross Abstract: BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
-        "quality_score": 0.8,
-        "novelty_score": 0.7,
-        "impact_score": 0.78,
-        "overall_score": 0.777,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.537221+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-12T00:02:53.537224+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "d1cb2b4c21237d8bd4d652af969eb240",
-      "title": "ADIndex: Layer-Adaptive Sparse Attention Indexing via Group-Level Distillation",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12956",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12956v1 Announce Type: new Abstract: DeepSeek Sparse Attention (DSA) reduces the computational cost of attention through token-level selection. However, its indexer still scores the entire causal prefix for each query, making indexing a dominant source of latency in long-context inference. Notably, the indexer alone can account for more than 50% of total prefill GPU time at long context lengths. To address this bottleneck, we propose ADIndex, an Adaptive and Distillation-driven...",
-      "author": "Jin-Fei Qi, Yiduo Li, Jiang-Xin Shi, Kan Liu, Tao Lan, Hanlin Tang, Yu-Feng Li",
-      "content": "arXiv:2611.12956v1 Announce Type: new Abstract: DeepSeek Sparse Attention (DSA) reduces the computational cost of attention through token-level selection. However, its indexer still scores the entire causal prefix for each query, making indexing a dominant source of latency in long-context inference. Notably, the indexer alone can account for more than 50% of total prefill GPU time at long context lengths. To address this bottleneck, we propose ADIndex, an Adaptive and Distillation-driven...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
-        "quality_score": 0.78,
-        "novelty_score": 0.68,
-        "impact_score": 0.85,
-        "overall_score": 0.781,
+        "relevance_score": 0.89,
+        "quality_score": 0.84,
+        "novelty_score": 0.82,
+        "impact_score": 0.8,
+        "overall_score": 0.842,
         "confidence_mean": 0.91
       },
       "combined_deep_intelligence": {
@@ -1298,7 +487,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535719+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.467027+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1309,27 +498,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.535722+00:00"
+        "timestamp": "2026-11-12T04:59:40.467030+00:00"
       },
-      "research_quality_score": 0.8,
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "f67d33201e44cbd687785f1d323d92e8",
-      "title": "Actionable Feedback: Improving Model Capabilities from User Edit Data on Clinical Documentation",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.12904",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12904v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being deployed in clinical documentation workflows, where clinicians review and edit their outputs before use. In principle, these clinician edits represent a scalable source of supervision for model training. In practice, not all edits represent actionable feedback: for instance, on data drawn from real-world deployment of an AI clinical documentation product, our review suggests that over 45% of...",
-      "author": "Daniel P. Jeong, Yewon Byun, John Giorgi, Peng Xu, Zachary C. Lipton, Michael Oberst",
-      "content": "arXiv:2611.12904v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly being deployed in clinical documentation workflows, where clinicians review and edit their outputs before use. In principle, these clinician edits represent a scalable source of supervision for model training. In practice, not all edits represent actionable feedback: for instance, on data drawn from real-world deployment of an AI clinical documentation product, our review suggests that over 45% of...",
+      "article_id": "1aee7cb347d07f4e67a0f7954c2148fe",
+      "title": "Research: Artificial Intelligence sector study 2025",
+      "source": "uk_dsit_ai",
+      "url": "https://www.gov.uk/government/publications/artificial-intelligence-sector-study-2025",
+      "published_date": "2026-10-29T16:41:56+00:00",
+      "category": "Government",
+      "description": "An analysis of the UK’s artificial intelligence (AI) sector, developing estimates of the scale and scope of firms developing AI products and services in the UK.",
+      "author": "",
+      "content": "An analysis of the UK’s artificial intelligence (AI) sector, developing estimates of the scale and scope of firms developing AI products and services in the UK.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.77,
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.7,
+        "impact_score": 0.88,
+        "overall_score": 0.8335,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.82,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.456963+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.692,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.456966+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "775e69c61e47a3e20ca574b720b14209",
+      "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
+      "source": "nvidia_blog",
+      "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs/",
+      "published_date": "2026-11-03T16:00:45+00:00",
+      "category": "Industry",
+      "description": "Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is shrinking. For engineers, understanding how a process change will behave, how a material will interact with a new step, how a defect maps back to a root cause are critical, challenging steps in semiconductor […]",
+      "author": "Timothy Costa",
+      "content": "Demand for advanced chips is rising. The processes to build them are getting more complex. And the margin for error is shrinking. For engineers, understanding how a process change will behave, how a material will interact with a new step, how a defect maps back to a root cause are critical, challenging steps in semiconductor […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
         "quality_score": 0.83,
-        "novelty_score": 0.68,
-        "impact_score": 0.74,
-        "overall_score": 0.7565000000000001,
+        "novelty_score": 0.75,
+        "impact_score": 0.93,
+        "overall_score": 0.8450000000000001,
         "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
@@ -1361,7 +611,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.534850+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.459504+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1372,27 +622,88 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.534852+00:00"
+        "timestamp": "2026-11-12T04:59:40.459506+00:00"
       },
-      "research_quality_score": 0.8,
-      "article_type": "research"
+      "article_type": "article"
     },
     {
-      "article_id": "2925478ef9bed20f16bc03300b1af9ff",
-      "title": "MADSNet: A Multi-Scale Axial-Attentive Dense Spiking Network for Spike Camera Image Reconstruction",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12980",
-      "published_date": "2026-11-11T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.12980v1 Announce Type: new Abstract: Spike cameras encode dynamic scenes into high-temporal-resolution binary spike streams for efficient high-speed vision. Although spiking neural networks (SNNs) can process such signals with sparse and accumulate-only computation, existing SNN-based reconstruction methods are typically shallow and still lag behind ANN-based models in reconstruction fidelity. This paper proposes MADSNet, a Multi-scale Axial-attentive Dense Spiking Network for spike...",
-      "author": "Sirui Li, Rui Zhao, Siqi Cai, Haizhou Li, Tiejun Huang, Yajing Zheng",
-      "content": "arXiv:2611.12980v1 Announce Type: new Abstract: Spike cameras encode dynamic scenes into high-temporal-resolution binary spike streams for efficient high-speed vision. Although spiking neural networks (SNNs) can process such signals with sparse and accumulate-only computation, existing SNN-based reconstruction methods are typically shallow and still lag behind ANN-based models in reconstruction fidelity. This paper proposes MADSNet, a Multi-scale Axial-attentive Dense Spiking Network for spike...",
+      "article_id": "f93c156d314076c3ca8c1743f734cbf6",
+      "title": "Anthropic targets valuation of up to $1.4tn in stock market flotation",
+      "source": "guardian_ai",
+      "url": "https://www.theguardian.com/technology/2026/nov/10/anthropic-valuation-stock-market-flotation-ipo-wall-street-ai",
+      "published_date": "2026-11-10T16:13:13+00:00",
+      "category": "Media",
+      "description": "Claude chatbot developer had been reported to be aiming for $2tn IPO on Wall Street before investors cooled on AIAnthropic is seeking a valuation of up to $1.4tn (£1.1tn) in its imminent stock market flotation, short of the $2tn that had been expected before investors started to question the durability of the AI boom.The developer of the Claude chatbot was widely reported to be targeting a $2tn initial public offering on Wall Street but its sights have been set lower, according to a US...",
+      "author": "Dan Milmo Global technology editor",
+      "content": "Claude chatbot developer had been reported to be aiming for $2tn IPO on Wall Street before investors cooled on AIAnthropic is seeking a valuation of up to $1.4tn (£1.1tn) in its imminent stock market flotation, short of the $2tn that had been expected before investors started to question the durability of the AI boom.The developer of the Claude chatbot was widely reported to be targeting a $2tn initial public offering on Wall Street but its sights have been set lower, according to a US...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.81,
-        "quality_score": 0.76,
-        "novelty_score": 0.67,
-        "impact_score": 0.83,
-        "overall_score": 0.7665000000000001,
+        "relevance_score": 0.88,
+        "quality_score": 0.82,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8490000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.467570+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.467573+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "372e20495eaeb29f79ffd40b428810b2",
+      "title": "Everyone claims AI governance now. 15 questions to test the claim.",
+      "source": "datarobot_blog",
+      "url": "https://www.datarobot.com/blog/everyone-claims-ai-governance-now-15-questions-to-test-the-claim/",
+      "published_date": "2026-10-30T02:23:49+00:00",
+      "category": "Industry",
+      "description": "“Governance” has become a fixture in enterprise AI announcements. Identity, security, orchestration, infrastructure, and data platform vendors offer products for agent safety, governance, and control, bringing welcome attention to a problem enterprises need to solve. As the claims grow broader, CIOs and risk leaders need to get more precise about what they are buying. Look... The post Everyone claims AI governance now. 15 questions to test the claim. appeared first on DataRobot.",
+      "author": "DataRobot",
+      "content": "“Governance” has become a fixture in enterprise AI announcements. Identity, security, orchestration, infrastructure, and data platform vendors offer products for agent safety, governance, and control, bringing welcome attention to a problem enterprises need to solve. As the claims grow broader, CIOs and risk leaders need to get more precise about what they are buying. Look... The post Everyone claims AI governance now. 15 questions to test the claim. appeared first on DataRobot.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.82,
+        "novelty_score": 0.7,
+        "impact_score": 0.95,
+        "overall_score": 0.8399999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -1424,7 +735,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535857+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.459701+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1435,21 +746,521 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.535860+00:00"
+        "timestamp": "2026-11-12T04:59:40.459704+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "afe4ac7acc97e44c836c512b36a1ddb8",
+      "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/jiostar-vijay-seshadri",
+      "published_date": "2026-11-11T00:00:00+00:00",
+      "category": "Industry",
+      "description": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
+      "author": "",
+      "content": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.84,
+        "novelty_score": 0.72,
+        "impact_score": 0.9,
+        "overall_score": 0.834,
+        "confidence_mean": 0.91
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.81,
+        "confidence": 0.88,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.457245+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6859999999999999,
+        "combined_confidence": 0.728,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.457248+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "50c0c5b5b4f2d9fc859b0419bd2257a2",
+      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "published_date": "2026-11-05T09:00:00+00:00",
+      "category": "Industry",
+      "description": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+      "author": "",
+      "content": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.81,
+        "novelty_score": 0.75,
+        "impact_score": 0.92,
+        "overall_score": 0.8440000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.458036+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.458039+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "20bfffe3d8ce0c6e474a38f85ba3b01e",
+      "title": "NVIDIA CUDA 13.5 Brings NVIDIA Vera Rubin GA Support",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/",
+      "published_date": "2026-11-04T18:46:07+00:00",
+      "category": "Industry",
+      "description": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
+      "author": "Jonathan Bentz",
+      "content": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.87,
+        "quality_score": 0.83,
+        "novelty_score": 0.76,
+        "impact_score": 0.91,
+        "overall_score": 0.8405000000000001,
+        "confidence_mean": 0.87
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.461073+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.461075+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "fbc04efca9df4ef6018f825535719cc2",
+      "title": "Closing the BF16-FP16 Convergence Speed Gap in RL Post-Training with Stochastic Rounding",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2611.13545",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.13545v1 Announce Type: cross Abstract: BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to...",
+      "author": "Mahdi Nazemi, Oleg Rybakov, Tijmen Blankevoort, Asit Mishra, Carlo del Mundo",
+      "content": "arXiv:2611.13545v1 Announce Type: cross Abstract: BF16 is widely used to pretrain large language models because it has the same dynamic range as FP32 and converges similarly to FP32 training. However, in reinforcement learning with verifiable rewards, where learning rates are typically low, we find that standard mixed-precision BF16 training converges more slowly than FP16 training at the same learning rate. We attribute this gap to weight sticking: when FP32 shadow weights are quantized to...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.85,
+        "novelty_score": 0.88,
+        "impact_score": 0.82,
+        "overall_score": 0.8365,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.474744+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.474746+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "d5578224682518404d0fb229669931e0",
-      "title": "LandslideFM: A Foundation Model Towards Unified Landslide Perception and Understanding",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.12936",
+      "article_id": "d1cb2b4c21237d8bd4d652af969eb240",
+      "title": "ADIndex: Layer-Adaptive Sparse Attention Indexing via Group-Level Distillation",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.12956",
       "published_date": "2026-11-11T05:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple...",
-      "author": "Shanwen Wang, Sirui Wang, Xin Sun, Jungong Han",
-      "content": "arXiv:2611.12936v1 Announce Type: new Abstract: Intelligent landslide detection is essential for disaster prevention. However, existing models primarily focus on isolated visual tasks, require extensive labeled data, and lack deep analytical and scene-understanding capabilities. To address these limitations, we propose LandslideFM, the first unified foundation model that connects visual perception tasks with contextual interpretation of landslides. Specifically, LandslideFM adapts to multiple...",
+      "description": "arXiv:2611.12956v1 Announce Type: new Abstract: DeepSeek Sparse Attention (DSA) reduces the computational cost of attention through token-level selection. However, its indexer still scores the entire causal prefix for each query, making indexing a dominant source of latency in long-context inference. Notably, the indexer alone can account for more than 50% of total prefill GPU time at long context lengths. To address this bottleneck, we propose ADIndex, an Adaptive and Distillation-driven...",
+      "author": "Jin-Fei Qi, Yiduo Li, Jiang-Xin Shi, Kan Liu, Tao Lan, Hanlin Tang, Yu-Feng Li",
+      "content": "arXiv:2611.12956v1 Announce Type: new Abstract: DeepSeek Sparse Attention (DSA) reduces the computational cost of attention through token-level selection. However, its indexer still scores the entire causal prefix for each query, making indexing a dominant source of latency in long-context inference. Notably, the indexer alone can account for more than 50% of total prefill GPU time at long context lengths. To address this bottleneck, we propose ADIndex, an Adaptive and Distillation-driven...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.81,
+        "quality_score": 0.85,
+        "novelty_score": 0.77,
+        "impact_score": 0.83,
+        "overall_score": 0.8140000000000001,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.473364+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.473366+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "b6ea9910584df136d022d4da9a28df8f",
+      "title": "Predictive Surprise as Self-Grounding Concept Bottleneck for Interpretable Time Series",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.12955",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12955v1 Announce Type: new Abstract: Time-series classifiers deployed in risk-sensitive domains must be (1) accurate, (2) interpretable, and (3) able to abstain when evidence is weak. Existing methods do not deliver all 3 at once, and the obstacle is structural, rather than logistical. Meaningful temporal patterns cannot be defined without knowing segment boundaries, yet meaningful boundaries cannot be placed without knowing which patterns to expect. Existing approaches break this...",
+      "author": "Sachith Abeywickrama, Emadeldeen Eldele, Min Wu, Xiaoli Li, Chau Yuen",
+      "content": "arXiv:2611.12955v1 Announce Type: new Abstract: Time-series classifiers deployed in risk-sensitive domains must be (1) accurate, (2) interpretable, and (3) able to abstain when evidence is weak. Existing methods do not deliver all 3 at once, and the obstacle is structural, rather than logistical. Meaningful temporal patterns cannot be defined without knowing segment boundaries, yet meaningful boundaries cannot be placed without knowing which patterns to expect. Existing approaches break this...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.78,
+        "quality_score": 0.82,
+        "novelty_score": 0.74,
+        "impact_score": 0.8,
+        "overall_score": 0.7839999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.473324+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.473326+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "6b889945a11b758b225e427314f08ce5",
+      "title": "One Temperature to Rule Them All?",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.13077",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.13077v1 Announce Type: new Abstract: Inference-time sampling is a central mechanism for improving large language models, with temperature controlling the tradeoff between reliability and diversity. While recent work suggests that varying temperature across samples can improve multi-sample inference, simple fixed-temperature schemes remain the standard in practice. We investigate this discrepancy in the canonical pass@K setting, asking when temperature diversity is useful, and when a...",
+      "author": "Aviv Orly (School of Physics and Astronomy, Tel Aviv University, Israel), Ori Shem-Ur (School of Physics and Astronomy, Tel Aviv University, Israel), Yaron Oz (School of Physics and Astronomy, Tel Aviv University, Israel)",
+      "content": "arXiv:2611.13077v1 Announce Type: new Abstract: Inference-time sampling is a central mechanism for improving large language models, with temperature controlling the tradeoff between reliability and diversity. While recent work suggests that varying temperature across samples can improve multi-sample inference, simple fixed-temperature schemes remain the standard in practice. We investigate this discrepancy in the canonical pass@K setting, asking when temperature diversity is useful, and when a...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.77,
+        "novelty_score": 0.72,
+        "impact_score": 0.81,
+        "overall_score": 0.7895,
+        "confidence_mean": 0.86
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.473996+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.473999+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "8b0534116bd882e47f8afbbb543ed65d",
+      "title": "Multimodal Graph Learning: A Survey of Models, Benchmarks, and Frontiers",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.12990",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12990v1 Announce Type: new Abstract: Multimodal attributed graphs (MAGs), in which nodes carry text, images, and other modalities while edges encode relations among entities, underlie e-commerce, social media, content platforms, and creative applications. Learning on MAGs has developed along two complementary lines: graph-centric methods redesign how modalities are fused, propagated, and connected within message passing, while foundation-model-centric methods pretrain transferable...",
+      "author": "Rui Xue, Tianfu Wu",
+      "content": "arXiv:2611.12990v1 Announce Type: new Abstract: Multimodal attributed graphs (MAGs), in which nodes carry text, images, and other modalities while edges encode relations among entities, underlie e-commerce, social media, content platforms, and creative applications. Learning on MAGs has developed along two complementary lines: graph-centric methods redesign how modalities are fused, propagated, and connected within message passing, while foundation-model-centric methods pretrain transferable...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.82,
+        "quality_score": 0.75,
+        "novelty_score": 0.7,
+        "impact_score": 0.78,
+        "overall_score": 0.7645000000000001,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.473560+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.473562+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "7596e34399b5b192476b5b02eb6c95ba",
+      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2611.12933",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined...",
+      "author": "Gunik Luthra, Ronald J. Pandolfi, Benjamin T. Diroll, Ricky Ronquillo, Ruipeng Li, Christopher B. Murray, Marcus M. Noack, Kevin G. Yager, Esther H. R. Tsai",
+      "content": "arXiv:2611.12933v1 Announce Type: new Abstract: Closed-loop autonomous experimentation can accelerate scientific discovery, but implementation effort limits accessibility. Agentic systems may lower this barrier, although sustained operation on physical instruments remains largely unexplored. Here, using coding-agent infrastructure grounded in validated scientific methods, we demonstrate autonomous synchrotron X-ray experiments on nanoparticle superlattices under evolving, human-defined...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.81,
         "quality_score": 0.75,
@@ -1487,7 +1298,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535262+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.472830+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1498,28 +1309,28 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.535265+00:00"
+        "timestamp": "2026-11-12T04:59:40.472832+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "c26f8bac9606f1473ec5d6e67ee1491b",
-      "title": "Exploration via Exploitation: The Blessing of Reward Diversity in Personalized Federated RL",
+      "article_id": "8e6963bd37caf1a35a6b448a3cc575ae",
+      "title": "Continuous-Time Set-Transformers for Asynchronous WiFi-IMU Indoor Localization",
       "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.12964",
+      "url": "https://arxiv.org/abs/2611.13057",
       "published_date": "2026-11-11T05:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2611.12964v1 Announce Type: new Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves optimal...",
-      "author": "Jiin Woo, Gauri Joshi, Yuejie Chi",
-      "content": "arXiv:2611.12964v1 Announce Type: new Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves optimal...",
+      "description": "arXiv:2611.13057v1 Announce Type: new Abstract: Indoor localization commonly combines WiFi received signal strength indicator (RSSI) fingerprints with inertial measurements. However, these sensor streams are sampled asynchronously at different rates; therefore, observations rarely align in time and may be missing or stale. Most existing methods resample the data onto a shared clock and process each modality using a separate branch. We instead present a continuous-time transformer that...",
+      "author": "Mohamed Bachar (LINEACT), Ilyass Abouelaziz (LINEACT), Yuehua Ding (LINEACT)",
+      "content": "arXiv:2611.13057v1 Announce Type: new Abstract: Indoor localization commonly combines WiFi received signal strength indicator (RSSI) fingerprints with inertial measurements. However, these sensor streams are sampled asynchronously at different rates; therefore, observations rarely align in time and may be missing or stale. Most existing methods resample the data onto a shared clock and process each modality using a separate branch. We instead present a continuous-time transformer that...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.8,
-        "quality_score": 0.75,
-        "novelty_score": 0.66,
-        "impact_score": 0.82,
-        "overall_score": 0.7565000000000001,
-        "confidence_mean": 0.9
+        "quality_score": 0.73,
+        "novelty_score": 0.68,
+        "impact_score": 0.77,
+        "overall_score": 0.7465,
+        "confidence_mean": 0.87
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1550,7 +1361,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-12T00:02:53.535761+00:00"
+        "consensus_timestamp": "2026-11-12T04:59:40.473877+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1561,7 +1372,196 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-12T00:02:53.535763+00:00"
+        "timestamp": "2026-11-12T04:59:40.473880+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "c26f8bac9606f1473ec5d6e67ee1491b",
+      "title": "Exploration via Exploitation: The Blessing of Reward Diversity in Personalized Federated RL",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.12964",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12964v1 Announce Type: new Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves optimal...",
+      "author": "Jiin Woo, Gauri Joshi, Yuejie Chi",
+      "content": "arXiv:2611.12964v1 Announce Type: new Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves optimal...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.73,
+        "quality_score": 0.78,
+        "novelty_score": 0.7,
+        "impact_score": 0.75,
+        "overall_score": 0.739,
+        "confidence_mean": 0.89
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.473403+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.473405+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "51bc641793583fe29f373bd7012040e2",
+      "title": "Settling the Burn-in Gap: Sharp Risk Bounds for Tail-Averaged SGD in Linear Regression",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2611.13383",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.13383v1 Announce Type: cross Abstract: We study the excess risk of constant-stepsize online stochastic gradient descent (SGD) with tail-averaging for high-dimensional linear regression. Building on the instance-dependent spectral framework of Zou et al. (2021), we establish matching initialization-explicit upper and lower bounds on the total excess risk of tail-averaged SGD in terms of the population covariance spectrum $\\mathbf{H}$ and initialization $\\mathbf{w}_0-\\mathbf{w}^*$...",
+      "author": "Qingyue Zhao, Xuheng Li, Quanquan Gu",
+      "content": "arXiv:2611.13383v1 Announce Type: cross Abstract: We study the excess risk of constant-stepsize online stochastic gradient descent (SGD) with tail-averaging for high-dimensional linear regression. Building on the instance-dependent spectral framework of Zou et al. (2021), we establish matching initialization-explicit upper and lower bounds on the total excess risk of tail-averaged SGD in terms of the population covariance spectrum $\\mathbf{H}$ and initialization $\\mathbf{w}_0-\\mathbf{w}^*$...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.72,
+        "quality_score": 0.78,
+        "novelty_score": 0.75,
+        "impact_score": 0.7,
+        "overall_score": 0.7385,
+        "confidence_mean": 0.86
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.474663+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.474665+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "b00964a1c58cc6a7576f034bb18e7a10",
+      "title": "TimeOmni-o1: Bidirectionally Coupling Time Series Foundation Models and LLMs for Multimodal Reasoning and Forecasting",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2611.12902",
+      "published_date": "2026-11-11T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12902v1 Announce Type: new Abstract: Time series from real-world systems are often accompanied by text, such as a report on an event that affects them. Two common tasks on these series are understanding, e.g., answering questions about a series, and forecasting its future values. Both tasks require reasoning over the series and the text together. Moreover, understanding outputs text while forecasting outputs a time series, so serving both requires a model that reads and generates...",
+      "author": "Ziyang Zhang, Shenyi Li, Wen Wu, Chao Zhang",
+      "content": "arXiv:2611.12902v1 Announce Type: new Abstract: Time series from real-world systems are often accompanied by text, such as a report on an event that affects them. Two common tasks on these series are understanding, e.g., answering questions about a series, and forecasting its future values. Both tasks require reasoning over the series and the text together. Moreover, understanding outputs text while forecasting outputs a time series, so serving both requires a model that reads and generates...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.78,
+        "quality_score": 0.73,
+        "novelty_score": 0.7,
+        "impact_score": 0.75,
+        "overall_score": 0.7414999999999999,
+        "confidence_mean": 0.87
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-12T04:59:40.472515+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-12T04:59:40.472518+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1570,7 +1570,7 @@
   "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 868.5804374217987,
+    "processing_time": 1540.931046962738,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1588,10 +1588,10 @@
       "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 399,
+      "total_processed": 411,
       "candidates": {
-        "headlines": 37,
-        "articles": 311,
+        "headlines": 34,
+        "articles": 326,
         "research_papers": 51
       },
       "selected": {
