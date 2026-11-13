@@ -1,22 +1,84 @@
 {
-  "updated": "2026-11-13T13:49:26.202977+00:00",
+  "updated": "2026-11-13T23:18:50.896097+00:00",
   "top_stories": [
     {
-      "article_id": "b0bb1d9a7fbf21bae664125fe047011c",
-      "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+      "article_id": "fb54724b09e4eada68b4cea2feeb03c9",
+      "title": "Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate",
       "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/",
-      "published_date": "2026-11-13T10:32:26+00:00",
+      "url": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
+      "published_date": "2026-11-13T16:10:02+00:00",
       "category": "Industry",
-      "description": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storage and network. Google reports over 90% lower KV transfer latency on 235B to 480B MoE models. The post Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs appeared first on MarkTechPost.",
-      "author": "Michal Sutter",
-      "content": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storage and network. Google reports over 90% lower KV transfer latency on 235B to 480B MoE models. The post Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs appeared first on MarkTechPost.",
+      "description": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3 adds Locate for span extraction and reports 91.6% mean accuracy on 63 query-classification tasks. The post Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate appeared first on MarkTechPost.",
+      "author": "Asif Razzaq",
+      "content": "Perplexity Decider v1.3 and Flash v1.3 are open-weight decision models that return probabilities, not text. Version 1.3 adds Locate for span extraction and reports 91.6% mean accuracy on 63 query-classification tasks. The post Perplexity Releases Decider v1.3: Open-Weight Decision Models Add Locate appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.75,
-        "impact_score": 0.95,
-        "overall_score": 0.8674999999999999,
+        "relevance_score": 0.88,
+        "quality_score": 0.83,
+        "novelty_score": 0.78,
+        "impact_score": 0.9,
+        "overall_score": 0.8465000000000001,
+        "confidence_mean": 0.93
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-13T23:18:50.746562+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-13T23:18:50.746565+00:00"
+      },
+      "article_type": "headline"
+    },
+    {
+      "article_id": "1460a4d075e25778c41a6319ea1e05e3",
+      "title": "Inside this quantum computer, memory vibrates like a guitar string",
+      "source": "sciencedaily_neural",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205416.htm",
+      "published_date": "2026-11-12T02:35:20+00:00",
+      "category": "Open Source",
+      "description": "Researchers have created a quantum computer that stores information in microscopic vibrations, potentially making quantum machines smaller, more powerful, and better at preserving information. The breakthrough successfully demonstrated advanced quantum calculations and could help overcome major barriers to practical quantum computing.",
+      "author": "",
+      "content": "Researchers have created a quantum computer that stores information in microscopic vibrations, potentially making quantum machines smaller, more powerful, and better at preserving information. The breakthrough successfully demonstrated advanced quantum calculations and could help overcome major barriers to practical quantum computing.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.9,
+        "novelty_score": 0.82,
+        "impact_score": 0.92,
+        "overall_score": 0.878,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -48,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-13T13:49:26.114879+00:00"
+        "consensus_timestamp": "2026-11-13T23:18:50.756240+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,9 +121,9 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-13T13:49:26.114881+00:00"
+        "timestamp": "2026-11-13T23:18:50.756242+00:00"
       },
-      "article_type": "headline"
+      "article_type": "article"
     },
     {
       "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
@@ -74,74 +136,12 @@
       "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
       "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.89,
-        "novelty_score": 0.84,
-        "impact_score": 0.86,
-        "overall_score": 0.8895,
-        "confidence_mean": 0.91
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-13T13:49:26.119677+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-13T13:49:26.119678+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a607b8b2aff994197a9b8101e2d82b7b",
-      "title": "AI100 longitudinal study examines how AI has entered the mainstream",
-      "source": "aihub",
-      "url": "https://aihub.org/2026/11/10/ai100-longitudinal-study-examines-how-ai-has-entered-the-mainstream/",
-      "published_date": "2026-11-10T14:08:25+00:00",
-      "category": "Open Source",
-      "description": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
-      "author": "Lucy Smith",
-      "content": "Image by Michi Turner, and taken from the cover of the report. The One Hundred Year Study on Artificial Intelligence (AI100) is a longitudinal study that assesses AI’s development and societal impact. Reports are released once every five years, with the 2026 edition being the third in the series. The title of this year’s report […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
+        "relevance_score": 0.9,
         "quality_score": 0.88,
-        "novelty_score": 0.81,
-        "impact_score": 0.89,
-        "overall_score": 0.8765000000000001,
-        "confidence_mean": 0.91
+        "novelty_score": 0.85,
+        "impact_score": 0.8,
+        "overall_score": 0.8625,
+        "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -172,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-13T13:49:26.119947+00:00"
+        "consensus_timestamp": "2026-11-13T23:18:50.753898+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,27 +183,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-13T13:49:26.119948+00:00"
+        "timestamp": "2026-11-13T23:18:50.753900+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "512c4b2f8bc9d684198fa0dc4985cabe",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "article_id": "58e9ad617f8d7bae15d6663e64f128ce",
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
       "source": "openai_blog",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "published_date": "2026-11-12T20:00:00+00:00",
+      "url": "https://openai.com/index/cogent-security",
+      "published_date": "2026-11-10T00:00:00+00:00",
       "category": "Industry",
-      "description": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "description": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
       "author": "",
-      "content": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "content": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.876,
-        "confidence_mean": 0.95
+        "relevance_score": 0.9,
+        "quality_score": 0.86,
+        "novelty_score": 0.78,
+        "impact_score": 0.92,
+        "overall_score": 0.864,
+        "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -230,42 +230,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
+        "score": 0.8,
+        "confidence": 0.88,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-13T13:49:26.108848+00:00"
+        "consensus_timestamp": "2026-11-13T23:18:50.739764+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.6799999999999999,
+        "combined_confidence": 0.728,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-13T13:49:26.108850+00:00"
+        "timestamp": "2026-11-13T23:18:50.739767+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "7a5062ef80dd8d3ce150d4c1af4a9c15",
-      "title": "Elastic Stack 8.19.25 released",
-      "source": "elastic_blog",
-      "url": "https://www.elastic.co/blog/elastic-stack-8-19-25-released",
-      "published_date": "2026-11-10T00:00:00+00:00",
-      "category": "Open Source",
-      "description": "Version 8.19.25 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.25 over the previous versions 8.19.x For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.",
-      "author": "Julien Mailleret",
-      "content": "Version 8.19.25 of the Elastic Stack was released today. We recommend you upgrade to this latest version. We recommend 8.19.25 over the previous versions 8.19.x For details of the issues that have been fixed and a full list of changes for each product in this version, please refer to the release notes.",
+      "article_id": "7f2ef18313a10cbcdd995e84e1954dec",
+      "title": "Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/11/13/best-ai-video-generation-models-2026/",
+      "published_date": "2026-11-13T17:23:51+00:00",
+      "category": "Industry",
+      "description": "The AI video leaderboard looks very different from 12 months ago. Native audio is now table stakes. Clips run 15–30 seconds. And an open-weights model sits in the top 3. This ranking (as of Nov 13, 2026) uses one quality signal: blind human-preference Elo from the Artificial Analysis Video Arena. We pair it with API […] The post Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "The AI video leaderboard looks very different from 12 months ago. Native audio is now table stakes. Clips run 15–30 seconds. And an open-weights model sits in the top 3. This ranking (as of Nov 13, 2026) uses one quality signal: blind human-preference Elo from the Artificial Analysis Video Arena. We pair it with API […] The post Best AI Video Generation Models in 2026: Elo, Price per Second, Open Weights appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.87,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8635,
-        "confidence_mean": 0.92
+        "impact_score": 0.92,
+        "overall_score": 0.8665000000000002,
+        "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-13T13:49:26.120311+00:00"
+        "consensus_timestamp": "2026-11-13T23:18:50.746510+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-13T13:49:26.120313+00:00"
+        "timestamp": "2026-11-13T23:18:50.746515+00:00"
       },
       "article_type": "article"
     }
