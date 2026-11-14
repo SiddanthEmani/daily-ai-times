@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-14T04:13:55.678316+00:00",
+  "updated": "2026-11-14T12:53:49.371781+00:00",
   "top_stories": [
     {
-      "article_id": "33abe7f0b81774e5cb7eb6f038e14ba6",
-      "title": "IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/11/12/ibm-quantum-nighthawk-r3-520-qubits-1040-qubit-system-2027/",
-      "published_date": "2026-11-12T08:42:21+00:00",
+      "article_id": "973dc723755c75c5550c5fcf713faa91",
+      "title": "Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/11/12/google-releases-gemini-4-hydrogen-a-lower-cost-model-said-to-outscore-argon/",
+      "published_date": "2026-11-12T22:50:02+00:00",
       "category": "Industry",
-      "description": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits appeared first on MarkTechPost.",
-      "author": "Michal Sutter",
-      "content": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits appeared first on MarkTechPost.",
+      "description": "Google LLC today released Gemini 4 Hydrogen, a lower-cost model in its Gemini 4 artificial intelligence family that it says outscores its frontier Gemini 4 Argon model on an independent intelligence ranking. Measured on the Artificial Analysis Intelligence Index at its default high thinking level, Hydrogen scored 51 to Argon’s 50, according to Google. A […] The post Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon appeared first on SiliconANGLE.",
+      "author": "Duncan Riley",
+      "content": "Google LLC today released Gemini 4 Hydrogen, a lower-cost model in its Gemini 4 artificial intelligence family that it says outscores its frontier Gemini 4 Argon model on an independent intelligence ranking. Measured on the Artificial Analysis Intelligence Index at its default high thinking level, Hydrogen scored 51 to Argon’s 50, according to Google. A […] The post Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon appeared first on SiliconANGLE.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.82,
-        "novelty_score": 0.68,
-        "impact_score": 0.92,
-        "overall_score": 0.8290000000000001,
-        "confidence_mean": 0.85
+        "relevance_score": 0.88,
+        "quality_score": 0.84,
+        "novelty_score": 0.78,
+        "impact_score": 0.9,
+        "overall_score": 0.8490000000000001,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -48,7 +48,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.538284+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.298343+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -59,27 +59,89 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.538287+00:00"
+        "timestamp": "2026-11-14T12:53:49.298345+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
-      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
+      "article_id": "f2f99f8f71f11bbcf17c6bcb23b66dfe",
+      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
       "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
-      "published_date": "2026-11-12T12:00:19+00:00",
+      "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
+      "published_date": "2026-11-12T16:45:26+00:00",
       "category": "Open Source",
-      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
-      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
+      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "author": "Caleb Min Sup Kim, Ethan Che, Jongsok Choi, Jason Ansel",
+      "content": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.92,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.9075000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.303006+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.303007+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f0f8eeda6f1c67b39a20e096b6401ea2",
+      "title": "Jensen Huang leaving Nvidia risks a ‘brain drain’ from the AI chipmaker",
+      "source": "scientific_american",
+      "url": "https://www.scientificamerican.com/article/jensen-huang-leaving-nvidia-risks-a-brain-drain-from-the-ai-chipmaker/",
+      "published_date": "2026-11-12T15:00:00+00:00",
+      "category": "Media",
+      "description": "Nvidia’s chips power the AI frontier—thanks, many say, to co-founder and now ex-CEO Jensen Huang",
+      "author": "",
+      "content": "Nvidia’s chips power the AI frontier—thanks, many say, to co-founder and now ex-CEO Jensen Huang",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.95,
         "quality_score": 0.9,
         "novelty_score": 0.85,
-        "impact_score": 0.89,
-        "overall_score": 0.9005000000000001,
-        "confidence_mean": 0.91
+        "impact_score": 0.93,
+        "overall_score": 0.9085000000000001,
+        "confidence_mean": 0.96
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -110,7 +172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.543844+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.299948+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -121,26 +183,26 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.543847+00:00"
+        "timestamp": "2026-11-14T12:53:49.299950+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d7590769f983e99e0dc2388c15425c58",
-      "title": "ChatGPT Enterprise now available in AWS Marketplace",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "published_date": "2026-11-09T19:00:00+00:00",
-      "category": "Industry",
-      "description": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
-      "author": "",
-      "content": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+      "article_id": "030de44d9eacfffc4c72c984605ae9e8",
+      "title": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/",
+      "published_date": "2026-11-10T22:15:07+00:00",
+      "category": "Open Source",
+      "description": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
+      "author": "Julian Ng-Thow-Hing, Siddartha Pothapragada, Stephen Jia, Digant Desai, Bilgin Cagatay",
+      "content": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
+        "relevance_score": 0.93,
         "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
+        "impact_score": 0.85,
+        "overall_score": 0.874,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -172,7 +234,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530801+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.303883+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -183,89 +245,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.530804+00:00"
+        "timestamp": "2026-11-14T12:53:49.303885+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "654bafe3f6716d696a84536eb5c62842",
-      "title": "Introducing ChatGPT Wallet",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "published_date": "2026-11-13T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-      "author": "",
-      "content": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530084+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.530087+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3f006241a18fa2b4f66702c74c4da01e",
-      "title": "Your AI App Works on Localhost. Here’s What Breaks It on Azure Container Apps.",
-      "source": "towards_ai",
-      "url": "https://pub.towardsai.net/deploy-ai-app-azure-container-apps-production-469c11426545?source=rss----98111c9905da---4",
-      "published_date": "2026-11-14T03:15:10+00:00",
+      "article_id": "3188f1f1af86e268006c855a4a722450",
+      "title": "AI plus chemistry can expand battery electrolyte design",
+      "source": "aihub",
+      "url": "https://aihub.org/2026/11/05/ai-plus-chemistry-can-expand-battery-electrolyte-design/",
+      "published_date": "2026-11-05T09:32:42+00:00",
       "category": "Open Source",
-      "description": "Keyless identity, replicas sized to Azure OpenAI quota, Streamlit sessions, rollbacks that keep new secrets, and a first-check map for the…Continue reading on Towards AI »",
-      "author": "Dave R | Microsoft Azure & AI MVP ☁️",
-      "content": "Keyless identity, replicas sized to Azure OpenAI quota, Streamlit sessions, rollbacks that keep new secrets, and a first-check map for the…Continue reading on Towards AI »",
+      "description": "Figure from Decoding the chemical space of fast-ion conductors via a descriptor-guided transfer learning framework. It shows the three-dimensional migration path of Li+ and MSd over time in Li10SiP2S12 at various temperatures. Reproduced under a Creative Commons Attribution License 4.0 (CC BY). By Syl Kacapyr Cornell researchers are using artificial intelligence to speed the search […]",
+      "author": "Cornell University",
+      "content": "Figure from Decoding the chemical space of fast-ion conductors via a descriptor-guided transfer learning framework. It shows the three-dimensional migration path of Li+ and MSd over time in Li10SiP2S12 at various temperatures. Reproduced under a Creative Commons Attribution License 4.0 (CC BY). By Syl Kacapyr Cornell researchers are using artificial intelligence to speed the search […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
         "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8585000000000002,
-        "confidence_mean": 0.92
+        "impact_score": 0.94,
+        "overall_score": 0.8839999999999999,
+        "confidence_mean": 0.95
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.546184+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.304259+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,11 +307,11 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.546187+00:00"
+        "timestamp": "2026-11-14T12:53:49.304261+00:00"
       },
       "article_type": "article"
     }
   ],
-  "total_count": 25,
+  "total_count": 21,
   "pipeline_version": "3.0_with_deep_intelligence"
 }

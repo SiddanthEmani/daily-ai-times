@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-11-14T04:13:55.672999+00:00",
+  "generated_at": "2026-11-14T12:53:49.367662+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 1998
+    "issue_number": 1999
   },
   "articles": [
     {
-      "article_id": "33abe7f0b81774e5cb7eb6f038e14ba6",
-      "title": "IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/11/12/ibm-quantum-nighthawk-r3-520-qubits-1040-qubit-system-2027/",
-      "published_date": "2026-11-12T08:42:21+00:00",
+      "article_id": "973dc723755c75c5550c5fcf713faa91",
+      "title": "Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/11/12/google-releases-gemini-4-hydrogen-a-lower-cost-model-said-to-outscore-argon/",
+      "published_date": "2026-11-12T22:50:02+00:00",
       "category": "Industry",
-      "description": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits appeared first on MarkTechPost.",
-      "author": "Michal Sutter",
-      "content": "IBM announced Quantum Nighthawk r3, a 520-qubit processor designed for 10,000 quantum operations. 2 r3 chips will link into a 1,040-qubit system in 2027, while Nighthawk r2 already posts up to 19x speedups over Heron. The post IBM Announces IBM Quantum Nighthawk r3: A New Processor to Support 10k Quantum Operations on 520 Programmable Qubits appeared first on MarkTechPost.",
+      "description": "Google LLC today released Gemini 4 Hydrogen, a lower-cost model in its Gemini 4 artificial intelligence family that it says outscores its frontier Gemini 4 Argon model on an independent intelligence ranking. Measured on the Artificial Analysis Intelligence Index at its default high thinking level, Hydrogen scored 51 to Argon’s 50, according to Google. A […] The post Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon appeared first on SiliconANGLE.",
+      "author": "Duncan Riley",
+      "content": "Google LLC today released Gemini 4 Hydrogen, a lower-cost model in its Gemini 4 artificial intelligence family that it says outscores its frontier Gemini 4 Argon model on an independent intelligence ranking. Measured on the Artificial Analysis Intelligence Index at its default high thinking level, Hydrogen scored 51 to Argon’s 50, according to Google. A […] The post Google releases Gemini 4 Hydrogen, a lower-cost model said to outscore Argon appeared first on SiliconANGLE.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.82,
-        "novelty_score": 0.68,
-        "impact_score": 0.92,
-        "overall_score": 0.8290000000000001,
-        "confidence_mean": 0.85
+        "relevance_score": 0.88,
+        "quality_score": 0.84,
+        "novelty_score": 0.78,
+        "impact_score": 0.9,
+        "overall_score": 0.8490000000000001,
+        "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -53,7 +53,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.538284+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.298343+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -64,9 +64,505 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.538287+00:00"
+        "timestamp": "2026-11-14T12:53:49.298345+00:00"
       },
       "article_type": "headline"
+    },
+    {
+      "article_id": "f2f99f8f71f11bbcf17c6bcb23b66dfe",
+      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
+      "published_date": "2026-11-12T16:45:26+00:00",
+      "category": "Open Source",
+      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "author": "Caleb Min Sup Kim, Ethan Che, Jongsok Choi, Jason Ansel",
+      "content": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.92,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.9075000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.303006+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.303007+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f0f8eeda6f1c67b39a20e096b6401ea2",
+      "title": "Jensen Huang leaving Nvidia risks a ‘brain drain’ from the AI chipmaker",
+      "source": "scientific_american",
+      "url": "https://www.scientificamerican.com/article/jensen-huang-leaving-nvidia-risks-a-brain-drain-from-the-ai-chipmaker/",
+      "published_date": "2026-11-12T15:00:00+00:00",
+      "category": "Media",
+      "description": "Nvidia’s chips power the AI frontier—thanks, many say, to co-founder and now ex-CEO Jensen Huang",
+      "author": "",
+      "content": "Nvidia’s chips power the AI frontier—thanks, many say, to co-founder and now ex-CEO Jensen Huang",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.95,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.93,
+        "overall_score": 0.9085000000000001,
+        "confidence_mean": 0.96
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.299948+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.299950+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "030de44d9eacfffc4c72c984605ae9e8",
+      "title": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/",
+      "published_date": "2026-11-10T22:15:07+00:00",
+      "category": "Open Source",
+      "description": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
+      "author": "Julian Ng-Thow-Hing, Siddartha Pothapragada, Stephen Jia, Digant Desai, Bilgin Cagatay",
+      "content": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.93,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.85,
+        "overall_score": 0.874,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.303883+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.303885+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "3188f1f1af86e268006c855a4a722450",
+      "title": "AI plus chemistry can expand battery electrolyte design",
+      "source": "aihub",
+      "url": "https://aihub.org/2026/11/05/ai-plus-chemistry-can-expand-battery-electrolyte-design/",
+      "published_date": "2026-11-05T09:32:42+00:00",
+      "category": "Open Source",
+      "description": "Figure from Decoding the chemical space of fast-ion conductors via a descriptor-guided transfer learning framework. It shows the three-dimensional migration path of Li+ and MSd over time in Li10SiP2S12 at various temperatures. Reproduced under a Creative Commons Attribution License 4.0 (CC BY). By Syl Kacapyr Cornell researchers are using artificial intelligence to speed the search […]",
+      "author": "Cornell University",
+      "content": "Figure from Decoding the chemical space of fast-ion conductors via a descriptor-guided transfer learning framework. It shows the three-dimensional migration path of Li+ and MSd over time in Li10SiP2S12 at various temperatures. Reproduced under a Creative Commons Attribution License 4.0 (CC BY). By Syl Kacapyr Cornell researchers are using artificial intelligence to speed the search […]",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.8,
+        "impact_score": 0.94,
+        "overall_score": 0.8839999999999999,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.304259+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.304261+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a76c3c43d321f81d49c0fea9ff314e7d",
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "published_date": "2026-11-09T08:00:00+00:00",
+      "category": "Industry",
+      "description": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "author": "",
+      "content": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.85,
+        "impact_score": 0.92,
+        "overall_score": 0.8865000000000001,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.78,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.292983+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6679999999999999,
+        "combined_confidence": 0.71,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.292985+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "c8b52e258c57d3fab330f3641ff128f1",
+      "title": "AI is disrupting math. Is science next?",
+      "source": "scientific_american",
+      "url": "https://www.scientificamerican.com/article/ai-is-disrupting-math-is-science-next/",
+      "published_date": "2026-11-12T16:00:00+00:00",
+      "category": "Media",
+      "description": "Mathematicians will remember 2026 as the year AI changed everything about their field. Scientists may be next in line for disruption",
+      "author": "",
+      "content": "Mathematicians will remember 2026 as the year AI changed everything about their field. Scientists may be next in line for disruption",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.876,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.299914+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.299916+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "654bafe3f6716d696a84536eb5c62842",
+      "title": "Introducing ChatGPT Wallet",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "published_date": "2026-11-13T15:00:00+00:00",
+      "category": "Industry",
+      "description": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "author": "",
+      "content": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.87,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.292395+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.292397+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "58e9ad617f8d7bae15d6663e64f128ce",
+      "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/cogent-security",
+      "published_date": "2026-11-10T00:00:00+00:00",
+      "category": "Industry",
+      "description": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "author": "",
+      "content": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.85,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.88,
+        "overall_score": 0.8685,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.82,
+        "confidence": 0.86,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.292860+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.692,
+        "combined_confidence": 0.716,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.292862+00:00"
+      },
+      "article_type": "article"
     },
     {
       "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
@@ -79,11 +575,11 @@
       "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
       "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.85,
-        "impact_score": 0.89,
-        "overall_score": 0.9005000000000001,
+        "relevance_score": 0.9,
+        "quality_score": 0.87,
+        "novelty_score": 0.82,
+        "impact_score": 0.88,
+        "overall_score": 0.8685,
         "confidence_mean": 0.91
       },
       "combined_deep_intelligence": {
@@ -115,7 +611,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.543844+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.303842+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -126,352 +622,42 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.543847+00:00"
+        "timestamp": "2026-11-14T12:53:49.303846+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "d7590769f983e99e0dc2388c15425c58",
-      "title": "ChatGPT Enterprise now available in AWS Marketplace",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
-      "published_date": "2026-11-09T19:00:00+00:00",
+      "article_id": "5946c6e9f6d070bb2e27743711bbf3c0",
+      "title": "Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/",
+      "published_date": "2026-11-14T10:21:21+00:00",
       "category": "Industry",
-      "description": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
-      "author": "",
-      "content": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+      "description": "Stanford researchers released Memorilla, an open-source memory system that compresses a document collection into 16 memory tokens for a frozen Qwen3-8B. It reaches 84.33% on FactKG using 108x fewer document tokens than full context. The post Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs appeared first on MarkTechPost.",
+      "author": "Asif Razzaq",
+      "content": "Stanford researchers released Memorilla, an open-source memory system that compresses a document collection into 16 memory tokens for a frozen Qwen3-8B. It reaches 84.33% on FactKG using 108x fewer document tokens than full context. The post Stanford Research Open-Sources Memorilla, a Latent Memory Module for Frozen LLMs appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8750000000000001,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530801+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.530804+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "654bafe3f6716d696a84536eb5c62842",
-      "title": "Introducing ChatGPT Wallet",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "published_date": "2026-11-13T15:00:00+00:00",
-      "category": "Industry",
-      "description": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-      "author": "",
-      "content": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8725,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530084+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.530087+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "3f006241a18fa2b4f66702c74c4da01e",
-      "title": "Your AI App Works on Localhost. Here’s What Breaks It on Azure Container Apps.",
-      "source": "towards_ai",
-      "url": "https://pub.towardsai.net/deploy-ai-app-azure-container-apps-production-469c11426545?source=rss----98111c9905da---4",
-      "published_date": "2026-11-14T03:15:10+00:00",
-      "category": "Open Source",
-      "description": "Keyless identity, replicas sized to Azure OpenAI quota, Streamlit sessions, rollbacks that keep new secrets, and a first-check map for the…Continue reading on Towards AI »",
-      "author": "Dave R | Microsoft Azure & AI MVP ☁️",
-      "content": "Keyless identity, replicas sized to Azure OpenAI quota, Streamlit sessions, rollbacks that keep new secrets, and a first-check map for the…Continue reading on Towards AI »",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8585000000000002,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.546184+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.546187+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0bff15e8e10114c447558c52a2d113bd",
-      "title": "Work at the Frontier: AI’s effect on freelance work",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/ai-effect-on-freelance-work",
-      "published_date": "2026-11-10T07:00:00+00:00",
-      "category": "Industry",
-      "description": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
-      "author": "",
-      "content": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.9,
-        "novelty_score": 0.75,
-        "impact_score": 0.88,
-        "overall_score": 0.8435,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530677+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.530679+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "9c1cf38cf2508041f64b1f21880a4803",
-      "title": "AI Is Speeding Up the Teams Building AI",
-      "source": "gradient_flow",
-      "url": "https://gradientflow.com/metr-anthropic-2026/",
-      "published_date": "2026-11-06T12:00:47+00:00",
-      "category": "Open Source",
-      "description": "Between August and October 2026, a small team from METR spent 11 weeks examining whether AI was accelerating research and development at Anthropic. They reviewed internal performance data for released and unreleased models, training compute, staffing data, and employee surveys. They also interviewed roughly 15 employees. Their assessment estimates that Anthropic is improving its models on […] The post AI Is Speeding Up the Teams Building AI appeared first on Gradient Flow.",
-      "author": "Ben Lorica",
-      "content": "Between August and October 2026, a small team from METR spent 11 weeks examining whether AI was accelerating research and development at Anthropic. They reviewed internal performance data for released and unreleased models, training compute, staffing data, and employee surveys. They also interviewed roughly 15 employees. Their assessment estimates that Anthropic is improving its models on […] The post AI Is Speeding Up the Teams Building AI appeared first on Gradient Flow.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.83,
-        "novelty_score": 0.85,
-        "impact_score": 0.88,
-        "overall_score": 0.8660000000000001,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.544870+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.544873+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "63d80543adc5657047864511e5bf3178",
-      "title": "SoftBank's AI Empire Rests on a Single Asset—And It's Over-Leveraged",
-      "source": "analytics_india_magazine",
-      "url": "https://analyticsindiamag.com/ai-features/softbanks-ai-empire-rests-on-a-single-assetand-its-over-leveraged",
-      "published_date": "2026-11-13T13:30:00+00:00",
-      "category": "Industry",
-      "description": "SoftBank’s Arm stake secures loans that help fund its other AI bets, so a fall in Arm’s shares cuts both its portfolio value and its funding.",
-      "author": "Mukundan Sivaraj",
-      "content": "SoftBank’s Arm stake secures loans that help fund its other AI bets, so a fall in Arm’s shares cuts both its portfolio value and its funding.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
+        "quality_score": 0.88,
         "novelty_score": 0.75,
         "impact_score": 0.92,
-        "overall_score": 0.8540000000000001,
-        "confidence_mean": 0.88
+        "overall_score": 0.8615,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -483,227 +669,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.92,
+        "confidence": 0.94,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.535969+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.297776+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.752,
+        "combined_confidence": 0.764,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.535972+00:00"
+        "timestamp": "2026-11-14T12:53:49.297778+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f2f99f8f71f11bbcf17c6bcb23b66dfe",
-      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
-      "published_date": "2026-11-12T16:45:26+00:00",
-      "category": "Open Source",
-      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
-      "author": "Caleb Min Sup Kim, Ethan Che, Jongsok Choi, Jason Ansel",
-      "content": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.85,
-        "novelty_score": 0.78,
-        "impact_score": 0.81,
-        "overall_score": 0.8455,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.543752+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.543755+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "20bfffe3d8ce0c6e474a38f85ba3b01e",
-      "title": "NVIDIA CUDA 13.5 Brings NVIDIA Vera Rubin GA Support",
+      "article_id": "fff1cb8be140e57852633a04bf7d2c71",
+      "title": "Five Ways NVIDIA Co-Design Maximizes the Value of Every Byte in the AI Factory",
       "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/",
-      "published_date": "2026-11-04T18:46:07+00:00",
+      "url": "https://developer.nvidia.com/blog/five-ways-nvidia-co-design-maximizes-the-value-of-every-byte-in-the-ai-factory/",
+      "published_date": "2026-11-05T16:00:00+00:00",
       "category": "Industry",
-      "description": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
-      "author": "Jonathan Bentz",
-      "content": "As artificial intelligence and accelerated computing continue to push the boundaries of what's possible, the latest NVIDIA CUDA release arrives to unlock...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.83,
-        "novelty_score": 0.77,
-        "impact_score": 0.93,
-        "overall_score": 0.8560000000000001,
-        "confidence_mean": 0.87
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.535147+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.535150+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "dd4f460a537cdc427f0f998aea896fa7",
-      "title": "Jensen Huang built the company that powers AI. Now Nvidia must find a way forward without him",
-      "source": "tech_xplore",
-      "url": "https://techxplore.com/news/2026-11-jensen-huang-built-company-powers.html",
-      "published_date": "2026-11-13T09:40:02+00:00",
-      "category": "Media",
-      "description": "Nvidia CEO Jensen Huang resigned Thursday, capping a spectacular downfall for a poster boy of the artificial intelligence boom whose exit following reports of extramarital affairs now thrusts the chipmaker into an uncertain future.",
-      "author": "",
-      "content": "Nvidia CEO Jensen Huang resigned Thursday, capping a spectacular downfall for a poster boy of the artificial intelligence boom whose exit following reports of extramarital affairs now thrusts the chipmaker into an uncertain future.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.6,
-        "impact_score": 0.9,
-        "overall_score": 0.8260000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.540898+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.540901+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "faac33e29f3e20b8b51ea5b7d5fe288a",
-      "title": "Nvidia Loses Its Founder, AMD and Broadcom Take the Crown: This Week on Wall Street",
-      "source": "benzinga",
-      "url": "https://www.benzinga.com/markets/market-summary/26/11/63269563/this-week-on-wall-street-nvidia-huang-amd-broadcom-fed-hike",
-      "published_date": "2026-11-13T21:17:32+00:00",
-      "category": "Industry",
-      "description": "For three years, Wall Street bought the artificial intelligence boom through one ticker. This week, it went shopping for substitutes. Nvidia Corp. (NASDAQ:NVDA) founder Jensen Huang resigned as CEO and board member Thursday after the board opened a probe into reports that he had been targeted by a foreign intelligence effort. Chief financial officer Colette Kress is now interim CEO. The money did not leave the chip trade. It changed address. Advanced Micro Devices Inc. (NASDAQ:AMD) and Broadcom...",
-      "author": "Piero Cingari",
-      "content": "For three years, Wall Street bought the artificial intelligence boom through one ticker. This week, it went shopping for substitutes. Nvidia Corp. (NASDAQ:NVDA) founder Jensen Huang resigned as CEO and board member Thursday after the board opened a probe into reports that he had been targeted by a foreign intelligence effort. Chief financial officer Colette Kress is now interim CEO. The money did not leave the chip trade. It changed address. Advanced Micro Devices Inc. (NASDAQ:AMD) and Broadcom...",
+      "description": "In an AI factory, high bandwidth memory (HBM)is the fastest, most expensive, and most contested memory tier. Every byte spent on a redundant weight copy, an...",
+      "author": "Eduardo Alvarez",
+      "content": "In an AI factory, high bandwidth memory (HBM)is the fastest, most expensive, and most contested memory tier. Every byte spent on a redundant weight copy, an...",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
+        "novelty_score": 0.8,
         "impact_score": 0.93,
-        "overall_score": 0.8435,
+        "overall_score": 0.8685000000000002,
         "confidence_mean": 0.87
       },
       "combined_deep_intelligence": {
@@ -711,15 +711,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -731,57 +731,57 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.536985+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.295812+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.536991+00:00"
+        "timestamp": "2026-11-14T12:53:49.295814+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "525e3a6cffc92591f2c4791c9c669c56",
-      "title": "AI agent tooling provider LangChain secures $300M investment",
-      "source": "siliconangle_ai",
-      "url": "https://siliconangle.com/2026/11/12/ai-agent-tooling-provider-langchain-secures-300m-investment/",
-      "published_date": "2026-11-12T23:24:06+00:00",
+      "article_id": "922b85de684e81ca2d0942708d3690d8",
+      "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/singapore-airlines-travel-work",
+      "published_date": "2026-11-10T08:00:00+00:00",
       "category": "Industry",
-      "description": "LangChain Inc., a startup with a set of popular open-source tools for building artificial intelligence agents, has raised $300 million in funding. The Wall Street Journal reported today that Alphabet Inc.’s CapitalG fund led the round. It was joined by IVP, Sapphire Ventures, GIC and DFJ Growth. LangChain is now worth $3 billion. San Francisco-based […] The post AI agent tooling provider LangChain secures $300M investment appeared first on SiliconANGLE.",
-      "author": "Maria Deutscher",
-      "content": "LangChain Inc., a startup with a set of popular open-source tools for building artificial intelligence agents, has raised $300 million in funding. The Wall Street Journal reported today that Alphabet Inc.’s CapitalG fund led the round. It was joined by IVP, Sapphire Ventures, GIC and DFJ Growth. LangChain is now worth $3 billion. San Francisco-based […] The post AI agent tooling provider LangChain secures $300M investment appeared first on SiliconANGLE.",
+      "description": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+      "author": "",
+      "content": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.83,
-        "novelty_score": 0.76,
-        "impact_score": 0.93,
-        "overall_score": 0.8535,
-        "confidence_mean": 0.86
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -793,57 +793,57 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.78,
+        "confidence": 0.85,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.538596+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.292796+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.6679999999999999,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.538599+00:00"
+        "timestamp": "2026-11-14T12:53:49.292798+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "df258d0040577dc522134f2aa11d857b",
-      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/control-room",
-      "published_date": "2026-11-09T13:00:00+00:00",
+      "article_id": "03c1133a2fdf27ad066dd0b6c547c3ab",
+      "title": "Start and Restore GPU Workloads in Seconds with NVIDIA Snapshot",
+      "source": "nvidia_developer",
+      "url": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+      "published_date": "2026-11-10T15:00:00+00:00",
       "category": "Industry",
-      "description": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
-      "author": "",
-      "content": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "description": "NVIDIA Snapshot, a new open-source component of the NVIDIA DSX AI Factory Platform, makes initialized GPU workloads reusable across inference...",
+      "author": "Ron Kahn",
+      "content": "NVIDIA Snapshot, a new open-source component of the NVIDIA DSX AI Factory Platform, makes initialized GPU workloads reusable across inference...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.88,
-        "novelty_score": 0.75,
-        "impact_score": 0.87,
-        "overall_score": 0.8365,
-        "confidence_mean": 0.9
+        "relevance_score": 0.9,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
+        "impact_score": 0.9,
+        "overall_score": 0.8625000000000002,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -855,22 +855,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.82,
+        "confidence": 0.88,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530848+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.295616+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.692,
+        "combined_confidence": 0.728,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.530851+00:00"
+        "timestamp": "2026-11-14T12:53:49.295618+00:00"
       },
       "article_type": "article"
     },
@@ -885,11 +885,11 @@
       "author": "",
       "content": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
+        "relevance_score": 0.85,
         "quality_score": 0.9,
         "novelty_score": 0.8,
         "impact_score": 0.85,
-        "overall_score": 0.8350000000000001,
+        "overall_score": 0.85,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -897,15 +897,15 @@
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.7
+            "fact_check_confidence": 0.5
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.3
+            "bias_detection_score": 0.5
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.7
+            "credibility_score": 0.5
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -917,22 +917,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
+        "score": 0.81,
+        "confidence": 0.88,
+        "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.530451+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.292665+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
+        "weighted_score": 0.6859999999999999,
+        "combined_confidence": 0.728,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.530454+00:00"
+        "timestamp": "2026-11-14T12:53:49.292667+00:00"
       },
       "article_type": "article"
     },
@@ -947,75 +947,12 @@
       "author": "Fangchao Xue, Shanlan Zhao, Hao Tian, Lang Li, Xinrong Xu, Yixiang Lu, Kaige Xu, Lang He, Yueying Wang, Zhaojing Ba, Yumei Que, Di Liu, Yuxin Xing, Yang Su, Malcolm Xing, Wen Zeng",
       "content": "Science, Volume 394, Issue 6825, Page 779-785, November 2026.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
-        "quality_score": 0.85,
-        "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.8345,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.547582+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.547584+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "adf9228d6125b2b58fa2847a86b9f07a",
-      "title": "Rethinking \"RL Generalizes, SFT Memorizes\": The Role of SFT Data",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.14912",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14912v1 Announce Type: new Abstract: Large language models trained with Reinforcement Learning (RL) with verifiable rewards exhibit strong reasoning ability and broad generalization, whereas models trained with Supervised Fine-Tuning (SFT) are often viewed as more prone to memorization and limited transfer. This paper rethinks this distinction through the lens of SFT training data on widely used Qwen2.5 and Qwen3 series models. First, we study the role of data source and show that it...",
-      "author": "Yunlong Hou, Fengzhuo Zhang, Yuan Cheng, Jiachun Pan, Xingyao Li, Zhuoran Yang",
-      "content": "arXiv:2611.14912v1 Announce Type: new Abstract: Large language models trained with Reinforcement Learning (RL) with verifiable rewards exhibit strong reasoning ability and broad generalization, whereas models trained with Supervised Fine-Tuning (SFT) are often viewed as more prone to memorization and limited transfer. This paper rethinks this distinction through the lens of SFT training data on widely used Qwen2.5 and Qwen3 series models. First, we study the role of data source and show that it...",
-      "consensus_multi_dimensional_score": {
         "relevance_score": 0.85,
-        "quality_score": 0.78,
-        "novelty_score": 0.72,
-        "impact_score": 0.8,
-        "overall_score": 0.79,
-        "confidence_mean": 0.88
+        "quality_score": 0.95,
+        "novelty_score": 0.88,
+        "impact_score": 0.9,
+        "overall_score": 0.8925000000000001,
+        "confidence_mean": 0.96
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1046,7 +983,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.548268+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.305964+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1057,133 +994,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.548271+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "30a44d8738fa371c1390ff344b1194b2",
-      "title": "Together Compiler: Continual Compilation for AI Inference",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.14681",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions change frequently. The challenge we face at Together AI is continual optimization for these changing workloads. Compiling a deployment into an optimized forward pass is a challenge that is well-suited for agent hill-climbing. Existing systems struggle with continual compilation due to a tradeoff...",
-      "author": "Reyna Abhyankar, Dylan Lim, Drew Wadsworth, Venkata Hasith Vattikuti, YuTong Julia Zhang, Jung Hwan Heo, Taeksang Kim, Kesavan Ramakrishnan, Evangelene Stanley, Xinyu Fang, Daniel Y. Fu, Simran Arora",
-      "content": "arXiv:2611.14681v1 Announce Type: new Abstract: Today's AI workloads are rapidly changing: new models are released more often, model architectures are increasingly diverse, and traffic distributions change frequently. The challenge we face at Together AI is continual optimization for these changing workloads. Compiling a deployment into an optimized forward pass is a challenge that is well-suited for agent hill-climbing. Existing systems struggle with continual compilation due to a tradeoff...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
-        "quality_score": 0.75,
-        "novelty_score": 0.7,
-        "impact_score": 0.78,
-        "overall_score": 0.7645000000000001,
-        "confidence_mean": 0.84
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.547195+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.547198+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "5d02f10873c76081f3514c124322e1ec",
-      "title": "FOE-Dreamer: Deployment-Efficient Learning of Cyber Defense Policies in Operational Networks",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.14880",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14880v1 Announce Type: new Abstract: Autonomous cyber defense is widely studied with deep reinforcement learning, but most work trains policies inside simulators because learning requires many trial-and-error interactions. Simulator-based training carries a fidelity gap: trained policies face authentication delays, partial action failures, service dependencies, and user traffic patterns that the simulator did not represent, and degrade on transfer. Training directly in the network...",
-      "author": "Yinuo Du, Christopher Kiekintveld",
-      "content": "arXiv:2611.14880v1 Announce Type: new Abstract: Autonomous cyber defense is widely studied with deep reinforcement learning, but most work trains policies inside simulators because learning requires many trial-and-error interactions. Simulator-based training carries a fidelity gap: trained policies face authentication delays, partial action failures, service dependencies, and user traffic patterns that the simulator did not represent, and degrade on transfer. Training directly in the network...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.81,
-        "quality_score": 0.75,
-        "novelty_score": 0.7,
-        "impact_score": 0.78,
-        "overall_score": 0.7615,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.548096+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.548099+00:00"
+        "timestamp": "2026-11-14T12:53:49.305966+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1199,264 +1010,12 @@
       "author": "Xuetao Ma, Zhaoyu Liu, Jiaqi Cai, Kenji Watanabe, Takashi Taniguchi, Xiaodong Xu, Jiun-Haw Chu, Matthew Yankowitz",
       "content": "Science, Volume 394, Issue 6825, Page 768-772, November 2026.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.7,
-        "quality_score": 0.78,
-        "novelty_score": 0.85,
-        "impact_score": 0.75,
-        "overall_score": 0.7675000000000001,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.547539+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.547542+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "6d5256ba2d1b2ee52c48f1451de11544",
-      "title": "Characterizing Local Breadth in Language Generation",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2611.14887",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14887v1 Announce Type: cross Abstract: Large language models sharpen the validity--breadth trade-off: a generator should avoid hallucinations without collapsing onto a narrow set of valid outputs. We study generation from positive examples of an unknown target in the Kleinberg--Mullainathan model, with arbitrary, possibly adversarial order and no distributional or computational assumptions. Breadth is measured by lower Banach density, which rules out arbitrarily large sparse holes,...",
-      "author": "Jon Kleinberg, Fan Wei",
-      "content": "arXiv:2611.14887v1 Announce Type: cross Abstract: Large language models sharpen the validity--breadth trade-off: a generator should avoid hallucinations without collapsing onto a narrow set of valid outputs. We study generation from positive examples of an unknown target in the Kleinberg--Mullainathan model, with arbitrary, possibly adversarial order and no distributional or computational assumptions. Breadth is measured by lower Banach density, which rules out arbitrarily large sparse holes,...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.85,
-        "quality_score": 0.75,
-        "novelty_score": 0.7,
-        "impact_score": 0.6,
-        "overall_score": 0.7374999999999999,
-        "confidence_mean": 0.8
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.549112+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.549115+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "37c4b9168ded2fc7329944146fcfbf63",
-      "title": "FreeDeshadow: Shadow Removal for User-Specified Objects With Multimodal Prompts",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.14608",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14608v1 Announce Type: new Abstract: Existing shadow removal methods either perform global shadow removal or rely on precise shadow masks to guide restoration. Such paradigms limit their ability to selectively remove the shadow cast by a user-specified object in practical applications. To this end, we introduce an object-aware controllable shadow removal task, which allows users to specify a target object through a simple prompt and removes only its cast shadow while preserving other...",
-      "author": "Zhiliang Wu, Jihao Gu, Kun Li, Hanyu Xuan, Hehe Fan, Meng Wang, Weisi Lin",
-      "content": "arXiv:2611.14608v1 Announce Type: new Abstract: Existing shadow removal methods either perform global shadow removal or rely on precise shadow masks to guide restoration. Such paradigms limit their ability to selectively remove the shadow cast by a user-specified object in practical applications. To this end, we introduce an object-aware controllable shadow removal task, which allows users to specify a target object through a simple prompt and removes only its cast shadow while preserving other...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.74,
-        "quality_score": 0.78,
-        "novelty_score": 0.71,
-        "impact_score": 0.77,
-        "overall_score": 0.7485,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.546890+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.546893+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "31cf1c0b5736080c7cdef34cc768f8c5",
-      "title": "Communication-Efficient Federated Multi-View Clustering via View-Aware Quantization",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2611.15270",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.15270v1 Announce Type: new Abstract: Federated multi-view clustering (FedMVC) has recently attracted increasing attention for its ability to exploit complementary clustering structures across multiple clients while preserving data privacy. However, existing FedMVC methods often suffer from high communication overhead due to the repeated transmission of high-dimensional representations, which limits their scalability in practical federated systems. Moreover, different views may...",
-      "author": "Khadija Ardif, Meryeme Ayache, Nidal Nasser, Ouiame Marnissi",
-      "content": "arXiv:2611.15270v1 Announce Type: new Abstract: Federated multi-view clustering (FedMVC) has recently attracted increasing attention for its ability to exploit complementary clustering structures across multiple clients while preserving data privacy. However, existing FedMVC methods often suffer from high communication overhead due to the repeated transmission of high-dimensional representations, which limits their scalability in practical federated systems. Moreover, different views may...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.8,
-        "quality_score": 0.73,
-        "novelty_score": 0.68,
-        "impact_score": 0.77,
-        "overall_score": 0.7465,
-        "confidence_mean": 0.86
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.548649+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-14T04:13:55.548651+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "eb9ad05a46ef46cc3e08db73ca7c57b2",
-      "title": "Epigraph Form Reinforcement Learning-based Safe Trajectory Tracking Control for Connected and Autonomous Vehicles",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.14903",
-      "published_date": "2026-11-13T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.14903v1 Announce Type: new Abstract: Safe trajectory tracking (STT) aims to enable autonomous vehicles to follow a reference trajectory accurately while avoiding collisions. This problem is particularly challenging for Connected and Autonomous Vehicles (CAVs) in highly dynamic environments. Existing non-learning-based STT methods often use simplified vehicle and interaction models to meet real-time requirements, which may result in suboptimal tracking accuracy. Although Deep...",
-      "author": "Xiaoke Yang, Jin Chen, Yafei Wang, Qi Zhang, Ming Li, Haiwen Wu, Chengliang Yin, Yong Zhang",
-      "content": "arXiv:2611.14903v1 Announce Type: new Abstract: Safe trajectory tracking (STT) aims to enable autonomous vehicles to follow a reference trajectory accurately while avoiding collisions. This problem is particularly challenging for Connected and Autonomous Vehicles (CAVs) in highly dynamic environments. Existing non-learning-based STT methods often use simplified vehicle and interaction models to meet real-time requirements, which may result in suboptimal tracking accuracy. Although Deep...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.79,
-        "quality_score": 0.73,
-        "novelty_score": 0.67,
-        "impact_score": 0.74,
+        "relevance_score": 0.55,
+        "quality_score": 0.92,
+        "novelty_score": 0.8,
+        "impact_score": 0.7,
         "overall_score": 0.735,
-        "confidence_mean": 0.84
+        "confidence_mean": 0.93
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1487,7 +1046,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.548225+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.305930+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1498,28 +1057,28 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.548228+00:00"
+        "timestamp": "2026-11-14T12:53:49.305932+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "42a54f235103491b2d79d9e681514436",
-      "title": "When and How SignSGD Outperforms SGD: A Functional Scaling Law Perspective",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2611.16560",
-      "published_date": "2026-11-13T05:00:00+00:00",
+      "article_id": "d16981c94628e224373e5f99ed86f40e",
+      "title": "Direct monitoring of breaching in deltaic submarine landslides",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.aef8444?af=R",
+      "published_date": "2026-11-12T07:00:02+00:00",
       "category": "Research",
-      "description": "arXiv:2611.16560v1 Announce Type: new Abstract: We study how the sign operator interacts with gradient noise to shape the learning dynamics and scaling behavior of sign-based optimizers. In power-law kernel regression with diagonal features, we establish a functional scaling law (FSL) for SignSGD under general learning rate schedules. The FSL describes the learning dynamics through two processes: signal learning and noise forgetting. The key mechanism is noise-induced preconditioning: gradient...",
-      "author": "Zilin Wang, Binghui Li, Jia-Nan Wang, Lean Wang, Jinbo Wang, Lei Wu",
-      "content": "arXiv:2611.16560v1 Announce Type: new Abstract: We study how the sign operator interacts with gradient noise to shape the learning dynamics and scaling behavior of sign-based optimizers. In power-law kernel regression with diagonal features, we establish a functional scaling law (FSL) for SignSGD under general learning rate schedules. The FSL describes the learning dynamics through two processes: signal learning and noise forgetting. The key mechanism is noise-induced preconditioning: gradient...",
+      "description": "Science, Volume 394, Issue 6825, Page 758-762, November 2026.",
+      "author": "Rebecca G. Englert, Matthieu J. B. Cartigny, Megan L. Baker, Sanem Acikalin, Dick Mastbergen, Niall Tracey, Sean C. Ruffell, Daniel H. Shugar, D. Gwyn Lintern, Romit Aggarwal, Lewis Bailey, Daniel Bell, Michael A. Clare, Stephen M. Hubbard, Gustavo Lobato, Daniel Parsons, Stephen M. Simmons, Cooper Stacey, Peter Talling, Michael Tilston",
+      "content": "Science, Volume 394, Issue 6825, Page 758-762, November 2026.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.77,
-        "quality_score": 0.72,
-        "novelty_score": 0.7,
-        "impact_score": 0.75,
-        "overall_score": 0.736,
-        "confidence_mean": 0.87
+        "relevance_score": 0.5,
+        "quality_score": 0.85,
+        "novelty_score": 0.6,
+        "impact_score": 0.55,
+        "overall_score": 0.6224999999999999,
+        "confidence_mean": 0.91
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1550,7 +1109,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-14T04:13:55.548890+00:00"
+        "consensus_timestamp": "2026-11-14T12:53:49.306065+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1561,16 +1120,205 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-14T04:13:55.548893+00:00"
+        "timestamp": "2026-11-14T12:53:49.306067+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "ec94b65ed046f5a095f4c74c3db27ded",
+      "title": "Climate aridity amplifies global riverine nitrate beyond human inputs",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.aeg2366?af=R",
+      "published_date": "2026-11-12T07:00:02+00:00",
+      "category": "Research",
+      "description": "Science, Volume 394, Issue 6825, Page 773-778, November 2026.",
+      "author": "Kayalvizhi Sadayappan and Li Li",
+      "content": "Science, Volume 394, Issue 6825, Page 773-778, November 2026.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.45,
+        "quality_score": 0.88,
+        "novelty_score": 0.5,
+        "impact_score": 0.45,
+        "overall_score": 0.57,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.306098+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.306100+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "4a21c51978f67e3e0c278f144acfa33b",
+      "title": "A trapped catalytic product acts as molecular glue for innate immune signalosome assembly",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.aef3150?af=R",
+      "published_date": "2026-11-12T08:00:00+00:00",
+      "category": "Research",
+      "description": "Science, Volume 394, Issue 6825, November 2026.",
+      "author": "Qi Liu, Zhongjian Bai, Tianyi Liu, Fangshuai Jia, Yi Ji, Canxi Chen, Yao Gong, Liuyuan Duan, Jiahui Zhou, Qian Guo, Ling Zhu, Huarui Kang, Haiyong Wang, Zhewen Shen, Xiaoxiang Huang, Jiayi Shen, Wenguang Shao, Junbiao Chang, Jijie Chai, Yixiao Zhang, Zhifu Han, Chenlu Zhang, Zehan Hu",
+      "content": "Science, Volume 394, Issue 6825, November 2026.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.45,
+        "quality_score": 0.82,
+        "novelty_score": 0.55,
+        "impact_score": 0.4,
+        "overall_score": 0.5575,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.306031+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.306033+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "013c2fb14a66d9b6a191788c97f97482",
+      "title": "Atmospheric O2 reveals a strengthening ocean carbon sink and a stagnant net land sink since 1990",
+      "source": "science_ai",
+      "url": "https://www.science.org/doi/abs/10.1126/science.aed9544?af=R",
+      "published_date": "2026-11-12T07:00:02+00:00",
+      "category": "Research",
+      "description": "Science, Volume 394, Issue 6825, Page 799-803, November 2026.",
+      "author": "Eric J. Morgan, Yuming Jin, Elena Kozlova, Andrew J. Watson, Andrew C. Manning, Sönke Zaehle, Yasunori Tohjima, Xin Lan, Ralph F. Keeling",
+      "content": "Science, Volume 394, Issue 6825, Page 799-803, November 2026.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.4,
+        "quality_score": 0.8,
+        "novelty_score": 0.45,
+        "impact_score": 0.35,
+        "overall_score": 0.5025,
+        "confidence_mean": 0.89
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-14T12:53:49.305997+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-14T12:53:49.305999+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     }
   ],
-  "count": 25,
+  "count": 21,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 1588.620411157608,
+    "processing_time": 972.3043112754822,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1585,19 +1333,19 @@
     "content_breakdown": {
       "headline": 1,
       "articles": 14,
-      "research_papers": 10
+      "research_papers": 6
     },
     "classification_metadata": {
-      "total_processed": 416,
+      "total_processed": 396,
       "candidates": {
-        "headlines": 32,
-        "articles": 336,
-        "research_papers": 48
+        "headlines": 28,
+        "articles": 362,
+        "research_papers": 6
       },
       "selected": {
         "headlines": 1,
         "articles": 14,
-        "research_papers": 10
+        "research_papers": 6
       }
     }
   }
