@@ -1,275 +1,27 @@
 {
-  "generated_at": "2026-11-19T15:05:18.776165+00:00",
+  "generated_at": "2026-11-20T00:16:14.490266+00:00",
   "masthead": {
     "volume_number": 12,
     "volume_roman": "XII",
-    "issue_number": 2012
+    "issue_number": 2013
   },
   "articles": [
     {
-      "article_id": "ca2774fb561930e3b464488d6bd9dd86",
-      "title": "Anthropic prices IPO at $83 a share, above projected range",
-      "source": "techcrunch_ai",
-      "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
-      "published_date": "2026-11-18T22:11:15+00:00",
+      "article_id": "7864001996212bc209e7fef4924203d0",
+      "title": "Google DeepMind Releases Gemini 4 Neon: 1M Context, #1 on AA Coding Agent Index",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/11/18/google-gemini-4-neon-release/",
+      "published_date": "2026-11-19T06:52:26+00:00",
       "category": "Industry",
-      "description": "The long-awaited IPO reportedly values the company at $1.5 trillion on a fully diluted basis.",
-      "author": "Marina Temkin",
-      "content": "The long-awaited IPO reportedly values the company at $1.5 trillion on a fully diluted basis.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.92,
-        "overall_score": 0.874,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.82,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.677865+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.677867+00:00"
-      },
-      "article_type": "headline"
-    },
-    {
-      "article_id": "9814c776288720e0c4923543d56afd21",
-      "title": "Anthropic set to price IPO in key test for AI boom",
-      "source": "tech_xplore",
-      "url": "https://techxplore.com/news/2026-11-anthropic-price-ipo-key-ai.html",
-      "published_date": "2026-11-18T11:20:07+00:00",
-      "category": "Media",
-      "description": "Anthropic prices its blockbuster IPO on Wednesday, giving ordinary investors their first chance to bet directly on a stand-alone AI giant in a test of how long the artificial intelligence spending boom can last.",
-      "author": "",
-      "content": "Anthropic prices its blockbuster IPO on Wednesday, giving ordinary investors their first chance to bet directly on a stand-alone AI giant in a test of how long the artificial intelligence spending boom can last.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.8859999999999999,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.683872+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.683873+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
-      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
-      "published_date": "2026-11-12T12:00:19+00:00",
-      "category": "Open Source",
-      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
-      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.84,
-        "novelty_score": 0.88,
-        "impact_score": 0.9,
-        "overall_score": 0.886,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.686034+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.686035+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a652e029b9d53f82353d36505b46f56d",
-      "title": "Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector",
-      "source": "the_decoder",
-      "url": "https://the-decoder.com/anthropics-81-3-billion-ipo-shatters-spacexs-record-as-rising-rates-and-political-headwinds-shake-the-sector/",
-      "published_date": "2026-11-19T14:02:22+00:00",
-      "category": "Media",
-      "description": "Anthropic launches the largest IPO in history, dethroning SpaceX as the previous record holder. Early investor Dustin Moskovitz is publicly distancing himself, warning that his early funding may have been an act \"that ended the world.\" The article Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector appeared first on The Decoder.",
-      "author": "Maximilian Schreiner",
-      "content": "Anthropic launches the largest IPO in history, dethroning SpaceX as the previous record holder. Early investor Dustin Moskovitz is publicly distancing himself, warning that his early funding may have been an act \"that ended the world.\" The article Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector appeared first on The Decoder.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.86,
-        "novelty_score": 0.78,
-        "impact_score": 0.93,
-        "overall_score": 0.866,
-        "confidence_mean": 0.91
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.684164+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.684166+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "650d89c025fe90598f6fb791ac7f16db",
-      "title": "AI-powered bionic eye breakthrough could help the blind see again",
-      "source": "sciencedaily_neural",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
-      "published_date": "2026-11-12T11:55:55+00:00",
-      "category": "Open Source",
-      "description": "Scientists have developed an AI-powered approach that makes experimental bionic vision technology more precise, helping predict the flashes and shapes of light perceived by a blind man with a brain implant. By learning how an individual's brain responds to electrical stimulation, the technology could bring researchers closer to restoring some degree of sight to people with blindness.",
-      "author": "",
-      "content": "Scientists have developed an AI-powered approach that makes experimental bionic vision technology more precise, helping predict the flashes and shapes of light perceived by a blind man with a brain implant. By learning how an individual's brain responds to electrical stimulation, the technology could bring researchers closer to restoring some degree of sight to people with blindness.",
+      "description": "Google released Gemini 4 Neon, a 1M-context Gemini 4 model priced at $3/$15 per million tokens. It scores 61 on the AA Intelligence Index and ranks #1 on AA’s Coding Agent Index. The post Google DeepMind Releases Gemini 4 Neon: 1M Context, #1 on AA Coding Agent Index appeared first on MarkTechPost.",
+      "author": "Asif Razzaq",
+      "content": "Google released Gemini 4 Neon, a 1M-context Gemini 4 model priced at $3/$15 per million tokens. It scores 61 on the AA Intelligence Index and ranks #1 on AA’s Coding Agent Index. The post Google DeepMind Releases Gemini 4 Neon: 1M Context, #1 on AA Coding Agent Index appeared first on MarkTechPost.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.85,
-        "quality_score": 0.88,
+        "quality_score": 0.9,
         "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.8550000000000001,
+        "impact_score": 0.92,
+        "overall_score": 0.864,
         "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
@@ -301,7 +53,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.687832+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.425695+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -312,42 +64,42 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.687834+00:00"
+        "timestamp": "2026-11-20T00:16:14.425697+00:00"
       },
-      "article_type": "article"
+      "article_type": "headline"
     },
     {
-      "article_id": "5ceaeaeb836cac24633e0ba3fdaca26c",
-      "title": "Our first phase of embedded assessments",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
-      "published_date": "2026-11-16T08:00:00+00:00",
-      "category": "Industry",
-      "description": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+      "article_id": "9715b8890423deac60efbed209d6ae1b",
+      "title": "AI discovers a hidden heart signal that could predict sudden death",
+      "source": "sciencedaily_robotics",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230456.htm",
+      "published_date": "2026-11-15T01:05:10+00:00",
+      "category": "Open Source",
+      "description": "Scientists have uncovered a hidden warning sign in routine heart scans that could predict sudden cardiac death before it strikes. The AI-powered discovery outperformed conventional screening methods, potentially revealing thousands of people at risk of a fatal heart malfunction that doctors might otherwise miss.",
       "author": "",
-      "content": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+      "content": "Scientists have uncovered a hidden warning sign in routine heart scans that could predict sudden cardiac death before it strikes. The AI-powered discovery outperformed conventional screening methods, potentially revealing thousands of people at risk of a fatal heart malfunction that doctors might otherwise miss.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
-        "confidence_mean": 0.87
+        "relevance_score": 0.93,
+        "quality_score": 0.91,
+        "novelty_score": 0.89,
+        "impact_score": 0.95,
+        "overall_score": 0.919,
+        "confidence_mean": 0.96
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -359,41 +111,537 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.88,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.676084+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.430576+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.728,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.676086+00:00"
+        "timestamp": "2026-11-20T00:16:14.430577+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "dbb8aa18c1d706d54bb8acc5e234ef7a",
-      "title": "NVIDIA Vera Rubin NVL72 Leads Agentic Inference Performance on MLPerf Endpoints v1.0",
-      "source": "nvidia_developer",
-      "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-nvl72-leads-agentic-inference-performance-on-mlperf-endpoints-v1-0/",
-      "published_date": "2026-11-16T16:00:00+00:00",
+      "article_id": "650d89c025fe90598f6fb791ac7f16db",
+      "title": "AI-powered bionic eye breakthrough could help the blind see again",
+      "source": "sciencedaily_neural",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
+      "published_date": "2026-11-12T11:55:55+00:00",
+      "category": "Open Source",
+      "description": "Scientists have developed an AI-powered approach that makes experimental bionic vision technology more precise, helping predict the flashes and shapes of light perceived by a blind man with a brain implant. By learning how an individual's brain responds to electrical stimulation, the technology could bring researchers closer to restoring some degree of sight to people with blindness.",
+      "author": "",
+      "content": "Scientists have developed an AI-powered approach that makes experimental bionic vision technology more precise, helping predict the flashes and shapes of light perceived by a blind man with a brain implant. By learning how an individual's brain responds to electrical stimulation, the technology could bring researchers closer to restoring some degree of sight to people with blindness.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.9,
+        "novelty_score": 0.88,
+        "impact_score": 0.94,
+        "overall_score": 0.909,
+        "confidence_mean": 0.95
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.430509+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.430510+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b201008484f8c73eaa8b89e82448d365",
+      "title": "Meta FAIR Self-Improving Memory Hits 56.0 on Continual Learning Bench",
+      "source": "marktechpost",
+      "url": "https://www.marktechpost.com/2026/11/19/meta-fair-self-improving-memory-harness-distillation/",
+      "published_date": "2026-11-19T21:46:22+00:00",
       "category": "Industry",
-      "description": "Agentic workloads are demanding more from inference systems. AI agents carry growing conversation histories across turns and generate a mix of reasoning, tool...",
-      "author": "Zhihan Jiang",
-      "content": "Agentic workloads are demanding more from inference systems. AI agents carry growing conversation histories across turns and generate a mix of reasoning, tool...",
+      "description": "Meta FAIR’s Self-Improving Memory lets Kimi-K2.6 write its own LOAD and OFFLOAD memory prompts, then distills them into its weights. Optimized prompts score 56.0 versus 44.6 for the best hand-written harness on Continual Learning Bench. The post Meta FAIR Self-Improving Memory Hits 56.0 on Continual Learning Bench appeared first on MarkTechPost.",
+      "author": "Michal Sutter",
+      "content": "Meta FAIR’s Self-Improving Memory lets Kimi-K2.6 write its own LOAD and OFFLOAD memory prompts, then distills them into its weights. Optimized prompts score 56.0 versus 44.6 for the best hand-written harness on Continual Learning Bench. The post Meta FAIR Self-Improving Memory Hits 56.0 on Continual Learning Bench appeared first on MarkTechPost.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.9,
+        "novelty_score": 0.8,
+        "impact_score": 0.95,
+        "overall_score": 0.885,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.425576+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.425577+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "a88daa490b15e14a6f888bf9e3fd1c82",
+      "title": "OpenAI Adds Computer-Use Agents and 20+ Plugins to ChatGPT for Healthcare",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-openai-chatgpt-healthcare-computer-use-agents/",
+      "published_date": "2026-11-19T17:23:24+00:00",
+      "category": "Media",
+      "description": "OpenAI's latest ChatGPT for Healthcare update adds computer-use agents, more than 20 plugins, and improved clinical search. Here's what healthcare organizations can automate and what IT teams need to verify. The post OpenAI Adds Computer-Use Agents and 20+ Plugins to ChatGPT for Healthcare appeared first on TechRepublic.",
+      "author": "TechRepublic Staff",
+      "content": "OpenAI's latest ChatGPT for Healthcare update adds computer-use agents, more than 20 plugins, and improved clinical search. Here's what healthcare organizations can automate and what IT teams need to verify. The post OpenAI Adds Computer-Use Agents and 20+ Plugins to ChatGPT for Healthcare appeared first on TechRepublic.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8885000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.427181+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.427182+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "665ad15d901717d397b5c41fb9553166",
+      "title": "AI supercharges laser physics with a stunning 250x speed boost",
+      "source": "sciencedaily_robotics",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005913.htm",
+      "published_date": "2026-11-13T23:41:08+00:00",
+      "category": "Open Source",
+      "description": "Researchers at Stanford, UCLA, and SLAC have developed an AI system that simulates complex laser interactions thousands of times faster than conventional methods. The breakthrough allows scientists to predict how laser pulses behave inside special crystals in just milliseconds, without sacrificing much accuracy. This could dramatically improve the precision and efficiency of powerful X-ray lasers used in cutting-edge scientific research.",
+      "author": "",
+      "content": "Researchers at Stanford, UCLA, and SLAC have developed an AI system that simulates complex laser interactions thousands of times faster than conventional methods. The breakthrough allows scientists to predict how laser pulses behave inside special crystals in just milliseconds, without sacrificing much accuracy. This could dramatically improve the precision and efficiency of powerful X-ray lasers used in cutting-edge scientific research.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.86,
+        "impact_score": 0.92,
+        "overall_score": 0.889,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.430600+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.430601+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "030de44d9eacfffc4c72c984605ae9e8",
+      "title": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/",
+      "published_date": "2026-11-10T22:15:07+00:00",
+      "category": "Open Source",
+      "description": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
+      "author": "Julian Ng-Thow-Hing, Siddartha Pothapragada, Stephen Jia, Digant Desai, Bilgin Cagatay",
+      "content": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.81,
+        "impact_score": 0.85,
+        "overall_score": 0.8685,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.429442+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.429444+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "1460a4d075e25778c41a6319ea1e05e3",
+      "title": "Inside this quantum computer, memory vibrates like a guitar string",
+      "source": "sciencedaily_neural",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205416.htm",
+      "published_date": "2026-11-12T02:35:20+00:00",
+      "category": "Open Source",
+      "description": "Researchers have created a quantum computer that stores information in microscopic vibrations, potentially making quantum machines smaller, more powerful, and better at preserving information. The breakthrough successfully demonstrated advanced quantum calculations and could help overcome major barriers to practical quantum computing.",
+      "author": "",
+      "content": "Researchers have created a quantum computer that stores information in microscopic vibrations, potentially making quantum machines smaller, more powerful, and better at preserving information. The breakthrough successfully demonstrated advanced quantum calculations and could help overcome major barriers to practical quantum computing.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.89,
+        "quality_score": 0.87,
+        "novelty_score": 0.85,
+        "impact_score": 0.9,
+        "overall_score": 0.8770000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.430533+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.430535+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "13f789991620f99e0a9a9b41c7709f37",
+      "title": "Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-nvidia-revenue-doubles-ai-demand/",
+      "published_date": "2026-11-19T12:39:37+00:00",
+      "category": "Media",
+      "description": "Nvidia's $115.8 billion quarter shows how AI infrastructure demand is reshaping its business, with Vera Rubin shipments adding momentum. The post Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges appeared first on TechRepublic.",
+      "author": "TechRepublic Staff",
+      "content": "Nvidia's $115.8 billion quarter shows how AI infrastructure demand is reshaping its business, with Vera Rubin shipments adding momentum. The post Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges appeared first on TechRepublic.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.86,
+        "novelty_score": 0.78,
+        "impact_score": 0.89,
+        "overall_score": 0.864,
+        "confidence_mean": 0.92
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.427316+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.427318+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4bf1cb86c0f8e38cb2f43ca8dfcb6ad6",
+      "title": "Nvidia Forms Board Committee to Oversee AI Chip Export Controls",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-nvidia-ai-chip-export-oversight/",
+      "published_date": "2026-11-18T19:09:06+00:00",
+      "category": "Media",
+      "description": "Nvidia formed a board committee to oversee AI chip export compliance and trade risks. Here’s what IT leaders should check with hardware and cloud suppliers. The post Nvidia Forms Board Committee to Oversee AI Chip Export Controls appeared first on TechRepublic.",
+      "author": "Joseph Ofonagoro",
+      "content": "Nvidia formed a board committee to oversee AI chip export compliance and trade risks. Here’s what IT leaders should check with hardware and cloud suppliers. The post Nvidia Forms Board Committee to Oversee AI Chip Export Controls appeared first on TechRepublic.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.87,
+        "novelty_score": 0.8,
+        "impact_score": 0.88,
+        "overall_score": 0.8635,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.427452+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.427453+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "4ca9fff73eac5a9e0c61ab336d6ae6e6",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "published_date": "2026-11-19T08:00:00+00:00",
+      "category": "Industry",
+      "description": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+      "author": "",
+      "content": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.75,
-        "impact_score": 0.9,
-        "overall_score": 0.8500000000000001,
+        "novelty_score": 0.8,
+        "impact_score": 0.92,
+        "overall_score": 0.8665000000000002,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -421,22 +669,22 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.9,
+        "score": 0.88,
         "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.678428+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.421215+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.74,
+        "weighted_score": 0.728,
         "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.678430+00:00"
+        "timestamp": "2026-11-20T00:16:14.421217+00:00"
       },
       "article_type": "article"
     },
@@ -452,72 +700,10 @@
       "content": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.83,
-        "novelty_score": 0.77,
+        "quality_score": 0.85,
+        "novelty_score": 0.8,
         "impact_score": 0.92,
-        "overall_score": 0.8540000000000001,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.679153+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.679154+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "eb503af737363d08cf55f486efbb3b24",
-      "title": "The Silent Consensus",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/the-silent-consensus",
-      "published_date": "2026-11-18T10:00:00+00:00",
-      "category": "Industry",
-      "description": "Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.",
-      "author": "",
-      "content": "Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.84,
-        "novelty_score": 0.78,
-        "impact_score": 0.9,
-        "overall_score": 0.8490000000000001,
+        "overall_score": 0.8665000000000002,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -545,41 +731,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.82,
-        "confidence": 0.86,
+        "score": 0.89,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.675494+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.424731+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.716,
+        "weighted_score": 0.734,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.675496+00:00"
+        "timestamp": "2026-11-20T00:16:14.424733+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "28c29b0cca354349014b3eff03da702a",
-      "title": "Broadening access to AI for scientists",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
-      "published_date": "2026-11-16T17:00:00+00:00",
+      "article_id": "f2d6fdb1e2947bd52482be736c4c5d49",
+      "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "published_date": "2026-11-11T15:00:15+00:00",
       "category": "Industry",
-      "description": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "description": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
       "author": "",
-      "content": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "content": "Predicting how DNA sequences and their variations impact specific human cell types and disease.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.85,
-        "novelty_score": 0.7,
+        "novelty_score": 0.8,
         "impact_score": 0.9,
-        "overall_score": 0.8375,
+        "overall_score": 0.8625000000000002,
         "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
@@ -607,42 +793,42 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.82,
-        "confidence": 0.9,
+        "score": 0.88,
+        "confidence": 0.85,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.675918+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.424658+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.692,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.728,
+        "combined_confidence": 0.71,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.675920+00:00"
+        "timestamp": "2026-11-20T00:16:14.424660+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f2f99f8f71f11bbcf17c6bcb23b66dfe",
-      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
-      "published_date": "2026-11-12T16:45:26+00:00",
-      "category": "Open Source",
-      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
-      "author": "Caleb Min Sup Kim, Ethan Che, Jongsok Choi, Jason Ansel",
-      "content": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "article_id": "1c432cec4a76c18bf063dd34b486cfd1",
+      "title": "Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut",
+      "source": "techrepublic_ai",
+      "url": "https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/",
+      "published_date": "2026-11-19T21:28:33+00:00",
+      "category": "Media",
+      "description": "Anthropic opened at $111.50 in its Nasdaq debut after pricing its IPO at $83. Here’s how the stock traded and what the $81.34 billion offering includes. The post Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut appeared first on TechRepublic.",
+      "author": "Matt Gonzales",
+      "content": "Anthropic opened at $111.50 in its Nasdaq debut after pricing its IPO at $83. Here’s how the stock traded and what the $81.34 billion offering includes. The post Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut appeared first on TechRepublic.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.82,
+        "quality_score": 0.85,
         "novelty_score": 0.8,
-        "impact_score": 0.85,
-        "overall_score": 0.8450000000000001,
-        "confidence_mean": 0.9
+        "impact_score": 0.88,
+        "overall_score": 0.8585000000000002,
+        "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -673,7 +859,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.685967+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.427105+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -684,213 +870,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.685969+00:00"
+        "timestamp": "2026-11-20T00:16:14.427106+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "f5ec380ea87034b6034dfbfa2c4da93e",
-      "title": "Ask It Again: How We Review AI Code in Ten Passes",
-      "source": "towards_ai",
-      "url": "https://pub.towardsai.net/ask-it-again-how-we-review-ai-code-in-ten-passes-26b4ebe78130?source=rss----98111c9905da---4",
-      "published_date": "2026-11-19T14:31:02+00:00",
-      "category": "Open Source",
-      "description": "Ask your coding agent the same narrow prompt until no confirmed issue is left.Image by the authorWe use AI heavily in our projects, e.g. PagibleAI CMS, both for new features and for rewriting existing code. Usually, its first output is average at best. The code works, but it misses requirements, duplicates logic or puts code in the wrong layer. When we first compared our new Joomla importer with Joomla’s documentation, the agent found 15 gaps, and after fixing them, ten more. One of them gave...",
-      "author": "Aimeos PHP E-Commerce Framework",
-      "content": "Ask your coding agent the same narrow prompt until no confirmed issue is left.Image by the authorWe use AI heavily in our projects, e.g. PagibleAI CMS, both for new features and for rewriting existing code. Usually, its first output is average at best. The code works, but it misses requirements, duplicates logic or puts code in the wrong layer. When we first compared our new Joomla importer with Joomla’s documentation, the agent found 15 gaps, and after fixing them, ten more. One of them gave...",
+      "article_id": "a652e029b9d53f82353d36505b46f56d",
+      "title": "Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector",
+      "source": "the_decoder",
+      "url": "https://the-decoder.com/anthropics-81-3-billion-ipo-shatters-spacexs-record-as-rising-rates-and-political-headwinds-shake-the-sector/",
+      "published_date": "2026-11-19T14:02:22+00:00",
+      "category": "Media",
+      "description": "Anthropic launches the largest IPO in history, dethroning SpaceX as the previous record holder. Early investor Dustin Moskovitz is publicly distancing himself, warning that his early funding may have been an act \"that ended the world.\" The article Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector appeared first on The Decoder.",
+      "author": "Maximilian Schreiner",
+      "content": "Anthropic launches the largest IPO in history, dethroning SpaceX as the previous record holder. Early investor Dustin Moskovitz is publicly distancing himself, warning that his early funding may have been an act \"that ended the world.\" The article Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector appeared first on The Decoder.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.84,
-        "novelty_score": 0.7,
-        "impact_score": 0.88,
-        "overall_score": 0.8310000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.688142+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.688144+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "894fb030c3ea3ebc59d0bb78083f34c3",
-      "title": "The Complete Guide to LLM Evaluation",
-      "source": "machine_learning_mastery",
-      "url": "https://machinelearningmastery.com/the-complete-guide-to-llm-evaluation/",
-      "published_date": "2026-11-13T11:00:00+00:00",
-      "category": "Open Source",
-      "description": "In this article, you will learn how to evaluate LLM applications systematically, from choosing scorers and designing reliable LLM judges to evaluating RAG systems and...",
-      "author": "Bala Priya C",
-      "content": "In this article, you will learn how to evaluate LLM applications systematically, from choosing scorers and designing reliable LLM judges to evaluating RAG systems and...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.83,
-        "novelty_score": 0.75,
-        "impact_score": 0.86,
-        "overall_score": 0.8310000000000001,
-        "confidence_mean": 0.9
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.687168+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.687170+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0994b5f698e2204cd30beebcfb511664",
-      "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
-      "source": "nvidia_blog",
-      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
-      "published_date": "2026-11-09T14:00:01+00:00",
-      "category": "Industry",
-      "description": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
-      "author": "Sasa Docca",
-      "content": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.88,
-        "quality_score": 0.83,
-        "novelty_score": 0.7,
-        "impact_score": 0.9,
-        "overall_score": 0.8265000000000001,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.79,
-        "confidence": 0.84,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.677560+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.6739999999999999,
-        "combined_confidence": 0.704,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.677562+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "665ad15d901717d397b5c41fb9553166",
-      "title": "AI supercharges laser physics with a stunning 250x speed boost",
-      "source": "sciencedaily_robotics",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261111005913.htm",
-      "published_date": "2026-11-13T23:41:08+00:00",
-      "category": "Open Source",
-      "description": "Researchers at Stanford, UCLA, and SLAC have developed an AI system that simulates complex laser interactions thousands of times faster than conventional methods. The breakthrough allows scientists to predict how laser pulses behave inside special crystals in just milliseconds, without sacrificing much accuracy. This could dramatically improve the precision and efficiency of powerful X-ray lasers used in cutting-edge scientific research.",
-      "author": "",
-      "content": "Researchers at Stanford, UCLA, and SLAC have developed an AI system that simulates complex laser interactions thousands of times faster than conventional methods. The breakthrough allows scientists to predict how laser pulses behave inside special crystals in just milliseconds, without sacrificing much accuracy. This could dramatically improve the precision and efficiency of powerful X-ray lasers used in cutting-edge scientific research.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.82,
         "quality_score": 0.85,
         "novelty_score": 0.78,
         "impact_score": 0.88,
-        "overall_score": 0.8295,
-        "confidence_mean": 0.91
+        "overall_score": 0.8535,
+        "confidence_mean": 0.92
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -921,7 +921,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.687942+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.428114+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -932,27 +932,27 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.687944+00:00"
+        "timestamp": "2026-11-20T00:16:14.428115+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "da9fadc65afc7c7ddf9c0bf0b48e992c",
-      "title": "TRACE-MAS: Diagnosing and Repairing Collaboration Failures in Multi-Agent Systems",
+      "article_id": "b6edf8502ba251f53a9bd9546360bfe9",
+      "title": "Neural Network-Based Modeling of Hysteretic Systems: From Prandtl and Preisach Neural Networks to Neuro-Madelung and Neuroplastic Continuous Models",
       "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.23362",
+      "url": "https://arxiv.org/abs/2611.23240",
       "published_date": "2026-11-19T05:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2611.23362v1 Announce Type: new Abstract: LLM-based multi-agent systems (MAS) rely on not only individual agent behaviors but also the interactions that connect agents, including message exchanges and task dependencies. Existing MAS safeguards mainly perform agent-level anomaly detection, which becomes insufficient when failures originate from agent interactions and detected anomalies do not necessarily reveal their true sources. To address this limitation, we propose \\textbf{TRACE-MAS},...",
-      "author": "Zekai Chen, Yihan Sun, Xunkai Li, Xun Wu, Xinmo Jin, Yinlin Zhu, Haodong Lu, Xuaner Chen, Rong-Hua Li",
-      "content": "arXiv:2611.23362v1 Announce Type: new Abstract: LLM-based multi-agent systems (MAS) rely on not only individual agent behaviors but also the interactions that connect agents, including message exchanges and task dependencies. Existing MAS safeguards mainly perform agent-level anomaly detection, which becomes insufficient when failures originate from agent interactions and detected anomalies do not necessarily reveal their true sources. To address this limitation, we propose \\textbf{TRACE-MAS},...",
+      "description": "arXiv:2611.23240v1 Announce Type: new Abstract: Hysteresis is a complex nonlinear phenomenon characterized by memory dependence, path dependence, and, in many physical systems, degradation, non-congruency, asymmetry, and rate dependence. This review examines the development and capabilities of Prandtl neural networks (PNNs), Preisach neural networks (PreisachNNs), generalized Prandtl neural networks (GPNNs), the neuro-Madelung model (NMM), extended Preisach neural networks (EPNNs), and dynamic...",
+      "author": "Mehrdad Shafiei Dizaji, Farzad Shafiei Dizaji",
+      "content": "arXiv:2611.23240v1 Announce Type: new Abstract: Hysteresis is a complex nonlinear phenomenon characterized by memory dependence, path dependence, and, in many physical systems, degradation, non-congruency, asymmetry, and rate dependence. This review examines the development and capabilities of Prandtl neural networks (PNNs), Preisach neural networks (PreisachNNs), generalized Prandtl neural networks (GPNNs), the neuro-Madelung model (NMM), extended Preisach neural networks (EPNNs), and dynamic...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.84,
-        "quality_score": 0.78,
-        "novelty_score": 0.72,
-        "impact_score": 0.8,
-        "overall_score": 0.787,
-        "confidence_mean": 0.88
+        "relevance_score": 0.78,
+        "quality_score": 0.82,
+        "novelty_score": 0.68,
+        "impact_score": 0.75,
+        "overall_score": 0.759,
+        "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -983,7 +983,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.688982+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.430990+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -994,7 +994,133 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.688983+00:00"
+        "timestamp": "2026-11-20T00:16:14.430992+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "d4e96f59a14fea42b6c62a563ba239d4",
+      "title": "FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.23463",
+      "published_date": "2026-11-19T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.23463v1 Announce Type: new Abstract: Speculative decoding accelerates language-model generation by verifying multiple draft tokens in a single target-model pass. However, better draft predictions and longer accepted continuations do not necessarily produce faster generation. To examine this gap, we present FACT (Fixed-Budget Allocation and Cross-Step Training), an experimental framework for studying how drafter training, candidate allocation, and execution conditions jointly affect...",
+      "author": "Hadi Fares, Mayssa Hajj Hassan, Ali Salman, Ammar Mohanna",
+      "content": "arXiv:2611.23463v1 Announce Type: new Abstract: Speculative decoding accelerates language-model generation by verifying multiple draft tokens in a single target-model pass. However, better draft predictions and longer accepted continuations do not necessarily produce faster generation. To examine this gap, we present FACT (Fixed-Budget Allocation and Cross-Step Training), an experimental framework for studying how drafter training, candidate allocation, and execution conditions jointly affect...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.78,
+        "quality_score": 0.76,
+        "novelty_score": 0.8,
+        "impact_score": 0.82,
+        "overall_score": 0.788,
+        "confidence_mean": 0.87
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.431750+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.431752+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "d8fedd85e92e109ab7a1f81c7af9006f",
+      "title": "Biologically-Inspired Spike Encoding and Optimization for Spiking Neural Networks",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2611.23242",
+      "published_date": "2026-11-19T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.23242v1 Announce Type: new Abstract: Spiking Neural Networks (SNNs) offer theoretical energy-efficiency advantages over conventional deep networks, but realizing these advantages on vision tasks requires sparse spike representations that naive rate-coding methods fail to provide. We combine biologically motivated spike-encoding schemes with two training improvements: Rouser adaptive-threshold surrogate gradients and Kronecker-Factored Approximate Curvature (K-FAC) second-order...",
+      "author": "Ayaan Qayyum, Bruce Yi Bu, Zicong Li, Jingfeng Zhou",
+      "content": "arXiv:2611.23242v1 Announce Type: new Abstract: Spiking Neural Networks (SNNs) offer theoretical energy-efficiency advantages over conventional deep networks, but realizing these advantages on vision tasks requires sparse spike representations that naive rate-coding methods fail to provide. We combine biologically motivated spike-encoding schemes with two training improvements: Rouser adaptive-threshold surrogate gradients and Kronecker-Factored Approximate Curvature (K-FAC) second-order...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.8,
+        "quality_score": 0.77,
+        "novelty_score": 0.73,
+        "impact_score": 0.78,
+        "overall_score": 0.771,
+        "confidence_mean": 0.89
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.431042+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.431043+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1010,11 +1136,11 @@
       "author": "Nischal Subedi, Cencheng Shen, Peng Zhao",
       "content": "arXiv:2611.23428v1 Announce Type: new Abstract: We show that the importance of a LoRA adapter's initial input-subspace direction is regime-dependent, and we characterize this dependence in theory and experiment. This refines the recent view that spectral initializers help through update magnitude alone. Direction matters most when labeled data are scarce relative to the representation dimension and the activation subspace used for initialization captures supervised task structure. In this...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.78,
-        "quality_score": 0.8,
-        "novelty_score": 0.75,
-        "impact_score": 0.72,
-        "overall_score": 0.7655,
+        "relevance_score": 0.75,
+        "quality_score": 0.73,
+        "novelty_score": 0.78,
+        "impact_score": 0.8,
+        "overall_score": 0.7625000000000001,
         "confidence_mean": 0.86
       },
       "combined_deep_intelligence": {
@@ -1046,7 +1172,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.689567+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.431701+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1057,28 +1183,28 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.689569+00:00"
+        "timestamp": "2026-11-20T00:16:14.431703+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "c3509e055d93f3e2c70c4c33e4b2f955",
-      "title": "Conformally Calibrated Adaptive Computation in Neural Operators",
-      "source": "arxiv_cs_lg",
-      "url": "https://arxiv.org/abs/2611.23440",
+      "article_id": "a8c25084bc7e5c2fa9163ecbc9e27624",
+      "title": "Chebyshev Polynomial Zonotope Abstractions for Certified Reachability of Learning-Enabled Systems",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2611.23246",
       "published_date": "2026-11-19T05:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2611.23440v1 Announce Type: new Abstract: Selecting less computation in a neural operator need not reduce inference time. We study this gap using conformal calibration to choose Fourier modes or channel width per input subject to a fixed error budget. A triangle-inequality envelope bounds all candidates simultaneously; a direct-score rule handles non-monotone candidate errors and, with an input-independent score, calibrates a static baseline under the same marginal guarantee. Under...",
-      "author": "Abdul Qadir Ibrahim, Martin Burger, Abel Maviano Jonathan",
-      "content": "arXiv:2611.23440v1 Announce Type: new Abstract: Selecting less computation in a neural operator need not reduce inference time. We study this gap using conformal calibration to choose Fourier modes or channel width per input subject to a fixed error budget. A triangle-inequality envelope bounds all candidates simultaneously; a direct-score rule handles non-monotone candidate errors and, with an input-independent score, calibrates a static baseline under the same marginal guarantee. Under...",
+      "description": "arXiv:2611.23246v1 Announce Type: new Abstract: Nearly all current methods for computing reachable sets of nonlinear dynamics propagate them with truncated Taylor expansions plus rigorous remainders. The expansion is pointwise: once its argument is a whole set rather than a point, one polynomial must stay accurate across that set, and it reaches only as far as its disc of convergence. The limit binds hardest on the rational terms and sigmoid gates of modern controllers: smooth as these look on...",
+      "author": "Peng Xie, Amr Alanwar",
+      "content": "arXiv:2611.23246v1 Announce Type: new Abstract: Nearly all current methods for computing reachable sets of nonlinear dynamics propagate them with truncated Taylor expansions plus rigorous remainders. The expansion is pointwise: once its argument is a whole set rather than a point, one polynomial must stay accurate across that set, and it reaches only as far as its disc of convergence. The limit binds hardest on the rational terms and sigmoid gates of modern controllers: smooth as these look on...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.76,
-        "quality_score": 0.79,
-        "novelty_score": 0.73,
-        "impact_score": 0.7,
-        "overall_score": 0.748,
-        "confidence_mean": 0.85
+        "relevance_score": 0.75,
+        "quality_score": 0.73,
+        "novelty_score": 0.68,
+        "impact_score": 0.72,
+        "overall_score": 0.7215,
+        "confidence_mean": 0.87
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1109,7 +1235,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.689601+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.431117+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1120,7 +1246,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.689603+00:00"
+        "timestamp": "2026-11-20T00:16:14.431119+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1136,263 +1262,11 @@
       "author": "Samet Demir, Zafer Dogan",
       "content": "arXiv:2611.24908v1 Announce Type: new Abstract: We study two-layer neural networks trained by stochastic gradient descent (SGD) on a multi-index teacher model, focusing on how first-layer parameters orthogonal to the teacher subspace affect generalization. We decompose the first-layer weights into a signal component aligned with the teacher and an orthogonal complement, and analyze their joint SGD dynamics together with the second layer in the proportional limit. We show that although SGD...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.81,
-        "quality_score": 0.74,
-        "novelty_score": 0.68,
-        "impact_score": 0.77,
-        "overall_score": 0.752,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.690109+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.690111+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "6d70e8f543f92a009af3261f064de4c5",
-      "title": "AI-monitored bioadhesive for sutureless microvascular anastomosis",
-      "source": "science_ai",
-      "url": "https://www.science.org/doi/abs/10.1126/science.aed8712?af=R",
-      "published_date": "2026-11-12T07:00:02+00:00",
-      "category": "Research",
-      "description": "Science, Volume 394, Issue 6825, Page 779-785, November 2026.",
-      "author": "Fangchao Xue, Shanlan Zhao, Hao Tian, Lang Li, Xinrong Xu, Yixiang Lu, Kaige Xu, Lang He, Yueying Wang, Zhaojing Ba, Yumei Que, Di Liu, Yuxin Xing, Yang Su, Malcolm Xing, Wen Zeng",
-      "content": "Science, Volume 394, Issue 6825, Page 779-785, November 2026.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.68,
-        "quality_score": 0.81,
-        "novelty_score": 0.73,
-        "impact_score": 0.79,
-        "overall_score": 0.747,
-        "confidence_mean": 0.88
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.689212+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.689213+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "d8fedd85e92e109ab7a1f81c7af9006f",
-      "title": "Biologically-Inspired Spike Encoding and Optimization for Spiking Neural Networks",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.23242",
-      "published_date": "2026-11-19T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.23242v1 Announce Type: new Abstract: Spiking Neural Networks (SNNs) offer theoretical energy-efficiency advantages over conventional deep networks, but realizing these advantages on vision tasks requires sparse spike representations that naive rate-coding methods fail to provide. We combine biologically motivated spike-encoding schemes with two training improvements: Rouser adaptive-threshold surrogate gradients and Kronecker-Factored Approximate Curvature (K-FAC) second-order...",
-      "author": "Ayaan Qayyum, Bruce Yi Bu, Zicong Li, Jingfeng Zhou",
-      "content": "arXiv:2611.23242v1 Announce Type: new Abstract: Spiking Neural Networks (SNNs) offer theoretical energy-efficiency advantages over conventional deep networks, but realizing these advantages on vision tasks requires sparse spike representations that naive rate-coding methods fail to provide. We combine biologically motivated spike-encoding schemes with two training improvements: Rouser adaptive-threshold surrogate gradients and Kronecker-Factored Approximate Curvature (K-FAC) second-order...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.75,
-        "quality_score": 0.77,
-        "novelty_score": 0.7,
-        "impact_score": 0.71,
-        "overall_score": 0.7345,
-        "confidence_mean": 0.85
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.688544+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.688546+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "46825c830c889446e675669f51e54ac6",
-      "title": "Training Language Models for Introspective Oversight",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.23365",
-      "published_date": "2026-11-19T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible...",
-      "author": "Alex Lin Wang, Linus Yifeng Tang, Dami Choi, Neil Chowdhury",
-      "content": "arXiv:2611.23365v1 Announce Type: new Abstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.79,
-        "quality_score": 0.73,
-        "novelty_score": 0.7,
-        "impact_score": 0.75,
-        "overall_score": 0.7445,
-        "confidence_mean": 0.83
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.689014+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-19T15:05:18.689016+00:00"
-      },
-      "research_quality_score": 0.8,
-      "article_type": "research"
-    },
-    {
-      "article_id": "a33d738e452fbfd6f48dd4c3ef8ea39f",
-      "title": "Optimize the Cob, Then the Kernel: Optimizing Beam Search for Generative Recommendation Inference",
-      "source": "arxiv",
-      "url": "https://arxiv.org/abs/2611.23339",
-      "published_date": "2026-11-19T05:00:00+00:00",
-      "category": "Research",
-      "description": "arXiv:2611.23339v1 Announce Type: new Abstract: Generative recommendation (GR) inference differs substantially from conventional LLM serving, featuring long input sequences, wide beam search, and only a few fixed output tokens. Existing LLM serving engines such as vLLM process beams as batched independent sequences, causing redundant KV cache accesses over the shared prompt prefix. Furthermore, vLLM executes each beam search generation step as a separate engine invocation, incurring host-side...",
-      "author": "Shing Wai Pun, Kai Wu, Pengfei Xia, Hui Zang, Wei Guo, Yong Liu",
-      "content": "arXiv:2611.23339v1 Announce Type: new Abstract: Generative recommendation (GR) inference differs substantially from conventional LLM serving, featuring long input sequences, wide beam search, and only a few fixed output tokens. Existing LLM serving engines such as vLLM process beams as batched independent sequences, causing redundant KV cache accesses over the shared prompt prefix. Furthermore, vLLM executes each beam search generation step as a separate engine invocation, incurring host-side...",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.74,
-        "quality_score": 0.76,
-        "novelty_score": 0.68,
-        "impact_score": 0.72,
-        "overall_score": 0.7260000000000001,
+        "relevance_score": 0.78,
+        "quality_score": 0.71,
+        "novelty_score": 0.65,
+        "impact_score": 0.73,
+        "overall_score": 0.72,
         "confidence_mean": 0.84
       },
       "combined_deep_intelligence": {
@@ -1424,7 +1298,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.688782+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.431825+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1435,7 +1309,133 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.688783+00:00"
+        "timestamp": "2026-11-20T00:16:14.431827+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "c3509e055d93f3e2c70c4c33e4b2f955",
+      "title": "Conformally Calibrated Adaptive Computation in Neural Operators",
+      "source": "arxiv_cs_lg",
+      "url": "https://arxiv.org/abs/2611.23440",
+      "published_date": "2026-11-19T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.23440v1 Announce Type: new Abstract: Selecting less computation in a neural operator need not reduce inference time. We study this gap using conformal calibration to choose Fourier modes or channel width per input subject to a fixed error budget. A triangle-inequality envelope bounds all candidates simultaneously; a direct-score rule handles non-monotone candidate errors and, with an input-independent score, calibrates a static baseline under the same marginal guarantee. Under...",
+      "author": "Abdul Qadir Ibrahim, Martin Burger, Abel Maviano Jonathan",
+      "content": "arXiv:2611.23440v1 Announce Type: new Abstract: Selecting less computation in a neural operator need not reduce inference time. We study this gap using conformal calibration to choose Fourier modes or channel width per input subject to a fixed error budget. A triangle-inequality envelope bounds all candidates simultaneously; a direct-score rule handles non-monotone candidate errors and, with an input-independent score, calibrates a static baseline under the same marginal guarantee. Under...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.72,
+        "quality_score": 0.7,
+        "novelty_score": 0.74,
+        "impact_score": 0.77,
+        "overall_score": 0.7300000000000001,
+        "confidence_mean": 0.85
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.431725+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.431727+00:00"
+      },
+      "research_quality_score": 0.8,
+      "article_type": "research"
+    },
+    {
+      "article_id": "c15e8aa87f44637ea5715f21af379003",
+      "title": "Exploration via Exploitation: The Blessing of Reward Diversity in Personalized Federated RL",
+      "source": "arxiv_stat_ml",
+      "url": "https://arxiv.org/abs/2611.12964",
+      "published_date": "2026-11-19T05:00:00+00:00",
+      "category": "Research",
+      "description": "arXiv:2611.12964v1 Announce Type: cross Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves...",
+      "author": "Jiin Woo, Gauri Joshi, Yuejie Chi",
+      "content": "arXiv:2611.12964v1 Announce Type: cross Abstract: While federated reinforcement learning (RL) has traditionally guaranteed high efficiency in homogeneous environments, collaboration is often hindered when agents possess distinct goals. In this paper, we flip this paradigm, framing reward heterogeneity not as a hurdle to consensus, but as a structural asset that catalyzes exploration. We first propose Personalized Federated Upper Confidence Bound Value Iteration (PF-UCBVI), which achieves...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.74,
+        "quality_score": 0.68,
+        "novelty_score": 0.62,
+        "impact_score": 0.69,
+        "overall_score": 0.685,
+        "confidence_mean": 0.81
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-20T00:16:14.431850+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-20T00:16:14.431852+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1451,12 +1451,12 @@
       "author": "Qingyue Zhao, Qiwei Di, Jiafan He, Heyang Zhao, Kaixuan Ji, Quanquan Gu",
       "content": "arXiv:2611.23596v1 Announce Type: cross Abstract: We study variance-dependent reinforcement learning in episodic time-inhomogeneous linear Markov decision processes (MDPs) with feature dimension $d$, horizon $H$, and $K$ episodes. While recent works have established variance-dependent regret with $\\tilde{O}(1)$ deterministic-regime overhead for linear mixture MDPs (Zhao et al., 2023) and worst-case nearly minimax optimal regret $\\tilde{O}(d\\sqrt{H^3 K} + d^7 H^8)$ for linear MDPs (He et al.,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.77,
-        "quality_score": 0.73,
-        "novelty_score": 0.66,
-        "impact_score": 0.74,
-        "overall_score": 0.7265,
-        "confidence_mean": 0.84
+        "relevance_score": 0.7,
+        "quality_score": 0.69,
+        "novelty_score": 0.6,
+        "impact_score": 0.68,
+        "overall_score": 0.6685,
+        "confidence_mean": 0.8
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1487,7 +1487,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.690267+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.431922+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1498,28 +1498,28 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.690268+00:00"
+        "timestamp": "2026-11-20T00:16:14.431924+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
     },
     {
-      "article_id": "0a3b325c7a27f99db4256c3ad08625f7",
-      "title": "Optimal Deep Nonparametric Regression with Uniformly Bounded Lipschitz Constants",
-      "source": "arxiv_stat_ml",
-      "url": "https://arxiv.org/abs/2611.23979",
+      "article_id": "8924b9bf083234a8251122f07aa1a346",
+      "title": "Budgeted Proper Loss Design for Uncertain Decision Thresholds",
+      "source": "arxiv",
+      "url": "https://arxiv.org/abs/2611.23247",
       "published_date": "2026-11-19T05:00:00+00:00",
       "category": "Research",
-      "description": "arXiv:2611.23979v1 Announce Type: new Abstract: Stability under input perturbations is necessary for deep neural network estimators in many applications involving noisy covariates or estimated features. Weight norm constraints are widely used to control sensitivity to input perturbations by bounding the Lipschitz constant of neural networks. However, existing approximation results under fixed bounds on standard norm products are insufficient to establish optimal statistical rates. In this...",
-      "author": "Jiaxin Shi, Ziyuan Chen, Jian Huang, Hansheng Wang",
-      "content": "arXiv:2611.23979v1 Announce Type: new Abstract: Stability under input perturbations is necessary for deep neural network estimators in many applications involving noisy covariates or estimated features. Weight norm constraints are widely used to control sensitivity to input perturbations by bounding the Lipschitz constant of neural networks. However, existing approximation results under fixed bounds on standard norm products are insufficient to establish optimal statistical rates. In this...",
+      "description": "arXiv:2611.23247v1 Announce Type: new Abstract: A binary probability estimate may be used by several decision makers with different error costs. Proper scoring rules can emphasize selected probability thresholds, but a single average threshold distribution need not give a good worst-case regret guarantee. We study the choice of a proper loss when the threshold distribution belongs to a finite specified family. Among integrable loss weights with a positive pointwise floor and a fixed total mass,...",
+      "author": "Ankit Sharma (International Institute of Information Technology Bangalore)",
+      "content": "arXiv:2611.23247v1 Announce Type: new Abstract: A binary probability estimate may be used by several decision makers with different error costs. Proper scoring rules can emphasize selected probability thresholds, but a single average threshold distribution need not give a good worst-case regret guarantee. We study the choice of a proper loss when the threshold distribution belongs to a finite specified family. Among integrable loss weights with a positive pointwise floor and a fixed total mass,...",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.73,
-        "quality_score": 0.77,
+        "relevance_score": 0.7,
+        "quality_score": 0.68,
         "novelty_score": 0.62,
-        "impact_score": 0.72,
-        "overall_score": 0.7105,
-        "confidence_mean": 0.84
+        "impact_score": 0.68,
+        "overall_score": 0.671,
+        "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -1550,7 +1550,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-19T15:05:18.689804+00:00"
+        "consensus_timestamp": "2026-11-20T00:16:14.431143+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -1561,7 +1561,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-19T15:05:18.689808+00:00"
+        "timestamp": "2026-11-20T00:16:14.431144+00:00"
       },
       "research_quality_score": 0.8,
       "article_type": "research"
@@ -1570,7 +1570,7 @@
   "count": 25,
   "pipeline_info": {
     "version": "3.0_with_deep_intelligence",
-    "processing_time": 1016.4857861995697,
+    "processing_time": 1052.5253179073334,
     "components": [
       "collection",
       "bulk_scoring",
@@ -1588,11 +1588,11 @@
       "research_papers": 10
     },
     "classification_metadata": {
-      "total_processed": 424,
+      "total_processed": 414,
       "candidates": {
-        "headlines": 22,
-        "articles": 361,
-        "research_papers": 41
+        "headlines": 28,
+        "articles": 356,
+        "research_papers": 30
       },
       "selected": {
         "headlines": 1,
