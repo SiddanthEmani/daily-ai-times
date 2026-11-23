@@ -1,38 +1,38 @@
 {
-  "updated": "2026-11-22T23:11:42.428016+00:00",
+  "updated": "2026-11-23T16:54:38.489847+00:00",
   "top_stories": [
     {
-      "article_id": "4e0b0cf1e947ab44473dcea26ad154d2",
-      "title": "NVIDIA Releases Alpamayo 2 Edge: A 2B Reasoning VLA for DRIVE Thor",
-      "source": "marktechpost",
-      "url": "https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/",
-      "published_date": "2026-11-22T18:37:57+00:00",
-      "category": "Industry",
-      "description": "NVIDIA released Alpamayo 2 Edge, a 2B-class reasoning vision-language-action model that plans driving trajectories and explains them on DRIVE AGX Thor, at 160 to 190 ms pixel-to-trajectory latency. The post NVIDIA Releases Alpamayo 2 Edge: A 2B Reasoning VLA for DRIVE Thor appeared first on MarkTechPost.",
-      "author": "Asif Razzaq",
-      "content": "NVIDIA released Alpamayo 2 Edge, a 2B-class reasoning vision-language-action model that plans driving trajectories and explains them on DRIVE AGX Thor, at 160 to 190 ms pixel-to-trajectory latency. The post NVIDIA Releases Alpamayo 2 Edge: A 2B Reasoning VLA for DRIVE Thor appeared first on MarkTechPost.",
+      "article_id": "be037c63a5a31515f5f1e15ed8e4aa81",
+      "title": "Tesla’s FSD v15 turns driving visuals into Grand Theft Auto",
+      "source": "the_verge",
+      "url": "https://www.theverge.com/transportation/1039919/tesla-fsd-v15-reality-view-gta-nhtsa-safety-rollout",
+      "published_date": "2026-11-23T14:12:28+00:00",
+      "category": "Media",
+      "description": "Tesla has begun rolling out Full Self-Driving (Supervised) v15, calling it a ground-up overhaul of its end-to-end driver assist system. The centerpiece is Reality View, a real-time generative display that swaps out old wireframe graphics for a live, overhead camera angle that lets drivers see and tap to influence what the car plans to do […]",
+      "author": "Andrew J. Hawkins",
+      "content": "Tesla has begun rolling out Full Self-Driving (Supervised) v15, calling it a ground-up overhaul of its end-to-end driver assist system. The centerpiece is Reality View, a real-time generative display that swaps out old wireframe graphics for a live, overhead camera angle that lets drivers see and tap to influence what the car plans to do […]",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.82,
+        "relevance_score": 0.85,
+        "quality_score": 0.8,
         "novelty_score": 0.7,
-        "impact_score": 0.88,
-        "overall_score": 0.826,
-        "confidence_mean": 0.9
+        "impact_score": 0.9,
+        "overall_score": 0.81,
+        "confidence_mean": 0.88
       },
       "combined_deep_intelligence": {
         "analysis": {
           "fact_verification": {
             "verified_claims": [],
             "unverified_claims": [],
-            "fact_check_confidence": 0.5
+            "fact_check_confidence": 0.7
           },
           "bias_detection": {
             "bias_indicators": [],
-            "bias_detection_score": 0.5
+            "bias_detection_score": 0.3
           },
           "credibility_assessment": {
             "credibility_factors": [],
-            "credibility_score": 0.5
+            "credibility_score": 0.7
           },
           "impact_analysis": {
             "impact_areas": [],
@@ -44,165 +44,41 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.85,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-22T23:11:42.295624+00:00"
+        "consensus_timestamp": "2026-11-23T16:54:38.350772+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.71,
-        "combined_confidence": 0.74,
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-22T23:11:42.295627+00:00"
+        "timestamp": "2026-11-23T16:54:38.350773+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "0646a4e2786474198d887f2960668c6c",
-      "title": "A precision T-cell therapy stalls treatment-resistant cancers in clinical trial",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/precision-t-cell-therapy-stalls-treatment-resistant-cancers-clinical-trial",
-      "published_date": "2026-11-22T22:54:37.087776+00:00",
-      "category": "Government",
-      "description": "Experimental drug invika halts progression of refractory tumors by selectively stimulating tumor-fighting T cells.",
-      "author": "",
-      "content": "Experimental drug invika halts progression of refractory tumors by selectively stimulating tumor-fighting T cells.",
+      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
+      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
+      "published_date": "2026-11-12T12:00:19+00:00",
+      "category": "Open Source",
+      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
+      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
+      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
       "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.92,
-        "novelty_score": 0.85,
-        "impact_score": 0.95,
-        "overall_score": 0.9025000000000001,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.88,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-22T23:11:42.287672+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.728,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-22T23:11:42.287675+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "a6f028fd100cb13c016cc37e7bafc825",
-      "title": "NIH research team lays groundwork for new treatment of Niemann-Pick Type C in infants",
-      "source": "nih_ai_news",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-research-team-lays-groundwork-new-treatment-niemann-pick-type-c-infants",
-      "published_date": "2026-11-22T22:54:37.072110+00:00",
-      "category": "Government",
-      "description": "Work spanning two decades culminates in an approved drug for rare and deadly neurological disease.",
-      "author": "",
-      "content": "Work spanning two decades culminates in an approved drug for rare and deadly neurological disease.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.9,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.95,
-        "overall_score": 0.885,
-        "confidence_mean": 0.92
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.5
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.5
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.5
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.84,
-        "confidence": 0.9,
-        "recommendation": "ACCEPT",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-22T23:11:42.287356+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.704,
-        "combined_confidence": 0.74,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-22T23:11:42.287360+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "13f789991620f99e0a9a9b41c7709f37",
-      "title": "Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges",
-      "source": "techrepublic_ai",
-      "url": "https://www.techrepublic.com/article/news-nvidia-revenue-doubles-ai-demand/",
-      "published_date": "2026-11-19T12:39:37+00:00",
-      "category": "Media",
-      "description": "Nvidia's $115.8 billion quarter shows how AI infrastructure demand is reshaping its business, with Vera Rubin shipments adding momentum. The post Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges appeared first on TechRepublic.",
-      "author": "TechRepublic Staff",
-      "content": "Nvidia's $115.8 billion quarter shows how AI infrastructure demand is reshaping its business, with Vera Rubin shipments adding momentum. The post Nvidia Revenue Doubles to $115.8 Billion as AI Chip Demand Surges appeared first on TechRepublic.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.84,
-        "impact_score": 0.9,
-        "overall_score": 0.886,
+        "relevance_score": 0.95,
+        "quality_score": 0.87,
+        "novelty_score": 0.9,
+        "impact_score": 0.93,
+        "overall_score": 0.9135,
         "confidence_mean": 0.94
       },
       "combined_deep_intelligence": {
@@ -234,7 +110,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-22T23:11:42.298825+00:00"
+        "consensus_timestamp": "2026-11-23T16:54:38.351311+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -245,27 +121,151 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-22T23:11:42.298827+00:00"
+        "timestamp": "2026-11-23T16:54:38.351312+00:00"
       },
       "article_type": "article"
     },
     {
-      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
-      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
+      "article_id": "602a262be23eca118588ab7382b3ce52",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "source": "deepmind_research",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "published_date": "2026-11-10T12:02:28+00:00",
+      "category": "Industry",
+      "description": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+      "author": "",
+      "content": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.9,
+        "quality_score": 0.88,
+        "novelty_score": 0.85,
+        "impact_score": 0.95,
+        "overall_score": 0.8925000000000001,
+        "confidence_mean": 0.89
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.81,
+        "confidence": 0.88,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-23T16:54:38.346985+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.6859999999999999,
+        "combined_confidence": 0.728,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-23T16:54:38.346986+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b51b2943823c885aec351ed240eb53d6",
+      "title": "Nvidia reverses course, reinstating Jensen Huang as CEO",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/11/23/nvidia-reverses-course-reinstating-jensen-huang-as-ceo-president-and-director/",
+      "published_date": "2026-11-23T15:50:34+00:00",
+      "category": "Industry",
+      "description": "Artificial intelligence chip giant Nvidia Corp. today announced that Jensen Huang has been reinstated as chief executive, president and board director effective immediately after resigning almost two weeks ago. The company’s rockstar leather-jacket-wearing CEO faced turmoil earlier this month after it was revealed that he had been embroiled in a scandal involving multiple extramarital affairs, including […] The post Nvidia reverses course, reinstating Jensen Huang as CEO appeared first on...",
+      "author": "Kyt Dotson",
+      "content": "Artificial intelligence chip giant Nvidia Corp. today announced that Jensen Huang has been reinstated as chief executive, president and board director effective immediately after resigning almost two weeks ago. The company’s rockstar leather-jacket-wearing CEO faced turmoil earlier this month after it was revealed that he had been embroiled in a scandal involving multiple extramarital affairs, including […] The post Nvidia reverses course, reinstating Jensen Huang as CEO appeared first on...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.88,
+        "novelty_score": 0.75,
+        "impact_score": 0.94,
+        "overall_score": 0.8714999999999999,
+        "confidence_mean": 0.9
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-23T16:54:38.348268+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-23T16:54:38.348269+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f2f99f8f71f11bbcf17c6bcb23b66dfe",
+      "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
       "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
-      "published_date": "2026-11-12T12:00:19+00:00",
+      "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
+      "published_date": "2026-11-12T16:45:26+00:00",
       "category": "Open Source",
-      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
-      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
+      "description": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
+      "author": "Caleb Min Sup Kim, Ethan Che, Jongsok Choi, Jason Ansel",
+      "content": "TL;DR Helion now uses compile-time heuristics that analyze a kernel’s IR and dataflow to pick fast settings without slow autotuning. It classifies the kernel as matmul, reduction, or pointwise and... The post Fast by Default: Compile-Time Heuristics for Helion Kernels appeared first on PyTorch.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.92,
         "quality_score": 0.84,
         "novelty_score": 0.88,
         "impact_score": 0.9,
         "overall_score": 0.886,
-        "confidence_mean": 0.93
+        "confidence_mean": 0.91
       },
       "combined_deep_intelligence": {
         "analysis": {
@@ -296,7 +296,7 @@
         "confidence": 0.5,
         "recommendation": "CONDITIONAL",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-22T23:11:42.303489+00:00"
+        "consensus_timestamp": "2026-11-23T16:54:38.351246+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
@@ -307,7 +307,7 @@
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-22T23:11:42.303491+00:00"
+        "timestamp": "2026-11-23T16:54:38.351247+00:00"
       },
       "article_type": "article"
     }
