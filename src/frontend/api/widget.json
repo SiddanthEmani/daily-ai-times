@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T16:50:45.994394+00:00",
+  "updated": "2026-11-25T01:57:47.822877+00:00",
   "top_stories": [
     {
       "article_id": "cd3f8ee909f932fd4071db8361d0173b",
@@ -13,10 +13,10 @@
       "content": "Amazon.com Inc. today announced plans to hire the technical staff of startup Decart.AI Inc. and acquire its core technology. The company didn’t disclose the terms of the deal. However, sources told Bloomberg that Amazon is paying about $7.5 billion. That’s nearly twice the valuation Decart reportedly received after its most recent funding round in May. […] The post Amazon acquires key assets of AI startup Decart for reported $7.5B appeared first on SiliconANGLE.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
-        "quality_score": 0.81,
+        "quality_score": 0.82,
         "novelty_score": 0.75,
-        "impact_score": 0.92,
-        "overall_score": 0.8440000000000001,
+        "impact_score": 0.93,
+        "overall_score": 0.8485,
         "confidence_mean": 0.85
       },
       "combined_deep_intelligence": {
@@ -45,226 +45,40 @@
           }
         },
         "score": 0.8,
-        "confidence": 0.82,
+        "confidence": 0.9,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-24T16:50:45.840050+00:00"
+        "consensus_timestamp": "2026-11-25T01:57:47.678295+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
         "weighted_score": 0.6799999999999999,
-        "combined_confidence": 0.692,
+        "combined_confidence": 0.74,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-24T16:50:45.840053+00:00"
+        "timestamp": "2026-11-25T01:57:47.678298+00:00"
       },
       "article_type": "headline"
     },
     {
-      "article_id": "030de44d9eacfffc4c72c984605ae9e8",
-      "title": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/",
-      "published_date": "2026-11-10T22:15:07+00:00",
-      "category": "Open Source",
-      "description": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
-      "author": "Julian Ng-Thow-Hing, Siddartha Pothapragada, Stephen Jia, Digant Desai, Bilgin Cagatay",
-      "content": "TL;DR PyTorch models now run in the web browser on the GPU through ExecuTorch, with no conversion to another framework’s format. You export with torch.export to an ExecuTorch .pte file,... The post ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser appeared first on PyTorch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.95,
-        "quality_score": 0.9,
-        "novelty_score": 0.8,
-        "impact_score": 0.88,
-        "overall_score": 0.886,
-        "confidence_mean": 0.89
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-24T16:50:45.845594+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-24T16:50:45.845596+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
-      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
-      "source": "pytorch_blog",
-      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
-      "published_date": "2026-11-12T12:00:19+00:00",
-      "category": "Open Source",
-      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
-      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.85,
-        "impact_score": 0.9,
-        "overall_score": 0.8885000000000001,
-        "confidence_mean": 0.87
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-24T16:50:45.845550+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-24T16:50:45.845552+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "0b6432b5c70c8706ca89b221d5f515d9",
-      "title": "AI uncovers hidden bladder cancer warning signs years before diagnosis",
-      "source": "sciencedaily_robotics",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075604.htm",
-      "published_date": "2026-11-22T03:43:18+00:00",
-      "category": "Open Source",
-      "description": "Scientists have developed an AI tool that can uncover hidden warning signs of bladder cancer up to five years before diagnosis, identifying 85% of cases in a major study involving nearly 70,000 patients. By revealing subtle patterns that conventional screening misses, the technology could help doctors detect cancer earlier and spare patients unnecessary invasive procedures.",
+      "article_id": "df6158b81d83fc676f7b0c772ab46903",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "published_date": "2026-11-24T13:00:00+00:00",
+      "category": "Industry",
+      "description": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
       "author": "",
-      "content": "Scientists have developed an AI tool that can uncover hidden warning signs of bladder cancer up to five years before diagnosis, identifying 85% of cases in a major study involving nearly 70,000 patients. By revealing subtle patterns that conventional screening misses, the technology could help doctors detect cancer earlier and spare patients unnecessary invasive procedures.",
+      "content": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
       "consensus_multi_dimensional_score": {
         "relevance_score": 0.9,
         "quality_score": 0.88,
-        "novelty_score": 0.85,
-        "impact_score": 0.92,
-        "overall_score": 0.8865000000000001,
-        "confidence_mean": 0.93
-      },
-      "combined_deep_intelligence": {
-        "analysis": {
-          "fact_verification": {
-            "verified_claims": [],
-            "unverified_claims": [],
-            "fact_check_confidence": 0.7
-          },
-          "bias_detection": {
-            "bias_indicators": [],
-            "bias_detection_score": 0.3
-          },
-          "credibility_assessment": {
-            "credibility_factors": [],
-            "credibility_score": 0.7
-          },
-          "impact_analysis": {
-            "impact_areas": [],
-            "impact_potential": 0.5
-          },
-          "synthesis": {
-            "key_insights": [],
-            "risk_factors": [],
-            "enhancement_suggestions": []
-          }
-        },
-        "score": 0.5,
-        "confidence": 0.5,
-        "recommendation": "CONDITIONAL",
-        "agents_count": 1,
-        "consensus_timestamp": "2026-11-24T16:50:45.847609+00:00"
-      },
-      "final_consensus": {
-        "algorithm": "weighted_combination",
-        "weighted_score": 0.5,
-        "combined_confidence": 0.5,
-        "decision": "ACCEPT",
-        "weights": {
-          "initial_consensus": 0.4,
-          "deep_intelligence": 0.6
-        },
-        "timestamp": "2026-11-24T16:50:45.847612+00:00"
-      },
-      "article_type": "article"
-    },
-    {
-      "article_id": "4ca9fff73eac5a9e0c61ab336d6ae6e6",
-      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-      "source": "openai_blog",
-      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-      "published_date": "2026-11-19T08:00:00+00:00",
-      "category": "Industry",
-      "description": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
-      "author": "",
-      "content": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
-      "consensus_multi_dimensional_score": {
-        "relevance_score": 0.92,
-        "quality_score": 0.88,
-        "novelty_score": 0.8,
-        "impact_score": 0.9,
-        "overall_score": 0.876,
+        "novelty_score": 0.92,
+        "impact_score": 0.95,
+        "overall_score": 0.9099999999999999,
         "confidence_mean": 0.9
       },
       "combined_deep_intelligence": {
@@ -292,22 +106,208 @@
             "enhancement_suggestions": []
           }
         },
-        "score": 0.81,
-        "confidence": 0.86,
+        "score": 0.7,
+        "confidence": 0.7,
         "recommendation": "ACCEPT",
         "agents_count": 1,
-        "consensus_timestamp": "2026-11-24T16:50:45.833137+00:00"
+        "consensus_timestamp": "2026-11-25T01:57:47.670632+00:00"
       },
       "final_consensus": {
         "algorithm": "weighted_combination",
-        "weighted_score": 0.6859999999999999,
-        "combined_confidence": 0.716,
+        "weighted_score": 0.62,
+        "combined_confidence": 0.62,
         "decision": "ACCEPT",
         "weights": {
           "initial_consensus": 0.4,
           "deep_intelligence": 0.6
         },
-        "timestamp": "2026-11-24T16:50:45.833140+00:00"
+        "timestamp": "2026-11-25T01:57:47.670635+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "f62bdd5f6731f01cc806033264356a80",
+      "title": "OpenAI and Cisco introduce Shirudo",
+      "source": "openai_blog",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "published_date": "2026-11-23T21:20:00+00:00",
+      "category": "Industry",
+      "description": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+      "author": "",
+      "content": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.88,
+        "quality_score": 0.9,
+        "novelty_score": 0.85,
+        "impact_score": 0.92,
+        "overall_score": 0.8855000000000001,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-25T01:57:47.670835+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-25T01:57:47.670837+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b5932081d0db5833c3e1d3bf969e1b04",
+      "title": "Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan",
+      "source": "pytorch_blog",
+      "url": "https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/",
+      "published_date": "2026-11-12T12:00:19+00:00",
+      "category": "Open Source",
+      "description": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
+      "author": "The EUROPA consortium (Domyn, Fraunhofer IAIS and IIS)",
+      "content": "TL;DR Scaling pretraining for a ~1-trillion-parameter Mixture-of-Experts (MoE) model on shared, public infrastructure was previously considered unfeasible due to unique architectural and interconnect bottlenecks. However, by leveraging the fine-grained flexibility... The post Training a 1T-Parameter MoE on EU public infrastructure with PyTorch and TorchTitan appeared first on PyTorch.",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.85,
+        "novelty_score": 0.9,
+        "impact_score": 0.89,
+        "overall_score": 0.8915000000000001,
+        "confidence_mean": 0.94
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.7
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.3
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.7
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.5,
+        "confidence": 0.5,
+        "recommendation": "CONDITIONAL",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-25T01:57:47.683565+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.5,
+        "combined_confidence": 0.5,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-25T01:57:47.683567+00:00"
+      },
+      "article_type": "article"
+    },
+    {
+      "article_id": "b51b2943823c885aec351ed240eb53d6",
+      "title": "Nvidia reverses course, reinstating Jensen Huang as CEO",
+      "source": "siliconangle_ai",
+      "url": "https://siliconangle.com/2026/11/23/nvidia-reverses-course-reinstating-jensen-huang-as-ceo-president-and-director/",
+      "published_date": "2026-11-23T15:50:34+00:00",
+      "category": "Industry",
+      "description": "Artificial intelligence chip giant Nvidia Corp. today announced that Jensen Huang has been reinstated as chief executive, president and board director effective immediately after resigning almost two weeks ago. The company’s rockstar leather-jacket-wearing CEO faced turmoil earlier this month after it was revealed that he had been embroiled in a scandal involving multiple extramarital affairs, including […] The post Nvidia reverses course, reinstating Jensen Huang as CEO appeared first on...",
+      "author": "Kyt Dotson",
+      "content": "Artificial intelligence chip giant Nvidia Corp. today announced that Jensen Huang has been reinstated as chief executive, president and board director effective immediately after resigning almost two weeks ago. The company’s rockstar leather-jacket-wearing CEO faced turmoil earlier this month after it was revealed that he had been embroiled in a scandal involving multiple extramarital affairs, including […] The post Nvidia reverses course, reinstating Jensen Huang as CEO appeared first on...",
+      "consensus_multi_dimensional_score": {
+        "relevance_score": 0.92,
+        "quality_score": 0.85,
+        "novelty_score": 0.78,
+        "impact_score": 0.95,
+        "overall_score": 0.8734999999999999,
+        "confidence_mean": 0.88
+      },
+      "combined_deep_intelligence": {
+        "analysis": {
+          "fact_verification": {
+            "verified_claims": [],
+            "unverified_claims": [],
+            "fact_check_confidence": 0.5
+          },
+          "bias_detection": {
+            "bias_indicators": [],
+            "bias_detection_score": 0.5
+          },
+          "credibility_assessment": {
+            "credibility_factors": [],
+            "credibility_score": 0.5
+          },
+          "impact_analysis": {
+            "impact_areas": [],
+            "impact_potential": 0.5
+          },
+          "synthesis": {
+            "key_insights": [],
+            "risk_factors": [],
+            "enhancement_suggestions": []
+          }
+        },
+        "score": 0.85,
+        "confidence": 0.9,
+        "recommendation": "ACCEPT",
+        "agents_count": 1,
+        "consensus_timestamp": "2026-11-25T01:57:47.678496+00:00"
+      },
+      "final_consensus": {
+        "algorithm": "weighted_combination",
+        "weighted_score": 0.71,
+        "combined_confidence": 0.74,
+        "decision": "ACCEPT",
+        "weights": {
+          "initial_consensus": 0.4,
+          "deep_intelligence": 0.6
+        },
+        "timestamp": "2026-11-25T01:57:47.678499+00:00"
       },
       "article_type": "article"
     }
